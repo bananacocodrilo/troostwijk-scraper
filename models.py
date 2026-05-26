@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 from typing import Optional
 
+
 class Vehicle(BaseModel):
     title: str
     brand: Optional[str] = None
@@ -8,8 +9,11 @@ class Vehicle(BaseModel):
     year: Optional[int] = None
     km: Optional[int] = None
     fuel: Optional[str] = None
-    transmission: Optional[str] = None
     location: Optional[str] = None
     url: str
-    auction_end: Optional[str] = None
     source: str = "troostwijk"
+
+    van_type: Optional[str] = None
+    is_valid_van: bool = False
+    score: int = 0
+    hidden_gem: bool = False
