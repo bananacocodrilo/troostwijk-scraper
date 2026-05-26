@@ -1,5 +1,14 @@
+"""Troostwijk lot scraper.
+
+Pages are Next.js SSR — every spec field we need is in the ``__NEXT_DATA__``
+JSON blob (``props.pageProps.lot``). We parse that directly instead of
+chasing regex matches across rendered HTML.
+"""
+
+import json
 import re
-from datetime import datetime
+from datetime import date, datetime, timezone
+from typing import Any, Optional
 
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
@@ -10,12 +19,30 @@ from van_intel import detect_size, is_hidden_gem, is_valid_van, score_vehicle
 BASE = "https://www.troostwijkauctions.com/en/search"
 ORIGIN = "https://www.troostwijkauctions.com"
 
-CURRENT_YEAR = datetime.now().year
+# Map from the ``name`` field on lot.attributes -> our Vehicle field.
+# Names are stable strings provided by the Troostwijk backend.
+ATTR_MAP = {
+    "Brand": "brand",
+    "Type": "model",
+    "Construction date": "year",
+    "Date of First Admission": "first_registration",
+    "Mileage during intake (km)": "km",
+    "Mileage": "km",
+    "Fuel type": "fuel",
+    "Transmission": "transmission",
+    "Power(kW)": "power_kw",
+    "Cylinder capacity": "cylinder_cc",
+    "Seat count": "seats",
+    "Door count": "doors",
+    "Color": "color",
+    "Empty weight": "weight_kg",
+    "Load capacity": "load_kg",
+    "Emission standard": "emission_standard",
+    "VIN": "vin",
+    "Chassis number": "vin",
+}
 
-# Labels Troostwijk uses on lot detail pages (EN + NL).
-YEAR_LABELS = ("year of construction", "year", "bouwjaar")
-KM_LABELS = ("mileage", "kilometre", "kilometers", "kilometer", "kilometerstand", "km stand")
-LOCATION_LABELS = ("location", "locatie", "viewing location", "kijklocatie")
+INT_FIELDS = {"year", "km", "power_kw", "cylinder_cc", "seats", "doors", "weight_kg", "load_kg"}
 
 
 def build_search_url(query, year_min=None, year_max=None, page=1):
@@ -25,7 +52,7 @@ def build_search_url(query, year_min=None, year_max=None, page=1):
     return url
 
 
-def _new_browser_page(p):
+def _new_context(p):
     browser = p.chromium.launch(headless=True)
     context = browser.new_context(
         user_agent=(
@@ -41,7 +68,7 @@ def get_lot_urls(query, pages=1, year_min=None, year_max=None):
     seen = set()
 
     with sync_playwright() as p:
-        browser, context = _new_browser_page(p)
+        browser, context = _new_context(p)
         page = context.new_page()
 
         for i in range(1, pages + 1):
@@ -57,7 +84,6 @@ def get_lot_urls(query, pages=1, year_min=None, year_max=None):
                 href = a.get("href") or ""
                 if href.startswith("/"):
                     href = ORIGIN + href
-                # Lot URLs look like .../l/<slug>-A<auctionId>-<lotId>
                 if not re.search(r"/l/[^/]+-A\d+-\d+", href):
                     continue
                 if href in seen:
@@ -70,127 +96,137 @@ def get_lot_urls(query, pages=1, year_min=None, year_max=None):
     return urls
 
 
-def _extract_int(text):
-    if not text:
+def _next_data(html: str) -> Optional[dict]:
+    soup = BeautifulSoup(html, "html.parser")
+    tag = soup.find("script", {"id": "__NEXT_DATA__"})
+    if not tag or not tag.string:
         return None
-    nums = re.findall(r"\d[\d\.]*", text.replace(".", "").replace(",", ""))
-    return int(nums[0]) if nums else None
+    try:
+        return json.loads(tag.string)
+    except json.JSONDecodeError:
+        return None
 
 
-def _label_value(soup, labels):
-    """Find the textual value adjacent to one of the labels (dt/dd, th/td, or sibling spans)."""
-    for label in labels:
-        rx = re.compile(rf"^\s*{re.escape(label)}\s*:?\s*$", re.IGNORECASE)
-        node = soup.find(string=rx)
-        if not node:
-            # also accept labels that start with the keyword (e.g. "Mileage (km)")
-            rx2 = re.compile(rf"^\s*{re.escape(label)}\b", re.IGNORECASE)
-            node = soup.find(string=rx2)
-        if not node:
+def _to_int(value: Any) -> Optional[int]:
+    if value in (None, "", "null"):
+        return None
+    if isinstance(value, (int, float)):
+        return int(value)
+    s = str(value).strip()
+    # strip thousand separators and unit suffixes
+    s = re.sub(r"[^\d\-]", "", s)
+    if not s or s == "-":
+        return None
+    try:
+        return int(s)
+    except ValueError:
+        return None
+
+
+def _parse_first_registration(value: Any) -> Optional[date]:
+    if not value:
+        return None
+    s = str(value).strip()
+    for fmt in ("%d/%m/%Y", "%d-%m-%Y", "%Y-%m-%d"):
+        try:
+            return datetime.strptime(s, fmt).date()
+        except ValueError:
             continue
-        parent = node.parent
-        if not parent:
+    # Sometimes only a year is given.
+    if re.fullmatch(r"(19|20)\d{2}", s):
+        return date(int(s), 1, 1)
+    return None
+
+
+def _attrs_to_dict(lot: dict) -> dict:
+    """Turn ``lot.attributes`` (list of {name, unit, value}) into a flat dict."""
+    out: dict = {}
+    for attr in lot.get("attributes") or []:
+        name = attr.get("name")
+        raw = attr.get("value")
+        if name is None or raw in (None, ""):
             continue
-        # dt -> dd
-        if parent.name == "dt":
-            dd = parent.find_next_sibling("dd")
-            if dd:
-                return dd.get_text(" ", strip=True)
-        # th -> td
-        if parent.name == "th":
-            td = parent.find_next_sibling("td")
-            if td:
-                return td.get_text(" ", strip=True)
-        # span/div labelled cell: look at the parent row's siblings
-        for sib in parent.next_siblings:
-            if getattr(sib, "get_text", None):
-                txt = sib.get_text(" ", strip=True)
-                if txt:
-                    return txt
-        # fallback: parent text minus the label itself
-        whole = parent.get_text(" ", strip=True)
-        cleaned = re.sub(rf"^{re.escape(label)}\s*:?\s*", "", whole, flags=re.IGNORECASE)
-        if cleaned and cleaned.lower() != whole.lower():
-            return cleaned
-    return None
+        field = ATTR_MAP.get(name)
+        if not field:
+            continue
+        if field in INT_FIELDS:
+            n = _to_int(raw)
+            if n is not None:
+                out[field] = n
+        elif field == "first_registration":
+            d = _parse_first_registration(raw)
+            if d is not None:
+                out[field] = d
+        else:
+            out[field] = str(raw).strip()
+    return out
 
 
-def _guess_brand_model(title):
-    if not title:
-        return None, None
-    tokens = [t for t in re.split(r"[\s\-–—|]+", title) if t and t != "-"]
-    if len(tokens) >= 2:
-        return tokens[0], tokens[1]
-    if tokens:
-        return tokens[0], None
-    return None, None
-
-
-def _extract_year(soup, full_text):
-    raw = _label_value(soup, YEAR_LABELS)
-    if raw:
-        m = re.search(r"(19|20)\d{2}", raw)
-        if m:
-            y = int(m.group(0))
-            if 1990 <= y <= CURRENT_YEAR:
-                return y
-    # Fallback: any plausible year that isn't the current year (copyright/footer leak).
-    for match in re.finditer(r"(19|20)\d{2}", full_text):
-        y = int(match.group(0))
-        if 1990 <= y < CURRENT_YEAR:
-            return y
-    return None
-
-
-def _extract_km(soup, full_text):
-    raw = _label_value(soup, KM_LABELS)
-    if raw:
-        n = _extract_int(raw)
-        if n and 1_000 <= n <= 1_500_000:
-            return n
-    m = re.search(r"(\d[\d\.\,]{2,})\s?km\b", full_text, re.IGNORECASE)
-    if m:
-        n = _extract_int(m.group(1))
-        if n and 1_000 <= n <= 1_500_000:
-            return n
-    return None
-
-
-def _extract_fuel(full_text):
-    lower = full_text.lower()
-    if "diesel" in lower:
-        return "diesel"
-    if "benzine" in lower or "petrol" in lower or "gasoline" in lower:
-        return "petrol"
-    if "electric" in lower or "elektrisch" in lower:
-        return "electric"
-    return None
-
-
-def _extract_location(soup):
-    raw = _label_value(soup, LOCATION_LABELS)
+def _normalize_fuel(raw: Optional[str]) -> Optional[str]:
     if not raw:
         return None
-    # Trim noisy trailing labels.
-    return raw.split("\n")[0].strip() or None
+    s = raw.strip().lower()
+    if "diesel" in s:
+        return "diesel"
+    if "petrol" in s or "benzine" in s or "gasoline" in s:
+        return "petrol"
+    if "electric" in s or "elektrisch" in s:
+        return "electric"
+    if "lpg" in s or "cng" in s:
+        return "lpg"
+    if "hybrid" in s:
+        return "hybrid"
+    return s
 
 
-def parse_vehicle(html, url):
-    soup = BeautifulSoup(html, "html.parser")
+def parse_vehicle(html: str, url: str) -> Vehicle:
+    """Build a Vehicle from a lot page's ``__NEXT_DATA__`` blob.
 
-    title_el = soup.select_one("h1")
-    title = title_el.text.strip() if title_el else ""
+    Falls back to empty fields rather than raising — Troostwijk lots often
+    ship a sparse attribute list (e.g. only Brand/Type/Mileage)."""
+    data = _next_data(html)
+    if not data:
+        # No NEXT_DATA — return a stub so the URL isn't lost.
+        return Vehicle(title="", url=url)
 
-    brand, model = _guess_brand_model(title)
-    text = soup.get_text(" ", strip=True)
+    lot = (((data.get("props") or {}).get("pageProps") or {}).get("lot")) or {}
+    title = lot.get("title") or ""
 
-    year = _extract_year(soup, text)
-    km = _extract_km(soup, text)
-    fuel = _extract_fuel(text)
-    location = _extract_location(soup)
+    attrs = _attrs_to_dict(lot)
+    brand = attrs.get("brand")
+    model = attrs.get("model")
+    year = attrs.get("year")
+    first_reg = attrs.get("first_registration")
+    if year is None and first_reg is not None:
+        # Troostwijk frequently fills only one of Construction date / Date of
+        # First Admission. Fall back so the scorer still sees a year.
+        year = first_reg.year
+    km = attrs.get("km")
+    fuel = _normalize_fuel(attrs.get("fuel"))
+    transmission = attrs.get("transmission")
+
+    loc = lot.get("location") or {}
+    city = loc.get("city")
+    country = (loc.get("countryCode") or "").upper() or None
+    location = ", ".join(p for p in [city, country] if p) or None
+
+    start_ts = lot.get("startDate")
+    auction_start = (
+        datetime.fromtimestamp(start_ts, tz=timezone.utc) if isinstance(start_ts, (int, float)) else None
+    )
+
+    # Size class: scan multiple text sources for L*H* patterns.
+    haystack = " ".join(
+        s for s in [
+            title,
+            attrs.get("model") or "",
+            lot.get("remarks") or "",
+            ((lot.get("description") or {}).get("additionalInformation")) or "",
+        ] if s
+    )
+    van_type = detect_size(haystack)
 
     valid = is_valid_van(title)
-    van_type = detect_size(title) or detect_size(text)
     score = score_vehicle(year, km, van_type, fuel) if valid else 0
     gem = is_hidden_gem(score, year, km) if valid else False
 
@@ -198,12 +234,31 @@ def parse_vehicle(html, url):
         title=title,
         brand=brand,
         model=model,
-        year=year,
-        km=km,
-        fuel=fuel,
-        location=location,
         url=url,
         source="troostwijk",
+        platform=lot.get("platform"),
+        year=year,
+        first_registration=first_reg,
+        km=km,
+        fuel=fuel,
+        transmission=transmission,
+        power_kw=attrs.get("power_kw"),
+        cylinder_cc=attrs.get("cylinder_cc"),
+        emission_standard=attrs.get("emission_standard"),
+        seats=attrs.get("seats"),
+        doors=attrs.get("doors"),
+        color=attrs.get("color"),
+        weight_kg=attrs.get("weight_kg"),
+        load_kg=attrs.get("load_kg"),
+        vin=attrs.get("vin"),
+        city=city,
+        country_code=country,
+        location=location,
+        condition=lot.get("condition"),
+        appearance=lot.get("appearance"),
+        vat_margin=lot.get("marginGood"),
+        bidding_status=lot.get("biddingStatus"),
+        auction_start=auction_start,
         van_type=van_type,
         is_valid_van=valid,
         score=score,
@@ -212,7 +267,6 @@ def parse_vehicle(html, url):
 
 
 def crawl(query="Peugeot Boxer", pages=2):
-    """Crawl a single search query end-to-end, reusing one browser for all lot fetches."""
     urls = get_lot_urls(query, pages=pages)
     results = []
 
@@ -220,14 +274,14 @@ def crawl(query="Peugeot Boxer", pages=2):
         return results
 
     with sync_playwright() as p:
-        browser, context = _new_browser_page(p)
+        browser, context = _new_context(p)
         page = context.new_page()
 
         for url in urls:
             try:
                 page.goto(url, wait_until="networkidle", timeout=45_000)
                 v = parse_vehicle(page.content(), url)
-                results.append(v.model_dump())
+                results.append(v.model_dump(mode="json"))
             except Exception as e:
                 print(f"lot failed {url}: {e}")
 
