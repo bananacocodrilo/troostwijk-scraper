@@ -1,7 +1,15 @@
 from datetime import date, datetime
-from typing import Optional
+from typing import List, Optional
 
 from pydantic import BaseModel
+
+
+class ScoreBreakdown(BaseModel):
+    geometry: int
+    modularity: int
+    conversion_friction: int
+    mileage: int
+    eu_usability: int
 
 
 class Vehicle(BaseModel):
@@ -43,8 +51,14 @@ class Vehicle(BaseModel):
     bidding_status: Optional[str] = None
     auction_start: Optional[datetime] = None
 
-    # Intelligence layer
-    van_type: Optional[str] = None
-    is_valid_van: bool = False
-    score: int = 0
-    hidden_gem: bool = False
+    # Free text (defect descriptions often live here)
+    remarks: Optional[str] = None
+    additional_information: Optional[str] = None
+
+    # Intelligence layer (Phase 2)
+    size_class: Optional[str] = None  # L3H2, L2H2, H2+, etc — whatever the detector confirmed
+    passed_hard_filters: bool = False
+    rejected_reason: Optional[str] = None
+    scores: Optional[ScoreBreakdown] = None
+    total_score: Optional[float] = None
+    reason_for_inclusion: Optional[List[str]] = None

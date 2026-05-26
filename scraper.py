@@ -13,8 +13,8 @@ from typing import Any, Optional
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 
-from models import Vehicle
-from van_intel import detect_size, is_hidden_gem, is_valid_van, score_vehicle
+from models import ScoreBreakdown, Vehicle
+from van_intel import evaluate
 
 BASE = "https://www.troostwijkauctions.com/en/search"
 ORIGIN = "https://www.troostwijkauctions.com"
@@ -215,22 +215,12 @@ def parse_vehicle(html: str, url: str) -> Vehicle:
         datetime.fromtimestamp(start_ts, tz=timezone.utc) if isinstance(start_ts, (int, float)) else None
     )
 
-    # Size class: scan multiple text sources for L*H* patterns.
-    haystack = " ".join(
-        s for s in [
-            title,
-            attrs.get("model") or "",
-            lot.get("remarks") or "",
-            ((lot.get("description") or {}).get("additionalInformation")) or "",
-        ] if s
+    remarks = (lot.get("remarks") or "").strip() or None
+    additional_information = (
+        (((lot.get("description") or {}).get("additionalInformation")) or "").strip() or None
     )
-    van_type = detect_size(haystack)
 
-    valid = is_valid_van(title)
-    score = score_vehicle(year, km, van_type, fuel) if valid else 0
-    gem = is_hidden_gem(score, year, km) if valid else False
-
-    return Vehicle(
+    vehicle = Vehicle(
         title=title,
         brand=brand,
         model=model,
@@ -259,11 +249,18 @@ def parse_vehicle(html: str, url: str) -> Vehicle:
         vat_margin=lot.get("marginGood"),
         bidding_status=lot.get("biddingStatus"),
         auction_start=auction_start,
-        van_type=van_type,
-        is_valid_van=valid,
-        score=score,
-        hidden_gem=gem,
+        remarks=remarks,
+        additional_information=additional_information,
     )
+
+    ev = evaluate(vehicle)
+    vehicle.passed_hard_filters = ev.passed_hard_filters
+    vehicle.rejected_reason = ev.rejected_reason
+    vehicle.size_class = ev.size_class
+    vehicle.total_score = ev.total_score
+    vehicle.reason_for_inclusion = ev.reasons
+    vehicle.scores = ScoreBreakdown(**ev.scores) if ev.scores else None
+    return vehicle
 
 
 def crawl(query="Peugeot Boxer", pages=2):
