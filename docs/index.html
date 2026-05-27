@@ -96,6 +96,15 @@
     .badge-closed  { background: #2a1a1a; color: var(--muted); border-color: var(--border); }
     .badge-vat     { background: #1a1a3a; color: #b0b4ff; border-color: #2a2a6a; }
     .badge-gem     { background: #1a2a1a; color: var(--green); border-color: #2a5a2a; }
+    /* Fleet provenance */
+    .badge-fleet-utility      { background: #0d2e20; color: var(--green); border-color: #1a4a30; }
+    .badge-fleet-telecom      { background: #1a2a4a; color: #7ab4ff; border-color: #2a3a6a; }
+    .badge-fleet-solar        { background: #2d2600; color: var(--yellow); border-color: #4a3d00; }
+    .badge-fleet-hire         { background: #2a263a; color: #b0b4ff; border-color: #3a3650; }
+    .badge-fleet-construction { background: #2d1f00; color: #f5a142; border-color: #4a3600; }
+    .badge-fleet-workshop     { background: #2a1a3a; color: #c485ff; border-color: #4a2a5a; }
+    .badge-fleet-refrigeration { background: #1a3a3a; color: #85d5e8; border-color: #2a5a5a; }
+    .badge-fleet-delivery     { background: #2a0d0d; color: var(--red); border-color: #5a1a1a; }
     .price-row.cost-breakdown { margin-top: -2px; }
     .price-row.cost-breakdown .label { color: var(--muted); opacity: 0.7; }
 
@@ -215,6 +224,21 @@
     </select>
   </label>
   <label>
+    Fleet
+    <select id="fleetFilter">
+      <option value="">All</option>
+      <option value="private">Private / unknown</option>
+      <option value="utility">🏛️ Utility / municipal</option>
+      <option value="telecom">📡 Telecom</option>
+      <option value="solar">☀️ Solar</option>
+      <option value="construction">🏗️ Construction</option>
+      <option value="workshop">🔧 Service van</option>
+      <option value="hire">🚚 Ex-rental / lease</option>
+      <option value="delivery">📦 Courier (risky)</option>
+      <option value="not-delivery">↳ Hide couriers</option>
+    </select>
+  </label>
+  <label>
     Min score <span id="scoreVal">30</span>
     <input type="range" id="scoreFilter" min="0" max="100" step="5" value="30" />
   </label>
@@ -251,6 +275,25 @@ function scoreClass(s) {
   if (s >= 75) return 's-high';
   if (s >= 50) return 's-mid';
   return 's-low';
+}
+
+const FLEET_META = {
+  utility:       { emoji: '🏛️',  label: 'utility / municipal' },
+  telecom:       { emoji: '📡',  label: 'telecom installer' },
+  solar:         { emoji: '☀️',  label: 'solar installer' },
+  construction:  { emoji: '🏗️',  label: 'construction' },
+  workshop:      { emoji: '🔧',  label: 'service van' },
+  refrigeration: { emoji: '❄️',  label: 'refrigerated' },
+  delivery:      { emoji: '📦',  label: 'courier / delivery' },
+  hire:          { emoji: '🚚',  label: 'ex-rental / lease' },
+};
+
+function fleetBadge(v) {
+  if (!v.fleet_type || v.fleet_type === 'private') return '';
+  const m = FLEET_META[v.fleet_type];
+  if (!m) return '';
+  const tip = (v.fleet_signals || []).join(', ') || m.label;
+  return `<span class="badge badge-fleet-${v.fleet_type}" title="${m.label} — matched: ${tip}">${m.emoji} ${m.label}</span>`;
 }
 
 function dealClass(pct) {
@@ -314,6 +357,7 @@ function buildCard(v) {
     ${open ? '<span class="badge badge-open">Bidding open</span>' : '<span class="badge badge-closed">Closed</span>'}
     ${v.is_hidden_gem ? '<span class="badge badge-gem">💎 Hidden gem</span>' : ''}
     ${hasCrew ? '<span class="badge badge-crew">5-seat / crew cab</span>' : ''}
+    ${fleetBadge(v)}
   </div>
 
   <div class="specs">
@@ -380,12 +424,18 @@ function buildCard(v) {
 
 function render() {
   const brand = document.getElementById('brandFilter').value;
+  const fleet = document.getElementById('fleetFilter').value;
   const minScore = parseFloat(document.getElementById('scoreFilter').value);
   const sortKey = document.getElementById('sortBy').value;
 
   let filtered = allVans.filter(v => {
     if (brand && !(v.title||'').toLowerCase().includes(brand.toLowerCase())) return false;
     if ((v.score ?? 0) < minScore) return false;
+    if (fleet === 'not-delivery') {
+      if (v.fleet_type === 'delivery') return false;
+    } else if (fleet && v.fleet_type !== fleet) {
+      return false;
+    }
     return true;
   });
 
@@ -432,6 +482,7 @@ async function load() {
 }
 
 document.getElementById('brandFilter').addEventListener('change', render);
+document.getElementById('fleetFilter').addEventListener('change', render);
 document.getElementById('sortBy').addEventListener('change', render);
 document.getElementById('scoreFilter').addEventListener('input', e => {
   document.getElementById('scoreVal').textContent = parseFloat(e.target.value).toFixed(1);

@@ -73,7 +73,9 @@
       "Peugeot Boxer (size unknown)",
       "114k km, 2014",
       "rules: boxer_override"
-    ]
+    ],
+    "fleet_type": "private",
+    "fleet_signals": null
   },
   {
     "title": "Peugeot - Boxer - Van",
@@ -149,7 +151,9 @@
       "Peugeot Boxer (size unknown)",
       "129k km, 2019",
       "rules: boxer_override"
-    ]
+    ],
+    "fleet_type": "private",
+    "fleet_signals": null
   },
   {
     "title": "Peugeot Boxer 335 2.2 HDI L2H2 XR V-774-ZS",
@@ -226,7 +230,9 @@
       "size: explicit L2H2",
       "247k km, 2015",
       "rules: boxer_override"
-    ]
+    ],
+    "fleet_type": "private",
+    "fleet_signals": null
   },
   {
     "title": "Mercedes-Benz - Sprinter 317 1.9 CDI L3H2 - Van",
@@ -303,7 +309,9 @@
       "size: explicit L3H2",
       "201k km, 2022",
       "rules: sprinter_override"
-    ]
+    ],
+    "fleet_type": "private",
+    "fleet_signals": null
   },
   {
     "title": "Ford Transit 350 2.0 TDCI L3H2 Tr Commercial Vehicle",
@@ -380,7 +388,9 @@
       "size: explicit L3H2",
       "241k km, 2021",
       "rules: global"
-    ]
+    ],
+    "fleet_type": "private",
+    "fleet_signals": null
   },
   {
     "title": "Ford - Transit - FCD - Van",
@@ -456,7 +466,9 @@
       "Ford Transit (size unknown)",
       "204k km, 2020",
       "rules: global"
-    ]
+    ],
+    "fleet_type": "private",
+    "fleet_signals": null
   },
   {
     "title": "Renault Master T35 2.3 dCi 165 L3H2 DL Energy Comfort | VTD-31-N",
@@ -533,7 +545,9 @@
       "size: explicit L3H2",
       "51k km, 2023",
       "rules: master_override"
-    ]
+    ],
+    "fleet_type": "private",
+    "fleet_signals": null
   },
   {
     "title": "Opel Movano",
@@ -609,7 +623,9 @@
       "Opel Movano (size unknown)",
       "126k km, 2023",
       "rules: global"
-    ]
+    ],
+    "fleet_type": "private",
+    "fleet_signals": null
   },
   {
     "title": "Renault Master 2300 dci",
@@ -685,7 +701,9 @@
       "Renault Master (size unknown)",
       "111k km, 2016",
       "rules: master_override"
-    ]
+    ],
+    "fleet_type": "private",
+    "fleet_signals": null
   },
   {
     "title": "Volkswagen - Transporter - T6 - Vans",
@@ -761,7 +779,9 @@
       "Volkswagen Transporter (size unknown)",
       "130k km, 2020",
       "rules: transporter_override"
-    ]
+    ],
+    "fleet_type": "private",
+    "fleet_signals": null
   },
   {
     "title": "2020 - Fiat - Ducato - 35 3.0 CNG L4H2 - Commercial vehicle",
@@ -838,7 +858,9 @@
       "size: explicit L4H2",
       "94k km, year ?",
       "rules: fiat_ducato_override"
-    ]
+    ],
+    "fleet_type": "private",
+    "fleet_signals": null
   },
   {
     "title": "Fiat - Ducato - 35H 2.3 MJ L2H2 - Commercial vehicle",
@@ -915,7 +937,9 @@
       "size: explicit L2H2",
       "150k km, year ?",
       "rules: fiat_ducato_override"
-    ]
+    ],
+    "fleet_type": "private",
+    "fleet_signals": null
   },
   {
     "title": "2016 - Opel - Movano - 2.3 CDTI L4H3 DL - Commercial vehicle",
@@ -992,7 +1016,9 @@
       "size: explicit L4H3",
       "200k km, year ?",
       "rules: global"
-    ]
+    ],
+    "fleet_type": "private",
+    "fleet_signals": null
   },
   {
     "title": "Fiat Ducato maxi Van",
@@ -1069,6 +1095,8 @@
       "size: Maxi variant",
       "202k km, year ?",
       "rules: fiat_ducato_override"
-    ]
+    ],
+    "fleet_type": "private",
+    "fleet_signals": null
   }
 ]

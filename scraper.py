@@ -14,6 +14,7 @@ from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 
 from models import Vehicle
+from fleet import classify_fleet
 from van_intel import evaluate
 
 BASE = "https://www.troostwijkauctions.com/en/search"
@@ -293,6 +294,10 @@ def parse_vehicle(html: str, url: str) -> Vehicle:
     vehicle.applied_rule_set = ev.applied_rule_set
     vehicle.reason_for_inclusion = ev.reasons
     vehicle.scores = ev.breakdown  # already a ScoreBreakdown (Pydantic), no conversion needed
+
+    fleet_type, fleet_signals = classify_fleet(title, remarks, additional_information)
+    vehicle.fleet_type = fleet_type
+    vehicle.fleet_signals = fleet_signals or None
     return vehicle
 
 

@@ -138,6 +138,16 @@ def main():
                 f"  ratio={ratio:+.0%}"
             )
 
+    # Fleet provenance breakdown — informational only
+    fleet_counts: dict = {}
+    for v in accepted:
+        ft = v.get("fleet_type") or "private"
+        fleet_counts[ft] = fleet_counts.get(ft, 0) + 1
+    if fleet_counts:
+        print("\nfleet types (accepted):")
+        for ft, n in sorted(fleet_counts.items(), key=lambda kv: -kv[1]):
+            print(f"  {ft}: {n}")
+
 
 if __name__ == "__main__":
     main()

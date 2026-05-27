@@ -101,3 +101,7 @@ class Vehicle(BaseModel):
     passed_hard_filters: bool = False
     rejected_reason: Optional[str] = None
     reason_for_inclusion: Optional[List[str]] = None
+
+    # Fleet provenance (informational — no score impact yet)
+    fleet_type: Optional[str] = None       # utility | telecom | delivery | solar | …
+    fleet_signals: Optional[List[str]] = None
