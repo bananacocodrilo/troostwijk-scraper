@@ -476,7 +476,7 @@ def evaluate(vehicle) -> Evaluation:
     km_pts  = _score_mileage(km)
     size_pts, high_roof_pts, lwb_pts = _score_van_size(van_type, haystack)
     fuel_pts = _score_fuel(fuel)
-    vat_pts  = 10 if vat_margin is False else 0
+    vat_pts  = 0  # only relevant for business buyers; private camper buyer: no impact
     crew_pts = 10 if CREW_CAB_RE.search(haystack) else 0
 
     bd = ScoreBreakdown(
