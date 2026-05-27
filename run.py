@@ -101,9 +101,9 @@ def main():
             cost_rejected.append(v)
             continue
 
-        # Use deal_score as the primary score when available
-        if v.get("deal_score") is not None:
-            v["score"] = v["deal_score"]
+        # cost_model adds deal_score separately — do NOT overwrite score.
+        # score = suitability (always matches ScoreBreakdown fields).
+        # deal_score = financial quality (deal_ratio-derived, shown separately).
 
         accepted.append(v)
 

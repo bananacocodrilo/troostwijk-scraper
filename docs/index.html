@@ -155,6 +155,12 @@
       background: var(--surface2); color: var(--muted);
     }
     .axis b { color: var(--text); }
+    .axis-total { font-size: 11px; font-weight: 700; color: var(--accent); padding: 2px 4px; }
+    .deal-score-badge {
+      font-size: 11px; font-weight: 700; background: #0d2a1a; color: var(--green);
+      border: 1px solid #2a5a2a; border-radius: 5px; padding: 1px 6px;
+      vertical-align: middle; margin-left: 4px; cursor: help;
+    }
 
     /* ── REMARKS ─────────────────────────────── */
     .remarks {
@@ -215,7 +221,8 @@
   <label>
     Sort by
     <select id="sortBy">
-      <option value="score">Score</option>
+      <option value="score">Suitability score</option>
+      <option value="deal_score">Deal score (financial)</option>
       <option value="deal_margin_pct">Deal margin %</option>
       <option value="max_recommended_bid_eur">Max bid (lowest first)</option>
       <option value="year">Year (newest)</option>
@@ -278,20 +285,25 @@ function buildCard(v) {
   const hasCrew = /5\s*seat|crew\s*cab|dubbele\s*cabine/i.test((v.title||'') + (v.remarks||''));
 
   const axes = v.scores ? Object.entries(v.scores)
-    .filter(([,val]) => val > 0)
+    .filter(([k, val]) => val > 0 && k !== 'vat_deductible')
     .map(([k, val]) => `<span class="axis">${k.replace(/_/g,' ')}: <b>${val}</b></span>`)
     .join('') : '';
+
+  const axesSum = v.scores ? Math.min(Object.values(v.scores).reduce((a,b) => a+b, 0), 100) : null;
 
   const location = [v.city, v.country_code].filter(Boolean).join(', ') || '—';
   const brand = (v.title || '').split(/[\s\-]/)[0];
   const rules = v.applied_rule_set ? `<span style="color:var(--muted);font-size:10px">${v.applied_rule_set}</span>` : '';
+  const dealScoreBadge = v.deal_score != null
+    ? `<span class="deal-score-badge" title="Deal score (based on deal ratio vs market)">💰${v.deal_score}</span>`
+    : '';
 
   return `
 <div class="card" data-brand="${brand}" data-score="${score}">
   <div class="card-top">
-    <div class="score-badge ${scoreClass(score)}">${score}</div>
+    <div class="score-badge ${scoreClass(score)}" title="Suitability score (year + mileage + size + fuel + bonuses)">${score}</div>
     <div>
-      <div class="card-title">${v.title || '—'}</div>
+      <div class="card-title">${v.title || '—'} ${dealScoreBadge}</div>
       <div class="card-sub">${v.van_type || 'size unknown'} · ${location}</div>
     </div>
   </div>
@@ -356,7 +368,7 @@ function buildCard(v) {
     ` : '')}
   </div>
 
-  ${axes ? `<div class="axes">${axes}</div>` : ''}
+  ${axes ? `<div class="axes">${axes}<span class="axis-total">= ${axesSum}</span></div>` : ''}
   ${remarks(v)}
 
   <div class="card-footer">
@@ -378,6 +390,7 @@ function render() {
   });
 
   filtered.sort((a, b) => {
+    if (sortKey === 'deal_score') return (b.deal_score ?? -1) - (a.deal_score ?? -1);
     if (sortKey === 'year') return (b.year ?? 0) - (a.year ?? 0);
     if (sortKey === 'km') return (a.km ?? 999999) - (b.km ?? 999999);
     if (sortKey === 'total_cost_eur') return (a.total_cost_eur ?? 999999) - (b.total_cost_eur ?? 999999);
