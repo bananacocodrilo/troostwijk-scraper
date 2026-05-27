@@ -8,12 +8,12 @@ chasing regex matches across rendered HTML.
 import json
 import re
 from datetime import date, datetime, timezone
-from typing import Any, Optional
+from typing import Optional
 
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 
-from models import ScoreBreakdown, Vehicle
+from models import Vehicle
 from van_intel import evaluate
 
 BASE = "https://www.troostwijkauctions.com/en/search"
@@ -262,17 +262,7 @@ def parse_vehicle(html: str, url: str) -> Vehicle:
     vehicle.score = ev.score or 0
     vehicle.applied_rule_set = ev.applied_rule_set
     vehicle.reason_for_inclusion = ev.reasons
-    if ev.breakdown:
-        vehicle.scores = ScoreBreakdown(
-            year=ev.breakdown.year,
-            mileage=ev.breakdown.mileage,
-            van_size=ev.breakdown.van_size,
-            fuel=ev.breakdown.fuel,
-            vat_deductible=ev.breakdown.vat_deductible,
-            high_roof=ev.breakdown.high_roof,
-            long_wheelbase=ev.breakdown.long_wheelbase,
-            crew_cab=ev.breakdown.crew_cab,
-        )
+    vehicle.scores = ev.breakdown  # already a ScoreBreakdown (Pydantic), no conversion needed
     return vehicle
 
 
@@ -331,8 +321,8 @@ def crawl(query="Peugeot Boxer", pages=2):
                 bid = _parse_graphql_bid(response.json())
                 if bid:
                     bid_by_lot[bid["lot_id"]] = bid
-            except Exception:
-                pass
+            except Exception as e:
+                print(f"graphql parse failed: {e}")
 
         page.on("response", on_response)
 

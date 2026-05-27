@@ -8,8 +8,10 @@ Single entry point: evaluate(vehicle) -> Evaluation
 """
 
 import re
-from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Tuple
+from dataclasses import dataclass
+from typing import List, Optional, Tuple
+
+from models import ScoreBreakdown
 
 # ---------------------------------------------------------------------------
 # Thresholds
@@ -22,7 +24,7 @@ SCORE_THRESHOLD = 30  # lots below this are soft-rejected (still logged)
 # ---------------------------------------------------------------------------
 
 # Maps model token (lowercased) → canonical "Make Model" label.
-ALLOWED_MODELS: Dict[str, str] = {
+ALLOWED_MODELS: dict[str, str] = {
     "boxer":    "Peugeot Boxer",
     "ducato":   "Fiat Ducato",
     "jumper":   "Citroen Jumper",
@@ -53,7 +55,7 @@ SMALLER_SIBLINGS: List[str] = [
 
 _GLOBAL_RULES = {"min_year": 2014, "preferred_year": 2017, "label": "global"}
 
-MODEL_RULES: Dict[str, dict] = {
+MODEL_RULES: dict[str, dict] = {
     "ducato":   {"min_year": 2016, "preferred_year": 2018, "label": "fiat_ducato_override"},
     "sprinter": {"min_year": 2015, "preferred_year": 2017, "label": "sprinter_override"},
     "master":   {"min_year": 2015, "preferred_year": 2017, "label": "master_override"},
@@ -221,24 +223,8 @@ CREW_CAB_RE = re.compile(
 # Result types
 # ---------------------------------------------------------------------------
 
-@dataclass
-class ScoreBreakdown:
-    year: int = 0
-    mileage: int = 0
-    van_size: int = 0
-    fuel: int = 0
-    vat_deductible: int = 0
-    high_roof: int = 0
-    long_wheelbase: int = 0
-    crew_cab: int = 0
-
-    def total(self) -> int:
-        return min(
-            self.year + self.mileage + self.van_size + self.fuel
-            + self.vat_deductible + self.high_roof + self.long_wheelbase + self.crew_cab,
-            100,
-        )
-
+# ScoreBreakdown is defined in models.py (Pydantic) and imported above.
+# Evaluation wraps it alongside the other pipeline outputs.
 
 @dataclass
 class Evaluation:

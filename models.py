@@ -1,5 +1,5 @@
 from datetime import date, datetime
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 
 from pydantic import BaseModel
 
@@ -13,6 +13,13 @@ class ScoreBreakdown(BaseModel):
     high_roof: int = 0
     long_wheelbase: int = 0
     crew_cab: int = 0
+
+    def total(self) -> int:
+        return min(
+            self.year + self.mileage + self.van_size + self.fuel
+            + self.vat_deductible + self.high_roof + self.long_wheelbase + self.crew_cab,
+            100,
+        )
 
 
 class Vehicle(BaseModel):

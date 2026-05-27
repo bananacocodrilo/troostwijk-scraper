@@ -1,13 +1,12 @@
 import json
 import os
 
-from cost_model import compute_costs, passes_cost_filter
+from cost_model import DEFAULT_BUYER_PREMIUM, compute_costs, passes_cost_filter
 from marktplaats import build_price_index
 from scraper import crawl
 from van_intel import ALLOWED_MODELS, SCORE_THRESHOLD
 
 MAX_BID_TARGET_FRACTION = 0.65
-DEFAULT_BUYER_PREMIUM = 0.19
 
 QUERIES = [
     "Peugeot Boxer",
