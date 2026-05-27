@@ -337,13 +337,18 @@ def _damage_reject(haystack: str) -> Optional[str]:
     return None
 
 
-def _fuel_reject(fuel: Optional[str]) -> Optional[str]:
-    if not fuel:
-        return None
-    s = fuel.strip().lower()
+def _fuel_reject(fuel: Optional[str], haystack: str = "") -> Optional[str]:
+    # Check structured fuel field first.
+    if fuel:
+        s = fuel.strip().lower()
+        for bad in FUEL_REJECT:
+            if bad in s:
+                return f"fuel: {fuel}"
+    # Also scan the full text — CNG/electric sometimes appears only in the title.
+    h = haystack.lower()
     for bad in FUEL_REJECT:
-        if bad in s:
-            return f"fuel: {fuel}"
+        if re.search(rf"\b{re.escape(bad)}\b", h):
+            return f"fuel in text: {bad}"
     return None
 
 
@@ -540,8 +545,8 @@ def evaluate(vehicle) -> Evaluation:
     if cat:
         return Evaluation(False, f"category_blacklisted: {cat}", None, None, None, None)
 
-    # Hard filter 5: fuel type
-    fuel_bad = _fuel_reject(fuel)
+    # Hard filter 5: fuel type (structured field + title scan)
+    fuel_bad = _fuel_reject(fuel, haystack)
     if fuel_bad:
         return Evaluation(False, f"fuel_rejected: {fuel_bad}", None, None, None, None)
 
