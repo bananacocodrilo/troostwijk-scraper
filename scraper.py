@@ -8,7 +8,7 @@ chasing regex matches across rendered HTML.
 import json
 import re
 from datetime import date, datetime, timezone
-from typing import Optional
+from typing import Any, Optional
 
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
@@ -179,6 +179,33 @@ def _normalize_fuel(raw: Optional[str]) -> Optional[str]:
     return s
 
 
+def _clean_model(raw: Optional[str], brand: Optional[str]) -> Optional[str]:
+    """Normalise the Troostwijk 'Type' attribute into a clean sub-model name.
+
+    The raw value can be anything from a proper designation ("335 2.2 HDI L3H2")
+    to a feature list ("- airco - euro 6b - trekhaak") or an internal code ("FCD").
+    Returns None when the value carries no useful information.
+    """
+    if not raw:
+        return None
+    s = raw.strip()
+    # Starts with "-" → features listed as model (Troostwijk data error)
+    if s.startswith("-"):
+        return None
+    # Pure dash or blank
+    if s in ("-", "--", "—", ""):
+        return None
+    # Duplicates the brand name (e.g. model="Peugeot" when brand="Peugeot")
+    if brand and s.lower() == brand.lower():
+        return None
+    # Duplicates just the model token we already infer from the title
+    # (e.g. model="Boxer" — already obvious from brand Peugeot)
+    from van_intel import ALLOWED_MODELS
+    if s.lower() in ALLOWED_MODELS:
+        return None
+    return s
+
+
 def parse_vehicle(html: str, url: str) -> Vehicle:
     """Build a Vehicle from a lot page's ``__NEXT_DATA__`` blob.
 
@@ -186,15 +213,18 @@ def parse_vehicle(html: str, url: str) -> Vehicle:
     ship a sparse attribute list (e.g. only Brand/Type/Mileage)."""
     data = _next_data(html)
     if not data:
-        # No NEXT_DATA — return a stub so the URL isn't lost.
-        return Vehicle(title="", url=url)
+        return Vehicle(title="", url=url, rejected_reason="load_failed")
 
     lot = (((data.get("props") or {}).get("pageProps") or {}).get("lot")) or {}
     title = lot.get("title") or ""
 
+    if not title:
+        return Vehicle(title="", url=url, rejected_reason="load_failed")
+
     attrs = _attrs_to_dict(lot)
     brand = attrs.get("brand")
-    model = attrs.get("model")
+    raw_model = attrs.get("model")
+    model = _clean_model(raw_model, brand)
     year = attrs.get("year")
     first_reg = attrs.get("first_registration")
     if year is None and first_reg is not None:

@@ -19,6 +19,8 @@ QUERIES = [
     "Opel Movano",
     "MAN TGE",
     "Iveco Daily",
+    "Peugeot Expert",
+    "Volkswagen Transporter",
 ]
 
 
@@ -116,10 +118,11 @@ def main():
         r = (v.get("rejected_reason") or "unknown").split(":", 1)[0]
         reason_counts[r] = reason_counts.get(r, 0) + 1
 
+    load_failures = reason_counts.pop("load_failed", 0)
     gems = [v for v in accepted if v.get("is_hidden_gem")]
     print(
         f"\ncrawled={len(all_results)} accepted={len(accepted)} "
-        f"cost_rejected={len(cost_rejected)} suitability_rejected={len(suitability_rejected)}"
+        f"load_failed={load_failures} filtered={len(rejected) - load_failures}"
     )
     for r, n in sorted(reason_counts.items(), key=lambda kv: -kv[1]):
         print(f"  {r}: {n}")

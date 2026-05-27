@@ -25,16 +25,18 @@ SCORE_THRESHOLD = 30  # lots below this are soft-rejected (still logged)
 
 # Maps model token (lowercased) → canonical "Make Model" label.
 ALLOWED_MODELS: dict[str, str] = {
-    "boxer":    "Peugeot Boxer",
-    "ducato":   "Fiat Ducato",
-    "jumper":   "Citroen Jumper",
-    "transit":  "Ford Transit",
-    "sprinter": "Mercedes Sprinter",
-    "master":   "Renault Master",
-    "crafter":  "Volkswagen Crafter",
-    "movano":   "Opel Movano",
-    "tge":      "MAN TGE",
-    "daily":    "Iveco Daily",
+    "boxer":        "Peugeot Boxer",
+    "ducato":       "Fiat Ducato",
+    "jumper":       "Citroen Jumper",
+    "transit":      "Ford Transit",
+    "sprinter":     "Mercedes Sprinter",
+    "master":       "Renault Master",
+    "crafter":      "Volkswagen Crafter",
+    "movano":       "Opel Movano",
+    "tge":          "MAN TGE",
+    "daily":        "Iveco Daily",
+    "expert":       "Peugeot/Citroen Expert",   # mid-size panel van (optional)
+    "transporter":  "Volkswagen Transporter",    # T5/T6 — common camper base
 }
 
 # Smaller siblings that disqualify a match even if a primary token hits.
@@ -47,6 +49,8 @@ SMALLER_SIBLINGS: List[str] = [
     "caddy",
     "doblo", "fiorino", "talento", "scudo",
     "nemo", "bipper",
+    # Expert traveller is a 9-seat minibus — not a cargo platform
+    "expert traveller",
 ]
 
 # ---------------------------------------------------------------------------
@@ -59,8 +63,10 @@ MODEL_RULES: dict[str, dict] = {
     "ducato":   {"min_year": 2016, "preferred_year": 2018, "label": "fiat_ducato_override"},
     "sprinter": {"min_year": 2015, "preferred_year": 2017, "label": "sprinter_override"},
     "master":   {"min_year": 2015, "preferred_year": 2017, "label": "master_override"},
-    "boxer":    {"min_year": 2014, "preferred_year": 2016, "label": "boxer_override"},
-    "jumper":   {"min_year": 2014, "preferred_year": 2016, "label": "jumper_override"},
+    "boxer":        {"min_year": 2014, "preferred_year": 2016, "label": "boxer_override"},
+    "jumper":       {"min_year": 2014, "preferred_year": 2016, "label": "jumper_override"},
+    "expert":       {"min_year": 2016, "preferred_year": 2018, "label": "expert_override"},
+    "transporter":  {"min_year": 2015, "preferred_year": 2017, "label": "transporter_override"},
 }
 
 def _rules_for(token: Optional[str]) -> dict:
