@@ -113,6 +113,15 @@
     .price-row .label { color: var(--muted); }
     .price-row .value { font-weight: 600; }
     .price-row .value.na { color: var(--muted); font-style: italic; font-weight: 400; }
+    .price-row .value.over { color: var(--red); }
+    .price-row.max-bid {
+      background: #0d2a1a; border: 1px solid #1a4a2a; border-radius: 6px;
+      padding: 6px 10px; margin-bottom: 4px;
+    }
+    .price-row.max-bid .label { color: var(--text); font-weight: 600; }
+    .max-bid-val { color: var(--green) !important; font-size: 15px !important; }
+    .price-row.over-limit { background: #2a0d0d; border-color: #5a1a1a; }
+    .price-row.over-limit .max-bid-val { color: var(--red) !important; }
     .deal-bar {
       margin-top: 8px; border-radius: 6px; overflow: hidden;
       height: 6px; background: var(--surface2);
@@ -206,6 +215,7 @@
     <select id="sortBy">
       <option value="score">Score</option>
       <option value="deal_margin_pct">Deal margin %</option>
+      <option value="max_recommended_bid_eur">Max bid (lowest first)</option>
       <option value="year">Year (newest)</option>
       <option value="km">Mileage (lowest)</option>
       <option value="total_cost_eur">Price (lowest)</option>
@@ -256,6 +266,8 @@ function buildCard(v) {
   const total = v.total_cost_eur;
   const market = v.market_median_eur;
   const margin = v.deal_margin_pct;
+  const maxBid = v.max_recommended_bid_eur;
+  const bidOverLimit = bid != null && maxBid != null && bid > maxBid;
   const marginClass = dealClass(margin);
   const barWidth = margin != null ? Math.min(Math.max(margin, 0), 100) : 0;
 
@@ -300,12 +312,18 @@ function buildCard(v) {
   </div>
 
   <div class="prices">
+    ${maxBid != null ? `
+    <div class="price-row max-bid ${bidOverLimit ? 'over-limit' : ''}">
+      <span class="label">🎯 Max recommended bid</span>
+      <span class="value max-bid-val">${fmt(maxBid)}${bidOverLimit ? ' ⚠️ exceeded' : ''}</span>
+    </div>
+    ` : ''}
     <div class="price-row">
       <span class="label">Current bid</span>
-      <span class="value">${bid != null ? fmt(bid) : '<span class="na">not yet captured</span>'}</span>
+      <span class="value ${bidOverLimit ? 'over' : ''}">${bid != null ? fmt(bid) : '<span class="na">not yet captured</span>'}</span>
     </div>
     <div class="price-row">
-      <span class="label">All-in cost (incl. 19% premium)</span>
+      <span class="label">All-in cost (bid + 19% premium)</span>
       <span class="value">${total != null ? fmt(total) : '<span class="na">—</span>'}</span>
     </div>
     <div class="price-row">
@@ -343,6 +361,7 @@ function render() {
     if (sortKey === 'year') return (b.year ?? 0) - (a.year ?? 0);
     if (sortKey === 'km') return (a.km ?? 999999) - (b.km ?? 999999);
     if (sortKey === 'total_cost_eur') return (a.total_cost_eur ?? 999999) - (b.total_cost_eur ?? 999999);
+    if (sortKey === 'max_recommended_bid_eur') return (a.max_recommended_bid_eur ?? 999999) - (b.max_recommended_bid_eur ?? 999999);
     if (sortKey === 'deal_margin_pct') return (b.deal_margin_pct ?? -99) - (a.deal_margin_pct ?? -99);
     return (b.score ?? 0) - (a.score ?? 0);
   });

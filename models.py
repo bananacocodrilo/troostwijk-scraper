@@ -72,6 +72,7 @@ class Vehicle(BaseModel):
     market_sample_size: Optional[int] = None
     deal_margin_eur: Optional[float] = None
     deal_margin_pct: Optional[float] = None
+    max_recommended_bid_eur: Optional[float] = None  # back-calc from market median
 
     # Intelligence layer (Phase 2+)
     van_type: Optional[str] = None        # detected size class: L3H2, L2H2, H2+, …

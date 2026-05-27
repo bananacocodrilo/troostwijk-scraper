@@ -5,6 +5,12 @@ from marktplaats import build_price_index
 from scraper import crawl
 from van_intel import ALLOWED_MODELS, SCORE_THRESHOLD
 
+# All-in cost (bid + buyer's premium) as a fraction of retail market value.
+# 0.65 = "don't pay more than 65% of what it sells for on Marktplaats",
+# leaving ~35% headroom for conversion costs + margin.
+MAX_BID_TARGET_FRACTION = 0.65
+DEFAULT_BUYER_PREMIUM = 0.19  # Troostwijk standard
+
 QUERIES = [
     "Peugeot Boxer",
     "Citroen Jumper",
@@ -74,6 +80,10 @@ def main():
                 margin = round(median - total_cost)
                 v["deal_margin_eur"] = margin
                 v["deal_margin_pct"] = round(margin / median * 100, 1)
+
+            if median:
+                premium = 1 + (v.get("buyer_premium_pct") or DEFAULT_BUYER_PREMIUM * 100) / 100
+                v["max_recommended_bid_eur"] = round(median * MAX_BID_TARGET_FRACTION / premium)
 
             accepted.append(v)
         else:
