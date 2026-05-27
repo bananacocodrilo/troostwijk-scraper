@@ -6,10 +6,16 @@ from scraper import crawl
 from van_intel import ALLOWED_MODELS, SCORE_THRESHOLD
 
 QUERIES = [
-    "Fiat Ducato",
     "Peugeot Boxer",
     "Citroen Jumper",
+    "Fiat Ducato",
+    "Mercedes Sprinter",
     "Ford Transit",
+    "Renault Master",
+    "Volkswagen Crafter",
+    "Opel Movano",
+    "MAN TGE",
+    "Iveco Daily",
 ]
 
 

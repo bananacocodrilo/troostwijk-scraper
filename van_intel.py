@@ -1,17 +1,29 @@
-"""Van intelligence layer (Phase 2).
+"""Van intelligence layer.
 
-Geometry-first filter + 5-axis 0-10 scoring for camper-conversion candidates.
-``evaluate(vehicle)`` is the single entry point; everything else is a helper.
+Single entry point: ``evaluate(vehicle) -> Evaluation``.
 
-Hard filters (must pass, else rejected with a structured reason):
-  - brand whitelist: Fiat Ducato, Peugeot Boxer, Citroen Jumper, Ford Transit
-  - smaller siblings rejected (Berlingo, Partner, Combo, Transit Connect, …)
-  - body size: must confirm H2+ / L2+ / Maxi / LWB / high-roof
-  - conversion state: ambulance, refrigerated, camper, workshop, chassis cab,
-    tipper, pickup, hearse, shuttle/minibus, etc.
+Hard filters (any failure → reject with reason):
+  - Brand whitelist (10 van platforms)
+  - Smaller sibling rejection (Vito, Trafic, Vivaro, etc.)
+  - Conversion-state reject (ambulance, camper, refrigerated, ...)
+  - Damage reject (engine, gearbox, flood, fire, total loss)
+  - Category reject (scooter, machinery, trailer)
+  - Body size: L1H1 / SWB / compact → reject; unknown → soft pass
+  - Fuel: electric / CNG / LPG → reject
+  - Year: <2014 → reject (if year known)
+  - Mileage: >250 000 km → reject (if km known)
 
-Soft filters: 5 axes scored 0-10, weighted into total_score (0-10). Lots
-with total_score < SCORE_THRESHOLD also fail and land in the reject log.
+Soft scoring (0–10 per axis, weighted total 0–10):
+  geometry           0.25  — size class + crew-cab bonus
+  modularity         0.30  — empty cargo / no fitout (key metric)
+  conversion_friction 0.15 — friction signals in text
+  mileage            0.20  — km + year combined
+  eu_usability       0.10  — Euro norm + VAT deductibility
+
+Equipment bonus (+0–2 on top of weighted total, capped at 10):
+  AC, cruise control, tow hitch, rear camera each add +0.5.
+
+Lots with total_score < SCORE_THRESHOLD are soft-rejected.
 """
 
 import re
@@ -20,7 +32,6 @@ from typing import List, Optional, Tuple
 
 SCORE_THRESHOLD = 7.0
 
-# Weights sum to 1.0 — modularity is the "key metric" per the geometry-first design.
 WEIGHTS = {
     "geometry": 0.25,
     "modularity": 0.30,
@@ -30,74 +41,117 @@ WEIGHTS = {
 }
 
 # ---------------------------------------------------------------------------
-# Brand whitelist
+# Brand whitelist (10 van platforms)
 # ---------------------------------------------------------------------------
 
-# Model token (lowercased) -> canonical "Make Model" label.
 ALLOWED_MODELS = {
     "boxer": "Peugeot Boxer",
     "ducato": "Fiat Ducato",
     "jumper": "Citroen Jumper",
     "transit": "Ford Transit",
+    "sprinter": "Mercedes Sprinter",
+    "master": "Renault Master",
+    "crafter": "Volkswagen Crafter",
+    "movano": "Opel Movano",
+    "tge": "MAN TGE",
+    "daily": "Iveco Daily",
 }
 
-# Phrases that, even if a primary model token is present, kick the lot out
-# because they refer to a smaller sibling or different platform.
+# Phrases that disqualify even if a primary model token is present.
 SMALLER_SIBLINGS = [
-    "transit connect",
-    "transit courier",
-    "transit custom",  # custom is L1/L2 low roof — under our floor
-    "berlingo",
-    "partner",
-    "combo",
-    "doblo",
-    "nemo",
-    "bipper",
+    # Mercedes smaller siblings
+    "vito", "citan", "v-klasse", "v klasse",
+    # Ford smaller siblings
+    "transit connect", "transit courier",
+    # Transit Custom is debatable (it IS large, but L2H1 typically)
+    "transit custom",
+    # Renault smaller siblings
+    "trafic", "kangoo",
+    # Opel / Vauxhall smaller siblings
+    "vivaro", "zafira", "combo",
+    # PSA smaller siblings
+    "berlingo", "partner",
+    # VW smaller siblings
     "caddy",
-    "kangoo",
+    # Fiat smaller siblings
+    "doblo", "fiorino", "talento", "scudo",
+    # Generic
+    "nemo", "bipper",
 ]
 
 # ---------------------------------------------------------------------------
-# Conversion-state hard rejects (scan title + remarks + description)
+# Damage — hard reject (scan haystack)
+# ---------------------------------------------------------------------------
+
+DAMAGE_REJECT = [
+    ("engine broken", "engine failure"),
+    ("engine failure", "engine failure"),
+    ("motor defect", "engine failure (NL)"),
+    ("motor kapot", "engine failure (NL)"),
+    ("motor stuk", "engine failure (NL)"),
+    ("motor broken", "engine failure"),
+    ("motorschaden", "engine failure (DE)"),
+    ("motorschade", "engine failure (NL)"),
+    ("moteur cassé", "engine failure (FR)"),
+    ("not starting", "not starting"),
+    ("niet startend", "not starting (NL)"),
+    ("start niet", "not starting (NL)"),
+    ("startet nicht", "not starting (DE)"),
+    ("does not start", "not starting"),
+    ("starts not", "not starting"),
+    ("gearbox broken", "gearbox failure"),
+    ("gearbox defect", "gearbox failure"),
+    ("gearbox failure", "gearbox failure"),
+    ("versnellingsbak defect", "gearbox failure (NL)"),
+    ("versnellingsbak kapot", "gearbox failure (NL)"),
+    ("getriebe defekt", "gearbox failure (DE)"),
+    ("water damage", "flood damage"),
+    ("waterschade", "flood damage (NL)"),
+    ("wasserschaden", "flood damage (DE)"),
+    ("flood damage", "flood damage"),
+    ("fire damage", "fire damage"),
+    ("brandschade", "fire damage (NL)"),
+    ("brandschaden", "fire damage (DE)"),
+    ("total loss", "total loss"),
+    ("totalschade", "total loss (NL)"),
+    ("totalschaden", "total loss (DE)"),
+]
+
+# ---------------------------------------------------------------------------
+# Conversion-state hard rejects
 # ---------------------------------------------------------------------------
 
 CONVERSION_REJECT = [
-    # ambulance
     ("ambulance", "ambulance build"),
     ("ambulanc", "ambulance build"),
     ("ziekenwagen", "ambulance (NL)"),
     ("ziekenauto", "ambulance (NL)"),
     ("krankenwagen", "ambulance (DE)"),
-    # refrigerated
     ("refrigerated", "refrigerated body"),
-    ("refrigerator", "refrigerated body"),
     ("koelwagen", "refrigerated body (NL)"),
     ("koel-vries", "refrigerated body (NL)"),
     ("kühlfahrzeug", "refrigerated body (DE)"),
-    ("kuhlfahrzeug", "refrigerated body (DE)"),
     ("frigo", "refrigerated body"),
     ("ice cream", "ice cream truck"),
     ("ijswagen", "ice cream truck (NL)"),
-    # service / workshop fitouts
-    ("workshop interior", "workshop interior"),
     ("werkplaatsinrichting", "workshop interior (NL)"),
     ("fully fitted", "fully fitted interior"),
     ("volledig ingericht", "fully fitted interior (NL)"),
-    # passenger
     ("hearse", "hearse"),
     ("lijkwagen", "hearse (NL)"),
     ("school bus", "school bus"),
     ("schoolbus", "school bus"),
+    ("paardentrailer", "horse transport"),
+    ("horse transport", "horse transport"),
+    ("paardenwagen", "horse transport (NL)"),
     ("minibus", "minibus / passenger shuttle"),
     ("shuttle", "passenger shuttle"),
-    # body conversions
     ("camper", "RV / camper conversion"),
     ("motorhome", "RV conversion"),
     ("mobilhome", "RV conversion"),
-    ("mobil home", "RV conversion"),
     ("wohnmobil", "RV conversion (DE)"),
     ("tipper", "tipper body"),
-    ("kipper", "tipper body (NL/DE)"),
+    ("kipper", "tipper body"),
     ("dumper", "dumper body"),
     ("pick-up", "pickup body"),
     ("pick up", "pickup body"),
@@ -108,27 +162,30 @@ CONVERSION_REJECT = [
     ("light truck", "chassis cab variant"),
     ("flatbed", "flatbed body"),
     ("dropside", "dropside body"),
+    ("tractor unit", "tractor unit"),
+    ("trekker", "tractor unit (NL)"),
     ("crane", "crane mounted"),
     ("tow truck", "tow truck"),
-    ("recovery truck", "recovery truck"),
     ("takelwagen", "tow truck (NL)"),
     ("box truck", "box truck"),
     ("bakwagen", "box truck (NL)"),
 ]
 
-# Category-style rejects (scan title)
 CATEGORY_REJECT = [
-    ("scooter", "scooter (category)"),
-    ("motorcycle", "motorcycle (category)"),
-    ("trailer", "trailer (category)"),
+    ("scooter", "scooter"),
+    ("motorcycle", "motorcycle"),
+    ("trailer", "trailer"),
     ("aanhanger", "trailer (NL)"),
-    ("forklift", "machinery (forklift)"),
-    ("excavator", "machinery (excavator)"),
-    ("graafmachine", "machinery (NL)"),
+    ("forklift", "forklift"),
+    ("excavator", "excavator"),
+    ("graafmachine", "excavator (NL)"),
 ]
 
+# Fuel types that are hard-rejected.
+FUEL_REJECT = {"electric", "elektrisch", "elektro", "cng", "lpg", "waterstof", "hydrogen"}
+
 # ---------------------------------------------------------------------------
-# Body-size detection (hard filter)
+# Body-size detection
 # ---------------------------------------------------------------------------
 
 SIZE_ACCEPT_HINTS = [
@@ -140,22 +197,25 @@ SIZE_ACCEPT_HINTS = [
     (r"\blong\s*wheel\s*base\b", "L3", "long wheelbase"),
     (r"\bextra\s*lang\b", "L3", "extra long (NL)"),
     (r"\blangwerkbasis\b", "L3", "long wheelbase (NL)"),
+    (r"\bkastenwagen\b", "panel", "panel van (DE)"),
+    (r"\bbestelwagen\b", "panel", "panel van (NL)"),
+    (r"\bfurgon\b", "panel", "panel van (ES/PL)"),
 ]
 
 SIZE_REJECT_HINTS = [
     (r"\bswb\b", "short wheelbase"),
     (r"\bshort\s*wheel\s*base\b", "short wheelbase"),
     (r"\bcompact\b", "compact variant"),
-    (r"\bkort\s*model\b", "short variant (NL)"),
-    (r"\bcity\s*van\b", "city van variant"),
+    (r"\bcity\s*van\b", "city van"),
+    (r"\bl1\b", "L1 (short)"),
+    (r"\bl1\s*h1\b", "L1H1 (compact)"),
 ]
 
 # ---------------------------------------------------------------------------
-# Conversion friction (soft penalty — reduces modularity & friction scores)
+# Friction / modularity indicators
 # ---------------------------------------------------------------------------
 
 FRICTION_INDICATORS = [
-    # heavier signals (more confidence the van is fitted out)
     ("wiring", 3, "wiring/electrical install"),
     ("installed", 2, "fitted install"),
     ("installation", 2, "fitted install"),
@@ -169,16 +229,29 @@ FRICTION_INDICATORS = [
     ("partition", 2, "partition wall"),
     ("schot", 2, "partition (NL)"),
     ("trennwand", 2, "partition (DE)"),
-    # lighter signals
     ("rack", 1, "racking"),
     ("shelv", 1, "shelving"),
     ("stelling", 1, "shelving (NL)"),
-    ("ladder rack", 1, "ladder rack"),
-    ("rooflight", 1, "roof window"),
-    ("solar panel", 1, "solar panel install"),
 ]
 
 EMPTY_HINTS = ("empty", "leeg", "kale laadruimte", "stripped", "no interior")
+
+# Equipment signals (each boosts the equipment bonus).
+EQUIPMENT_SIGNALS = [
+    (r"\b(airco|air\s*conditioning|klimaanlage|air\s*co)\b", "AC"),
+    (r"\bcruise\s*control\b", "cruise control"),
+    (r"\b(tow\s*hitch|trekhaak|anhängerkupplung| anhangerkupplung)\b", "tow hitch"),
+    (r"\b(rear\s*camera|achteruitrijcamera|rückfahrkamera|ruckfahrkamera)\b", "rear camera"),
+    (r"\bnavigat", "navigation"),
+    (r"\bparkeer\s*sensor|parking\s*sensor", "parking sensors"),
+]
+
+# Crew-cab / 5-seat keywords (major value bonus for legal conversion).
+CREW_CAB_HINTS = [
+    "crew cab", "crewcab", "double cabin", "dubbele cabine", "double cab",
+    "5 seat", "5-seat", "5 persoons", "5-persoons", "vijf personen",
+    "combi", "combiruimte",
+]
 
 
 # ---------------------------------------------------------------------------
@@ -190,7 +263,7 @@ class Evaluation:
     passed_hard_filters: bool
     rejected_reason: Optional[str]
     size_class: Optional[str]
-    scores: Optional[dict]  # axis -> 0..10 int
+    scores: Optional[dict]
     total_score: Optional[float]
     reasons: Optional[List[str]]
 
@@ -199,29 +272,20 @@ class Evaluation:
 # Hard filter helpers
 # ---------------------------------------------------------------------------
 
-
 def _matched_model(haystack: str) -> Optional[str]:
-    """Return canonical "Make Model" if one of the allowed model tokens is in
-    the haystack and no smaller-sibling phrase is."""
     s = haystack.lower()
     for sib in SMALLER_SIBLINGS:
         if sib in s:
             return None
     for token, canonical in ALLOWED_MODELS.items():
-        # word boundary so "boxershort" wouldn't trip the boxer match
         if re.search(rf"\b{re.escape(token)}\b", s):
             return canonical
     return None
 
 
 def _detect_size(haystack: str) -> Tuple[str, Optional[str], Optional[str]]:
-    """Return (status, size_class, evidence).
-
-    status is one of "accept" / "reject" / "unknown".
-    """
     s = haystack.lower()
 
-    # Explicit L_H_ code (handles "L3H2", "L 3 H 2", "L3 H2", etc).
     m = re.search(r"\bl\s*([1-4])\s*h\s*([1-3])\b", s)
     if m:
         L, H = int(m.group(1)), int(m.group(2))
@@ -230,13 +294,12 @@ def _detect_size(haystack: str) -> Tuple[str, Optional[str], Optional[str]]:
             return ("reject", code, f"size {code} (low/short)")
         return ("accept", code, f"explicit {code}")
 
-    # Standalone H2/H3 (after the L_H_ check so it doesn't override)
     if re.search(r"\bh\s*[23]\b", s):
         return ("accept", "H2+", "H2/H3 marker")
     if re.search(r"\bh\s*1\b", s):
-        return ("reject", "H1", "H1 (low roof) marker")
+        return ("reject", "H1", "H1 (low roof)")
     if re.search(r"\bl\s*1\b", s):
-        return ("reject", "L1", "L1 (short) marker")
+        return ("reject", "L1", "L1 (short body)")
 
     for pat, klass, label in SIZE_ACCEPT_HINTS:
         if re.search(pat, s):
@@ -246,6 +309,7 @@ def _detect_size(haystack: str) -> Tuple[str, Optional[str], Optional[str]]:
         if re.search(pat, s):
             return ("reject", "compact/SWB", label)
 
+    # Unknown — soft pass (geometry will be penalised in scoring).
     return ("unknown", None, None)
 
 
@@ -265,41 +329,65 @@ def _category_reject(haystack: str) -> Optional[str]:
     return None
 
 
-# ---------------------------------------------------------------------------
-# Scoring helpers (each returns 0..10 int)
-# ---------------------------------------------------------------------------
+def _damage_reject(haystack: str) -> Optional[str]:
+    s = haystack.lower()
+    for kw, label in DAMAGE_REJECT:
+        if kw in s:
+            return label
+    return None
 
 
-def _score_geometry(size_class: Optional[str]) -> int:
-    if not size_class:
-        return 5
-    s = size_class.upper()
-    if s in ("L4H3", "L3H3"):
-        return 10
-    if s in ("L3H2", "L4H2"):
-        return 9
-    if s == "L2H2":
-        return 8
-    if s in ("H2+", "H3", "L3"):
-        return 8  # confirmed roof or length but missing the other axis
-    return 5
+def _fuel_reject(fuel: Optional[str]) -> Optional[str]:
+    if not fuel:
+        return None
+    s = fuel.strip().lower()
+    for bad in FUEL_REJECT:
+        if bad in s:
+            return f"fuel: {fuel}"
+    return None
+
+
+# ---------------------------------------------------------------------------
+# Scoring helpers
+# ---------------------------------------------------------------------------
+
+def _score_geometry(size_class: Optional[str], haystack: str) -> int:
+    base = 5  # unknown
+    if size_class:
+        s = size_class.upper()
+        if s in ("L4H3", "L3H3"):
+            base = 10
+        elif s in ("L3H2", "L4H2"):
+            base = 9
+        elif s == "L2H2":
+            base = 8
+        elif s in ("H2+", "H3", "L3"):
+            base = 8
+        elif s == "panel":
+            base = 6
+
+    # Crew cab / 5-seat bonus (+1, capped at 10).
+    h = haystack.lower()
+    if any(hint in h for hint in CREW_CAB_HINTS):
+        base = min(base + 1, 10)
+
+    return base
 
 
 def _score_mileage(km: Optional[int], year: Optional[int]) -> int:
     km_score = 5
     if km is not None:
-        if km < 100_000:
+        if km < 80_000:
             km_score = 10
-        elif km < 150_000:
+        elif km < 120_000:
             km_score = 9
-        elif km < 200_000:
+        elif km < 180_000:
             km_score = 7
         elif km < 250_000:
             km_score = 5
-        elif km < 300_000:
-            km_score = 3
         else:
-            km_score = 1
+            km_score = 2
+
     year_score = 5
     if year is not None:
         if year >= 2020:
@@ -310,13 +398,13 @@ def _score_mileage(km: Optional[int], year: Optional[int]) -> int:
             year_score = 6
         else:
             year_score = 3
+
     return round((km_score + year_score) / 2)
 
 
 def _score_conversion_friction(haystack: str) -> Tuple[int, List[str]]:
-    """Higher score = less friction. 10 = pristine."""
     if not haystack:
-        return 8, []  # no info = slight uncertainty discount
+        return 8, []
     s = haystack.lower()
     penalty = 0
     matched: List[str] = []
@@ -344,25 +432,43 @@ def _score_modularity(haystack: str, friction_score: int) -> int:
     return 2
 
 
-def _score_eu_usability(emission_standard: Optional[str]) -> int:
-    if not emission_standard:
-        return 5
-    s = emission_standard.lower()
-    if "euro 6" in s or "euro6" in s:
-        return 10
-    if "euro 5" in s or "euro5" in s:
-        return 7
-    if "euro 4" in s or "euro4" in s:
-        return 4
-    if re.search(r"euro\s*[123]\b", s):
-        return 2
-    return 5
+def _score_eu_usability(emission_standard: Optional[str], vat_margin: Optional[bool]) -> int:
+    base = 5
+    if emission_standard:
+        s = emission_standard.lower()
+        if "euro 6" in s or "euro6" in s:
+            base = 10
+        elif "euro 5" in s or "euro5" in s:
+            base = 7
+        elif "euro 4" in s or "euro4" in s:
+            base = 4
+        elif re.search(r"euro\s*[123]\b", s):
+            base = 2
+
+    # VAT-deductible lot (marginGood=False) → buyer saves 21%.
+    # Add +1 unless we're already at max.
+    if vat_margin is False:
+        base = min(base + 1, 10)
+
+    return base
+
+
+def _equipment_bonus(haystack: str) -> Tuple[float, List[str]]:
+    """Each confirmed equipment item adds +0.5, max +2.0."""
+    if not haystack:
+        return 0.0, []
+    s = haystack.lower()
+    found: List[str] = []
+    for pat, label in EQUIPMENT_SIGNALS:
+        if re.search(pat, s):
+            found.append(label)
+    bonus = min(len(found) * 0.5, 2.0)
+    return bonus, found
 
 
 # ---------------------------------------------------------------------------
 # Reasons / explanation
 # ---------------------------------------------------------------------------
-
 
 def _build_reasons(
     canonical_make: str,
@@ -373,6 +479,7 @@ def _build_reasons(
     year: Optional[int],
     emission: Optional[str],
     friction_matches: List[str],
+    equipment: List[str],
 ) -> List[str]:
     out = [f"{canonical_make} ({size_class or 'size unknown'})"]
     if size_evidence:
@@ -384,9 +491,11 @@ def _build_reasons(
     if scores["eu_usability"] >= 7 and emission:
         out.append(f"emissions: {emission}")
     if scores["modularity"] >= 8:
-        out.append("modularity: likely empty cargo shell")
+        out.append("modularity: empty cargo shell")
     if friction_matches:
-        out.append("friction noted: " + ", ".join(friction_matches[:3]))
+        out.append("friction: " + ", ".join(friction_matches[:3]))
+    if equipment:
+        out.append("equipment: " + ", ".join(equipment))
     return out
 
 
@@ -394,77 +503,82 @@ def _build_reasons(
 # Entry point
 # ---------------------------------------------------------------------------
 
-
 def evaluate(vehicle) -> Evaluation:
-    """Run hard filters + scoring against a parsed Vehicle (or dict-like).
+    title = (getattr(vehicle, "title", None) or "")
+    model_attr = (getattr(vehicle, "model", None) or "")
+    remarks = (getattr(vehicle, "remarks", None) or "")
+    additional = (getattr(vehicle, "additional_information", None) or "")
+    fuel = getattr(vehicle, "fuel", None)
+    km = getattr(vehicle, "km", None)
+    year = getattr(vehicle, "year", None)
+    emission = getattr(vehicle, "emission_standard", None)
+    vat_margin = getattr(vehicle, "vat_margin", None)
 
-    Accepts either a Vehicle model or any object exposing the same attrs.
-    """
-    title = (getattr(vehicle, "title", None) or "") or ""
-    model_attr = (getattr(vehicle, "model", None) or "") or ""
-    remarks = (getattr(vehicle, "remarks", None) or "") or ""
-    additional = (getattr(vehicle, "additional_information", None) or "") or ""
-    # The detail "Type" attribute often carries a sub-variant like "Boxer L3H2",
-    # so feed it into the haystack alongside title and free-text fields.
-    haystack = " ".join([title, model_attr, remarks, additional])
+    haystack = " ".join(s for s in [title, model_attr, remarks, additional] if s)
 
-    # Hard filter 1: brand whitelist (+ smaller sibling check)
+    # Hard filter 1: brand whitelist + smaller sibling
     canonical = _matched_model(haystack)
     if not canonical:
-        # If we can identify it's a smaller sibling specifically, give a better reason.
         s = haystack.lower()
         for sib in SMALLER_SIBLINGS:
             if sib in s:
                 return Evaluation(False, f"smaller_sibling: {sib}", None, None, None, None)
         return Evaluation(False, "brand_not_whitelisted", None, None, None, None)
 
-    # Hard filter 2: conversion-state reject
+    # Hard filter 2: major damage
+    dmg = _damage_reject(haystack)
+    if dmg:
+        return Evaluation(False, f"damage: {dmg}", None, None, None, None)
+
+    # Hard filter 3: conversion-state
     conv = _conversion_reject(haystack)
     if conv:
         return Evaluation(False, f"fixed_conversion: {conv}", None, None, None, None)
 
-    # Hard filter 3: category reject
+    # Hard filter 4: category
     cat = _category_reject(haystack)
     if cat:
         return Evaluation(False, f"category_blacklisted: {cat}", None, None, None, None)
 
-    # Hard filter 4: body size
+    # Hard filter 5: fuel type
+    fuel_bad = _fuel_reject(fuel)
+    if fuel_bad:
+        return Evaluation(False, f"fuel_rejected: {fuel_bad}", None, None, None, None)
+
+    # Hard filter 6: year (reject only if year is known and clearly too old)
+    if year is not None and year < 2014:
+        return Evaluation(False, f"year_too_old: {year}", None, None, None, None)
+
+    # Hard filter 7: mileage (reject only if km is known and too high)
+    if km is not None and km > 250_000:
+        return Evaluation(False, f"mileage_too_high: {km}km", None, None, None, None)
+
+    # Hard filter 8: body size (confirmed reject only; unknown = soft pass)
     status, size_class, size_evidence = _detect_size(haystack)
     if status == "reject":
         return Evaluation(False, f"size_too_small: {size_evidence}", size_class, None, None, None)
-    if status == "unknown":
-        return Evaluation(False, "size_unconfirmed", None, None, None, None)
 
-    # All hard filters passed — score it.
+    # Soft scoring.
     friction_score, friction_matches = _score_conversion_friction(haystack)
+    eq_bonus, equipment_found = _equipment_bonus(haystack)
+
     scores = {
-        "geometry": _score_geometry(size_class),
+        "geometry": _score_geometry(size_class, haystack),
         "modularity": _score_modularity(haystack, friction_score),
         "conversion_friction": friction_score,
-        "mileage": _score_mileage(getattr(vehicle, "km", None), getattr(vehicle, "year", None)),
-        "eu_usability": _score_eu_usability(getattr(vehicle, "emission_standard", None)),
+        "mileage": _score_mileage(km, year),
+        "eu_usability": _score_eu_usability(emission, vat_margin),
     }
-    total = round(sum(scores[k] * w for k, w in WEIGHTS.items()), 2)
+
+    weighted = sum(scores[k] * w for k, w in WEIGHTS.items())
+    total = round(min(weighted + eq_bonus, 10), 2)
 
     reasons = _build_reasons(
-        canonical,
-        size_class,
-        size_evidence,
-        scores,
-        getattr(vehicle, "km", None),
-        getattr(vehicle, "year", None),
-        getattr(vehicle, "emission_standard", None),
-        friction_matches,
+        canonical, size_class, size_evidence, scores,
+        km, year, emission, friction_matches, equipment_found,
     )
 
     if total < SCORE_THRESHOLD:
-        return Evaluation(
-            True,
-            f"score_below_threshold: {total:.1f}",
-            size_class,
-            scores,
-            total,
-            reasons,
-        )
+        return Evaluation(True, f"score_below_threshold: {total:.1f}", size_class, scores, total, reasons)
 
     return Evaluation(True, None, size_class, scores, total, reasons)
