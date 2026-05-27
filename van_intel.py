@@ -181,8 +181,13 @@ CATEGORY_REJECT = [
     ("graafmachine", "excavator (NL)"),
 ]
 
-# Fuel types that are hard-rejected.
-FUEL_REJECT = {"electric", "elektrisch", "elektro", "cng", "lpg", "waterstof", "hydrogen"}
+# Fuel types that are hard-rejected — only when the structured attribute
+# explicitly confirms it. Never inferred from title text.
+FUEL_HARD_REJECT = {"electric", "elektrisch", "elektro"}
+
+# Fuel types that are penalised in scoring but not hard-rejected.
+# (CNG/LPG vans are rare but conceivable; don't drop them silently.)
+FUEL_SOFT_REJECT = {"cng", "lpg", "waterstof", "hydrogen"}
 
 # ---------------------------------------------------------------------------
 # Body-size detection
@@ -337,19 +342,27 @@ def _damage_reject(haystack: str) -> Optional[str]:
     return None
 
 
-def _fuel_reject(fuel: Optional[str], haystack: str = "") -> Optional[str]:
-    # Check structured fuel field first.
-    if fuel:
-        s = fuel.strip().lower()
-        for bad in FUEL_REJECT:
-            if bad in s:
-                return f"fuel: {fuel}"
-    # Also scan the full text — CNG/electric sometimes appears only in the title.
-    h = haystack.lower()
-    for bad in FUEL_REJECT:
-        if re.search(rf"\b{re.escape(bad)}\b", h):
-            return f"fuel in text: {bad}"
+def _fuel_reject(fuel: Optional[str]) -> Optional[str]:
+    """Hard-reject only when the structured fuel attribute explicitly confirms
+    a non-viable type. Unknown fuel = pass (benefit of the doubt)."""
+    if not fuel:
+        return None
+    s = fuel.strip().lower()
+    for bad in FUEL_HARD_REJECT:
+        if bad in s:
+            return f"fuel: {fuel}"
     return None
+
+
+def _fuel_penalty(fuel: Optional[str]) -> int:
+    """Return a score penalty (0–3) for soft-reject fuels."""
+    if not fuel:
+        return 0
+    s = fuel.strip().lower()
+    for bad in FUEL_SOFT_REJECT:
+        if bad in s:
+            return 2
+    return 0
 
 
 # ---------------------------------------------------------------------------
@@ -437,7 +450,7 @@ def _score_modularity(haystack: str, friction_score: int) -> int:
     return 2
 
 
-def _score_eu_usability(emission_standard: Optional[str], vat_margin: Optional[bool]) -> int:
+def _score_eu_usability(emission_standard: Optional[str], vat_margin: Optional[bool], fuel: Optional[str]) -> int:
     base = 5
     if emission_standard:
         s = emission_standard.lower()
@@ -450,11 +463,10 @@ def _score_eu_usability(emission_standard: Optional[str], vat_margin: Optional[b
         elif re.search(r"euro\s*[123]\b", s):
             base = 2
 
-    # VAT-deductible lot (marginGood=False) → buyer saves 21%.
-    # Add +1 unless we're already at max.
     if vat_margin is False:
         base = min(base + 1, 10)
 
+    base = max(0, base - _fuel_penalty(fuel))
     return base
 
 
@@ -545,8 +557,8 @@ def evaluate(vehicle) -> Evaluation:
     if cat:
         return Evaluation(False, f"category_blacklisted: {cat}", None, None, None, None)
 
-    # Hard filter 5: fuel type (structured field + title scan)
-    fuel_bad = _fuel_reject(fuel, haystack)
+    # Hard filter 5: fuel — only reject if structured attribute explicitly confirms non-viable
+    fuel_bad = _fuel_reject(fuel)
     if fuel_bad:
         return Evaluation(False, f"fuel_rejected: {fuel_bad}", None, None, None, None)
 
@@ -572,7 +584,7 @@ def evaluate(vehicle) -> Evaluation:
         "modularity": _score_modularity(haystack, friction_score),
         "conversion_friction": friction_score,
         "mileage": _score_mileage(km, year),
-        "eu_usability": _score_eu_usability(emission, vat_margin),
+        "eu_usability": _score_eu_usability(emission, vat_margin, fuel),
     }
 
     weighted = sum(scores[k] * w for k, w in WEIGHTS.items())
