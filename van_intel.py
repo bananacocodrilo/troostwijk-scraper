@@ -312,11 +312,11 @@ def _score_year(year: Optional[int]) -> int:
     if year is None:
         return 0
     if year >= 2020:
-        return 30
+        return 35   # was 30; +5 redistributed from VAT bonus
     if year >= 2017:
-        return 25
+        return 27
     if year >= 2014:
-        return 15
+        return 18
     return 0
 
 
@@ -324,9 +324,9 @@ def _score_mileage(km: Optional[int]) -> int:
     if km is None:
         return 0
     if km < 100_000:
-        return 30
+        return 35   # was 30; +5 redistributed from VAT bonus
     if km <= 180_000:
-        return 20
+        return 22
     if km <= 250_000:
         return 10
     return 0
