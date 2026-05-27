@@ -67,12 +67,25 @@ class Vehicle(BaseModel):
     bids_count: Optional[int] = None
     reserve_met: Optional[bool] = None
 
-    # Market reference
+    # Market reference (Marktplaats)
     market_median_eur: Optional[float] = None
     market_sample_size: Optional[int] = None
     deal_margin_eur: Optional[float] = None
     deal_margin_pct: Optional[float] = None
-    max_recommended_bid_eur: Optional[float] = None  # back-calc from market median
+    max_recommended_bid_eur: Optional[float] = None
+
+    # True acquisition cost model
+    hammer_price: Optional[float] = None
+    auction_fee_estimate: Optional[float] = None
+    fixed_fees_estimate: Optional[float] = None
+    vat_applicable: Optional[bool] = None
+    transport_cost_estimate: Optional[int] = None
+    reconditioning_cost_estimate: Optional[int] = None
+    final_cost_estimate: Optional[int] = None
+    estimated_market_value: Optional[int] = None
+    deal_ratio: Optional[float] = None
+    deal_score: Optional[int] = None       # 0-100, deal-ratio-derived
+    is_hidden_gem: bool = False  # back-calc from market median
 
     # Intelligence layer (Phase 2+)
     van_type: Optional[str] = None        # detected size class: L3H2, L2H2, H2+, …

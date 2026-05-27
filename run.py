@@ -1,15 +1,13 @@
 import json
 import os
 
+from cost_model import compute_costs, passes_cost_filter
 from marktplaats import build_price_index
 from scraper import crawl
 from van_intel import ALLOWED_MODELS, SCORE_THRESHOLD
 
-# All-in cost (bid + buyer's premium) as a fraction of retail market value.
-# 0.65 = "don't pay more than 65% of what it sells for on Marktplaats",
-# leaving ~35% headroom for conversion costs + margin.
 MAX_BID_TARGET_FRACTION = 0.65
-DEFAULT_BUYER_PREMIUM = 0.19  # Troostwijk standard
+DEFAULT_BUYER_PREMIUM = 0.19
 
 QUERIES = [
     "Peugeot Boxer",
@@ -40,10 +38,9 @@ def _dump(path: str, payload):
 
 
 def main():
-    # 1. Crawl Troostwijk (includes bid interception via GraphQL).
+    # 1. Crawl
     all_results = []
     seen_urls: set = set()
-
     for query in QUERIES:
         print(f"Crawling: {query}")
         try:
@@ -57,41 +54,61 @@ def main():
             seen_urls.add(v["url"])
             all_results.append(v)
 
-    # 2. Build Marktplaats retail price index.
+    # 2. Marktplaats price index
     print("\nBuilding Marktplaats price index...")
     price_index = build_price_index(QUERIES)
 
-    # 3. Split accepted / rejected and annotate accepted with market data.
+    # 3. Attach market data + compute true cost + re-filter
     accepted = []
-    rejected = []
+    cost_rejected = []
+    suitability_rejected = []
 
     for v in all_results:
-        if v.get("passed_hard_filters") and (v.get("score") or 0) >= SCORE_THRESHOLD:
-            mk = _model_key(v.get("title", ""))
-            year = v.get("year")
-            median = price_index.median(mk, year)
-            sample = price_index.sample_size(mk, year)
+        # First gate: suitability hard filters + score threshold
+        if not v.get("passed_hard_filters") or (v.get("score") or 0) < SCORE_THRESHOLD:
+            suitability_rejected.append(v)
+            continue
 
-            v["market_median_eur"] = median
-            v["market_sample_size"] = sample
+        mk = _model_key(v.get("title", ""))
+        year = v.get("year")
 
-            total_cost = v.get("total_cost_eur")
-            if median and total_cost:
-                margin = round(median - total_cost)
-                v["deal_margin_eur"] = margin
-                v["deal_margin_pct"] = round(margin / median * 100, 1)
+        # Attach Marktplaats data
+        median = price_index.median(mk, year)
+        sample = price_index.sample_size(mk, year)
+        v["market_median_eur"] = median
+        v["market_sample_size"] = sample
 
-            if median:
-                premium = 1 + (v.get("buyer_premium_pct") or DEFAULT_BUYER_PREMIUM * 100) / 100
-                v["max_recommended_bid_eur"] = round(median * MAX_BID_TARGET_FRACTION / premium)
+        # Legacy deal margin (kept for backwards compat)
+        total_cost = v.get("total_cost_eur")
+        if median and total_cost:
+            margin = round(median - total_cost)
+            v["deal_margin_eur"] = margin
+            v["deal_margin_pct"] = round(margin / median * 100, 1)
 
-            accepted.append(v)
-        else:
-            rejected.append(v)
+        if median:
+            premium = 1 + (v.get("buyer_premium_pct") or DEFAULT_BUYER_PREMIUM * 100) / 100
+            v["max_recommended_bid_eur"] = round(median * MAX_BID_TARGET_FRACTION / premium)
 
+        # True cost model
+        cost_fields = compute_costs(v, model_token=mk)
+        v.update(cost_fields)
+
+        # Cost filter (overpaying vs market, or too expensive to recondition)
+        passes, cost_reason = passes_cost_filter(v)
+        if not passes:
+            v["rejected_reason"] = cost_reason
+            cost_rejected.append(v)
+            continue
+
+        # Use deal_score as the primary score when available
+        if v.get("deal_score") is not None:
+            v["score"] = v["deal_score"]
+
+        accepted.append(v)
+
+    rejected = suitability_rejected + cost_rejected
     accepted.sort(key=lambda v: v.get("score") or 0, reverse=True)
 
-    # 4. Write output.
     _dump("output/latest.json", accepted)
     _dump("output/rejected.json", rejected)
 
@@ -100,23 +117,23 @@ def main():
         r = (v.get("rejected_reason") or "unknown").split(":", 1)[0]
         reason_counts[r] = reason_counts.get(r, 0) + 1
 
+    gems = [v for v in accepted if v.get("is_hidden_gem")]
     print(
         f"\ncrawled={len(all_results)} accepted={len(accepted)} "
-        f"rejected={len(rejected)} (threshold={SCORE_THRESHOLD})"
+        f"cost_rejected={len(cost_rejected)} suitability_rejected={len(suitability_rejected)}"
     )
     for r, n in sorted(reason_counts.items(), key=lambda kv: -kv[1]):
         print(f"  {r}: {n}")
 
-    gems = [v for v in accepted if (v.get("deal_margin_pct") or 0) >= 20]
     if gems:
-        print(f"\n{len(gems)} lots with deal_margin >= 20%:")
+        print(f"\n💎 {len(gems)} hidden gems:")
         for v in gems[:5]:
+            ratio = v.get("deal_ratio") or 0
             print(
-                f"  {v['title'][:45]:45} score={v.get('total_score'):.1f}"
-                f"  bid=€{v.get('current_bid_eur'):,.0f}"
-                f"  total=€{v.get('total_cost_eur'):,.0f}"
-                f"  market=€{v.get('market_median_eur'):,.0f}"
-                f"  margin={v.get('deal_margin_pct'):+.0f}%"
+                f"  {v['title'][:45]:45}"
+                f"  final=€{v.get('final_cost_estimate') or 0:,.0f}"
+                f"  market=€{v.get('estimated_market_value') or 0:,.0f}"
+                f"  ratio={ratio:+.0%}"
             )
 
 
