@@ -198,13 +198,13 @@
     </select>
   </label>
   <label>
-    Min score <span id="scoreVal">7.0</span>
-    <input type="range" id="scoreFilter" min="0" max="10" step="0.5" value="7" />
+    Min score <span id="scoreVal">30</span>
+    <input type="range" id="scoreFilter" min="0" max="100" step="5" value="30" />
   </label>
   <label>
     Sort by
     <select id="sortBy">
-      <option value="total_score">Score</option>
+      <option value="score">Score</option>
       <option value="deal_margin_pct">Deal margin %</option>
       <option value="year">Year (newest)</option>
       <option value="km">Mileage (lowest)</option>
@@ -229,8 +229,8 @@ function fmt(n, prefix='€') {
 }
 
 function scoreClass(s) {
-  if (s >= 8.5) return 's-high';
-  if (s >= 7)   return 's-mid';
+  if (s >= 75) return 's-high';
+  if (s >= 50) return 's-mid';
   return 's-low';
 }
 
@@ -251,7 +251,7 @@ function remarks(v) {
 }
 
 function buildCard(v) {
-  const score = v.total_score ?? 0;
+  const score = v.score ?? 0;
   const bid = v.current_bid_eur;
   const total = v.total_cost_eur;
   const market = v.market_median_eur;
@@ -264,24 +264,26 @@ function buildCard(v) {
   const hasCrew = /5\s*seat|crew\s*cab|dubbele\s*cabine/i.test((v.title||'') + (v.remarks||''));
 
   const axes = v.scores ? Object.entries(v.scores)
-    .map(([k, val]) => `<span class="axis">${k.replace('_',' ')}: <b>${val}</b></span>`)
+    .filter(([,val]) => val > 0)
+    .map(([k, val]) => `<span class="axis">${k.replace(/_/g,' ')}: <b>${val}</b></span>`)
     .join('') : '';
 
   const location = [v.city, v.country_code].filter(Boolean).join(', ') || '—';
-  const brand = (v.reason_for_inclusion?.[0] || v.title || '').split(' ')[0];
+  const brand = (v.title || '').split(/[\s\-]/)[0];
+  const rules = v.applied_rule_set ? `<span style="color:var(--muted);font-size:10px">${v.applied_rule_set}</span>` : '';
 
   return `
 <div class="card" data-brand="${brand}" data-score="${score}">
   <div class="card-top">
-    <div class="score-badge ${scoreClass(score)}">${score.toFixed(1)}</div>
+    <div class="score-badge ${scoreClass(score)}">${score}</div>
     <div>
       <div class="card-title">${v.title || '—'}</div>
-      <div class="card-sub">${v.size_class || 'size unknown'} · ${location}</div>
+      <div class="card-sub">${v.van_type || 'size unknown'} · ${location}</div>
     </div>
   </div>
 
   <div class="badges">
-    ${v.size_class ? `<span class="badge badge-size">${v.size_class}</span>` : ''}
+    ${v.van_type ? `<span class="badge badge-size">${v.van_type}</span>` : ''}
     ${v.fuel ? `<span class="badge badge-fuel">${v.fuel}</span>` : ''}
     ${open ? '<span class="badge badge-open">Bidding open</span>' : '<span class="badge badge-closed">Closed</span>'}
     ${vatOk ? '<span class="badge badge-vat">VAT deductible</span>' : ''}
@@ -333,7 +335,7 @@ function render() {
 
   let filtered = allVans.filter(v => {
     if (brand && !(v.title||'').toLowerCase().includes(brand.toLowerCase())) return false;
-    if ((v.total_score ?? 0) < minScore) return false;
+    if ((v.score ?? 0) < minScore) return false;
     return true;
   });
 
@@ -342,7 +344,7 @@ function render() {
     if (sortKey === 'km') return (a.km ?? 999999) - (b.km ?? 999999);
     if (sortKey === 'total_cost_eur') return (a.total_cost_eur ?? 999999) - (b.total_cost_eur ?? 999999);
     if (sortKey === 'deal_margin_pct') return (b.deal_margin_pct ?? -99) - (a.deal_margin_pct ?? -99);
-    return (b.total_score ?? 0) - (a.total_score ?? 0);
+    return (b.score ?? 0) - (a.score ?? 0);
   });
 
   document.getElementById('count').textContent = `${filtered.length} van${filtered.length !== 1 ? 's' : ''} shown`;

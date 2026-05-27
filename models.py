@@ -1,15 +1,18 @@
 from datetime import date, datetime
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel
 
 
 class ScoreBreakdown(BaseModel):
-    geometry: int
-    modularity: int
-    conversion_friction: int
-    mileage: int
-    eu_usability: int
+    year: int = 0
+    mileage: int = 0
+    van_size: int = 0
+    fuel: int = 0
+    vat_deductible: int = 0
+    high_roof: int = 0
+    long_wheelbase: int = 0
+    crew_cab: int = 0
 
 
 class Vehicle(BaseModel):
@@ -19,7 +22,7 @@ class Vehicle(BaseModel):
     model: Optional[str] = None
     url: str
     source: str = "troostwijk"
-    platform: Optional[str] = None  # TWK, VAVATO, etc — Troostwijk sub-brand
+    platform: Optional[str] = None
 
     # Mechanical
     year: Optional[int] = None
@@ -42,38 +45,40 @@ class Vehicle(BaseModel):
     # Location
     city: Optional[str] = None
     country_code: Optional[str] = None
-    location: Optional[str] = None  # "city, COUNTRY" formatted
+    location: Optional[str] = None
 
     # Auction
-    condition: Optional[str] = None  # WORKING / NOT_CHECKED / ...
+    condition: Optional[str] = None
     appearance: Optional[str] = None
-    vat_margin: Optional[bool] = None  # marginGood — true = VAT margin scheme
+    vat_margin: Optional[bool] = None
     bidding_status: Optional[str] = None
     auction_start: Optional[datetime] = None
+    auction_end: Optional[datetime] = None
 
-    # Free text (defect descriptions often live here)
+    # Free text
     remarks: Optional[str] = None
     additional_information: Optional[str] = None
 
-    # Bid / cost (captured from GraphQL response during Playwright load)
-    lot_id: Optional[str] = None  # internal UUID — used for bid matching
+    # Bid / cost
+    lot_id: Optional[str] = None
     current_bid_eur: Optional[float] = None
     buyer_premium_pct: Optional[float] = None
-    total_cost_eur: Optional[float] = None  # bid + premium + VAT — all-in cost
+    total_cost_eur: Optional[float] = None
     bids_count: Optional[int] = None
     reserve_met: Optional[bool] = None
-    auction_end: Optional[datetime] = None
 
-    # Market reference (from Marktplaats retail index)
+    # Market reference
     market_median_eur: Optional[float] = None
     market_sample_size: Optional[int] = None
-    deal_margin_eur: Optional[float] = None  # market_median - total_cost
-    deal_margin_pct: Optional[float] = None  # deal_margin / market_median * 100
+    deal_margin_eur: Optional[float] = None
+    deal_margin_pct: Optional[float] = None
 
-    # Intelligence layer (Phase 2)
-    size_class: Optional[str] = None  # L3H2, L2H2, H2+, etc — whatever the detector confirmed
+    # Intelligence layer (Phase 2+)
+    van_type: Optional[str] = None        # detected size class: L3H2, L2H2, H2+, …
+    is_valid_van: bool = False             # passed all hard filters
+    score: int = 0                         # 0-100
+    scores: Optional[ScoreBreakdown] = None
+    applied_rule_set: Optional[str] = None
     passed_hard_filters: bool = False
     rejected_reason: Optional[str] = None
-    scores: Optional[ScoreBreakdown] = None
-    total_score: Optional[float] = None
     reason_for_inclusion: Optional[List[str]] = None

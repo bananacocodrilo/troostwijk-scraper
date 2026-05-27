@@ -256,11 +256,23 @@ def parse_vehicle(html: str, url: str) -> Vehicle:
 
     ev = evaluate(vehicle)
     vehicle.passed_hard_filters = ev.passed_hard_filters
+    vehicle.is_valid_van = ev.passed_hard_filters
     vehicle.rejected_reason = ev.rejected_reason
-    vehicle.size_class = ev.size_class
-    vehicle.total_score = ev.total_score
+    vehicle.van_type = ev.van_type
+    vehicle.score = ev.score or 0
+    vehicle.applied_rule_set = ev.applied_rule_set
     vehicle.reason_for_inclusion = ev.reasons
-    vehicle.scores = ScoreBreakdown(**ev.scores) if ev.scores else None
+    if ev.breakdown:
+        vehicle.scores = ScoreBreakdown(
+            year=ev.breakdown.year,
+            mileage=ev.breakdown.mileage,
+            van_size=ev.breakdown.van_size,
+            fuel=ev.breakdown.fuel,
+            vat_deductible=ev.breakdown.vat_deductible,
+            high_roof=ev.breakdown.high_roof,
+            long_wheelbase=ev.breakdown.long_wheelbase,
+            crew_cab=ev.breakdown.crew_cab,
+        )
     return vehicle
 
 

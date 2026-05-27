@@ -60,7 +60,7 @@ def main():
     rejected = []
 
     for v in all_results:
-        if v.get("passed_hard_filters") and (v.get("total_score") or 0) >= SCORE_THRESHOLD:
+        if v.get("passed_hard_filters") and (v.get("score") or 0) >= SCORE_THRESHOLD:
             mk = _model_key(v.get("title", ""))
             year = v.get("year")
             median = price_index.median(mk, year)
@@ -79,7 +79,7 @@ def main():
         else:
             rejected.append(v)
 
-    accepted.sort(key=lambda v: v.get("total_score") or 0, reverse=True)
+    accepted.sort(key=lambda v: v.get("score") or 0, reverse=True)
 
     # 4. Write output.
     _dump("output/latest.json", accepted)
