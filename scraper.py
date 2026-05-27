@@ -251,6 +251,7 @@ def parse_vehicle(html: str, url: str) -> Vehicle:
         auction_start=auction_start,
         remarks=remarks,
         additional_information=additional_information,
+        lot_id=lot.get("id"),
     )
 
     ev = evaluate(vehicle)
@@ -261,6 +262,40 @@ def parse_vehicle(html: str, url: str) -> Vehicle:
     vehicle.reason_for_inclusion = ev.reasons
     vehicle.scores = ScoreBreakdown(**ev.scores) if ev.scores else None
     return vehicle
+
+
+def _parse_graphql_bid(payload: dict) -> Optional[dict]:
+    """Extract bid fields from a storefront GraphQL response payload."""
+    try:
+        lot_info = payload.get("data", {}).get("lotDetails", {}).get("lot") or {}
+        if not lot_info.get("id"):
+            return None
+        bid_cents = (lot_info.get("currentBidAmount") or {}).get("cents")
+        if bid_cents is None:
+            return None
+        premium_raw = lot_info.get("markupPercentage")
+        end_ts = lot_info.get("endDate")
+        minimum_met = lot_info.get("minimumBidAmountMet")
+
+        full_price = payload.get("data", {}).get("lotDetails", {}).get("estimatedFullPrice") or {}
+        total_cents = (full_price.get("total") or {}).get("cents")
+
+        return {
+            "lot_id": lot_info["id"],
+            "current_bid_eur": bid_cents / 100,
+            "buyer_premium_pct": float(premium_raw) if premium_raw else None,
+            "total_cost_eur": total_cents / 100 if total_cents else None,
+            "bids_count": lot_info.get("bidsCount"),
+            "reserve_met": (
+                True if minimum_met is True else
+                False if minimum_met is False else
+                None if minimum_met is None else
+                "MINIMUM_BID_AMOUNT_MET" in str(minimum_met)
+            ),
+            "auction_end_ts": end_ts,
+        }
+    except Exception:
+        return None
 
 
 def crawl(query="Peugeot Boxer", pages=2):
@@ -274,10 +309,37 @@ def crawl(query="Peugeot Boxer", pages=2):
         browser, context = _new_context(p)
         page = context.new_page()
 
+        # Intercept GraphQL responses that carry live bid data.
+        bid_by_lot: dict = {}
+
+        def on_response(response):
+            if "storefront.tbauctions.com/storefront/graphql" not in response.url:
+                return
+            try:
+                bid = _parse_graphql_bid(response.json())
+                if bid:
+                    bid_by_lot[bid["lot_id"]] = bid
+            except Exception:
+                pass
+
+        page.on("response", on_response)
+
         for url in urls:
             try:
                 page.goto(url, wait_until="networkidle", timeout=45_000)
                 v = parse_vehicle(page.content(), url)
+
+                if v.lot_id and v.lot_id in bid_by_lot:
+                    bd = bid_by_lot[v.lot_id]
+                    v.current_bid_eur = bd["current_bid_eur"]
+                    v.buyer_premium_pct = bd["buyer_premium_pct"]
+                    v.total_cost_eur = bd["total_cost_eur"]
+                    v.bids_count = bd["bids_count"]
+                    v.reserve_met = bd["reserve_met"]
+                    end_ts = bd.get("auction_end_ts")
+                    if isinstance(end_ts, (int, float)):
+                        v.auction_end = datetime.fromtimestamp(end_ts, tz=timezone.utc)
+
                 results.append(v.model_dump(mode="json"))
             except Exception as e:
                 print(f"lot failed {url}: {e}")

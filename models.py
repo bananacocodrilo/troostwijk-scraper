@@ -55,6 +55,21 @@ class Vehicle(BaseModel):
     remarks: Optional[str] = None
     additional_information: Optional[str] = None
 
+    # Bid / cost (captured from GraphQL response during Playwright load)
+    lot_id: Optional[str] = None  # internal UUID — used for bid matching
+    current_bid_eur: Optional[float] = None
+    buyer_premium_pct: Optional[float] = None
+    total_cost_eur: Optional[float] = None  # bid + premium + VAT — all-in cost
+    bids_count: Optional[int] = None
+    reserve_met: Optional[bool] = None
+    auction_end: Optional[datetime] = None
+
+    # Market reference (from Marktplaats retail index)
+    market_median_eur: Optional[float] = None
+    market_sample_size: Optional[int] = None
+    deal_margin_eur: Optional[float] = None  # market_median - total_cost
+    deal_margin_pct: Optional[float] = None  # deal_margin / market_median * 100
+
     # Intelligence layer (Phase 2)
     size_class: Optional[str] = None  # L3H2, L2H2, H2+, etc — whatever the detector confirmed
     passed_hard_filters: bool = False
