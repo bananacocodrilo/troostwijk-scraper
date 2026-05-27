@@ -8,16 +8,14 @@ class ScoreBreakdown(BaseModel):
     year: int = 0
     mileage: int = 0
     van_size: int = 0
-    fuel: int = 0
-    vat_deductible: int = 0
-    high_roof: int = 0
-    long_wheelbase: int = 0
+    emission: int = 0
+    resaleability: int = 0
     crew_cab: int = 0
 
     def total(self) -> int:
         return min(
-            self.year + self.mileage + self.van_size + self.fuel
-            + self.vat_deductible + self.high_roof + self.long_wheelbase + self.crew_cab,
+            self.year + self.mileage + self.van_size
+            + self.emission + self.resaleability + self.crew_cab,
             100,
         )
 

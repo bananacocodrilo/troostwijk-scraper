@@ -324,55 +324,67 @@ def _score_mileage(km: Optional[int]) -> int:
     return 0
 
 
-def _score_van_size(van_type: Optional[str], haystack: str) -> Tuple[int, int, int]:
-    """Return (van_size_pts, high_roof_bonus, lwb_bonus)."""
+def _score_van_size(van_type: Optional[str]) -> int:
     s = (van_type or "").upper()
-    h = haystack.lower()
-
-    # Van size base score
     if s in ("L4H3", "L3H3", "L4H2", "L3H2"):
-        size_pts = 20
-    elif s == "L2H2":
-        size_pts = 15
-    elif s in ("H2+", "H3"):
-        size_pts = 10
-    elif s == "L3":
-        size_pts = 10
-    elif s == "PANEL":
-        size_pts = 10
-    elif s in ("L1H1", "H1", "L1"):
-        size_pts = 0
-    else:
-        size_pts = 5  # unknown — neutral
-
-    # High-roof bonus (+5): van_type already confirms, OR keyword present
-    high_roof = 0
-    confirmed_high = s in ("L3H2", "L4H3", "L3H3", "L4H2", "L2H2", "H2+", "H3") or \
-        bool(re.search(r"\bhigh\s*roof\b|\bhoog\s*dak\b|\bhochdach\b", h))
-    if confirmed_high:
-        high_roof = 5
-
-    # LWB bonus (+5)
-    lwb = 0
-    confirmed_long = s in ("L3H2", "L4H3", "L4H2", "L3H3", "L3") or \
-        bool(re.search(r"\blwb\b|\blong\s*wheel\s*base\b|\bmaxi\b|\bextra\s*lang\b", h))
-    if confirmed_long:
-        lwb = 5
-
-    return size_pts, high_roof, lwb
-
-
-def _score_fuel(fuel: Optional[str]) -> int:
-    if not fuel:
-        return 0
-    s = fuel.strip().lower()
-    if "diesel" in s:
+        return 20
+    if s == "L2H2":
+        return 15
+    if s in ("H2+", "H3", "L3", "PANEL"):
         return 10
-    # soft penalty already applied in eu_usability; no bonus for non-diesel
-    for bad in FUEL_SOFT_PENALTY:
-        if bad in s:
-            return 0
-    return 0  # unknown fuel → no diesel bonus, no penalty here
+    if s in ("L1H1", "H1", "L1"):
+        return 0
+    return 5  # unknown — slight penalty
+
+
+def _score_emission(emission_standard: Optional[str]) -> int:
+    if not emission_standard:
+        return 5  # neutral when unknown
+    s = emission_standard.lower()
+    if "euro 6" in s or "euro6" in s:
+        return 10
+    if "euro 5" in s or "euro5" in s:
+        return 6
+    if "euro 4" in s or "euro4" in s:
+        return 3
+    return 0  # Euro 3 or below
+
+
+# Brand popularity for camper conversion (NL/EU market).
+_RESALE_BRAND = {
+    "ducato": 4, "boxer": 4, "jumper": 4,   # PSA triplets — biggest market
+    "transit": 3, "sprinter": 3,             # very common, easy to resell
+    "crafter": 2, "master": 2, "movano": 2, "daily": 2, "tge": 2,
+    "expert": 1, "transporter": 1,
+}
+
+
+def _score_resaleability(
+    model_token: Optional[str],
+    emission_standard: Optional[str],
+    condition: Optional[str],
+) -> int:
+    brand_pts = _RESALE_BRAND.get(model_token or "", 1)
+
+    emission_pts = 0
+    if emission_standard:
+        s = emission_standard.lower()
+        if "euro 6" in s or "euro6" in s:
+            emission_pts = 4
+        elif "euro 5" in s or "euro5" in s:
+            emission_pts = 2
+        elif "euro 4" in s or "euro4" in s:
+            emission_pts = 1
+    else:
+        emission_pts = 2  # unknown — slightly penalised
+
+    condition_pts = 0
+    if condition == "WORKING":
+        condition_pts = 2
+    elif condition == "NOT_CHECKED":
+        condition_pts = 1
+
+    return min(brand_pts + emission_pts + condition_pts, 10)
 
 
 def _build_reasons(
@@ -393,8 +405,6 @@ def _build_reasons(
         out.append(f"{km_s}, {yr_s}")
     if bd.crew_cab:
         out.append("crew cab / 5-seat")
-    if bd.vat_deductible:
-        out.append("VAT deductible")
     out.append(f"rules: {rule_label}")
     return out
 
@@ -464,22 +474,13 @@ def evaluate(vehicle) -> Evaluation:
         )
 
     # ── Stage 3: Scoring ─────────────────────────────────────────────────
-    yr_pts  = _score_year(year)
-    km_pts  = _score_mileage(km)
-    size_pts, high_roof_pts, lwb_pts = _score_van_size(van_type, haystack)
-    fuel_pts = _score_fuel(fuel)
-    vat_pts  = 0  # only relevant for business buyers; private camper buyer: no impact
-    crew_pts = 10 if CREW_CAB_RE.search(haystack) else 0
-
     bd = ScoreBreakdown(
-        year=yr_pts,
-        mileage=km_pts,
-        van_size=size_pts,
-        fuel=fuel_pts,
-        vat_deductible=vat_pts,
-        high_roof=high_roof_pts,
-        long_wheelbase=lwb_pts,
-        crew_cab=crew_pts,
+        year        = _score_year(year),
+        mileage     = _score_mileage(km),
+        van_size    = _score_van_size(van_type),
+        emission    = _score_emission(getattr(vehicle, "emission_standard", None)),
+        resaleability = _score_resaleability(token, getattr(vehicle, "emission_standard", None), getattr(vehicle, "condition", None)),
+        crew_cab    = 10 if CREW_CAB_RE.search(haystack) else 0,
     )
     score = bd.total()
 
