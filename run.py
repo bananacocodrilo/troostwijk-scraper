@@ -5,7 +5,7 @@ import bid_history
 from cost_model import DEFAULT_BUYER_PREMIUM, compute_costs, passes_cost_filter
 from marktplaats import build_price_index
 from notify import notify_gems
-from scraper import VAVATO_BASE, crawl, get_category_urls, get_lot_urls
+from scraper import VAVATO_BASE, crawl_parallel, get_category_urls, get_lot_urls
 from van_intel import ALLOWED_MODELS, SCORE_THRESHOLD
 
 MAX_BID_TARGET_FRACTION = 0.65
@@ -102,8 +102,10 @@ def main():
 
     print(f"\nTotal unique URLs to scrape: {len(all_urls)}")
 
-    # 2. Scrape each lot once.
-    all_results = crawl(urls=all_urls)
+    # 2. Scrape each lot once. Parallelised across 4 browser contexts —
+    #    network-bound, so threads share CPU well and we get ~3× wall-time
+    #    speedup vs serial.
+    all_results = crawl_parallel(all_urls, workers=4)
 
     # 2a. Persist a bid-history snapshot of every scraped lot. Finalises
     #     hammer prices on auctions whose end has passed. Used later as

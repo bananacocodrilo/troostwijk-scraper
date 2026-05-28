@@ -565,7 +565,7 @@ def crawl(query: str = "Peugeot Boxer", pages: int = 2, urls: Optional[list[str]
                 # for non-van listings (parts, semi-trailers, pressure
                 # washers, etc.) that slipped past the slug pre-filter.
                 if v.lot_id and v.lot_id not in bid_by_lot and v.passed_hard_filters:
-                    deadline = time.monotonic() + 8.0
+                    deadline = time.monotonic() + 4.0
                     while time.monotonic() < deadline and v.lot_id not in bid_by_lot:
                         page.wait_for_timeout(250)
 
@@ -597,3 +597,41 @@ def crawl(query: str = "Peugeot Boxer", pages: int = 2, urls: Optional[list[str]
             print(f"   - {plat}: {u}")
 
     return results
+
+
+def crawl_parallel(urls: list[str], workers: int = 4) -> list[dict]:
+    """Fan ``urls`` across ``workers`` parallel browser contexts and
+    merge the results. Each worker runs its own ``sync_playwright()``
+    in its own thread (with its own asyncio event loop), so the bid
+    GraphQL interception and DOM parsing stay isolated per chunk.
+
+    Falls back to a single-context ``crawl()`` when ``workers <= 1`` or
+    when there are fewer URLs than workers — the per-thread overhead
+    isn't worth it for tiny batches."""
+    if not urls:
+        return []
+    if workers <= 1 or len(urls) <= workers:
+        return crawl(urls=urls)
+
+    import asyncio
+    import concurrent.futures
+
+    chunk_size = (len(urls) + workers - 1) // workers
+    chunks = [urls[i:i + chunk_size] for i in range(0, len(urls), chunk_size)]
+
+    def _worker(chunk: list[str]) -> list[dict]:
+        # sync_playwright bootstraps its own asyncio loop; in a worker
+        # thread we need to give it one first or it errors out.
+        asyncio.set_event_loop(asyncio.new_event_loop())
+        return crawl(urls=chunk)
+
+    print(f"  parallel crawl: {len(urls)} URLs across {len(chunks)} workers "
+          f"(~{chunk_size}/worker)")
+    merged: list[dict] = []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as ex:
+        for future in concurrent.futures.as_completed(ex.submit(_worker, c) for c in chunks):
+            try:
+                merged.extend(future.result())
+            except Exception as e:
+                print(f"  parallel worker failed: {e}")
+    return merged
