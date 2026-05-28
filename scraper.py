@@ -7,6 +7,7 @@ chasing regex matches across rendered HTML.
 
 import json
 import re
+import time
 from datetime import date, datetime, timezone
 from typing import Any, Optional
 
@@ -338,6 +339,7 @@ def _parse_graphql_bid(payload: dict) -> Optional[dict]:
 def crawl(query="Peugeot Boxer", pages=2):
     urls = get_lot_urls(query, pages=pages)
     results = []
+    missing_bid_data = []
 
     if not urls:
         return results
@@ -346,11 +348,15 @@ def crawl(query="Peugeot Boxer", pages=2):
         browser, context = _new_context(p)
         page = context.new_page()
 
-        # Intercept GraphQL responses that carry live bid data.
+        # Intercept GraphQL responses that carry live bid data. The bid widget
+        # on every TB-Auctions storefront (Troostwijk, Vavato, BVA, …) calls a
+        # `/storefront/graphql` endpoint — match by path so we catch every
+        # property-specific host (storefront.tbauctions.com,
+        # storefront.vavato.com, etc.) rather than just the umbrella one.
         bid_by_lot: dict = {}
 
         def on_response(response):
-            if "storefront.tbauctions.com/storefront/graphql" not in response.url:
+            if "/storefront/graphql" not in response.url:
                 return
             try:
                 bid = _parse_graphql_bid(response.json())
@@ -366,6 +372,15 @@ def crawl(query="Peugeot Boxer", pages=2):
                 page.goto(url, wait_until="networkidle", timeout=45_000)
                 v = parse_vehicle(page.content(), url)
 
+                # The bid GraphQL call sometimes lands AFTER networkidle
+                # (e.g. when the bid widget hydrates a beat later). Poll a
+                # few seconds before giving up so we don't drop the lot's
+                # current_bid / auction_end / bids_count.
+                if v.lot_id and v.lot_id not in bid_by_lot:
+                    deadline = time.monotonic() + 8.0
+                    while time.monotonic() < deadline and v.lot_id not in bid_by_lot:
+                        page.wait_for_timeout(250)
+
                 if v.lot_id and v.lot_id in bid_by_lot:
                     bd = bid_by_lot[v.lot_id]
                     v.current_bid_eur = bd["current_bid_eur"]
@@ -376,11 +391,19 @@ def crawl(query="Peugeot Boxer", pages=2):
                     end_ts = bd.get("auction_end_ts")
                     if isinstance(end_ts, (int, float)):
                         v.auction_end = datetime.fromtimestamp(end_ts, tz=timezone.utc)
+                elif v.lot_id:
+                    missing_bid_data.append((v.platform, url))
+                    print(f"  ⚠️  no bid GraphQL captured for {v.platform} lot {v.lot_id} ({url})")
 
                 results.append(v.model_dump(mode="json"))
             except Exception as e:
                 print(f"lot failed {url}: {e}")
 
         browser.close()
+
+    if missing_bid_data:
+        print(f"\n⚠️  {len(missing_bid_data)} lot(s) finished without bid GraphQL:")
+        for plat, u in missing_bid_data:
+            print(f"   - {plat}: {u}")
 
     return results
