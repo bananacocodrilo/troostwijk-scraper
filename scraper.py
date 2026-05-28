@@ -16,7 +16,7 @@ from playwright.sync_api import sync_playwright
 
 from models import Vehicle
 from fleet import classify_fleet
-from van_intel import evaluate
+from van_intel import ALLOWED_MODELS, SMALLER_SIBLINGS, evaluate
 
 BASE = "https://www.troostwijkauctions.com/en/search"
 ORIGIN = "https://www.troostwijkauctions.com"
@@ -65,9 +65,46 @@ def _new_context(p):
     return browser, context
 
 
+# Single-token smaller siblings — these reject from the slug. Multi-word
+# entries from SMALLER_SIBLINGS (e.g. "transit connect") are matched as
+# hyphenated substrings instead.
+_SLUG_REJECT_SIBLINGS = {s for s in SMALLER_SIBLINGS if " " not in s}
+_SLUG_REJECT_PHRASES = ["-".join(s.split()) for s in SMALLER_SIBLINGS if " " in s]
+
+
+def _url_looks_like_van(url: str) -> bool:
+    """Cheap slug-only check to skip obvious non-vans BEFORE scraping the
+    full lot page. The search results page surfaces 'recommended' lots
+    that don't match the query (e.g. Peugeot 3008 SUVs when searching for
+    Boxer), and Troostwijk also indexes passenger cars under the same
+    brand prefix. A full page scrape per lot takes seconds — slug parsing
+    takes microseconds. False negatives (rejecting an actual van) are
+    cheap to debug: bump `_SLUG_REJECT_SIBLINGS` or relax the rule.
+
+    Rules:
+      - Slug must contain at least one ALLOWED_MODELS token, AND
+      - Slug must not contain any SMALLER_SIBLINGS token.
+    """
+    m = re.search(r"/l/([^/]+)-A\d+-\d+", url or "")
+    if not m:
+        # Unrecognized URL shape — let the search-page regex be the gate
+        # (we wouldn't have collected it otherwise) and don't add a second
+        # rejection here.
+        return True
+    slug = m.group(1).lower()
+    tokens = set(slug.split("-"))
+
+    if tokens & _SLUG_REJECT_SIBLINGS:
+        return False
+    if any(p in slug for p in _SLUG_REJECT_PHRASES):
+        return False
+    return any(tok in ALLOWED_MODELS for tok in tokens)
+
+
 def get_lot_urls(query, pages=1, year_min=None, year_max=None):
     urls = []
     seen = set()
+    skipped_pre = 0
 
     with sync_playwright() as p:
         browser, context = _new_context(p)
@@ -91,9 +128,15 @@ def get_lot_urls(query, pages=1, year_min=None, year_max=None):
                 if href in seen:
                     continue
                 seen.add(href)
+                if not _url_looks_like_van(href):
+                    skipped_pre += 1
+                    continue
                 urls.append(href)
 
         browser.close()
+
+    if skipped_pre:
+        print(f"  pre-filter: skipped {skipped_pre} URL(s) (no van model token in slug)")
 
     return urls
 
