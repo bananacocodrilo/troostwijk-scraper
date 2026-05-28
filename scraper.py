@@ -20,6 +20,7 @@ from fleet import classify_fleet
 from van_intel import SMALLER_SIBLINGS, evaluate
 
 BASE = "https://www.troostwijkauctions.com/en/search"
+VAVATO_BASE = "https://www.vavato.com/en/search"
 ORIGIN = "https://www.troostwijkauctions.com"
 
 # Map from the ``name`` field on lot.attributes -> our Vehicle field.
@@ -48,8 +49,8 @@ ATTR_MAP = {
 INT_FIELDS = {"year", "km", "power_kw", "cylinder_cc", "seats", "doors", "weight_kg", "load_kg"}
 
 
-def build_search_url(query, year_min=None, year_max=None, page=1):
-    url = f"{BASE}?page={page}&pageSize=48&searchTerm={query}&sort=relevance"
+def build_search_url(query, year_min=None, year_max=None, page=1, base: str = BASE):
+    url = f"{base}?page={page}&pageSize=48&searchTerm={query}&sort=relevance"
     if year_min and year_max:
         url += f"&yearsBuilt={year_min}%2C{year_max}"
     return url
@@ -126,29 +127,63 @@ def _url_looks_like_van(url: str) -> bool:
     return True
 
 
+def _goto_with_retry(page, url: str, *, wait_for_selector: Optional[str] = None,
+                     timeout: int = 30_000, retries: int = 1) -> bool:
+    """Navigate to ``url`` with one retry on failure. Returns True if the
+    page loaded and (when given) ``wait_for_selector`` appeared.
+
+    Uses ``wait_until="domcontentloaded"`` instead of ``networkidle`` —
+    Troostwijk pages poll a GraphQL bid endpoint indefinitely, so
+    ``networkidle`` frequently times out at 45s and the lot is lost. The
+    HTML (including ``__NEXT_DATA__``) is already complete at
+    domcontentloaded; we just additionally wait for the script tag to
+    confirm the page isn't a bot wall / login redirect."""
+    for attempt in range(retries + 1):
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=timeout)
+            if wait_for_selector:
+                page.wait_for_selector(wait_for_selector, timeout=timeout, state="attached")
+            return True
+        except Exception as e:
+            if attempt < retries:
+                page.wait_for_timeout(1500)
+                continue
+            print(f"  load failed {url}: {e}")
+            return False
+    return False
+
+
+def _origin_of(url: str) -> str:
+    """Return ``scheme://netloc`` of ``url`` — used to absolutize the
+    ``/l/...`` lot links we find on a listing page. Different
+    TB-Auctions storefronts (troostwijkauctions.com, vavato.com, …)
+    share the same path layout but live under their own origin."""
+    p = urlparse(url)
+    return f"{p.scheme}://{p.netloc}"
+
+
 def _collect_lot_urls_from_listing(page, listing_url: str) -> list[str]:
     """Navigate to a listing page (search results or category page) and
     return all lot URLs found, in document order. No deduping here — the
     caller manages dedup across multiple listing pages."""
     found: list[str] = []
-    try:
-        page.goto(listing_url, wait_until="networkidle", timeout=45_000)
-    except Exception as e:
-        print(f"listing page failed {listing_url}: {e}")
+    if not _goto_with_retry(page, listing_url, wait_for_selector="a[href*='/l/']",
+                             timeout=30_000, retries=1):
         return found
+    origin = _origin_of(listing_url)
     soup = BeautifulSoup(page.content(), "html.parser")
     for a in soup.select("a[href*='/l/']"):
         href = a.get("href") or ""
         if href.startswith("/"):
-            href = ORIGIN + href
+            href = origin + href
         if not re.search(r"/l/[^/]+-A\d+-\d+", href):
             continue
         found.append(href)
     return found
 
 
-def get_lot_urls(query, pages=1, year_min=None, year_max=None):
-    """Collect lot URLs from a brand-keyword search."""
+def get_lot_urls(query, pages=1, year_min=None, year_max=None, base: str = BASE):
+    """Collect lot URLs from a brand-keyword search on the given storefront."""
     urls: list[str] = []
     seen: set[str] = set()
     skipped_pre = 0
@@ -158,7 +193,7 @@ def get_lot_urls(query, pages=1, year_min=None, year_max=None):
         page = context.new_page()
 
         for i in range(1, pages + 1):
-            url = build_search_url(query, year_min, year_max, i)
+            url = build_search_url(query, year_min, year_max, i, base=base)
             for href in _collect_lot_urls_from_listing(page, url):
                 if href in seen:
                     continue
@@ -381,6 +416,13 @@ def parse_vehicle(html: str, url: str) -> Vehicle:
         (((lot.get("description") or {}).get("additionalInformation")) or "").strip() or None
     )
 
+    # First image is the canonical thumbnail; sort by ``order`` to be safe.
+    images = lot.get("images") or []
+    thumbnail_url = None
+    if images:
+        sorted_imgs = sorted(images, key=lambda i: i.get("order") or 0)
+        thumbnail_url = sorted_imgs[0].get("url")
+
     vehicle = Vehicle(
         title=title,
         brand=brand,
@@ -388,6 +430,7 @@ def parse_vehicle(html: str, url: str) -> Vehicle:
         url=url,
         source="troostwijk",
         platform=lot.get("platform"),
+        thumbnail_url=thumbnail_url,
         year=year,
         first_registration=first_reg,
         km=km,
@@ -506,14 +549,22 @@ def crawl(query: str = "Peugeot Boxer", pages: int = 2, urls: Optional[list[str]
 
         for url in urls:
             try:
-                page.goto(url, wait_until="networkidle", timeout=45_000)
+                if not _goto_with_retry(page, url, wait_for_selector="script#__NEXT_DATA__",
+                                         timeout=30_000, retries=1):
+                    continue
                 v = parse_vehicle(page.content(), url)
 
-                # The bid GraphQL call sometimes lands AFTER networkidle
+                # The bid GraphQL call sometimes lands AFTER domcontentloaded
                 # (e.g. when the bid widget hydrates a beat later). Poll a
                 # few seconds before giving up so we don't drop the lot's
                 # current_bid / auction_end / bids_count.
-                if v.lot_id and v.lot_id not in bid_by_lot:
+                #
+                # Skip the wait entirely if the lot already failed hard
+                # filters — we're going to discard it regardless of bid
+                # data, and the wait dominates the per-lot scrape time
+                # for non-van listings (parts, semi-trailers, pressure
+                # washers, etc.) that slipped past the slug pre-filter.
+                if v.lot_id and v.lot_id not in bid_by_lot and v.passed_hard_filters:
                     deadline = time.monotonic() + 8.0
                     while time.monotonic() < deadline and v.lot_id not in bid_by_lot:
                         page.wait_for_timeout(250)
@@ -528,7 +579,9 @@ def crawl(query: str = "Peugeot Boxer", pages: int = 2, urls: Optional[list[str]
                     end_ts = bd.get("auction_end_ts")
                     if isinstance(end_ts, (int, float)):
                         v.auction_end = datetime.fromtimestamp(end_ts, tz=timezone.utc)
-                elif v.lot_id:
+                elif v.lot_id and v.passed_hard_filters:
+                    # Only warn when we actually care — i.e. the lot looks
+                    # like a van but we couldn't capture its live bid data.
                     missing_bid_data.append((v.platform, url))
                     print(f"  ⚠️  no bid GraphQL captured for {v.platform} lot {v.lot_id} ({url})")
 

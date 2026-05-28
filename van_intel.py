@@ -78,112 +78,115 @@ def _rules_for(token: Optional[str]) -> dict:
 # ---------------------------------------------------------------------------
 
 # 1.1 Vehicle type / body style exclusions
+#
+# Patterns are regex. Wrap single short tokens in ``\b…\b`` so we don't
+# match inside longer unrelated words (e.g. "bus" inside "business",
+# "coach" inside "approach", "tipper" inside "stripper", "crane" inside
+# something else). Multi-word phrases ("tractor unit", "dump truck",
+# "horse transport") are unambiguous as-is.
 HARD_REJECT_TYPE: List[Tuple[str, str]] = [
     # trucks / heavy vehicles
-    ("lorry", "lorry"),
-    ("tipper", "tipper body"),
-    ("kipper", "tipper (NL/DE)"),
-    ("dump truck", "dump truck"),
-    (" dump ", "dump body"),
-    ("tractor unit", "tractor unit"),
-    ("trekker", "tractor unit (NL)"),
-    ("construction machine", "construction machinery"),
-    ("forklift", "forklift"),
-    ("excavator", "excavator"),
-    ("graafmachine", "excavator (NL)"),
-    ("crane", "crane mounted"),
+    (r"\blorry\b|\blorries\b", "lorry"),
+    (r"\btipper\b|\btippers\b", "tipper body"),
+    (r"\bkipper\b|\bkippers\b", "tipper (NL/DE)"),
+    (r"dump truck", "dump truck"),
+    (r"\bdump\b", "dump body"),
+    (r"tractor unit", "tractor unit"),
+    (r"\btrekker\b|\btrekkers\b", "tractor unit (NL)"),
+    (r"construction machine", "construction machinery"),
+    (r"\bforklift\b|\bheftruck\b", "forklift"),
+    (r"\bexcavator\b", "excavator"),
+    (r"\bgraafmachine\b", "excavator (NL)"),
+    (r"\bcrane\b|crane[\s-]?mounted", "crane mounted"),
     # vans converted / specialist bodies
-    ("ambulance", "ambulance"),
-    ("ambulanc", "ambulance"),
-    ("ziekenwagen", "ambulance (NL)"),
-    ("krankenwagen", "ambulance (DE)"),
-    ("fire truck", "fire truck"),
-    ("brandweer", "fire truck (NL)"),
-    ("feuerwehr", "fire truck (DE)"),
-    ("bus", "bus / coach"),         # matches: minibus, school bus, etc.
-    ("coach", "coach"),
-    ("shuttle", "passenger shuttle"),
-    ("hearse", "hearse"),
-    ("lijkwagen", "hearse (NL)"),
-    ("horse transport", "horse transport"),
-    ("paardentrailer", "horse transport (NL)"),
-    ("paardenwagen", "horse transport (NL)"),
-    ("motorhome", "motorhome (pre-converted)"),
-    ("wohnmobil", "motorhome (DE)"),
-    ("mobilhome", "motorhome"),
-    ("camper", "camper (pre-converted)"),
+    (r"\bambulance[a-z]*\b", "ambulance"),
+    (r"\bziekenwagen\b", "ambulance (NL)"),
+    (r"\bkrankenwagen\b", "ambulance (DE)"),
+    (r"fire truck", "fire truck"),
+    (r"\bbrandweer\b", "fire truck (NL)"),
+    (r"\bfeuerwehr\b", "fire truck (DE)"),
+    # ``bus`` needs strict word boundaries — "business", "abuse" etc.
+    # would otherwise reject normal Boxer / Sprinter listings.
+    (r"\bbus\b|\bbusses\b|\bbuses\b|\bminibus\b|\bschoolbus\b|\bschool bus\b|\bautobus\b|\breisbus\b", "bus / coach"),
+    (r"\bcoach\b|\bcoaches\b", "coach"),
+    (r"\bshuttle\b|\bshuttles\b", "passenger shuttle"),
+    (r"\bhearse\b", "hearse"),
+    (r"\blijkwagen\b", "hearse (NL)"),
+    (r"horse transport", "horse transport"),
+    (r"\bpaardentrailer\b|\bpaardenwagen\b", "horse transport (NL)"),
+    (r"\bmotorhome\b|\bmotorhomes\b", "motorhome (pre-converted)"),
+    (r"\bwohnmobil\b", "motorhome (DE)"),
+    (r"\bmobilhome\b", "motorhome"),
+    (r"\bcamper[a-z]*\b|\bkampeerwagen\b", "camper (pre-converted)"),
     # bundled lots (van + something else — pricing / logistics gets messy)
-    ("with trailer", "bundled with trailer"),
-    ("+ trailer", "bundled with trailer"),
-    ("met aanhanger", "bundled with trailer (NL)"),
-    ("met aanhangwagen", "bundled with trailer (NL)"),
-    ("mit anhänger", "bundled with trailer (DE)"),
-    ("mit anhanger", "bundled with trailer (DE)"),
+    (r"with trailer", "bundled with trailer"),
+    (r"\+ trailer", "bundled with trailer"),
+    (r"met aanhanger", "bundled with trailer (NL)"),
+    (r"met aanhangwagen", "bundled with trailer (NL)"),
+    (r"mit anhänger", "bundled with trailer (DE)"),
+    (r"mit anhanger", "bundled with trailer (DE)"),
 ]
 
 # 1.2 Body mismatches (cargo-platform only)
 HARD_REJECT_BODY: List[Tuple[str, str]] = [
-    ("chassis cab", "chassis cab"),
-    ("chassis-cab", "chassis cab"),
-    ("chassis cabine", "chassis cab (NL)"),
-    ("light truck", "light truck (chassis variant)"),
-    ("flatbed", "flatbed body"),
-    ("open bed", "open bed"),
-    ("dropside", "dropside body"),
-    ("platform truck", "platform truck"),
-    ("bakwagen", "box truck (NL)"),
-    ("box truck", "box truck"),
-    ("tipper", "tipper"),
-    ("pick-up", "pickup"),
-    ("pick up", "pickup"),
-    ("pickup", "pickup"),
-    ("refrigerated", "refrigerated body"),
-    ("koelwagen", "refrigerated (NL)"),
-    ("kühlfahrzeug", "refrigerated (DE)"),
-    ("frigo", "refrigerated"),
-    ("ice cream", "ice cream truck"),
-    ("ijswagen", "ice cream truck (NL)"),
-    ("workshop interior", "workshop interior"),
-    ("werkplaatsinrichting", "workshop interior (NL)"),
-    ("fully fitted", "fully fitted interior"),
-    ("volledig ingericht", "fully fitted interior (NL)"),
+    (r"chassis[\s-]?cab", "chassis cab"),
+    (r"chassis cabine", "chassis cab (NL)"),
+    (r"light truck", "light truck (chassis variant)"),
+    (r"\bflatbed\b", "flatbed body"),
+    (r"\bopen bed\b", "open bed"),
+    (r"\bdropside\b", "dropside body"),
+    (r"platform truck", "platform truck"),
+    (r"\bbakwagen\b", "box truck (NL)"),
+    (r"\bbox truck\b", "box truck"),
+    (r"\btipper\b", "tipper"),
+    (r"\bpick[\s-]?up\b|\bpickup\b", "pickup"),
+    (r"\brefrigerated\b", "refrigerated body"),
+    (r"\bkoelwagen\b", "refrigerated (NL)"),
+    (r"\bkühlfahrzeug\b", "refrigerated (DE)"),
+    (r"\bfrigo\b", "refrigerated"),
+    (r"\bice cream\b", "ice cream truck"),
+    (r"\bijswagen\b", "ice cream truck (NL)"),
+    (r"workshop interior", "workshop interior"),
+    (r"\bwerkplaatsinrichting\b", "workshop interior (NL)"),
+    (r"fully fitted", "fully fitted interior"),
+    (r"volledig ingericht", "fully fitted interior (NL)"),
 ]
 
 # 1.4 Extreme damage
 HARD_REJECT_DAMAGE: List[Tuple[str, str]] = [
     # engine
-    ("engine failure", "engine failure"),
-    ("engine broken", "engine failure"),
-    ("motor defect", "engine failure (NL)"),
-    ("motor kapot", "engine failure (NL)"),
-    ("motor stuk", "engine failure (NL)"),
-    ("motorschade", "engine failure (NL)"),
-    ("motorschaden", "engine failure (DE)"),
+    (r"engine failure", "engine failure"),
+    (r"engine broken", "engine failure"),
+    (r"motor defect", "engine failure (NL)"),
+    (r"motor kapot", "engine failure (NL)"),
+    (r"motor stuk", "engine failure (NL)"),
+    (r"motorschade", "engine failure (NL)"),
+    (r"motorschaden", "engine failure (DE)"),
     # not running
-    ("non runner", "non-runner"),
-    ("not starting", "not starting"),
-    ("niet startend", "not starting (NL)"),
-    ("start niet", "not starting (NL)"),
-    ("startet nicht", "not starting (DE)"),
-    ("does not start", "not starting"),
+    (r"non[\s-]?runner", "non-runner"),
+    (r"not starting", "not starting"),
+    (r"niet startend", "not starting (NL)"),
+    (r"start niet", "not starting (NL)"),
+    (r"startet nicht", "not starting (DE)"),
+    (r"does not start", "not starting"),
     # gearbox
-    ("gearbox failure", "gearbox failure"),
-    ("gearbox broken", "gearbox failure"),
-    ("versnellingsbak defect", "gearbox failure (NL)"),
-    ("versnellingsbak kapot", "gearbox failure (NL)"),
-    ("getriebe defekt", "gearbox failure (DE)"),
+    (r"gearbox failure", "gearbox failure"),
+    (r"gearbox broken", "gearbox failure"),
+    (r"versnellingsbak defect", "gearbox failure (NL)"),
+    (r"versnellingsbak kapot", "gearbox failure (NL)"),
+    (r"getriebe defekt", "gearbox failure (DE)"),
     # fire / flood / structural
-    ("burned", "fire damage"),
-    ("fire damage", "fire damage"),
-    ("brandschade", "fire damage (NL)"),
-    ("brandschaden", "fire damage (DE)"),
-    ("flood damage", "flood damage"),
-    ("water damage", "flood damage"),
-    ("waterschade", "flood damage (NL)"),
-    ("wasserschaden", "flood damage (DE)"),
-    ("structural damage", "structural damage"),
-    ("total loss", "total loss"),
-    ("totalschade", "total loss (NL)"),
+    (r"\bburned\b|\bburnt\b", "fire damage"),
+    (r"fire damage", "fire damage"),
+    (r"brandschade", "fire damage (NL)"),
+    (r"brandschaden", "fire damage (DE)"),
+    (r"flood damage", "flood damage"),
+    (r"water damage", "flood damage"),
+    (r"waterschade", "flood damage (NL)"),
+    (r"wasserschaden", "flood damage (DE)"),
+    (r"structural damage", "structural damage"),
+    (r"total loss", "total loss"),
+    (r"totalschade", "total loss (NL)"),
 ]
 
 # Fuel hard reject — only when structured attribute explicitly confirms.
@@ -255,9 +258,11 @@ class Evaluation:
 # ---------------------------------------------------------------------------
 
 def _check_list(haystack: str, pairs: List[Tuple[str, str]]) -> Optional[str]:
+    """Run a list of (regex_pattern, label) against ``haystack`` case-insensitively
+    and return the first matching label, or None."""
     s = haystack.lower()
-    for kw, label in pairs:
-        if kw in s:
+    for pat, label in pairs:
+        if re.search(pat, s, flags=re.IGNORECASE):
             return label
     return None
 
@@ -291,12 +296,24 @@ def _detect_size(haystack: str) -> Tuple[str, Optional[str], Optional[str]]:
     return "unknown", None, None
 
 
+def _sibling_match(haystack_lower: str) -> Optional[str]:
+    """Return the name of a smaller-sibling model present in ``haystack_lower``
+    as a whole word (single tokens) or whole multi-word phrase. Word boundaries
+    avoid false positives like "partner" matching "business partner" or
+    "trafic" matching "traffic"."""
+    for sib in SMALLER_SIBLINGS:
+        # Build a pattern that matches the sibling as a whole word/phrase.
+        pat = r"\b" + r"\s+".join(re.escape(p) for p in sib.split()) + r"\b"
+        if re.search(pat, haystack_lower):
+            return sib
+    return None
+
+
 def _matched_model(haystack: str) -> Tuple[Optional[str], Optional[str]]:
     """Return (canonical_name, token) or (None, None)."""
     s = haystack.lower()
-    for sib in SMALLER_SIBLINGS:
-        if sib in s:
-            return None, None
+    if _sibling_match(s):
+        return None, None
     for token, canonical in ALLOWED_MODELS.items():
         if re.search(rf"\b{re.escape(token)}\b", s):
             return canonical, token
@@ -435,10 +452,9 @@ def evaluate(vehicle) -> Evaluation:
     # ── Stage 1: Hard filters ────────────────────────────────────────────
     canonical, token = _matched_model(haystack)
     if not canonical:
-        s = haystack.lower()
-        for sib in SMALLER_SIBLINGS:
-            if sib in s:
-                return Evaluation(False, f"smaller_sibling: {sib}", None, None, None, None, None)
+        sib = _sibling_match(haystack.lower())
+        if sib:
+            return Evaluation(False, f"smaller_sibling: {sib}", None, None, None, None, None)
         return Evaluation(False, "brand_not_whitelisted", None, None, None, None, None)
 
     r = _check_list(haystack, HARD_REJECT_TYPE)
