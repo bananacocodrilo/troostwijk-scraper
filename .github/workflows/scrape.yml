@@ -43,5 +43,5 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add output/latest.json output/rejected.json output/notified.json output/bid_history.json
+          git add output/latest.json output/rejected.json output/notified.json output/bid_history.json output/lot_registry.json
           git diff --cached --quiet && echo "no changes" || (git commit -m "update" && git pull --rebase origin main && git push)

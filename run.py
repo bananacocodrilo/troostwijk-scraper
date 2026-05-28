@@ -2,6 +2,7 @@ import json
 import os
 
 import bid_history
+import registry
 from cost_model import DEFAULT_BUYER_PREMIUM, compute_costs, passes_cost_filter
 from marktplaats import build_price_index
 from notify import notify_gems
@@ -97,25 +98,46 @@ def main():
         except Exception as e:
             print(f"  query {query} failed: {e}")
 
-    print(f"\nTotal unique URLs to scrape: {len(all_urls)}")
+    print(f"\nTotal unique URLs discovered: {len(all_urls)}")
 
-    # 2. Scrape each lot once. Parallelised across 4 browser contexts —
-    #    network-bound, so threads share CPU well and we get ~3× wall-time
-    #    speedup vs serial.
-    all_results = crawl_parallel(all_urls, workers=4)
+    # 2. Discovery + priority refresh. The registry holds last-known
+    #    state per URL; we only re-scrape URLs that are new or whose
+    #    priority tier says they're stale (closing-soon every run,
+    #    24-72h every other run, >72h daily). Stale-but-known lots keep
+    #    their previous data so latest.json reflects the full universe.
+    reg = registry.load()
+    pruned = registry.prune(reg)
+    if pruned:
+        print(f"  registry: pruned {pruned} stale entries (auction ended > {registry.PRUNE_DAYS_AFTER_END}d ago)")
 
-    # 2a. Persist a bid-history snapshot of every scraped lot. Finalises
-    #     hammer prices on auctions whose end has passed. Used later as
-    #     a higher-priority market reference than Marktplaats once we
-    #     have enough closed-auction samples per model/year bucket.
-    bid_history.update(all_results, model_token_of=_model_key)
+    urls_to_scrape, refresh_stats = registry.select_urls_to_scrape(all_urls, reg)
+    print(f"  registry: refreshing {len(urls_to_scrape)}/{len(all_urls)} URLs — {refresh_stats}")
+
+    # 3. Scrape only the selected URLs. Parallelised across 4 browser
+    #    contexts — network-bound, so threads share CPU well and we get
+    #    ~3× wall-time speedup vs serial.
+    fresh_results = crawl_parallel(urls_to_scrape, workers=4)
+
+    # 4. Merge fresh data into registry and persist.
+    registry.merge(reg, fresh_results)
+    registry.save(reg)
+
+    # all_results = full union (fresh + stale-but-known). Everything
+    # downstream operates on this so notifications/dashboard reflect
+    # every lot we've ever discovered that's still active.
+    all_results = registry.all_known_vehicles(reg)
+
+    # 4a. Persist a bid-history snapshot of every freshly-scraped lot.
+    #     We use fresh_results (not all_results) so we don't re-record
+    #     duplicate snapshots for lots we didn't actually re-fetch.
+    bid_history.update(fresh_results, model_token_of=_model_key)
     hammer_index = bid_history.load_index()
 
-    # 2b. Marktplaats price index
+    # 4b. Marktplaats price index
     print("\nBuilding Marktplaats price index...")
     price_index = build_price_index(QUERIES)
 
-    # 3. Attach market data + compute true cost + re-filter
+    # 5. Attach market data + compute true cost + re-filter
     accepted = []
     cost_rejected = []
     suitability_rejected = []
@@ -182,7 +204,8 @@ def main():
     load_failures = reason_counts.pop("load_failed", 0)
     gems = [v for v in accepted if v.get("is_hidden_gem")]
     print(
-        f"\ncrawled={len(all_results)} accepted={len(accepted)} "
+        f"\ndiscovered={len(all_urls)} scraped_this_run={len(fresh_results)} "
+        f"known_total={len(all_results)} accepted={len(accepted)} "
         f"load_failed={load_failures} filtered={len(rejected) - load_failures}"
     )
     for r, n in sorted(reason_counts.items(), key=lambda kv: -kv[1]):
