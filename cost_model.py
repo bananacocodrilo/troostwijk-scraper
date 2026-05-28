@@ -157,6 +157,8 @@ def compute_costs(v: dict, model_token: Optional[str] = None) -> dict:
     addl        = v.get("additional_information")
     market_med  = v.get("market_median_eur")
     market_n    = v.get("market_sample_size") or 0
+    hammer_med  = v.get("hammer_median_eur")
+    hammer_n    = v.get("hammer_sample_size") or 0
 
     # Auction cost ─────────────────────────────────────────────────────────
     auction_fee_estimate = None
@@ -193,11 +195,19 @@ def compute_costs(v: dict, model_token: Optional[str] = None) -> dict:
     )
 
     # Market value ─────────────────────────────────────────────────────────
-    # Use Marktplaats if we have ≥3 data points; otherwise fall back to heuristic.
-    if market_med and market_n >= 3:
+    # Priority: actual closed-auction hammer history (if we have enough
+    # samples) → Marktplaats asking-price median → heuristic. Hammer
+    # history reflects what real auction buyers paid, so it's the most
+    # accurate reference once we've built up a usable dataset.
+    if hammer_med and hammer_n >= 5:
+        est_market = round(hammer_med)
+        market_source = "hammer_history"
+    elif market_med and market_n >= 3:
         est_market = round(market_med)
+        market_source = "marktplaats"
     else:
         est_market = _market_heuristic(model_token, year, km, van_type)
+        market_source = "heuristic"
 
     # Deal ratio ───────────────────────────────────────────────────────────
     deal_ratio = None
@@ -224,6 +234,7 @@ def compute_costs(v: dict, model_token: Optional[str] = None) -> dict:
         "reconditioning_cost_estimate": recon,
         "final_cost_estimate":       final_cost,
         "estimated_market_value":    est_market,
+        "market_value_source":       market_source,
         "deal_ratio":                deal_ratio,
         "deal_score":                deal_score,
         "is_hidden_gem":             is_gem,

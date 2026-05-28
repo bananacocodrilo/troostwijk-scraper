@@ -1,9 +1,11 @@
 import json
 import os
 
+import bid_history
 from cost_model import DEFAULT_BUYER_PREMIUM, compute_costs, passes_cost_filter
 from marktplaats import build_price_index
-from scraper import crawl, get_category_urls, get_lot_urls
+from notify import notify_gems
+from scraper import VAVATO_BASE, crawl, get_category_urls, get_lot_urls
 from van_intel import ALLOWED_MODELS, SCORE_THRESHOLD
 
 MAX_BID_TARGET_FRACTION = 0.65
@@ -89,12 +91,28 @@ def main():
         except Exception as e:
             print(f"  query {query} failed: {e}")
 
+    # Vavato shares the TB-Auctions storefront but has its own inventory
+    # (BVA was merged into Troostwijk so it's already covered above).
+    print("Collecting URLs from Vavato brand searches:")
+    for query in QUERIES:
+        try:
+            _add(f"vavato:{query}", get_lot_urls(query, pages=BRAND_PAGES, base=VAVATO_BASE))
+        except Exception as e:
+            print(f"  vavato query {query} failed: {e}")
+
     print(f"\nTotal unique URLs to scrape: {len(all_urls)}")
 
     # 2. Scrape each lot once.
     all_results = crawl(urls=all_urls)
 
-    # 2. Marktplaats price index
+    # 2a. Persist a bid-history snapshot of every scraped lot. Finalises
+    #     hammer prices on auctions whose end has passed. Used later as
+    #     a higher-priority market reference than Marktplaats once we
+    #     have enough closed-auction samples per model/year bucket.
+    bid_history.update(all_results, model_token_of=_model_key)
+    hammer_index = bid_history.load_index()
+
+    # 2b. Marktplaats price index
     print("\nBuilding Marktplaats price index...")
     price_index = build_price_index(QUERIES)
 
@@ -117,6 +135,11 @@ def main():
         sample = price_index.sample_size(mk, year)
         v["market_median_eur"] = median
         v["market_sample_size"] = sample
+
+        # Attach hammer-history data — preferred source in cost_model
+        # when sample is large enough.
+        v["hammer_median_eur"] = hammer_index.median(mk, year)
+        v["hammer_sample_size"] = hammer_index.sample_size(mk, year)
 
         # Legacy deal margin (kept for backwards compat)
         total_cost = v.get("total_cost_eur")
@@ -176,6 +199,11 @@ def main():
                 f"  market=€{v.get('estimated_market_value') or 0:,.0f}"
                 f"  ratio={ratio:+.0%}"
             )
+
+    # Telegram alerts for hidden gems closing within 24h.
+    sent = notify_gems(accepted)
+    if sent:
+        print(f"\n📨 sent {sent} Telegram alert(s)")
 
     # Fleet provenance breakdown — informational only
     fleet_counts: dict = {}

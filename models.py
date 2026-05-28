@@ -28,6 +28,7 @@ class Vehicle(BaseModel):
     url: str
     source: str = "troostwijk"
     platform: Optional[str] = None
+    thumbnail_url: Optional[str] = None
 
     # Mechanical
     year: Optional[int] = None
