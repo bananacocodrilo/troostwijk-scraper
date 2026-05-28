@@ -6,7 +6,7 @@ import registry
 from cost_model import DEFAULT_BUYER_PREMIUM, compute_costs, passes_cost_filter
 from marktplaats import build_price_index
 from notify import notify_gems
-from scraper import crawl_parallel, get_category_urls, get_lot_urls
+from scraper import crawl_parallel, get_category_urls
 from van_intel import ALLOWED_MODELS, SCORE_THRESHOLD
 
 MAX_BID_TARGET_FRACTION = 0.65
@@ -49,7 +49,6 @@ CATEGORIES: list[tuple[str, str]] = [
 # 10 × 48 = 480 listings per category; well above current vans count (274)
 # and stops early on the first empty page anyway.
 CATEGORY_PAGES = 10
-BRAND_PAGES = 2
 
 
 def _model_key(title: str) -> str:
@@ -91,12 +90,11 @@ def main():
         except Exception as e:
             print(f"  category {label} failed: {e}")
 
-    print("Collecting URLs from brand searches:")
-    for query in QUERIES:
-        try:
-            _add(query, get_lot_urls(query, pages=BRAND_PAGES))
-        except Exception as e:
-            print(f"  query {query} failed: {e}")
+    # Brand-keyword searches were previously added to catch lots that
+    # didn't appear in the category pages. In practice they returned
+    # mostly noise (passenger cars, unrelated items matching the brand
+    # name) so we now rely on the category pages alone. QUERIES is still
+    # used for the Marktplaats price index below.
 
     print(f"\nTotal unique URLs discovered: {len(all_urls)}")
 
