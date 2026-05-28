@@ -112,6 +112,13 @@ HARD_REJECT_TYPE: List[Tuple[str, str]] = [
     ("wohnmobil", "motorhome (DE)"),
     ("mobilhome", "motorhome"),
     ("camper", "camper (pre-converted)"),
+    # bundled lots (van + something else — pricing / logistics gets messy)
+    ("with trailer", "bundled with trailer"),
+    ("+ trailer", "bundled with trailer"),
+    ("met aanhanger", "bundled with trailer (NL)"),
+    ("met aanhangwagen", "bundled with trailer (NL)"),
+    ("mit anhänger", "bundled with trailer (DE)"),
+    ("mit anhanger", "bundled with trailer (DE)"),
 ]
 
 # 1.2 Body mismatches (cargo-platform only)

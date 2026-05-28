@@ -352,7 +352,7 @@ function timeUntil(iso) {
 
 function countdownHtml(v) {
   const t = timeUntil(v.auction_end);
-  if (!t) return '';
+  if (!t) return `<div class="countdown ended" title="Bid/end-time data missing for this lot">⚠️ no end-time data</div>`;
   if (t.ended) return `<div class="countdown ended">⛔ Auction closed</div>`;
   return `<div class="countdown ${t.cls}" data-end="${v.auction_end}">⏱️ ${t.str} left</div>`;
 }
@@ -512,7 +512,10 @@ function render() {
     if (closing === 'all') {
       // no time filter
     } else if (closing === 'open') {
-      if (em != null && em <= now) return false;
+      // Require an auction_end in the future. Lots with no end-time data
+      // (scraper missed the GraphQL bid response) get hidden here too —
+      // we can't verify they're still open.
+      if (em == null || em <= now) return false;
     } else {
       const days = parseFloat(closing);
       if (em == null) return false;
