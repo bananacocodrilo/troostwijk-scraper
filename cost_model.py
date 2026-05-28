@@ -218,11 +218,15 @@ def compute_costs(v: dict, model_token: Optional[str] = None) -> dict:
     deal_score = _deal_score(deal_ratio)
 
     # Hidden gem ───────────────────────────────────────────────────────────
+    # Conversion sweet-spot only — L2H2 / L3H2 plus wildcards where the
+    # known dimension is good. L4 and H3 are deliberately excluded because
+    # they're awkward to drive/park/convert.
+    GEM_SIZES = {"L2H2", "L3H2", "L?H2", "L2H?", "L3H?"}
     is_gem = bool(
         deal_ratio is not None and deal_ratio > 0.25
         and km is not None and km < 150_000
         and year is not None and year >= 2017
-        and (van_type or "").upper() in ("L3H2", "L2H2", "L4H3", "L3H3", "L4H2")
+        and (van_type or "").upper() in GEM_SIZES
     )
 
     return {

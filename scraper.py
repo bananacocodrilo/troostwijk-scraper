@@ -42,6 +42,7 @@ ATTR_MAP = {
     "Empty weight": "weight_kg",
     "Load capacity": "load_kg",
     "Emission standard": "emission_standard",
+    "Bodytype": "body_type",
     "VIN": "vin",
     "Chassis number": "vin",
 }
@@ -444,6 +445,7 @@ def parse_vehicle(html: str, url: str) -> Vehicle:
         color=attrs.get("color"),
         weight_kg=attrs.get("weight_kg"),
         load_kg=attrs.get("load_kg"),
+        body_type=attrs.get("body_type"),
         vin=attrs.get("vin"),
         city=city,
         country_code=country,

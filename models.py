@@ -46,6 +46,7 @@ class Vehicle(BaseModel):
     color: Optional[str] = None
     weight_kg: Optional[int] = None
     load_kg: Optional[int] = None
+    body_type: Optional[str] = None
     vin: Optional[str] = None
 
     # Location
