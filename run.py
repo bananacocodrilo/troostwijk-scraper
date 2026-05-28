@@ -23,21 +23,23 @@ QUERIES = [
     "Volkswagen Transporter",
 ]
 
-# Troostwijk category pages. These give broader coverage than brand
-# keyword searches (which surface "recommended" cross-category noise but
-# also miss vans listed without the canonical model name in the title).
-# Per-category pagination is capped by `pages` — empty page = stop early.
+# Troostwijk category pages. Drilled down to "Vans" specifically inside the
+# Cars taxonomy (~274 listings) rather than the parent "Cars" category
+# (~2017 listings, mostly passenger cars). Trucks-and-trailers is kept for
+# heavier vans / box trucks that get bucketed there.
 CATEGORIES: list[tuple[str, str]] = [
     (
         "trucks-and-trailers",
         "https://www.troostwijkauctions.com/en/c/transport-logistics/trucks-trailers/fd5500c7-5590-42fb-8f0b-24fa8e6d95da",
     ),
     (
-        "cars-and-vans",
-        "https://www.troostwijkauctions.com/en/c/transport/cars/5196727d-c14f-48dc-a2f0-e75f50094a52",
+        "vans",
+        "https://www.troostwijkauctions.com/en/c/transport/cars/5196727d-c14f-48dc-a2f0-e75f50094a52?categoryLevel3=b3ee855f-3320-4b3c-895c-fbf321f401d6",
     ),
 ]
-CATEGORY_PAGES = 5
+# 10 × 48 = 480 listings per category; well above current vans count (274)
+# and stops early on the first empty page anyway.
+CATEGORY_PAGES = 10
 BRAND_PAGES = 2
 
 

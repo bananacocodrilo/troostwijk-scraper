@@ -10,6 +10,7 @@ import re
 import time
 from datetime import date, datetime, timezone
 from typing import Any, Optional
+from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
 
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
@@ -176,10 +177,14 @@ def get_lot_urls(query, pages=1, year_min=None, year_max=None):
 
 
 def _category_page_url(base_url: str, page: int) -> str:
-    """Build a paginated URL for a Troostwijk category. Strips any existing
-    query string so we control page/pageSize ourselves."""
-    base = base_url.split("?", 1)[0]
-    return f"{base}?page={page}&pageSize=48"
+    """Build a paginated URL for a Troostwijk category. Preserves any
+    existing query params (e.g. ``categoryLevel3`` for sub-category
+    filters); only ``page`` and ``pageSize`` are overridden."""
+    parsed = urlparse(base_url)
+    qs = parse_qs(parsed.query, keep_blank_values=True)
+    qs["page"] = [str(page)]
+    qs["pageSize"] = ["48"]
+    return urlunparse(parsed._replace(query=urlencode(qs, doseq=True)))
 
 
 def get_category_urls(category_url: str, pages: int = 3) -> list[str]:
