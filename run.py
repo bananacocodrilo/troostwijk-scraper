@@ -6,11 +6,12 @@ import registry
 from cost_model import DEFAULT_BUYER_PREMIUM, compute_costs, passes_cost_filter
 from marktplaats import build_price_index
 from notify import notify_gems
-from scraper import crawl_parallel, get_category_urls
+from scraper import VAVATO_BASE, crawl_parallel, get_category_urls, get_lot_urls
 from van_intel import ALLOWED_MODELS, SCORE_THRESHOLD
 
 MAX_BID_TARGET_FRACTION = 0.65
 
+# Models used for the Marktplaats price index (per-model retail medians).
 QUERIES = [
     "Peugeot Boxer",
     "Citroen Jumper",
@@ -26,12 +27,24 @@ QUERIES = [
     "Volkswagen Transporter",
 ]
 
-# Category pages. Drilled down to "Vans" specifically inside the Cars
-# taxonomy (~274 listings) rather than the parent "Cars" category
-# (~2017 listings, mostly passenger cars). Trucks-and-trailers is kept
-# for heavier vans / box trucks that get bucketed there. Vavato shares
-# the same category UUIDs as Troostwijk (TB-Auctions backend), so we
-# reuse the path and just swap the host.
+# Priority models for exact-name brand search against Troostwijk + Vavato.
+# These are the conversion-target sweet spots; we run a focused search for
+# each because many fitting vans get mis-listed in "Cars" rather than the
+# narrow "Vans" subcategory.
+IDEAL_MODELS = [
+    "Peugeot Boxer",
+    "Citroen Jumper",
+    "Fiat Ducato",
+    "Mercedes Sprinter",
+]
+
+# Category pages. We crawl both the narrow "Vans" subcategory (clean
+# but misses lots that sellers tagged under the parent "Cars") and the
+# broader parent "Cars" category (noisier but catches the strays). The
+# slug pre-filter inside scraper.py drops obvious passenger-car URLs
+# before they hit the per-lot scrape. Trucks-and-trailers is kept for
+# heavier vans / box trucks. Vavato shares the same category UUIDs as
+# Troostwijk (TB-Auctions backend), so we reuse the path and swap host.
 CATEGORIES: list[tuple[str, str]] = [
     (
         "trucks-and-trailers",
@@ -42,13 +55,22 @@ CATEGORIES: list[tuple[str, str]] = [
         "https://www.troostwijkauctions.com/en/c/transport/cars/5196727d-c14f-48dc-a2f0-e75f50094a52?categoryLevel3=b3ee855f-3320-4b3c-895c-fbf321f401d6",
     ),
     (
+        "cars",
+        "https://www.troostwijkauctions.com/en/c/transport/cars/5196727d-c14f-48dc-a2f0-e75f50094a52",
+    ),
+    (
         "vavato-vans",
         "https://www.vavato.com/en/c/transport/cars/5196727d-c14f-48dc-a2f0-e75f50094a52?categoryLevel3=b3ee855f-3320-4b3c-895c-fbf321f401d6",
+    ),
+    (
+        "vavato-cars",
+        "https://www.vavato.com/en/c/transport/cars/5196727d-c14f-48dc-a2f0-e75f50094a52",
     ),
 ]
 # 10 × 48 = 480 listings per category; well above current vans count (274)
 # and stops early on the first empty page anyway.
 CATEGORY_PAGES = 10
+BRAND_PAGES = 2
 
 
 def _model_key(title: str) -> str:
@@ -95,6 +117,22 @@ def main():
     # mostly noise (passenger cars, unrelated items matching the brand
     # name) so we now rely on the category pages alone. QUERIES is still
     # used for the Marktplaats price index below.
+    #
+    # ...except for the IDEAL_MODELS — the conversion-sweet-spot vans
+    # we explicitly care about. We run a targeted brand-name search for
+    # each, on both Troostwijk and Vavato, because sellers frequently
+    # mis-tag them under "Cars" (already crawled) but also surface them
+    # via search results that the category page misses.
+    print("Collecting URLs from ideal-model brand searches:")
+    for query in IDEAL_MODELS:
+        try:
+            _add(f"twk:{query}", get_lot_urls(query, pages=BRAND_PAGES))
+        except Exception as e:
+            print(f"  twk:{query} failed: {e}")
+        try:
+            _add(f"vavato:{query}", get_lot_urls(query, pages=BRAND_PAGES, base=VAVATO_BASE))
+        except Exception as e:
+            print(f"  vavato:{query} failed: {e}")
 
     print(f"\nTotal unique URLs discovered: {len(all_urls)}")
 

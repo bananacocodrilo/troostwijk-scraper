@@ -10,7 +10,7 @@ import re
 import time
 from datetime import date, datetime, timezone
 from typing import Any, Optional
-from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
+from urllib.parse import parse_qs, quote, urlencode, urlparse, urlunparse
 
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
@@ -51,7 +51,8 @@ INT_FIELDS = {"year", "km", "power_kw", "cylinder_cc", "seats", "doors", "weight
 
 
 def build_search_url(query, year_min=None, year_max=None, page=1, base: str = BASE):
-    url = f"{base}?page={page}&pageSize=48&searchTerm={query}&sort=relevance"
+    encoded = quote(query)
+    url = f"{base}?page={page}&pageSize=48&searchTerm={encoded}&sort=relevance"
     if year_min and year_max:
         url += f"&yearsBuilt={year_min}%2C{year_max}"
     return url
@@ -510,7 +511,8 @@ def _parse_graphql_bid(payload: dict) -> Optional[dict]:
         return None
 
 
-def crawl(query: str = "Peugeot Boxer", pages: int = 2, urls: Optional[list[str]] = None):
+def crawl(query: str = "Peugeot Boxer", pages: int = 2, urls: Optional[list[str]] = None,
+          on_url_done: Optional[Any] = None):
     """Scrape lot pages and return a list of Vehicle dicts.
 
     If `urls` is provided, those are scraped directly (skip the search
@@ -590,6 +592,12 @@ def crawl(query: str = "Peugeot Boxer", pages: int = 2, urls: Optional[list[str]
                 results.append(v.model_dump(mode="json"))
             except Exception as e:
                 print(f"lot failed {url}: {e}")
+            finally:
+                if on_url_done is not None:
+                    try:
+                        on_url_done()
+                    except Exception:
+                        pass
 
         browser.close()
 
@@ -599,6 +607,36 @@ def crawl(query: str = "Peugeot Boxer", pages: int = 2, urls: Optional[list[str]
             print(f"   - {plat}: {u}")
 
     return results
+
+
+def _make_progress_reporter(total: int, *, every: int = 25):
+    """Build a thread-safe callback that prints progress + ETA every
+    ``every`` URLs (and on the final one). Returns ``None`` when
+    progress logging would be noisier than useful (small batches)."""
+    if total < every:
+        return None
+
+    import threading
+    start = time.monotonic()
+    lock = threading.Lock()
+    state = {"done": 0, "last_print_done": 0}
+
+    def cb():
+        with lock:
+            state["done"] += 1
+            done = state["done"]
+            if done - state["last_print_done"] < every and done != total:
+                return
+            state["last_print_done"] = done
+            elapsed = time.monotonic() - start
+            rate = done / elapsed if elapsed > 0 else 0
+            remaining_s = (total - done) / rate if rate > 0 else 0
+            pct = 100 * done / total
+            eta = f"{remaining_s/60:5.1f}min" if remaining_s >= 60 else f"{remaining_s:5.0f}s"
+            print(f"  progress: {done}/{total} ({pct:3.0f}%) "
+                  f"rate={rate:.1f}/s ETA={eta}")
+
+    return cb
 
 
 def crawl_parallel(urls: list[str], workers: int = 4) -> list[dict]:
@@ -612,8 +650,9 @@ def crawl_parallel(urls: list[str], workers: int = 4) -> list[dict]:
     isn't worth it for tiny batches."""
     if not urls:
         return []
+    progress = _make_progress_reporter(len(urls))
     if workers <= 1 or len(urls) <= workers:
-        return crawl(urls=urls)
+        return crawl(urls=urls, on_url_done=progress)
 
     import asyncio
     import concurrent.futures
@@ -625,7 +664,7 @@ def crawl_parallel(urls: list[str], workers: int = 4) -> list[dict]:
         # sync_playwright bootstraps its own asyncio loop; in a worker
         # thread we need to give it one first or it errors out.
         asyncio.set_event_loop(asyncio.new_event_loop())
-        return crawl(urls=chunk)
+        return crawl(urls=chunk, on_url_done=progress)
 
     print(f"  parallel crawl: {len(urls)} URLs across {len(chunks)} workers "
           f"(~{chunk_size}/worker)")
