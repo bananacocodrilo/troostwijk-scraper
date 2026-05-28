@@ -3,7 +3,7 @@ import os
 
 from cost_model import DEFAULT_BUYER_PREMIUM, compute_costs, passes_cost_filter
 from marktplaats import build_price_index
-from scraper import crawl
+from scraper import crawl, get_category_urls, get_lot_urls
 from van_intel import ALLOWED_MODELS, SCORE_THRESHOLD
 
 MAX_BID_TARGET_FRACTION = 0.65
@@ -23,6 +23,23 @@ QUERIES = [
     "Volkswagen Transporter",
 ]
 
+# Troostwijk category pages. These give broader coverage than brand
+# keyword searches (which surface "recommended" cross-category noise but
+# also miss vans listed without the canonical model name in the title).
+# Per-category pagination is capped by `pages` — empty page = stop early.
+CATEGORIES: list[tuple[str, str]] = [
+    (
+        "trucks-and-trailers",
+        "https://www.troostwijkauctions.com/en/c/transport-logistics/trucks-trailers/fd5500c7-5590-42fb-8f0b-24fa8e6d95da",
+    ),
+    (
+        "cars-and-vans",
+        "https://www.troostwijkauctions.com/en/c/transport/cars/5196727d-c14f-48dc-a2f0-e75f50094a52",
+    ),
+]
+CATEGORY_PAGES = 5
+BRAND_PAGES = 2
+
 
 def _model_key(title: str) -> str:
     s = (title or "").lower()
@@ -39,21 +56,41 @@ def _dump(path: str, payload):
 
 
 def main():
-    # 1. Crawl
-    all_results = []
-    seen_urls: set = set()
-    for query in QUERIES:
-        print(f"Crawling: {query}")
-        try:
-            data = crawl(query, pages=2)
-        except Exception as e:
-            print(f"  query failed: {e}")
-            continue
-        for v in data:
-            if v["url"] in seen_urls:
+    # 1. Collect lot URLs from every source first, then scrape once. The
+    #    scrape step is the expensive bit, so deduping URLs upstream
+    #    avoids re-fetching lots that appear under multiple sources.
+    all_urls: list[str] = []
+    seen_urls: set[str] = set()
+
+    def _add(label: str, urls: list[str]) -> int:
+        new = 0
+        for u in urls:
+            if u in seen_urls:
                 continue
-            seen_urls.add(v["url"])
-            all_results.append(v)
+            seen_urls.add(u)
+            all_urls.append(u)
+            new += 1
+        print(f"  {label}: +{new} new (collected {len(urls)})")
+        return new
+
+    print("Collecting URLs from category pages:")
+    for label, cat_url in CATEGORIES:
+        try:
+            _add(label, get_category_urls(cat_url, pages=CATEGORY_PAGES))
+        except Exception as e:
+            print(f"  category {label} failed: {e}")
+
+    print("Collecting URLs from brand searches:")
+    for query in QUERIES:
+        try:
+            _add(query, get_lot_urls(query, pages=BRAND_PAGES))
+        except Exception as e:
+            print(f"  query {query} failed: {e}")
+
+    print(f"\nTotal unique URLs to scrape: {len(all_urls)}")
+
+    # 2. Scrape each lot once.
+    all_results = crawl(urls=all_urls)
 
     # 2. Marktplaats price index
     print("\nBuilding Marktplaats price index...")

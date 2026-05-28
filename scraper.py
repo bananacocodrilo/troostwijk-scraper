@@ -16,7 +16,7 @@ from playwright.sync_api import sync_playwright
 
 from models import Vehicle
 from fleet import classify_fleet
-from van_intel import ALLOWED_MODELS, SMALLER_SIBLINGS, evaluate
+from van_intel import SMALLER_SIBLINGS, evaluate
 
 BASE = "https://www.troostwijkauctions.com/en/search"
 ORIGIN = "https://www.troostwijkauctions.com"
@@ -68,42 +68,88 @@ def _new_context(p):
 # Single-token smaller siblings — these reject from the slug. Multi-word
 # entries from SMALLER_SIBLINGS (e.g. "transit connect") are matched as
 # hyphenated substrings instead.
-_SLUG_REJECT_SIBLINGS = {s for s in SMALLER_SIBLINGS if " " not in s}
-_SLUG_REJECT_PHRASES = ["-".join(s.split()) for s in SMALLER_SIBLINGS if " " in s]
+_SLUG_REJECT_TOKENS: set[str] = {
+    # Smaller siblings already enumerated in van_intel.SMALLER_SIBLINGS.
+    *(s for s in SMALLER_SIBLINGS if " " not in s),
+    "jumpy",  # Citroen Jumpy — mid-size, not on our van whitelist
+    # Peugeot passenger cars (skip "2008" — collides with year strings).
+    "107", "108", "206", "207", "208", "306", "307", "308", "508",
+    "605", "607", "806", "807", "1007", "3008", "4007", "4008", "5008",
+    # Citroen passenger / vintage
+    "c1", "c2", "c3", "c4", "c5", "c6", "ds3", "ds4", "ds5",
+    "xsara", "picasso", "2cv",
+    # VW passenger
+    "golf", "polo", "passat", "jetta", "tiguan", "touareg", "touran", "t-roc",
+    # Renault passenger
+    "clio", "megane", "scenic", "captur", "twingo", "espace", "modus",
+    # Opel passenger
+    "corsa", "astra", "insignia", "meriva", "mokka", "crossland", "grandland",
+    # Mercedes passenger / SUV (skip a/b/c/e/s-class — ambiguous with van trim codes).
+    "glc", "gla", "gls", "glb", "gle", "cls",
+    # Fiat passenger
+    "panda", "punto", "tipo", "bravo", "stilo", "croma", "500l", "500x",
+    # BMW SUVs (skip 1/3/5/7 series — ambiguous with year/load codes).
+    "x1", "x3", "x5", "x6",
+    # Audi
+    "a1", "a3", "a4", "a5", "a6", "a7", "a8", "q2", "q3", "q5", "q7", "q8",
+    # Two-wheelers and non-vehicle batches
+    "moped", "mopeds", "scooter", "scooters", "bicycle", "bike",
+    "motorcycle", "motorbike", "atv", "quad",
+}
+_SLUG_REJECT_PHRASES: list[str] = [
+    "-".join(s.split()) for s in SMALLER_SIBLINGS if " " in s
+] + [
+    "tractor-parts", "timing-tool", "excavator-wheels",
+]
 
 
 def _url_looks_like_van(url: str) -> bool:
-    """Cheap slug-only check to skip obvious non-vans BEFORE scraping the
-    full lot page. The search results page surfaces 'recommended' lots
-    that don't match the query (e.g. Peugeot 3008 SUVs when searching for
-    Boxer), and Troostwijk also indexes passenger cars under the same
-    brand prefix. A full page scrape per lot takes seconds — slug parsing
-    takes microseconds. False negatives (rejecting an actual van) are
-    cheap to debug: bump `_SLUG_REJECT_SIBLINGS` or relax the rule.
+    """Cheap slug-only check to skip OBVIOUS non-vans before scraping.
 
-    Rules:
-      - Slug must contain at least one ALLOWED_MODELS token, AND
-      - Slug must not contain any SMALLER_SIBLINGS token.
+    Policy: false positives (scraping a lot that turns out not to be a van)
+    are cheap and acceptable — they let through occasional undervalued
+    finds. Only reject when we are 100% sure: a known passenger-car or
+    smaller-sibling model token is present in the slug. No allowlist
+    enforcement here — some vans get listed without their canonical model
+    name and would otherwise be wrongly filtered.
     """
     m = re.search(r"/l/([^/]+)-A\d+-\d+", url or "")
     if not m:
-        # Unrecognized URL shape — let the search-page regex be the gate
-        # (we wouldn't have collected it otherwise) and don't add a second
-        # rejection here.
         return True
     slug = m.group(1).lower()
     tokens = set(slug.split("-"))
-
-    if tokens & _SLUG_REJECT_SIBLINGS:
+    if tokens & _SLUG_REJECT_TOKENS:
         return False
     if any(p in slug for p in _SLUG_REJECT_PHRASES):
         return False
-    return any(tok in ALLOWED_MODELS for tok in tokens)
+    return True
+
+
+def _collect_lot_urls_from_listing(page, listing_url: str) -> list[str]:
+    """Navigate to a listing page (search results or category page) and
+    return all lot URLs found, in document order. No deduping here — the
+    caller manages dedup across multiple listing pages."""
+    found: list[str] = []
+    try:
+        page.goto(listing_url, wait_until="networkidle", timeout=45_000)
+    except Exception as e:
+        print(f"listing page failed {listing_url}: {e}")
+        return found
+    soup = BeautifulSoup(page.content(), "html.parser")
+    for a in soup.select("a[href*='/l/']"):
+        href = a.get("href") or ""
+        if href.startswith("/"):
+            href = ORIGIN + href
+        if not re.search(r"/l/[^/]+-A\d+-\d+", href):
+            continue
+        found.append(href)
+    return found
 
 
 def get_lot_urls(query, pages=1, year_min=None, year_max=None):
-    urls = []
-    seen = set()
+    """Collect lot URLs from a brand-keyword search."""
+    urls: list[str] = []
+    seen: set[str] = set()
     skipped_pre = 0
 
     with sync_playwright() as p:
@@ -112,19 +158,7 @@ def get_lot_urls(query, pages=1, year_min=None, year_max=None):
 
         for i in range(1, pages + 1):
             url = build_search_url(query, year_min, year_max, i)
-            try:
-                page.goto(url, wait_until="networkidle", timeout=45_000)
-            except Exception as e:
-                print(f"search page failed {url}: {e}")
-                continue
-
-            soup = BeautifulSoup(page.content(), "html.parser")
-            for a in soup.select("a[href*='/l/']"):
-                href = a.get("href") or ""
-                if href.startswith("/"):
-                    href = ORIGIN + href
-                if not re.search(r"/l/[^/]+-A\d+-\d+", href):
-                    continue
+            for href in _collect_lot_urls_from_listing(page, url):
                 if href in seen:
                     continue
                 seen.add(href)
@@ -136,7 +170,54 @@ def get_lot_urls(query, pages=1, year_min=None, year_max=None):
         browser.close()
 
     if skipped_pre:
-        print(f"  pre-filter: skipped {skipped_pre} URL(s) (no van model token in slug)")
+        print(f"  pre-filter: skipped {skipped_pre} URL(s) (known passenger-car / sibling token in slug)")
+
+    return urls
+
+
+def _category_page_url(base_url: str, page: int) -> str:
+    """Build a paginated URL for a Troostwijk category. Strips any existing
+    query string so we control page/pageSize ourselves."""
+    base = base_url.split("?", 1)[0]
+    return f"{base}?page={page}&pageSize=48"
+
+
+def get_category_urls(category_url: str, pages: int = 3) -> list[str]:
+    """Collect lot URLs from a Troostwijk category listing
+    (e.g. Transport & Logistics → Trucks). Same slug pre-filter as the
+    brand-search variant."""
+    urls: list[str] = []
+    seen: set[str] = set()
+    skipped_pre = 0
+
+    with sync_playwright() as p:
+        browser, context = _new_context(p)
+        page = context.new_page()
+
+        for i in range(1, pages + 1):
+            page_url = _category_page_url(category_url, i)
+            found = _collect_lot_urls_from_listing(page, page_url)
+            if not found:
+                # End of listings (or the page returned empty) — stop paginating.
+                break
+            new_this_page = 0
+            for href in found:
+                if href in seen:
+                    continue
+                seen.add(href)
+                if not _url_looks_like_van(href):
+                    skipped_pre += 1
+                    continue
+                urls.append(href)
+                new_this_page += 1
+            if new_this_page == 0:
+                # Listing started repeating itself — no point continuing.
+                break
+
+        browser.close()
+
+    if skipped_pre:
+        print(f"  pre-filter: skipped {skipped_pre} URL(s) from category")
 
     return urls
 
@@ -379,8 +460,16 @@ def _parse_graphql_bid(payload: dict) -> Optional[dict]:
         return None
 
 
-def crawl(query="Peugeot Boxer", pages=2):
-    urls = get_lot_urls(query, pages=pages)
+def crawl(query: str = "Peugeot Boxer", pages: int = 2, urls: Optional[list[str]] = None):
+    """Scrape lot pages and return a list of Vehicle dicts.
+
+    If `urls` is provided, those are scraped directly (skip the search
+    step). Otherwise URLs are collected from a brand-keyword search for
+    `query`. Use `urls=…` when you want to combine multiple sources
+    (brand search + category page + …) and dedupe upstream.
+    """
+    if urls is None:
+        urls = get_lot_urls(query, pages=pages)
     results = []
     missing_bid_data = []
 
