@@ -5,7 +5,7 @@ import bid_history
 from cost_model import DEFAULT_BUYER_PREMIUM, compute_costs, passes_cost_filter
 from marktplaats import build_price_index
 from notify import notify_gems
-from scraper import VAVATO_BASE, crawl_parallel, get_category_urls, get_lot_urls
+from scraper import crawl_parallel, get_category_urls, get_lot_urls
 from van_intel import ALLOWED_MODELS, SCORE_THRESHOLD
 
 MAX_BID_TARGET_FRACTION = 0.65
@@ -25,10 +25,12 @@ QUERIES = [
     "Volkswagen Transporter",
 ]
 
-# Troostwijk category pages. Drilled down to "Vans" specifically inside the
-# Cars taxonomy (~274 listings) rather than the parent "Cars" category
-# (~2017 listings, mostly passenger cars). Trucks-and-trailers is kept for
-# heavier vans / box trucks that get bucketed there.
+# Category pages. Drilled down to "Vans" specifically inside the Cars
+# taxonomy (~274 listings) rather than the parent "Cars" category
+# (~2017 listings, mostly passenger cars). Trucks-and-trailers is kept
+# for heavier vans / box trucks that get bucketed there. Vavato shares
+# the same category UUIDs as Troostwijk (TB-Auctions backend), so we
+# reuse the path and just swap the host.
 CATEGORIES: list[tuple[str, str]] = [
     (
         "trucks-and-trailers",
@@ -37,6 +39,10 @@ CATEGORIES: list[tuple[str, str]] = [
     (
         "vans",
         "https://www.troostwijkauctions.com/en/c/transport/cars/5196727d-c14f-48dc-a2f0-e75f50094a52?categoryLevel3=b3ee855f-3320-4b3c-895c-fbf321f401d6",
+    ),
+    (
+        "vavato-vans",
+        "https://www.vavato.com/en/c/transport/cars/5196727d-c14f-48dc-a2f0-e75f50094a52?categoryLevel3=b3ee855f-3320-4b3c-895c-fbf321f401d6",
     ),
 ]
 # 10 × 48 = 480 listings per category; well above current vans count (274)
@@ -90,15 +96,6 @@ def main():
             _add(query, get_lot_urls(query, pages=BRAND_PAGES))
         except Exception as e:
             print(f"  query {query} failed: {e}")
-
-    # Vavato shares the TB-Auctions storefront but has its own inventory
-    # (BVA was merged into Troostwijk so it's already covered above).
-    print("Collecting URLs from Vavato brand searches:")
-    for query in QUERIES:
-        try:
-            _add(f"vavato:{query}", get_lot_urls(query, pages=BRAND_PAGES, base=VAVATO_BASE))
-        except Exception as e:
-            print(f"  vavato query {query} failed: {e}")
 
     print(f"\nTotal unique URLs to scrape: {len(all_urls)}")
 
