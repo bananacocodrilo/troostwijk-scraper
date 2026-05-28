@@ -1,4 +1,4 @@
-"""Lot registry — discovery + priority-refresh state.
+"""Lot registry — discovery + priority-refresh state + reject cache.
 
 Goal: avoid re-scraping every lot on every run. We discover URLs cheaply
 on every run (listing pages only), but the expensive per-lot detail
@@ -11,6 +11,13 @@ scrape is bucketed by ``auction_end`` distance:
 New URLs (never seen) are always scraped. Stale entries (already in
 registry, not scraped this run) keep their last-known Vehicle dump so
 ``latest.json`` always reflects the union of fresh + stale data.
+
+URLs whose first scrape returns a permanent rejection reason (it's not
+a van, it's too old, it's a tipper, …) are recorded in
+``permanent_rejects`` and skipped on every future discovery pass. Only
+rejection reasons whose verdict can't change get cached this way —
+transient rejections (score below threshold, market shifted) stay in
+``lots`` and get re-evaluated.
 
 State file: ``output/lot_registry.json``, committed alongside the other
 outputs so the registry survives across GH Actions runs."""
@@ -31,9 +38,33 @@ REFRESH_MAX_AGE_H = {
     "ended":      9999,    # never re-scrape once closed
 }
 
-# Drop entries whose auction ended this many days ago — bid_history has
-# already captured the final hammer and the lot URL likely 404s.
+# Drop entries whose auction ended more than this many days ago — bid_history
+# has already captured the final hammer and the lot URL likely 404s.
 PRUNE_DAYS_AFTER_END = 7
+
+# Rejection reasons whose verdict won't change on re-scrape: they reflect
+# stable lot attributes (it's not a van, it's too old, it's a tipper, …)
+# rather than transient market state (bid moved, scoring rule shifted).
+# A URL that fails for one of these reasons gets cached so we don't waste
+# a scrape budget on it every run.
+PERMANENT_REJECT_PREFIXES = (
+    "brand_not_whitelisted",
+    "smaller_sibling",
+    "vehicle_type",
+    "body_mismatch",
+    "damage",
+    "size_too_small",
+    "mileage_too_high",
+    "year_below_minimum",
+    "fuel_electric",
+)
+
+
+def _is_permanent_reject(reason: Optional[str]) -> bool:
+    if not reason:
+        return False
+    prefix = reason.split(":", 1)[0].strip()
+    return prefix in PERMANENT_REJECT_PREFIXES
 
 
 def _parse_dt(value) -> Optional[datetime]:
@@ -96,9 +127,14 @@ def select_urls_to_scrape(discovered_urls: Iterable[str],
     per-tier counts for logging."""
     now = now or datetime.now(timezone.utc)
     lots = registry.get("lots", {})
+    rejects = registry.get("permanent_rejects", {})
     to_scrape: list[str] = []
-    stats = {"new": 0, "closing_soon": 0, "soon": 0, "later": 0, "unknown": 0, "ended": 0, "skipped": 0}
+    stats = {"new": 0, "closing_soon": 0, "soon": 0, "later": 0, "unknown": 0,
+             "ended": 0, "skipped": 0, "perm_reject": 0}
     for url in discovered_urls:
+        if url in rejects:
+            stats["perm_reject"] += 1
+            continue
         entry = lots.get(url)
         if entry is None:
             stats["new"] += 1
@@ -114,30 +150,47 @@ def select_urls_to_scrape(discovered_urls: Iterable[str],
 def merge(registry: dict, fresh_results: Iterable[dict],
           *, now: Optional[datetime] = None) -> dict:
     """Update the registry in-place with this run's fresh scrape results.
-    Skips entries that came back as load_failed (no title / no useful
-    data) so a transient fetch failure doesn't wipe the previous
-    known-good snapshot — the URL stays in its current registry tier
-    and will be re-tried on the next eligible run.
+
+    Behaviour by result kind:
+      • load_failed / empty title  → skip, leave previous snapshot intact
+      • permanent reject reason    → record in ``permanent_rejects`` cache
+                                     and remove from ``lots`` so we never
+                                     re-scrape this URL
+      • accepted / transient reject → store full Vehicle dump in ``lots``
 
     Returns the registry for chaining."""
-    now = (now or datetime.now(timezone.utc)).isoformat()
+    now_iso = (now or datetime.now(timezone.utc)).isoformat()
     lots = registry.setdefault("lots", {})
+    rejects = registry.setdefault("permanent_rejects", {})
     for v in fresh_results:
         url = v.get("url")
         if not url:
             continue
         if not v.get("title") or v.get("rejected_reason") == "load_failed":
             continue
+        reason = v.get("rejected_reason")
+        if _is_permanent_reject(reason):
+            rejects[url] = {
+                "reason": reason,
+                "title": v.get("title"),
+                "rejected_at": now_iso,
+            }
+            lots.pop(url, None)
+            continue
         lots[url] = {
             **v,
-            "last_scrape_at": now,
+            "last_scrape_at": now_iso,
         }
     return registry
 
 
 def prune(registry: dict, *, now: Optional[datetime] = None) -> int:
-    """Drop entries whose auction ended more than ``PRUNE_DAYS_AFTER_END``
-    days ago. Returns the count removed."""
+    """Drop ``lots`` entries whose auction ended more than
+    ``PRUNE_DAYS_AFTER_END`` days ago. Returns the count removed.
+
+    ``permanent_rejects`` are not pruned — they're cheap (one line per
+    URL) and we want the cache to remain authoritative across the entire
+    lifespan of the project."""
     now = now or datetime.now(timezone.utc)
     cutoff = now - timedelta(days=PRUNE_DAYS_AFTER_END)
     lots = registry.get("lots", {})
