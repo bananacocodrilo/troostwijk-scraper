@@ -8,9 +8,15 @@ scrape is bucketed by ``auction_end`` distance:
   • 24-72h         → refresh every other run (~every 12h at 6h cadence)
   • >72h or unknown → refresh once per day
 
-New URLs (never seen) are always scraped. Stale entries (already in
-registry, not scraped this run) keep their last-known Vehicle dump so
-``latest.json`` always reflects the union of fresh + stale data.
+New URLs (never seen) are always scraped, but capped at
+``MAX_NEW_PER_RUN`` per invocation so the first few runs after a clean
+start don't blow past the CI timeout. The deferred URLs aren't lost —
+they remain "new" on the next run and get picked up via random sample
+until the catalogue is fully registered (typically 3-4 runs).
+
+Stale entries (already in registry, not scraped this run) keep their
+last-known Vehicle dump so ``latest.json`` always reflects the union of
+fresh + stale data.
 
 URLs whose first scrape returns a permanent rejection reason (it's not
 a van, it's too old, it's a tipper, …) are recorded in
@@ -24,6 +30,7 @@ outputs so the registry survives across GH Actions runs."""
 
 import json
 import os
+import random
 from datetime import datetime, timedelta, timezone
 from typing import Iterable, Optional
 
@@ -41,6 +48,13 @@ REFRESH_MAX_AGE_H = {
 # Drop entries whose auction ended more than this many days ago — bid_history
 # has already captured the final hammer and the lot URL likely 404s.
 PRUNE_DAYS_AFTER_END = 7
+
+# Cap on never-seen URLs scraped per run, so a cold-start scrape (empty
+# registry) doesn't try to chew through the entire catalogue at once and
+# hit the CI timeout. Deferred URLs remain "new" next run and get picked
+# up by random sampling — the catalogue typically becomes fully
+# registered within 3-4 runs at this cap.
+MAX_NEW_PER_RUN = 400
 
 # Rejection reasons whose verdict won't change on re-scrape: they reflect
 # stable lot attributes (it's not a van, it's too old, it's a tipper, …)
@@ -121,30 +135,48 @@ def should_scrape(entry: Optional[dict], now: datetime) -> bool:
 
 def select_urls_to_scrape(discovered_urls: Iterable[str],
                           registry: dict,
-                          *, now: Optional[datetime] = None) -> tuple[list[str], dict]:
+                          *, now: Optional[datetime] = None,
+                          max_new: int = MAX_NEW_PER_RUN) -> tuple[list[str], dict]:
     """Split ``discovered_urls`` into the subset that needs a fresh
-    detail-scrape. Returns ``(urls_to_scrape, stats)`` where stats has
-    per-tier counts for logging."""
+    detail-scrape this run. Returns ``(urls_to_scrape, stats)``.
+
+    Priority refreshes (closing_soon / soon / later / unknown tiers on
+    already-registered URLs) are always included — they have time
+    pressure tied to ``auction_end``.
+
+    Never-seen URLs are capped at ``max_new`` per run via random
+    sampling. The deferred URLs aren't tracked anywhere; they'll show
+    up as "new" again on the next discovery pass and have an equal
+    chance of being sampled."""
     now = now or datetime.now(timezone.utc)
     lots = registry.get("lots", {})
     rejects = registry.get("permanent_rejects", {})
-    to_scrape: list[str] = []
-    stats = {"new": 0, "closing_soon": 0, "soon": 0, "later": 0, "unknown": 0,
-             "ended": 0, "skipped": 0, "perm_reject": 0}
+    refresh: list[str] = []
+    new_urls: list[str] = []
+    stats = {"new": 0, "new_deferred": 0, "closing_soon": 0, "soon": 0,
+             "later": 0, "unknown": 0, "ended": 0, "skipped": 0, "perm_reject": 0}
     for url in discovered_urls:
         if url in rejects:
             stats["perm_reject"] += 1
             continue
         entry = lots.get(url)
         if entry is None:
-            stats["new"] += 1
-            to_scrape.append(url)
+            new_urls.append(url)
         elif should_scrape(entry, now):
             stats[_priority_tier(entry, now)] += 1
-            to_scrape.append(url)
+            refresh.append(url)
         else:
             stats["skipped"] += 1
-    return to_scrape, stats
+
+    if len(new_urls) > max_new:
+        sampled = random.sample(new_urls, max_new)
+        stats["new"] = max_new
+        stats["new_deferred"] = len(new_urls) - max_new
+    else:
+        sampled = new_urls
+        stats["new"] = len(new_urls)
+
+    return refresh + sampled, stats
 
 
 def merge(registry: dict, fresh_results: Iterable[dict],
