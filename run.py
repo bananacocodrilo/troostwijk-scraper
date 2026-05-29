@@ -235,7 +235,10 @@ def main():
     _dump("output/latest.json", accepted)
     _dump("output/latest_big_vans.json", big_vans)
     _dump("output/latest_small_vans.json", small_vans)
-    _dump("output/rejected.json", rejected)
+    _dump("output/rejected.json", {
+        v["url"]: v.get("rejected_reason") or "unknown"
+        for v in rejected if v.get("url")
+    })
 
     reason_counts: dict = {}
     for v in rejected:
