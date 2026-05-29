@@ -16,10 +16,17 @@ MAX_BID_TARGET_FRACTION = 0.65
 # each because many fitting vans get mis-listed in "Cars" rather than the
 # narrow "Vans" subcategory.
 IDEAL_MODELS = [
+    # Big van targets (camper conversion sweet spot)
     "Peugeot Boxer",
     "Citroen Jumper",
     "Fiat Ducato",
     "Mercedes Sprinter",
+    # Small van targets (dual-use / crew cab)
+    "Volkswagen Transporter",
+    "Renault Trafic",
+    "Opel Vivaro",
+    "Citroen Jumpy",
+    "Peugeot Expert",
 ]
 
 # Category pages. We crawl both the narrow "Vans" subcategory (clean

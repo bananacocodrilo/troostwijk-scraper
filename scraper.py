@@ -75,7 +75,7 @@ def _new_context(p):
 _SLUG_REJECT_TOKENS: set[str] = {
     # Smaller siblings already enumerated in van_intel.SMALLER_SIBLINGS.
     *(s for s in SMALLER_SIBLINGS if " " not in s),
-    "jumpy",  # Citroen Jumpy — mid-size, not on our van whitelist
+    # jumpy removed — now in SMALL_VAN_MODELS and routed to small pipeline
     # Peugeot passenger cars (skip "2008" — collides with year strings).
     "107", "108", "206", "207", "208", "306", "307", "308", "508",
     "605", "607", "806", "807", "1007", "3008", "4007", "4008", "5008",
