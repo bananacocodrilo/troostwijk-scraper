@@ -516,26 +516,40 @@ def _sibling_match(haystack_lower: str) -> Optional[str]:
 def _matched_model(haystack: str) -> Tuple[Optional[str], Optional[str], Optional[str]]:
     """Return (canonical_name, token, pipeline) where pipeline is 'big' or 'small'.
 
-    Small van models are checked first (multi-word tokens need priority over
-    the single-word tokens in ALLOWED_MODELS — e.g. 'transit custom' must win
-    over 'transit' alone).  Hard-reject siblings still return (None, None, None).
+    Priority order:
+    1. Multi-word small van tokens (e.g. "transit custom" beats "transit")
+    2. Big van models (ALLOWED_MODELS) — must beat generic single words like
+       "transporter" used as a body-type descriptor in "Citroën Jumper Transporter"
+    3. Single-word small van tokens (only if no big van matched)
     """
     s = haystack.lower()
     if _sibling_match(s):
         return None, None, None
-    # Small van models — multi-word first so "transit custom" beats "transit".
+
+    # 1. Multi-word small van tokens first (priority over single-word big tokens)
     for token in sorted(SMALL_VAN_MODELS, key=len, reverse=True):
+        if " " not in token:
+            continue  # single-word tokens handled in step 3
         canonical = SMALL_VAN_MODELS[token]
         pat = r"\b" + r"\s+".join(re.escape(p) for p in token.split()) + r"\b"
         if re.search(pat, s):
             return canonical, token.replace(" ", "_"), "small"
-    # Big van models
+
+    # 2. Big van models
     for token, canonical in ALLOWED_MODELS.items():
         if token in ("expert", "transporter"):
-            # These live in SMALL_VAN_MODELS now — skip in big pipeline
-            continue
+            continue  # these live in SMALL_VAN_MODELS — handled in step 3
         if re.search(rf"\b{re.escape(token)}\b", s):
             return canonical, token, "big"
+
+    # 3. Single-word small van tokens (only reached if no big van matched)
+    for token in SMALL_VAN_MODELS:
+        if " " in token:
+            continue  # already handled
+        canonical = SMALL_VAN_MODELS[token]
+        if re.search(rf"\b{re.escape(token)}\b", s):
+            return canonical, token, "small"
+
     return None, None, None
 
 
