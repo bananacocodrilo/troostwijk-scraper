@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import sys
 
 import bid_history
@@ -211,6 +212,27 @@ def main():
     # downstream operates on this so notifications/dashboard reflect
     # every lot we've ever discovered that's still active.
     all_results = registry.all_known_vehicles(reg)
+
+    # Deduplicate by lot-ID suffix (A3-44485-10662) — the same physical auction
+    # lot is often listed under both troostwijkauctions.com and vavato.com URLs.
+    # Keep the Troostwijk URL when both exist (it's the primary platform).
+    _seen_lot_ids: dict = {}
+    _deduped: list = []
+    for v in all_results:
+        m = re.search(r"(A\d+-\d+-\d+)", v.get("url", ""))
+        lot_id = m.group(1) if m else None
+        if lot_id is None:
+            _deduped.append(v)
+            continue
+        existing = _seen_lot_ids.get(lot_id)
+        if existing is None:
+            _seen_lot_ids[lot_id] = v
+            _deduped.append(v)
+        elif "troostwijkauctions.com" in v.get("url", ""):
+            # Prefer TWK URL — replace in-place
+            _deduped[_deduped.index(existing)] = v
+            _seen_lot_ids[lot_id] = v
+    all_results = _deduped
 
     # 4a. Persist a bid-history snapshot of every freshly-scraped lot.
     #     We use fresh_results (not all_results) so we don't re-record

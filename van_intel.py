@@ -819,41 +819,48 @@ _TRANSIT_BIG_SIZES = frozenset(["L3H2", "L3H3", "L4H2", "L4H3", "L3H?", "L4H?"])
 
 
 def classify_vehicle(vehicle: dict) -> str:
-    """Return 'big', 'small', or 'both' for a vehicle dict that has already
-    passed hard filters (i.e. comes from the accepted list in run.py).
-
-    The 'both' category is used for genuine midsize-ambiguous vehicles so they
-    surface in both dashboard pages.
+    """Return 'big', 'small', or 'both'. Mirrors _matched_model priority:
+    1. multi-word small van tokens (transit custom beats transit)
+    2. big van model tokens (ducato/sprinter beat generic 'transporter')
+    3. single-word small van tokens
     """
     title    = (vehicle.get("title") or "").lower()
-    remarks  = (vehicle.get("remarks") or "").lower()
-    addl     = (vehicle.get("additional_information") or "").lower()
-    haystack = " ".join([title, remarks, addl])
+    van_type = vehicle.get("van_type") or ""
 
-    # Check small van models first (multi-word tokens must beat single tokens)
+    # Size override: L3+/L4+ formats are big-van territory regardless of model.
+    if re.match(r"L[34]", van_type, re.IGNORECASE):
+        return "big"
+
+    haystack = " ".join(filter(None, [title,
+                                      vehicle.get("remarks") or "",
+                                      vehicle.get("additional_information") or ""])).lower()
+
+    # 1. Multi-word small van tokens first
     for token in sorted(SMALL_VAN_MODELS, key=len, reverse=True):
+        if " " not in token:
+            continue
         pat = r"\b" + r"\s+".join(re.escape(p) for p in token.split()) + r"\b"
         if re.search(pat, haystack):
-            canonical_token = token.replace(" ", "_")
-            # Expert and Transporter — pure small
-            if canonical_token in ("expert", "transporter"):
-                return "small"
             return "small"
 
-    # Ford Transit — special case: could be big (L3+) or small (L1/L2)
-    if re.search(r"\btransit\b", haystack):
-        van_type = vehicle.get("van_type") or ""
-        if van_type in _TRANSIT_BIG_SIZES:
-            return "big"
-        # Unknown or small size → dual category so it appears in both
-        return "both"
-
-    # Big van models
+    # 2. Big van model tokens (must beat generic single words like 'transporter')
     for token in _BIG_VAN_TOKENS:
         if re.search(rf"\b{re.escape(token)}\b", haystack):
+            # Ford Transit is ambiguous by size
+            if token == "transit":
+                if van_type in _TRANSIT_BIG_SIZES:
+                    return "big"
+                return "both"
             return "big"
 
-    # Fallback — keep in big pipeline (should not happen for accepted lots)
+    # 3. Single-word small van tokens (only if no big van matched above)
+    for token in SMALL_VAN_MODELS:
+        if " " in token:
+            continue
+        if re.search(rf"\b{re.escape(token)}\b", haystack):
+            return "small"
+
+    # Fallback
     return "big"
 
 
