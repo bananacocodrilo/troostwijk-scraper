@@ -74,10 +74,66 @@ def _model_key(title: str) -> str:
     return ""
 
 
+# Stable output schema for latest.json / latest_big_vans.json / latest_small_vans.json.
+# Every field is always present (None if unavailable). Order is fixed.
+_SCHEMA: dict = {
+    # Identity
+    "url":                        None,
+    "title":                      None,
+    "thumbnail_url":              None,
+    "source":                     None,
+    "platform":                   None,
+    # Vehicle
+    "year":                       None,
+    "km":                         None,
+    "fuel":                       None,
+    "emission_standard":          None,
+    "van_type":                   None,
+    "van_category":               None,
+    "seats":                      None,
+    "body_type":                  None,
+    "weight_kg":                  None,
+    "load_kg":                    None,
+    "city":                       None,
+    "country_code":               None,
+    # Auction
+    "current_bid_eur":            None,
+    "buyer_premium_pct":          None,
+    "bids_count":                 None,
+    "auction_end":                None,
+    "bidding_status":             None,
+    "condition":                  None,
+    "vat_margin":                 None,
+    # Market & cost
+    "estimated_market_value":     None,
+    "market_value_source":        None,
+    "max_recommended_bid_eur":    None,
+    "final_cost_estimate":        None,
+    "transport_cost_estimate":    None,
+    "reconditioning_cost_estimate": None,
+    "deal_ratio":                 None,
+    # Scores
+    "score":                      None,
+    "big_van_score":              None,
+    "small_van_score":            None,
+    "deal_score":                 None,
+    "is_hidden_gem":              False,
+}
+
+
+def _normalize(v: dict) -> dict:
+    """Return a stable-schema dict for output. Always the same fields, same order."""
+    return {field: v.get(field, default) for field, default in _SCHEMA.items()}
+
+
 def _dump(path: str, payload):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w") as f:
         json.dump(payload, f, indent=2, default=str)
+
+
+def _dump_vans(path: str, vans: list[dict]):
+    _dump(path, [_normalize(v) for v in vans])
 
 
 def main():
@@ -237,9 +293,9 @@ def main():
     big_vans.sort(key=lambda v: v.get("big_van_score") or 0, reverse=True)
     small_vans.sort(key=lambda v: v.get("small_van_score") or 0, reverse=True)
 
-    _dump("output/latest.json", accepted)
-    _dump("output/latest_big_vans.json", big_vans)
-    _dump("output/latest_small_vans.json", small_vans)
+    _dump_vans("output/latest.json", accepted)
+    _dump_vans("output/latest_big_vans.json", big_vans)
+    _dump_vans("output/latest_small_vans.json", small_vans)
     _dump("output/rejected.json", {
         v["url"]: v.get("rejected_reason") or "unknown"
         for v in rejected if v.get("url")
