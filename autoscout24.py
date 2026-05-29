@@ -20,8 +20,7 @@ from bs4 import BeautifulSoup
 COUNTRIES: Dict[str, tuple] = {
     "nl": ("https://www.autoscout24.nl/lst", "nl-NL,nl;q=0.9"),
     "de": ("https://www.autoscout24.de/lst", "de-DE,de;q=0.9"),
-    "fr": ("https://www.autoscout24.fr/lst", "fr-FR,fr;q=0.9"),
-    "be": ("https://www.autoscout24.be/lst", "nl-BE,nl;q=0.9,fr-BE,fr;q=0.8"),
+    # .fr and .be return 404 for all van models — different URL scheme, not worth maintaining
 }
 
 _UA = (

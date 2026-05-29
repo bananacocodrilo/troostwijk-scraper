@@ -91,7 +91,7 @@ _SLUG_REJECT_TOKENS: set[str] = {
     # Mercedes passenger / SUV (skip a/b/c/e/s-class — ambiguous with van trim codes).
     "glc", "gla", "gls", "glb", "gle", "cls",
     # Fiat passenger
-    "panda", "punto", "tipo", "bravo", "stilo", "croma", "500l", "500x",
+    "panda", "punto", "tipo", "bravo", "stilo", "croma", "500", "500l", "500x",
     # BMW SUVs (skip 1/3/5/7 series — ambiguous with year/load codes).
     "x1", "x3", "x5", "x6",
     # Audi

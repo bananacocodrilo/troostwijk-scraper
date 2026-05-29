@@ -62,7 +62,8 @@ CATEGORIES: list[tuple[str, str]] = [
 # 10 × 48 = 480 listings per category; well above current vans count (274)
 # and stops early on the first empty page anyway.
 CATEGORY_PAGES = 10
-BRAND_PAGES = 2
+BRAND_PAGES = 2       # Troostwijk brand searches
+VAVATO_BRAND_PAGES = 1  # Vavato page 2 consistently times out (30s wasted per search)
 
 
 def _model_key(title: str) -> str:
@@ -122,7 +123,7 @@ def main():
         except Exception as e:
             print(f"  twk:{query} failed: {e}")
         try:
-            _add(f"vavato:{query}", get_lot_urls(query, pages=BRAND_PAGES, base=VAVATO_BASE))
+            _add(f"vavato:{query}", get_lot_urls(query, pages=VAVATO_BRAND_PAGES, base=VAVATO_BASE))
         except Exception as e:
             print(f"  vavato:{query} failed: {e}")
 

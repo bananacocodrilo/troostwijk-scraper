@@ -30,7 +30,7 @@ _MODEL_SLUGS = {
     "ducato":      ("fiat",         "ducato"),
     "jumper":      ("citroen",      "jumper"),
     "transit":     ("ford",         "transit"),
-    "sprinter":    ("mercedes",     "sprinter"),
+    "sprinter":    ("mercedes-benz", "sprinter"),
     "master":      ("renault",      "master"),
     "crafter":     ("volkswagen",   "crafter"),
     "movano":      ("opel",         "movano"),
