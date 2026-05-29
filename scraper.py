@@ -399,6 +399,11 @@ def parse_vehicle(html: str, url: str) -> Vehicle:
         # Troostwijk frequently fills only one of Construction date / Date of
         # First Admission. Fall back so the scorer still sees a year.
         year = first_reg.year
+    if year is None:
+        # Last resort: extract 4-digit year from the title (e.g. "2019 Peugeot Boxer")
+        m = re.search(r"\b(19[89]\d|20[0-2]\d)\b", title or "")
+        if m:
+            year = int(m.group(1))
     km = attrs.get("km")
     fuel = _normalize_fuel(attrs.get("fuel"))
     transmission = attrs.get("transmission")

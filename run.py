@@ -197,13 +197,16 @@ def main():
             v["deal_margin_eur"] = margin
             v["deal_margin_pct"] = round(margin / median * 100, 1)
 
-        if median:
-            premium = 1 + (v.get("buyer_premium_pct") or DEFAULT_BUYER_PREMIUM * 100) / 100
-            v["max_recommended_bid_eur"] = round(median * MAX_BID_TARGET_FRACTION / premium)
-
-        # True cost model
+        # True cost model (computes estimated_market_value via all sources + heuristic)
         cost_fields = compute_costs(v, model_token=mk)
         v.update(cost_fields)
+
+        # Max recommended bid — use the best market value we have (may be
+        # heuristic when year is missing or market data is sparse).
+        est_market = v.get("estimated_market_value")
+        if est_market:
+            premium = 1 + (v.get("buyer_premium_pct") or DEFAULT_BUYER_PREMIUM * 100) / 100
+            v["max_recommended_bid_eur"] = round(est_market * MAX_BID_TARGET_FRACTION / premium)
 
         # Cost filter (overpaying vs market, or too expensive to recondition)
         passes, cost_reason = passes_cost_filter(v)

@@ -105,7 +105,10 @@ def _market_heuristic(
     bases = _BASE_PRICES[group]
 
     if year is None:
-        return None
+        # Use a conservative fleet-average year so we still produce a market
+        # reference for lots with no year attribute. 2017 sits in the middle
+        # band — not the newest price, not the oldest.
+        year = 2017
 
     if year >= 2020:
         base = bases[2020]
