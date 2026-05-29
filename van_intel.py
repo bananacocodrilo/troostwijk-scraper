@@ -39,12 +39,25 @@ ALLOWED_MODELS: dict[str, str] = {
     "transporter":  "Volkswagen Transporter",    # T5/T6 — common camper base
 }
 
+# Small van models routed to the "small" pipeline instead of being rejected.
+# These are dual-use panel vans that make sense for crew + cargo use.
+SMALL_VAN_MODELS: dict[str, str] = {
+    "transit custom":   "Ford Transit Custom",
+    "trafic":           "Renault Trafic",
+    "vivaro":           "Opel Vivaro",
+    "jumpy":            "Citroen Jumpy",
+    "expert":           "Peugeot/Citroen Expert",    # also in ALLOWED_MODELS — overrides to small
+    "transporter":      "Volkswagen Transporter",    # also in ALLOWED_MODELS — overrides to small
+}
+
 # Smaller siblings that disqualify a match even if a primary token hits.
+# NOTE: transit custom / trafic / vivaro / jumpy are now in SMALL_VAN_MODELS
+# so they must NOT appear here — they get their own route.
 SMALLER_SIBLINGS: List[str] = [
     "vito", "citan", "v-klasse", "v klasse",
-    "transit connect", "transit courier", "transit custom",
-    "trafic", "kangoo",
-    "vivaro", "zafira", "combo",
+    "transit connect", "transit courier",
+    "kangoo",
+    "zafira", "combo",
     "berlingo", "partner",
     "caddy",
     "doblo", "fiorino", "talento", "scudo",
@@ -154,9 +167,11 @@ HARD_REJECT_BODY: List[Tuple[str, str]] = [
 
 # 1.4 Extreme damage
 HARD_REJECT_DAMAGE: List[Tuple[str, str]] = [
-    # engine
-    (r"engine failure", "engine failure"),
-    (r"engine broken", "engine failure"),
+    # engine — negative lookbehind for "no/geen/kein" to avoid matching
+    # "no engine failure codes" in OBD inspection reports.
+    # Suffix (?!\s*code) excludes "engine failure code(s)" (OBD context).
+    (r"(?<!no )(?<!No )(?<!geen )(?<!Geen )(?<!kein )(?<!Kein )engine failure(?!\s*codes?)", "engine failure"),
+    (r"(?<!no )(?<!No )(?<!geen )(?<!Geen )engine broken", "engine failure"),
     (r"motor defect", "engine failure (NL)"),
     (r"motor kapot", "engine failure (NL)"),
     (r"motor stuk", "engine failure (NL)"),
@@ -498,15 +513,30 @@ def _sibling_match(haystack_lower: str) -> Optional[str]:
     return None
 
 
-def _matched_model(haystack: str) -> Tuple[Optional[str], Optional[str]]:
-    """Return (canonical_name, token) or (None, None)."""
+def _matched_model(haystack: str) -> Tuple[Optional[str], Optional[str], Optional[str]]:
+    """Return (canonical_name, token, pipeline) where pipeline is 'big' or 'small'.
+
+    Small van models are checked first (multi-word tokens need priority over
+    the single-word tokens in ALLOWED_MODELS — e.g. 'transit custom' must win
+    over 'transit' alone).  Hard-reject siblings still return (None, None, None).
+    """
     s = haystack.lower()
     if _sibling_match(s):
-        return None, None
+        return None, None, None
+    # Small van models — multi-word first so "transit custom" beats "transit".
+    for token in sorted(SMALL_VAN_MODELS, key=len, reverse=True):
+        canonical = SMALL_VAN_MODELS[token]
+        pat = r"\b" + r"\s+".join(re.escape(p) for p in token.split()) + r"\b"
+        if re.search(pat, s):
+            return canonical, token.replace(" ", "_"), "small"
+    # Big van models
     for token, canonical in ALLOWED_MODELS.items():
+        if token in ("expert", "transporter"):
+            # These live in SMALL_VAN_MODELS now — skip in big pipeline
+            continue
         if re.search(rf"\b{re.escape(token)}\b", s):
-            return canonical, token
-    return None, None
+            return canonical, token, "big"
+    return None, None, None
 
 
 # ---------------------------------------------------------------------------
@@ -670,7 +700,7 @@ def evaluate(vehicle) -> Evaluation:
     haystack = " ".join(s for s in [title, model_a, remarks, addl] if s)
 
     # ── Stage 1: Hard filters ────────────────────────────────────────────
-    canonical, token = _matched_model(haystack)
+    canonical, token, pipeline = _matched_model(haystack)
     if not canonical:
         sib = _sibling_match(haystack.lower())
         if sib:
@@ -746,3 +776,306 @@ def evaluate(vehicle) -> Evaluation:
         )
 
     return Evaluation(True, None, van_type, score, bd, rule_label, reasons)
+
+
+# ---------------------------------------------------------------------------
+# Pipeline split: classify + per-pipeline scoring
+# ---------------------------------------------------------------------------
+
+# Big-van model tokens (camper-first pipeline)
+_BIG_VAN_TOKENS = frozenset(
+    t for t in ALLOWED_MODELS if t not in ("expert", "transporter")
+)
+
+# Small-van model tokens (dual-use pipeline).  These include the normalised
+# forms stored in the vehicle dict after _matched_model returns them.
+_SMALL_VAN_TOKENS = frozenset([
+    "transit_custom", "trafic", "vivaro", "jumpy",
+    "expert", "transporter",
+])
+
+# Models that sit on the big/small border and appear in BOTH pipelines
+_DUAL_CATEGORY_MODELS = frozenset(["transit"])
+
+# Ford Transit size combos that qualify it as big-van territory
+_TRANSIT_BIG_SIZES = frozenset(["L3H2", "L3H3", "L4H2", "L4H3", "L3H?", "L4H?"])
+
+
+def classify_vehicle(vehicle: dict) -> str:
+    """Return 'big', 'small', or 'both' for a vehicle dict that has already
+    passed hard filters (i.e. comes from the accepted list in run.py).
+
+    The 'both' category is used for genuine midsize-ambiguous vehicles so they
+    surface in both dashboard pages.
+    """
+    title    = (vehicle.get("title") or "").lower()
+    remarks  = (vehicle.get("remarks") or "").lower()
+    addl     = (vehicle.get("additional_information") or "").lower()
+    haystack = " ".join([title, remarks, addl])
+
+    # Check small van models first (multi-word tokens must beat single tokens)
+    for token in sorted(SMALL_VAN_MODELS, key=len, reverse=True):
+        pat = r"\b" + r"\s+".join(re.escape(p) for p in token.split()) + r"\b"
+        if re.search(pat, haystack):
+            canonical_token = token.replace(" ", "_")
+            # Expert and Transporter — pure small
+            if canonical_token in ("expert", "transporter"):
+                return "small"
+            return "small"
+
+    # Ford Transit — special case: could be big (L3+) or small (L1/L2)
+    if re.search(r"\btransit\b", haystack):
+        van_type = vehicle.get("van_type") or ""
+        if van_type in _TRANSIT_BIG_SIZES:
+            return "big"
+        # Unknown or small size → dual category so it appears in both
+        return "both"
+
+    # Big van models
+    for token in _BIG_VAN_TOKENS:
+        if re.search(rf"\b{re.escape(token)}\b", haystack):
+            return "big"
+
+    # Fallback — keep in big pipeline (should not happen for accepted lots)
+    return "big"
+
+
+# ── Big van scoring (camper-first) ──────────────────────────────────────────
+#
+# Weights (max points before clamping to 100):
+#   A) Camper usability  40 pts — L/H sweet spot + cargo body
+#   B) Build efficiency  25 pts — clean cargo box, no seats penalty
+#   C) Mechanical        20 pts — mileage + year
+#   D) Value             15 pts — deal_ratio
+
+
+def _bvs_camper_usability(van_type: Optional[str], body_type: Optional[str]) -> int:
+    """A) Camper usability — 0-40 pts."""
+    s = (van_type or "").upper()
+    score = 0
+
+    # Sweet-spot grid
+    _grid = {
+        ("2", "2"): 35, ("3", "2"): 40,
+        ("2", "3"): 20, ("3", "3"): 22,
+        ("4", "2"): 18, ("4", "3"): 10,
+        ("2", "?"): 22, ("3", "?"): 25,
+        ("4", "?"): 12,
+        ("1", "2"): 5,  ("1", "3"): 3,
+        ("?", "2"): 20, ("?", "3"): 12,
+        ("?", "?"): 10,
+    }
+    m = re.match(r"L([1-4?])H([1-3?])$", s)
+    if m:
+        score = _grid.get((m.group(1), m.group(2)), 10)
+    else:
+        score = 10  # unknown — moderate penalty
+
+    # Cargo box body bonus: closed panel van = good insulation candidate
+    bt = (body_type or "").lower()
+    if any(kw in bt for kw in ("box", "closed van", "panel van", "kastenwagen", "bestelwagen", "furgon")):
+        score = min(score + 3, 40)
+
+    return min(score, 40)
+
+
+def _bvs_build_efficiency(vehicle: dict) -> int:
+    """B) Build efficiency — 0-25 pts.
+
+    Rewards an empty cargo bay with no seats / no conversion interference.
+    """
+    pts = 15  # baseline — unknown = neutral
+    seats = vehicle.get("seats")
+    title_lower = (vehicle.get("title") or "").lower()
+    remarks_lower = (vehicle.get("remarks") or "").lower()
+    hay = title_lower + " " + remarks_lower
+
+    if seats is not None:
+        if seats <= 2:
+            pts = 25   # driver-only or driver+passenger — empty bay, ideal
+        elif seats <= 3:
+            pts = 22
+        elif seats <= 5:
+            # crew cab — some conversion friction but seats can be removed
+            pts = 12
+        else:
+            pts = 6    # many seats = a lot of removal work
+
+    # Factory conversion signals (shelving, racking, workshop fit-out
+    # that must be stripped) — small penalty but NOT a hard reject
+    if re.search(r"\b(shelving|racking|inrichting|stellingkast|rek)\b", hay):
+        pts = max(pts - 5, 0)
+
+    return min(pts, 25)
+
+
+def _bvs_mechanical(km: Optional[int], year: Optional[int]) -> int:
+    """C) Mechanical baseline — 0-20 pts."""
+    yr_pts = 0
+    if year is not None:
+        if year >= 2020:   yr_pts = 12
+        elif year >= 2017: yr_pts = 9
+        elif year >= 2014: yr_pts = 5
+        else:              yr_pts = 0
+
+    km_pts = 0
+    if km is not None:
+        if km < 80_000:    km_pts = 8
+        elif km < 150_000: km_pts = 6
+        elif km < 200_000: km_pts = 3
+        else:              km_pts = 0
+
+    return min(yr_pts + km_pts, 20)
+
+
+def _bvs_value(deal_ratio: Optional[float]) -> int:
+    """D) Value — 0-15 pts."""
+    if deal_ratio is None:
+        return 5   # neutral
+    if deal_ratio >= 0.30:  return 15
+    if deal_ratio >= 0.20:  return 12
+    if deal_ratio >= 0.10:  return 8
+    if deal_ratio >= 0.0:   return 5
+    return 2   # slightly overpaying
+
+
+def score_big_van(vehicle: dict) -> int:
+    """Return a 0-100 camper-first suitability score for a big van."""
+    van_type   = vehicle.get("van_type")
+    body_type  = vehicle.get("body_type")
+    km         = vehicle.get("km")
+    year       = vehicle.get("year")
+    deal_ratio = vehicle.get("deal_ratio")
+
+    a = _bvs_camper_usability(van_type, body_type)
+    b = _bvs_build_efficiency(vehicle)
+    c = _bvs_mechanical(km, year)
+    d = _bvs_value(deal_ratio)
+
+    return min(a + b + c + d, 100)
+
+
+# ── Small van scoring (dual-use-first) ──────────────────────────────────────
+#
+# Weights (max points before clamping to 100):
+#   A) Dual-use utility    45 pts — seats, crew cab
+#   B) City practicality   20 pts — size / length
+#   C) Conversion potential 20 pts — fold-flat, sleeping layout signals
+#   D) Value               15 pts — deal_ratio
+
+
+_CREW_CAB_RE_SV = re.compile(
+    r"\bcrew\s*cab\b|crewcab|\bdubbele\s*cabine\b|\bdouble\s*cab\b"
+    r"|5\s*seat|5-seat|5\s*persoons|vijf\s*personen|\bcombi\b"
+    r"|6\s*seat|6-seat|6\s*persoons|zes\s*personen",
+    re.IGNORECASE,
+)
+
+
+def _svs_dual_use(vehicle: dict) -> int:
+    """A) Dual-use utility — 0-45 pts.
+
+    6 legal seats = 25 pts (MASSIVE), crew cab = 10 pts baseline.
+    Factory anchor points or removable seat signals also score.
+    """
+    hay = " ".join(filter(None, [
+        vehicle.get("title"), vehicle.get("remarks"),
+        vehicle.get("additional_information"),
+    ])).lower()
+
+    seats = vehicle.get("seats")
+    pts = 0
+
+    # Seat count scoring
+    if seats is not None:
+        if seats >= 6:    pts = 38
+        elif seats == 5:  pts = 28
+        elif seats == 4:  pts = 18
+        elif seats == 3:  pts = 10
+        else:             pts = 2   # cargo only — low dual-use value for small van
+    elif _CREW_CAB_RE_SV.search(hay):
+        pts = 22   # strong signal even without explicit seat count
+
+    # Anchor / removable seat signals — bonus on top
+    if re.search(r"\b(anchor\s*point|rail|zitplaats|afneembare?\s*stoel|klapstoel)\b", hay):
+        pts = min(pts + 7, 45)
+
+    return min(pts, 45)
+
+
+def _svs_city_practicality(van_type: Optional[str], fuel: Optional[str]) -> int:
+    """B) City practicality — 0-20 pts.
+
+    Shorter vans score better (L1>L2>L3). Diesel gets neutral, petrol/hybrid
+    gets slight bonus for city zones.
+    """
+    s = (van_type or "").upper()
+    size_pts = 10  # unknown — neutral
+
+    m = re.match(r"L([1-4?])H([1-3?])$", s)
+    if m:
+        L = m.group(1)
+        if L == "1":   size_pts = 18
+        elif L == "2": size_pts = 15
+        elif L == "3": size_pts = 10
+        elif L == "4": size_pts = 4
+        else:          size_pts = 10
+
+    fuel_pts = 0
+    f = (fuel or "").lower()
+    if "hybrid" in f or "electric" in f:
+        fuel_pts = 2
+    elif "petrol" in f or "benzine" in f:
+        fuel_pts = 1
+
+    return min(size_pts + fuel_pts, 20)
+
+
+def _svs_conversion_potential(vehicle: dict) -> int:
+    """C) Conversion potential — 0-20 pts.
+
+    Signals: fold-flat seats, sleeping layout references, bench-type seating,
+    skylights/roof vent mentions, camper-prep mentions.
+    """
+    hay = " ".join(filter(None, [
+        vehicle.get("title"), vehicle.get("remarks"),
+        vehicle.get("additional_information"),
+    ])).lower()
+
+    pts = 8   # base — everything has some conversion potential
+    if re.search(r"\b(fold[\s-]?flat|inklapbare?\s*stoel|fold\s*down\s*seat|klapstoel)\b", hay):
+        pts = min(pts + 6, 20)
+    if re.search(r"\b(sleeping|slaap|bed|matrass|matras|camperklaar|camper\s*ready)\b", hay):
+        pts = min(pts + 6, 20)
+    if re.search(r"\b(skylight|dakraam|panoramisch?\s*dak|glasdak)\b", hay):
+        pts = min(pts + 3, 20)
+    # Window van / kombi van signals — good candidate for conversion
+    if re.search(r"\b(kombi|combi|glazen\s*zij|side\s*window\s*van)\b", hay):
+        pts = min(pts + 3, 20)
+
+    return min(pts, 20)
+
+
+def _svs_value(deal_ratio: Optional[float]) -> int:
+    """D) Value — 0-15 pts. Same logic as big van."""
+    if deal_ratio is None:
+        return 5
+    if deal_ratio >= 0.30:  return 15
+    if deal_ratio >= 0.20:  return 12
+    if deal_ratio >= 0.10:  return 8
+    if deal_ratio >= 0.0:   return 5
+    return 2
+
+
+def score_small_van(vehicle: dict) -> int:
+    """Return a 0-100 dual-use-first suitability score for a small van."""
+    van_type   = vehicle.get("van_type")
+    fuel       = vehicle.get("fuel")
+    deal_ratio = vehicle.get("deal_ratio")
+
+    a = _svs_dual_use(vehicle)
+    b = _svs_city_practicality(van_type, fuel)
+    c = _svs_conversion_potential(vehicle)
+    d = _svs_value(deal_ratio)
+
+    return min(a + b + c + d, 100)

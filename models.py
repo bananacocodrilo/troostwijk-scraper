@@ -107,3 +107,8 @@ class Vehicle(BaseModel):
     # Fleet provenance (informational — no score impact yet)
     fleet_type: Optional[str] = None       # utility | telecom | delivery | solar | …
     fleet_signals: Optional[List[str]] = None
+
+    # Pipeline split (big vs small van)
+    van_category: Optional[str] = None     # "big" | "small" | "both"
+    big_van_score: Optional[int] = None    # 0-100 camper-first scoring
+    small_van_score: Optional[int] = None  # 0-100 dual-use-first scoring

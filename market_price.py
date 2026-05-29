@@ -15,7 +15,9 @@ import statistics
 from typing import Dict, List, Optional
 
 import autoscout24
+import gaspedaal
 import marktplaats
+import two_dehands
 
 
 class PriceIndex:
@@ -69,19 +71,26 @@ def build_price_index(
     marktplaats_queries: Optional[List[str]] = None,
     mp_pages: int = 3,
     as24_pages: int = 4,
+    gp_pages: int = 5,
+    tdh_pages: int = 3,
     skip_autoscout24: bool = False,
+    skip_gaspedaal: bool = False,
+    skip_2dehands: bool = False,
 ) -> PriceIndex:
-    """Build a combined PriceIndex from Marktplaats + AutoScout24.
+    """Build a combined PriceIndex from Marktplaats + AutoScout24 + Gaspedaal + 2dehands.
 
     Args:
-        model_keys: list of van_intel model tokens to fetch from AutoScout24
-            (e.g. ["boxer", "ducato"]). Defaults to all known models.
+        model_keys: list of van_intel model tokens to fetch from AutoScout24 and
+            Gaspedaal (e.g. ["boxer", "ducato"]). Defaults to all known models.
         marktplaats_queries: human-readable search terms for Marktplaats
             (e.g. ["Peugeot Boxer", "Fiat Ducato"]). Defaults to all models.
         mp_pages: pages to fetch per Marktplaats query (100 listings/page).
         as24_pages: pages to fetch per AutoScout24 model (20 listings/page).
-        skip_autoscout24: set True to fall back to Marktplaats-only (e.g. if
-            AutoScout24 is temporarily blocking).
+        gp_pages: pages to fetch per Gaspedaal model (variable listings/page).
+        tdh_pages: pages to fetch per 2dehands query (100 listings/page).
+        skip_autoscout24: set True to skip AutoScout24 (e.g. if temporarily blocking).
+        skip_gaspedaal: set True to skip Gaspedaal.
+        skip_2dehands: set True to skip 2dehands.be.
     """
     all_listings: List[dict] = []
 
@@ -108,5 +117,24 @@ def build_price_index(
         keys = model_keys or list(autoscout24._MODEL_SLUGS.keys())
         as24_listings = autoscout24.build_listings(keys, pages_per_model=as24_pages)
         all_listings.extend(as24_listings)
+
+    # --- Gaspedaal ---
+    if not skip_gaspedaal:
+        print("Building Gaspedaal price index...")
+        try:
+            gp_keys = model_keys or list(gaspedaal._MODEL_SLUGS.keys())
+            gp_listings = gaspedaal.build_listings(gp_keys, pages_per_model=gp_pages)
+            all_listings.extend(gp_listings)
+        except Exception as e:
+            print(f"  gaspedaal failed (skipping): {e}")
+
+    # --- 2dehands.be ---
+    if not skip_2dehands:
+        print("Building 2dehands.be price index...")
+        try:
+            tdh_listings = two_dehands.build_listings(pages_per_query=tdh_pages)
+            all_listings.extend(tdh_listings)
+        except Exception as e:
+            print(f"  2dehands failed (skipping): {e}")
 
     return PriceIndex(all_listings)

@@ -7,7 +7,7 @@ from cost_model import DEFAULT_BUYER_PREMIUM, compute_costs, passes_cost_filter
 from market_price import build_price_index
 from notify import notify_gems
 from scraper import VAVATO_BASE, crawl_parallel, get_category_urls, get_lot_urls
-from van_intel import ALLOWED_MODELS, SCORE_THRESHOLD
+from van_intel import ALLOWED_MODELS, SCORE_THRESHOLD, classify_vehicle, score_big_van, score_small_van
 
 MAX_BID_TARGET_FRACTION = 0.65
 
@@ -212,7 +212,22 @@ def main():
     rejected = suitability_rejected + cost_rejected
     accepted.sort(key=lambda v: v.get("score") or 0, reverse=True)
 
+    # ── Pipeline split: classify + per-pipeline scoring ──────────────────
+    for v in accepted:
+        cat = classify_vehicle(v)
+        v["van_category"] = cat
+        v["big_van_score"] = score_big_van(v)
+        v["small_van_score"] = score_small_van(v)
+
+    big_vans   = [v for v in accepted if v.get("van_category") in ("big", "both")]
+    small_vans = [v for v in accepted if v.get("van_category") in ("small", "both")]
+
+    big_vans.sort(key=lambda v: v.get("big_van_score") or 0, reverse=True)
+    small_vans.sort(key=lambda v: v.get("small_van_score") or 0, reverse=True)
+
     _dump("output/latest.json", accepted)
+    _dump("output/latest_big_vans.json", big_vans)
+    _dump("output/latest_small_vans.json", small_vans)
     _dump("output/rejected.json", rejected)
 
     reason_counts: dict = {}
@@ -225,6 +240,7 @@ def main():
     print(
         f"\ndiscovered={len(all_urls)} scraped_this_run={len(fresh_results)} "
         f"known_total={len(all_results)} accepted={len(accepted)} "
+        f"big_vans={len(big_vans)} small_vans={len(small_vans)} "
         f"load_failed={load_failures} filtered={len(rejected) - load_failures}"
     )
     for r, n in sorted(reason_counts.items(), key=lambda kv: -kv[1]):

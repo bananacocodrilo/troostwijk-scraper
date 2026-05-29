@@ -1,12 +1,12 @@
-"""AutoScout24 retail price index.
+"""AutoScout24 retail price index — multi-country.
 
-Scrapes asking prices for large cargo vans from AutoScout24 NL. Used
-alongside the Marktplaats index to build a more robust market reference
-(AutoScout24 skews slightly higher — dealer listings; Marktplaats mixes
-C2C and dealer). Both sources are pooled in ``market_price.py``.
+Scrapes asking prices for large cargo vans from AutoScout24 across NL,
+DE, FR, and BE. Used alongside Marktplaats/mobile.de/lacentrale in
+``market_price.py`` to build a cross-border market reference.
 
 Pages are Next.js SSR — vehicle data lives in ``__NEXT_DATA__`` JSON,
 so no Playwright needed — plain HTTP with BeautifulSoup works.
+The JSON structure is identical across all country TLDs.
 """
 
 import json
@@ -16,16 +16,18 @@ from typing import Dict, List, Optional
 
 from bs4 import BeautifulSoup
 
-BASE = "https://www.autoscout24.nl/lst"
-
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
-        "(KHTML, like Gecko) Chrome/120.0 Safari/537.36"
-    ),
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "nl-NL,nl;q=0.9,en;q=0.8",
+# Supported country TLDs → (base_url, Accept-Language header)
+COUNTRIES: Dict[str, tuple] = {
+    "nl": ("https://www.autoscout24.nl/lst", "nl-NL,nl;q=0.9"),
+    "de": ("https://www.autoscout24.de/lst", "de-DE,de;q=0.9"),
+    "fr": ("https://www.autoscout24.fr/lst", "fr-FR,fr;q=0.9"),
+    "be": ("https://www.autoscout24.be/lst", "nl-BE,nl;q=0.9,fr-BE,fr;q=0.8"),
 }
+
+_UA = (
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/120.0 Safari/537.36"
+)
 
 # Listings outside this range are likely parts, camper conversions, or errors.
 PRICE_MIN_EUR = 1_500
@@ -47,17 +49,24 @@ _MODEL_SLUGS: Dict[str, tuple] = {
 }
 
 
-def _search_url(make: str, model: str, page: int = 1) -> str:
+def _search_url(make: str, model: str, page: int = 1, country: str = "nl") -> str:
+    base, _ = COUNTRIES.get(country, COUNTRIES["nl"])
     return (
-        f"{BASE}/{make}/{model}"
+        f"{base}/{make}/{model}"
         f"?sort=standard&desc=0&offer=U&ustate=N%2CU"
         f"&size=20&page={page}&atype=C"
     )
 
 
-def _fetch_page(url: str) -> Optional[dict]:
+def _fetch_page(url: str, country: str = "nl") -> Optional[dict]:
     """Fetch one search page and return the parsed __NEXT_DATA__ dict."""
-    req = urllib.request.Request(url, headers=HEADERS)
+    _, lang = COUNTRIES.get(country, COUNTRIES["nl"])
+    headers = {
+        "User-Agent": _UA,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": lang,
+    }
+    req = urllib.request.Request(url, headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=20) as r:
             html = r.read().decode("utf-8", errors="replace")
@@ -187,16 +196,17 @@ def _parse_listing(item: dict, model_key: str) -> Optional[dict]:
 def fetch_market_prices(
     model_key: str,
     pages: int = 4,
+    country: str = "nl",
 ) -> List[dict]:
-    """Return parsed listings for one model token (e.g. "boxer")."""
+    """Return parsed listings for one model token (e.g. "boxer") and country."""
     slugs = _MODEL_SLUGS.get(model_key)
     if not slugs:
         return []
     make, model = slugs
     results: List[dict] = []
     for page in range(1, pages + 1):
-        url = _search_url(make, model, page)
-        data = _fetch_page(url)
+        url = _search_url(make, model, page, country=country)
+        data = _fetch_page(url, country=country)
         if data is None:
             break
         items = _extract_listings(data)
@@ -205,6 +215,7 @@ def fetch_market_prices(
         for item in items:
             parsed = _parse_listing(item, model_key)
             if parsed:
+                parsed["source"] = f"autoscout24_{country}"
                 results.append(parsed)
         if len(items) < 20:
             break  # last page
@@ -215,16 +226,19 @@ def fetch_market_prices(
 def build_listings(
     model_keys: Optional[List[str]] = None,
     pages_per_model: int = 4,
+    countries: Optional[List[str]] = None,
 ) -> List[dict]:
-    """Fetch AutoScout24 listings for all (or specified) model keys.
+    """Fetch AutoScout24 listings for all (or specified) model keys and countries.
 
-    Returns a flat list of listing dicts compatible with
-    ``market_price.PriceIndex``."""
+    Returns a flat list of listing dicts compatible with ``market_price.PriceIndex``.
+    Defaults to all supported countries."""
     keys = model_keys or list(_MODEL_SLUGS.keys())
+    target_countries = countries or list(COUNTRIES.keys())
     all_listings: List[dict] = []
-    for key in keys:
-        print(f"  autoscout24: {key} ...", end=" ", flush=True)
-        listings = fetch_market_prices(key, pages=pages_per_model)
-        print(f"{len(listings)} listings")
-        all_listings.extend(listings)
+    for country in target_countries:
+        for key in keys:
+            print(f"  autoscout24.{country}: {key} ...", end=" ", flush=True)
+            listings = fetch_market_prices(key, pages=pages_per_model, country=country)
+            print(f"{len(listings)} listings")
+            all_listings.extend(listings)
     return all_listings
