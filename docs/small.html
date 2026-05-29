@@ -548,7 +548,7 @@ function render() {
     if (closing === 'all') {
       // no time filter
     } else if (closing === 'open') {
-      if (em == null || em <= now) return false;
+      if (em != null && em <= now) return false;  // exclude known-ended only
     } else {
       const days = parseFloat(closing);
       if (em == null) return false;

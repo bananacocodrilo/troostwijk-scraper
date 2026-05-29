@@ -557,7 +557,7 @@ function render() {
       // Require an auction_end in the future. Lots with no end-time data
       // (scraper missed the GraphQL bid response) get hidden here too —
       // we can't verify they're still open.
-      if (em == null || em <= now) return false;
+      if (em != null && em <= now) return false;  // exclude known-ended only
     } else {
       const days = parseFloat(closing);
       if (em == null) return false;
