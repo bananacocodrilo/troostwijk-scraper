@@ -1,5 +1,6 @@
 import json
 import os
+import sys
 
 import bid_history
 import registry
@@ -284,4 +285,18 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    os.makedirs("logs", exist_ok=True)
+    log_file = open("logs/latest.log", "w", buffering=1)  # line-buffered
+    # Tee stdout to both terminal and log file
+    class _Tee:
+        def __init__(self, *streams): self._s = streams
+        def write(self, d):
+            for s in self._s: s.write(d)
+        def flush(self):
+            for s in self._s: s.flush()
+    sys.stdout = _Tee(sys.__stdout__, log_file)
+    try:
+        main()
+    finally:
+        sys.stdout = sys.__stdout__
+        log_file.close()
