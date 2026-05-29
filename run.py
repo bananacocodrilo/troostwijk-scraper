@@ -4,28 +4,12 @@ import os
 import bid_history
 import registry
 from cost_model import DEFAULT_BUYER_PREMIUM, compute_costs, passes_cost_filter
-from marktplaats import build_price_index
+from market_price import build_price_index
 from notify import notify_gems
 from scraper import VAVATO_BASE, crawl_parallel, get_category_urls, get_lot_urls
 from van_intel import ALLOWED_MODELS, SCORE_THRESHOLD
 
 MAX_BID_TARGET_FRACTION = 0.65
-
-# Models used for the Marktplaats price index (per-model retail medians).
-QUERIES = [
-    "Peugeot Boxer",
-    "Citroen Jumper",
-    "Fiat Ducato",
-    "Mercedes Sprinter",
-    "Ford Transit",
-    "Renault Master",
-    "Volkswagen Crafter",
-    "Opel Movano",
-    "MAN TGE",
-    "Iveco Daily",
-    "Peugeot Expert",
-    "Volkswagen Transporter",
-]
 
 # Priority models for exact-name brand search against Troostwijk + Vavato.
 # These are the conversion-target sweet spots; we run a focused search for
@@ -169,9 +153,8 @@ def main():
     bid_history.update(fresh_results, model_token_of=_model_key)
     hammer_index = bid_history.load_index()
 
-    # 4b. Marktplaats price index
-    print("\nBuilding Marktplaats price index...")
-    price_index = build_price_index(QUERIES)
+    # 4b. Combined market price index (Marktplaats + AutoScout24)
+    price_index = build_price_index()
 
     # 5. Attach market data + compute true cost + re-filter
     accepted = []
