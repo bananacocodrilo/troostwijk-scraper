@@ -874,6 +874,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-05-29T13:10:54.647587+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -1065,6 +1071,12 @@
           "ts": "2026-05-29T12:41:35.148994+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-29T13:10:54.647587+00:00",
+          "current_bid_eur": 1400.0,
+          "bids_count": 7,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -1401,6 +1413,12 @@
           "ts": "2026-05-29T11:56:02.868842+00:00",
           "current_bid_eur": 10000.0,
           "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-29T13:10:54.647587+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -1816,6 +1834,12 @@
           "current_bid_eur": 4000.0,
           "bids_count": 16,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-29T13:10:54.647587+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -2227,6 +2251,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-29T13:10:54.647587+00:00",
+          "current_bid_eur": 5000.0,
+          "bids_count": 101,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -2608,6 +2638,12 @@
           "current_bid_eur": 1900.0,
           "bids_count": 10,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-29T13:10:54.647587+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -2748,6 +2784,12 @@
           "ts": "2026-05-29T12:16:14.828933+00:00",
           "current_bid_eur": 1000.0,
           "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-29T13:10:54.647587+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -2980,6 +3022,12 @@
           "current_bid_eur": 1550.0,
           "bids_count": 47,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-29T13:10:54.647587+00:00",
+          "current_bid_eur": 1600.0,
+          "bids_count": 48,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -3189,6 +3237,111 @@
           "ts": "2026-05-29T12:41:35.148994+00:00",
           "current_bid_eur": 1950.0,
           "bids_count": 13,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "744b5c5b-5cd4-434c-94be-5bae19136ae1": {
+      "url": "https://www.troostwijkauctions.com/en/l/2021-fiat-ducato-pickup-truck-A1-46700-3",
+      "model_token": "ducato",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-05-29T13:10:54.647587+00:00",
+          "current_bid_eur": 8100.0,
+          "bids_count": 46,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "20487949-4063-4d70-a982-ae98ba138b69": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-expert-227-1-6-hdi-l1h1-p%252B-1-vhr-25-A1-47011-42",
+      "model_token": "expert",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-05-29T13:10:54.647587+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "cf04e228-44aa-47fd-8c1a-938fac2dfcee": {
+      "url": "https://www.troostwijkauctions.com/en/l/battery-jumper-cable-%25282x%2529-A1-40520-2855",
+      "model_token": "jumper",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-05-29T13:10:54.647587+00:00",
+          "current_bid_eur": 20.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2d62c5da-9902-478e-ae69-dd91735aa82c": {
+      "url": "https://www.troostwijkauctions.com/en/l/iveco-35s9-daily-commercial-vehicle-A1-40520-25",
+      "model_token": "daily",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-05-29T13:10:54.647587+00:00",
+          "current_bid_eur": 1550.0,
+          "bids_count": 50,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "fdb3142f-97f6-4ae7-8308-8e08bed68695": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-boxer-335-2-2-hdi-l3h2-xr-150hp-2016-7-seater-commercial-vehicle-v-584-gt-A1-44365-25",
+      "model_token": "boxer",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-05-29T13:10:54.647587+00:00",
+          "current_bid_eur": 3000.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "7f3fbb1d-a395-4c7d-8f71-4066fc6143a9": {
+      "url": "https://www.troostwijkauctions.com/en/l/iveco-daily-35s13v-2-3-352-l2h2-van-A1-46733-13",
+      "model_token": "daily",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-05-29T13:10:54.647587+00:00",
+          "current_bid_eur": 4200.0,
+          "bids_count": 9,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "f1e20762-81ad-4fa2-87cd-c886b4578eca": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-master-commercial-vehicle-A1-46609-1",
+      "model_token": "master",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-05-29T13:10:54.647587+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
           "status": "BIDDING_OPEN"
         }
       ],
