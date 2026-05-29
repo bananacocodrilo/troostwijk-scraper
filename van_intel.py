@@ -180,9 +180,12 @@ HARD_REJECT_DAMAGE: List[Tuple[str, str]] = [
     # not running
     (r"non[\s-]?runner", "non-runner"),
     (r"not starting", "not starting"),
+    (r"not drivable", "not drivable"),
+    (r"niet rijdbaar", "not drivable (NL)"),
     (r"niet startend", "not starting (NL)"),
     (r"start niet", "not starting (NL)"),
     (r"startet nicht", "not starting (DE)"),
+    (r"nicht fahrbereit", "not drivable (DE)"),
     (r"does not start", "not starting"),
     # gearbox
     (r"gearbox failure", "gearbox failure"),
