@@ -1103,3 +1103,171 @@ def score_small_van(vehicle: dict) -> int:
     d = _svs_value(deal_ratio)
 
     return min(a + b + c + d, 100)
+
+
+# ── ROI scoring (investment / rental-income-first) ───────────────────────────
+#
+# Weights:  Demand 35%  Utilization 30%  Cost efficiency 20%  Liquidity 15%
+# Tiers:    S ≥ 8.5     A ≥ 7.0         B ≥ 5.5             C < 5.5
+#
+# Model: NL peer-to-peer rental market (SnappCar-style).
+# Best ROI = high-demand boring utility vans (crew cabs, small delivery)
+# cheap to buy and easy to resell. Campers / luxury = lifestyle, not ROI.
+
+_ROI_CAMPER_SIGNALS = re.compile(
+    r"\b(bed|slaap|camping|camper|wohnmobil|keuken|kitchen|solar|zonnepaneel"
+    r"|mobilhome|motorhome|kampeer|converted|omgebouw)\b",
+    re.IGNORECASE,
+)
+
+_ROI_LIQUIDITY = {
+    # token → liquidity score (0-10)
+    "trafic": 10, "vivaro": 10, "transit": 9, "transporter": 9,
+    "transit_custom": 10,
+    "sprinter": 8, "crafter": 8, "master": 7,
+    "boxer": 6, "ducato": 6, "jumper": 6,
+    "daily": 5, "movano": 5, "tge": 5,
+    "expert": 8, "jumpy": 8,
+}
+
+_ROI_DEMAND = {
+    # token → base demand (crew seats dominate regardless of model)
+    "trafic": 8, "vivaro": 8, "transit": 8, "transporter": 9,
+    "transit_custom": 9,
+    "sprinter": 7, "crafter": 7, "master": 7,
+    "boxer": 6, "ducato": 6, "jumper": 6,
+    "daily": 6, "movano": 6, "tge": 5,
+    "expert": 8, "jumpy": 8,
+}
+
+
+def _roi_demand(vehicle: dict) -> float:
+    """A) Demand — 0-10."""
+    title   = (vehicle.get("title") or "").lower()
+    seats   = vehicle.get("seats") or 0
+    token   = vehicle.get("applied_rule_set") or ""  # set by evaluate()
+
+    base = _ROI_DEMAND.get(token, 6)
+
+    # Seat bonus — crew vans are the highest demand rental category
+    if seats >= 6:
+        base = min(10, base + 2)
+    elif seats == 5:
+        base = min(10, base + 1)
+
+    # Crew-cab / double-cab keyword
+    if re.search(r"\b(dubbele cabine|double cab|crew cab|kombi|dubbelcabine)\b",
+                 title, re.IGNORECASE):
+        base = min(10, base + 1)
+
+    # Camper penalty — low rental demand
+    haystack = " ".join(filter(None, [title, vehicle.get("remarks") or "",
+                                      vehicle.get("additional_information") or ""]))
+    if _ROI_CAMPER_SIGNALS.search(haystack):
+        base = max(1, base - 3)
+
+    return float(base)
+
+
+def _roi_utilization(vehicle: dict) -> float:
+    """B) Utilization — 0-10 (proxy for rental days/month)."""
+    seats  = vehicle.get("seats") or 0
+    token  = vehicle.get("applied_rule_set") or ""
+    title  = (vehicle.get("title") or "").lower()
+
+    # Crew / multi-seat vans rent most frequently
+    if seats >= 6 or re.search(r"\b(dubbele cabine|double cab|crew|kombi)\b",
+                                title, re.IGNORECASE):
+        return 10.0
+
+    # City-friendly small vans
+    if token in ("trafic", "vivaro", "expert", "jumpy", "transit_custom", "transporter"):
+        return 8.0
+
+    # Mid-size cargo (Sprinter, Crafter, Transit)
+    if token in ("sprinter", "crafter", "transit", "master", "movano"):
+        return 6.5
+
+    # Large cargo / niche
+    return 5.0
+
+
+def _roi_cost_efficiency(vehicle: dict) -> float:
+    """C) Cost efficiency — 0-10 based on final acquisition cost."""
+    cost = vehicle.get("final_cost_estimate")
+    if cost is None:
+        return 5.0  # neutral when unknown
+    if cost < 5_000:   return 10.0
+    if cost < 7_000:   return 9.0
+    if cost < 9_000:   return 8.0
+    if cost < 12_000:  return 7.0
+    if cost < 16_000:  return 5.5
+    if cost < 22_000:  return 4.0
+    return 2.5
+
+
+def _roi_liquidity(vehicle: dict) -> float:
+    """D) Liquidity — how quickly / easily can you resell?"""
+    token  = vehicle.get("applied_rule_set") or ""
+    base   = float(_ROI_LIQUIDITY.get(token, 5))
+
+    # Camper conversion → hard to resell at purchase price
+    title = (vehicle.get("title") or "").lower()
+    haystack = " ".join(filter(None, [title, vehicle.get("remarks") or "",
+                                      vehicle.get("additional_information") or ""]))
+    if _ROI_CAMPER_SIGNALS.search(haystack):
+        base = max(1.0, base - 3.0)
+
+    return base
+
+
+def _roi_penalties(vehicle: dict) -> float:
+    """Penalties subtracted from raw ROI score."""
+    penalty = 0.0
+    haystack = " ".join(filter(None, [
+        vehicle.get("title") or "",
+        vehicle.get("remarks") or "",
+        vehicle.get("additional_information") or "",
+    ])).lower()
+
+    # Camper conversion signals (cumulative up to -4)
+    camper_hits = len(_ROI_CAMPER_SIGNALS.findall(haystack))
+    penalty += min(4.0, camper_hits * 1.0)
+
+    # High mileage
+    km = vehicle.get("km") or 0
+    if km > 200_000: penalty += 1.0
+    elif km > 150_000: penalty += 0.5
+
+    # Old emission standard
+    emission = str(vehicle.get("emission_standard") or "")
+    if re.search(r"\b[34]\b", emission):  # Euro 3 or 4
+        penalty += 0.5
+
+    return penalty
+
+
+def score_roi(vehicle: dict) -> float:
+    """Return ROI score 0-10 (rental-income-first). Higher = better investment."""
+    demand     = _roi_demand(vehicle)
+    util       = _roi_utilization(vehicle)
+    cost_eff   = _roi_cost_efficiency(vehicle)
+    liquidity  = _roi_liquidity(vehicle)
+    penalties  = _roi_penalties(vehicle)
+
+    raw = (
+        0.35 * demand
+        + 0.30 * util
+        + 0.20 * cost_eff
+        + 0.15 * liquidity
+        - penalties
+    )
+    return round(max(0.0, min(10.0, raw)), 2)
+
+
+def roi_tier(score: float) -> str:
+    """S/A/B/C tier from ROI score."""
+    if score >= 8.5: return "S"
+    if score >= 7.0: return "A"
+    if score >= 5.5: return "B"
+    return "C"

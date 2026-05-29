@@ -9,7 +9,7 @@ from cost_model import DEFAULT_BUYER_PREMIUM, compute_costs, passes_cost_filter
 from market_price import build_price_index
 from notify import notify_gems
 from scraper import VAVATO_BASE, crawl_parallel, get_category_urls, get_lot_urls
-from van_intel import ALLOWED_MODELS, SCORE_THRESHOLD, classify_vehicle, score_big_van, score_small_van
+from van_intel import ALLOWED_MODELS, SCORE_THRESHOLD, classify_vehicle, roi_tier, score_big_van, score_roi, score_small_van
 
 MAX_BID_TARGET_FRACTION = 0.65
 
@@ -117,6 +117,8 @@ _SCHEMA: dict = {
     "score":                      None,
     "big_van_score":              None,
     "small_van_score":            None,
+    "roi_score":                  None,
+    "roi_tier":                   None,
     "deal_score":                 None,
     "is_hidden_gem":              False,
 }
@@ -315,9 +317,18 @@ def main():
     big_vans.sort(key=lambda v: v.get("big_van_score") or 0, reverse=True)
     small_vans.sort(key=lambda v: v.get("small_van_score") or 0, reverse=True)
 
+    # ROI scoring — runs over all accepted lots regardless of big/small category
+    for v in accepted:
+        rs = score_roi(v)
+        v["roi_score"] = rs
+        v["roi_tier"]  = roi_tier(rs)
+
+    roi_vans = sorted(accepted, key=lambda v: v.get("roi_score") or 0, reverse=True)
+
     _dump_vans("output/latest.json", accepted)
     _dump_vans("output/latest_big_vans.json", big_vans)
     _dump_vans("output/latest_small_vans.json", small_vans)
+    _dump_vans("output/latest_roi.json", roi_vans)
     _dump("output/rejected.json", {
         v["url"]: v.get("rejected_reason") or "unknown"
         for v in rejected if v.get("url")
