@@ -6,7 +6,7 @@ import sys
 import bid_history
 import registry
 from cost_model import DEFAULT_BUYER_PREMIUM, compute_costs, passes_cost_filter
-from market_price import build_price_index
+from market_price import build_price_index_cached
 from notify import notify_gems
 from scraper import VAVATO_BASE, crawl_parallel, get_category_urls, get_lot_urls
 from van_intel import ALLOWED_MODELS, SCORE_THRESHOLD, classify_vehicle, roi_tier, score_big_van, score_roi, score_small_van
@@ -243,7 +243,7 @@ def main():
     hammer_index = bid_history.load_index()
 
     # 4b. Combined market price index (Marktplaats + AutoScout24)
-    price_index = build_price_index()
+    price_index = build_price_index_cached()
 
     # 5. Attach market data + compute true cost + re-filter
     accepted = []

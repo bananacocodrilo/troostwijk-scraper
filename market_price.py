@@ -1,23 +1,40 @@
-"""Multi-source retail market price index.
+"""Multi-source retail market price index — rotating per-source cache.
 
-Combines Marktplaats (C2C + dealer) and AutoScout24 (dealer-skewed) into a
-single PriceIndex. Pooling both sources gives better coverage per
-(model_key, year) bucket, especially for newer or less-common models.
+Each run refreshes exactly ONE price source (the stalest one) and merges it
+into a per-source cache at ``output/price_cache.json``. The PriceIndex is
+always built from all cached sources combined.
 
-Usage (mirrors the old marktplaats-only call in run.py):
+With 4 sources and a 6h GH Actions cron, every source is refreshed within 24h.
+Each run saves ~10-15 min compared to rebuilding everything every time.
 
-    from market_price import build_price_index
-    index = build_price_index(model_keys)
-    median = index.median("boxer", 2019)
+Cache layout:
+    {
+      "marktplaats":  {"updated_at": "...", "listings": [...]},
+      "autoscout24":  {"updated_at": "...", "listings": [...]},
+      "gaspedaal":    {"updated_at": "...", "listings": [...]},
+      "2dehands":     {"updated_at": "...", "listings": [...]}
+    }
 """
 
+import json
+import os
 import statistics
+from datetime import datetime, timezone
 from typing import Dict, List, Optional
 
 import autoscout24
 import gaspedaal
 import marktplaats
 import two_dehands
+
+CACHE_PATH = "output/price_cache.json"
+
+_MP_QUERIES = [
+    "Peugeot Boxer", "Citroen Jumper", "Fiat Ducato",
+    "Mercedes Sprinter", "Ford Transit", "Renault Master",
+    "Volkswagen Crafter", "Opel Movano", "MAN TGE", "Iveco Daily",
+    "Peugeot Expert", "Volkswagen Transporter",
+]
 
 
 class PriceIndex:
@@ -56,7 +73,6 @@ class PriceIndex:
         return total
 
     def sources(self, model_key: Optional[str], year: Optional[int]) -> set:
-        """Which data sources contributed to this bucket (±2 years)."""
         if not model_key or not year:
             return set()
         result: set = set()
@@ -65,76 +81,126 @@ class PriceIndex:
         return result
 
 
-def build_price_index(
-    model_keys: Optional[List[str]] = None,
-    *,
-    marktplaats_queries: Optional[List[str]] = None,
-    mp_pages: int = 3,
-    as24_pages: int = 4,
-    gp_pages: int = 5,
-    tdh_pages: int = 3,
-    skip_autoscout24: bool = False,
-    skip_gaspedaal: bool = False,
-    skip_2dehands: bool = False,
-) -> PriceIndex:
-    """Build a combined PriceIndex from Marktplaats + AutoScout24 + Gaspedaal + 2dehands.
+# ---------------------------------------------------------------------------
+# Per-source fetchers
+# ---------------------------------------------------------------------------
 
-    Args:
-        model_keys: list of van_intel model tokens to fetch from AutoScout24 and
-            Gaspedaal (e.g. ["boxer", "ducato"]). Defaults to all known models.
-        marktplaats_queries: human-readable search terms for Marktplaats
-            (e.g. ["Peugeot Boxer", "Fiat Ducato"]). Defaults to all models.
-        mp_pages: pages to fetch per Marktplaats query (100 listings/page).
-        as24_pages: pages to fetch per AutoScout24 model (20 listings/page).
-        gp_pages: pages to fetch per Gaspedaal model (variable listings/page).
-        tdh_pages: pages to fetch per 2dehands query (100 listings/page).
-        skip_autoscout24: set True to skip AutoScout24 (e.g. if temporarily blocking).
-        skip_gaspedaal: set True to skip Gaspedaal.
-        skip_2dehands: set True to skip 2dehands.be.
-    """
+def _fetch_marktplaats(pages: int = 3) -> List[dict]:
     all_listings: List[dict] = []
-
-    # --- Marktplaats ---
-    _mp_queries = marktplaats_queries or [
-        "Peugeot Boxer", "Citroen Jumper", "Fiat Ducato",
-        "Mercedes Sprinter", "Ford Transit", "Renault Master",
-        "Volkswagen Crafter", "Opel Movano", "MAN TGE", "Iveco Daily",
-        "Peugeot Expert", "Volkswagen Transporter",
-    ]
-    print("Building Marktplaats price index...")
-    for q in _mp_queries:
+    print("Refreshing Marktplaats...")
+    for q in _MP_QUERIES:
         print(f"  marktplaats: {q} ...", end=" ", flush=True)
-        listings = marktplaats.fetch_market_prices(q, pages=mp_pages)
-        # tag source so PriceIndex can attribute them
+        listings = marktplaats.fetch_market_prices(q, pages=pages)
         for item in listings:
             item.setdefault("source", "marktplaats")
         print(f"{len(listings)} listings")
         all_listings.extend(listings)
+    return all_listings
 
-    # --- AutoScout24 ---
-    if not skip_autoscout24:
-        print("Building AutoScout24 price index...")
-        keys = model_keys or list(autoscout24._MODEL_SLUGS.keys())
-        as24_listings = autoscout24.build_listings(keys, pages_per_model=as24_pages)
-        all_listings.extend(as24_listings)
 
-    # --- Gaspedaal ---
-    if not skip_gaspedaal:
-        print("Building Gaspedaal price index...")
+def _fetch_autoscout24(pages: int = 4) -> List[dict]:
+    print("Refreshing AutoScout24...")
+    keys = list(autoscout24._MODEL_SLUGS.keys())
+    return autoscout24.build_listings(keys, pages_per_model=pages)
+
+
+def _fetch_gaspedaal(pages: int = 5) -> List[dict]:
+    print("Refreshing Gaspedaal...")
+    try:
+        keys = list(gaspedaal._MODEL_SLUGS.keys())
+        return gaspedaal.build_listings(keys, pages_per_model=pages)
+    except Exception as e:
+        print(f"  gaspedaal failed: {e}")
+        return []
+
+
+def _fetch_2dehands(pages: int = 3) -> List[dict]:
+    print("Refreshing 2dehands.be...")
+    try:
+        return two_dehands.build_listings(pages_per_query=pages)
+    except Exception as e:
+        print(f"  2dehands failed: {e}")
+        return []
+
+
+_SOURCES = {
+    "marktplaats": _fetch_marktplaats,
+    "autoscout24": _fetch_autoscout24,
+    "gaspedaal":   _fetch_gaspedaal,
+    "2dehands":    _fetch_2dehands,
+}
+
+
+# ---------------------------------------------------------------------------
+# Cache I/O
+# ---------------------------------------------------------------------------
+
+def _load_cache(path: str = CACHE_PATH) -> dict:
+    try:
+        with open(path) as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def _save_cache(cache: dict, path: str = CACHE_PATH) -> None:
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w") as f:
+        json.dump(cache, f)
+
+
+def _stalest_source(cache: dict) -> str:
+    """Return the name of the source with the oldest (or missing) update."""
+    epoch = datetime(1970, 1, 1, tzinfo=timezone.utc)
+    def age(name: str) -> float:
+        ts = cache.get(name, {}).get("updated_at")
+        if not ts:
+            return float("inf")
         try:
-            gp_keys = model_keys or list(gaspedaal._MODEL_SLUGS.keys())
-            gp_listings = gaspedaal.build_listings(gp_keys, pages_per_model=gp_pages)
-            all_listings.extend(gp_listings)
-        except Exception as e:
-            print(f"  gaspedaal failed (skipping): {e}")
+            dt = datetime.fromisoformat(ts)
+            return (datetime.now(timezone.utc) - dt).total_seconds()
+        except ValueError:
+            return float("inf")
+    return max(_SOURCES, key=age)
 
-    # --- 2dehands.be ---
-    if not skip_2dehands:
-        print("Building 2dehands.be price index...")
-        try:
-            tdh_listings = two_dehands.build_listings(pages_per_query=tdh_pages)
-            all_listings.extend(tdh_listings)
-        except Exception as e:
-            print(f"  2dehands failed (skipping): {e}")
 
+# ---------------------------------------------------------------------------
+# Public entry point
+# ---------------------------------------------------------------------------
+
+def build_price_index_cached(path: str = CACHE_PATH) -> PriceIndex:
+    """Refresh the stalest price source, then build a PriceIndex from all cached data.
+
+    One source is fetched per call. Over 4 runs every source stays within 24h
+    of freshness at the 6h GH Actions cadence."""
+    cache = _load_cache(path)
+
+    # Pick and refresh the stalest source
+    source_name = _stalest_source(cache)
+    fetcher = _SOURCES[source_name]
+    listings = fetcher()
+
+    cache[source_name] = {
+        "updated_at": datetime.now(timezone.utc).isoformat(),
+        "listings": listings,
+    }
+    _save_cache(cache, path)
+
+    ages = {
+        name: f"{(datetime.now(timezone.utc) - datetime.fromisoformat(cache[name]['updated_at'])).total_seconds()/3600:.0f}h"
+        if name in cache else "never"
+        for name in _SOURCES
+    }
+    total = sum(len(cache[n].get("listings", [])) for n in _SOURCES if n in cache)
+    print(f"  price cache: refreshed={source_name} ages={ages} total={total} listings")
+
+    # Build PriceIndex from all cached sources
+    all_listings: List[dict] = []
+    for name in _SOURCES:
+        all_listings.extend(cache.get(name, {}).get("listings", []))
     return PriceIndex(all_listings)
+
+
+# Legacy — kept so imports don't break; just calls the cached version
+def build_price_index(**kwargs) -> PriceIndex:
+    return build_price_index_cached()
