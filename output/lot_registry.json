@@ -1,84 +1,5 @@
 {
   "lots": {
-    "https://www.troostwijkauctions.com/en/l/2011-mercedes-sprinter-513-cdi-3-5-truck-A3-44485-13013": {
-      "title": "2011 Mercedes Sprinter 513 CDI/3.5 Truck",
-      "brand": "Mercedes",
-      "model": "Sprinter 513 CDI/3.5",
-      "url": "https://www.troostwijkauctions.com/en/l/2011-mercedes-sprinter-513-cdi-3-5-truck-A3-44485-13013",
-      "source": "troostwijk",
-      "platform": "VAVATO",
-      "thumbnail_url": "https://media.tbauctions.com/image-media/4058b681-7111-4c2c-9cbf-c8c9f50f0f60/file",
-      "year": null,
-      "first_registration": null,
-      "km": 192109,
-      "fuel": null,
-      "transmission": null,
-      "power_kw": null,
-      "cylinder_cc": 2143,
-      "emission_standard": "Euro 5",
-      "seats": 3,
-      "doors": null,
-      "color": null,
-      "weight_kg": null,
-      "load_kg": 515,
-      "body_type": null,
-      "vin": null,
-      "city": "Erpe-mere",
-      "country_code": "BE",
-      "location": "Erpe-mere, BE",
-      "condition": "NOT_CHECKED",
-      "appearance": "NOT_CHECKED",
-      "vat_margin": true,
-      "bidding_status": "BIDDING_OPEN",
-      "auction_start": "2026-05-20T16:00:00Z",
-      "auction_end": "2026-06-01T17:46:00Z",
-      "remarks": null,
-      "additional_information": null,
-      "lot_id": "ed96c7f9-a11b-4459-8969-309f3821ecf3",
-      "current_bid_eur": 3000.0,
-      "buyer_premium_pct": 0.0,
-      "total_cost_eur": null,
-      "bids_count": 16,
-      "reserve_met": false,
-      "market_median_eur": null,
-      "market_sample_size": null,
-      "deal_margin_eur": null,
-      "deal_margin_pct": null,
-      "max_recommended_bid_eur": null,
-      "hammer_price": null,
-      "auction_fee_estimate": null,
-      "fixed_fees_estimate": null,
-      "vat_applicable": null,
-      "transport_cost_estimate": null,
-      "reconditioning_cost_estimate": null,
-      "final_cost_estimate": null,
-      "estimated_market_value": null,
-      "deal_ratio": null,
-      "deal_score": null,
-      "is_hidden_gem": false,
-      "van_type": null,
-      "is_valid_van": true,
-      "score": 27,
-      "scores": {
-        "year": 0,
-        "mileage": 10,
-        "van_size": 5,
-        "emission": 6,
-        "resaleability": 6,
-        "crew_cab": 0
-      },
-      "applied_rule_set": "sprinter_override",
-      "passed_hard_filters": true,
-      "rejected_reason": "score_below_threshold: 27 < 30",
-      "reason_for_inclusion": [
-        "Mercedes Sprinter (size unknown)",
-        "192k km, year ?",
-        "rules: sprinter_override"
-      ],
-      "fleet_type": "private",
-      "fleet_signals": null,
-      "last_scrape_at": "2026-05-29T09:39:11.659864+00:00"
-    },
     "https://www.troostwijkauctions.com/en/l/2016-renault-master-van-A3-44486-5700": {
       "title": "2016 Renault Master Van",
       "brand": "Renault",
@@ -554,7 +475,10 @@
       ],
       "fleet_type": "private",
       "fleet_signals": null,
-      "last_scrape_at": "2026-05-29T09:39:11.659864+00:00"
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-317-1-9-cdi-l3h2-van-A1-46733-3": {
       "title": "Mercedes-Benz - Sprinter 317 1.9 CDI L3H2 - Van",
@@ -790,85 +714,6 @@
         "size: empty weight 2293kg \u2265 2050 \u2192 L3",
         "174k km, 2020",
         "rules: jumper_override"
-      ],
-      "fleet_type": "private",
-      "fleet_signals": null,
-      "last_scrape_at": "2026-05-29T09:39:11.659864+00:00"
-    },
-    "https://www.vavato.com/en/l/2012-iveco-daily-40c15-A3-44485-5845": {
-      "title": "2012 Iveco Daily 40c15",
-      "brand": "Iveco",
-      "model": "40c15",
-      "url": "https://www.vavato.com/en/l/2012-iveco-daily-40c15-A3-44485-5845",
-      "source": "troostwijk",
-      "platform": "VAVATO",
-      "thumbnail_url": "https://media.tbauctions.com/image-media/dcf6030d-58fe-4cb2-93b2-29237e089992/file",
-      "year": null,
-      "first_registration": null,
-      "km": 173219,
-      "fuel": "diesel",
-      "transmission": "Manual",
-      "power_kw": 107,
-      "cylinder_cc": 2998,
-      "emission_standard": "Euro 5",
-      "seats": 3,
-      "doors": 4,
-      "color": "Red",
-      "weight_kg": 2615,
-      "load_kg": 810,
-      "body_type": "Light Freight",
-      "vin": null,
-      "city": "Hasselt",
-      "country_code": "BE",
-      "location": "Hasselt, BE",
-      "condition": "NOT_CHECKED",
-      "appearance": "NOT_CHECKED",
-      "vat_margin": false,
-      "bidding_status": "BIDDING_OPEN",
-      "auction_start": "2026-05-20T16:00:00Z",
-      "auction_end": "2026-06-01T17:13:00Z",
-      "remarks": null,
-      "additional_information": null,
-      "lot_id": "28014303-b7a8-446d-b0f8-7d2f2f859bcc",
-      "current_bid_eur": 3750.0,
-      "buyer_premium_pct": 19.0,
-      "total_cost_eur": null,
-      "bids_count": 9,
-      "reserve_met": false,
-      "market_median_eur": null,
-      "market_sample_size": null,
-      "deal_margin_eur": null,
-      "deal_margin_pct": null,
-      "max_recommended_bid_eur": null,
-      "hammer_price": null,
-      "auction_fee_estimate": null,
-      "fixed_fees_estimate": null,
-      "vat_applicable": null,
-      "transport_cost_estimate": null,
-      "reconditioning_cost_estimate": null,
-      "final_cost_estimate": null,
-      "estimated_market_value": null,
-      "deal_ratio": null,
-      "deal_score": null,
-      "is_hidden_gem": false,
-      "van_type": null,
-      "is_valid_van": true,
-      "score": 38,
-      "scores": {
-        "year": 0,
-        "mileage": 22,
-        "van_size": 5,
-        "emission": 6,
-        "resaleability": 5,
-        "crew_cab": 0
-      },
-      "applied_rule_set": "global",
-      "passed_hard_filters": true,
-      "rejected_reason": null,
-      "reason_for_inclusion": [
-        "Iveco Daily (size unknown)",
-        "173k km, year ?",
-        "rules: global"
       ],
       "fleet_type": "private",
       "fleet_signals": null,
@@ -1743,7 +1588,10 @@
       ],
       "fleet_type": "private",
       "fleet_signals": null,
-      "last_scrape_at": "2026-05-29T09:39:11.659864+00:00"
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-516-2-2-cdi-432-163hp-2013-vfb-88-z-automatic-A1-44365-32": {
       "title": "Mercedes-Benz Sprinter 516 2.2 CDI 432 163hp 2013, VFB-88-Z Automatic",
@@ -1820,85 +1668,6 @@
         "size: empty weight 2380kg \u2265 2300 \u2192 L3",
         "223k km, year ?",
         "rules: sprinter_override"
-      ],
-      "fleet_type": "private",
-      "fleet_signals": null,
-      "last_scrape_at": "2026-05-29T09:39:11.659864+00:00"
-    },
-    "https://www.troostwijkauctions.com/en/l/2012-iveco-daily-40c15-A3-44485-5845": {
-      "title": "2012 Iveco Daily 40c15",
-      "brand": "Iveco",
-      "model": "40c15",
-      "url": "https://www.troostwijkauctions.com/en/l/2012-iveco-daily-40c15-A3-44485-5845",
-      "source": "troostwijk",
-      "platform": "VAVATO",
-      "thumbnail_url": "https://media.tbauctions.com/image-media/dcf6030d-58fe-4cb2-93b2-29237e089992/file",
-      "year": null,
-      "first_registration": null,
-      "km": 173219,
-      "fuel": "diesel",
-      "transmission": "Manual",
-      "power_kw": 107,
-      "cylinder_cc": 2998,
-      "emission_standard": "Euro 5",
-      "seats": 3,
-      "doors": 4,
-      "color": "Red",
-      "weight_kg": 2615,
-      "load_kg": 810,
-      "body_type": "Light Freight",
-      "vin": null,
-      "city": "Hasselt",
-      "country_code": "BE",
-      "location": "Hasselt, BE",
-      "condition": "NOT_CHECKED",
-      "appearance": "NOT_CHECKED",
-      "vat_margin": false,
-      "bidding_status": "BIDDING_OPEN",
-      "auction_start": "2026-05-20T16:00:00Z",
-      "auction_end": "2026-06-01T17:13:00Z",
-      "remarks": null,
-      "additional_information": null,
-      "lot_id": "28014303-b7a8-446d-b0f8-7d2f2f859bcc",
-      "current_bid_eur": 3750.0,
-      "buyer_premium_pct": 19.0,
-      "total_cost_eur": null,
-      "bids_count": 9,
-      "reserve_met": false,
-      "market_median_eur": null,
-      "market_sample_size": null,
-      "deal_margin_eur": null,
-      "deal_margin_pct": null,
-      "max_recommended_bid_eur": null,
-      "hammer_price": null,
-      "auction_fee_estimate": null,
-      "fixed_fees_estimate": null,
-      "vat_applicable": null,
-      "transport_cost_estimate": null,
-      "reconditioning_cost_estimate": null,
-      "final_cost_estimate": null,
-      "estimated_market_value": null,
-      "deal_ratio": null,
-      "deal_score": null,
-      "is_hidden_gem": false,
-      "van_type": null,
-      "is_valid_van": true,
-      "score": 38,
-      "scores": {
-        "year": 0,
-        "mileage": 22,
-        "van_size": 5,
-        "emission": 6,
-        "resaleability": 5,
-        "crew_cab": 0
-      },
-      "applied_rule_set": "global",
-      "passed_hard_filters": true,
-      "rejected_reason": null,
-      "reason_for_inclusion": [
-        "Iveco Daily (size unknown)",
-        "173k km, year ?",
-        "rules: global"
       ],
       "fleet_type": "private",
       "fleet_signals": null,
@@ -2019,10 +1788,10 @@
       "remarks": null,
       "additional_information": "The car starts and drives without any problems. Timing belt with water pump have been replaced. Documents available, see photos for details. 3000KG tow",
       "lot_id": "0daf039b-f07a-4ff5-a3e1-29be3db17ae7",
-      "current_bid_eur": 4000.0,
+      "current_bid_eur": 4750.0,
       "buyer_premium_pct": 0.0,
       "total_cost_eur": null,
-      "bids_count": 10,
+      "bids_count": 12,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -2061,7 +1830,10 @@
       ],
       "fleet_type": "private",
       "fleet_signals": null,
-      "last_scrape_at": "2026-05-29T09:39:11.659864+00:00"
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/ford-transit-custom-320-2-0-tdci-double-cab-l2h1tdc-131hp-2020-vfx-54-j-A1-44369-2": {
       "title": "Ford Transit Custom 320 2.0 TDCI -DOUBLE CAB- L2H1TDC 131hp 2020, VFX-54-J",
@@ -2223,87 +1995,6 @@
         "80k km, year ?",
         "crew cab / 5-seat",
         "rules: boxer_override"
-      ],
-      "fleet_type": "private",
-      "fleet_signals": null,
-      "van_category": null,
-      "big_van_score": null,
-      "small_van_score": null,
-      "last_scrape_at": "2026-05-29T12:00:26.923054+00:00"
-    },
-    "https://www.vavato.com/en/l/2009-citroen-jumper-ydbmac-ax-tow-truck-A3-44485-35290": {
-      "title": "2009 Citro\u00ebn Jumper YDBMAC/AX Tow Truck",
-      "brand": "Citro\u00ebn",
-      "model": "Jumper YDBMAC/AX",
-      "url": "https://www.vavato.com/en/l/2009-citroen-jumper-ydbmac-ax-tow-truck-A3-44485-35290",
-      "source": "troostwijk",
-      "platform": "VAVATO",
-      "thumbnail_url": "https://media.tbauctions.com/image-media/bd281f4d-a457-48b4-b5dd-31744573b0a3/file",
-      "year": null,
-      "first_registration": null,
-      "km": null,
-      "fuel": null,
-      "transmission": null,
-      "power_kw": null,
-      "cylinder_cc": null,
-      "emission_standard": null,
-      "seats": null,
-      "doors": null,
-      "color": null,
-      "weight_kg": null,
-      "load_kg": null,
-      "body_type": null,
-      "vin": null,
-      "city": "Jupille-sur-meuse",
-      "country_code": "BE",
-      "location": "Jupille-sur-meuse, BE",
-      "condition": "NOT_CHECKED",
-      "appearance": "NOT_CHECKED",
-      "vat_margin": true,
-      "bidding_status": "BIDDING_OPEN",
-      "auction_start": "2026-05-20T16:00:00Z",
-      "auction_end": "2026-06-01T17:54:00Z",
-      "remarks": null,
-      "additional_information": null,
-      "lot_id": "0e9254d2-b5e4-4ccf-8004-f0efb5d7209c",
-      "current_bid_eur": 3000.0,
-      "buyer_premium_pct": 0.0,
-      "total_cost_eur": null,
-      "bids_count": 6,
-      "reserve_met": false,
-      "market_median_eur": null,
-      "market_sample_size": null,
-      "deal_margin_eur": null,
-      "deal_margin_pct": null,
-      "max_recommended_bid_eur": null,
-      "hammer_price": null,
-      "auction_fee_estimate": null,
-      "fixed_fees_estimate": null,
-      "vat_applicable": null,
-      "transport_cost_estimate": null,
-      "reconditioning_cost_estimate": null,
-      "final_cost_estimate": null,
-      "estimated_market_value": null,
-      "deal_ratio": null,
-      "deal_score": null,
-      "is_hidden_gem": false,
-      "van_type": null,
-      "is_valid_van": true,
-      "score": 17,
-      "scores": {
-        "year": 0,
-        "mileage": 0,
-        "van_size": 5,
-        "emission": 5,
-        "resaleability": 7,
-        "crew_cab": 0
-      },
-      "applied_rule_set": "jumper_override",
-      "passed_hard_filters": true,
-      "rejected_reason": "score_below_threshold: 17 < 30",
-      "reason_for_inclusion": [
-        "Citroen Jumper (size unknown)",
-        "rules: jumper_override"
       ],
       "fleet_type": "private",
       "fleet_signals": null,
@@ -2886,7 +2577,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-05-29T12:00:26.923054+00:00"
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/renault-master-t35-2-3-dci-165-l3h2-dl-energy-comfort-%257C-vtd-31-n-A1-44156-4690": {
       "title": "Renault Master T35 2.3 dCi 165 L3H2 DL Energy Comfort | VTD-31-N",
@@ -3134,7 +2825,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-05-29T12:00:26.923054+00:00"
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
     },
     "https://www.vavato.com/en/l/2017-renault-trafic-double-cab-92-000km-A3-44486-5024": {
       "title": "2017 Renault Trafic Double Cab 92.000km",
@@ -3888,7 +3579,7 @@
       "source": "troostwijk",
       "platform": "VAVATO",
       "thumbnail_url": "https://media.tbauctions.com/image-media/47ce8762-93f1-4501-9002-5a8abcecd532/file",
-      "year": null,
+      "year": 2017,
       "first_registration": null,
       "km": null,
       "fuel": "diesel",
@@ -3938,9 +3629,9 @@
       "is_hidden_gem": false,
       "van_type": "L2H?",
       "is_valid_van": true,
-      "score": 13,
+      "score": 40,
       "scores": {
-        "year": 0,
+        "year": 27,
         "mileage": 0,
         "van_size": 11,
         "emission": 0,
@@ -3949,7 +3640,7 @@
       },
       "applied_rule_set": "expert_override",
       "passed_hard_filters": true,
-      "rejected_reason": "score_below_threshold: 13 < 30",
+      "rejected_reason": null,
       "reason_for_inclusion": [
         "Peugeot/Citroen Expert (L2H?)",
         "size: explicit L2",
@@ -3960,7 +3651,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-05-29T12:00:26.923054+00:00"
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/renault-master-2300-dci-A3-44485-4647": {
       "title": "Renault Master 2300 dci",
@@ -3997,10 +3688,10 @@
       "remarks": null,
       "additional_information": "The car starts and drives without any problems. See photos for details documents available.",
       "lot_id": "0293b97f-f075-4b3d-8ddf-15621210a0da",
-      "current_bid_eur": 2600.0,
+      "current_bid_eur": 2900.0,
       "buyer_premium_pct": 0.0,
       "total_cost_eur": null,
-      "bids_count": 17,
+      "bids_count": 20,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -4042,7 +3733,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-05-29T12:00:26.923054+00:00"
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
     },
     "https://www.vavato.com/en/l/renault-master-A3-44485-4649": {
       "title": "Renault Master",
@@ -4079,10 +3770,10 @@
       "remarks": null,
       "additional_information": "The car starts and drives without any problems. Documents available, see photos for details.",
       "lot_id": "2d54f16d-0a4e-4c0e-a8ef-4e756976be8d",
-      "current_bid_eur": 2800.0,
+      "current_bid_eur": 2900.0,
       "buyer_premium_pct": 0.0,
       "total_cost_eur": null,
-      "bids_count": 19,
+      "bids_count": 20,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -4124,7 +3815,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-05-29T12:00:26.923054+00:00"
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
     },
     "https://www.vavato.com/en/l/renault-master-2300-dci-A3-44485-4647": {
       "title": "Renault Master 2300 dci",
@@ -4161,10 +3852,10 @@
       "remarks": null,
       "additional_information": "The car starts and drives without any problems. See photos for details documents available.",
       "lot_id": "0293b97f-f075-4b3d-8ddf-15621210a0da",
-      "current_bid_eur": 2600.0,
+      "current_bid_eur": 2900.0,
       "buyer_premium_pct": 0.0,
       "total_cost_eur": null,
-      "bids_count": 17,
+      "bids_count": 20,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -4206,7 +3897,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-05-29T12:00:26.923054+00:00"
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/1968-fiat-berlina-1100r-am-12-29-A1-40682-24": {
       "title": "1968 Fiat Berlina 1100R, AM-12-29",
@@ -4243,10 +3934,10 @@
       "remarks": "Signs of wear by age and mileage. Come to the viewing day for your own assessment.\nYou must check all information in the description yourself during the viewing day for operation and presence. \nNo possibility of complaint.",
       "additional_information": "About this Collectable\n\nThe Fiat 1100 Berlina was an important model in the European middle class segment in the 50s and 60s. With its practical design, comfortable handling and reliable technology, the 1100 managed to appeal to a wide audience. The R version stood for Rinnovata and brought several improvements compared to previous generations.\n\nThis example is a 1968 Fiat 1100 R Berlina, finished in blue. As one of the last versions of the 1100 series, this model combines classic lines with a mature and timeless look. The Berlina body offers a surprising amount of space and makes the car suitable for relaxed classic driving.\n\nThanks to its lightweight construction, simple technology and rear-wheel drive, the Fiat 1100 offers a quiet and authentic driving experience. The understated design and decent build quality provide charm and ease of use. An accessible classic that beautifully reflects the character of the 60s.\n\nTechnical details\n\nThe Fiat 1100 R is equipped with a 1.1-liter four-cylinder gasoline engine, coupled with a manual transmission. The rear-wheel drive and comfortable tuning make it pleasant to use, both for touring and classic daily transport.\n\nEquipment\n\n1.1-liter four-cylinder gasoline engine\n\nManual transmission\n\nRear-wheel drive\n\nBlue lacquer\n\nBerlina body",
       "lot_id": "c760e30c-2011-4a30-8364-c33f0c649fa4",
-      "current_bid_eur": 550.0,
+      "current_bid_eur": 610.0,
       "buyer_premium_pct": 19.0,
       "total_cost_eur": null,
-      "bids_count": 13,
+      "bids_count": 16,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -4289,7 +3980,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-05-29T12:00:26.923054+00:00"
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/vans-A7-46433-6004": {
       "title": "Vans",
@@ -4349,30 +4040,30 @@
       "is_hidden_gem": false,
       "van_type": "L?H2",
       "is_valid_van": true,
-      "score": 77,
+      "score": 78,
       "scores": {
         "year": 35,
         "mileage": 22,
         "van_size": 10,
         "emission": 5,
-        "resaleability": 5,
+        "resaleability": 6,
         "crew_cab": 0
       },
-      "applied_rule_set": "transporter_override",
+      "applied_rule_set": "global",
       "passed_hard_filters": true,
       "rejected_reason": null,
       "reason_for_inclusion": [
-        "Volkswagen Transporter (L?H2)",
+        "Volkswagen Crafter (L?H2)",
         "size: high roof",
         "102k km, 2022",
-        "rules: transporter_override"
+        "rules: global"
       ],
       "fleet_type": "private",
       "fleet_signals": null,
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-05-29T12:16:14.814548+00:00"
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/peugeot-expert-1-5-bluehdi-prem-95xxx-kilometers-commercial-vehicle-A1-40259-8": {
       "title": "Peugeot - Expert - 1.5 BlueHDI Prem - 95xxx kilometers - Commercial vehicle",
@@ -5126,7 +4817,7 @@
       "source": "troostwijk",
       "platform": "VAVATO",
       "thumbnail_url": "https://media.tbauctions.com/image-media/b21cec16-523e-4c32-94d1-41e620bfb948/file",
-      "year": null,
+      "year": 2015,
       "first_registration": null,
       "km": 225000,
       "fuel": "diesel",
@@ -5176,9 +4867,9 @@
       "is_hidden_gem": false,
       "van_type": null,
       "is_valid_van": true,
-      "score": 18,
+      "score": 36,
       "scores": {
-        "year": 0,
+        "year": 18,
         "mileage": 10,
         "van_size": 5,
         "emission": 0,
@@ -5187,10 +4878,10 @@
       },
       "applied_rule_set": "global",
       "passed_hard_filters": true,
-      "rejected_reason": "score_below_threshold: 18 < 30",
+      "rejected_reason": null,
       "reason_for_inclusion": [
         "Iveco Daily (size unknown)",
-        "225k km, year ?",
+        "225k km, 2015",
         "rules: global"
       ],
       "fleet_type": "private",
@@ -5198,7 +4889,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-05-29T12:16:14.814548+00:00"
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/2016-opel-vivaro-A3-44485-11100": {
       "title": "2016 Opel Vivaro ",
@@ -5371,7 +5062,7 @@
       "source": "troostwijk",
       "platform": "VAVATO",
       "thumbnail_url": "https://media.tbauctions.com/image-media/c339fa30-cb31-43e8-838f-29c7182f7922/file",
-      "year": null,
+      "year": 2019,
       "first_registration": null,
       "km": 179963,
       "fuel": "diesel",
@@ -5421,9 +5112,9 @@
       "is_hidden_gem": false,
       "van_type": "L3H?",
       "is_valid_van": true,
-      "score": 53,
+      "score": 80,
       "scores": {
-        "year": 0,
+        "year": 27,
         "mileage": 22,
         "van_size": 12,
         "emission": 10,
@@ -5436,7 +5127,7 @@
       "reason_for_inclusion": [
         "Peugeot Boxer (L3H?)",
         "size: empty weight 2680kg \u2265 2050 \u2192 L3",
-        "179k km, year ?",
+        "179k km, 2019",
         "rules: boxer_override"
       ],
       "fleet_type": "private",
@@ -5444,7 +5135,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-05-29T12:16:14.814548+00:00"
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
     },
     "https://www.vavato.com/en/l/2020-citroen-jumper-air-conditioning-towbar-A3-44485-10997": {
       "title": "2020 Citro\u00ebn Jumper - air-conditioning - towbar",
@@ -5537,7 +5228,7 @@
       "source": "troostwijk",
       "platform": "VAVATO",
       "thumbnail_url": "https://media.tbauctions.com/image-media/b21cec16-523e-4c32-94d1-41e620bfb948/file",
-      "year": null,
+      "year": 2015,
       "first_registration": null,
       "km": 225000,
       "fuel": "diesel",
@@ -5587,9 +5278,9 @@
       "is_hidden_gem": false,
       "van_type": null,
       "is_valid_van": true,
-      "score": 18,
+      "score": 36,
       "scores": {
-        "year": 0,
+        "year": 18,
         "mileage": 10,
         "van_size": 5,
         "emission": 0,
@@ -5598,10 +5289,10 @@
       },
       "applied_rule_set": "global",
       "passed_hard_filters": true,
-      "rejected_reason": "score_below_threshold: 18 < 30",
+      "rejected_reason": null,
       "reason_for_inclusion": [
         "Iveco Daily (size unknown)",
-        "225k km, year ?",
+        "225k km, 2015",
         "rules: global"
       ],
       "fleet_type": "private",
@@ -5609,7 +5300,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-05-29T12:16:14.814548+00:00"
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
     },
     "https://www.vavato.com/en/l/volkswagen-transporter-multivan-t5-2-5-tdi-A1-41335-8": {
       "title": "Volkswagen Transporter Multivan T5 2.5 TDI",
@@ -5784,7 +5475,7 @@
       "source": "troostwijk",
       "platform": "VAVATO",
       "thumbnail_url": "https://media.tbauctions.com/image-media/35ebf458-556c-4967-b378-e56cc06db063/file",
-      "year": null,
+      "year": 2016,
       "first_registration": null,
       "km": 127850,
       "fuel": null,
@@ -5811,10 +5502,10 @@
       "remarks": null,
       "additional_information": "Opel Vivaro van in good condition, white colour, long chassis with 3 seats.\nEngine and gearbox work well, vehicle drives and shifts normally.\nIdeal as a work vehicle with a tow bar.\nVehicle details:\nBrand: Opel\nModel: Vivaro\nYear of construction: 25/04/2016\nChassis number (VIN): W0L2F7118GV639534\nMileage: 127850km\nFuel: Diesel\nEuro standard: 5/6\nColor: White\nVersion: Long chassis\nSeats: 3\nOptions:\nAir conditioning\nRear camera\nAluminum rims\nImportant info \u2013 read carefully:\nVehicle is sold in the condition it is in, without warranty.\nOnly 1 key available.\nOriginal COC is missing \u2013 only certificate of loss available.\nOnly copy of inspection card available.\nThe buyer accepts the vehicle with the documents present.\nNo additional guarantees.\nNo VAT vehicle.",
       "lot_id": "1d453532-ddd3-47ec-aad0-22a392ea8586",
-      "current_bid_eur": 2800.0,
+      "current_bid_eur": 3000.0,
       "buyer_premium_pct": 19.0,
       "total_cost_eur": null,
-      "bids_count": 14,
+      "bids_count": 16,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -5834,9 +5525,9 @@
       "is_hidden_gem": false,
       "van_type": null,
       "is_valid_van": true,
-      "score": 29,
+      "score": 47,
       "scores": {
-        "year": 0,
+        "year": 18,
         "mileage": 22,
         "van_size": 5,
         "emission": 0,
@@ -5845,10 +5536,10 @@
       },
       "applied_rule_set": "global",
       "passed_hard_filters": true,
-      "rejected_reason": "score_below_threshold: 29 < 30",
+      "rejected_reason": null,
       "reason_for_inclusion": [
         "Opel Vivaro (size unknown)",
-        "127k km, year ?",
+        "127k km, 2016",
         "rules: global"
       ],
       "fleet_type": "private",
@@ -5856,7 +5547,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-05-29T12:16:14.814548+00:00"
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-multivan-t5-2-5-tdi-A1-41335-8": {
       "title": "Volkswagen Transporter Multivan T5 2.5 TDI",
@@ -9076,6 +8767,744 @@
       "big_van_score": null,
       "small_van_score": null,
       "last_scrape_at": "2026-05-29T13:10:54.630808+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/wurth-post-assembly-inserts-for-vw-transporter-A7-46763-130": {
+      "title": "W\u00dcRTH Post Assembly Inserts for VW Transporter",
+      "brand": "W\u00dcRTH",
+      "model": null,
+      "url": "https://www.troostwijkauctions.com/en/l/wurth-post-assembly-inserts-for-vw-transporter-A7-46763-130",
+      "source": "troostwijk",
+      "platform": "SPX",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/0e8fb74a-a1b6-4171-b66f-133e9f737965/file",
+      "year": null,
+      "first_registration": null,
+      "km": null,
+      "fuel": null,
+      "transmission": null,
+      "power_kw": null,
+      "cylinder_cc": null,
+      "emission_standard": null,
+      "seats": null,
+      "doors": null,
+      "color": null,
+      "weight_kg": null,
+      "load_kg": null,
+      "body_type": null,
+      "vin": null,
+      "city": "Weilheim Teck",
+      "country_code": "DE",
+      "location": "Weilheim Teck, DE",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": false,
+      "bidding_status": "BIDDING_OPEN",
+      "auction_start": "2026-05-13T14:00:00Z",
+      "auction_end": "2026-06-25T09:06:00Z",
+      "remarks": null,
+      "additional_information": "<br>Reference: Common - Lot 3",
+      "lot_id": "ec449fcd-5799-484d-b9d1-71be1445733c",
+      "current_bid_eur": 250.0,
+      "buyer_premium_pct": 0.0,
+      "total_cost_eur": null,
+      "bids_count": 1,
+      "reserve_met": false,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": null,
+      "is_valid_van": true,
+      "score": 14,
+      "scores": {
+        "year": 0,
+        "mileage": 0,
+        "van_size": 5,
+        "emission": 5,
+        "resaleability": 4,
+        "crew_cab": 0
+      },
+      "applied_rule_set": "transporter_override",
+      "passed_hard_filters": true,
+      "rejected_reason": "score_below_threshold: 14 < 30",
+      "reason_for_inclusion": [
+        "Volkswagen Transporter (size unknown)",
+        "rules: transporter_override"
+      ],
+      "fleet_type": "private",
+      "fleet_signals": null,
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.vavato.com/en/l/2018-mercedes-sprinter-77-705-km-3500kg-towing-A3-44487-5015": {
+      "title": "2018 Mercedes Sprinter - 77.705 km - 3500kg towing",
+      "brand": "Mercedes",
+      "model": "906BB35",
+      "url": "https://www.vavato.com/en/l/2018-mercedes-sprinter-77-705-km-3500kg-towing-A3-44487-5015",
+      "source": "troostwijk",
+      "platform": "VAVATO",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/c82a3c66-f178-4772-bace-76c869248fa6/file",
+      "year": 2018,
+      "first_registration": "2018-02-05",
+      "km": 77705,
+      "fuel": "diesel",
+      "transmission": "Manual",
+      "power_kw": 120,
+      "cylinder_cc": 2143,
+      "emission_standard": "EURO6b",
+      "seats": 2,
+      "doors": 4,
+      "color": "White",
+      "weight_kg": 3330,
+      "load_kg": 95,
+      "body_type": "Light Freight",
+      "vin": null,
+      "city": "Hasselt",
+      "country_code": "BE",
+      "location": "Hasselt, BE",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": false,
+      "bidding_status": "BIDDING_NOT_YET_OPENED",
+      "auction_start": "2026-06-03T16:00:00Z",
+      "auction_end": null,
+      "remarks": "Maintenance booklet available digitally.",
+      "additional_information": "2.2 Diesel engine\nEuro 6b\n3.5Ton / 3500KG Towing Capacity\nOnly 77,000 Original kilometres, demonstrable with CAR-PASS\nEquipped cargo space\nTowbar can be placed in the price !!\nManual gearbox\nCarplay \nRadio / Bluetooth / USB \nNavigation \nRear camera\nOn-board computer\nElectric windows\nElectrically adjustable exterior mirrors\nASR (Anti Slip Regulation)\nLeaf spring suspension\nAir conditioning\nParking heater / webasto\nArmrest\nCup holders\nSliding door\nRear swing doors\nFlashing lights\nLight bar",
+      "lot_id": "7ecb65ba-629c-4ac1-b1a4-a0b89af58b79",
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
+      "total_cost_eur": null,
+      "bids_count": null,
+      "reserve_met": null,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": "L3H?",
+      "is_valid_van": true,
+      "score": 92,
+      "scores": {
+        "year": 27,
+        "mileage": 35,
+        "van_size": 12,
+        "emission": 10,
+        "resaleability": 8,
+        "crew_cab": 0
+      },
+      "applied_rule_set": "sprinter_override",
+      "passed_hard_filters": true,
+      "rejected_reason": null,
+      "reason_for_inclusion": [
+        "Mercedes Sprinter (L3H?)",
+        "size: empty weight 3330kg \u2265 2300 \u2192 L3",
+        "77k km, 2018",
+        "rules: sprinter_override"
+      ],
+      "fleet_type": "private",
+      "fleet_signals": null,
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.vavato.com/en/l/ford-transit-commercial-vehicle-A3-44487-21485": {
+      "title": "Ford Transit Commercial Vehicle",
+      "brand": "Ford",
+      "model": null,
+      "url": "https://www.vavato.com/en/l/ford-transit-commercial-vehicle-A3-44487-21485",
+      "source": "troostwijk",
+      "platform": "VAVATO",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/1a82c641-01ef-4dbe-a190-2d4501d31305/file",
+      "year": 2015,
+      "first_registration": null,
+      "km": 192800,
+      "fuel": null,
+      "transmission": null,
+      "power_kw": 92,
+      "cylinder_cc": 2198,
+      "emission_standard": "Euro5B",
+      "seats": 3,
+      "doors": null,
+      "color": null,
+      "weight_kg": null,
+      "load_kg": null,
+      "body_type": null,
+      "vin": null,
+      "city": "Ravels",
+      "country_code": "BE",
+      "location": "Ravels, BE",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": true,
+      "bidding_status": "BIDDING_NOT_YET_OPENED",
+      "auction_start": "2026-06-03T16:00:00Z",
+      "auction_end": null,
+      "remarks": null,
+      "additional_information": "Electronic problem with the brakes. Without content in loading area!",
+      "lot_id": "1e408992-c9b7-4cef-bd37-d67c38202708",
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
+      "total_cost_eur": null,
+      "bids_count": null,
+      "reserve_met": null,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": null,
+      "is_valid_van": true,
+      "score": 45,
+      "scores": {
+        "year": 18,
+        "mileage": 10,
+        "van_size": 5,
+        "emission": 6,
+        "resaleability": 6,
+        "crew_cab": 0
+      },
+      "applied_rule_set": "global",
+      "passed_hard_filters": true,
+      "rejected_reason": null,
+      "reason_for_inclusion": [
+        "Ford Transit (size unknown)",
+        "192k km, 2015",
+        "rules: global"
+      ],
+      "fleet_type": "private",
+      "fleet_signals": null,
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-314-2-2-cdi-366-hd-2017-commercial-vehicle-A1-46393-19": {
+      "title": "Mercedes-Benz - Sprinter - 314 2.2 CDI 366 HD - 2017 - Commercial vehicle",
+      "brand": "Mercedes-Benz",
+      "model": "314 2.2 CDI 366 HD",
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-314-2-2-cdi-366-hd-2017-commercial-vehicle-A1-46393-19",
+      "source": "troostwijk",
+      "platform": "TWK",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/fbd2fff9-e33f-4b0f-ae19-99ba79de301b/file",
+      "year": 2017,
+      "first_registration": null,
+      "km": 240136,
+      "fuel": "diesel",
+      "transmission": "Manual transmission (6)",
+      "power_kw": 105,
+      "cylinder_cc": 2143,
+      "emission_standard": "6",
+      "seats": 3,
+      "doors": null,
+      "color": "Grey",
+      "weight_kg": 2252,
+      "load_kg": null,
+      "body_type": "Box construction",
+      "vin": null,
+      "city": "Hasselt",
+      "country_code": "NL",
+      "location": "Hasselt, NL",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": false,
+      "bidding_status": "BIDDING_OPEN",
+      "auction_start": "2026-05-29T15:00:00Z",
+      "auction_end": null,
+      "remarks": "sliding door won't open.\nall around.",
+      "additional_information": "If this lot has a license plate registration, you must register it with a third party or export it when you pick it up on site. \nThere are additional costs associated with this. \n \nThis lot concerns a used vehicle, which is delivered without warranty or possibility of complaint. \nGiven the age and mileage, signs of wear or (technical) defects may be present. \nIt is the buyer's responsibility to inspect and assess the vehicle during the viewing day.",
+      "lot_id": "4164c06a-b123-4698-b5e6-f8267aa5a76c",
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
+      "total_cost_eur": null,
+      "bids_count": null,
+      "reserve_met": null,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": "L2H2",
+      "is_valid_van": true,
+      "score": 59,
+      "scores": {
+        "year": 27,
+        "mileage": 10,
+        "van_size": 18,
+        "emission": 0,
+        "resaleability": 4,
+        "crew_cab": 0
+      },
+      "applied_rule_set": "sprinter_override",
+      "passed_hard_filters": true,
+      "rejected_reason": null,
+      "reason_for_inclusion": [
+        "Mercedes Sprinter (L2H2)",
+        "size: empty weight 2252kg in [2100,2300) \u2192 L2; bodytype 'Box construction' \u2192 H2",
+        "240k km, 2017",
+        "rules: sprinter_override"
+      ],
+      "fleet_type": "private",
+      "fleet_signals": null,
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/daf-45-cummins-turbo-diesel-truck-A1-47136-100": {
+      "title": "Daf - 45 Cummins turbo diesel - Truck",
+      "brand": "Daf",
+      "model": "45 Cummins turbo diesel",
+      "url": "https://www.troostwijkauctions.com/en/l/daf-45-cummins-turbo-diesel-truck-A1-47136-100",
+      "source": "troostwijk",
+      "platform": "TWK",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/fd7c4ce5-5ca7-4b0f-9354-485ee6edb7dd/file",
+      "year": null,
+      "first_registration": null,
+      "km": null,
+      "fuel": null,
+      "transmission": null,
+      "power_kw": null,
+      "cylinder_cc": null,
+      "emission_standard": null,
+      "seats": 2,
+      "doors": null,
+      "color": null,
+      "weight_kg": null,
+      "load_kg": null,
+      "body_type": null,
+      "vin": null,
+      "city": "Ter Apel",
+      "country_code": "NL",
+      "location": "Ter Apel, NL",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": false,
+      "bidding_status": "BIDDING_OPEN",
+      "auction_start": "2026-05-29T14:00:00Z",
+      "auction_end": null,
+      "remarks": "Lot is not located at the auction location. Viewing and collection by appointment.\n\nIf the vehicle has Dutch registration documents, they will have to be registered in your name (on the collection day) or registered for export. The costs of this are for the account of the buyer. For export, a different location must usually be visited than the auction/collection location! Please keep this in mind if you send a transporter for the collection of vehicles! PLEASE NOTE: vehicles will only be handed over if a certificate of indemnity can be presented after transfer or export!\n\nFor lots where a collection of goods is offered, you must bring everything with you (on the instruction of the accompanying staff) and leave the location broom clean. You expressly agree to this when you bid on this auction!",
+      "additional_information": "Batteries empty/defective",
+      "lot_id": "0831a042-b507-4f0d-aa66-6dd0b13752de",
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
+      "total_cost_eur": null,
+      "bids_count": null,
+      "reserve_met": null,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": null,
+      "is_valid_van": true,
+      "score": 14,
+      "scores": {
+        "year": 0,
+        "mileage": 0,
+        "van_size": 5,
+        "emission": 5,
+        "resaleability": 4,
+        "crew_cab": 0
+      },
+      "applied_rule_set": "transporter_override",
+      "passed_hard_filters": true,
+      "rejected_reason": "score_below_threshold: 14 < 30",
+      "reason_for_inclusion": [
+        "Volkswagen Transporter (size unknown)",
+        "rules: transporter_override"
+      ],
+      "fleet_type": "delivery",
+      "fleet_signals": [
+        "bring"
+      ],
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/gmc-brigadier-2-stroke-diesel-truck-A1-47136-118": {
+      "title": "GMC - Brigadier 2 stroke diesel - Truck",
+      "brand": "GMC",
+      "model": "Brigadier 2takt diesel",
+      "url": "https://www.troostwijkauctions.com/en/l/gmc-brigadier-2-stroke-diesel-truck-A1-47136-118",
+      "source": "troostwijk",
+      "platform": "TWK",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/09b39f86-1649-4f26-a1a5-0c52dd0a3e02/file",
+      "year": null,
+      "first_registration": null,
+      "km": null,
+      "fuel": null,
+      "transmission": null,
+      "power_kw": null,
+      "cylinder_cc": null,
+      "emission_standard": null,
+      "seats": null,
+      "doors": null,
+      "color": null,
+      "weight_kg": null,
+      "load_kg": null,
+      "body_type": null,
+      "vin": null,
+      "city": "Ter Apel",
+      "country_code": "NL",
+      "location": "Ter Apel, NL",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": true,
+      "bidding_status": "BIDDING_OPEN",
+      "auction_start": "2026-05-29T14:00:00Z",
+      "auction_end": null,
+      "remarks": "Lot is not located at the auction location. Viewing and collection by appointment.\n\nIf the vehicle has Dutch registration documents, they will have to be registered in your name (on the collection day) or registered for export. The costs of this are for the account of the buyer. For export, a different location must usually be visited than the auction/collection location! Please keep this in mind if you send a transporter for the collection of vehicles! PLEASE NOTE: vehicles will only be handed over if a certificate of indemnity can be presented after transfer or export!\n\nFor lots where a collection of goods is offered, you must bring everything with you (on the instruction of the accompanying staff) and leave the location broom clean. You expressly agree to this when you bid on this auction!",
+      "additional_information": "Radiator leak, no/defective batteries, cargo box twist lock not included, for sale in another lot at this auction.\nGENERAL MOTORS CORPORATION  \nRATINGS IN POUNDS AS MANUFACTURED  \nHIGHWAY 53320  \nOFF HIGHWAY 121200  \n1GDP9C1ZXBV593645  \nMeaning of the VIN: 1GDP9C1ZXBV593645\n\n1 \u2192 Country of production: United States\nG \u2192 Manufacturer: General Motors (GMC)\nD \u2192 Division: GMC Truck Division\nP9 \u2192 Model range: Brigadier Series (Class 8 truck, 9000-series)\nC \u2192 Type of fuel or engine configuration: Diesel\n1Z \u2192 Chassis type / configuration: Single drive axle (4x2) or tandem variant depending on subcode)\nX \u2192 Control Code\nB \u2192 Year of manufacture: 1981\nV \u2192 Factory of assembly: Pontiac Truck Plant, Michigan\n593645 \u2192 Serial Number (Production Number)",
+      "lot_id": "dafec1f4-8f19-45bd-be10-3c82ca2d0b0f",
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
+      "total_cost_eur": null,
+      "bids_count": null,
+      "reserve_met": null,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": null,
+      "is_valid_van": true,
+      "score": 14,
+      "scores": {
+        "year": 0,
+        "mileage": 0,
+        "van_size": 5,
+        "emission": 5,
+        "resaleability": 4,
+        "crew_cab": 0
+      },
+      "applied_rule_set": "transporter_override",
+      "passed_hard_filters": true,
+      "rejected_reason": "score_below_threshold: 14 < 30",
+      "reason_for_inclusion": [
+        "Volkswagen Transporter (size unknown)",
+        "rules: transporter_override"
+      ],
+      "fleet_type": "delivery",
+      "fleet_signals": [
+        "bring"
+      ],
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/dodge-ram-250-truck-mot-23-10-2026-A1-47136-5": {
+      "title": "Dodge - RAM 250 - Truck - MOT 23-10-2026",
+      "brand": "Dodge",
+      "model": "RAM 250",
+      "url": "https://www.troostwijkauctions.com/en/l/dodge-ram-250-truck-mot-23-10-2026-A1-47136-5",
+      "source": "troostwijk",
+      "platform": "TWK",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/7c28ce79-8ce2-4cd8-99d8-15918589a750/file",
+      "year": 2026,
+      "first_registration": null,
+      "km": null,
+      "fuel": null,
+      "transmission": null,
+      "power_kw": null,
+      "cylinder_cc": 5900,
+      "emission_standard": "0",
+      "seats": 3,
+      "doors": null,
+      "color": null,
+      "weight_kg": null,
+      "load_kg": 1331,
+      "body_type": null,
+      "vin": null,
+      "city": "Ter Apel",
+      "country_code": "NL",
+      "location": "Ter Apel, NL",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": true,
+      "bidding_status": "BIDDING_OPEN",
+      "auction_start": "2026-05-29T14:00:00Z",
+      "auction_end": null,
+      "remarks": "Item is not yet at auction location. Viewing by appointment.\n\nThis vehicle has Dutch registration documents. These will have to be registered in your name (on the collection day) or registered for export. The costs of this are for the account of the buyer. For export, a different location must be visited than the auction location! Please keep this in mind if you send a transporter for the collection of vehicles! PLEASE NOTE: vehicles will only be handed over if a certificate of indemnity can be presented after transfer or export!",
+      "additional_information": "Kilometers are added, is still in use.",
+      "lot_id": "9a5e9f92-3331-4062-8788-7ca0466ac3a8",
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
+      "total_cost_eur": null,
+      "bids_count": null,
+      "reserve_met": null,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": null,
+      "is_valid_van": true,
+      "score": 42,
+      "scores": {
+        "year": 35,
+        "mileage": 0,
+        "van_size": 5,
+        "emission": 0,
+        "resaleability": 2,
+        "crew_cab": 0
+      },
+      "applied_rule_set": "transporter_override",
+      "passed_hard_filters": true,
+      "rejected_reason": null,
+      "reason_for_inclusion": [
+        "Volkswagen Transporter (size unknown)",
+        "rules: transporter_override"
+      ],
+      "fleet_type": "private",
+      "fleet_signals": null,
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/pacton-lxd342-semi-trailer-A1-47136-57": {
+      "title": "Pacton Lxd342 Semi-trailer",
+      "brand": "Pacton",
+      "model": "Lxd342",
+      "url": "https://www.troostwijkauctions.com/en/l/pacton-lxd342-semi-trailer-A1-47136-57",
+      "source": "troostwijk",
+      "platform": "TWK",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/6da348cf-ab4c-4342-a063-384c4118501c/file",
+      "year": null,
+      "first_registration": null,
+      "km": null,
+      "fuel": null,
+      "transmission": null,
+      "power_kw": null,
+      "cylinder_cc": null,
+      "emission_standard": null,
+      "seats": null,
+      "doors": null,
+      "color": null,
+      "weight_kg": null,
+      "load_kg": 33800,
+      "body_type": null,
+      "vin": null,
+      "city": "Ter Apel",
+      "country_code": "NL",
+      "location": "Ter Apel, NL",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": false,
+      "bidding_status": "BIDDING_OPEN",
+      "auction_start": "2026-05-29T14:00:00Z",
+      "auction_end": null,
+      "remarks": "Item is not yet at auction location. Viewing by appointment.\n\nThis vehicle has Dutch registration documents. These will have to be registered in your name (on the collection day) or registered for export. The costs of this are for the account of the buyer. For export, a different location must be visited than the auction location! Please keep this in mind if you send a transporter for the collection of vehicles! PLEASE NOTE: vehicles will only be handed over if a certificate of indemnity can be presented after transfer or export!",
+      "additional_information": "10,000 kg per axle, excluding contents!",
+      "lot_id": "648b39c2-4a7d-49c0-ab64-2e4bbf9cc3f1",
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
+      "total_cost_eur": null,
+      "bids_count": null,
+      "reserve_met": null,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": null,
+      "is_valid_van": true,
+      "score": 14,
+      "scores": {
+        "year": 0,
+        "mileage": 0,
+        "van_size": 5,
+        "emission": 5,
+        "resaleability": 4,
+        "crew_cab": 0
+      },
+      "applied_rule_set": "transporter_override",
+      "passed_hard_filters": true,
+      "rejected_reason": "score_below_threshold: 14 < 30",
+      "reason_for_inclusion": [
+        "Volkswagen Transporter (size unknown)",
+        "rules: transporter_override"
+      ],
+      "fleet_type": "private",
+      "fleet_signals": null,
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/lohr-truck-and-machine-transporter-semi-trailer-A1-42018-60": {
+      "title": "Lohr Truck and machine transporter Semi-trailer",
+      "brand": "Lohr",
+      "model": "Truck and machine transporter",
+      "url": "https://www.troostwijkauctions.com/en/l/lohr-truck-and-machine-transporter-semi-trailer-A1-42018-60",
+      "source": "troostwijk",
+      "platform": "TWK",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/169deeba-dacf-409c-89ca-c4bfb43e16b2/file",
+      "year": null,
+      "first_registration": null,
+      "km": null,
+      "fuel": null,
+      "transmission": null,
+      "power_kw": null,
+      "cylinder_cc": null,
+      "emission_standard": null,
+      "seats": null,
+      "doors": null,
+      "color": null,
+      "weight_kg": null,
+      "load_kg": 22890,
+      "body_type": null,
+      "vin": null,
+      "city": "Heijen",
+      "country_code": "NL",
+      "location": "Heijen, NL",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": false,
+      "bidding_status": "BIDDING_OPEN",
+      "auction_start": "2026-05-22T12:00:00Z",
+      "auction_end": "2026-06-04T18:35:00Z",
+      "remarks": null,
+      "additional_information": null,
+      "lot_id": "2d411857-d325-43db-bd73-650591b4f34c",
+      "current_bid_eur": 5600.0,
+      "buyer_premium_pct": 19.0,
+      "total_cost_eur": null,
+      "bids_count": 4,
+      "reserve_met": false,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": null,
+      "is_valid_van": true,
+      "score": 14,
+      "scores": {
+        "year": 0,
+        "mileage": 0,
+        "van_size": 5,
+        "emission": 5,
+        "resaleability": 4,
+        "crew_cab": 0
+      },
+      "applied_rule_set": "transporter_override",
+      "passed_hard_filters": true,
+      "rejected_reason": "score_below_threshold: 14 < 30",
+      "reason_for_inclusion": [
+        "Volkswagen Transporter (size unknown)",
+        "rules: transporter_override"
+      ],
+      "fleet_type": "private",
+      "fleet_signals": null,
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-05-29T20:58:09.066018+00:00"
     }
   },
   "permanent_rejects": {
@@ -17448,6 +17877,1271 @@
       "reason": "mileage_too_high: 299398km",
       "title": "2017 Citroen Jumpy 1.6 BlueHDI Commercial Vehicle V-876-DK",
       "rejected_at": "2026-05-29T13:10:54.630808+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2016-volvo-fe320-ramp-with-truck-mounted-crane-A1-46771-13": {
+      "reason": "brand_not_whitelisted",
+      "title": "2016 VOLVO FE320 Ramp with truck-mounted crane",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2003-iveco-tector-ml120e24d-horse-truck-A1-46771-9": {
+      "reason": "brand_not_whitelisted",
+      "title": "2003 Iveco Tector ML120E24D Horse Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2014-van-hool-a3c002-container-chassis-A1-46771-26": {
+      "reason": "brand_not_whitelisted",
+      "title": "2014 Van HOOL A3C002 Container Chassis",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2003-kuiper-plsd-b-e-trailer-A1-46771-29": {
+      "reason": "brand_not_whitelisted",
+      "title": "2003 KUIPER PLSD B-E Trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2008-allison-terberg-182-222-terminal-tractor-A1-46771-33": {
+      "reason": "brand_not_whitelisted",
+      "title": "2008 Allison TERBERG 182/222 Terminal Tractor",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2008-jung-4m-18l-apollo-semi-trailer-A1-45353-18": {
+      "reason": "brand_not_whitelisted",
+      "title": "2008 Jung 4M 18L Apollo Semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2010-daf-cf-75-310-eev-container-garbage-truck-A1-45353-16": {
+      "reason": "brand_not_whitelisted",
+      "title": "2010 DAF CF 75.310 EEV Container Garbage Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2019-man-tgs-tipper-truck-A1-45353-35": {
+      "reason": "brand_not_whitelisted",
+      "title": "2019 MAN TGS tipper truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2019-daf-cf300-garbage-truck-A1-45353-14": {
+      "reason": "brand_not_whitelisted",
+      "title": "2019 DAF CF300 Garbage Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2019-daf-cf300-garbage-truck-A1-45353-17": {
+      "reason": "brand_not_whitelisted",
+      "title": "2019 DAF CF300 Garbage Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/backhoe-loader-front-A3-43543-393033": {
+      "reason": "brand_not_whitelisted",
+      "title": "backhoe loader Front",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/syncro-storage-module-van-part-%25282x%2529-A3-43545-17321": {
+      "reason": "brand_not_whitelisted",
+      "title": "Syncro - Storage module - Van - Part (2x)",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/-lot-of-3-gas-tanks-A7-45941-8": {
+      "reason": "brand_not_whitelisted",
+      "title": "  Lot of 3 gas tanks",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/groenewegen-dzos-7-8-gondola-A7-45941-17": {
+      "reason": "brand_not_whitelisted",
+      "title": "GROENEWEGEN DZOS-7-8 Gondola ",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/tire-removal-tool-A7-45941-18": {
+      "reason": "brand_not_whitelisted",
+      "title": "Tire removal tool ",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/sicam-inflation-box-1500-safety-cage-A7-45941-19": {
+      "reason": "brand_not_whitelisted",
+      "title": "SICAM INFLATION BOX 1500 Safety cage ",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/puffer-tools-used-guns-A7-45941-28": {
+      "reason": "brand_not_whitelisted",
+      "title": "PUFFER TOOLS Used Guns",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/-dog-carriers-A7-45941-30": {
+      "reason": "brand_not_whitelisted",
+      "title": "  Dog Carriers ",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/truck-seat-lot-A7-45941-44": {
+      "reason": "brand_not_whitelisted",
+      "title": "Truck Seat Lot",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2008-mercedes-benz-515-cdi-4-6-truck-A1-46635-62": {
+      "reason": "brand_not_whitelisted",
+      "title": "2008 Mercedes-Benz 515 CDI/4.6 Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-fm12-460-truck-with-trailer-2002-A1-46915-5": {
+      "reason": "brand_not_whitelisted",
+      "title": "VOLVO - FM12.460 - Truck with trailer - 2002",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/isuzu-nlr-truck-2023-A7-46982-6": {
+      "reason": "brand_not_whitelisted",
+      "title": "ISUZU - NLR - Truck - 2023",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/opel-vivaro-1-6-cdti-l2h1-dcspec-commercial-vehicle-A1-42018-138": {
+      "reason": "size_too_small: explicit L2H1",
+      "title": "Opel Vivaro 1.6 CDTI L2H1 DCSpEc Commercial Vehicle",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-transit-custom-320-2-0-tdci-l1h1-tr-commercial-vehicle-A1-42018-140": {
+      "reason": "size_too_small: explicit L1H1",
+      "title": "Ford Transit Custom 320 2.0 TDCI L1H1 Tr Commercial Vehicle",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-1999-clk-class-coupe-200-elegance-89-dd-hn-A1-40725-393": {
+      "reason": "brand_not_whitelisted",
+      "title": "Mercedes-Benz 1999 CLK-class Coup\u00e9 200 Elegance 89-DD-HN",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.vavato.com/en/l/opel-vivaro-1-6-cdti-l2h1-dcspec-commercial-vehicle-A1-42018-138": {
+      "reason": "size_too_small: explicit L2H1",
+      "title": "Opel Vivaro 1.6 CDTI L2H1 DCSpEc Commercial Vehicle",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.vavato.com/en/l/ford-transit-custom-320-2-0-tdci-l1h1-tr-commercial-vehicle-A1-42018-140": {
+      "reason": "size_too_small: explicit L1H1",
+      "title": "Ford Transit Custom 320 2.0 TDCI L1H1 Tr Commercial Vehicle",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.vavato.com/en/l/2010-opel-vivaro-2-5-cdti-l2h1-dc-commercial-vehicle-A1-42019-201": {
+      "reason": "size_too_small: explicit L2H1",
+      "title": "2010 Opel Vivaro 2.5 CDTI L2H1 DC Commercial Vehicle",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.vavato.com/en/l/mercedes-benz-v-class-250d-el-dc-av-ed-commercial-vehicle-A1-40262-39": {
+      "reason": "brand_not_whitelisted",
+      "title": "Mercedes-Benz - V-class - 250d EL. DC.Av.Ed - Commercial Vehicle",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.vavato.com/en/l/iveco-sales-truck-ice-cream-stand-with-230v-installation-A1-40262-55": {
+      "reason": "vehicle_type: bus / coach",
+      "title": "Iveco sales truck ice cream stand with 230V installation",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/peugeot-expert-229-2-0-hdif-l2h1-dc-commercial-vehicle-2008-A1-46393-505": {
+      "reason": "mileage_too_high: 364173km",
+      "title": "Peugeot - Expert - 229 2.0 HDIF L2H1 DC - Commercial vehicle - 2008",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/peugeot-expert-2-0-177-hp-automatic-double-cab-van-2018-A1-46393-82": {
+      "reason": "mileage_too_high: 259953km",
+      "title": "Peugeot - Expert 2.0 177 hp - Automatic - Double Cab - Van - 2018",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/peugeot-407-coupe-2-7-hdif-feline-passenger-car-2008-A1-46393-414": {
+      "reason": "brand_not_whitelisted",
+      "title": "Peugeot - 407 - Coup\u00e9 - 2.7 HDiF F\u00e9line - Passenger car - 2008",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/citroen-2-cv-duck-2cv6-special-oldtimer-1980-A1-46393-10": {
+      "reason": "brand_not_whitelisted",
+      "title": "Citroen - 2 CV - duck - 2CV6 Special - Oldtimer - 1980",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/citroen-2-cv-duck-2cv6-special-oldtimer-1985-A1-46393-29": {
+      "reason": "brand_not_whitelisted",
+      "title": "Citroen - 2 CV - duck - 2CV6 - Special Oldtimer - 1985",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/fiat-challenger-sirius-2090-motorhome-integrated-2018-A1-46393-2": {
+      "reason": "brand_not_whitelisted",
+      "title": "Fiat - challenger - SIRIUS 2090 - Motorhome - Integrated - 2018",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/fiat-qubo-cng-passenger-car-2012-A1-46393-305": {
+      "reason": "brand_not_whitelisted",
+      "title": "Fiat - Qubo - CNG - Passenger car - 2012",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/fiat-124-sport-oldtimer-1973-A1-46393-30": {
+      "reason": "brand_not_whitelisted",
+      "title": "Fiat - 124 - sport - Oldtimer - 1973",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/fiat-230-frankia-a700-motorhome-2002-A1-46393-8": {
+      "reason": "brand_not_whitelisted",
+      "title": "Fiat - 230 FRANKIA A700 - Motorhome - 2002",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.vavato.com/en/l/fiat-ducato-250-toskana-exclusive-hobby-750-limited-edition-camper-mobile-home-A3-43541-17353": {
+      "reason": "vehicle_type: motorhome (pre-converted)",
+      "title": "Fiat Ducato 250 Toskana Exclusive Hobby 750 Limited Edition Camper - Mobile home",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-216-2-2-cdi-366-hddc-commercial-vehicle-2013-A1-46393-336": {
+      "reason": "mileage_too_high: 397604km",
+      "title": "Mercedes-Benz - Sprinter 216 2.2 CDI 366 HDDC - Commercial vehicle - 2013",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-slk-class-230-k-passenger-car-1998-A1-46393-403": {
+      "reason": "brand_not_whitelisted",
+      "title": "Mercedes-Benz - SLK-class - 230 K. - Passenger car - 1998",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-cla-class-shooting-brake-car-2021-A1-46393-28": {
+      "reason": "brand_not_whitelisted",
+      "title": "Mercedes-benz - CLA - class - Shooting Brake - Car - 2021",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-c-class-c180-estate-180-cdi-bnscl-avantgarde-car-2012-A1-46393-535": {
+      "reason": "brand_not_whitelisted",
+      "title": "Mercedes-Benz - C-class C180 - Estate 180 CDI BnsCl. Avantgarde - Car - 2012",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-optare-m780-coach-2006-A1-46393-85": {
+      "reason": "brand_not_whitelisted",
+      "title": "Mercedes - Optare - M780 - Coach - 2006",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.vavato.com/en/l/2007-mercedes-atego-1018-truck-A3-44487-36968": {
+      "reason": "brand_not_whitelisted",
+      "title": "2007 Mercedes Atego 1018 Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-1-9-tdi-340-commercial-vehicle-A1-46393-315": {
+      "reason": "mileage_too_high: 356767km",
+      "title": "Volkswagen - Transporter - 1.9 TDI 340 - Commercial vehicle",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-2-5-tdi-340-commercial-vehicle-A1-46393-314": {
+      "reason": "mileage_too_high: 475179km",
+      "title": "Volkswagen - Transporter - 2.5 TDI 340 - Commercial vehicle",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-2-0-tdi-l2h1-dc-hi-commercial-vehicle-2017-A1-46393-526": {
+      "reason": "size_too_small: explicit L2H1",
+      "title": "Volkswagen - Transporter - 2.0 TDI L2H1 DC Hi.  - Commercial vehicle - 2017",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-2-0-tdi-l2h1-highl-2017-commercial-vehicle-A1-46393-16": {
+      "reason": "size_too_small: explicit L2H1",
+      "title": "Volkswagen - Transporter - 2.0 TDI L2H1 Highl. - 2017 - Commercial vehicle",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-t4-1996-petrol-lpg-campervan-A1-46393-108": {
+      "reason": "vehicle_type: camper (pre-converted)",
+      "title": "volkswagen - transporter - t4 - 1996 - Petrol/lpg - Campervan",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-2-0-tdi-l1h2-highl-dsg-commercial-vehicle-A1-46774-4": {
+      "reason": "size_too_small: explicit L1H2",
+      "title": "Volkswagen - Transporter - 2.0 TDI L1H2 Highl. DSG - Commercial vehicle",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2021-volkswagen-transporter-2-0-tdi-l2h1-commercial-vehicle-A1-41705-78": {
+      "reason": "size_too_small: explicit L2H1",
+      "title": "2021 - Volkswagen - Transporter - 2.0 TDI L2H1 - Commercial vehicle",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-beetle-15-cabriolet-1970-classic-cars-A1-46393-81": {
+      "reason": "brand_not_whitelisted",
+      "title": "volkswagen - Beetle - 15 Cabriolet - 1970 - Classic cars",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-scirocco-1-4-tsi-highl-plus-passenger-car-2010-A1-46393-402": {
+      "reason": "brand_not_whitelisted",
+      "title": "Volkswagen - Scirocco - 1.4 TSI Highl. Plus - Passenger car - 2010",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-crafter-32-2-0-tdi-l4h2-bm-commercial-vehicle-2012-A1-46393-18": {
+      "reason": "mileage_too_high: 462339km",
+      "title": "Volkswagen - Crafter - 32 2.0 TDI L4H2 BM - Commercial vehicle - 2012",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-beetle-oldtimer-1973-A1-46393-205": {
+      "reason": "brand_not_whitelisted",
+      "title": "Volkswagen - Beetle - Oldtimer - 1973",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.vavato.com/en/l/2020-volkswagen-crafter-syn1e-light-truck-A3-44487-18434": {
+      "reason": "body_mismatch: light truck (chassis variant)",
+      "title": "2020 Volkswagen Crafter SYN1E Light Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/renault-trafic-2-0-dci-t27-l1h1-commercial-vehicle-A1-46393-318": {
+      "reason": "mileage_too_high: 292497km",
+      "title": "Renault - Trafic - 2.0 dCi T27 L1H1 - Commercial vehicle",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/renault-trafic-1-6-dci-t29-l2h1-luxury-120hp-2017-%2528original-nl%2529-v-989-ds-commercial-vehicle-A1-44369-34": {
+      "reason": "size_too_small: explicit L2H1",
+      "title": "Renault Trafic 1.6 dCi T29 L2H1 Luxury 120hp 2017 (Original-NL), V-989-DS Commercial Vehicle",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2016-renault-trafic-1-6-dci-t29-l2h1-commercial-vehicle-A1-46733-11": {
+      "reason": "size_too_small: explicit L2H1",
+      "title": "2016 Renault Trafic 1.6 dCi T29 L2H1 Commercial Vehicle",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2009-opel-vivaro-2-5-cdti-l1h1-commercial-vehicle-A1-47118-28": {
+      "reason": "size_too_small: explicit L1H1",
+      "title": "2009 Opel Vivaro 2.5 CDTI L1H1 Commercial Vehicle",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/opel-vivaro-1-6-cdti-l2h1-dc-sport-ecoflex-%257C-v-172-tp-A1-44157-4580": {
+      "reason": "size_too_small: explicit L2H1",
+      "title": "Opel Vivaro 1.6 CDTI L2H1 DC Sport EcoFlex | V-172-TP",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/opel-kapitan-b-oldtimer-6-cylinder-lpg-1969-A1-46393-23": {
+      "reason": "brand_not_whitelisted",
+      "title": "Opel - KAPITAN B - Oldtimer - 6 cylinder - LPG - 1969",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2018-opel-vivaro-1-6-cdti-l2h1-business%252B-ecoflex-commercial-vehicle-A1-46710-35": {
+      "reason": "size_too_small: explicit L2H1",
+      "title": "2018 - Opel - Vivaro 1.6 CDTI L2H1 Business+ EcoFlex - Commercial Vehicle",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1988-nooteboom-osd-26-semi-trailer-A1-42019-60": {
+      "reason": "brand_not_whitelisted",
+      "title": "1988 Nooteboom OSD-26 Semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1990-low-loader-A1-46637-124": {
+      "reason": "brand_not_whitelisted",
+      "title": "1990 Low loader",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1992-man-14-152-beer-wagon-tanker-A1-42019-11": {
+      "reason": "brand_not_whitelisted",
+      "title": "1992 Man 14-152 Beer Wagon / Tanker",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2000-doornwaard-be-semi-trailer-7-ton-semi-trailer-A1-47121-142": {
+      "reason": "brand_not_whitelisted",
+      "title": "2000 Doornwaard BE Semi-trailer 7 ton Semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/groenewegen-2010-dro-15-27-b-semi-trailer-A1-46774-29": {
+      "reason": "brand_not_whitelisted",
+      "title": "Groenewegen - 2010 - DRO 15-27 B - Semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2006-scania-p230-db6x2-4-mna-garbage-truck-A1-46774-24": {
+      "reason": "brand_not_whitelisted",
+      "title": "2006 Scania P230 DB6x2/4 MNA Garbage Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/pacton-2008-b1-001-city-trailer-semi-trailer-A1-46774-30": {
+      "reason": "brand_not_whitelisted",
+      "title": "Pacton - 2008 - B1-001 City trailer - Semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1996-bloemenroehr-semi-trailer-be-semi-trailer-5-5-tonnes-A1-47121-9": {
+      "reason": "brand_not_whitelisted",
+      "title": "1996 Bloemenroehr Semi-trailer be semi-trailer 5.5 tonnes",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/tire-with-rim-A1-46637-43": {
+      "reason": "brand_not_whitelisted",
+      "title": "Tire with rim",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/nooteboom-osd-48-extendible-low-loader-with-intermediate-table-A1-42019-61": {
+      "reason": "brand_not_whitelisted",
+      "title": "Nooteboom OSD-48 Extendible Low Loader with Intermediate Table",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2008-daf-lf-truck-with-hiab-truck-mounted-crane-A1-42019-20": {
+      "reason": "brand_not_whitelisted",
+      "title": "2008 DAF LF Truck with HIAB Truck-mounted crane",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2009-man-tgm-18-280-truck-A1-42019-21": {
+      "reason": "brand_not_whitelisted",
+      "title": "2009 MAN TGM 18.280 Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2014-man-tgs-26-440-hook-lift-truck-A1-42019-12": {
+      "reason": "brand_not_whitelisted",
+      "title": "2014 Man TGS 26.440 Hook Lift Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2012-scania-r440-6x2-pto-truck-A1-42019-18": {
+      "reason": "brand_not_whitelisted",
+      "title": "2012 Scania R440 6x2 PTO Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/veldhuizen-2023-p33-2-forklift-semi-trailer-A1-40262-18": {
+      "reason": "brand_not_whitelisted",
+      "title": "Veldhuizen - 2023 - P33-2 - Forklift semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/trailor-2008-syy3wx-semi-trailer-A1-40262-25": {
+      "reason": "brand_not_whitelisted",
+      "title": "Trailor - 2008 - SYY3WX - Semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/scania-r340-with-renova-diverter-system-truck-A1-40262-22": {
+      "reason": "brand_not_whitelisted",
+      "title": "Scania - R340 with renova diverter system - Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/daf-cf-85-410-rope-system-container-truck-A1-40262-37": {
+      "reason": "brand_not_whitelisted",
+      "title": "DAF - CF 85 410 - Rope system - Container truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/daf-xf-460-space-cab-with-pto-euro-6-truck-A1-40262-24": {
+      "reason": "brand_not_whitelisted",
+      "title": "Daf - XF 460 Space cab - With PTO - Euro 6 - Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/barum-continental-michelin-truck-tire-trailer-%25286x%2529-A3-43542-13168": {
+      "reason": "brand_not_whitelisted",
+      "title": "Barum - Continental - Michelin Truck tire trailer (6x)",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2014-amco-veba-v933m8s-hydraulic-truck-mounted-crane-A1-43891-38": {
+      "reason": "brand_not_whitelisted",
+      "title": "2014 Amco Veba V933M8S hydraulic truck-mounted crane",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/nooteboom-euro-48-03-28-5-ton-low-loader-A1-43891-15": {
+      "reason": "brand_not_whitelisted",
+      "title": "Nooteboom Euro-48-03 28.5 Ton Low Loader",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-toimil-t33500-4-hydraulic-truck-mounted-crane-A1-43891-41": {
+      "reason": "brand_not_whitelisted",
+      "title": "2007 TOIMIL T33500/4 Hydraulic Truck-mounted Crane",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/lag-trailer-n-v-0-3-39-lt2-container-trailer-A1-43891-60": {
+      "reason": "brand_not_whitelisted",
+      "title": "LAG Trailer N.V 0-3-39 LT2 Container trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mowag-dodge-1965-w500-fire-truck-A1-47136-45": {
+      "reason": "vehicle_type: fire truck",
+      "title": "Mowag / Dodge - 1965 - W500 - Fire truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/cargo-floor-twistlock-and-legs-A1-47136-60": {
+      "reason": "brand_not_whitelisted",
+      "title": "Cargo floor twistlock and legs",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/daf-1992-ae45ce-fire-engine-13434-km-A1-47136-36": {
+      "reason": "year_below_minimum: 1992 < 2015 (transporter_override)",
+      "title": "Daf - 1992 - AE45CE - fire engine 13434 km",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/cargo-floor-with-cable-carriage-A1-47136-61": {
+      "reason": "brand_not_whitelisted",
+      "title": "Cargo floor with cable carriage",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ramp-A1-47136-59": {
+      "reason": "brand_not_whitelisted",
+      "title": "Ramp",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-1995-truck-A1-47136-31": {
+      "reason": "vehicle_type: crane mounted",
+      "title": "volvo - 1995 - - Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/daf-1988-truck-A1-47136-30": {
+      "reason": "vehicle_type: crane mounted",
+      "title": "daf - 1988 - Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-f700-truck-A1-47136-22": {
+      "reason": "brand_not_whitelisted",
+      "title": "Ford - - F700 - Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-f700-truck-A1-47136-21": {
+      "reason": "brand_not_whitelisted",
+      "title": "Ford - - F700 - Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/daf-45-lf-truck-euro-5-2007-A1-46393-117": {
+      "reason": "brand_not_whitelisted",
+      "title": "DAF - 45 LF - Truck - Euro 5 - 2007",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2002-iveco-remue-mrk7500-truck-A3-44487-9029": {
+      "reason": "brand_not_whitelisted",
+      "title": "2002 IVECO REMUE MRK7500 Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-mercedes-atego-1018-truck-A3-44487-36968": {
+      "reason": "brand_not_whitelisted",
+      "title": "2007 Mercedes Atego 1018 Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-unimog-405-12-mercedes-petrol-A3-44487-2242": {
+      "reason": "brand_not_whitelisted",
+      "title": "2007 Unimog 405/12 Mercedes petrol",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/coxx-2009-semi-trailer-chicken-stall-A3-44487-17002": {
+      "reason": "brand_not_whitelisted",
+      "title": "Coxx - 2009 - Semi-trailer Chicken stall",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-actros-1843-truck-2017-A7-46809-1": {
+      "reason": "brand_not_whitelisted",
+      "title": "Mercedes-Benz - Actros 1843 - Truck - 2017",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-actros-1843-truck-2017-A7-46809-2": {
+      "reason": "brand_not_whitelisted",
+      "title": "Mercedes-Benz - Actros 1843 - Truck - 2017",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-actros-1843-truck-2018-A7-46809-4": {
+      "reason": "brand_not_whitelisted",
+      "title": "Mercedes-Benz - Actros 1843 - Truck - 2018",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-actros-1843-truck-2018-A7-46809-5": {
+      "reason": "brand_not_whitelisted",
+      "title": "Mercedes-Benz - Actros 1843 - Truck - 2018",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-actros-1843-truck-2017-A7-46809-6": {
+      "reason": "brand_not_whitelisted",
+      "title": "Mercedes-Benz - Actros 1843 - Truck - 2017",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-actros-1843-truck-2018-A7-46809-10": {
+      "reason": "brand_not_whitelisted",
+      "title": "Mercedes-Benz - Actros 1843 - Truck - 2018",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-actros-1843-truck-2017-A7-46809-9": {
+      "reason": "brand_not_whitelisted",
+      "title": "Mercedes-Benz - Actros 1843 - Truck - 2017",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2012-iveco-eurocargo-railcar-with-sliding-tarpaulin-A1-46771-14": {
+      "reason": "brand_not_whitelisted",
+      "title": "2012 IVECO Eurocargo Railcar with Sliding Tarpaulin",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1996-lag-o-2-33-ezcl-translift-chassis-A1-46771-44": {
+      "reason": "brand_not_whitelisted",
+      "title": "1996 LAG O-2-33 EZCL TransLift Chassis",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2022-daf-xg%252B-480-ft-lowdeck-semi-trailer-tractor-A1-46771-3": {
+      "reason": "brand_not_whitelisted",
+      "title": "2022 DAF XG+ 480 FT Lowdeck Semi-trailer Tractor",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1997-van-hool-3c0015-tipchassis-A1-46771-38": {
+      "reason": "brand_not_whitelisted",
+      "title": "1997 Van HOOL 3C0015 TipChassis",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/man-tgl-1-180-horse-truck-2012-A1-46771-8": {
+      "reason": "brand_not_whitelisted",
+      "title": "Man - TGL 1.180 - Horse truck - 2012",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2014-teberg-yt182-terminal-tractor-A1-46771-32": {
+      "reason": "brand_not_whitelisted",
+      "title": "2014 TEBERG YT182 Terminal Tractor",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2013-man-tgl-7-150-truck-A1-46771-28": {
+      "reason": "brand_not_whitelisted",
+      "title": "2013 MAN TGL 7.150 Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2009-renders-roc-12-18-na-refrigerated-trailer-A1-46771-10": {
+      "reason": "brand_not_whitelisted",
+      "title": "2009 Renders ROC 12.18 NA Refrigerated trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2013-recker-sahn-tieflader-spezial-low-loader-A1-46771-42": {
+      "reason": "brand_not_whitelisted",
+      "title": "2013 RECKER SAHN TIEFLADER SPEZIAL Low loader",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2001-terberg-yt180-terminal-tractor-A1-46771-31": {
+      "reason": "brand_not_whitelisted",
+      "title": "2001 TERBERG YT180 Terminal Tractor",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2020-daf-xf-530-fan-truck-with-renders-3-axle-trailer-A1-46771-2": {
+      "reason": "brand_not_whitelisted",
+      "title": "2020 DAF XF 530 FAN Truck with Renders 3-axle trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2004-benalu-t39nlnep-bulk-trailer-A1-46771-19": {
+      "reason": "brand_not_whitelisted",
+      "title": "2004 BENALU T39NLNEP Bulk Trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2017-lamboo-t-02s-trailer-A1-46771-37": {
+      "reason": "brand_not_whitelisted",
+      "title": "2017 LAMBOO T 02S Trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-lag-o-3-39-01-mega-volume-trailer-A1-46771-27": {
+      "reason": "brand_not_whitelisted",
+      "title": "2007 LAG O-3-39 01 Mega/Volume Trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2006-man-tga-cab-A1-46771-20": {
+      "reason": "brand_not_whitelisted",
+      "title": "2006 MAN TGA Cab",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/krone-sd-trailer-A1-46771-35": {
+      "reason": "brand_not_whitelisted",
+      "title": "KRONE SD Trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2012-volvo-fmx410-8x4-truck-A1-46771-22": {
+      "reason": "brand_not_whitelisted",
+      "title": "2012 VOLVO FMX410 8x4 Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2004-renders-roc-12-10-na-city-trailer-A1-46771-24": {
+      "reason": "brand_not_whitelisted",
+      "title": "2004 RENDERS ROC 12.10 NA City Trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2005-van-hool-3b2014-trailer-A1-46771-36": {
+      "reason": "brand_not_whitelisted",
+      "title": "2005 Van HOOL 3B2014 Trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2010-man-tgs-26-360-6x4h-2-bl-ramp-A1-46771-5": {
+      "reason": "brand_not_whitelisted",
+      "title": "2010 MAN TGS 26.360 6X4H-2 BL Ramp",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2024-volvo-fh460-globetrotter-semi-trailer-tractor-A1-46771-12": {
+      "reason": "brand_not_whitelisted",
+      "title": "2024 Volvo FH460 Globetrotter Semi-trailer tractor",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1992-mercedes-benz-1124-af-tanker-A1-46771-15": {
+      "reason": "brand_not_whitelisted",
+      "title": "1992 Mercedes-Benz 1124 AF Tanker",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2011-ova-39ok95-tipper-trailer-A1-46771-43": {
+      "reason": "brand_not_whitelisted",
+      "title": "2011 OVA 39OK95 Tipper Trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2011-mercedes-sprinter-513-cdi-3-5-truck-A3-44485-13013": {
+      "reason": "year_below_minimum: 2011 < 2015 (sprinter_override)",
+      "title": "2011 Mercedes Sprinter 513 CDI/3.5 Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2012-iveco-daily-40c15-A3-44485-5845": {
+      "reason": "year_below_minimum: 2012 < 2014 (global)",
+      "title": "2012 Iveco Daily 40c15",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.vavato.com/en/l/2012-iveco-daily-40c15-A3-44485-5845": {
+      "reason": "year_below_minimum: 2012 < 2014 (global)",
+      "title": "2012 Iveco Daily 40c15",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.vavato.com/en/l/2009-citroen-jumper-ydbmac-ax-tow-truck-A3-44485-35290": {
+      "reason": "year_below_minimum: 2009 < 2014 (jumper_override)",
+      "title": "2009 Citro\u00ebn Jumper YDBMAC/AX Tow Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/chair-A1-40520-2207": {
+      "reason": "brand_not_whitelisted",
+      "title": "Chair",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/wiring-harness-A1-40520-2776": {
+      "reason": "brand_not_whitelisted",
+      "title": "Wiring harness",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/tachograph-reader-vdo-dlk-smart-download-key-A1-46770-211": {
+      "reason": "brand_not_whitelisted",
+      "title": "Tachograph Reader - VDO - DLK Smart Download Key",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/daf-cf290-fa-truck-2017-euro-6-A1-46770-1": {
+      "reason": "brand_not_whitelisted",
+      "title": "DAF - CF290 FA - Truck - 2017 - Euro 6",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-axor-1829-4x4-expedition-truck-2011-A1-44154-5032": {
+      "reason": "brand_not_whitelisted",
+      "title": "Mercedes-Benz Axor 1829 4X4 Expedition-Truck 2011",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2010-lag-o-3-39-ls2-semi-trailer-A3-44485-14644": {
+      "reason": "brand_not_whitelisted",
+      "title": "2010 LAG O-3-39 LS2 Semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-volvo-fm440-container-lift-hiab-21t-truck-A3-44485-35401": {
+      "reason": "brand_not_whitelisted",
+      "title": "2007 Volvo FM440 Container Lift Hiab 21t Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2018-daf-xf-450-ft-truck-A3-44485-21269": {
+      "reason": "brand_not_whitelisted",
+      "title": "2018 DAF XF 450 FT Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-renders-thermo-king-refrigeration-unit-semi-trailer-A3-44485-21268": {
+      "reason": "brand_not_whitelisted",
+      "title": "2007 Renders Thermo King refrigeration unit - semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2009-mercedes-benz-vario-bus-A3-44485-6165": {
+      "reason": "brand_not_whitelisted",
+      "title": "2009 Mercedes-Benz Vario Bus",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2015-mercedes-benz-actros-mp4-truck-A3-44485-5152": {
+      "reason": "brand_not_whitelisted",
+      "title": "2015 Mercedes-Benz Actros MP4 Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-fm12-6x6r-container-hook-system-2001-A3-44485-5808": {
+      "reason": "brand_not_whitelisted",
+      "title": "Volvo FM12 6X6R Container hook system 2001",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-mercedes-benz-atego-816-%2528short-chassis%2529-truck-A3-44485-12029": {
+      "reason": "brand_not_whitelisted",
+      "title": "2007 Mercedes-Benz Atego 816 (Short Chassis) Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2002-nissan-atleon-A3-44485-5762": {
+      "reason": "brand_not_whitelisted",
+      "title": "2002 Nissan Atleon",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2021-jpm-trailers-centre-axel-two-axle-low-loader-A3-44485-5072": {
+      "reason": "brand_not_whitelisted",
+      "title": "2021 JPM Trailers Centre Axel Two Axle Low Loader",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1988-renders-roc-12-20-l-14-e-semi-trailer-A3-44485-14649": {
+      "reason": "brand_not_whitelisted",
+      "title": "1988 Renders ROC 12-20 L 14 E Semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1999-mitsubishi-fe649-A3-44485-5825": {
+      "reason": "brand_not_whitelisted",
+      "title": "1999 Mitsubishi FE649",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2002-man-le220c-truck-A3-44485-6078": {
+      "reason": "brand_not_whitelisted",
+      "title": "2002 MAN LE220C Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1995-daf-ae75rs-s-tipper-truck-A3-44485-11882": {
+      "reason": "brand_not_whitelisted",
+      "title": "1995 DAF AE75RS-S Tipper Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2011-lag-trailer-A3-44485-5158": {
+      "reason": "brand_not_whitelisted",
+      "title": "2011 LAG Trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2017-daf-lf180-tipper-%25283-sides%2529-automatic-euro-6-A3-44485-10664": {
+      "reason": "brand_not_whitelisted",
+      "title": "2017 DAF LF180 tipper (3 sides) - automatic - Euro 6",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2003-scania-6x2-flatbed-machine-platform-A3-44485-10001": {
+      "reason": "brand_not_whitelisted",
+      "title": "2003 Scania 6x2 flatbed / machine platform",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1997-mercedes-benz-sk-2639-6x4-truck-A3-44485-5153": {
+      "reason": "brand_not_whitelisted",
+      "title": "1997 Mercedes-Benz SK 2639 6X4 Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2016-iveco-at410t-truck-with-hook-system-A3-44485-11421": {
+      "reason": "brand_not_whitelisted",
+      "title": "2016 IVECO AT410T - Truck with hook system",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/burg-container-chassis-swap-body-trailer-equipped-with-rockinger-gnz-27-d125-coupling-system-tandem-version-dutch-registration-wp-68-tj-A1-46786-2": {
+      "reason": "brand_not_whitelisted",
+      "title": "Burg container chassis / swap body trailer, equipped with Rockinger GNZ 27 D125 coupling system, tandem version, Dutch registration WP-68-TJ",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/van-hool-1993-r-214-container-chassis-A1-46786-1": {
+      "reason": "brand_not_whitelisted",
+      "title": "Van Hool - 1993 - R-214 - Container chassis",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/large-item-vehicle-parts-and-consumables-A1-46482-1236": {
+      "reason": "brand_not_whitelisted",
+      "title": "Large item vehicle parts and consumables",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/vdl-various-coach-parts-A1-46624-10": {
+      "reason": "brand_not_whitelisted",
+      "title": "VDL Various Coach parts",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/kramp-12v-1-4-kw-starter-%252819x%2529-A1-45624-178": {
+      "reason": "brand_not_whitelisted",
+      "title": "Kramp 12V 1.4 KW Starter (19x)",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/donaldson-multiple-filters-A1-45624-235": {
+      "reason": "brand_not_whitelisted",
+      "title": "Donaldson Multiple filters",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/batch-of-truck-and-trailer-parts-A1-45624-284": {
+      "reason": "brand_not_whitelisted",
+      "title": "Batch of truck and trailer parts",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/batch-of-vehicle-parts-A1-45624-48": {
+      "reason": "brand_not_whitelisted",
+      "title": "Batch of Vehicle parts",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/starters-and-alternators-A1-45624-180": {
+      "reason": "brand_not_whitelisted",
+      "title": "Starters and alternators",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/marshal-truck-tire-%25286x%2529-A1-46624-40": {
+      "reason": "brand_not_whitelisted",
+      "title": "Marshal Truck Tire (6x)",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/van-hool-touring-car-skibox-A1-46624-16": {
+      "reason": "brand_not_whitelisted",
+      "title": "Van Hool Touring Car Skibox",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/michelin-xda-ht-truck-bus-tire-with-rim-A1-46624-28": {
+      "reason": "brand_not_whitelisted",
+      "title": "Michelin XDA-HT Truck/Bus tire with rim",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/truck-parts-A1-45624-105": {
+      "reason": "brand_not_whitelisted",
+      "title": "Truck parts",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/man-1994-s19-truck-A1-46764-1": {
+      "reason": "brand_not_whitelisted",
+      "title": "MAN - 1994 - S19 - Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/eurolift-pull-up-chassis-A1-45884-28": {
+      "reason": "brand_not_whitelisted",
+      "title": "Eurolift pull-up chassis",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/druelle-c93a33-3-axle-slow-trailer-A1-45884-2": {
+      "reason": "brand_not_whitelisted",
+      "title": "Druelle C93A33 3-axle slow trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2018-marcolin-eletta-sliding-tarpaulin-A1-45884-22": {
+      "reason": "brand_not_whitelisted",
+      "title": "2018 Marcolin Eletta Sliding Tarpaulin",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2003-burg-bpa-09-16-ozxxa-car-transporter-trailer-A1-46403-2": {
+      "reason": "year_below_minimum: 2003 < 2015 (transporter_override)",
+      "title": "2003 Burg BPA 09-16 OZXXA car transporter trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/janssens-2002-bk6a-semi-remorque-A1-46403-8": {
+      "reason": "brand_not_whitelisted",
+      "title": "Janssens - 2002 - BK6A - Semi-remorque",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/van-hool-2007-3-b0075-semi-remorque-A1-46403-3": {
+      "reason": "brand_not_whitelisted",
+      "title": "Van Hool - 2007 - 3 B0075 - Semi-remorque",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2019-krone-az-semi-trailer-with-container-A1-46403-17": {
+      "reason": "brand_not_whitelisted",
+      "title": "2019 Krone AZ Semi-trailer with container",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1987-groenewegen-dro-12-10-b-semi-trailer-A1-46403-14": {
+      "reason": "brand_not_whitelisted",
+      "title": "1987 Groenewegen DRO-12-10 B Semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2000-meusburger-mpg-3-ps3-zeg-low-loader-A1-42018-48": {
+      "reason": "brand_not_whitelisted",
+      "title": "2000 Meusburger MPG 3 PS3/ZEG Low loader",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/pneu-poids-lourd-%25282x%2529-A1-46403-156": {
+      "reason": "brand_not_whitelisted",
+      "title": "Pneu poids lourd (2x)",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2011-nissan-atleon-truck-A1-42018-15": {
+      "reason": "brand_not_whitelisted",
+      "title": "2011 Nissan Atleon Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/pneus-poids-lourd-%25282x%2529-A1-46403-157": {
+      "reason": "brand_not_whitelisted",
+      "title": "Pneus poids lourd (2x)",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-iveco-ml90e18-truck-A1-40139-77": {
+      "reason": "brand_not_whitelisted",
+      "title": "2007 Iveco ML90E18 Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1997-mercedes-benz-1831-nrl-7-1-depanneur-A1-46403-1": {
+      "reason": "brand_not_whitelisted",
+      "title": "1997 Mercedes-Benz 1831 NRL/7.1 Depanneur",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/pacton-semi-trailer-with-hiab-19-5-t-m-loading-crane-with-powerpack-A1-42018-49": {
+      "reason": "brand_not_whitelisted",
+      "title": "Pacton semi-trailer with Hiab 19.5 t/m loading crane with powerpack",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2011-mercedes-benz-313-2-2-cdi-432-hd-truck-A1-42018-14": {
+      "reason": "brand_not_whitelisted",
+      "title": "2011 Mercedes-Benz 313 2.2 CDI 432 HD Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2004-mercedes-actros-2632-truck-A1-42018-16": {
+      "reason": "brand_not_whitelisted",
+      "title": "2004 Mercedes Actros 2632 Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/refrigerated-trailer-A1-42018-57": {
+      "reason": "brand_not_whitelisted",
+      "title": "Refrigerated trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1987-chevrolet-silverrock-truck-A1-42018-141": {
+      "reason": "brand_not_whitelisted",
+      "title": "1987 Chevrolet SILVERROCK Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/scania-2015-r450-truck-A1-42018-17": {
+      "reason": "brand_not_whitelisted",
+      "title": "Scania - 2015 - R450 - Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-pacton-txc343-semi-trailer-A1-42018-59": {
+      "reason": "brand_not_whitelisted",
+      "title": "2007 Pacton TXC343 Semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2001-daf-lf-45-180-truck-rigid-A1-42018-21": {
+      "reason": "brand_not_whitelisted",
+      "title": "2001 Daf LF 45.180 Truck/rigid",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2014-mitsubishi-3c15-3-0-di-280-dump-truck-A1-42018-13": {
+      "reason": "brand_not_whitelisted",
+      "title": "2014 Mitsubishi 3C15 3.0 DI 280 Dump Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/daf-ae-55-ce-truck-with-hiab-crane-A1-41334-1": {
+      "reason": "brand_not_whitelisted",
+      "title": "DAF AE 55 CE Truck with HIAB crane",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/fifth-wheel-construction-A1-46733-15": {
+      "reason": "brand_not_whitelisted",
+      "title": "Fifth wheel construction",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2014-veldhuizen-p40-2-be-semi-trailer-machine-transporter-A1-46733-14": {
+      "reason": "year_below_minimum: 2014 < 2015 (transporter_override)",
+      "title": "2014 Veldhuizen P40-2 BE Semi-trailer machine transporter",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/stainless-steel-undermount-tool-box-A1-45830-163": {
+      "reason": "brand_not_whitelisted",
+      "title": "Stainless Steel Undermount Tool Box",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2024-man-tgl-12-220-truck-A1-46509-8": {
+      "reason": "brand_not_whitelisted",
+      "title": "2024 MAN TGL 12.220 Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2015-iveco-stralis-as440s46txp-6x2-semi-trailer-tractor-A1-40053-1": {
+      "reason": "brand_not_whitelisted",
+      "title": "2015 Iveco Stralis AS440S46TXP 6x2 Semi-trailer tractor",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/-2013-iveco-40c14g-cng-truck-with-crane-111-560km-A3-44486-5746": {
+      "reason": "brand_not_whitelisted",
+      "title": " 2013 Iveco 40C14G CNG Truck with crane 111.560km",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2016-royen-kaessbohrer-maxiway-low-loader-platform-A3-44486-10017": {
+      "reason": "brand_not_whitelisted",
+      "title": "2016 Royen / Kaessbohrer MaxiWay Low Loader Platform",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2015-daf-lf45-truck-A3-44486-35614": {
+      "reason": "brand_not_whitelisted",
+      "title": "2015 DAF LF45 Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-nissan-cabstar-A3-44486-4576": {
+      "reason": "brand_not_whitelisted",
+      "title": "2007 Nissan Cabstar",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2002-serrus-mkv-13-27-semi-trailer-3-axles-38t-A3-44486-13020": {
+      "reason": "brand_not_whitelisted",
+      "title": "2002 SERRUS MKV 13-27 Semi-trailer - 3 axles - 38T ",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1998-mercedes-benz-vario-truck-366000km-A3-44486-5111": {
+      "reason": "brand_not_whitelisted",
+      "title": "1998 Mercedes-Benz vario Truck 366000km",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1998-mitsubishi-canter-breakdown-wagon-tow-truck-7-seats-functional-A3-44486-10014": {
+      "reason": "brand_not_whitelisted",
+      "title": "1998 Mitsubishi Canter Breakdown Wagon / Tow Truck - 7 seats - functional",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2011-volvo-fm-fh-6x4r-9-0-truck-with-crane-and-container-system-A3-44486-4577": {
+      "reason": "brand_not_whitelisted",
+      "title": "2011 Volvo FM/FH 6X4R 9.0 Truck with crane and container system",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/adblue-in-ibc-with-cds-coupling-%25282x%2529-A1-46838-98": {
+      "reason": "brand_not_whitelisted",
+      "title": "AdBlue in IBC with CDS coupling (2x)",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/man-tga-35-530-8x4-truck-2006-A7-45990-3": {
+      "reason": "brand_not_whitelisted",
+      "title": "MAN - TGA 35.530 8x4 - Truck - 2006",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-unimog-u400-truck-A7-45990-67": {
+      "reason": "brand_not_whitelisted",
+      "title": "Mercedes-Benz - Unimog U400 - Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/iveco-daily-65c-tipper-truck-A7-45990-68": {
+      "reason": "vehicle_type: tipper body",
+      "title": "IVECO - Daily 65C - Tipper Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/man-8-163-l-2000-truck-1998-A7-45990-64": {
+      "reason": "brand_not_whitelisted",
+      "title": "MAN - 8.163 L 2000 - Truck - 1998",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2019-kogel-s-24-1-semi-trailer-A1-46648-4": {
+      "reason": "brand_not_whitelisted",
+      "title": "2019 K\u00d6GEL S 24-1 semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2020-kogel-s-24-1-semi-trailer-A1-46648-2": {
+      "reason": "brand_not_whitelisted",
+      "title": "2020 K\u00d6GEL S 24-1 Semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2019-kogel-s-24-1-semi-trailer-A1-46648-7": {
+      "reason": "brand_not_whitelisted",
+      "title": "2019 K\u00d6GEL S 24-1 semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2019-kogel-s-24-1-semi-trailer-A1-46648-5": {
+      "reason": "brand_not_whitelisted",
+      "title": "2019 K\u00d6GEL S 24-1 semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/van-hool-fr3034-04-container-trailer-A1-41705-129": {
+      "reason": "brand_not_whitelisted",
+      "title": "Van Hool - FR3034-04 - Container trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2015-scania-r580-truck-A1-45847-13": {
+      "reason": "brand_not_whitelisted",
+      "title": "2015 Scania R580 Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2015-daf-xf-510-ft-truck-A1-41705-4": {
+      "reason": "brand_not_whitelisted",
+      "title": "2015 - DAF - XF 510 FT - Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/truck-part-A1-41705-429": {
+      "reason": "brand_not_whitelisted",
+      "title": "Truck part",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/truck-parts-A1-41705-448": {
+      "reason": "brand_not_whitelisted",
+      "title": "Truck Parts",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/container-cables-A1-41705-418": {
+      "reason": "brand_not_whitelisted",
+      "title": "Container cables",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/lowis-fahrzeugbau-trailer-low-loader-A1-41705-101": {
+      "reason": "brand_not_whitelisted",
+      "title": "Lowis Fahrzeugbau - Trailer/Low loader",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/batch-of-brake-pads-A1-41705-415": {
+      "reason": "brand_not_whitelisted",
+      "title": "Batch of brake pads",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/batch-of-oil-filters-A1-41705-414": {
+      "reason": "brand_not_whitelisted",
+      "title": "Batch of oil filters",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hydraulic-kit-A1-41705-423": {
+      "reason": "brand_not_whitelisted",
+      "title": "Hydraulic kit",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/truck-parts-A1-41705-432": {
+      "reason": "brand_not_whitelisted",
+      "title": "Truck parts",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/kassbohrer-dl-ti-3-axle-dump-trailer-A1-46664-1002": {
+      "reason": "brand_not_whitelisted",
+      "title": "K\u00e4ssbohrer DL TI 3-axle dump trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2017-h-t-f-hzo-42-semi-trailer-%2528c%2529-A1-46063-6": {
+      "reason": "brand_not_whitelisted",
+      "title": "2017 H.T.F. HZO 42 Semi-trailer (C)",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2016-scania-r450-truck-%2528c%2529-A1-46063-5": {
+      "reason": "brand_not_whitelisted",
+      "title": "2016 Scania R450 Truck (C)",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2009-daf-fa-lf45g08-truck-A1-41715-1": {
+      "reason": "brand_not_whitelisted",
+      "title": "2009 DAF FA LF45G08 Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/plastic-wheel-arches-mudguards-%25286x%2529-A1-41715-334": {
+      "reason": "brand_not_whitelisted",
+      "title": "Plastic wheel arches / mudguards (6x)",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2003-da-pont-k-07027-semi-trailer-A1-41715-15": {
+      "reason": "brand_not_whitelisted",
+      "title": "2003 DA PONT K 07027 Semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-jos-mulder-oplv-semi-trailer-A1-41715-13": {
+      "reason": "brand_not_whitelisted",
+      "title": "2007 Jos mulder OPLV Semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2010-renault-midlum-220-12-medium-light-truck-A1-41715-3": {
+      "reason": "brand_not_whitelisted",
+      "title": "2010 Renault Midlum 220.12 Medium Light Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2016-a-d-lprs9-semi-trailer-da-furniture-trailer-A1-46675-3": {
+      "reason": "brand_not_whitelisted",
+      "title": "2016 A&D LPRS9 Semi-trailer DA furniture trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ottinger-truck-snow-chains-for-man-tgx-or-mercedes-actros-tractor-units-A1-47205-2857": {
+      "reason": "brand_not_whitelisted",
+      "title": "\u00d6ttinger truck snow chains for MAN TGX or Mercedes Actros tractor units",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hoppecke-80-volt-560-ah-drive-battery-forklift-vehicle-part-A1-47253-10": {
+      "reason": "brand_not_whitelisted",
+      "title": "Hoppecke - 80 Volt 560 Ah - Drive Battery Forklift - Vehicle part",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2012-schmitz-cargobull-conditioned-semi-trailer-A1-46774-22": {
+      "reason": "brand_not_whitelisted",
+      "title": "2012 Schmitz cargobull Conditioned semi-trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/man-2013-tgx-18-400-euro6-truck-A1-46774-57": {
+      "reason": "brand_not_whitelisted",
+      "title": "MAN - 2013 - TGX 18.400 Euro6 - Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2010-man-tgl-horse-truck-6-person-cabin-A1-46774-6": {
+      "reason": "brand_not_whitelisted",
+      "title": "2010 MAN TGL Horse truck, 6-person cabin ",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mafi-dish-for-terminal-tractor-A1-47121-110": {
+      "reason": "brand_not_whitelisted",
+      "title": "Mafi Dish for terminal tractor",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bridgestone-m788-truck-tire-with-rim-A1-46637-42": {
+      "reason": "brand_not_whitelisted",
+      "title": "Bridgestone M788 Truck tire with rim",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/container-trailer-A1-46774-31": {
+      "reason": "brand_not_whitelisted",
+      "title": "Container trailer",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2010-volvo-fe62-8-0-e5-garbage-truck-A1-46774-23": {
+      "reason": "brand_not_whitelisted",
+      "title": "2010 Volvo FE62 8.0 E5 Garbage Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2015-cmc-tbj-135l-13-5m-working-height-car-boom-lift-A1-40140-50": {
+      "reason": "brand_not_whitelisted",
+      "title": "2015 CMC TBJ 135L - 13.5m Working Height Car Boom Lift",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2012-scania-r620lb6x2mnb-v8-container-car-A1-46774-65": {
+      "reason": "brand_not_whitelisted",
+      "title": "2012 Scania R620LB6x2MNB V8 Container Car",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/daf-2017-xf460ft-truck-A1-46774-17": {
+      "reason": "brand_not_whitelisted",
+      "title": "DAF - 2017 - XF460FT - Truck",
+      "rejected_at": "2026-05-29T20:58:09.066018+00:00"
     }
   }
 }
