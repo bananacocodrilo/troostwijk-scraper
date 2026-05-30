@@ -22,6 +22,12 @@
           "current_bid_eur": 3000.0,
           "bids_count": 16,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -192,6 +198,12 @@
           "ts": "2026-05-29T20:58:09.087257+00:00",
           "current_bid_eur": 4750.0,
           "bids_count": 12,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": 5000.0,
+          "bids_count": 13,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -523,6 +535,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": 3750.0,
+          "bids_count": 7,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -735,7 +753,7 @@
     "98511054-4519-4d20-a7bc-3d1d050453ea": {
       "url": "https://www.troostwijkauctions.com/en/l/peugeot-boxer-335-2-2-hdi-l3h2-xr-131hp-2016-vzf-89-s-A1-44365-13",
       "model_token": "boxer",
-      "year": null,
+      "year": 2016,
       "snapshots": [
         {
           "ts": "2026-05-29T09:39:11.664614+00:00",
@@ -924,7 +942,7 @@
     "0d3238b1-e68f-4d18-b3ca-b1066426bed4": {
       "url": "https://www.troostwijkauctions.com/en/l/peugeot-boxer-330-2-0-hdi-pro-6-seater-commercial-vehicle-110hp-2017-vfz-61-l-A1-44365-42",
       "model_token": "boxer",
-      "year": null,
+      "year": 2017,
       "snapshots": [
         {
           "ts": "2026-05-29T09:39:11.664614+00:00",
@@ -982,6 +1000,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": 8300.0,
+          "bids_count": 5,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -990,7 +1014,7 @@
     "6af69dbe-0ec2-44a5-8b1e-b72d9af26d34": {
       "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-516-2-2-cdi-432-163hp-2013-vfb-88-z-automatic-A1-44365-32",
       "model_token": "sprinter",
-      "year": null,
+      "year": 2013,
       "snapshots": [
         {
           "ts": "2026-05-29T09:39:11.664614+00:00",
@@ -1215,7 +1239,7 @@
     "03e049fb-78e2-47f3-b3d8-3c0a33affe9a": {
       "url": "https://www.vavato.com/en/l/2005-volkswagen-transporter-t5-1-9-tdi-300-t800base-commercial-vehicle-A1-42019-160",
       "model_token": "transporter",
-      "year": null,
+      "year": 2005,
       "snapshots": [
         {
           "ts": "2026-05-29T11:56:02.868842+00:00",
@@ -1266,13 +1290,19 @@
     "aa18086f-799c-46bb-afdb-ce3a7e36ca25": {
       "url": "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-2-0-tdi-l2h1-%2522automatic%2522-highline-204hp-2018-%2528original-nl%2529-v-921-sg-commercial-vehicle-A1-44369-37",
       "model_token": "transporter",
-      "year": null,
+      "year": 2018,
       "snapshots": [
         {
           "ts": "2026-05-29T11:56:02.868842+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -1390,6 +1420,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -1476,13 +1512,19 @@
     "dbcf06a8-878b-4c2f-93e4-687116e45dd7": {
       "url": "https://www.troostwijkauctions.com/en/l/peugeot-boxer-330-2-2-hdi-6-seater-double-cab-110hp-2013-%2528original-nl%2529-vd-010-r-A1-44369-35",
       "model_token": "boxer",
-      "year": null,
+      "year": 2013,
       "snapshots": [
         {
           "ts": "2026-05-29T11:56:02.868842+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -1539,6 +1581,12 @@
           "ts": "2026-05-29T12:41:35.148994+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": 2600.0,
+          "bids_count": 2,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -1606,6 +1654,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -1632,6 +1686,12 @@
           "ts": "2026-05-29T12:16:14.828933+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": 3000.0,
+          "bids_count": 6,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -1888,6 +1948,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": 4800.0,
+          "bids_count": 20,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -1978,6 +2044,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": 1200.0,
+          "bids_count": 5,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -2013,6 +2085,12 @@
           "ts": "2026-05-29T12:00:26.931284+00:00",
           "current_bid_eur": 1160.0,
           "bids_count": 3,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": 1210.0,
+          "bids_count": 4,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -2100,6 +2178,12 @@
           "ts": "2026-05-29T12:41:35.148994+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": 1400.0,
+          "bids_count": 5,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -2641,6 +2725,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": 4600.0,
+          "bids_count": 19,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -2892,13 +2982,19 @@
     "f734eb87-c087-4342-a3db-b7a918c2be80": {
       "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-2001-sprinter-316-cdi-2-7-355-mot-09-03-2027-A1-47136-15",
       "model_token": "sprinter",
-      "year": null,
+      "year": 2001,
       "snapshots": [
         {
           "ts": "2026-05-29T12:16:14.828933+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -3033,7 +3129,7 @@
     "c17c5ea4-e977-4f79-975e-28e7b3be1aa6": {
       "url": "https://www.troostwijkauctions.com/en/l/2012-peugeot-expert-xsahz8-passenger-car-A3-43541-9033",
       "model_token": "expert",
-      "year": null,
+      "year": 2012,
       "snapshots": [
         {
           "ts": "2026-05-29T12:41:35.148994+00:00",
@@ -3673,6 +3769,51 @@
       "snapshots": [
         {
           "ts": "2026-05-29T20:58:09.087257+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "c8f573ae-58d6-4cbb-8f76-d50dfa5c3386": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-caravelle-motorhome-2011-A1-46393-17",
+      "model_token": "transporter",
+      "year": 2011,
+      "snapshots": [
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "db8286f2-8778-4a73-b45e-06ee2e8d80d3": {
+      "url": "https://www.troostwijkauctions.com/en/l/2019-ifor-williams-gh-trailer-low-loader-machine-transporter-A1-41705-97",
+      "model_token": "transporter",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
+          "current_bid_eur": 700.0,
+          "bids_count": 53,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "1da11c54-16f3-44d1-82b1-cf94fe1369bf": {
+      "url": "https://www.troostwijkauctions.com/en/l/2013-scania-r440-%2528full-option%2529-truck-%252B-car-transporter-semi-trailer-%2528-combination-%2529-A3-44485-16553",
+      "model_token": "transporter",
+      "year": 2013,
+      "snapshots": [
+        {
+          "ts": "2026-05-30T02:52:15.050252+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
