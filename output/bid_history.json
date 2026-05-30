@@ -165,7 +165,7 @@
     "4f4ebb2e-cb6a-4c8e-8483-3754ebf3971d": {
       "url": "https://www.troostwijkauctions.com/en/l/2016-renault-master-van-A3-44486-5700",
       "model_token": "master",
-      "year": null,
+      "year": 2016,
       "snapshots": [
         {
           "ts": "2026-05-29T09:39:11.664614+00:00",
@@ -177,6 +177,12 @@
           "ts": "2026-05-29T12:41:35.148994+00:00",
           "current_bid_eur": 550.0,
           "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-30T08:34:19.021262+00:00",
+          "current_bid_eur": 800.0,
+          "bids_count": 7,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -466,6 +472,12 @@
           "current_bid_eur": 8000.0,
           "bids_count": 30,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-30T08:34:19.021262+00:00",
+          "current_bid_eur": 8200.0,
+          "bids_count": 31,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -513,6 +525,12 @@
           "ts": "2026-05-29T20:58:09.087257+00:00",
           "current_bid_eur": 2900.0,
           "bids_count": 20,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-30T08:34:19.021262+00:00",
+          "current_bid_eur": 3000.0,
+          "bids_count": 21,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -708,7 +726,7 @@
     "59e6848d-ab3e-4cab-b19a-77e6c3254fd9": {
       "url": "https://www.troostwijkauctions.com/en/l/2007-mercedes-sprinter-311cdi-tow-truck-A3-44486-35643",
       "model_token": "sprinter",
-      "year": null,
+      "year": 2007,
       "snapshots": [
         {
           "ts": "2026-05-29T09:39:11.664614+00:00",
@@ -840,12 +858,18 @@
     "954d42bf-afe1-4107-89a4-cf8c4fec76c4": {
       "url": "https://www.vavato.com/en/l/2020-fiat-ducato-35-3-0-cng-l4h2-commercial-vehicle-A1-41705-17",
       "model_token": "ducato",
-      "year": null,
+      "year": 2020,
       "snapshots": [
         {
           "ts": "2026-05-29T09:39:11.664614+00:00",
           "current_bid_eur": 170.0,
           "bids_count": 11,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-30T08:34:19.021262+00:00",
+          "current_bid_eur": 1530.0,
+          "bids_count": 27,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -2281,6 +2305,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-30T08:34:19.021262+00:00",
+          "current_bid_eur": 7400.0,
+          "bids_count": 55,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -2340,7 +2370,7 @@
     "8bea120e-c4ad-44bf-8710-1af476c01fda": {
       "url": "https://www.vavato.com/en/l/2016-opel-movano-2-3-cdti-l4h3-dl-commercial-vehicle-A1-41705-13",
       "model_token": "movano",
-      "year": null,
+      "year": 2016,
       "snapshots": [
         {
           "ts": "2026-05-29T12:00:26.931284+00:00",
@@ -2352,6 +2382,12 @@
           "ts": "2026-05-29T12:41:35.148994+00:00",
           "current_bid_eur": 2700.0,
           "bids_count": 19,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-05-30T08:34:19.021262+00:00",
+          "current_bid_eur": 2800.0,
+          "bids_count": 21,
           "status": "BIDDING_OPEN"
         }
       ],
