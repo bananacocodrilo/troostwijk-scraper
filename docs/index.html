@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Van Intelligence Dashboard</title>
+  <title>Camper Candidate Dashboard</title>
   <style>
     :root {
       --bg: #0f1117;
@@ -255,17 +255,14 @@
 <body>
 
 <nav class="nav-bar">
-  <a href="index.html" class="active">🚐 All Vans</a>
+  <a href="index.html" class="active">🚐 Camper Candidates</a>
   <span class="nav-sep">|</span>
-  <a href="big.html">🏕️ Big Vans</a>
-  <span class="nav-sep">|</span>
-  <a href="small.html">🚌 Small Vans</a>
   <a href="roi.html">💰 ROI Mode</a>
 </nav>
 
 <header>
   <div>
-    <h1>🚐 Van <span>Intel</span></h1>
+    <h1>🚐 Camper <span>Candidates</span></h1>
   </div>
   <div class="stats" id="stats"></div>
   <div class="meta" id="updatedAt">Loading…</div>
@@ -463,7 +460,9 @@ function buildCard(v) {
   ${countdownHtml(v)}
 
   <div class="badges">
-    ${v.van_type ? `<span class="badge badge-size">${v.van_type}</span>` : ''}
+    ${v.model_group ? `<span class="badge badge-size" title="Whitelist group">${v.model_group}</span>` : ''}
+    ${v.variant ? `<span class="badge badge-size">${v.variant}</span>` : (v.van_type ? `<span class="badge badge-size">${v.van_type}</span>` : '')}
+    ${v.classification_confidence ? `<span class="badge" style="background:var(--surface2);color:var(--muted)" title="Classifier confidence">${v.classification_confidence}</span>` : ''}
     ${v.fuel ? `<span class="badge badge-fuel">${v.fuel}</span>` : ''}
     ${liveOpen ? '<span class="badge badge-open">Bidding open</span>' : '<span class="badge badge-closed">Closed</span>'}
     ${v.is_hidden_gem ? '<span class="badge badge-gem">💎 Hidden gem</span>' : ''}

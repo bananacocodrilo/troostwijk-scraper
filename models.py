@@ -108,7 +108,14 @@ class Vehicle(BaseModel):
     fleet_type: Optional[str] = None       # utility | telecom | delivery | solar | …
     fleet_signals: Optional[List[str]] = None
 
-    # Pipeline split (big vs small van)
-    van_category: Optional[str] = None     # "big" | "small" | "both"
-    big_van_score: Optional[int] = None    # 0-100 camper-first scoring
-    small_van_score: Optional[int] = None  # 0-100 dual-use-first scoring
+    # Camper-candidate whitelist classification
+    model_group: Optional[str] = None              # whitelist group key (see van_intel.WHITELIST_GROUPS)
+    variant: Optional[str] = None                  # detected L/H, e.g. "L2H1", "L2H?"
+    classification_confidence: Optional[str] = None  # "high" | "medium" | "low" | "unknown"
+
+    # Legacy pipeline-split fields — no longer populated since the
+    # big-van track was removed, kept for backward-compat with prior
+    # lot_registry.json snapshots so deserialisation doesn't fail.
+    van_category: Optional[str] = None
+    big_van_score: Optional[int] = None
+    small_van_score: Optional[int] = None

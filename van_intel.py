@@ -1,17 +1,26 @@
-"""Van intelligence layer — deterministic 3-stage pipeline.
+"""Van intelligence layer — camper-candidate whitelist pipeline.
 
-Stage 1: Hard filters     — remove non-van / damaged / illegal listings
-Stage 2: Rule resolution  — global + model-specific year/km constraints
-Stage 3: Scoring          — 0-100 desirability score
+Flow:
+    raw_listing
+      → hard filters       (vehicle type / body / damage / fuel / mileage)
+      → classify_vehicle   (must match one of 4 whitelist groups)
+      → strict_filter      (size / year / Euro / seats — soft gate on unknowns)
+      → scoring            (small-van suitability + ROI)
 
-Single entry point: evaluate(vehicle) -> Evaluation
+Single entry point: ``evaluate(vehicle) -> Evaluation``.
+
+The model whitelist is intentionally narrow: only 4 small-van groups, all
+L2 / L2H1, Euro 6, 6-seat-compatible. Big vans (Sprinter / Ducato / Boxer
+/ etc.) are rejected outright by the classifier.
+
+Soft-gate policy: unknown year / size / emission / seats PASSES through.
+Only confirmed violations reject. The exception is the classifier itself:
+no whitelist match → hard reject (``brand_not_in_whitelist``).
 """
 
 import re
 from dataclasses import dataclass
 from typing import List, Optional, Tuple
-
-from models import ScoreBreakdown
 
 # ---------------------------------------------------------------------------
 # Thresholds
@@ -20,85 +29,136 @@ from models import ScoreBreakdown
 SCORE_THRESHOLD = 30  # lots below this are soft-rejected (still logged)
 
 # ---------------------------------------------------------------------------
-# Van platform whitelist
+# Whitelist groups (the only models that pass the classifier)
 # ---------------------------------------------------------------------------
+#
+# Each group lists its model tokens (lowercased). Multi-word tokens are
+# matched first so "transit custom" beats the bare "transit" (which is
+# now NOT in the whitelist on its own — only Transit Custom qualifies).
+#
+# ``required_length`` and ``required_height`` are the allowed values
+# (None = any). Detection is soft-gate: a CONFIRMED size that doesn't
+# match rejects; unknown size passes.
+#
+# ``min_year`` is the lower bound for Euro 6 era for each model family.
 
-# Maps model token (lowercased) → canonical "Make Model" label.
-ALLOWED_MODELS: dict[str, str] = {
-    "boxer":        "Peugeot Boxer",
-    "ducato":       "Fiat Ducato",
-    "jumper":       "Citroen Jumper",
-    "transit":      "Ford Transit",
-    "sprinter":     "Mercedes Sprinter",
-    "master":       "Renault Master",
-    "crafter":      "Volkswagen Crafter",
-    "movano":       "Opel Movano",
-    "tge":          "MAN TGE",
-    "daily":        "Iveco Daily",
-    "expert":       "Peugeot/Citroen Expert",   # mid-size panel van (optional)
-    "transporter":  "Volkswagen Transporter",    # T5/T6 — common camper base
+WHITELIST_GROUPS: dict = {
+    "transit_custom_l2h1": {
+        "label": "Ford Transit Custom / Tourneo Custom",
+        # Tourneo Custom is the passenger version of Transit Custom —
+        # same body, factory 8-9 seats (great for 6-seat camper conversion).
+        "tokens": ["tourneo custom", "transit custom"],
+        "required_length": [2],
+        "required_height": [1],
+        "min_year": 2016,
+    },
+    "expert_jumpy_proace_l2": {
+        "label": "Peugeot Expert / Citroen Jumpy / Toyota ProAce",
+        "tokens": ["pro ace", "proace", "expert", "jumpy"],
+        "required_length": [2],
+        "required_height": None,
+        "min_year": 2016,
+    },
+    "scudo_gen3": {
+        "label": "Fiat Scudo (gen 3, 2022+)",
+        # Rebadged Expert/Jumpy/ProAce on the EMP2 platform. Distinct
+        # group with min_year=2022 to exclude the older Scudo (2007-2016,
+        # different & smaller vehicle).
+        "tokens": ["scudo"],
+        "required_length": [2],
+        "required_height": None,
+        "min_year": 2022,
+    },
+    "vivaro_trafic_primastar_l2": {
+        "label": "Opel Vivaro / Renault Trafic / Nissan Primastar / Fiat Talento",
+        # Talento (2016-2021) is a rebadged Renault Trafic — same chassis,
+        # same dimensions, same scoring.
+        "tokens": ["talento", "vivaro", "trafic", "primastar"],
+        "required_length": [2],
+        "required_height": None,
+        "min_year": 2015,
+    },
+    "t6_1_lwb": {
+        "label": "VW Transporter T6.1",
+        "tokens": ["t6.1", "t6_1", "transporter"],
+        "required_length": [2],
+        "required_height": None,
+        "min_year": 2020,
+    },
+    "vito_v_class_l2": {
+        "label": "Mercedes Vito / V-Class (Lang or Extralang)",
+        # Vito (panel van) and V-Class (passenger MPV) share the W447
+        # chassis since 2014. Three lengths: Kompakt (4895mm, L1-class),
+        # Lang (5140mm, L2-class), Extralang (5370mm, matches Transit
+        # Custom L2 best). required_length=[2,3,4] accepts Lang (no
+        # keyword → unknown → soft-pass) AND Extralang (matches "extra
+        # lang" → L4 in the shared keyword regex). The Kompakt variant
+        # rejects via the explicit "kompakt" / "compact" → L1 detection.
+        "tokens": ["v-klasse", "v klasse", "v-class", "vito"],
+        "required_length": [2, 3, 4],
+        "required_height": None,
+        "min_year": 2015,
+    },
+    "hyundai_staria": {
+        "label": "Hyundai Staria",
+        # Korean passenger MPV (2021+). Single length (5253mm),
+        # similar dimensional class to Transit Custom L2.
+        "tokens": ["staria"],
+        "required_length": None,
+        "required_height": None,
+        "min_year": 2021,
+    },
 }
 
-# Small van models routed to the "small" pipeline instead of being rejected.
-# These are dual-use panel vans that make sense for crew + cargo use.
-SMALL_VAN_MODELS: dict[str, str] = {
-    "transit custom":   "Ford Transit Custom",
-    "trafic":           "Renault Trafic",
-    "vivaro":           "Opel Vivaro",
-    "jumpy":            "Citroen Jumpy",
-    "expert":           "Peugeot/Citroen Expert",    # also in ALLOWED_MODELS — overrides to small
-    "transporter":      "Volkswagen Transporter",    # also in ALLOWED_MODELS — overrides to small
-}
+# Reverse index: token → (group_key, is_multiword). Built once.
+_TOKEN_TO_GROUP: List[Tuple[str, str]] = []
+for _gkey, _gdef in WHITELIST_GROUPS.items():
+    for _tok in _gdef["tokens"]:
+        _TOKEN_TO_GROUP.append((_tok, _gkey))
+# Sort: multi-word first (longer phrases beat shorter ones), then by length desc
+_TOKEN_TO_GROUP.sort(key=lambda x: (-(" " in x[0]), -len(x[0])))
+
+# Flat set of all whitelist tokens — used by scraper.py for slug
+# data-cleanup (drop redundant `model` attribute when it duplicates the
+# token already inferable from the title).
+WHITELIST_TOKENS: set = {tok for tok, _ in _TOKEN_TO_GROUP}
+
 
 # Smaller siblings that disqualify a match even if a primary token hits.
-# NOTE: transit custom / trafic / vivaro / jumpy are now in SMALL_VAN_MODELS
-# so they must NOT appear here — they get their own route.
+# These are panel/utility vans we do NOT want even though they share a
+# brand with whitelisted models (e.g. "Transit Connect" is a different
+# vehicle from "Transit Custom").
+#
+# Models PREVIOUSLY here but now whitelisted (do not re-add):
+#   - vito, v-klasse, v klasse  → now in `vito_v_class_l2`
+#   - talento                    → now in `vivaro_trafic_primastar_l2`
+#   - scudo                      → now in `scudo_gen3`
 SMALLER_SIBLINGS: List[str] = [
-    "vito", "citan", "v-klasse", "v klasse",
+    "citan",
     "transit connect", "transit courier",
     "kangoo",
     "zafira", "combo",
     "berlingo", "partner",
     "caddy",
-    "doblo", "fiorino", "talento", "scudo",
+    "doblo", "fiorino",
     "nemo", "bipper",
-    # Expert traveller is a 9-seat minibus — not a cargo platform
-    "expert traveller",
+    "expert traveller",  # 9-seat minibus variant of Expert
 ]
 
-# ---------------------------------------------------------------------------
-# Model-specific rule overrides (Stage 2)
-# ---------------------------------------------------------------------------
 
-_GLOBAL_RULES = {"min_year": 2014, "preferred_year": 2017, "label": "global"}
-
-MODEL_RULES: dict[str, dict] = {
-    "ducato":   {"min_year": 2016, "preferred_year": 2018, "label": "fiat_ducato_override"},
-    "sprinter": {"min_year": 2015, "preferred_year": 2017, "label": "sprinter_override"},
-    "master":   {"min_year": 2015, "preferred_year": 2017, "label": "master_override"},
-    "boxer":        {"min_year": 2014, "preferred_year": 2016, "label": "boxer_override"},
-    "jumper":       {"min_year": 2014, "preferred_year": 2016, "label": "jumper_override"},
-    "expert":       {"min_year": 2016, "preferred_year": 2018, "label": "expert_override"},
-    "transporter":  {"min_year": 2015, "preferred_year": 2017, "label": "transporter_override"},
-}
-
-def _rules_for(token: Optional[str]) -> dict:
-    return MODEL_RULES.get(token or "", _GLOBAL_RULES)
+def _rules_for_group(group: Optional[str]) -> dict:
+    """Return the rule dict for a whitelist group, or a permissive default."""
+    if group and group in WHITELIST_GROUPS:
+        return WHITELIST_GROUPS[group]
+    return {"min_year": 2014, "required_length": None, "required_height": None, "label": "global"}
 
 
 # ---------------------------------------------------------------------------
-# Stage 1: Hard-filter keyword lists
+# Stage 1: Hard-filter keyword lists (unchanged from previous big-van era —
+# damage / wrong-vehicle-type rejection still applies)
 # ---------------------------------------------------------------------------
 
-# 1.1 Vehicle type / body style exclusions
-#
-# Patterns are regex. Wrap single short tokens in ``\b…\b`` so we don't
-# match inside longer unrelated words (e.g. "bus" inside "business",
-# "coach" inside "approach", "tipper" inside "stripper", "crane" inside
-# something else). Multi-word phrases ("tractor unit", "dump truck",
-# "horse transport") are unambiguous as-is.
 HARD_REJECT_TYPE: List[Tuple[str, str]] = [
-    # trucks / heavy vehicles
     (r"\blorry\b|\blorries\b", "lorry"),
     (r"\btipper\b|\btippers\b", "tipper body"),
     (r"\bkipper\b|\bkippers\b", "tipper (NL/DE)"),
@@ -111,15 +171,12 @@ HARD_REJECT_TYPE: List[Tuple[str, str]] = [
     (r"\bexcavator\b", "excavator"),
     (r"\bgraafmachine\b", "excavator (NL)"),
     (r"\bcrane\b|crane[\s-]?mounted", "crane mounted"),
-    # vans converted / specialist bodies
     (r"\bambulance[a-z]*\b", "ambulance"),
     (r"\bziekenwagen\b", "ambulance (NL)"),
     (r"\bkrankenwagen\b", "ambulance (DE)"),
     (r"fire truck", "fire truck"),
     (r"\bbrandweer\b", "fire truck (NL)"),
     (r"\bfeuerwehr\b", "fire truck (DE)"),
-    # ``bus`` needs strict word boundaries — "business", "abuse" etc.
-    # would otherwise reject normal Boxer / Sprinter listings.
     (r"\bbus\b|\bbusses\b|\bbuses\b|\bminibus\b|\bschoolbus\b|\bschool bus\b|\bautobus\b|\breisbus\b", "bus / coach"),
     (r"\bcoach\b|\bcoaches\b", "coach"),
     (r"\bshuttle\b|\bshuttles\b", "passenger shuttle"),
@@ -131,7 +188,6 @@ HARD_REJECT_TYPE: List[Tuple[str, str]] = [
     (r"\bwohnmobil\b", "motorhome (DE)"),
     (r"\bmobilhome\b", "motorhome"),
     (r"\bcamper[a-z]*\b|\bkampeerwagen\b", "camper (pre-converted)"),
-    # bundled lots (van + something else — pricing / logistics gets messy)
     (r"with trailer", "bundled with trailer"),
     (r"\+ trailer", "bundled with trailer"),
     (r"met aanhanger", "bundled with trailer (NL)"),
@@ -140,7 +196,6 @@ HARD_REJECT_TYPE: List[Tuple[str, str]] = [
     (r"mit anhanger", "bundled with trailer (DE)"),
 ]
 
-# 1.2 Body mismatches (cargo-platform only)
 HARD_REJECT_BODY: List[Tuple[str, str]] = [
     (r"chassis[\s-]?cab", "chassis cab"),
     (r"chassis cabine", "chassis cab (NL)"),
@@ -165,11 +220,7 @@ HARD_REJECT_BODY: List[Tuple[str, str]] = [
     (r"volledig ingericht", "fully fitted interior (NL)"),
 ]
 
-# 1.4 Extreme damage
 HARD_REJECT_DAMAGE: List[Tuple[str, str]] = [
-    # engine — negative lookbehind for "no/geen/kein" to avoid matching
-    # "no engine failure codes" in OBD inspection reports.
-    # Suffix (?!\s*code) excludes "engine failure code(s)" (OBD context).
     (r"(?<!no )(?<!No )(?<!geen )(?<!Geen )(?<!kein )(?<!Kein )engine failure(?!\s*codes?)", "engine failure"),
     (r"(?<!no )(?<!No )(?<!geen )(?<!Geen )engine broken", "engine failure"),
     (r"motor defect", "engine failure (NL)"),
@@ -177,7 +228,6 @@ HARD_REJECT_DAMAGE: List[Tuple[str, str]] = [
     (r"motor stuk", "engine failure (NL)"),
     (r"motorschade", "engine failure (NL)"),
     (r"motorschaden", "engine failure (DE)"),
-    # not running
     (r"non[\s-]?runner", "non-runner"),
     (r"not starting", "not starting"),
     (r"not drivable", "not drivable"),
@@ -187,13 +237,11 @@ HARD_REJECT_DAMAGE: List[Tuple[str, str]] = [
     (r"startet nicht", "not starting (DE)"),
     (r"nicht fahrbereit", "not drivable (DE)"),
     (r"does not start", "not starting"),
-    # gearbox
     (r"gearbox failure", "gearbox failure"),
     (r"gearbox broken", "gearbox failure"),
     (r"versnellingsbak defect", "gearbox failure (NL)"),
     (r"versnellingsbak kapot", "gearbox failure (NL)"),
     (r"getriebe defekt", "gearbox failure (DE)"),
-    # fire / flood / structural
     (r"\bburned\b|\bburnt\b", "fire damage"),
     (r"fire damage", "fire damage"),
     (r"brandschade", "fire damage (NL)"),
@@ -207,32 +255,16 @@ HARD_REJECT_DAMAGE: List[Tuple[str, str]] = [
     (r"totalschade", "total loss (NL)"),
 ]
 
-# Fuel hard reject — only when structured attribute explicitly confirms.
-FUEL_HARD_REJECT = {"electric", "elektrisch", "elektro"}
+# Fuel — no hard rejects. Electric is explicitly allowed (eVito,
+# eTransporter, e-Expert etc. are valid camper-conversion candidates;
+# range/charging are buyer concerns, not classifier concerns).
+# FUEL_SOFT_PENALTY tokens are informational only — currently unused
+# in scoring; retained for future per-fuel weighting.
 FUEL_SOFT_PENALTY = {"cng", "lpg", "waterstof", "hydrogen"}
 
 # ---------------------------------------------------------------------------
-# Size detection
+# Size detection (unchanged tier pipeline — still useful for L2 confirmation)
 # ---------------------------------------------------------------------------
-#
-# Length (L1-L4) and height (H1-H3) are detected from a layered pipeline.
-# Most lot titles do NOT carry an explicit "L3H2" marker (≤20% in
-# practice), so we combine multiple signals at decreasing confidence:
-#
-#   1. explicit  — "L<n>H<m>" in title (highest)
-#   2. explicit  — separate "L<n>" / "H<n>" in title
-#   3. inferred  — roofline / wheelbase keywords ("high roof", "Maxi",
-#                  "extra lang", "Hochdach", …)
-#   4. inferred  — model-specific designation (e.g. Iveco Daily "35S" =
-#                  short, "35L" = long)
-#   5. guess     — weight_kg fallback per model family (only when length
-#                  is otherwise unknown)
-#   6. guess     — bodytype attribute fallback for height ("Box
-#                  construction" → H2)
-#
-# The pipeline never returns a wildcard reject: it only rejects on a
-# CONFIRMED L1 or H1 — wildcards/unknowns are passed through and
-# downgraded by scoring instead.
 
 _HEIGHT_KEYWORDS: List[Tuple[str, int, str]] = [
     (r"\b(super|extra|ultra)\s*(high|hoog|hoch)\s*(roof|dak|dach)\b", 3, "super-high roof"),
@@ -247,30 +279,44 @@ _LENGTH_KEYWORDS: List[Tuple[str, int, str]] = [
     (r"\bextra\s*(lang|long|lengte)\b|\bextralang\b|\bextralong\b",    4, "extra long"),
     (r"\bmaxi\b|\blwb\b|\blong\s*wheel\s*base\b|\blangwielbasis\b",    3, "long wheelbase"),
     (r"\bmwb\b|\bmedium\s*wheel\s*base\b|\bmidden\s*wielbasis\b",      2, "medium wheelbase"),
+    # Compact / short tokens — includes German "kompakt" which is how
+    # Mercedes Vito and V-Class label their shortest variant (4895mm).
     (r"\bswb\b|\bshort\s*wheel\s*base\b|\bkort\s*wielbasis\b"
-     r"|\bcompact\b",                                                   1, "short/compact wheelbase"),
+     r"|\bcompact\b|\bkompakt\b",                                       1, "short/compact wheelbase"),
 ]
 
-# Per-model empty-weight thresholds (kg) → length band. Highly approximate
-# — used only as a last-resort guess. None = skip (model doesn't fit
-# the L1-L4 nomenclature, e.g. Iveco Daily / VW Transporter).
+# Weight-band fallback for length. Only used when no other length signal
+# is present. The whitelisted models all sit in the small/mid-size class:
 _WEIGHT_LENGTH_BANDS: dict = {
-    "boxer":       (1900, 2050),   # <1900 → L1, 1900-2050 → L2, >2050 → L3
-    "jumper":      (1900, 2050),
-    "ducato":      (1900, 2050),
-    "transit":     (1950, 2150),
-    "sprinter":    (2100, 2300),
-    "crafter":     (2100, 2300),
-    "tge":         (2100, 2300),
-    "master":      (2000, 2200),
-    "movano":      (2000, 2200),
-    # Daily, Transporter, Expert — skipped (different chassis / size class)
+    # Renault Trafic / Opel Vivaro / Nissan Primastar / Fiat Talento — shared platform
+    "trafic":      (1700, 1900),
+    "vivaro":      (1700, 1900),
+    "primastar":   (1700, 1900),
+    "talento":     (1700, 1900),
+    # Peugeot Expert / Citroen Jumpy / Toyota ProAce / Fiat Scudo gen-3 — EMP2 platform
+    "expert":      (1600, 1800),
+    "jumpy":       (1600, 1800),
+    "proace":      (1600, 1800),
+    "pro ace":     (1600, 1800),
+    "scudo":       (1600, 1800),
+    # Ford Transit Custom + Tourneo Custom: SWB ~1900kg, LWB ~2050kg
+    "transit custom": (1900, 2050),
+    "tourneo custom": (1900, 2050),
+    # VW Transporter T5/T6: SWB ~1900kg, LWB ~2050kg
+    "transporter": (1900, 2050),
+    "t6.1":        (1900, 2050),
+    "t6_1":        (1900, 2050),
+    # Mercedes Vito / V-Class W447: Kompakt ~1900kg, Lang ~2000kg, Extralang ~2100kg.
+    # Bands push Extralang into L3 here (the Vito group accepts both L2 and L3,
+    # and the small-van clamp is suppressed for this group — see classify_vehicle).
+    "vito":        (1950, 2080),
+    "v-klasse":    (1950, 2080),
+    "v klasse":    (1950, 2080),
+    "v-class":     (1950, 2080),
+    # Hyundai Staria — single length (5253mm), so weight fallback is moot
+    # but included for completeness so unknown-length lots still get a signal.
+    "staria":      (2100, 2300),
 }
-
-
-# Iveco Daily length-suffix codes after the GVW prefix
-# e.g. "35S15" → S=short, "35L18" → L=long, "35C13" → chassis
-_DAILY_LEN_MAP = {"S": 2, "L": 3}  # C falls into a separate body and is already rejected elsewhere
 
 
 @dataclass
@@ -279,39 +325,38 @@ class SizeDetection:
     height: Optional[int]     # 1-3 or None
     confidence: str           # "explicit" | "inferred" | "guess" | "unknown"
     evidence: List[str]
-    status: str               # "accept" | "reject" | "unknown"
 
-# ---------------------------------------------------------------------------
-# Scoring constants
-# ---------------------------------------------------------------------------
-
-# Bonus keyword patterns (regex, bonus points, label)
-BONUS_SIGNALS: List[Tuple[str, int, str]] = [
-    (r"\b(airco|air\s*co|air\s*conditioning|klimaanlage)\b", 0, ""),  # note: no point value in spec
-    (r"\bcrew\s*cab\b|crewcab|\bdubbele\s*cabine\b|\bdouble\s*cab\b|5\s*seat|5-seat|5\s*persoons|vijf\s*personen", 10, "crew_cab"),
-    (r"\btrekhaak\b|tow\s*hitch|anhängerkupplung", 0, ""),  # no spec value
-]
-
-CREW_CAB_RE = re.compile(
-    r"\bcrew\s*cab\b|crewcab|\bdubbele\s*cabine\b|\bdouble\s*cab\b"
-    r"|5\s*seat|5-seat|5\s*persoons|vijf\s*personen|\bcombi\b",
-    re.IGNORECASE,
-)
 
 # ---------------------------------------------------------------------------
 # Result types
 # ---------------------------------------------------------------------------
 
-# ScoreBreakdown is defined in models.py (Pydantic) and imported above.
-# Evaluation wraps it alongside the other pipeline outputs.
+@dataclass
+class Classification:
+    """Output of ``classify_vehicle(title, description)``.
+
+    ``group`` is one of the keys of ``WHITELIST_GROUPS`` or None when no
+    whitelist token matched. ``variant`` is a compact L/H string like
+    "L2H1" / "L2" / "L2H?" derived from size detection. ``confidence``
+    grades the match: "high" (explicit token + explicit size), "medium"
+    (inferred size), "low" (token but no size signal), "unknown" (no
+    classifier hit at all → caller must reject)."""
+    group: Optional[str]
+    variant: Optional[str]
+    confidence: str
+    matched_token: Optional[str] = None
+    evidence: Optional[List[str]] = None
+
 
 @dataclass
 class Evaluation:
     passed_hard_filters: bool
     rejected_reason: Optional[str]
     van_type: Optional[str]
-    score: Optional[int]              # 0-100
-    breakdown: Optional[ScoreBreakdown]
+    model_group: Optional[str]
+    variant: Optional[str]
+    classification_confidence: Optional[str]
+    score: Optional[int]
     applied_rule_set: Optional[str]
     reasons: Optional[List[str]]
 
@@ -321,8 +366,7 @@ class Evaluation:
 # ---------------------------------------------------------------------------
 
 def _check_list(haystack: str, pairs: List[Tuple[str, str]]) -> Optional[str]:
-    """Run a list of (regex_pattern, label) against ``haystack`` case-insensitively
-    and return the first matching label, or None."""
+    """Run regex pairs against ``haystack`` case-insensitively; return first label."""
     s = haystack.lower()
     for pat, label in pairs:
         if re.search(pat, s, flags=re.IGNORECASE):
@@ -331,7 +375,6 @@ def _check_list(haystack: str, pairs: List[Tuple[str, str]]) -> Optional[str]:
 
 
 def _explicit_lh(s: str) -> Tuple[Optional[int], Optional[int], Optional[str]]:
-    """Tier 1: combined ``L<n>H<m>`` marker."""
     m = re.search(r"\bl\s*([1-4])\s*h\s*([1-3])\b", s)
     if not m:
         return None, None, None
@@ -340,7 +383,6 @@ def _explicit_lh(s: str) -> Tuple[Optional[int], Optional[int], Optional[str]]:
 
 
 def _explicit_l(s: str) -> Tuple[Optional[int], Optional[str]]:
-    """Tier 2: standalone ``L<n>`` (where n in 1-4)."""
     m = re.search(r"\bl\s*([1-4])\b", s)
     if m:
         return int(m.group(1)), f"explicit L{m.group(1)}"
@@ -348,7 +390,6 @@ def _explicit_l(s: str) -> Tuple[Optional[int], Optional[str]]:
 
 
 def _explicit_h(s: str) -> Tuple[Optional[int], Optional[str]]:
-    """Tier 2: standalone ``H<n>`` (where n in 1-3)."""
     m = re.search(r"\bh\s*([1-3])\b", s)
     if m:
         return int(m.group(1)), f"explicit H{m.group(1)}"
@@ -356,7 +397,6 @@ def _explicit_h(s: str) -> Tuple[Optional[int], Optional[str]]:
 
 
 def _height_from_keywords(s: str) -> Tuple[Optional[int], Optional[str]]:
-    """Tier 3: roofline keywords. Returns first match in priority order."""
     for pat, h, label in _HEIGHT_KEYWORDS:
         if re.search(pat, s):
             return h, label
@@ -364,37 +404,13 @@ def _height_from_keywords(s: str) -> Tuple[Optional[int], Optional[str]]:
 
 
 def _length_from_keywords(s: str) -> Tuple[Optional[int], Optional[str]]:
-    """Tier 3: wheelbase keywords. Returns first match in priority order."""
     for pat, l, label in _LENGTH_KEYWORDS:
         if re.search(pat, s):
             return l, label
     return None, None
 
 
-def _length_from_model_designation(s: str, model_token: Optional[str]) -> Tuple[Optional[int], Optional[str]]:
-    """Tier 4: per-model designation parsing.
-
-    Only Iveco Daily currently encodes length in its model number
-    (e.g. ``35S15``, ``35L18`` — S=short, L=long). Other families'
-    numeric prefixes encode GVW, not length, so we skip them."""
-    if model_token != "daily":
-        return None, None
-    # Match a Daily designation like 35S, 50C, 70L etc. The first 2
-    # digits are GVW (×100kg), the letter is the length code, and any
-    # trailing digits are power.
-    m = re.search(r"\b\d{2}([SLC])\d*\b", s, re.IGNORECASE)
-    if not m:
-        return None, None
-    code = m.group(1).upper()
-    L = _DAILY_LEN_MAP.get(code)
-    if L is None:
-        return None, None
-    return L, f"Daily {code}-suffix → L{L}"
-
-
 def _length_from_weight(model_token: Optional[str], weight_kg: Optional[int]) -> Tuple[Optional[int], Optional[str]]:
-    """Tier 5: weight-band fallback. Only fires when we have an empty
-    weight AND the model is in ``_WEIGHT_LENGTH_BANDS``."""
     if weight_kg is None or not model_token:
         return None, None
     bands = _WEIGHT_LENGTH_BANDS.get(model_token)
@@ -409,8 +425,6 @@ def _length_from_weight(model_token: Optional[str], weight_kg: Optional[int]) ->
 
 
 def _height_from_bodytype(body_type: Optional[str]) -> Tuple[Optional[int], Optional[str]]:
-    """Tier 6: bodytype attribute fallback. ``Box construction`` style
-    panel vans almost always have standing-height H2."""
     if not body_type:
         return None, None
     s = body_type.lower()
@@ -421,9 +435,7 @@ def _height_from_bodytype(body_type: Optional[str]) -> Tuple[Optional[int], Opti
     return None, None
 
 
-def _compose_van_type(L: Optional[int], H: Optional[int]) -> Optional[str]:
-    """Compose the legacy ``van_type`` string from ``(L, H)``. Uses
-    ``?`` for unknown dimensions; returns None when both are unknown."""
+def _compose_variant(L: Optional[int], H: Optional[int]) -> Optional[str]:
     if L is None and H is None:
         return None
     L_s = str(L) if L is not None else "?"
@@ -435,22 +447,17 @@ def _detect_size(
     haystack: str,
     model_token: Optional[str] = None,
     weight_kg: Optional[int] = None,
-    load_kg: Optional[int] = None,
     body_type: Optional[str] = None,
 ) -> SizeDetection:
-    """Multi-signal length+height detection. See module-level comment for
-    the tier pipeline."""
     s = haystack.lower()
     evidence: List[str] = []
     confidence = "unknown"
 
-    # Tier 1 ─ explicit combined LxHy
     L, H, ev = _explicit_lh(s)
     if L is not None and H is not None:
         evidence.append(ev)
         confidence = "explicit"
     else:
-        # Tier 2 ─ separate explicit L<n>, H<n>
         if L is None:
             L, ev = _explicit_l(s)
             if ev:
@@ -460,7 +467,6 @@ def _detect_size(
             if ev:
                 evidence.append(ev); confidence = "explicit"
 
-        # Tier 3 ─ keyword inference
         if H is None:
             H, ev = _height_from_keywords(s)
             if ev:
@@ -470,525 +476,217 @@ def _detect_size(
             if ev:
                 evidence.append(ev); confidence = "inferred" if confidence == "unknown" else confidence
 
-        # Tier 4 ─ model-specific designation (Iveco Daily)
-        if L is None:
-            L, ev = _length_from_model_designation(s, model_token)
-            if ev:
-                evidence.append(ev); confidence = "inferred" if confidence == "unknown" else confidence
-
-        # Tier 5 ─ weight-band guess for length
         if L is None:
             L, ev = _length_from_weight(model_token, weight_kg)
             if ev:
                 evidence.append(ev); confidence = "guess" if confidence == "unknown" else confidence
 
-        # Tier 6 ─ bodytype attribute fallback for height
         if H is None:
             H, ev = _height_from_bodytype(body_type)
             if ev:
                 evidence.append(ev); confidence = "guess" if confidence == "unknown" else confidence
 
-    van_type = _compose_van_type(L, H)
-
-    # Reject only on CONFIRMED (explicit/inferred) L1 or H1 — wildcards
-    # and guess-confidence keep their soft pass and let scoring handle
-    # the downgrade.
-    if confidence in ("explicit", "inferred"):
-        if L == 1 and H == 1:
-            return SizeDetection(L, H, confidence, evidence, "reject")
-        if L == 1 or H == 1:
-            return SizeDetection(L, H, confidence, evidence, "reject")
-
-    status = "accept" if (L is not None or H is not None) else "unknown"
-    return SizeDetection(L, H, confidence, evidence, status)
+    return SizeDetection(L, H, confidence, evidence)
 
 
 def _sibling_match(haystack_lower: str) -> Optional[str]:
-    """Return the name of a smaller-sibling model present in ``haystack_lower``
-    as a whole word (single tokens) or whole multi-word phrase. Word boundaries
-    avoid false positives like "partner" matching "business partner" or
-    "trafic" matching "traffic"."""
     for sib in SMALLER_SIBLINGS:
-        # Build a pattern that matches the sibling as a whole word/phrase.
         pat = r"\b" + r"\s+".join(re.escape(p) for p in sib.split()) + r"\b"
         if re.search(pat, haystack_lower):
             return sib
     return None
 
 
-def _matched_model(haystack: str) -> Tuple[Optional[str], Optional[str], Optional[str]]:
-    """Return (canonical_name, token, pipeline) where pipeline is 'big' or 'small'.
-
-    Priority order:
-    1. Multi-word small van tokens (e.g. "transit custom" beats "transit")
-    2. Big van models (ALLOWED_MODELS) — must beat generic single words like
-       "transporter" used as a body-type descriptor in "Citroën Jumper Transporter"
-    3. Single-word small van tokens (only if no big van matched)
-    """
-    s = haystack.lower()
-    if _sibling_match(s):
-        return None, None, None
-
-    # 1. Multi-word small van tokens first (priority over single-word big tokens)
-    for token in sorted(SMALL_VAN_MODELS, key=len, reverse=True):
-        if " " not in token:
-            continue  # single-word tokens handled in step 3
-        canonical = SMALL_VAN_MODELS[token]
-        pat = r"\b" + r"\s+".join(re.escape(p) for p in token.split()) + r"\b"
-        if re.search(pat, s):
-            return canonical, token.replace(" ", "_"), "small"
-
-    # 2. Big van models
-    for token, canonical in ALLOWED_MODELS.items():
-        if token in ("expert", "transporter"):
-            continue  # these live in SMALL_VAN_MODELS — handled in step 3
-        if re.search(rf"\b{re.escape(token)}\b", s):
-            return canonical, token, "big"
-
-    # 3. Single-word small van tokens (only reached if no big van matched)
-    for token in SMALL_VAN_MODELS:
-        if " " in token:
-            continue  # already handled
-        canonical = SMALL_VAN_MODELS[token]
-        if re.search(rf"\b{re.escape(token)}\b", s):
-            return canonical, token, "small"
-
-    return None, None, None
-
-
-# ---------------------------------------------------------------------------
-# Stage 3: Scoring helpers
-# ---------------------------------------------------------------------------
-
-def _score_year(year: Optional[int]) -> int:
-    if year is None:
-        return 0
-    if year >= 2020:
-        return 35   # was 30; +5 redistributed from VAT bonus
-    if year >= 2017:
-        return 27
-    if year >= 2014:
-        return 18
-    return 0
-
-
-def _score_mileage(km: Optional[int]) -> int:
-    if km is None:
-        return 0
-    if km < 100_000:
-        return 35   # was 30; +5 redistributed from VAT bonus
-    if km <= 180_000:
-        return 22
-    if km <= 250_000:
-        return 10
-    return 0
-
-
-# L/H scoring grid. L2H2 and L3H2 are the conversion sweet spot —
-# enough cargo room for a camper build without being unwieldy. L4 and
-# H3 are downweighted because they're awkward to drive, park, and
-# convert (wind drag, hard to fit standard parking, weird interior
-# proportions for camping). H1 is unusable for standing room. Wildcards
-# get a middle band so we still rank partial knowledge above unknown.
-_SIZE_GRID: dict = {
-    ("1", "1"): 0, ("1", "2"): 5,  ("1", "3"): 3,  ("1", "?"): 3,
-    ("2", "1"): 0, ("2", "2"): 18, ("2", "3"): 8,  ("2", "?"): 11,
-    ("3", "1"): 0, ("3", "2"): 20, ("3", "3"): 8,  ("3", "?"): 12,
-    ("4", "1"): 0, ("4", "2"): 8,  ("4", "3"): 3,  ("4", "?"): 5,
-    ("?", "1"): 0, ("?", "2"): 10, ("?", "3"): 4,  ("?", "?"): 5,
-}
-
-
-def _score_van_size(van_type: Optional[str]) -> int:
-    """Map a ``L<n>H<m>`` (or wildcard) van_type to its grid score.
-
-    Accepts the legacy compact forms ("H2+", "L3", "PANEL", "L1") that
-    pre-multi-signal detection produced — they're translated to the
-    closest wildcard combo to keep historical entries scoring sanely."""
-    s = (van_type or "").upper()
-
-    m = re.match(r"L([1-4?])H([1-3?])$", s)
-    if m:
-        return _SIZE_GRID.get((m.group(1), m.group(2)), 5)
-
-    # Legacy / pre-refactor codes — map to closest wildcard slot.
-    legacy = {
-        "H2+":   _SIZE_GRID[("?", "2")],
-        "H3":    _SIZE_GRID[("?", "3")],
-        "H2":    _SIZE_GRID[("?", "2")],
-        "H1":    _SIZE_GRID[("?", "1")],
-        "L3":    _SIZE_GRID[("3", "?")],
-        "L2":    _SIZE_GRID[("2", "?")],
-        "L1":    _SIZE_GRID[("1", "?")],
-        "PANEL": _SIZE_GRID[("?", "2")],
-    }
-    if s in legacy:
-        return legacy[s]
-
-    return 5  # unknown — slight penalty
-
-
-def _score_emission(emission_standard: Optional[str]) -> int:
-    if not emission_standard:
-        return 5  # neutral when unknown
-    s = emission_standard.lower()
-    if "euro 6" in s or "euro6" in s:
-        return 10
-    if "euro 5" in s or "euro5" in s:
-        return 6
-    if "euro 4" in s or "euro4" in s:
-        return 3
-    return 0  # Euro 3 or below
-
-
-# Brand popularity for camper conversion (NL/EU market).
-_RESALE_BRAND = {
-    "ducato": 4, "boxer": 4, "jumper": 4,   # PSA triplets — biggest market
-    "transit": 3, "sprinter": 3,             # very common, easy to resell
-    "crafter": 2, "master": 2, "movano": 2, "daily": 2, "tge": 2,
-    "expert": 1, "transporter": 1,
-}
-
-
-def _score_resaleability(
-    model_token: Optional[str],
-    emission_standard: Optional[str],
-    condition: Optional[str],
-) -> int:
-    brand_pts = _RESALE_BRAND.get(model_token or "", 1)
-
-    emission_pts = 0
-    if emission_standard:
-        s = emission_standard.lower()
-        if "euro 6" in s or "euro6" in s:
-            emission_pts = 4
-        elif "euro 5" in s or "euro5" in s:
-            emission_pts = 2
-        elif "euro 4" in s or "euro4" in s:
-            emission_pts = 1
-    else:
-        emission_pts = 2  # unknown — slightly penalised
-
-    condition_pts = 0
-    if condition == "WORKING":
-        condition_pts = 2
-    elif condition == "NOT_CHECKED":
-        condition_pts = 1
-
-    return min(brand_pts + emission_pts + condition_pts, 10)
-
-
-def _build_reasons(
-    canonical: str,
-    van_type: Optional[str],
-    size_evidence: Optional[str],
-    bd: ScoreBreakdown,
-    km: Optional[int],
-    year: Optional[int],
-    rule_label: str,
-) -> List[str]:
-    out = [f"{canonical} ({van_type or 'size unknown'})"]
-    if size_evidence:
-        out.append(f"size: {size_evidence}")
-    if bd.mileage and (km is not None or year is not None):
-        km_s = f"{km // 1000}k km" if km else "km ?"
-        yr_s = str(year) if year else "year ?"
-        out.append(f"{km_s}, {yr_s}")
-    if bd.crew_cab:
-        out.append("crew cab / 5-seat")
-    out.append(f"rules: {rule_label}")
+def _normalize_electric_variants(s: str) -> str:
+    """Strip electric-variant prefixes/suffixes so the token matcher sees
+    the base model name. Handles common manufacturer styling:
+      eVito / e-Vito          → Vito
+      e-Transporter           → Transporter
+      Vivaro-e                → Vivaro
+      Trafic E-Tech           → Trafic
+      Transit Custom Plug-in  → Transit Custom
+    Without this, ``\\bvito\\b`` fails to match the glued "eVito" form
+    used in Mercedes lot titles."""
+    out = s
+    for token in WHITELIST_TOKENS:
+        if " " in token or "." in token:
+            continue   # only single-word tokens are subject to e-prefix glue
+        # Leading "e-?" (electric prefix) — handles "eVito", "e-Vito"
+        out = re.sub(rf"\be-?({re.escape(token)})\b", r"\1", out, flags=re.IGNORECASE)
+        # Trailing "-e" suffix — handles "Vivaro-e"
+        out = re.sub(rf"\b({re.escape(token)})-e\b", r"\1", out, flags=re.IGNORECASE)
+        # Trailing " E-Tech" / " e-tech" — Renault's electric trim name
+        out = re.sub(rf"\b({re.escape(token)})\s+e-?tech\b", r"\1", out, flags=re.IGNORECASE)
     return out
 
 
-# ---------------------------------------------------------------------------
-# Main entry point
-# ---------------------------------------------------------------------------
-
-def evaluate(vehicle) -> Evaluation:
-    title     = (getattr(vehicle, "title", None) or "")
-    model_a   = (getattr(vehicle, "model", None) or "")
-    remarks   = (getattr(vehicle, "remarks", None) or "")
-    addl      = (getattr(vehicle, "additional_information", None) or "")
-    fuel      = getattr(vehicle, "fuel", None)
-    km        = getattr(vehicle, "km", None)
-    year      = getattr(vehicle, "year", None)
-    vat_margin = getattr(vehicle, "vat_margin", None)
-
-    haystack = " ".join(s for s in [title, model_a, remarks, addl] if s)
-
-    # ── Stage 1: Hard filters ────────────────────────────────────────────
-    canonical, token, pipeline = _matched_model(haystack)
-    if not canonical:
-        sib = _sibling_match(haystack.lower())
-        if sib:
-            return Evaluation(False, f"smaller_sibling: {sib}", None, None, None, None, None)
-        return Evaluation(False, "brand_not_whitelisted", None, None, None, None, None)
-
-    r = _check_list(haystack, HARD_REJECT_TYPE)
-    if r:
-        return Evaluation(False, f"vehicle_type: {r}", None, None, None, None, None)
-
-    r = _check_list(haystack, HARD_REJECT_BODY)
-    if r:
-        return Evaluation(False, f"body_mismatch: {r}", None, None, None, None, None)
-
-    r = _check_list(haystack, HARD_REJECT_DAMAGE)
-    if r:
-        return Evaluation(False, f"damage: {r}", None, None, None, None, None)
-
-    # Fuel — only hard-reject confirmed electric
-    if fuel:
-        s = fuel.strip().lower()
-        for bad in FUEL_HARD_REJECT:
-            if bad in s:
-                return Evaluation(False, f"fuel_electric: {fuel}", None, None, None, None, None)
-
-    # Mileage hard cap (1.3)
-    if km is not None and km > 250_000:
-        return Evaluation(False, f"mileage_too_high: {km}km", None, None, None, None, None)
-
-    # Body size — multi-signal detection. Only confirmed L1/H1 reject;
-    # unknown / wildcards pass through and let scoring downgrade them.
-    det = _detect_size(
-        haystack,
-        model_token=token,
-        weight_kg=getattr(vehicle, "weight_kg", None),
-        load_kg=getattr(vehicle, "load_kg", None),
-        body_type=getattr(vehicle, "body_type", None),
-    )
-    van_type = _compose_van_type(det.length, det.height)
-    size_evidence = "; ".join(det.evidence) if det.evidence else None
-    if det.status == "reject":
-        return Evaluation(False, f"size_too_small: {size_evidence}", van_type, None, None, None, None)
-
-    # ── Stage 2: Rule resolution ─────────────────────────────────────────
-    rules = _rules_for(token)
-    rule_label = rules["label"]
-
-    if year is not None and year < rules["min_year"]:
-        return Evaluation(
-            False,
-            f"year_below_minimum: {year} < {rules['min_year']} ({rule_label})",
-            van_type, None, None, rule_label, None,
-        )
-
-    # ── Stage 3: Scoring ─────────────────────────────────────────────────
-    bd = ScoreBreakdown(
-        year        = _score_year(year),
-        mileage     = _score_mileage(km),
-        van_size    = _score_van_size(van_type),
-        emission    = _score_emission(getattr(vehicle, "emission_standard", None)),
-        resaleability = _score_resaleability(token, getattr(vehicle, "emission_standard", None), getattr(vehicle, "condition", None)),
-        crew_cab    = 10 if CREW_CAB_RE.search(haystack) else 0,
-    )
-    score = bd.total()
-
-    reasons = _build_reasons(canonical, van_type, size_evidence, bd, km, year, rule_label)
-
-    if score < SCORE_THRESHOLD:
-        return Evaluation(
-            True,
-            f"score_below_threshold: {score} < {SCORE_THRESHOLD}",
-            van_type, score, bd, rule_label, reasons,
-        )
-
-    return Evaluation(True, None, van_type, score, bd, rule_label, reasons)
-
-
-# ---------------------------------------------------------------------------
-# Pipeline split: classify + per-pipeline scoring
-# ---------------------------------------------------------------------------
-
-# Big-van model tokens (camper-first pipeline)
-_BIG_VAN_TOKENS = frozenset(
-    t for t in ALLOWED_MODELS if t not in ("expert", "transporter")
-)
-
-# Small-van model tokens (dual-use pipeline).  These include the normalised
-# forms stored in the vehicle dict after _matched_model returns them.
-_SMALL_VAN_TOKENS = frozenset([
-    "transit_custom", "trafic", "vivaro", "jumpy",
-    "expert", "transporter",
-])
-
-# Models that sit on the big/small border and appear in BOTH pipelines
-_DUAL_CATEGORY_MODELS = frozenset(["transit"])
-
-# Ford Transit size combos that qualify it as big-van territory
-_TRANSIT_BIG_SIZES = frozenset(["L3H2", "L3H3", "L4H2", "L4H3", "L3H?", "L4H?"])
-
-
-def classify_vehicle(vehicle: dict) -> str:
-    """Return 'big', 'small', or 'both'. Mirrors _matched_model priority:
-    1. multi-word small van tokens (transit custom beats transit)
-    2. big van model tokens (ducato/sprinter beat generic 'transporter')
-    3. single-word small van tokens
-    """
-    title    = (vehicle.get("title") or "").lower()
-    van_type = vehicle.get("van_type") or ""
-
-    # Size override: L3+/L4+ formats are big-van territory regardless of model.
-    if re.match(r"L[34]", van_type, re.IGNORECASE):
-        return "big"
-
-    haystack = " ".join(filter(None, [title,
-                                      vehicle.get("remarks") or "",
-                                      vehicle.get("additional_information") or ""])).lower()
-
-    # 1. Multi-word small van tokens first
-    for token in sorted(SMALL_VAN_MODELS, key=len, reverse=True):
-        if " " not in token:
-            continue
-        pat = r"\b" + r"\s+".join(re.escape(p) for p in token.split()) + r"\b"
-        if re.search(pat, haystack):
-            return "small"
-
-    # 2. Big van model tokens (must beat generic single words like 'transporter')
-    for token in _BIG_VAN_TOKENS:
-        if re.search(rf"\b{re.escape(token)}\b", haystack):
-            # Ford Transit is ambiguous by size
-            if token == "transit":
-                if van_type in _TRANSIT_BIG_SIZES:
-                    return "big"
-                return "both"
-            return "big"
-
-    # 3. Single-word small van tokens (only if no big van matched above)
-    for token in SMALL_VAN_MODELS:
-        if " " in token:
-            continue
-        if re.search(rf"\b{re.escape(token)}\b", haystack):
-            return "small"
-
-    # Fallback
-    return "big"
-
-
-# ── Big van scoring (camper-first) ──────────────────────────────────────────
-#
-# Weights (max points before clamping to 100):
-#   A) Camper usability  40 pts — L/H sweet spot + cargo body
-#   B) Build efficiency  25 pts — clean cargo box, no seats penalty
-#   C) Mechanical        20 pts — mileage + year
-#   D) Value             15 pts — deal_ratio
-
-
-def _bvs_camper_usability(van_type: Optional[str], body_type: Optional[str]) -> int:
-    """A) Camper usability — 0-40 pts."""
-    s = (van_type or "").upper()
-    score = 0
-
-    # Sweet-spot grid
-    _grid = {
-        ("2", "2"): 35, ("3", "2"): 40,
-        ("2", "3"): 20, ("3", "3"): 22,
-        ("4", "2"): 18, ("4", "3"): 10,
-        ("2", "?"): 22, ("3", "?"): 25,
-        ("4", "?"): 12,
-        ("1", "2"): 5,  ("1", "3"): 3,
-        ("?", "2"): 20, ("?", "3"): 12,
-        ("?", "?"): 10,
-    }
-    m = re.match(r"L([1-4?])H([1-3?])$", s)
-    if m:
-        score = _grid.get((m.group(1), m.group(2)), 10)
-    else:
-        score = 10  # unknown — moderate penalty
-
-    # Cargo box body bonus: closed panel van = good insulation candidate
-    bt = (body_type or "").lower()
-    if any(kw in bt for kw in ("box", "closed van", "panel van", "kastenwagen", "bestelwagen", "furgon")):
-        score = min(score + 3, 40)
-
-    return min(score, 40)
-
-
-def _bvs_build_efficiency(vehicle: dict) -> int:
-    """B) Build efficiency — 0-25 pts.
-
-    Rewards an empty cargo bay with no seats / no conversion interference.
-    """
-    pts = 15  # baseline — unknown = neutral
-    seats = vehicle.get("seats")
-    title_lower = (vehicle.get("title") or "").lower()
-    remarks_lower = (vehicle.get("remarks") or "").lower()
-    hay = title_lower + " " + remarks_lower
-
-    if seats is not None:
-        if seats <= 2:
-            pts = 25   # driver-only or driver+passenger — empty bay, ideal
-        elif seats <= 3:
-            pts = 22
-        elif seats <= 5:
-            # crew cab — some conversion friction but seats can be removed
-            pts = 12
+def _match_whitelist_token(haystack_lower: str) -> Tuple[Optional[str], Optional[str]]:
+    """Return (token, group_key) for the first whitelist match, multi-word
+    tokens prioritised. Returns (None, None) when no token matches."""
+    for token, group in _TOKEN_TO_GROUP:
+        if " " in token or "." in token:
+            # phrase / dotted token — match as whole phrase
+            parts = re.split(r"[\s.]+", token)
+            pat = r"\b" + r"\s*\.?\s*".join(re.escape(p) for p in parts) + r"\b"
         else:
-            pts = 6    # many seats = a lot of removal work
-
-    # Factory conversion signals (shelving, racking, workshop fit-out
-    # that must be stripped) — small penalty but NOT a hard reject
-    if re.search(r"\b(shelving|racking|inrichting|stellingkast|rek)\b", hay):
-        pts = max(pts - 5, 0)
-
-    return min(pts, 25)
+            pat = rf"\b{re.escape(token)}\b"
+        if re.search(pat, haystack_lower):
+            return token, group
+    return None, None
 
 
-def _bvs_mechanical(km: Optional[int], year: Optional[int]) -> int:
-    """C) Mechanical baseline — 0-20 pts."""
-    yr_pts = 0
-    if year is not None:
-        if year >= 2020:   yr_pts = 12
-        elif year >= 2017: yr_pts = 9
-        elif year >= 2014: yr_pts = 5
-        else:              yr_pts = 0
+# ---------------------------------------------------------------------------
+# Public: classify_vehicle (per spec signature)
+# ---------------------------------------------------------------------------
 
-    km_pts = 0
-    if km is not None:
-        if km < 80_000:    km_pts = 8
-        elif km < 150_000: km_pts = 6
-        elif km < 200_000: km_pts = 3
-        else:              km_pts = 0
+def classify_vehicle(
+    title: str,
+    description: str = "",
+    *,
+    weight_kg: Optional[int] = None,
+    body_type: Optional[str] = None,
+) -> Classification:
+    """Classify a listing against the whitelist groups.
 
-    return min(yr_pts + km_pts, 20)
+    Returns ``Classification(group, variant, confidence, matched_token,
+    evidence)``. ``group=None`` and ``confidence='unknown'`` when no
+    whitelist token matched — the caller MUST treat this as a rejection.
+
+    ``weight_kg`` and ``body_type`` are optional structured-data inputs
+    that improve size detection when title/description alone are silent.
+    """
+    haystack = " ".join(s for s in (title, description) if s)
+    s = haystack.lower()
+
+    # Normalize electric-variant naming (eVito → Vito, Vivaro-e → Vivaro,
+    # Trafic E-Tech → Trafic, etc.) so the token matcher's word-boundary
+    # regex isn't defeated by the glued "e" prefix in manufacturer styling.
+    s = _normalize_electric_variants(s)
+
+    # Smaller-sibling reject takes priority — Transit Connect, Vito,
+    # Caddy, etc. must NOT classify as a whitelist match even if a
+    # whitelist token also appears.
+    sib = _sibling_match(s)
+    if sib:
+        return Classification(
+            group=None, variant=None, confidence="unknown",
+            matched_token=None, evidence=[f"smaller_sibling: {sib}"],
+        )
+
+    token, group = _match_whitelist_token(s)
+    if not group:
+        return Classification(
+            group=None, variant=None, confidence="unknown",
+            matched_token=None, evidence=None,
+        )
+
+    det = _detect_size(
+        haystack, model_token=token, weight_kg=weight_kg, body_type=body_type,
+    )
+
+    # Small-van whitelist remap: most whitelist families have only L1/L2
+    # variants in their factory nomenclature (no L3). The shared
+    # length-keyword pipeline maps "LWB" / "Maxi" / "lang" to L3 because
+    # that's correct for big vans (Sprinter/Ducato/etc) — but for those
+    # small-van groups "long wheelbase" = L2 (the long variant of an
+    # L1/L2 platform). Clamp inferred L3/L4 down to L2 here so
+    # strict_filter doesn't false-reject "Trafic LWB 2020".
+    #
+    # Group-aware: only clamp when the matched group requires L2
+    # exclusively. Groups that legitimately allow L3 (e.g.
+    # ``vito_v_class_l2`` accepts Mercedes Extralang which IS L3-class)
+    # keep the detected length so the variant reflects reality.
+    group_rules = WHITELIST_GROUPS[group]
+    if group_rules.get("required_length") == [2]:
+        if det.length in (3, 4) and det.confidence in ("inferred", "guess"):
+            explicit_present = any(
+                re.search(r"\bL\s*[34]\b", e, re.IGNORECASE) for e in det.evidence
+            )
+            if not explicit_present:
+                det = SizeDetection(
+                    length=2, height=det.height, confidence=det.confidence,
+                    evidence=det.evidence + [f"clamped L{det.length}→L2 for small-van group"],
+                )
+
+    variant = _compose_variant(det.length, det.height)
+
+    if det.confidence == "explicit":
+        confidence = "high"
+    elif det.confidence == "inferred":
+        confidence = "medium"
+    elif det.confidence == "guess":
+        confidence = "low"
+    else:
+        confidence = "low"
+
+    evidence = [f"token: {token}"] + det.evidence
+    return Classification(
+        group=group, variant=variant, confidence=confidence,
+        matched_token=token, evidence=evidence,
+    )
 
 
-def _bvs_value(deal_ratio: Optional[float]) -> int:
-    """D) Value — 0-15 pts."""
-    if deal_ratio is None:
-        return 5   # neutral
-    if deal_ratio >= 0.30:  return 15
-    if deal_ratio >= 0.20:  return 12
-    if deal_ratio >= 0.10:  return 8
-    if deal_ratio >= 0.0:   return 5
-    return 2   # slightly overpaying
+# ---------------------------------------------------------------------------
+# Public: strict_filter
+# ---------------------------------------------------------------------------
+
+def strict_filter(vehicle, classification: Classification) -> Tuple[bool, Optional[str]]:
+    """Apply the camper-candidate hard gate to a classified vehicle.
+
+    Returns ``(passed, rejected_reason)``. Soft-gate policy: only
+    *confirmed* violations of size / year / Euro / seats reject. Unknown
+    values pass. The classifier itself is a hard gate — group=None
+    rejects unconditionally as ``brand_not_in_whitelist``.
+    """
+    if classification.group is None:
+        return False, "brand_not_in_whitelist"
+
+    rules = WHITELIST_GROUPS[classification.group]
+
+    # Size — parse the variant string back to L/H ints
+    if classification.variant:
+        m = re.match(r"L([1-4?])H([1-3?])$", classification.variant)
+        if m:
+            L = None if m.group(1) == "?" else int(m.group(1))
+            H = None if m.group(2) == "?" else int(m.group(2))
+            req_L = rules.get("required_length")
+            req_H = rules.get("required_height")
+            if L is not None and req_L is not None and L not in req_L:
+                return False, f"size_not_allowed: L{L} (group requires L{'/'.join(map(str, req_L))})"
+            if H is not None and req_H is not None and H not in req_H:
+                return False, f"size_not_allowed: H{H} (group requires H{'/'.join(map(str, req_H))})"
+
+    # Year — soft gate: only reject confirmed below min_year
+    year = getattr(vehicle, "year", None) if not isinstance(vehicle, dict) else vehicle.get("year")
+    min_year = rules.get("min_year")
+    if year is not None and min_year is not None and year < min_year:
+        return False, f"year_below_minimum: {year} < {min_year} ({classification.group})"
+
+    # Emission — soft gate: only reject confirmed Euro 3/4/5
+    emission = (
+        getattr(vehicle, "emission_standard", None)
+        if not isinstance(vehicle, dict)
+        else vehicle.get("emission_standard")
+    )
+    if emission:
+        es = str(emission).lower()
+        if re.search(r"\beuro\s*[12345]\b|\beuro[12345]\b", es) and "euro 6" not in es and "euro6" not in es:
+            return False, f"emission_below_euro6: {emission}"
+
+    # Seats — soft gate: only reject confirmed seats < 6
+    seats = getattr(vehicle, "seats", None) if not isinstance(vehicle, dict) else vehicle.get("seats")
+    if seats is not None and seats < 6:
+        return False, f"seats_below_6: {seats}"
+
+    return True, None
 
 
-def score_big_van(vehicle: dict) -> int:
-    """Return a 0-100 camper-first suitability score for a big van."""
-    van_type   = vehicle.get("van_type")
-    body_type  = vehicle.get("body_type")
-    km         = vehicle.get("km")
-    year       = vehicle.get("year")
-    deal_ratio = vehicle.get("deal_ratio")
+# ---------------------------------------------------------------------------
+# Stage 3: Small-van scoring (kept from previous era — still the right
+# shape for the camper-candidate models, all of which are small vans)
+# ---------------------------------------------------------------------------
 
-    a = _bvs_camper_usability(van_type, body_type)
-    b = _bvs_build_efficiency(vehicle)
-    c = _bvs_mechanical(km, year)
-    d = _bvs_value(deal_ratio)
-
-    return min(a + b + c + d, 100)
-
-
-# ── Small van scoring (dual-use-first) ──────────────────────────────────────
-#
-# Weights (max points before clamping to 100):
-#   A) Dual-use utility    45 pts — seats, crew cab
-#   B) City practicality   20 pts — size / length
-#   C) Conversion potential 20 pts — fold-flat, sleeping layout signals
-#   D) Value               15 pts — deal_ratio
-
-
-_CREW_CAB_RE_SV = re.compile(
+_CREW_CAB_RE = re.compile(
     r"\bcrew\s*cab\b|crewcab|\bdubbele\s*cabine\b|\bdouble\s*cab\b"
     r"|5\s*seat|5-seat|5\s*persoons|vijf\s*personen|\bcombi\b"
     r"|6\s*seat|6-seat|6\s*persoons|zes\s*personen",
@@ -997,11 +695,7 @@ _CREW_CAB_RE_SV = re.compile(
 
 
 def _svs_dual_use(vehicle: dict) -> int:
-    """A) Dual-use utility — 0-45 pts.
-
-    6 legal seats = 25 pts (MASSIVE), crew cab = 10 pts baseline.
-    Factory anchor points or removable seat signals also score.
-    """
+    """Dual-use utility — 0-45 pts.  6 seats = max, crew cab = strong signal."""
     hay = " ".join(filter(None, [
         vehicle.get("title"), vehicle.get("remarks"),
         vehicle.get("additional_information"),
@@ -1010,31 +704,25 @@ def _svs_dual_use(vehicle: dict) -> int:
     seats = vehicle.get("seats")
     pts = 0
 
-    # Seat count scoring
     if seats is not None:
         if seats >= 6:    pts = 38
         elif seats == 5:  pts = 28
         elif seats == 4:  pts = 18
         elif seats == 3:  pts = 10
-        else:             pts = 2   # cargo only — low dual-use value for small van
-    elif _CREW_CAB_RE_SV.search(hay):
-        pts = 22   # strong signal even without explicit seat count
+        else:             pts = 2
+    elif _CREW_CAB_RE.search(hay):
+        pts = 22
 
-    # Anchor / removable seat signals — bonus on top
     if re.search(r"\b(anchor\s*point|rail|zitplaats|afneembare?\s*stoel|klapstoel)\b", hay):
         pts = min(pts + 7, 45)
 
     return min(pts, 45)
 
 
-def _svs_city_practicality(van_type: Optional[str], fuel: Optional[str]) -> int:
-    """B) City practicality — 0-20 pts.
-
-    Shorter vans score better (L1>L2>L3). Diesel gets neutral, petrol/hybrid
-    gets slight bonus for city zones.
-    """
-    s = (van_type or "").upper()
-    size_pts = 10  # unknown — neutral
+def _svs_city_practicality(variant: Optional[str], fuel: Optional[str]) -> int:
+    """City practicality — 0-20 pts.  L1 > L2 > L3; petrol/hybrid bonus."""
+    s = (variant or "").upper()
+    size_pts = 10
 
     m = re.match(r"L([1-4?])H([1-3?])$", s)
     if m:
@@ -1056,24 +744,19 @@ def _svs_city_practicality(van_type: Optional[str], fuel: Optional[str]) -> int:
 
 
 def _svs_conversion_potential(vehicle: dict) -> int:
-    """C) Conversion potential — 0-20 pts.
-
-    Signals: fold-flat seats, sleeping layout references, bench-type seating,
-    skylights/roof vent mentions, camper-prep mentions.
-    """
+    """Conversion potential — 0-20 pts.  Fold-flat seats, sleeping signals, skylights."""
     hay = " ".join(filter(None, [
         vehicle.get("title"), vehicle.get("remarks"),
         vehicle.get("additional_information"),
     ])).lower()
 
-    pts = 8   # base — everything has some conversion potential
+    pts = 8
     if re.search(r"\b(fold[\s-]?flat|inklapbare?\s*stoel|fold\s*down\s*seat|klapstoel)\b", hay):
         pts = min(pts + 6, 20)
     if re.search(r"\b(sleeping|slaap|bed|matrass|matras|camperklaar|camper\s*ready)\b", hay):
         pts = min(pts + 6, 20)
     if re.search(r"\b(skylight|dakraam|panoramisch?\s*dak|glasdak)\b", hay):
         pts = min(pts + 3, 20)
-    # Window van / kombi van signals — good candidate for conversion
     if re.search(r"\b(kombi|combi|glazen\s*zij|side\s*window\s*van)\b", hay):
         pts = min(pts + 3, 20)
 
@@ -1081,7 +764,6 @@ def _svs_conversion_potential(vehicle: dict) -> int:
 
 
 def _svs_value(deal_ratio: Optional[float]) -> int:
-    """D) Value — 0-15 pts. Same logic as big van."""
     if deal_ratio is None:
         return 5
     if deal_ratio >= 0.30:  return 15
@@ -1092,27 +774,22 @@ def _svs_value(deal_ratio: Optional[float]) -> int:
 
 
 def score_small_van(vehicle: dict) -> int:
-    """Return a 0-100 dual-use-first suitability score for a small van."""
-    van_type   = vehicle.get("van_type")
+    """Return a 0-100 camper-candidate suitability score."""
+    variant    = vehicle.get("variant") or vehicle.get("van_type")
     fuel       = vehicle.get("fuel")
     deal_ratio = vehicle.get("deal_ratio")
 
     a = _svs_dual_use(vehicle)
-    b = _svs_city_practicality(van_type, fuel)
+    b = _svs_city_practicality(variant, fuel)
     c = _svs_conversion_potential(vehicle)
     d = _svs_value(deal_ratio)
 
     return min(a + b + c + d, 100)
 
 
-# ── ROI scoring (investment / rental-income-first) ───────────────────────────
-#
-# Weights:  Demand 35%  Utilization 30%  Cost efficiency 20%  Liquidity 15%
-# Tiers:    S ≥ 8.5     A ≥ 7.0         B ≥ 5.5             C < 5.5
-#
-# Model: NL peer-to-peer rental market (SnappCar-style).
-# Best ROI = high-demand boring utility vans (crew cabs, small delivery)
-# cheap to buy and easy to resell. Campers / luxury = lifestyle, not ROI.
+# ---------------------------------------------------------------------------
+# ROI scoring (rental-income-first; kept for the secondary ranking)
+# ---------------------------------------------------------------------------
 
 _ROI_CAMPER_SIGNALS = re.compile(
     r"\b(bed|slaap|camping|camper|wohnmobil|keuken|kitchen|solar|zonnepaneel"
@@ -1120,83 +797,63 @@ _ROI_CAMPER_SIGNALS = re.compile(
     re.IGNORECASE,
 )
 
+# Liquidity / demand keyed by group rather than legacy token — the
+# whitelist groups all rent well in the NL crew-van market. V-Class /
+# Staria score slightly lower on liquidity because they're rarer (smaller
+# resale pool) but higher on demand because they're factory passenger
+# config (no conversion needed).
 _ROI_LIQUIDITY = {
-    # token → liquidity score (0-10)
-    "trafic": 10, "vivaro": 10, "transit": 9, "transporter": 9,
-    "transit_custom": 10,
-    "sprinter": 8, "crafter": 8, "master": 7,
-    "boxer": 6, "ducato": 6, "jumper": 6,
-    "daily": 5, "movano": 5, "tge": 5,
-    "expert": 8, "jumpy": 8,
+    "transit_custom_l2h1":         10,
+    "expert_jumpy_proace_l2":       9,
+    "scudo_gen3":                   7,   # gen-3 Scudo is new, thin resale market so far
+    "vivaro_trafic_primastar_l2":  10,
+    "t6_1_lwb":                     9,
+    "vito_v_class_l2":              7,   # Mercedes premium tax — slower resale
+    "hyundai_staria":               5,   # rare in NL, small resale pool
 }
 
 _ROI_DEMAND = {
-    # token → base demand (crew seats dominate regardless of model)
-    "trafic": 8, "vivaro": 8, "transit": 8, "transporter": 9,
-    "transit_custom": 9,
-    "sprinter": 7, "crafter": 7, "master": 7,
-    "boxer": 6, "ducato": 6, "jumper": 6,
-    "daily": 6, "movano": 6, "tge": 5,
-    "expert": 8, "jumpy": 8,
+    "transit_custom_l2h1":          9,
+    "expert_jumpy_proace_l2":       8,
+    "scudo_gen3":                   7,
+    "vivaro_trafic_primastar_l2":   8,
+    "t6_1_lwb":                     9,
+    "vito_v_class_l2":              9,   # factory crew-cab passenger demand is strong
+    "hyundai_staria":               7,
 }
 
 
 def _roi_demand(vehicle: dict) -> float:
-    """A) Demand — 0-10."""
-    title   = (vehicle.get("title") or "").lower()
-    seats   = vehicle.get("seats") or 0
-    token   = vehicle.get("applied_rule_set") or ""  # set by evaluate()
-
-    base = _ROI_DEMAND.get(token, 6)
-
-    # Seat bonus — crew vans are the highest demand rental category
+    seats = vehicle.get("seats") or 0
+    group = vehicle.get("model_group") or ""
+    base = _ROI_DEMAND.get(group, 6)
     if seats >= 6:
         base = min(10, base + 2)
     elif seats == 5:
         base = min(10, base + 1)
-
-    # Crew-cab / double-cab keyword
-    if re.search(r"\b(dubbele cabine|double cab|crew cab|kombi|dubbelcabine)\b",
-                 title, re.IGNORECASE):
+    title = (vehicle.get("title") or "").lower()
+    if re.search(r"\b(dubbele cabine|double cab|crew cab|kombi|dubbelcabine)\b", title):
         base = min(10, base + 1)
-
-    # Camper penalty — low rental demand
     haystack = " ".join(filter(None, [title, vehicle.get("remarks") or "",
                                       vehicle.get("additional_information") or ""]))
     if _ROI_CAMPER_SIGNALS.search(haystack):
         base = max(1, base - 3)
-
     return float(base)
 
 
 def _roi_utilization(vehicle: dict) -> float:
-    """B) Utilization — 0-10 (proxy for rental days/month)."""
-    seats  = vehicle.get("seats") or 0
-    token  = vehicle.get("applied_rule_set") or ""
-    title  = (vehicle.get("title") or "").lower()
-
-    # Crew / multi-seat vans rent most frequently
-    if seats >= 6 or re.search(r"\b(dubbele cabine|double cab|crew|kombi)\b",
-                                title, re.IGNORECASE):
+    seats = vehicle.get("seats") or 0
+    title = (vehicle.get("title") or "").lower()
+    if seats >= 6 or re.search(r"\b(dubbele cabine|double cab|crew|kombi)\b", title):
         return 10.0
-
-    # City-friendly small vans
-    if token in ("trafic", "vivaro", "expert", "jumpy", "transit_custom", "transporter"):
-        return 8.0
-
-    # Mid-size cargo (Sprinter, Crafter, Transit)
-    if token in ("sprinter", "crafter", "transit", "master", "movano"):
-        return 6.5
-
-    # Large cargo / niche
-    return 5.0
+    # Whitelist groups are all city-friendly small vans
+    return 8.0
 
 
 def _roi_cost_efficiency(vehicle: dict) -> float:
-    """C) Cost efficiency — 0-10 based on final acquisition cost."""
     cost = vehicle.get("final_cost_estimate")
     if cost is None:
-        return 5.0  # neutral when unknown
+        return 5.0
     if cost < 5_000:   return 10.0
     if cost < 7_000:   return 9.0
     if cost < 9_000:   return 8.0
@@ -1207,54 +864,40 @@ def _roi_cost_efficiency(vehicle: dict) -> float:
 
 
 def _roi_liquidity(vehicle: dict) -> float:
-    """D) Liquidity — how quickly / easily can you resell?"""
-    token  = vehicle.get("applied_rule_set") or ""
-    base   = float(_ROI_LIQUIDITY.get(token, 5))
-
-    # Camper conversion → hard to resell at purchase price
+    group = vehicle.get("model_group") or ""
+    base = float(_ROI_LIQUIDITY.get(group, 5))
     title = (vehicle.get("title") or "").lower()
     haystack = " ".join(filter(None, [title, vehicle.get("remarks") or "",
                                       vehicle.get("additional_information") or ""]))
     if _ROI_CAMPER_SIGNALS.search(haystack):
         base = max(1.0, base - 3.0)
-
     return base
 
 
 def _roi_penalties(vehicle: dict) -> float:
-    """Penalties subtracted from raw ROI score."""
     penalty = 0.0
     haystack = " ".join(filter(None, [
         vehicle.get("title") or "",
         vehicle.get("remarks") or "",
         vehicle.get("additional_information") or "",
     ])).lower()
-
-    # Camper conversion signals (cumulative up to -4)
     camper_hits = len(_ROI_CAMPER_SIGNALS.findall(haystack))
     penalty += min(4.0, camper_hits * 1.0)
-
-    # High mileage
     km = vehicle.get("km") or 0
     if km > 200_000: penalty += 1.0
     elif km > 150_000: penalty += 0.5
-
-    # Old emission standard
     emission = str(vehicle.get("emission_standard") or "")
-    if re.search(r"\b[34]\b", emission):  # Euro 3 or 4
+    if re.search(r"\b[34]\b", emission):
         penalty += 0.5
-
     return penalty
 
 
 def score_roi(vehicle: dict) -> float:
-    """Return ROI score 0-10 (rental-income-first). Higher = better investment."""
-    demand     = _roi_demand(vehicle)
-    util       = _roi_utilization(vehicle)
-    cost_eff   = _roi_cost_efficiency(vehicle)
-    liquidity  = _roi_liquidity(vehicle)
-    penalties  = _roi_penalties(vehicle)
-
+    demand    = _roi_demand(vehicle)
+    util      = _roi_utilization(vehicle)
+    cost_eff  = _roi_cost_efficiency(vehicle)
+    liquidity = _roi_liquidity(vehicle)
+    penalties = _roi_penalties(vehicle)
     raw = (
         0.35 * demand
         + 0.30 * util
@@ -1266,8 +909,119 @@ def score_roi(vehicle: dict) -> float:
 
 
 def roi_tier(score: float) -> str:
-    """S/A/B/C tier from ROI score."""
     if score >= 8.5: return "S"
     if score >= 7.0: return "A"
     if score >= 5.5: return "B"
     return "C"
+
+
+# ---------------------------------------------------------------------------
+# Reason-string builder for human-readable evaluation output
+# ---------------------------------------------------------------------------
+
+def _build_reasons(
+    group: str,
+    variant: Optional[str],
+    classification_evidence: Optional[List[str]],
+    km: Optional[int],
+    year: Optional[int],
+) -> List[str]:
+    label = WHITELIST_GROUPS[group]["label"]
+    out = [f"{label} ({variant or 'size unknown'})"]
+    if classification_evidence:
+        out.append("; ".join(classification_evidence))
+    if km is not None or year is not None:
+        km_s = f"{km // 1000}k km" if km else "km ?"
+        yr_s = str(year) if year else "year ?"
+        out.append(f"{km_s}, {yr_s}")
+    return out
+
+
+# ---------------------------------------------------------------------------
+# Main entry point
+# ---------------------------------------------------------------------------
+
+def evaluate(vehicle) -> Evaluation:
+    title     = (getattr(vehicle, "title", None) or "")
+    model_a   = (getattr(vehicle, "model", None) or "")
+    remarks   = (getattr(vehicle, "remarks", None) or "")
+    addl      = (getattr(vehicle, "additional_information", None) or "")
+    fuel      = getattr(vehicle, "fuel", None)
+    km        = getattr(vehicle, "km", None)
+    year      = getattr(vehicle, "year", None)
+    weight_kg = getattr(vehicle, "weight_kg", None)
+    body_type = getattr(vehicle, "body_type", None)
+
+    haystack = " ".join(s for s in [title, model_a, remarks, addl] if s)
+    description = " ".join(s for s in [model_a, remarks, addl] if s)
+
+    # ── Stage 1: Hard filters (vehicle type / body / damage / fuel / km) ─
+    r = _check_list(haystack, HARD_REJECT_TYPE)
+    if r:
+        return Evaluation(False, f"vehicle_type: {r}", None, None, None, None, None, None, None)
+
+    r = _check_list(haystack, HARD_REJECT_BODY)
+    if r:
+        return Evaluation(False, f"body_mismatch: {r}", None, None, None, None, None, None, None)
+
+    r = _check_list(haystack, HARD_REJECT_DAMAGE)
+    if r:
+        return Evaluation(False, f"damage: {r}", None, None, None, None, None, None, None)
+
+    # Fuel is informational — no hard reject. Electric / diesel / petrol
+    # / hybrid / CNG / LPG / hydrogen all pass through. Range and
+    # refueling are buyer-side concerns, not classifier concerns.
+
+    if km is not None and km > 250_000:
+        return Evaluation(False, f"mileage_too_high: {km}km", None, None, None, None, None, None, None)
+
+    # ── Stage 2: Classification (hard gate on whitelist) ─────────────────
+    cls = classify_vehicle(title, description, weight_kg=weight_kg, body_type=body_type)
+    if cls.group is None:
+        # Distinguish smaller-sibling rejects for clarity
+        sib_ev = (cls.evidence or [None])[0]
+        if sib_ev and sib_ev.startswith("smaller_sibling"):
+            return Evaluation(False, sib_ev, None, None, None, None, None, None, None)
+        return Evaluation(False, "brand_not_in_whitelist", None, None, None, None, None, None, None)
+
+    # ── Stage 3: Strict filter (soft gate on year / Euro / seats / size) ─
+    passed, reason = strict_filter(vehicle, cls)
+    if not passed:
+        return Evaluation(
+            False, reason, cls.variant,
+            cls.group, cls.variant, cls.confidence,
+            None, cls.group, None,
+        )
+
+    # ── Stage 4: Scoring (small-van suitability) ─────────────────────────
+    # Convert the Pydantic-style vehicle to a dict view for the scorers.
+    v_dict = {
+        "title":  title,
+        "remarks": remarks,
+        "additional_information": addl,
+        "seats":  getattr(vehicle, "seats", None),
+        "fuel":   fuel,
+        "km":     km,
+        "year":   year,
+        "emission_standard": getattr(vehicle, "emission_standard", None),
+        "variant": cls.variant,
+        "model_group": cls.group,
+        "deal_ratio": getattr(vehicle, "deal_ratio", None),
+        "final_cost_estimate": getattr(vehicle, "final_cost_estimate", None),
+    }
+    score = score_small_van(v_dict)
+
+    reasons = _build_reasons(cls.group, cls.variant, cls.evidence, km, year)
+
+    if score < SCORE_THRESHOLD:
+        return Evaluation(
+            True, f"score_below_threshold: {score} < {SCORE_THRESHOLD}",
+            cls.variant, cls.group, cls.variant, cls.confidence,
+            score, cls.group, reasons,
+        )
+
+    return Evaluation(
+        True, None, cls.variant,
+        cls.group, cls.variant, cls.confidence,
+        score, cls.group, reasons,
+    )

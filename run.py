@@ -9,26 +9,36 @@ from cost_model import DEFAULT_BUYER_PREMIUM, compute_costs, passes_cost_filter
 from market_price import build_price_index_cached
 from notify import notify_gems
 from scraper import VAVATO_BASE, crawl_parallel, get_category_urls, get_lot_urls
-from van_intel import ALLOWED_MODELS, SCORE_THRESHOLD, classify_vehicle, roi_tier, score_big_van, score_roi, score_small_van
+from van_intel import SCORE_THRESHOLD, WHITELIST_GROUPS, WHITELIST_TOKENS, roi_tier, score_roi, score_small_van
 
 MAX_BID_TARGET_FRACTION = 0.65
 
 # Priority models for exact-name brand search against Troostwijk + Vavato.
-# These are the conversion-target sweet spots; we run a focused search for
-# each because many fitting vans get mis-listed in "Cars" rather than the
+# One per whitelist canonical name; we run a focused search for each
+# because many fitting vans get mis-listed in "Cars" rather than the
 # narrow "Vans" subcategory.
 IDEAL_MODELS = [
-    # Big van targets (camper conversion sweet spot)
-    "Peugeot Boxer",
-    "Citroen Jumper",
-    "Fiat Ducato",
-    "Mercedes Sprinter",
-    # Small van targets (dual-use / crew cab)
-    "Volkswagen Transporter",
-    "Renault Trafic",
-    "Opel Vivaro",
-    "Citroen Jumpy",
+    # transit_custom_l2h1 (incl. passenger Tourneo Custom)
+    "Ford Transit Custom",
+    "Ford Tourneo Custom",
+    # expert_jumpy_proace_l2
     "Peugeot Expert",
+    "Citroen Jumpy",
+    "Toyota ProAce",
+    # scudo_gen3 (gen-3, 2022+; rebadged Expert/Jumpy)
+    "Fiat Scudo",
+    # vivaro_trafic_primastar_l2 (incl. rebadged Fiat Talento)
+    "Opel Vivaro",
+    "Renault Trafic",
+    "Nissan Primastar",
+    "Fiat Talento",
+    # t6_1_lwb
+    "Volkswagen Transporter",
+    # vito_v_class_l2
+    "Mercedes Vito",
+    "Mercedes V-Class",
+    # hyundai_staria
+    "Hyundai Staria",
 ]
 
 # Category pages. We crawl both the narrow "Vans" subcategory (clean
@@ -68,14 +78,22 @@ VAVATO_BRAND_PAGES = 1  # Vavato page 2 consistently times out (30s wasted per s
 
 
 def _model_key(title: str) -> str:
+    """Return the lower-cased whitelist token present in ``title`` (used to key
+    bid history / price index lookups). Multi-word tokens checked first."""
     s = (title or "").lower()
-    for token in ALLOWED_MODELS:
-        if token in s:
+    # Iterate longest-first so "transit custom" beats "transporter" etc.
+    for token in sorted(WHITELIST_TOKENS, key=len, reverse=True):
+        if " " in token or "." in token:
+            parts = re.split(r"[\s.]+", token)
+            pat = r"\b" + r"\s*\.?\s*".join(re.escape(p) for p in parts) + r"\b"
+            if re.search(pat, s):
+                return token
+        elif re.search(rf"\b{re.escape(token)}\b", s):
             return token
     return ""
 
 
-# Stable output schema for latest.json / latest_big_vans.json / latest_small_vans.json.
+# Stable output schema for latest.json / latest_roi.json.
 # Every field is always present (None if unavailable). Order is fixed.
 _SCHEMA: dict = {
     # Identity
@@ -90,7 +108,9 @@ _SCHEMA: dict = {
     "fuel":                       None,
     "emission_standard":          None,
     "van_type":                   None,
-    "van_category":               None,
+    "model_group":                None,
+    "variant":                    None,
+    "classification_confidence":  None,
     "seats":                      None,
     "body_type":                  None,
     "weight_kg":                  None,
@@ -115,11 +135,8 @@ _SCHEMA: dict = {
     "deal_ratio":                 None,
     # Scores
     "score":                      None,
-    "big_van_score":              None,
-    "small_van_score":            None,
     "roi_score":                  None,
     "roi_tier":                   None,
-    "deal_score":                 None,
     "is_hidden_gem":              False,
 }
 
@@ -304,20 +321,7 @@ def main():
     rejected = suitability_rejected + cost_rejected
     accepted.sort(key=lambda v: v.get("score") or 0, reverse=True)
 
-    # ── Pipeline split: classify + per-pipeline scoring ──────────────────
-    for v in accepted:
-        cat = classify_vehicle(v)
-        v["van_category"] = cat
-        v["big_van_score"] = score_big_van(v)
-        v["small_van_score"] = score_small_van(v)
-
-    big_vans   = [v for v in accepted if v.get("van_category") in ("big", "both")]
-    small_vans = [v for v in accepted if v.get("van_category") in ("small", "both")]
-
-    big_vans.sort(key=lambda v: v.get("big_van_score") or 0, reverse=True)
-    small_vans.sort(key=lambda v: v.get("small_van_score") or 0, reverse=True)
-
-    # ROI scoring — runs over all accepted lots regardless of big/small category
+    # ── ROI scoring (secondary ranking by rental-income potential) ───────
     for v in accepted:
         rs = score_roi(v)
         v["roi_score"] = rs
@@ -326,8 +330,6 @@ def main():
     roi_vans = sorted(accepted, key=lambda v: v.get("roi_score") or 0, reverse=True)
 
     _dump_vans("output/latest.json", accepted)
-    _dump_vans("output/latest_big_vans.json", big_vans)
-    _dump_vans("output/latest_small_vans.json", small_vans)
     _dump_vans("output/latest_roi.json", roi_vans)
     _dump("output/rejected.json", {
         v["url"]: v.get("rejected_reason") or "unknown"
@@ -339,16 +341,25 @@ def main():
         r = (v.get("rejected_reason") or "unknown").split(":", 1)[0]
         reason_counts[r] = reason_counts.get(r, 0) + 1
 
+    # Per-whitelist-group breakdown of accepted candidates
+    group_counts: dict = {gk: 0 for gk in WHITELIST_GROUPS}
+    for v in accepted:
+        gk = v.get("model_group")
+        if gk in group_counts:
+            group_counts[gk] += 1
+
     load_failures = reason_counts.pop("load_failed", 0)
     gems = [v for v in accepted if v.get("is_hidden_gem")]
     print(
         f"\ndiscovered={len(all_urls)} scraped_this_run={len(fresh_results)} "
         f"known_total={len(all_results)} accepted={len(accepted)} "
-        f"big_vans={len(big_vans)} small_vans={len(small_vans)} "
         f"load_failed={load_failures} filtered={len(rejected) - load_failures}"
     )
+    print("camper-candidate groups (accepted):")
+    for gk in WHITELIST_GROUPS:
+        print(f"  {gk}: {group_counts[gk]}")
     for r, n in sorted(reason_counts.items(), key=lambda kv: -kv[1]):
-        print(f"  {r}: {n}")
+        print(f"  reject:{r}: {n}")
 
     if gems:
         print(f"\n💎 {len(gems)} hidden gems:")

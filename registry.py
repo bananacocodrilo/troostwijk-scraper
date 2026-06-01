@@ -63,14 +63,17 @@ MAX_NEW_PER_RUN = 400
 # a scrape budget on it every run.
 PERMANENT_REJECT_PREFIXES = (
     "brand_not_whitelisted",
+    "brand_not_in_whitelist",
     "smaller_sibling",
     "vehicle_type",
     "body_mismatch",
     "damage",
     "size_too_small",
+    "size_not_allowed",
     "mileage_too_high",
     "year_below_minimum",
-    "fuel_electric",
+    "emission_below_euro6",
+    "seats_below_6",
 )
 
 

@@ -75,7 +75,6 @@ def _new_context(p):
 _SLUG_REJECT_TOKENS: set[str] = {
     # Smaller siblings already enumerated in van_intel.SMALLER_SIBLINGS.
     *(s for s in SMALLER_SIBLINGS if " " not in s),
-    # jumpy removed — now in SMALL_VAN_MODELS and routed to small pipeline
     # Peugeot passenger cars (skip "2008" — collides with year strings).
     "107", "108", "206", "207", "208", "306", "307", "308", "508",
     "605", "607", "806", "807", "1007", "3008", "4007", "4008", "5008",
@@ -368,8 +367,8 @@ def _clean_model(raw: Optional[str], brand: Optional[str]) -> Optional[str]:
         return None
     # Duplicates just the model token we already infer from the title
     # (e.g. model="Boxer" — already obvious from brand Peugeot)
-    from van_intel import ALLOWED_MODELS
-    if s.lower() in ALLOWED_MODELS:
+    from van_intel import WHITELIST_TOKENS
+    if s.lower() in WHITELIST_TOKENS:
         return None
     return s
 
@@ -474,7 +473,9 @@ def parse_vehicle(html: str, url: str) -> Vehicle:
     vehicle.score = ev.score or 0
     vehicle.applied_rule_set = ev.applied_rule_set
     vehicle.reason_for_inclusion = ev.reasons
-    vehicle.scores = ev.breakdown  # already a ScoreBreakdown (Pydantic), no conversion needed
+    vehicle.model_group = ev.model_group
+    vehicle.variant = ev.variant
+    vehicle.classification_confidence = ev.classification_confidence
 
     fleet_type, fleet_signals = classify_fleet(title, remarks, additional_information)
     vehicle.fleet_type = fleet_type

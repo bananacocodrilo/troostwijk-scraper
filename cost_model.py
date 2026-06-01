@@ -20,10 +20,13 @@ FIXED_FEES = 100            # registration, admin — flat estimate
 DEFAULT_BUYER_PREMIUM = 0.19  # Troostwijk standard; overridden by real GraphQL value
 VAT_RATE = 0.21             # Dutch BTW for private buyers on non-margin-scheme lots
 
-# Transport estimates by van size (€)
+# Transport estimates by van size (€). Small-van L2 / L2H1 fits a
+# regular open trailer; big-van L3H2+ needs a low-loader. Entries for
+# the (now-rejected) big-van sizes are kept harmlessly for cached
+# lot_registry.json entries that pre-date the whitelist pivot.
 _TRANSPORT = {
+    "L2H1": 550, "L2H2": 650, "L2H?": 600, "L2": 550,
     "L4H3": 1300, "L3H3": 1200, "L3H2": 1100, "L4H2": 1200,
-    "L2H2": 700,
     "H2+": 900, "H3": 1000, "L3": 1000, "panel": 700,
 }
 _TRANSPORT_DEFAULT = 600
@@ -35,18 +38,35 @@ _RECON_AVERAGE = 2000   # WORKING but older/higher km, or NOT_CHECKED
 _RECON_POOR    = 4000   # explicit damage signals, very old/high km
 _RECON_UNKNOWN = 3000   # no condition info
 
-# Heuristic base market values at L2H2 baseline, by model group + year band.
+# Heuristic base market values at L2 baseline, by model group + year band.
 # Used ONLY when Marktplaats median is unavailable (< 3 samples).
 _BASE_PRICES = {
-    # PSA triplets (Boxer/Jumper/Ducato) — cheaper, more common
-    "psa": {2020: 18_000, 2017: 12_000, 2014: 7_500},
-    # German premium (Sprinter, Crafter, TGE) — heavier duty, more expensive
-    "premium": {2020: 25_000, 2017: 17_000, 2014: 11_000},
-    # Mid-tier (Transit, Master, Movano, Daily)
-    "mid": {2020: 20_000, 2017: 13_500, 2014: 9_000},
+    # Small camper-candidate vans (Trafic / Vivaro / Primastar / Expert /
+    # Jumpy / ProAce / Transit Custom / Transporter T6.1)
+    "small_van":   {2020: 19_000, 2017: 13_000, 2014: 8_500},
+    # Legacy big-van entries kept for any pre-pivot cached entries that
+    # still pass through compute_costs (they'll be rejected upstream by
+    # van_intel, but the function should not crash on them).
+    "psa":         {2020: 18_000, 2017: 12_000, 2014: 7_500},
+    "premium":     {2020: 25_000, 2017: 17_000, 2014: 11_000},
+    "mid":         {2020: 20_000, 2017: 13_500, 2014: 9_000},
 }
 
 _MODEL_GROUP = {
+    # Camper-candidate whitelist
+    "trafic": "small_van", "vivaro": "small_van", "primastar": "small_van",
+    "talento": "small_van",
+    "expert": "small_van", "jumpy": "small_van", "proace": "small_van",
+    "pro ace": "small_van", "scudo": "small_van",
+    "transit custom": "small_van", "tourneo custom": "small_van",
+    "transporter": "small_van", "t6.1": "small_van", "t6_1": "small_van",
+    # Mercedes Vito / V-Class — premium pricing but cost_model has no
+    # explicit "premium_small_van" tier; market data corrects when present.
+    "vito": "small_van",
+    "v-klasse": "small_van", "v klasse": "small_van", "v-class": "small_van",
+    # Hyundai Staria — single-length passenger MPV
+    "staria": "small_van",
+    # Legacy big-van mapping (harmless, retained for cached entries)
     "boxer": "psa", "jumper": "psa", "ducato": "psa",
     "sprinter": "premium", "crafter": "premium", "tge": "premium",
     "transit": "mid", "master": "mid", "movano": "mid", "daily": "mid",
@@ -101,7 +121,7 @@ def _market_heuristic(
     van_type: Optional[str],
 ) -> Optional[int]:
     """Fallback market value when Marktplaats has insufficient samples."""
-    group = _MODEL_GROUP.get(model_token or "", "mid")
+    group = _MODEL_GROUP.get(model_token or "", "small_van")
     bases = _BASE_PRICES[group]
 
     if year is None:
@@ -126,16 +146,19 @@ def _market_heuristic(
         elif km >= 100_000:
             base = int(base * 0.90)
 
-    # Size premium
+    # Size premium — L2H2 / L2 baseline; H1 slightly under, big sizes
+    # over (only relevant for legacy cached big-van entries).
     vt = (van_type or "").upper()
     if vt in ("L3H2", "L4H3", "L3H3", "L4H2"):
         base = int(base * 1.15)
     elif vt in ("H2+", "H3", "L3"):
         base = int(base * 1.10)
-    elif vt == "L2H2":
+    elif vt in ("L2H2", "L2H?", "L2"):
         pass  # baseline
+    elif vt in ("L2H1",):
+        base = int(base * 0.95)
     elif vt in ("L1H1", "H1", "L1"):
-        base = int(base * 0.90)
+        base = int(base * 0.85)
 
     return base
 
@@ -221,10 +244,11 @@ def compute_costs(v: dict, model_token: Optional[str] = None) -> dict:
     deal_score = _deal_score(deal_ratio)
 
     # Hidden gem ───────────────────────────────────────────────────────────
-    # Conversion sweet-spot only — L2H2 / L3H2 plus wildcards where the
-    # known dimension is good. L4 and H3 are deliberately excluded because
-    # they're awkward to drive/park/convert.
-    GEM_SIZES = {"L2H2", "L3H2", "L?H2", "L2H?", "L3H?"}
+    # Camper-candidate sweet-spot only: L2 / L2H1 / L2H2 plus wildcards
+    # where the known dimension matches. The whitelist groups are all
+    # L2-only, with Transit Custom being H1-only and the others mostly
+    # H1 with rare H2 conversions.
+    GEM_SIZES = {"L2H1", "L2H2", "L2H?", "L2"}
     is_gem = bool(
         deal_ratio is not None and deal_ratio > 0.25
         and km is not None and km < 150_000

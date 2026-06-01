@@ -2,11 +2,30 @@
 
 ## Goal
 
-Find underpriced cargo vans at **Troostwijk** and **Vavato** live auctions for camper-van or dual-use conversion. The pipeline discovers auction lots, classifies and scores them across two use-case tracks, and surfaces "hidden gems" (≥25 % below market, low km, good size) via Telegram alerts.
+Find underpriced **camper-candidate small/mid vans** at **Troostwijk** and **Vavato** live auctions, filtered to a strict whitelist of 7 model groups (all in the Transit Custom L2H1 dimensional class — ~5.3m × 2.0m — Euro 6, 6-seat compatible). The pipeline discovers auction lots, classifies them against the whitelist, applies a strict-but-soft-gated filter (only confirmed violations reject), scores survivors for camper-conversion suitability and rental ROI, and surfaces hidden gems via Telegram alerts.
 
-**Big van targets** (camper conversion): Peugeot Boxer / Fiat Ducato / Citroën Jumper (PSA triplets), Mercedes Sprinter, Ford Transit (L3+), Renault Master, VW Crafter, Opel Movano, MAN TGE, Iveco Daily. Sweet-spot size: **L2H2 / L3H2**.
+**Whitelist groups (the only models that pass the classifier):**
 
-**Small van targets** (dual-use / crew cab): VW Transporter, Renault Trafic, Opel Vivaro, Citroën Jumpy, Peugeot Expert, Ford Transit Custom. Priority: 6 legal seats, crew cab, fold-flat.
+| Group key | Models | Required size | min year | Notes |
+|-----------|--------|---------------|----------|-------|
+| `transit_custom_l2h1` | Ford Transit Custom + Ford Tourneo Custom (passenger) | L2H1 | 2016 | H1 is the only height variant |
+| `expert_jumpy_proace_l2` | Peugeot Expert / Citroën Jumpy / Toyota ProAce | L2, any H | 2016 | EMP2 platform gen-3 |
+| `scudo_gen3` | Fiat Scudo (gen 3, 2022+) | L2, any H | 2022 | Rebadged Expert/Jumpy; separate group to exclude old Scudo (2007-2016) |
+| `vivaro_trafic_primastar_l2` | Opel Vivaro / Renault Trafic / Nissan Primastar / Fiat Talento | L2, any H | 2015 | shared NV300 platform; Talento is rebadged Trafic |
+| `t6_1_lwb` | VW Transporter T6.1 | L2 (LWB), any H | 2020 | T6.1 facelift = Euro 6d |
+| `vito_v_class_l2` | Mercedes Vito / V-Class (Lang or Extralang) | L2 or L3, any H | 2015 | W447 chassis; Kompakt variant rejects via L1 keyword |
+| `hyundai_staria` | Hyundai Staria | any | 2021 | Korean MPV, single length (5253mm) |
+
+All other van families (Sprinter, Ducato, Boxer, Jumper, Crafter, TGE, Master, Movano, Daily, plain Transit, etc.) are rejected at the classifier stage as `brand_not_in_whitelist`.
+
+**Soft-gate policy** — only *confirmed* violations reject:
+- Year known and `< min_year` for group → reject
+- Emission known and below Euro 6 → reject
+- Seats known and `< 6` → reject
+- Size known and outside the group's allowed L/H → reject
+- Any of these unknown → PASS
+
+Exception: model classification is a hard gate. No whitelist token match → reject.
 
 ---
 
@@ -20,7 +39,7 @@ URL discovery → scraping → intelligence → cost model → registry → dash
 Collects lot URLs from:
 - Troostwijk category pages: Trucks+Trailers, Vans, Cars (parent)
 - Vavato category pages: same UUID paths, different host
-- `IDEAL_MODELS` brand searches on both hosts (big + small van targets, 2 pages each)
+- `IDEAL_MODELS` brand searches on both hosts (one per whitelist canonical name, 2 pages each)
 
 Max 10 pages × 48 lots per category page. Deduplication before scraping.
 
@@ -33,31 +52,39 @@ Data sources per lot:
 1. `__NEXT_DATA__` JSON blob (`props.pageProps.lot`) — all static fields
 2. `/storefront/graphql` response (intercepted via `page.on("response")`) — live bid data
 
-Parallelised: `crawl_parallel(urls, workers=4)` — each thread gets its own asyncio event loop + playwright instance. Progress + ETA logged every 25 lots.
+Parallelised: `crawl_parallel(urls, workers=4)` — each thread gets its own asyncio event loop + playwright instance.
 
 ### Stage 3 — Intelligence layer (`van_intel.py`)
-Three sub-stages:
-1. **Hard filters** — regex word-boundary checks for vehicle type, body type, damage, fuel
-2. **Rule resolution** — per-model min_year/km thresholds, preferred_year for scoring
-3. **Classification + dual scoring**:
-   - `classify_vehicle()` → `"big"` | `"small"` | `"both"`
-   - `score_big_van()` → 0-100, camper-first (usability 40%, build efficiency 25%, mechanical 20%, value 15%)
-   - `score_small_van()` → 0-100, dual-use-first (utility 45%, city practicality 20%, conversion 20%, value 15%)
-   - Legacy `score` (0-100) remains unchanged for backward compat and hard-filter decisions
 
-**Model matching priority** (`_matched_model`):
-1. Multi-word small van tokens first (`"transit custom"` beats `"transit"`)
-2. Big van models (ALLOWED_MODELS) — beats generic body-type words like "transporter" in "Jumper Transporter"
-3. Single-word small van tokens (only if no big van matched)
+Per-spec flow:
+```
+raw_listing
+  → hard filters       (vehicle type / body / damage / fuel / mileage)
+  → classify_vehicle   (must match one of 4 whitelist groups)
+  → strict_filter      (size / year / Euro / seats — soft gate on unknowns)
+  → score_small_van    (camper-candidate suitability, 0-100)
+  → score_roi          (rental-income ranking, 0-10 + S/A/B/C tier)
+```
+
+**Key functions:**
+- `classify_vehicle(title, description, *, weight_kg=None, body_type=None) -> Classification` — returns `(group, variant, confidence, matched_token, evidence)`. `group=None` means no whitelist match → caller must reject.
+- `strict_filter(vehicle, classification) -> (passed, reason)` — applies the camper-candidate hard gate (soft on unknowns).
+- `evaluate(vehicle) -> Evaluation` — composed entry point; calls hard filters → classify → strict_filter → score.
 
 **Multi-signal L/H detection** (`_detect_size`):
 1. Explicit `L<n>H<m>` in title
 2. Standalone `\bL[1-4]\b` / `\bH[1-3]\b`
 3. Roofline keywords (high roof → H2/H3, low roof → H1)
-4. Length keywords (LWB/maxi → L3, SWB/kort → L1)
-5. Model designation (Iveco Daily 35S/L/C suffix)
-6. Weight fallback (PSA: <1900kg → L2, >2050kg → L3+)
-7. Bodytype attribute fallback (box construction → H2)
+4. Length keywords (LWB/Maxi → L3 generally, but **clamped to L2** for whitelist groups whose `required_length=[2]` only, since those families have no L3 variants in their factory nomenclature; the `vito_v_class_l2` group accepts L3 since Mercedes Extralang is genuinely L3-class)
+5. Weight fallback (per-model bands tuned for the small-van families)
+6. Bodytype attribute fallback (box construction → H2)
+
+**Model matching priority** (`_match_whitelist_token`):
+1. Multi-word tokens first (`"transit custom"` beats `"transit"`, which is NOT in the whitelist)
+2. Dotted tokens (`"t6.1"`) before bare equivalents
+3. Single-word tokens last
+
+`SMALLER_SIBLINGS` (Vito, Caddy, Transit Connect, Kangoo, Combo, Berlingo, Partner, etc.) reject before any whitelist match is attempted — protects against e.g. "Transit Connect" matching the "transit" token (which isn't even in the whitelist anyway).
 
 ### Stage 4 — Cost model (`cost_model.py`)
 Computes true acquisition cost for a private (non-VAT-deductible) buyer:
@@ -66,7 +93,9 @@ total = hammer + buyer_premium + VAT (if non-margin-scheme) + transport + recon 
 ```
 Market value priority: hammer history (≥5 samples) → multi-source median (≥3) → heuristic.
 
-Hidden gem = deal ratio > 25%, km < 150k, year ≥ 2017, size in {L2H2, L3H2, L?H2, L2H?, L3H?}.
+`_BASE_PRICES["small_van"]` is the heuristic value table for the whitelist groups. Legacy big-van groups (psa/premium/mid) are retained harmlessly for cached pre-pivot entries.
+
+Hidden gem = deal ratio > 25%, km < 150k, year ≥ 2017, size in `{L2H1, L2H2, L2H?, L2}`.
 
 ### Stage 5 — Registry + persistence (`registry.py`, `bid_history.py`)
 `output/lot_registry.json` — priority-refresh state per URL. Tiers:
@@ -76,7 +105,7 @@ Hidden gem = deal ratio > 25%, km < 150k, year ≥ 2017, size in {L2H2, L3H2, L?
 - `unknown`: every 12h
 - `ended`: never re-scrape
 
-`permanent_rejects` cache: URLs permanently rejected for stable reasons (brand_not_whitelisted, body_mismatch, vehicle_type, damage, size_too_small, mileage_too_high, year_below_minimum, fuel_electric) — skipped on all future discovery passes.
+`permanent_rejects` cache: URLs permanently rejected for stable reasons (`brand_not_in_whitelist`, `body_mismatch`, `vehicle_type`, `damage`, `size_not_allowed`, `mileage_too_high`, `year_below_minimum`, `emission_below_euro6`, `seats_below_6`, `smaller_sibling`) — skipped on all future discovery passes. **Note:** electric vehicles are NOT rejected — eVito / eTransporter / e-Expert and similar are valid camper-conversion candidates.
 
 Cold-start cap: `MAX_NEW_PER_RUN = 400` — full catalogue registered across 3-4 runs.
 
@@ -86,9 +115,9 @@ Cold-start cap: `MAX_NEW_PER_RUN = 400` — full catalogue registered across 3-4
 
 | File | Purpose |
 |------|---------|
-| `run.py` | Orchestrator — discovery → scrape → intel → cost → persist → split outputs |
+| `run.py` | Orchestrator — discovery → scrape → intel → cost → persist → output |
 | `scraper.py` | Playwright lot scraper + category/search URL crawlers |
-| `van_intel.py` | Hard filters, model matching, L/H detection, big+small scoring |
+| `van_intel.py` | Hard filters, whitelist classifier, strict filter, small-van + ROI scoring |
 | `cost_model.py` | Total acquisition cost + deal ratio + hidden gem flag |
 | `registry.py` | Priority-refresh registry + permanent-reject cache |
 | `bid_history.py` | Closed-auction hammer price index |
@@ -99,10 +128,9 @@ Cold-start cap: `MAX_NEW_PER_RUN = 400` — full catalogue registered across 3-4
 | `market_price.py` | Combined multi-source PriceIndex facade |
 | `notify.py` | Telegram alerts for hidden gems closing within 24h |
 | `fleet.py` | Fleet-type classification (utility/delivery/solar/telecom/…) |
-| `models.py` | Pydantic `Vehicle` + `ScoreBreakdown` dataclasses |
-| `docs/index.html` | Dashboard — all vans, links to big/small pages |
-| `docs/big.html` | Big van dashboard — sorted by `big_van_score` |
-| `docs/small.html` | Small van dashboard — sorted by `small_van_score` |
+| `models.py` | Pydantic `Vehicle` dataclass (incl. `model_group`, `variant`, `classification_confidence`) |
+| `docs/index.html` | Camper-candidate dashboard |
+| `docs/roi.html` | ROI-ranked dashboard |
 
 ---
 
@@ -110,17 +138,16 @@ Cold-start cap: `MAX_NEW_PER_RUN = 400` — full catalogue registered across 3-4
 
 | File | Contents |
 |------|---------|
-| `latest.json` | All accepted vehicles sorted by legacy `score` |
-| `latest_big_vans.json` | Big van pipeline, sorted by `big_van_score` |
-| `latest_small_vans.json` | Small van pipeline, sorted by `small_van_score` |
+| `latest.json` | Accepted camper candidates, sorted by `score` (small-van suitability) |
+| `latest_roi.json` | Same set sorted by `roi_score` (rental-income-first) |
 | `rejected.json` | `{url: reason}` map for all rejected vehicles |
 | `lot_registry.json` | Per-URL last-scrape state + permanent rejects |
-| `bid_history.json` | Hammer history per model |
+| `bid_history.json` | Hammer history per model token |
 | `notified.json` | Telegram notification log |
 
 ## Logs
 
-`logs/latest.log` — stdout from the most recent local `python3 run.py` invocation (line-buffered tee, overwritten each run). Ignored by git. Useful for debugging scrape progress, filter counts, and price index build.
+`logs/latest.log` — stdout from the most recent local `python3 run.py` invocation (line-buffered tee, overwritten each run). Ignored by git.
 
 ---
 
@@ -147,9 +174,9 @@ mobile.de and lacentrale.fr block headless HTTP requests (403).
 
 - Cron: every 6h (`0 */6 * * *`)
 - Timeout: 60 min
-- Commits all output files after each run; optional files (notified, big/small vans) use `|| true` so missing files don't abort the step
-- Secrets: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` (set via `gh secret set`, never `--body`)
-- GitHub Pages serves `docs/` — three pages: index, big, small
+- Commits all output files after each run
+- Secrets: `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`
+- GitHub Pages serves `docs/` — `index.html` (camper candidates) + `roi.html`
 
 ---
 
@@ -168,7 +195,8 @@ Logs go to both stdout and `logs/latest.log`. Uses `output/lot_registry.json` if
 - **networkidle timeout**: Must use `domcontentloaded` + `wait_for_selector("script#__NEXT_DATA__", state="attached")`. Never switch back to networkidle.
 - **Word-boundary filters**: All keyword lists in `van_intel.py` use `\b` regex boundaries to avoid "bus" matching "business", "partner" matching "business partner", etc.
 - **engine failure false positive**: Pattern uses negative lookbehind for "no/geen/kein" and excludes "engine failure codes" (OBD context).
-- **"Transporter" as body-type word**: Dutch/German lot titles often say "Jumper Transporter" (= Jumper commercial vehicle). `_matched_model` checks big van models before single-word small van tokens to prevent "transporter" from overriding "jumper".
+- **LWB → L2 clamp**: "LWB" / "Maxi" / "lang" map to L3 globally (correct for big vans) but are clamped down to L2 inside `classify_vehicle` for whitelist groups whose `required_length=[2]` only, since those families have no L3 variants. The `vito_v_class_l2` group (Mercedes Extralang really IS L3-class) is exempt. Explicit "L3" / "L4" markers still reject for L2-only groups.
+- **T6.1 detection**: permissive — any "Transporter" match enters the `t6_1_lwb` group; soft-gates on year (rejects only if `year < 2020` confirmed). Lots without an explicit year pass through.
 - **GraphQL parse error**: `Response.json: No resource with given identifier found` is benign — fires when response body isn't buffered yet. Wrapped in try/except.
 - **cold-start run time**: First run ~15-20 min on GH Actions (400 URL cap, 4 workers). Subsequent runs 5-10 min.
-- **Gaspedaal 404 on Sprinter**: `mercedes/sprinter` path returns 404 on Gaspedaal; wrapped in try/except, other models unaffected.
+- **Backward-compat fields**: `models.py` keeps `van_category`, `big_van_score`, `small_van_score` as deprecated unused fields so old `lot_registry.json` snapshots still deserialise.
