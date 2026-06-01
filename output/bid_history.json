@@ -235,6 +235,12 @@
           "current_bid_eur": 7000.0,
           "bids_count": 17,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T11:30:13.105062+00:00",
+          "current_bid_eur": 7500.0,
+          "bids_count": 18,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -517,6 +523,12 @@
           "current_bid_eur": 2200.0,
           "bids_count": 13,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T11:30:13.105062+00:00",
+          "current_bid_eur": 2300.0,
+          "bids_count": 14,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -537,6 +549,12 @@
           "ts": "2026-05-30T08:34:19.021262+00:00",
           "current_bid_eur": 8200.0,
           "bids_count": 31,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T11:30:13.105062+00:00",
+          "current_bid_eur": 8600.0,
+          "bids_count": 33,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -868,6 +886,12 @@
           "current_bid_eur": 3000.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T11:30:13.105062+00:00",
+          "current_bid_eur": 3100.0,
+          "bids_count": 2,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -972,6 +996,12 @@
           "ts": "2026-05-31T19:22:33.093397+00:00",
           "current_bid_eur": 1630.0,
           "bids_count": 29,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T11:30:13.105062+00:00",
+          "current_bid_eur": 2100.0,
+          "bids_count": 38,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -2053,6 +2083,12 @@
           "current_bid_eur": 4050.0,
           "bids_count": 11,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T11:30:13.105062+00:00",
+          "current_bid_eur": 4300.0,
+          "bids_count": 12,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -2490,6 +2526,12 @@
           "ts": "2026-06-01T03:08:07.365751+00:00",
           "current_bid_eur": 2600.0,
           "bids_count": 17,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T11:30:13.105062+00:00",
+          "current_bid_eur": 2800.0,
+          "bids_count": 19,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -3799,6 +3841,12 @@
           "current_bid_eur": 2900.0,
           "bids_count": 64,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T11:30:13.105062+00:00",
+          "current_bid_eur": 4000.0,
+          "bids_count": 75,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -4336,6 +4384,51 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "33363ff8-5f4b-4985-825f-164a7f870046": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-custom-commercial-vehicle-2015-A1-46393-234",
+      "model_token": "transit",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T11:30:13.105062+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "ddd74c11-5f0b-4f2b-8b4a-011f8344e0ce": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-van-A7-46902-93",
+      "model_token": "transit",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T11:30:13.105062+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "e7508a30-d09e-4e80-84d1-d42c745fe443": {
+      "url": "https://www.troostwijkauctions.com/en/l/2024-fiat-ducato-250-benimar-belair-tessoro-t442-limited-edition-camper-mobile-home-A3-43541-17352",
+      "model_token": "ducato",
+      "year": 2024,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T11:30:13.105062+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
