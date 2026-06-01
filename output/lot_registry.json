@@ -944,13 +944,13 @@
       "deal_ratio": null,
       "deal_score": null,
       "is_hidden_gem": false,
-      "van_type": "L3H2",
+      "van_type": "L2H1",
       "is_valid_van": false,
       "score": 0,
       "scores": null,
       "applied_rule_set": "transit_custom_l2h1",
       "passed_hard_filters": false,
-      "rejected_reason": "size_not_allowed: L3 (group requires L2)",
+      "rejected_reason": "seats_below_6: 5",
       "reason_for_inclusion": null,
       "fleet_type": "private",
       "fleet_signals": null,
@@ -959,8 +959,8 @@
       "small_van_score": null,
       "last_scrape_at": "2026-05-29T12:00:26.923054+00:00",
       "model_group": "transit_custom_l2h1",
-      "variant": "L3H2",
-      "classification_confidence": "low"
+      "variant": "L2H1",
+      "classification_confidence": "high"
     },
     "https://www.troostwijkauctions.com/en/l/peugeot-boxer-330-2-2-hdi-6-seater-double-cab-110hp-2013-%2528original-nl%2529-vd-010-r-A1-44369-35": {
       "title": "Peugeot Boxer 330 2.2 HDI 6-seater double cab 110hp 2013 (Original-NL), VD-010-R",

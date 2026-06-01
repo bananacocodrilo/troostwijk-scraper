@@ -375,7 +375,10 @@ def _check_list(haystack: str, pairs: List[Tuple[str, str]]) -> Optional[str]:
 
 
 def _explicit_lh(s: str) -> Tuple[Optional[int], Optional[int], Optional[str]]:
-    m = re.search(r"\bl\s*([1-4])\s*h\s*([1-3])\b", s)
+    # Use (?!\d) instead of \b so "L2H1TDC" (Ford's Transit Double Cab suffix)
+    # and similar manufacturer codes are captured correctly — \b fails when
+    # the height digit is immediately followed by another word character.
+    m = re.search(r"\bl\s*([1-4])\s*h\s*([1-3])(?!\d)", s, re.IGNORECASE)
     if not m:
         return None, None, None
     L, H = int(m.group(1)), int(m.group(2))
@@ -383,14 +386,15 @@ def _explicit_lh(s: str) -> Tuple[Optional[int], Optional[int], Optional[str]]:
 
 
 def _explicit_l(s: str) -> Tuple[Optional[int], Optional[str]]:
-    m = re.search(r"\bl\s*([1-4])\b", s)
+    # (?!\s*h) avoids matching the L in "L2H1" as a standalone L2.
+    m = re.search(r"\bl\s*([1-4])(?!\s*h)(?!\d)", s, re.IGNORECASE)
     if m:
         return int(m.group(1)), f"explicit L{m.group(1)}"
     return None, None
 
 
 def _explicit_h(s: str) -> Tuple[Optional[int], Optional[str]]:
-    m = re.search(r"\bh\s*([1-3])\b", s)
+    m = re.search(r"\bh\s*([1-3])(?!\d)", s, re.IGNORECASE)
     if m:
         return int(m.group(1)), f"explicit H{m.group(1)}"
     return None, None

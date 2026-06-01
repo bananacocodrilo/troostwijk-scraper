@@ -42,8 +42,11 @@ _RECON_UNKNOWN = 3000   # no condition info
 # Used ONLY when Marktplaats median is unavailable (< 3 samples).
 _BASE_PRICES = {
     # Small camper-candidate vans (Trafic / Vivaro / Primastar / Expert /
-    # Jumpy / ProAce / Transit Custom / Transporter T6.1)
-    "small_van":   {2020: 19_000, 2017: 13_000, 2014: 8_500},
+    # Jumpy / ProAce / Transit Custom / Tourneo Custom / Transporter T6.1
+    # / Vito / Talento / Scudo gen3 / Staria).
+    # Conservative asking-price medians; only used when market-data sources
+    # return fewer than 3 samples. Added 2022 band for newer stock.
+    "small_van":   {2022: 30_000, 2020: 24_000, 2017: 16_000, 2014: 10_000},
     # Legacy big-van entries kept for any pre-pivot cached entries that
     # still pass through compute_costs (they'll be rejected upstream by
     # van_intel, but the function should not crash on them).
@@ -125,12 +128,11 @@ def _market_heuristic(
     bases = _BASE_PRICES[group]
 
     if year is None:
-        # Use a conservative fleet-average year so we still produce a market
-        # reference for lots with no year attribute. 2017 sits in the middle
-        # band — not the newest price, not the oldest.
         year = 2017
 
-    if year >= 2020:
+    if year >= 2022 and 2022 in bases:
+        base = bases[2022]
+    elif year >= 2020:
         base = bases[2020]
     elif year >= 2017:
         base = bases[2017]
