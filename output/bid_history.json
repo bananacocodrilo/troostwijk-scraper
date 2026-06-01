@@ -1279,6 +1279,12 @@
           "current_bid_eur": 1550.0,
           "bids_count": 7,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T17:20:19.866630+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -2292,6 +2298,12 @@
           "ts": "2026-05-31T19:22:33.093397+00:00",
           "current_bid_eur": 5000.0,
           "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T17:20:19.866630+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -4096,6 +4108,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T17:20:19.866630+00:00",
+          "current_bid_eur": 1000.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -4840,6 +4858,12 @@
           "current_bid_eur": 580.0,
           "bids_count": 5,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T17:20:19.866630+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -4854,6 +4878,12 @@
           "ts": "2026-06-01T15:09:42.290554+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T17:20:19.866630+00:00",
+          "current_bid_eur": 2900.0,
+          "bids_count": 3,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -4885,6 +4915,12 @@
           "current_bid_eur": 4100.0,
           "bids_count": 25,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T17:20:19.866630+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_CLOSED"
         }
       ],
       "final_hammer_eur": null,
@@ -4914,6 +4950,12 @@
           "ts": "2026-06-01T15:09:42.290554+00:00",
           "current_bid_eur": 2400.0,
           "bids_count": 15,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T17:20:19.866630+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -5065,6 +5107,87 @@
           "current_bid_eur": 16000.0,
           "bids_count": 19,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": 16000.0,
+      "closed_at": "2026-06-01T17:16:00Z"
+    },
+    "5dcfe9b9-cca6-4cad-aacb-0a30ce288211": {
+      "url": "https://www.vavato.com/en/l/fiat-scudo-van-A3-44485-35662",
+      "model_token": "scudo",
+      "year": 2024,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T17:20:19.866630+00:00",
+          "current_bid_eur": 9500.0,
+          "bids_count": 19,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": 9500.0,
+      "closed_at": "2026-06-01T17:16:00Z"
+    },
+    "36b4cb69-c02e-4ad4-9ecd-e3cf4a86b577": {
+      "url": "https://www.vavato.com/en/l/2014-mercedes-benz-vito-113-cdi-320-l-dc-co%252B-dog-carriage-commercial-vehicle-A1-41705-25",
+      "model_token": "vito",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T17:20:19.866630+00:00",
+          "current_bid_eur": 2200.0,
+          "bids_count": 44,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T17:20:19.866630+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "e5bb82d6-34cf-4e89-8e21-4574e5e205f0": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-109-cdi-320-l-hd-am-39-vkp-2-A1-41786-74",
+      "model_token": "vito",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T17:20:19.866630+00:00",
+          "current_bid_eur": 580.0,
+          "bids_count": 5,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "af19a8cb-447f-427e-ae24-810f91c6c7b8": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-trafic-2-0-dci-145-t29-l2h1-double-cab-%2522automatic%2522-145hp-2021-vjj-21-b-A1-44369-61",
+      "model_token": "trafic",
+      "year": 2021,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T17:20:19.866630+00:00",
+          "current_bid_eur": 3000.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "55277a8b-7394-4e7c-97e7-765026f2855b": {
+      "url": "https://www.vavato.com/en/l/2015-volkswagen-transporter-passenger-car-A3-44487-19025",
+      "model_token": "transporter",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T17:20:19.866630+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
