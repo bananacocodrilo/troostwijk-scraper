@@ -1959,12 +1959,24 @@
     "d21e3eae-891c-4ecc-b7f6-6f9d3428707f": {
       "url": "https://www.troostwijkauctions.com/en/l/2020-volkswagen-transporter-hydrogen-electric-open-body-with-tail-lift-commercial-vehicle-A1-41705-9",
       "model_token": "transporter",
-      "year": null,
+      "year": 2020,
       "snapshots": [
         {
           "ts": "2026-05-29T11:56:02.868842+00:00",
           "current_bid_eur": 5300.0,
           "bids_count": 47,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 5750.0,
+          "bids_count": 49,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -2310,6 +2322,12 @@
           "ts": "2026-05-29T12:00:26.931284+00:00",
           "current_bid_eur": 500.0,
           "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 520.0,
+          "bids_count": 2,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -2947,6 +2965,12 @@
           "current_bid_eur": 2300.0,
           "bids_count": 37,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 2500.0,
+          "bids_count": 39,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -3057,6 +3081,12 @@
           "ts": "2026-05-30T19:20:27.970378+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 5200.0,
+          "bids_count": 2,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -4429,6 +4459,612 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "82f7b3ad-d24a-42c1-9a65-295b81ccde50": {
+      "url": "https://www.vavato.com/en/l/-2020-mercedes-benz-vito-tourer-116cdi-extra-long-9-seats-possible-A3-44486-5748",
+      "model_token": "vito",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 9700.0,
+          "bids_count": 20,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "02dcabc8-8a4d-400f-a95a-e3f74a611a05": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-119-cdi-bluetec-long-%257C-vt-047-z-A1-44155-5098",
+      "model_token": "vito",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "0e79b6cf-df8c-4524-ad43-520572084923": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-talento-l1h1-transporter-A1-47009-109",
+      "model_token": "transporter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 5000.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "64cbb865-f049-4ae1-a0c9-f8eced967e0b": {
+      "url": "https://www.vavato.com/en/l/2021-mercedes-benz-vito-110-light-cargo-A3-44485-12217",
+      "model_token": "vito",
+      "year": 2021,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 9500.0,
+          "bids_count": 14,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "60d1cd46-a6b5-4b41-8bfe-1f3e69a39091": {
+      "url": "https://www.troostwijkauctions.com/en/l/2020-fiat-talento-8%252B1-A3-43537-5037",
+      "model_token": "talento",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 4888.0,
+          "bids_count": 13,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "9a49f034-81a3-4c05-86eb-9479e084a368": {
+      "url": "https://www.troostwijkauctions.com/en/l/2018-citroen-jumpy-2-0-bluehdi120bus-s-commercial-vehicle-A3-44487-5004",
+      "model_token": "jumpy",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "529403cf-a77c-4680-b99a-edb84255e10e": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-109-cdi-functional-88hp-2015-%2528original-nl%252B1st-owner%2529-vp-327-v-A1-44369-78",
+      "model_token": "vito",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "23c79539-e73d-4759-96d4-44dd1a80e202": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-113-cdi-343-automatic-vj-853-k-A1-40725-336",
+      "model_token": "vito",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "4e2752a6-cfe5-4c05-ab26-f74902c2d2f9": {
+      "url": "https://www.troostwijkauctions.com/en/l/2005-mercedes-benz-vito-8%252B1-minibus-A3-44486-5010",
+      "model_token": "vito",
+      "year": 2005,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 3000.0,
+          "bids_count": 18,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "25334171-44fc-470d-97fb-dbb2924796a3": {
+      "url": "https://www.troostwijkauctions.com/en/l/2017-mercedes-benz-vito-116-cdi-extra-long-commercial-vehicle-A1-41715-6",
+      "model_token": "vito",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 9400.0,
+          "bids_count": 25,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "a59bbaae-0f88-488f-802e-d931f657354e": {
+      "url": "https://www.vavato.com/en/l/2018-mercedes-benz-vito-114-cdi-A3-44485-4650",
+      "model_token": "vito",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 9650.0,
+          "bids_count": 22,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2a81ddc5-d2d2-4ad9-b970-2b1b0bc7e2db": {
+      "url": "https://www.vavato.com/en/l/2012-fiat-scudo-2-0-diesel-A3-44485-5893",
+      "model_token": "scudo",
+      "year": 2012,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 3505.0,
+          "bids_count": 17,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "898e4905-cd20-4c0d-b0af-fca3cc7c5cb9": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-talento-2-0-multijet-l2h1-cool-vls-44-v-A1-40682-270",
+      "model_token": "talento",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 2700.0,
+          "bids_count": 32,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "76f9ad2d-c033-45c5-8260-9f540f2f153c": {
+      "url": "https://www.vavato.com/en/l/2014-mercedes-benz-vito-passenger-car-A3-44486-19244",
+      "model_token": "vito",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 1600.0,
+          "bids_count": 13,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "251122f7-9ffc-4ff0-a118-41423d1ec02f": {
+      "url": "https://www.troostwijkauctions.com/en/l/toyota-proace-compact-1-6-d-4d-professional-114hp-2017-%2528original-nl%2529-v-346-jr-A1-44369-58",
+      "model_token": "pro ace",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2fb0f090-472a-49f2-ba0d-ecc55a0493e1": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-111-cdi-320-l-double-cab-std-66-vzz-3-A1-47011-27",
+      "model_token": "vito",
+      "year": 2009,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 900.0,
+          "bids_count": 4,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "29b8749f-d458-4aa8-9905-c594b70e65c7": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-111-cdi-long-114hp-2017-commercial-vehicle-vnz-43-h-A1-44369-17",
+      "model_token": "vito",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 2000.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "e56d8145-6ecf-4ac2-b238-12ee49e1baf5": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-talento-l2h1-transporter-A1-47009-36",
+      "model_token": "transporter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 6000.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "b34ae2e0-7257-460a-8321-dc040e4b38eb": {
+      "url": "https://www.troostwijkauctions.com/en/l/2021-fiat-talento-l2h1-pickup-truck-A1-46700-2",
+      "model_token": "talento",
+      "year": 2021,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 5600.0,
+          "bids_count": 13,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "0f8ca98a-c2c2-4a6a-94cf-982f4ea48485": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-116-cdi-extra-l-bs-commercial-vehicle-A1-42260-5",
+      "model_token": "vito",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "c05947f4-92cb-43e6-9a72-c4b7c32e61c8": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-113-cdi-320-long-dc-standard-automatic-3-vxp-37-A1-40725-301",
+      "model_token": "vito",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 220.0,
+          "bids_count": 12,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "77fe6af1-5271-4c9e-8e0f-3038b96f57af": {
+      "url": "https://www.troostwijkauctions.com/en/l/2015-mercedes-benz-vito-109-cdi-long-conditioned-commercial-vehicle-A1-46733-12",
+      "model_token": "vito",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 5000.0,
+          "bids_count": 8,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "3a29d920-e518-41e1-b7ac-2bc5b0b1b0ff": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-113-cdi-320-commercial-vehicle-2012-A1-46393-338",
+      "model_token": "vito",
+      "year": 2012,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 2500.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "c7a5ed45-dea2-4933-8d21-57724a33408f": {
+      "url": "https://www.troostwijkauctions.com/en/l/medrcedes-vito-v-220d-commercial-vehicle-A1-42019-170",
+      "model_token": "vito",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 3400.0,
+          "bids_count": 10,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "281fdf16-367a-4823-8d1d-6cba0e282812": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-109-cdi320l-double-cab-am-st-09-bx-hn-A1-47011-19",
+      "model_token": "vito",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 580.0,
+          "bids_count": 5,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "b781f7f8-745b-4280-bb88-b3e65ac0b866": {
+      "url": "https://www.vavato.com/en/l/2022-fiat-scudo-v-pickup-truck-A3-44486-35137",
+      "model_token": "scudo",
+      "year": 2022,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "678f2f75-ef76-4dfd-be8e-c1ada37007fc": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-109-cdi320l-double-cab-am-st-11-bx-hn-A1-47011-17",
+      "model_token": "vito",
+      "year": 2006,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "b99e5aa7-334f-496f-ba5c-793849332ac5": {
+      "url": "https://www.troostwijkauctions.com/en/l/2014-renault-trafic-double-cab-A3-44485-5743",
+      "model_token": "trafic",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 4100.0,
+          "bids_count": 25,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "43ce15f8-3aee-41bf-b05e-122eee12c8f2": {
+      "url": "https://www.troostwijkauctions.com/en/l/citroen-jumpy-2-0-bluehdi180bus-s-commercial-vehicle-vbj-99-p-A1-40533-15",
+      "model_token": "jumpy",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 4800.0,
+          "bids_count": 10,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "d099b9bc-6023-411a-86ce-be7b16db5c6b": {
+      "url": "https://www.troostwijkauctions.com/en/l/2017-renault-trafic-double-cab-92-000km-A3-44486-5024",
+      "model_token": "trafic",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 2400.0,
+          "bids_count": 15,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "8a6ce242-ebcf-4877-b07b-1f463210ce1c": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-trafic-2-0dci-t29l2h1-gendc-commercial-vehicle-A1-46774-39",
+      "model_token": "trafic",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "691089cf-8462-41ec-9a53-f1d3f94a4d6e": {
+      "url": "https://www.vavato.com/en/l/2014-renault-trafic-disabled-traffic-A3-44486-5021",
+      "model_token": "trafic",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 2450.0,
+          "bids_count": 15,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "7926a88a-95d3-43a7-af3a-39c919e3d8e9": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-114-cdi-long-automatic-commercial-vehicle-A1-41302-39",
+      "model_token": "vito",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "52d0401d-b296-4857-9dfb-41641f6df62a": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-116-cdi-extra-long-van-A1-42260-4",
+      "model_token": "vito",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "ea9feca8-777e-463d-a68e-433b499dd16d": {
+      "url": "https://www.troostwijkauctions.com/en/l/2021-toyota-proace-city-1-2-turbo-cool-comf-v-59-ltg-A1-40725-97",
+      "model_token": "pro ace",
+      "year": 2021,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 8200.0,
+          "bids_count": 103,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "1c86bc02-e26e-46b3-bcf8-67b1227b7f2e": {
+      "url": "https://www.troostwijkauctions.com/en/l/2009-mercedes-benz-vito-109-cdi-320-long-dc-amigo-luxe-commercial-vehicle-A1-46710-13",
+      "model_token": "vito",
+      "year": 2009,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 2600.0,
+          "bids_count": 23,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "a89901e7-1616-49b7-9538-0ab3ee96fdfe": {
+      "url": "https://www.troostwijkauctions.com/en/l/toyota-proace-worker-2-0-d-4d-cool-comfort-long-dc-%257C-v-582-pd-i-A1-44155-5101",
+      "model_token": "pro ace",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 4800.0,
+          "bids_count": 48,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "efeeeefb-b65c-44b9-841a-a6dc23ddc451": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-109-cdi-functional-88hp-2015-%2528original-nl%252B1st-owner%2529-vp-327-v-A1-44365-44",
+      "model_token": "vito",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 3000.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "991dba37-23a0-4422-bc9c-7d91c0e5461d": {
+      "url": "https://www.troostwijkauctions.com/en/l/toyota-proace-worker-1-6-d-4d-cool-comfort-95hp-2017-%2528original-nl%2529-v-975-gr-A1-44369-56",
+      "model_token": "pro ace",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 2200.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "69274695-07f6-4152-b19c-f4e7bd8a16ad": {
+      "url": "https://www.vavato.com/en/l/2022-ford-tourneo-custom-%25288-seats%2529-A3-44485-11918",
+      "model_token": "tourneo custom",
+      "year": 2022,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T15:09:42.290554+00:00",
+          "current_bid_eur": 16000.0,
+          "bids_count": 19,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
