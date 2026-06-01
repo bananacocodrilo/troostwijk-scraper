@@ -2500,6 +2500,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-01T21:42:04.020174+00:00",
+          "current_bid_eur": 5200.0,
+          "bids_count": 2,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -5208,6 +5214,36 @@
           "ts": "2026-06-01T17:44:13.242278+00:00",
           "current_bid_eur": 2300.0,
           "bids_count": 4,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "90137d8a-0c21-45a3-ab46-3cd756167f2a": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-trafic-camper-van-camper-conversion-campervan-A1-47061-1",
+      "model_token": "trafic",
+      "year": 2004,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T21:42:04.020174+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "fc140ea4-28ea-4e82-bf8f-0d1cd9f1a43d": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-custom-270-2-2-tdci-l1h1-trend-2016-%257C-vz-769-f-A1-41623-21",
+      "model_token": "transit custom",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-06-01T21:42:04.020174+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
           "status": "BIDDING_OPEN"
         }
       ],
