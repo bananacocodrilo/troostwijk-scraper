@@ -35,6 +35,10 @@ IDEAL_MODELS = [
     "Fiat Talento",
     # t6_1_lwb
     "Volkswagen Transporter",
+    # psa_l1l2h1 (L1H1 and L2H1 only — confirmed low-roof short/medium)
+    "Peugeot Boxer",
+    "Fiat Ducato",
+    "Citroen Jumper",
     # vito_v_class_l2
     "Mercedes Vito",
     "Mercedes V-Class",

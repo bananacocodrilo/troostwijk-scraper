@@ -63,14 +63,14 @@ _MODEL_GROUP = {
     "pro ace": "small_van", "scudo": "small_van",
     "transit custom": "small_van", "tourneo custom": "small_van",
     "transporter": "small_van", "t6.1": "small_van", "t6_1": "small_van",
-    # Mercedes Vito / V-Class — premium pricing but cost_model has no
-    # explicit "premium_small_van" tier; market data corrects when present.
     "vito": "small_van",
     "v-klasse": "small_van", "v klasse": "small_van", "v-class": "small_van",
-    # Hyundai Staria — single-length passenger MPV
     "staria": "small_van",
-    # Legacy big-van mapping (harmless, retained for cached entries)
-    "boxer": "psa", "jumper": "psa", "ducato": "psa",
+    # PSA trio — L1H1/L2H1 variants are now whitelisted and priced as small_van.
+    # (L3H2+ are rejected by van_intel before reaching cost_model.)
+    "boxer": "small_van", "ducato": "small_van", "jumper": "small_van",
+    # Legacy big-van mapping (harmless, retained for any stale cached entries
+    # that pre-date the whitelist pivot and still hit compute_costs).
     "sprinter": "premium", "crafter": "premium", "tge": "premium",
     "transit": "mid", "master": "mid", "movano": "mid", "daily": "mid",
 }

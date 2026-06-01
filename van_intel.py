@@ -85,6 +85,19 @@ WHITELIST_GROUPS: dict = {
         "required_height": None,
         "min_year": 2020,
     },
+    "psa_l1l2h1": {
+        "label": "Peugeot Boxer / Fiat Ducato / Citroen Jumper (L1H1 or L2H1 only)",
+        # Only the low-roof short/medium variants qualify — the L3H2 / L4H3
+        # big-van conversions are out of scope (too large for 6-seat camper).
+        # H1 is therefore a HARD required height; L1 and L2 are accepted.
+        # Unknown size → soft-pass (lot may still be H1/L2 but not stated).
+        # Confirmed H2, H3, L3, L4 → reject.
+        # Min-year 2016 = Euro 6 era for this platform.
+        "tokens": ["ducato", "jumper", "boxer"],
+        "required_length": [1, 2],
+        "required_height": [1],
+        "min_year": 2016,
+    },
     "vito_v_class_l2": {
         "label": "Mercedes Vito / V-Class (Lang or Extralang)",
         # Vito (panel van) and V-Class (passenger MPV) share the W447
@@ -288,6 +301,12 @@ _LENGTH_KEYWORDS: List[Tuple[str, int, str]] = [
 # Weight-band fallback for length. Only used when no other length signal
 # is present. The whitelisted models all sit in the small/mid-size class:
 _WEIGHT_LENGTH_BANDS: dict = {
+    # Peugeot Boxer / Fiat Ducato / Citroen Jumper — same Sevel platform.
+    # L1H1 empty weight ~1650-1850kg, L2H1 ~1750-1950kg, L3H2 ~1900-2100kg.
+    # Bands are approximate — use only as fallback when no explicit code found.
+    "boxer":       (1850, 2050),
+    "ducato":      (1850, 2050),
+    "jumper":      (1850, 2050),
     # Renault Trafic / Opel Vivaro / Nissan Primastar / Fiat Talento — shared platform
     "trafic":      (1700, 1900),
     "vivaro":      (1700, 1900),
@@ -882,6 +901,7 @@ _ROI_LIQUIDITY = {
     "scudo_gen3":                   7,   # gen-3 Scudo is new, thin resale market so far
     "vivaro_trafic_primastar_l2":  10,
     "t6_1_lwb":                     9,
+    "psa_l1l2h1":                   8,   # Ducato/Boxer/Jumper — common, good resale
     "vito_v_class_l2":              7,   # Mercedes premium tax — slower resale
     "hyundai_staria":               5,   # rare in NL, small resale pool
 }
@@ -892,6 +912,7 @@ _ROI_DEMAND = {
     "scudo_gen3":                   7,
     "vivaro_trafic_primastar_l2":   8,
     "t6_1_lwb":                     9,
+    "psa_l1l2h1":                   7,   # L1H1/L2H1 crew demand lower than Transit Custom
     "vito_v_class_l2":              9,   # factory crew-cab passenger demand is strong
     "hyundai_staria":               7,
 }
