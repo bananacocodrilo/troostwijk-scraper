@@ -699,13 +699,19 @@ _SEATS_FROM_TEXT_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Dutch shorthand: "2p", "3p.", "4P" — common in Marktplaats / AutoTrack
+# Peugeot Expert / Boxer titles ("120pk 2p. STT Verh."). The `\b` after
+# `p` correctly excludes "120pk" (no word boundary between P and K). Limit
+# to a single digit 2-9 to avoid matching trim codes like "T29".
+_SEATS_NP_SHORTHAND_RE = re.compile(r"\b([2-9])\s*p\b", re.IGNORECASE)
+
 
 def _seats_from_text(text: Optional[str]) -> Optional[int]:
     """Return seat count if explicitly stated in ``text`` (e.g. "3-persoons",
-    "5 seater", "2 zits"), else None. Multi-language (NL/EN/DE/FR)."""
+    "5 seater", "2p", "2 zits"), else None. Multi-language (NL/EN/DE/FR)."""
     if not text:
         return None
-    m = _SEATS_FROM_TEXT_RE.search(text)
+    m = _SEATS_FROM_TEXT_RE.search(text) or _SEATS_NP_SHORTHAND_RE.search(text)
     if not m:
         return None
     try:
