@@ -17682,6 +17682,16 @@
       "reason": "vehicle_type: forklift",
       "title": "Toyota - 1983 - 405FG18 - Forklift truck",
       "rejected_at": "2026-06-02T16:03:00.022927+00:00"
+    },
+    "https://www.vavato.com/en/l/1966-ford-3000-two-wheel-drive-farm-tractor-oldtimer-A1-40140-188": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1966 Ford 3000 Two-wheel drive farm tractor / Oldtimer",
+      "rejected_at": "2026-06-02T16:36:20.098605+00:00"
+    },
+    "https://www.vavato.com/en/l/2015-volkswagen-transporter-passenger-car-A3-44487-19025": {
+      "reason": "seats_below_5: 3",
+      "title": "2015 Volkswagen Transporter Passenger Car",
+      "rejected_at": "2026-06-02T16:36:20.098605+00:00"
     }
   }
 }
