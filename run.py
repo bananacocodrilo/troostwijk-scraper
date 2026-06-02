@@ -6,6 +6,7 @@ import sys
 import asking_feed
 import bid_history
 import registry
+import risk
 from cost_model import DEFAULT_BUYER_PREMIUM, compute_costs, passes_cost_filter
 from market_price import build_price_index_cached
 from notify import notify_gems
@@ -143,6 +144,8 @@ _SCHEMA: dict = {
     "deal_ratio":                 None,
     # Scores
     "score":                      None,
+    "risk_score":                 0,
+    "risk_flags":                 [],
     "is_hidden_gem":              False,
 }
 
@@ -321,6 +324,9 @@ def main():
         # cost_model adds deal_score separately — do NOT overwrite score.
         # score = suitability (always matches ScoreBreakdown fields).
         # deal_score = financial quality (deal_ratio-derived, shown separately).
+
+        # Risk metadata — purely additive (no impact on accept/reject).
+        v.update(risk.compute_risk(v))
 
         accepted.append(v)
 

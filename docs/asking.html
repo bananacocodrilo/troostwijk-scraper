@@ -93,6 +93,38 @@
     .badge-over      { background: #2a0d0d; color: var(--red); border-color: #5a1a1a; }
     .badge-fair      { background: #2d2600; color: var(--yellow); border-color: #4a3d00; }
 
+    /* ── RISK BADGE ──────────────────────────── */
+    .risk-pill {
+      font-size: 11px; font-weight: 700;
+      border-radius: 20px; padding: 2px 9px;
+      border: 1px solid transparent;
+      vertical-align: middle; margin-left: 4px;
+      cursor: help;
+    }
+    .risk-pill.r-clean { background: #0d2a1a; color: var(--green); border-color: #1a4a2a; }
+    .risk-pill.r-low   { background: #2d2600; color: var(--yellow); border-color: #4a3d00; }
+    .risk-pill.r-mid   { background: #2d1f00; color: #f5a142; border-color: #4a3600; }
+    .risk-pill.r-high  { background: #3a0d0d; color: #ff8a8a; border-color: #6a1a1a; }
+    details.risk-details { margin: 6px 16px 0; }
+    details.risk-details > summary {
+      list-style: none; cursor: pointer; outline: none;
+    }
+    details.risk-details > summary::-webkit-details-marker { display: none; }
+    details.risk-details[open] > summary .risk-pill::after { content: ' ▴'; }
+    details.risk-details:not([open]) > summary .risk-pill[data-has-flags="1"]::after { content: ' ▾'; }
+    .risk-flag-list {
+      list-style: none; padding: 6px 0 0 0;
+      font-size: 11.5px; line-height: 1.5;
+    }
+    .risk-flag-list li {
+      padding: 2px 8px; margin: 2px 0; border-radius: 4px;
+      background: var(--surface2); color: var(--text);
+      border-left: 3px solid var(--border);
+    }
+    .risk-flag-list li.sev-info { border-left-color: var(--accent); }
+    .risk-flag-list li.sev-warn { border-left-color: var(--yellow); }
+    .risk-flag-list li.sev-high { border-left-color: var(--red); color: #ff8a8a; }
+
     .specs {
       display: grid; grid-template-columns: 1fr 1fr;
       gap: 3px 8px;
@@ -215,6 +247,10 @@
     <input type="range" id="priceFilter" min="2000" max="60000" step="1000" value="60000" />
   </label>
   <label>
+    Max risk <span id="riskVal">5</span>
+    <input type="range" id="riskFilter" min="0" max="5" step="1" value="5" title="Hide listings with risk_score above this" />
+  </label>
+  <label>
     Sort by
     <select id="sortBy">
       <option value="under_first">⭐ Best deals first</option>
@@ -269,6 +305,42 @@ function pctText(pct) {
   return `${sign}${pct.toFixed(0)}% vs median`;
 }
 
+function riskPillClass(score) {
+  if (!score || score <= 0) return 'r-clean';
+  if (score === 1)          return 'r-low';
+  if (score <= 3)           return 'r-mid';
+  return 'r-high';
+}
+
+function riskPillLabel(score, flags) {
+  const n = (flags || []).length;
+  if (!score || score <= 0) return '✓ Clean';
+  if (score >= 4)           return `⚠ Risky (${n})`;
+  if (n === 1)              return '1 flag';
+  return `${n} flags`;
+}
+
+function riskBlock(v) {
+  const score = v.risk_score ?? 0;
+  const flags = v.risk_flags || [];
+  const cls = riskPillClass(score);
+  const label = riskPillLabel(score, flags);
+  const tooltip = flags.length
+    ? flags.map(f => `[${f.severity}] ${f.label}`).join('\n')
+    : 'No risk flags detected';
+  if (!flags.length) {
+    return `<span class="risk-pill ${cls}" title="${tooltip.replace(/"/g, '&quot;')}">${label}</span>`;
+  }
+  const items = flags.map(f =>
+    `<li class="sev-${f.severity}">${f.label.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}</li>`
+  ).join('');
+  return `
+    <details class="risk-details">
+      <summary><span class="risk-pill ${cls}" data-has-flags="1" title="${tooltip.replace(/"/g, '&quot;')}">${label}</span></summary>
+      <ul class="risk-flag-list">${items}</ul>
+    </details>`;
+}
+
 function buildCard(v) {
   const score = v.score ?? 0;
   const price = v.price_eur;
@@ -287,6 +359,8 @@ function buildCard(v) {
       <div class="card-sub">${srcLabel}${v.variant ? ' · ' + v.variant : ''}</div>
     </div>
   </div>
+
+  ${riskBlock(v)}
 
   <div class="badges">
     ${v.model_group ? `<span class="badge badge-size" title="Whitelist group">${v.model_group}</span>` : ''}
@@ -330,12 +404,14 @@ function render() {
   const yearMax = parseInt(document.getElementById('yearMaxFilter').value);
   const kmMax   = parseInt(document.getElementById('kmMaxFilter').value);
   const maxPrice = parseFloat(document.getElementById('priceFilter').value);
+  const maxRisk  = parseInt(document.getElementById('riskFilter').value);
   const sortKey  = document.getElementById('sortBy').value;
 
   let filtered = allListings.filter(v => {
     if (group  && v.model_group !== group) return false;
     if (source && v.source !== source) return false;
     if ((v.price_eur ?? 0) > maxPrice) return false;
+    if ((v.risk_score ?? 0) > maxRisk) return false;
     // Year range — soft on unknowns
     if (v.year != null) {
       if (v.year < yearMin || v.year > yearMax) return false;
@@ -413,6 +489,10 @@ document.getElementById('sortBy').addEventListener('change', render);
 document.getElementById('priceFilter').addEventListener('input', e => {
   const v = parseFloat(e.target.value);
   document.getElementById('priceVal').textContent = '€' + Math.round(v/1000) + 'k';
+  render();
+});
+document.getElementById('riskFilter').addEventListener('input', e => {
+  document.getElementById('riskVal').textContent = e.target.value;
   render();
 });
 

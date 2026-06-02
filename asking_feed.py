@@ -18,6 +18,7 @@ import statistics
 from typing import Dict, List, Optional, Tuple
 
 from van_intel import classify_vehicle, score_small_van, strict_filter
+import risk
 
 # ---------------------------------------------------------------------------
 # Source metadata
@@ -193,6 +194,11 @@ def build_feed(price_cache_path: str = "output/price_cache.json") -> List[dict]:
         v["variant"]                   = cls.variant
         v["classification_confidence"] = cls.confidence
         v["score"]                     = score_small_van(v)
+        # Risk metadata — marketplace listings only ship title (no
+        # remarks / extras), so most flags won't fire. That's fine —
+        # the structure is consistent and the dashboard handles
+        # empty flag lists gracefully.
+        v.update(risk.compute_risk(v))
         survivors.append(v)
 
     deduped = _dedupe(survivors)

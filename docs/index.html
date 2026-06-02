@@ -201,6 +201,39 @@
       vertical-align: middle; margin-left: 4px; cursor: help;
     }
 
+    /* ── RISK BADGE ──────────────────────────── */
+    .risk-pill {
+      font-size: 11px; font-weight: 700;
+      border-radius: 20px; padding: 2px 9px;
+      border: 1px solid transparent;
+      vertical-align: middle; margin-left: 4px;
+      cursor: help;
+    }
+    .risk-pill.r-clean { background: #0d2a1a; color: var(--green); border-color: #1a4a2a; }
+    .risk-pill.r-low   { background: #2d2600; color: var(--yellow); border-color: #4a3d00; }
+    .risk-pill.r-mid   { background: #2d1f00; color: #f5a142; border-color: #4a3600; }
+    .risk-pill.r-high  { background: #3a0d0d; color: #ff8a8a; border-color: #6a1a1a; }
+    /* <details> reset — used to expand the flag list under the pill */
+    details.risk-details { margin: 6px 16px 0; }
+    details.risk-details > summary {
+      list-style: none; cursor: pointer; outline: none;
+    }
+    details.risk-details > summary::-webkit-details-marker { display: none; }
+    details.risk-details[open] > summary .risk-pill::after { content: ' ▴'; }
+    details.risk-details:not([open]) > summary .risk-pill[data-has-flags="1"]::after { content: ' ▾'; }
+    .risk-flag-list {
+      list-style: none; padding: 6px 0 0 0;
+      font-size: 11.5px; line-height: 1.5;
+    }
+    .risk-flag-list li {
+      padding: 2px 8px; margin: 2px 0; border-radius: 4px;
+      background: var(--surface2); color: var(--text);
+      border-left: 3px solid var(--border);
+    }
+    .risk-flag-list li.sev-info { border-left-color: var(--accent); }
+    .risk-flag-list li.sev-warn { border-left-color: var(--yellow); }
+    .risk-flag-list li.sev-high { border-left-color: var(--red); color: #ff8a8a; }
+
     /* ── REMARKS ─────────────────────────────── */
     .remarks {
       padding: 8px 16px;
@@ -296,6 +329,10 @@
     <input type="range" id="scoreFilter" min="0" max="100" step="5" value="30" />
   </label>
   <label>
+    Max risk <span id="riskVal">5</span>
+    <input type="range" id="riskFilter" min="0" max="5" step="1" value="5" title="Hide lots with risk_score above this" />
+  </label>
+  <label>
     Sort by
     <select id="sortBy">
       <option value="closing">⏱️ Closing soonest</option>
@@ -355,6 +392,45 @@ function dealClass(pct) {
   if (pct >= 25)  return 'positive';
   if (pct >= 0)   return 'neutral';
   return 'negative';
+}
+
+function riskPillClass(score) {
+  if (!score || score <= 0) return 'r-clean';
+  if (score === 1)          return 'r-low';
+  if (score <= 3)           return 'r-mid';
+  return 'r-high';
+}
+
+function riskPillLabel(score, flags) {
+  const n = (flags || []).length;
+  if (!score || score <= 0) return '✓ Clean';
+  if (score >= 4)           return `⚠ Risky (${n})`;
+  if (n === 1)              return '1 flag';
+  return `${n} flags`;
+}
+
+function riskBlock(v) {
+  // Build the expandable risk pill + flag list. Empty score → still
+  // show a small green "Clean" pill (no expansion). Score>0 → wrap
+  // in <details> so user can click to see the flag breakdown.
+  const score = v.risk_score ?? 0;
+  const flags = v.risk_flags || [];
+  const cls = riskPillClass(score);
+  const label = riskPillLabel(score, flags);
+  const tooltip = flags.length
+    ? flags.map(f => `[${f.severity}] ${f.label}`).join('\n')
+    : 'No risk flags detected';
+  if (!flags.length) {
+    return `<span class="risk-pill ${cls}" title="${tooltip.replace(/"/g, '&quot;')}">${label}</span>`;
+  }
+  const items = flags.map(f =>
+    `<li class="sev-${f.severity}">${f.label.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}</li>`
+  ).join('');
+  return `
+    <details class="risk-details">
+      <summary><span class="risk-pill ${cls}" data-has-flags="1" title="${tooltip.replace(/"/g, '&quot;')}">${label}</span></summary>
+      <ul class="risk-flag-list">${items}</ul>
+    </details>`;
 }
 
 function timeUntil(iso) {
@@ -433,6 +509,7 @@ function buildCard(v) {
   const dealScoreBadge = v.deal_score != null
     ? `<span class="deal-score-badge" title="Deal score (based on deal ratio vs market)">💰${v.deal_score}</span>`
     : '';
+  const riskHtml = riskBlock(v);
   const thumb = v.thumbnail_url
     ? `<a href="${v.url}" target="_blank" rel="noopener"><img class="card-thumb" src="${v.thumbnail_url}" alt="${(v.title || '').replace(/"/g, '&quot;')}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'card-thumb-placeholder',textContent:'image unavailable'}))" /></a>`
     : `<div class="card-thumb-placeholder">no photo</div>`;
@@ -447,6 +524,8 @@ function buildCard(v) {
       <div class="card-sub">${v.van_type || 'size unknown'} · ${location}</div>
     </div>
   </div>
+
+  ${riskHtml}
 
   ${countdownHtml(v)}
 
@@ -526,6 +605,7 @@ function buildCard(v) {
 function render() {
   const closing = document.getElementById('closingFilter').value;
   const minScore = parseFloat(document.getElementById('scoreFilter').value);
+  const maxRisk = parseInt(document.getElementById('riskFilter').value);
   const yearMin = parseInt(document.getElementById('yearMinFilter').value);
   const yearMax = parseInt(document.getElementById('yearMaxFilter').value);
   const kmMax   = parseInt(document.getElementById('kmMaxFilter').value);
@@ -536,6 +616,7 @@ function render() {
 
   let filtered = allVans.filter(v => {
     if ((v.score ?? 0) < minScore) return false;
+    if ((v.risk_score ?? 0) > maxRisk) return false;
     // Year range — soft on unknowns (no year → still shown)
     if (v.year != null) {
       if (v.year < yearMin || v.year > yearMax) return false;
@@ -609,6 +690,10 @@ document.getElementById('closingFilter').addEventListener('change', render);
 document.getElementById('sortBy').addEventListener('change', render);
 document.getElementById('scoreFilter').addEventListener('input', e => {
   document.getElementById('scoreVal').textContent = parseFloat(e.target.value).toFixed(0);
+  render();
+});
+document.getElementById('riskFilter').addEventListener('input', e => {
+  document.getElementById('riskVal').textContent = e.target.value;
   render();
 });
 
