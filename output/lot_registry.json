@@ -3636,10 +3636,10 @@
       "remarks": null,
       "additional_information": "1st owner, rims and tyres ok, clean interior, very economical diesel engine, few kilometres.",
       "lot_id": "b06b3df4-d79a-4d1b-8cb0-344d829d7d14",
-      "current_bid_eur": 4300.0,
+      "current_bid_eur": 7500.0,
       "buyer_premium_pct": 0.0,
       "total_cost_eur": null,
-      "bids_count": 12,
+      "bids_count": 19,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -3677,7 +3677,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-01T17:20:19.850036+00:00"
+      "last_scrape_at": "2026-06-02T10:40:10.360103+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/fiat-scudo-van-A3-44485-35662": {
       "title": "Fiat Scudo Van",
@@ -17378,6 +17378,776 @@
       "reason": "brand_not_in_whitelist",
       "title": "Jeep Wrangler 3.6 V6 Rubicon 284hp 2016, JTS-57-H",
       "rejected_at": "2026-06-02T03:08:31.008190+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mini-1-6-one-77-slg-1-A1-38871-7": {
+      "reason": "body_mismatch: pickup",
+      "title": "Mini 1.6 One 77-SLG-1",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/kia-sorento-2-4-x-clusive-35-klx-8-2010-A1-41786-95": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Kia - Sorento - 2.4 X-clusive - 35-KLX-8- 2010",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mini-body-A1-46911-145": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mini body",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mg-2004-tf-1-8-tf-135-kv-088-v-A1-46911-102": {
+      "reason": "brand_not_in_whitelist",
+      "title": "MG - 2004 - TF - 1.8 TF 135 KV-088-V",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mg-2002-tf-1-8-tf-135-30-sx-zh-A1-46911-106": {
+      "reason": "brand_not_in_whitelist",
+      "title": "MG - 2002 - TF 1.8 TF 135 30-SX-ZH",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mg-tf-1-8-tf-135-passenger-car-v-v-hard-and-soft-top-w-319-uld-A1-46911-112": {
+      "reason": "brand_not_in_whitelist",
+      "title": "MG TF 1.8 TF 135 Passenger car v.v. hard and soft top W-319-ULD",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mb-e-class-estate-350-avantgarde-4matic-automatic-hz-016-j-A1-41786-27": {
+      "reason": "brand_not_in_whitelist",
+      "title": "MB- E-class Estate - 350 Avantgarde 4Matic AUTOMATIC- HZ-016-J",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-s60-2-4-edition-51-nr-rs-2001-A1-41786-99": {
+      "reason": "mileage_too_high: 313757km",
+      "title": "Volvo - S60 - 2.4 Edition - 51-NR-RS- 2001",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-ka-1-2-cool-sound-s-s-40-tsr-4-2012-A1-41786-203": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - Ka - 1.2 Cool & Sound s/s - 40-TSR-4- 2012",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mini-mini-1-4-one-th-635-p-2008-A1-41786-151": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mini - Mini - 1.4 One - TH-635-P- 2008",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-mondeo-wagon-1-6-ecob-platinum-z-428-fx-A1-41786-113": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - Mondeo Wagon - 1.6 EcoB. Platinum - Z-428-FX",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mg-2004-tf-1-8-tf-135-passenger-car-v-v-hard-and-softtop-A1-46911-110": {
+      "reason": "brand_not_in_whitelist",
+      "title": "MG - 2004 - TF 1.8 TF 135 Passenger car v.v. hard- and softtop",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/rover-75-1-8-club-kd-027-s-2000-A1-41786-4": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Rover - 75 - 1.8 Club - KD-027-S- 2000",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-v40-2-0-d4-momentum-bns-7-xxk-52-A1-41786-196": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Volvo - V40 - 2.0 D4 Momentum Bns - 7-XXK-52",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/skoda-octavia-combi-1-6-tdi-gr-t-amb-bns-45-tjv-4-2012-A1-41786-17": {
+      "reason": "mileage_too_high: 296601km",
+      "title": "Skoda - Octavia Combi - 1.6 TDI Gr.t.Amb.Bns - 45-TJV-4- 2012",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mini-mini-countryman-2-0-coopr-sd-all4-chi-32-zfs-8-2012-A1-41786-9": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mini - Mini Countryman - 2.0 Coopr SD ALL4 Chi. - 32-ZFS-8- 2012",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/honda-jazz-1-4-hybrid-bns-mode-14-tdt-5-2012-A1-41786-8": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Honda - Jazz - 1.4 Hybrid Bns Mode - 14-TDT-5- 2012",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-1-series-120i-executive-3-xdz-45-2004-A1-41786-139": {
+      "reason": "mileage_too_high: 281744km",
+      "title": "BMW - 1-Series - 120i Executive - 3-XDZ-45- 2004",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/seat-ibiza-sc-1-2-tdi-style-eco-76-ppn-6-2011-A1-41786-96": {
+      "reason": "brand_not_in_whitelist",
+      "title": "SEAT - Ibiza SC - 1.2 TDI Style Eco. - 76-PPN-6- 2011",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/jaguar-s-type-4-0-v8-71-gs-lf-2001-A1-41786-21": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Jaguar - S-type - 4.0 V8 - 71-GS-LF- 2001",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-1-series-116i-x-100-hp-A1-41786-83": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW - 1 Series - 116i - X-100-HP",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mitsubishi-colt-czc-1-5-invite-65-tf-jt-2006-A1-41786-12": {
+      "reason": "mileage_too_high: 272018km",
+      "title": "Mitsubishi - Colt CZC - 1.5 Invite - 65-TF-JT- 2006",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-v70-2-4-bi-fuel-cng-ed-ii-r-177-dp-2005-A1-41786-20": {
+      "reason": "mileage_too_high: 309460km",
+      "title": "Volvo - V70 - 2.4 Bi-Fuel/CNG Ed. II - R-177-DP- 2005",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-fpwg3400-pressure-washer-234-bar-A1-45568-113": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - FPWG3400 - Pressure washer 234 Bar",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.vavato.com/en/l/ford-sierra-2-9-v6-xr-4x4-inj-for-parts-car-1990-A1-40259-17": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - Sierra - 2.9 V6 XR 4x4 Inj. for parts - Car - 1990",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.vavato.com/en/l/ford-oldtimer-tractor-A3-43543-17601": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford Oldtimer tractor",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-fdt-10200se-emergency-power-generator-generator-diesel-2026-A1-40263-31": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - FDT 10200SE - Emergency power generator / generator diesel 2026",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/toyota-2014-tow-truck-diesel-lpg-tractor-toyota-A7-47308-2": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Toyota - 2014 - Tow Truck Diesel LPG Tractor Toyota",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/toolspecial-fx1014-alfa-fiat-petrol-locking-kit-A1-44659-244": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Toolspecial - FX1014 Alfa Fiat - Petrol locking kit",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1985-nissan-patrol-3-3-6-cylinder-A3-43541-4665": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1985 Nissan Patrol 3.3 6 cylinder",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1989-nissan-patrol-3-3-6-cylinder-A3-43541-4664": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1989 Nissan Patrol 3.3 6 cylinder",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.vavato.com/en/l/1985-nissan-patrol-3-3-6-cylinder-A3-43541-4665": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1985 Nissan Patrol 3.3 6 cylinder",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.vavato.com/en/l/1989-nissan-patrol-3-3-6-cylinder-A3-43541-4664": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1989 Nissan Patrol 3.3 6 cylinder",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-c-class-220-cdi-break-s204-2011-A3-43541-16901": {
+      "reason": "mileage_too_high: 315436km",
+      "title": "Mercedes - C class - 220 cdi Break s204 - - 2011",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-sl-vintage-cars-%253E-15-A3-43541-32086": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes SL Vintage Cars > 15",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.vavato.com/en/l/mercedes-rims-%2528originals%2529-A3-43542-7026": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes Rims (originals)",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.vavato.com/en/l/mercedes-c-class-220-cdi-break-s204-2011-A3-43541-16901": {
+      "reason": "mileage_too_high: 315436km",
+      "title": "Mercedes - C class - 220 cdi Break s204 - - 2011",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.vavato.com/en/l/mercedes-sl-vintage-cars-%253E-15-A3-43541-32086": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes SL Vintage Cars > 15",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-sc-70ml-welding-wire-%25282x%2529-A1-41277-148": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai SC-70ML Welding Wire (2x)",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-socket-set-%25286x%2529-A1-41277-165": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai Socket Set (6x)",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-sc-70ml-welding-wire-%25282x%2529-A1-41277-148": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai SC-70ML Welding Wire (2x)",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-amg-gt63s-4-0-v8-4matic%252B-edition-1-gt-4-door-coupe-639hp-2019-l-958-fb-A1-44364-3": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes-AMG GT63s 4.0 V8 4Matic+ Edition 1 GT 4-Door Coupe 639hp 2019, L-958-FB",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/seat-ibiza-1-0-ecotsi-fr-con-nx-295-z-2017-A1-41786-182": {
+      "reason": "brand_not_in_whitelist",
+      "title": "SEAT - Ibiza - 1.0 EcoTSI FR Con - NX-295-Z - 2017",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-alpina-b7-v8-507hp-2011-A1-44364-47": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW Alpina B7 V8 507hp 2011",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/dodge-durango-ssv-special-service-5-7-v8-364hp-2015-A1-44364-48": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Dodge Durango SSV Special Service 5.7 V8 364hp 2015",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/seat-leon-1-2-tsi-entry-86hp-2014-kp-268-d-A1-44365-2": {
+      "reason": "brand_not_in_whitelist",
+      "title": "SEAT Leon 1.2 TSI Entry 86hp 2014, KP-268-D",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/maserati-quattroporte-4-9-v8-1986-A1-44367-41": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Maserati Quattroporte 4.9 V8 1986",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-v70-2-5-turbo-momentum-47-zj-xr-2008-A1-41786-159": {
+      "reason": "mileage_too_high: 321556km",
+      "title": "Volvo - V70 - 2.5 TURBO Momentum - 47-ZJ-XR- 2008",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/porsche-macan-s-3-0-v6-340hp-2014-A1-44364-38": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Porsche Macan S 3.0 V6 340hp 2014",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-320i-efficientdynamics-edition-upgrade-edition-170hp-2013-%2528original-nl%2529-3-series-1-sll-03-A1-44366-14": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW 320i EfficientDynamics Edition Upgrade Edition 170hp 2013 (Original-NL) 3-series, 1-SLL-03",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/maserati-biturbo-2-0-1985-%252820-055-miles%2529-A1-44367-40": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Maserati BiTurbo 2.0 1985 (20,055 MILES)",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/dodge-ram-1500-5-7-hemi-v8-2018-6-seater-A1-44364-43": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Dodge Ram 1500 5.7 Hemi V8 2018 6-seater",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/audi-rs3-sportback-2-5-tfsi-quattro-400hp-2018-k-568-gn-A1-44364-13": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Audi RS3 Sportback 2.5 TFSI Quattro 400hp 2018, K-568-GN",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/skoda-superb-3t-accjsax01-180hp-2016-A1-44365-48": {
+      "reason": "mileage_too_high: 252107km",
+      "title": "Skoda SuperB 3T ACCJSAX01 180hp 2016",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-mustang-ecoboost-premium-coupe-310hp-2015-A1-44364-29": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford Mustang Ecoboost Premium Coupe 310hp 2015",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-v70-3-2-6-cylinder-238hp-2008-youngtimer-A1-44367-21": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Volvo V70 3.2 6-cylinder 238hp 2008 youngtimer",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-3-series-318i-business-line-02-gjf-7-A1-41786-121": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW - 3 Series - 318i Business Line - 02-GJF-7",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-mustang-coupe-ecoboost-premium-310hp-2015-A1-44364-34": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford Mustang Coupe Ecoboost Premium 310HP 2015",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-m5-5-0-v10-500hp-2007-5-series-youngtimer-A1-44367-37": {
+      "reason": "damage: not drivable",
+      "title": "BMW M5 5.0 V10 500hp 2007 5-series Youngtimer",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/chevrolet-aveo-1-2-lt-93-sxd-2-2011-A1-41786-106": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Chevrolet - Aveo - 1.2 LT - 93-SXD-2- 2011",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-118i-corporate-lease-executive-1-series-136hp-2017-rh-134-h-A1-44365-47": {
+      "reason": "mileage_too_high: 298366km",
+      "title": "BMW 118i Corporate Lease Executive 1-Series 136hp 2017, RH-134-H",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/alfa-romeo-gtv-2-0-1979-A1-44367-39": {
+      "reason": "damage: not starting",
+      "title": "Alfa Romeo GTV 2.0 1979",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-3-series-touring-325i-automatic-business-line-69-jsp-2-2009-A1-41786-201": {
+      "reason": "damage: engine failure",
+      "title": "BMW - 3 Series Touring - 325i AUTOMATIC Business Line - 69-JSP-2- 2009",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-mustang-3-7-v6-305hp-2013-coupe-A1-44364-22": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford Mustang 3.7 V6 305hp 2013 Coupe",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/dodge-challenger-sxt-plus-3-6-v6-305hp-2015-A1-44364-19": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Dodge Challenger SXT PLUS 3.6 V6 305hp 2015",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-sl500-5-5-v8-388hp-2006-youngtimer-sl-class-A1-44367-38": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes-Benz SL500 5.5 V8 388hp 2006 Youngtimer SL-Class",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/dodge-durango-sxt-4x4-v6-24v-vvt-flex-fuel-295hp-2014-7-seater-A1-44364-8": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Dodge Durango SXT 4x4 V6 24V VVT Flex Fuel 295hp 2014 7-Seater",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ssangyong-rexton-rx-270-xdi-dynamic-automatic-26-vpv-8-2008-A1-41786-79": {
+      "reason": "mileage_too_high: 277176km",
+      "title": "SsangYong - Rexton - RX 270 Xdi Dynamic AUTOMATIC - 26-VPV-8- 2008",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/dodge-challenger-sxt-3-6-v6-305hp-2018-A1-44364-53": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Dodge Challenger SXT 3.6 V6 305hp 2018",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/porsche-911-carrera-cabriolet-3-6-996-320hp-2004-manual-youngtimer-A1-44367-67": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Porsche 911 Carrera Cabriolet 3.6 996 320hp 2004 MANUAL -Youngtimer-",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-v70-2-4d-summum-px-091-x-A1-41786-35": {
+      "reason": "mileage_too_high: 326415km",
+      "title": "Volvo - V70 - 2.4D Summum - PX-091-X",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-5-series-523i-business-line-automatic-34-tv-kp-2007-A1-41786-89": {
+      "reason": "mileage_too_high: 299033km",
+      "title": "BMW - 5-series - 523i Business Line AUTOMATIC- 34-TV-KP- 2007",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bentley-arnage-red-label-6-7-v8-2000-A1-44367-22": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Bentley Arnage Red label 6.7 V8 2000",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/chevrolet-1981-malibu-nz-939-b-A1-46911-5": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Chevrolet - 1981 - MALIBU NZ-939-B",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-slk350-3-5-v6-272hp-2005-airscarf-youngtimer-slk-class-A1-44367-17": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes-Benz SLK350 3.5 V6 272hp 2005 AIRSCARF Youngtimer SLK-Class",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-3-series-touring-318i-high-executive-sp-638-n-2010-A1-41786-172": {
+      "reason": "damage: engine failure",
+      "title": "BMW - 3 Series Touring - 318i High Executive - SP-638-N- 2010",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-xc40-2-0-b3-mild-hybrid-163hp-2024-A1-44364-60": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Volvo XC40 2.0 B3 Mild-Hybrid 163hp 2024",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/jaguar-xjs-5-3-v12-262hp-1984-A1-44367-63": {
+      "reason": "damage: not starting",
+      "title": "Jaguar XJS 5.3 V12 262hp 1984",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/jeep-wrangler-3-6-v6-rubicon-284hp-2016-jts-57-h-A1-44364-59": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Jeep Wrangler 3.6 V6 Rubicon 284hp 2016, JTS-57-H",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/triumph-2000-mk2-2-0-90hp-1971-youngtimer-A1-44367-44": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Triumph 2000 MK2 2.0 90hp 1971 Youngtimer",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-c350-amg-elegance-3-5-v6-272hp-2008-c-class-1-trj-54-A1-44367-4": {
+      "reason": "mileage_too_high: 314058km",
+      "title": "Mercedes-Benz C350 AMG Elegance 3.5 V6 272hp 2008 C-Class, 1-TRJ-54",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/jaguar-xjs-convertible-5-3-v12-264hp-1989-A1-44367-20": {
+      "reason": "damage: not starting",
+      "title": "Jaguar XJS Convertible 5.3 V12 264hp 1989",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/jaguar-xjs-convertible-5-3-v12-266hp-1992-A1-44367-30": {
+      "reason": "damage: not drivable",
+      "title": "Jaguar XJS Convertible 5.3 V12 266hp 1992",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-3-series-318i-business-line-56-ndd-4-2010-A1-41786-188": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW - 3 Series - 318i Business Line - 56-NDD-4- 2010",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/maserati-quattroporte-4-2-v8-400hp-2007-A1-44367-50": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Maserati Quattroporte 4.2 V8 400hp 2007",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/audi-s8-5-2-v10-quattro-pro-line%252B-450hp-2009-px-166-n-A1-44367-51": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Audi S8 5.2 V10 Quattro Pro Line+ 450hp 2009, PX-166-N",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mazda-5-2-0-executive-car-2005-A1-41786-127": {
+      "reason": "mileage_too_high: 292161km",
+      "title": "Mazda - 5 - 2.0 Executive - Car - 2005",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/porsche-cayman-s-987-3-4-295hp-2006-youngtimer-A1-44367-68": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Porsche Cayman S 987 3.4 295hp 2006 Youngtimer",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-1-series-120i-t-106-kt-2009-A1-41786-91": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW - 1 Series - 120i - T-106-KT- 2009",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-s80-2-5-t-momentum-20-gxj-8-2008-A1-41786-192": {
+      "reason": "mileage_too_high: 319834km",
+      "title": "Volvo - S80 - 2.5 T Momentum - 20-GXJ-8- 2008",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/porsche-boxster-987-2-7-245hp-2005-youngtimer-A1-44367-14": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Porsche Boxster 987 2.7 245hp 2005 -Youngtimer-",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/maserati-quattroporte-sport-gt-400hp-2006-youngtimer-A1-44367-45": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Maserati Quattroporte Sport GT 400hp 2006 Youngtimer",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/jaguar-xjs-convertible-5-3-v12-267hp-1992-A1-44367-25": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Jaguar XJS Convertible 5.3 V12 267hp 1992",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/jaguar-xjs-5-9-v12-281hp-1994-youngtimer-A1-44367-42": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Jaguar XJS 5.9 V12 281hp 1994 Youngtimer",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/porsche-boxster-s-987-3-2-280hp-2005-youngtimer-A1-44367-18": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Porsche Boxster S 987 3.2 280hp 2005 Youngtimer",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mg-1999-f-1-8i-g-320-px-A1-46911-103": {
+      "reason": "brand_not_in_whitelist",
+      "title": "MG - 1999 - F - 1.8i - G-320-PX",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/porsche-944-2-5-s-coupe-190hp-1987-%2528original-nl%2529-rk-06-dx-A1-44367-71": {
+      "reason": "mileage_too_high: 284408km",
+      "title": "Porsche 944 2.5 S Coup\u00e9 190hp 1987 (Original-NL), RK-06-DX",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/dodge-charger-5-7-v8-340hp-2008-youngtimer-A1-44367-75": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Dodge Charger 5.7 V8 340hp 2008 Youngtimer",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/lot-of-mg-f-tf-and-mini-spare-parts-cars-%25284x%2529-A1-46911-147": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Lot of MG F/TF and Mini spare parts cars (4x)",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/chrysler-pacifica-3-5-v6-automatic-48-hbs-7-2005-A1-41786-50": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Chrysler - Pacifica - 3.5 V6 AUTOMATIC - 48-HBS-7- 2005",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/jaguar-xjs-5-3-v12-de-luxe-1991-A1-44367-74": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Jaguar XJS 5.3 V12 de Luxe 1991",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mini-mini-1-6-cooper-chile-42-tv-rt-2007-A1-41786-168": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mini - Mini - 1.6 Cooper Chile - 42-TV-RT- 2007",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-m5-5-0-v10-e60-500hp-2006-5-series-A1-44367-77": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW M5 5.0 V10 E60 500hp 2006 5 Series",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mg-1999-f-1-8i-vvc-passenger-car-with-hard-and-soft-top-A1-46911-105": {
+      "reason": "brand_not_in_whitelist",
+      "title": "MG - 1999 - F - 1.8i VVC - Passenger car with hard and soft top",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-3-series-touring-318i-high-executive-09-sp-nd-2006-A1-41786-156": {
+      "reason": "mileage_too_high: 309454km",
+      "title": "BMW - 3-series Touring - 318i High Executive - 09-SP-ND- 2006",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-130i-introduction-m-sport-3-0-6-cylinder-in-line-265hp-2005-1-series-50-th-rd-youngtimers-A1-44367-72": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW 130i Introduction M-Sport 3.0 6-cylinder in-line 265hp 2005 1-series, 50-TH-RD Youngtimers",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mazda-6-2-0-s-vt-bns-plus-68-gpg-7-2008-A1-41786-197": {
+      "reason": "mileage_too_high: 362543km",
+      "title": "Mazda - 6 - 2.0 S-VT Bns Plus - 68-GPG-7- 2008",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/infiniti-fx-v6-37-s-automatic-3-xdl-92-2009-A1-41786-82": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Infiniti - FX V6- 37 S AUTOMATIC- 3-XDL-92- 2009",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mini-clubman-1-6-one-bns-line-70-nbl-2-2010-A1-41786-87": {
+      "reason": "mileage_too_high: 285465km",
+      "title": "Mini - Clubman - 1.6 One Bns Line - 70-NBL-2- 2010",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/suzuki-vitara-1-6-comm-4x4-jlx-vv-28-yd-1993-A1-41786-204": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Suzuki - Vitara - 1.6 Comm. 4x4 JLX - VV-28-YD- 1993",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-1-series-116i-business-line-89-zd-ft-2008-A1-41786-212": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW - 1-Series - 116i Business Line - 89-ZD-FT- 2008",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mg-1998-f-1-8i-vvc-15-lx-td-A1-46911-104": {
+      "reason": "brand_not_in_whitelist",
+      "title": "MG -1998 - F 1.8i VVC - 15-LX-TD",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-v70-2-5-%2522automatic%2522-sports-line-%2522lpg%2522-zg-sx-56-A1-38871-9": {
+      "reason": "body_mismatch: pickup",
+      "title": "Volvo V70 2.5 \"Automatic\" Sports-Line \"LPG\" ZG-SX-56",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mini-mini-1-6-cooper-chile-s-006-vj-2002-A1-41786-11": {
+      "reason": "mileage_too_high: 308404km",
+      "title": "Mini - Mini - 1.6 Cooper Chile - S-006-VJ- 2002",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mazda-2-1-3-cool-lpg-78-znx-5-2012-A1-41786-51": {
+      "reason": "mileage_too_high: 293214km",
+      "title": "Mazda - 2 - 1.3 Cool LPG- 78-ZNX-5- 2012",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mazda-3-1-6-touring-g-049-fh-2006-A1-41786-163": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mazda - 3 - 1.6 Touring - G-049-FH- 2006",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-3-serie-touring-318i-corp-l-lux-line-german-papers-%2528formerly-51-rtj-9%2529-A1-41786-171": {
+      "reason": "damage: engine failure",
+      "title": "BMW - 3-serie Touring - 318i Corp.L.Lux Line - German papers (formerly 51-RTJ-9)",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-mustang-3-7-v6-305hp-2012-coupe-manual-A1-44364-20": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford Mustang 3.7 V6 305hp 2012 Coupe -Manual-",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/dodge-durango-3-6-v6-citadel-%2528luxury-version%2529-6-seater-293hp-2014-A1-44364-9": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Dodge Durango 3.6 V6 Citadel (luxury version) 6-Seater 293hp 2014 ",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/renault-master-t35-2-3-dci-l3h2-energy-168hp-2017-%2528original-nl%2529-v-751-kg-A1-44365-26": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Renault Master T35 2.3 dCi L3H2 Energy 168hp 2017 (Original-NL), V-751-KG",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-m3-e46-cabriolet-3-2-343hp-s54b32-343hp-2002-youngtimer-A1-44367-28": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW M3 E46 Cabriolet 3.2 343HP S54B32 343hp 2002 Youngtimer",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mini-1-6-cooper-chile-67-pl-tj-A1-38871-2": {
+      "reason": "body_mismatch: pickup",
+      "title": "Mini 1.6 Cooper Chile 67-PL-TJ",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-cla250-e-business-solution-amg-limited-cla-class-shooting-brake-160hp-2022-p-675-jh-A1-44364-30": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes-Benz CLA250 e Business Solution AMG Limited CLA-class Shooting Brake 160hp 2022, P-675-JH",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-750i-activehybrid-4-4-v8-407hp-2010-7-series-02-pgj-7-youngtimer-A1-44367-47": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW 750i ActiveHybrid 4.4 V8 407hp 2010 7-series, 02-PGJ-7 Youngtimer",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-1-series-116i-business-line-47-zp-hv-2008-A1-41786-160": {
+      "reason": "damage: engine failure",
+      "title": "BMW - 1-series - 116i Business Line - 47-ZP-HV- 2008",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/land-rover-range-rover-3-5-v8-1989-A1-44367-49": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Land Rover Range Rover 3.5 V8 1989",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/range-rover-sport-5-0-v8-sc-aut-dyn-7p-l-370-xl-2013-A1-41786-149": {
+      "reason": "damage: engine failure",
+      "title": "Range Rover Sport - 5.0 V8 SC Aut Dyn 7p - L-370-XL- 2013",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/porsche-macan-s-2-9-v6-280hp-2022-A1-44364-25": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Porsche Macan S 2.9 V6 280hp 2022",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mini-mini-1-6-one-pepper-43-zrt-1-A1-41786-26": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mini - Mini - 1.6 One Pepper - 43-ZRT-1",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/land-rover-range-rover-velar-2-0-i4-awd-se-179hp-2018-t-940-tj-A1-44364-28": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Land Rover Range Rover Velar 2.0 I4 AWD SE 179hp 2018, T-940-TJ",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-t-cross-1-0-tsi-life-116hp-2020-7-dsg-automatic-h-112-np-A1-44366-6": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Volkswagen T-Cross 1.0 TSI Life 116hp 2020 7-DSG Automatic, H-112-NP",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/subaru-tribeca-3-0r-boxer-h6-luxury-245hp-2008-orig-nl-28-vg-zd-youngtimer-A1-44367-46": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Subaru Tribeca 3.0R Boxer H6 Luxury 245hp 2008 -Orig. NL-, 28-VG-ZD Youngtimer",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/jaguar-xjs-convertible-4-0-6-in-line-240hp-1996-A1-44367-32": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Jaguar XJS Convertible 4.0 6-in-line 240hp 1996",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/batch-of-mg-f-tf-parts-cars-%25284x%2529-A1-46911-146": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Batch of MG F/TF parts cars (4x)",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-a170-avantgarde-116hp-2005-%2528original-nl%2529-a-class-automatic-31-rk-br-A1-44365-12": {
+      "reason": "mileage_too_high: 301193km",
+      "title": "Mercedes-Benz A170 Avantgarde 116hp 2005 (Original-NL) A-class Automatic, 31-RK-BR",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/subaru-tribeca-3-0r-comfort-lpg-7-pers-30-xk-ft-2006-A1-41786-179": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Subaru - Tribeca - 3.0R Comfort LPG 7 pers.- 30-XK-FT- 2006",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/chevrolet-camaro-lt-cabriolet-3-6l-v6-f-dohc-24v-323hp-2015-A1-44364-12": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Chevrolet Camaro LT Cabriolet 3.6L V6 F DOHC 24V 323hp 2015",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-b200-136hp-2008-%2528original-nl%2529-b-class-09-zk-rg-A1-44365-22": {
+      "reason": "mileage_too_high: 265555km",
+      "title": "Mercedes-Benz B200 136hp 2008 (Original-NL) B-class, 09-ZK-RG",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/porsche-cayman-2-9-sport-chrono-265hp-2011-pdk-%252887-000-km%2529-A1-44364-5": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Porsche Cayman 2.9 Sport-Chrono 265hp 2011 PDK (87,000 km)",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/land-rover-discovery-4-5-0-v8-hse-375hp-2013-7-seater-jff-48-v-A1-44364-14": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Land Rover Discovery 4 5.0 V8 HSE 375hp 2013 7-Seater, JFF-48-V",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/jaguar-xjs-4-0-l6-240hp-1996-A1-44367-36": {
+      "reason": "damage: not starting",
+      "title": "Jaguar XJS 4.0 L6 240hp 1996",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/audi-s3-sedan-2-0-tfsi-quattro-pro-line-plus-300hp-2014-rv-197-n-A1-44364-16": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Audi S3 Sedan 2.0 TFSI Quattro Pro Line Plus 300hp 2014, RV-197-N",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-v70-2-0-t5-summum-241hp-2017-z-082-hj-A1-44366-10": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Volvo V70 2.0 T5 Summum 241hp 2017, Z-082-HJ",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/audi-s4-avant-3-0-tfsi-v6-quattro-pro-line-333hp-2012-%2528original-nl%2529-40-xrl-8-A1-44364-26": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Audi S4 Avant 3.0 TFSI V6 Quattro Pro Line 333hp 2012 (Original-NL), 40-XRL-8",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/alfa-romeo-giulietta-1-4-t-distinctive-170hp-2012-%2528original-nl%2529-00-xkp-5-A1-44365-30": {
+      "reason": "mileage_too_high: 274385km",
+      "title": "Alfa Romeo Giulietta 1.4 T Distinctive 170hp 2012 (Original-NL), 00-XKP-5",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bentley-brooklands-6-75-v8-245hp-1996-youngtimer-A1-44367-57": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Bentley Brooklands 6.75 V8 245hp 1996 -Youngtimer-",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/iveco-daily-40c17-3-0-375-170hp-2016-vs-281-h-A1-44365-33": {
+      "reason": "mileage_too_high: 505321km",
+      "title": "Iveco Daily 40C17 3.0 375 170hp 2016, VS-281-H ",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/jaguar-xjs-convertible-5-3-v12-266hp-1989-A1-44367-31": {
+      "reason": "damage: not drivable",
+      "title": "Jaguar XJS Convertible 5.3 V12 266hp 1989",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/dodge-challenger-sxt-3-6-v6-305hp-2016-A1-44364-15": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Dodge Challenger SXT 3.6 V6 305hp 2016",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/porsche-911-turbo-cabriolet-997-2-3-8-tt-500hp-2010-hardtop-youngtimer-%252823-000-km%2529-A1-44364-37": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Porsche 911 Turbo Cabriolet 997.2 3.8 TT 500hp 2010 -Hardtop- Youngtimer (23,000 km) ",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-c450-amg-3-0-v6-4matic-367hp-2016-c-class-estate-zn-456-j-A1-44364-23": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes-Benz C450 AMG 3.0 V6 4Matic 367hp 2016 C-Class Estate, ZN-456-J",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/porsche-panamera-s-4-8-v8-400hp-2009-youngtimer-A1-44367-59": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Porsche Panamera S 4.8 V8 400hp 2009 Youngtimer",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/puch-mercedes-280-ge-lpg-automatic-jgr-96-r-A1-41786-47": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Puch /Mercedes - 280 GE LPG AUTOMATIC JGR-96-R",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-sl350-amg-3-7-v6-cabriolet-youngtimer-sl55-look-A1-44367-48": {
+      "reason": "damage: not starting",
+      "title": "Mercedes-Benz SL350 AMG 3.7 V6 Cabriolet -Youngtimer- SL55 LOOK ",
+      "rejected_at": "2026-06-02T10:40:10.360103+00:00"
     }
   }
 }
