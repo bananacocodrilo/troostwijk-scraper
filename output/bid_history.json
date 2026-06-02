@@ -2107,6 +2107,12 @@
           "current_bid_eur": 4300.0,
           "bids_count": 12,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-02T03:08:31.024962+00:00",
+          "current_bid_eur": 4550.0,
+          "bids_count": 13,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -4317,6 +4323,12 @@
           "ts": "2026-05-30T19:20:27.970378+00:00",
           "current_bid_eur": 10000.0,
           "bids_count": 16,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-02T03:08:31.024962+00:00",
+          "current_bid_eur": 10250.0,
+          "bids_count": 17,
           "status": "BIDDING_OPEN"
         }
       ],
