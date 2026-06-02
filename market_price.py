@@ -23,6 +23,7 @@ from datetime import datetime, timezone
 from typing import Dict, List, Optional
 
 import autoscout24
+import autotrack
 import gaspedaal
 import marktplaats
 import two_dehands
@@ -30,10 +31,19 @@ import two_dehands
 CACHE_PATH = "output/price_cache.json"
 
 _MP_QUERIES = [
+    # whitelist canonical names (camper-candidate models)
+    "Ford Transit Custom", "Ford Tourneo Custom",
+    "Peugeot Expert", "Citroen Jumpy", "Toyota ProAce",
+    "Fiat Scudo",
+    "Opel Vivaro", "Renault Trafic", "Nissan Primastar", "Fiat Talento",
+    "Volkswagen Transporter",
     "Peugeot Boxer", "Citroen Jumper", "Fiat Ducato",
+    "Mercedes Vito", "Mercedes V-Klasse",
+    "Hyundai Staria",
+    # legacy big-van queries — kept because they pad the dataset cheaply
+    # and the auction-side PriceIndex still uses them for fallback medians.
     "Mercedes Sprinter", "Ford Transit", "Renault Master",
     "Volkswagen Crafter", "Opel Movano", "MAN TGE", "Iveco Daily",
-    "Peugeot Expert", "Volkswagen Transporter",
 ]
 
 
@@ -123,11 +133,22 @@ def _fetch_2dehands(pages: int = 3) -> List[dict]:
         return []
 
 
+def _fetch_autotrack(pages: int = 4) -> List[dict]:
+    print("Refreshing AutoTrack...")
+    try:
+        keys = list(autotrack._MODEL_SLUGS.keys())
+        return autotrack.build_listings(keys, pages_per_model=pages)
+    except Exception as e:
+        print(f"  autotrack failed: {e}")
+        return []
+
+
 _SOURCES = {
     "marktplaats": _fetch_marktplaats,
     "autoscout24": _fetch_autoscout24,
     "gaspedaal":   _fetch_gaspedaal,
     "2dehands":    _fetch_2dehands,
+    "autotrack":   _fetch_autotrack,
 }
 
 

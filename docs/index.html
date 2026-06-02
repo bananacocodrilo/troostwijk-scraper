@@ -257,7 +257,7 @@
 <nav class="nav-bar">
   <a href="index.html" class="active">🚐 Camper Candidates</a>
   <span class="nav-sep">|</span>
-  <a href="roi.html">💰 ROI Mode</a>
+  <a href="asking.html">🛒 Asking Prices</a>
 </nav>
 
 <header>
@@ -270,27 +270,6 @@
 
 <div class="controls">
   <label>
-    Brand
-    <select id="brandFilter">
-      <option value="">All brands</option>
-    </select>
-  </label>
-  <label>
-    Fleet
-    <select id="fleetFilter">
-      <option value="">All</option>
-      <option value="private">Private / unknown</option>
-      <option value="utility">🏛️ Utility / municipal</option>
-      <option value="telecom">📡 Telecom</option>
-      <option value="solar">☀️ Solar</option>
-      <option value="construction">🏗️ Construction</option>
-      <option value="workshop">🔧 Service van</option>
-      <option value="hire">🚚 Ex-rental / lease</option>
-      <option value="delivery">📦 Courier (risky)</option>
-      <option value="not-delivery">↳ Hide couriers</option>
-    </select>
-  </label>
-  <label>
     Closing
     <select id="closingFilter">
       <option value="open">Open lots only</option>
@@ -299,6 +278,18 @@
       <option value="7">Closing in 7 days</option>
       <option value="all">All (incl. closed)</option>
     </select>
+  </label>
+  <label>
+    Year ≥ <span id="yearMinVal">2014</span>
+    <input type="range" id="yearMinFilter" min="2010" max="2026" step="1" value="2014" />
+  </label>
+  <label>
+    Year ≤ <span id="yearMaxVal">2026</span>
+    <input type="range" id="yearMaxFilter" min="2010" max="2026" step="1" value="2026" />
+  </label>
+  <label>
+    Km ≤ <span id="kmMaxVal">300k</span>
+    <input type="range" id="kmMaxFilter" min="0" max="400000" step="10000" value="300000" />
   </label>
   <label>
     Min score <span id="scoreVal">30</span>
@@ -533,31 +524,29 @@ function buildCard(v) {
 }
 
 function render() {
-  const brand = document.getElementById('brandFilter').value;
-  const fleet = document.getElementById('fleetFilter').value;
   const closing = document.getElementById('closingFilter').value;
   const minScore = parseFloat(document.getElementById('scoreFilter').value);
+  const yearMin = parseInt(document.getElementById('yearMinFilter').value);
+  const yearMax = parseInt(document.getElementById('yearMaxFilter').value);
+  const kmMax   = parseInt(document.getElementById('kmMaxFilter').value);
   const sortKey = document.getElementById('sortBy').value;
   const now = Date.now();
 
   const endMs = v => v.auction_end ? new Date(v.auction_end).getTime() : null;
 
   let filtered = allVans.filter(v => {
-    if (brand && (v.brand || '').toLowerCase() !== brand.toLowerCase()) return false;
     if ((v.score ?? 0) < minScore) return false;
-    if (fleet === 'not-delivery') {
-      if (v.fleet_type === 'delivery') return false;
-    } else if (fleet && v.fleet_type !== fleet) {
-      return false;
+    // Year range — soft on unknowns (no year → still shown)
+    if (v.year != null) {
+      if (v.year < yearMin || v.year > yearMax) return false;
     }
+    // Km cap — soft on unknowns
+    if (v.km != null && v.km > kmMax) return false;
     const em = endMs(v);
     if (closing === 'all') {
       // no time filter
     } else if (closing === 'open') {
-      // Require an auction_end in the future. Lots with no end-time data
-      // (scraper missed the GraphQL bid response) get hidden here too —
-      // we can't verify they're still open.
-      if (em != null && em <= now) return false;  // exclude known-ended only
+      if (em != null && em <= now) return false;
     } else {
       const days = parseFloat(closing);
       if (em == null) return false;
@@ -595,11 +584,6 @@ async function load() {
     const r = await fetch(DATA_URL + '?t=' + Date.now());
     allVans = await r.json();
 
-    // Populate brand filter from the clean v.brand field (not parsed from title).
-    const brands = [...new Set(allVans.map(v => v.brand).filter(Boolean))].sort();
-    const sel = document.getElementById('brandFilter');
-    brands.forEach(b => { const o = document.createElement('option'); o.value = b; o.textContent = b; sel.appendChild(o); });
-
     // Stats
     const now = Date.now();
     const endMs = v => v.auction_end ? new Date(v.auction_end).getTime() : null;
@@ -621,12 +605,31 @@ async function load() {
   }
 }
 
-document.getElementById('brandFilter').addEventListener('change', render);
-document.getElementById('fleetFilter').addEventListener('change', render);
 document.getElementById('closingFilter').addEventListener('change', render);
 document.getElementById('sortBy').addEventListener('change', render);
 document.getElementById('scoreFilter').addEventListener('input', e => {
-  document.getElementById('scoreVal').textContent = parseFloat(e.target.value).toFixed(1);
+  document.getElementById('scoreVal').textContent = parseFloat(e.target.value).toFixed(0);
+  render();
+});
+
+function clampYears() {
+  const a = document.getElementById('yearMinFilter');
+  const b = document.getElementById('yearMaxFilter');
+  if (parseInt(a.value) > parseInt(b.value)) a.value = b.value;
+  document.getElementById('yearMinVal').textContent = a.value;
+  document.getElementById('yearMaxVal').textContent = b.value;
+}
+document.getElementById('yearMinFilter').addEventListener('input', () => { clampYears(); render(); });
+document.getElementById('yearMaxFilter').addEventListener('input', () => {
+  const a = document.getElementById('yearMinFilter');
+  const b = document.getElementById('yearMaxFilter');
+  if (parseInt(b.value) < parseInt(a.value)) b.value = a.value;
+  document.getElementById('yearMinVal').textContent = a.value;
+  document.getElementById('yearMaxVal').textContent = b.value;
+  render();
+});
+document.getElementById('kmMaxFilter').addEventListener('input', e => {
+  document.getElementById('kmMaxVal').textContent = Math.round(parseInt(e.target.value)/1000) + 'k';
   render();
 });
 

@@ -4,6 +4,8 @@
 
 Find underpriced **camper-candidate small/mid vans** at **Troostwijk** and **Vavato** live auctions, filtered to a strict whitelist of 7 model groups (all in the Transit Custom L2H1 dimensional class — ~5.3m × 2.0m — Euro 6, 6-seat compatible). The pipeline discovers auction lots, classifies them against the whitelist, applies a strict-but-soft-gated filter (only confirmed violations reject), scores survivors for camper-conversion suitability and rental ROI, and surfaces hidden gems via Telegram alerts.
 
+A second, complementary feed (`asking_feed.py` → `docs/asking.html`) reuses the same whitelist + classifier to surface **fixed-price marketplace listings** (Marktplaats, AutoScout24 NL/DE, 2dehands.be) aggregated and deduped across sources. Deal-ratio scoring doesn't apply (no hammer/auction), so listings are ranked by price percentile vs the cohort median of the same (model_group, year ±2). The two feeds run in the same `python3 run.py` invocation but produce independent outputs.
+
 **Whitelist groups (the only models that pass the classifier):**
 
 | Group key | Models | Required size | min year | Notes |
@@ -125,12 +127,14 @@ Cold-start cap: `MAX_NEW_PER_RUN = 400` — full catalogue registered across 3-4
 | `autoscout24.py` | AutoScout24 NL/DE/FR/BE price index (__NEXT_DATA__ scrape) |
 | `gaspedaal.py` | Gaspedaal NL aggregator price index (schema.org JSON-LD) |
 | `two_dehands.py` | 2dehands.be price index (same Adevinta API as Marktplaats) |
+| `autotrack.py` | AutoTrack NL price index (RSC-chunk extraction from Next.js SPA) |
 | `market_price.py` | Combined multi-source PriceIndex facade |
+| `asking_feed.py` | Asking-price aggregator — reuses `price_cache.json` to emit a deduped cross-source feed of whitelist-matching listings |
 | `notify.py` | Telegram alerts for hidden gems closing within 24h |
 | `fleet.py` | Fleet-type classification (utility/delivery/solar/telecom/…) |
 | `models.py` | Pydantic `Vehicle` dataclass (incl. `model_group`, `variant`, `classification_confidence`) |
-| `docs/index.html` | Camper-candidate dashboard |
-| `docs/roi.html` | ROI-ranked dashboard |
+| `docs/index.html` | Camper-candidate dashboard (auction feed) |
+| `docs/asking.html` | Asking-price aggregator dashboard (Marktplaats / AutoScout24 / 2dehands / Autotrack) |
 
 ---
 
@@ -138,11 +142,12 @@ Cold-start cap: `MAX_NEW_PER_RUN = 400` — full catalogue registered across 3-4
 
 | File | Contents |
 |------|---------|
-| `latest.json` | Accepted camper candidates, sorted by `score` (small-van suitability) |
-| `latest_roi.json` | Same set sorted by `roi_score` (rental-income-first) |
+| `latest.json` | Accepted camper candidates from the auction feed, sorted by `score` (small-van suitability) |
+| `asking_listings.json` | Deduped cross-source asking-price feed (Marktplaats / AutoScout24 / 2dehands / Autotrack), filtered through the same whitelist as the auction feed. Sorted underpriced-first. |
 | `rejected.json` | `{url: reason}` map for all rejected vehicles |
 | `lot_registry.json` | Per-URL last-scrape state + permanent rejects |
 | `bid_history.json` | Hammer history per model token |
+| `price_cache.json` | Per-source listings cache populated by `market_price.build_price_index_cached`; read by `asking_feed.py` |
 | `notified.json` | Telegram notification log |
 
 ## Logs
@@ -163,6 +168,7 @@ Cold-start cap: `MAX_NEW_PER_RUN = 400` — full catalogue registered across 3-4
 |--------|---------|--------|
 | Marktplaats | NL (C2C + dealer) | Adevinta JSON API (`/lrp/api/search`) |
 | AutoScout24 | NL / DE / FR / BE (dealer) | `__NEXT_DATA__` HTML scrape |
+| AutoTrack | NL (dealer) | Next.js RSC chunk extraction (`self.__next_f.push`) |
 | Gaspedaal | NL aggregator | schema.org `ItemList` JSON-LD |
 | 2dehands.be | BE (C2C + dealer) | Adevinta JSON API (same as Marktplaats) |
 

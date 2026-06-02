@@ -34,17 +34,33 @@ PRICE_MAX_EUR = 55_000
 
 # make-slug, model-slug for AutoScout24 URL construction
 _MODEL_SLUGS: Dict[str, tuple] = {
-    "boxer":       ("peugeot",       "boxer"),
-    "ducato":      ("fiat",          "ducato"),
-    "jumper":      ("citroen",       "jumper"),
-    "transit":     ("ford",          "transit"),
-    "sprinter":    ("mercedes-benz", "sprinter"),
-    "master":      ("renault",       "master"),
-    "crafter":     ("volkswagen",    "crafter"),
-    "movano":      ("opel",          "movano"),
-    "tge":         ("man",           "tge"),
-    "daily":       ("iveco",         "daily"),
-    "transporter": ("volkswagen",    "transporter"),
+    # whitelist (camper-candidate)
+    "transit_custom":  ("ford",          "transit-custom"),
+    "tourneo_custom":  ("ford",          "tourneo-custom"),
+    "expert":          ("peugeot",       "expert"),
+    "jumpy":           ("citroen",       "jumpy"),
+    "proace":          ("toyota",        "proace"),
+    "scudo":           ("fiat",          "scudo"),
+    "vivaro":          ("opel",          "vivaro"),
+    "trafic":          ("renault",       "trafic"),
+    "primastar":       ("nissan",        "primastar"),
+    "talento":         ("fiat",          "talento"),
+    "vito":            ("mercedes-benz", "vito"),
+    "vclass":          ("mercedes-benz", "v-klasse"),
+    "staria":          ("hyundai",       "staria"),
+    # whitelist (PSA L1H1/L2H1 group)
+    "boxer":           ("peugeot",       "boxer"),
+    "ducato":          ("fiat",          "ducato"),
+    "jumper":          ("citroen",       "jumper"),
+    "transporter":     ("volkswagen",    "transporter"),
+    # legacy big-van — retained for the auction-side price-index fallback
+    "transit":         ("ford",          "transit"),
+    "sprinter":        ("mercedes-benz", "sprinter"),
+    "master":          ("renault",       "master"),
+    "crafter":         ("volkswagen",    "crafter"),
+    "movano":          ("opel",          "movano"),
+    "tge":             ("man",           "tge"),
+    "daily":           ("iveco",         "daily"),
 }
 
 

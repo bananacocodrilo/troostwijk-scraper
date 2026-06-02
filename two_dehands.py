@@ -29,32 +29,54 @@ PRICE_MAX_EUR = 45_000
 
 # Default queries used by build_listings() when none are supplied
 DEFAULT_QUERIES = [
-    "Peugeot Boxer",
-    "Citroen Jumper",
-    "Fiat Ducato",
-    "Mercedes Sprinter",
-    "Ford Transit",
-    "Renault Master",
-    "Volkswagen Crafter",
-    "Opel Movano",
-    "MAN TGE",
-    "Iveco Daily",
+    # whitelist (camper-candidate)
+    "Ford Transit Custom", "Ford Tourneo Custom",
+    "Peugeot Expert", "Citroen Jumpy", "Toyota ProAce",
+    "Fiat Scudo",
+    "Opel Vivaro", "Renault Trafic", "Nissan Primastar", "Fiat Talento",
     "Volkswagen Transporter",
+    "Peugeot Boxer", "Citroen Jumper", "Fiat Ducato",
+    "Mercedes Vito", "Mercedes V-Klasse",
+    "Hyundai Staria",
+    # legacy big-van
+    "Mercedes Sprinter", "Ford Transit", "Renault Master",
+    "Volkswagen Crafter", "Opel Movano", "MAN TGE", "Iveco Daily",
 ]
 
-# Token → canonical model_key used by PriceIndex bucketing
+# Token → canonical model_key used by PriceIndex bucketing.
+# Multi-word tokens MUST precede single-word substrings (e.g.
+# "transit custom" before "transit") because _model_key() iterates this
+# dict in insertion order.
 _MODEL_KEYS = {
-    "boxer": "boxer",
-    "jumper": "jumper",
-    "ducato": "ducato",
-    "sprinter": "sprinter",
-    "transit": "transit",
-    "master": "master",
-    "crafter": "crafter",
-    "movano": "movano",
-    "tge": "tge",
-    "daily": "daily",
+    # whitelist multi-word
+    "transit custom":  "transit_custom",
+    "tourneo custom":  "tourneo_custom",
+    "v-klasse":        "vclass",
+    "v klasse":        "vclass",
+    "v-class":         "vclass",
+    # whitelist single-word
+    "boxer":     "boxer",
+    "jumper":    "jumper",
+    "ducato":    "ducato",
+    "transit":   "transit",
+    "expert":    "expert",
+    "jumpy":     "jumpy",
+    "proace":    "proace",
+    "scudo":     "scudo",
+    "vivaro":    "vivaro",
+    "trafic":    "trafic",
+    "primastar": "primastar",
+    "talento":   "talento",
     "transporter": "transporter",
+    "vito":      "vito",
+    "staria":    "staria",
+    # legacy big-van
+    "sprinter":  "sprinter",
+    "master":    "master",
+    "crafter":   "crafter",
+    "movano":    "movano",
+    "tge":       "tge",
+    "daily":     "daily",
 }
 
 

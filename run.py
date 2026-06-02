@@ -3,13 +3,14 @@ import os
 import re
 import sys
 
+import asking_feed
 import bid_history
 import registry
 from cost_model import DEFAULT_BUYER_PREMIUM, compute_costs, passes_cost_filter
 from market_price import build_price_index_cached
 from notify import notify_gems
 from scraper import VAVATO_BASE, crawl_parallel, get_category_urls, get_lot_urls
-from van_intel import SCORE_THRESHOLD, WHITELIST_GROUPS, WHITELIST_TOKENS, roi_tier, score_roi, score_small_van
+from van_intel import SCORE_THRESHOLD, WHITELIST_GROUPS, WHITELIST_TOKENS, score_small_van
 
 MAX_BID_TARGET_FRACTION = 0.65
 
@@ -93,7 +94,7 @@ def _model_key(title: str) -> str:
     return ""
 
 
-# Stable output schema for latest.json / latest_roi.json.
+# Stable output schema for latest.json.
 # Every field is always present (None if unavailable). Order is fixed.
 _SCHEMA: dict = {
     # Identity
@@ -135,8 +136,6 @@ _SCHEMA: dict = {
     "deal_ratio":                 None,
     # Scores
     "score":                      None,
-    "roi_score":                  None,
-    "roi_tier":                   None,
     "is_hidden_gem":              False,
 }
 
@@ -321,16 +320,7 @@ def main():
     rejected = suitability_rejected + cost_rejected
     accepted.sort(key=lambda v: v.get("score") or 0, reverse=True)
 
-    # ── ROI scoring (secondary ranking by rental-income potential) ───────
-    for v in accepted:
-        rs = score_roi(v)
-        v["roi_score"] = rs
-        v["roi_tier"]  = roi_tier(rs)
-
-    roi_vans = sorted(accepted, key=lambda v: v.get("roi_score") or 0, reverse=True)
-
     _dump_vans("output/latest.json", accepted)
-    _dump_vans("output/latest_roi.json", roi_vans)
     _dump("output/rejected.json", {
         v["url"]: v.get("rejected_reason") or "unknown"
         for v in rejected if v.get("url")
@@ -386,6 +376,14 @@ def main():
         print("\nfleet types (accepted):")
         for ft, n in sorted(fleet_counts.items(), key=lambda kv: -kv[1]):
             print(f"  {ft}: {n}")
+
+    # ── Asking-price feed ────────────────────────────────────────────────
+    # Parallel pipeline: reuses the price_cache.json we just refreshed and
+    # writes a deduplicated cross-source feed of whitelisted asking-price
+    # listings. No new HTTP — runs in seconds.
+    print("\nbuilding asking-price feed...")
+    asking_count = asking_feed.write_feed()
+    print(f"  wrote {asking_count} listings to output/asking_listings.json")
 
 
 if __name__ == "__main__":

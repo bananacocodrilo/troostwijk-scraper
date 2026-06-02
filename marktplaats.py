@@ -29,12 +29,32 @@ HEADERS = {
 PRICE_MIN_EUR = 1_500
 PRICE_MAX_EUR = 45_000
 
-# Model token → canonical key for bucketing
+# Model token → canonical key for bucketing. Multi-word tokens MUST come
+# before single-word tokens (e.g. "transit custom" before "transit") so
+# the substring match in _model_key() picks the more specific one first.
 _MODEL_KEYS = {
-    "boxer": "boxer",
-    "ducato": "ducato",
-    "jumper": "jumper",
-    "transit": "transit",
+    # whitelist multi-word — must precede their single-word substrings
+    "transit custom":  "transit_custom",
+    "tourneo custom":  "tourneo_custom",
+    "v-klasse":        "vclass",
+    "v klasse":        "vclass",
+    "v-class":         "vclass",
+    # whitelist single-word
+    "boxer":     "boxer",
+    "ducato":    "ducato",
+    "jumper":    "jumper",
+    "transit":   "transit",
+    "expert":    "expert",
+    "jumpy":     "jumpy",
+    "proace":    "proace",
+    "scudo":     "scudo",
+    "vivaro":    "vivaro",
+    "trafic":    "trafic",
+    "primastar": "primastar",
+    "talento":   "talento",
+    "transporter": "transporter",
+    "vito":      "vito",
+    "staria":    "staria",
 }
 
 
