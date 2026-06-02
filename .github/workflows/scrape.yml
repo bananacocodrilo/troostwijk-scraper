@@ -45,4 +45,15 @@ jobs:
           git config user.email "github-actions@github.com"
           git add output/latest.json output/rejected.json output/bid_history.json output/lot_registry.json output/price_cache.json output/asking_listings.json
           git add output/notified.json 2>/dev/null || true
-          git diff --cached --quiet && echo "no changes" || (git commit -m "update" && git pull --rebase origin main && git push)
+          git diff --cached --quiet && { echo "no changes"; exit 0; }
+          git commit -m "update"
+          # Retry push with -X theirs rebase to survive concurrent CI runs racing
+          # on output/*.json. Our run's output is always fresher than what we'd
+          # otherwise discard — but theirs is also a valid recent state; the
+          # next run will overwrite. Up to 3 attempts.
+          for i in 1 2 3; do
+            git pull --rebase -X theirs origin main && git push && exit 0
+            echo "push attempt $i failed, retrying..."
+            sleep $((i * 5))
+          done
+          echo "push failed after 3 attempts"; exit 1
