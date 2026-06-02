@@ -290,6 +290,138 @@ def _deal_score(deal_ratio: Optional[float]) -> Optional[int]:
     return 15
 
 
+# ---------------------------------------------------------------------------
+# Conversion cost estimate
+# ---------------------------------------------------------------------------
+#
+# Per-group bands for the cash needed to turn the base van into a usable
+# weekender camper (insulation + windows + flooring + bed-kit + small
+# storage + leisure electrics). Numbers are starting estimates from
+# DIY camper-conversion price guides circa 2024-2025; tune later from
+# real receipts. Detection re-uses regex from van_intel
+# (_PASSENGER_TRIM_RE, _CREW_CAB_RE, plus the kombi/glazen-zij phrase).
+#
+#   minimal  — factory passenger trim (already insulated, windows fitted,
+#              seats + climate + carpet trim installed). Just needs a bed
+#              kit and a few storage bins. €1.5k–€3.5k.
+#   light    — crew-cab / DC variants of cargo groups (front bench bolted
+#              in, side window optional), OR cargo van that already has
+#              side windows ("combi"/"kombi"/"glazen zij"). Saves the
+#              window-cutting + half the insulation work. €3.5k–€8k.
+#   moderate — plain cargo / panel van. Full conversion: cut and bond
+#              windows, lay floor, insulate, panel out, fit seats,
+#              kitchen, bed. €7k–€14k.
+#   heavy    — moderate + confirmed low roof (H1). Same parts list, but
+#              poor standing room drives most builders to add a pop-top
+#              / elevating roof. +€1.5k/€3k on top of the moderate band
+#              and bumps the public effort label one step.
+
+# model_group keys that ship as factory passenger trim by default.
+_PASSENGER_GROUPS = {
+    "hyundai_staria",   # MPV — fully trimmed passenger van
+    # vito_v_class_l2 contains BOTH Vito cargo and V-Class passenger,
+    # so we use _PASSENGER_TRIM_RE on the title to disambiguate; do
+    # NOT default the whole group to "minimal".
+}
+
+_EFFORT_ORDER = ["minimal", "light", "moderate", "heavy"]
+
+# (low, high) band per effort label. "kombi" is an internal variant of
+# "light" with a slightly higher upper bound (cargo + windows still
+# needs more interior work than a factory passenger trim).
+_CONVERSION_BANDS = {
+    "minimal":  (1_500,  3_500),
+    "light":    (3_500,  7_000),
+    "kombi":    (4_000,  8_000),
+    "moderate": (7_000, 14_000),
+    "heavy":    (8_500, 17_000),
+}
+
+
+def _bump_effort(effort: str) -> str:
+    """Move effort one step harder (capped at 'heavy')."""
+    try:
+        i = _EFFORT_ORDER.index(effort)
+    except ValueError:
+        return effort
+    return _EFFORT_ORDER[min(i + 1, len(_EFFORT_ORDER) - 1)]
+
+
+def compute_conversion_cost(vehicle: dict) -> dict:
+    """Estimate the cash needed to convert the base van into a usable camper.
+
+    Returns:
+      - est_conversion_cost_eur:        midpoint of (low, high)
+      - est_conversion_cost_low_eur
+      - est_conversion_cost_high_eur
+      - conversion_effort: 'minimal' | 'light' | 'moderate' | 'heavy'
+      - total_project_cost_eur: best-available acquisition cost +
+        est_conversion_cost_eur (priority: total_cost_eur →
+        final_cost_estimate → max_recommended_bid_eur → price_eur for
+        asking-feed listings). None when no acquisition figure exists.
+    """
+    # Local import avoids a top-level cycle with van_intel.
+    from van_intel import _CREW_CAB_RE, _PASSENGER_TRIM_RE
+
+    title    = vehicle.get("title") or ""
+    remarks  = vehicle.get("remarks") or ""
+    addl     = vehicle.get("additional_information") or ""
+    hay      = f"{title} {remarks} {addl}".lower()
+
+    group    = vehicle.get("model_group")
+    van_type = (vehicle.get("van_type") or vehicle.get("variant") or "").upper()
+
+    # 1) Base effort. Passenger trim wins outright; crew-cab beats
+    #    kombi/combi (which beats plain cargo).
+    if group in _PASSENGER_GROUPS or _PASSENGER_TRIM_RE.search(title):
+        effort = "minimal"
+    elif _CREW_CAB_RE.search(title):
+        effort = "light"
+    elif re.search(r"\b(kombi|combi|glazen\s*zij|side\s*window\s*van)\b", hay):
+        effort = "kombi"
+    else:
+        effort = "moderate"
+
+    low, high = _CONVERSION_BANDS[effort]
+
+    # 2) Low-roof penalty (H1). Standing room matters for a usable
+    #    camper. We skip the bump for "minimal" — factory passenger vans
+    #    ship low-roof and that's accepted as part of their format.
+    #    Pattern uses a negative lookahead instead of \b because \b
+    #    doesn't fire between a digit and a letter (L2H1 has no boundary
+    #    around H1).
+    is_low_roof = bool(re.search(r"H1(?![0-9])", van_type))
+    if effort != "minimal" and is_low_roof:
+        low  += 1_500
+        high += 3_000
+        effort = _bump_effort(effort)
+
+    # Map the internal "kombi" label to the public "light" tier; the
+    # band difference is an implementation detail.
+    public_effort = "light" if effort == "kombi" else effort
+
+    mid = round((low + high) / 2)
+
+    # 3) Project total = acquisition + conversion. Acquisition priority:
+    #    real GraphQL total → fallback estimate → max bid → asking
+    #    price (asking-feed listings have no auction context).
+    acquisition = (
+        vehicle.get("total_cost_eur")
+        or vehicle.get("final_cost_estimate")
+        or vehicle.get("max_recommended_bid_eur")
+        or vehicle.get("price_eur")
+    )
+    total_project = (acquisition + mid) if acquisition is not None else None
+
+    return {
+        "est_conversion_cost_eur":      mid,
+        "est_conversion_cost_low_eur":  low,
+        "est_conversion_cost_high_eur": high,
+        "conversion_effort":            public_effort,
+        "total_project_cost_eur":       total_project,
+    }
+
+
 def passes_cost_filter(v: dict) -> tuple[bool, Optional[str]]:
     """Return (passes, reason). Called after compute_costs is merged in."""
     final   = v.get("final_cost_estimate")

@@ -6,7 +6,12 @@ import sys
 import asking_feed
 import bid_history
 import registry
-from cost_model import DEFAULT_BUYER_PREMIUM, compute_costs, passes_cost_filter
+from cost_model import (
+    DEFAULT_BUYER_PREMIUM,
+    compute_conversion_cost,
+    compute_costs,
+    passes_cost_filter,
+)
 from market_price import build_price_index_cached
 from notify import notify_gems
 from scraper import VAVATO_BASE, crawl_parallel, get_category_urls, get_lot_urls
@@ -141,6 +146,12 @@ _SCHEMA: dict = {
     "transport_cost_estimate":    None,
     "reconditioning_cost_estimate": None,
     "deal_ratio":                 None,
+    # Conversion
+    "est_conversion_cost_eur":      None,
+    "est_conversion_cost_low_eur":  None,
+    "est_conversion_cost_high_eur": None,
+    "conversion_effort":            None,
+    "total_project_cost_eur":       None,
     # Scores
     "score":                      None,
     "is_hidden_gem":              False,
@@ -310,6 +321,12 @@ def main():
         if est_market:
             premium = 1 + (v.get("buyer_premium_pct") or DEFAULT_BUYER_PREMIUM * 100) / 100
             v["max_recommended_bid_eur"] = round(est_market * MAX_BID_TARGET_FRACTION / premium)
+
+        # Conversion-cost estimate + total project cost — uses model_group
+        # + passenger/crew-cab/kombi signals to band the conversion budget,
+        # then adds it to acquisition for the headline "what will this
+        # really cost me" number.
+        v.update(compute_conversion_cost(v))
 
         # Cost filter (overpaying vs market, or too expensive to recondition)
         passes, cost_reason = passes_cost_filter(v)

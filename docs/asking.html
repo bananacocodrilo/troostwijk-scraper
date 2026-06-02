@@ -125,6 +125,26 @@
     .pct-label.over    { color: var(--red); }
     .pct-label.unknown { color: var(--muted); }
 
+    /* ── CONVERSION COST ─────────────────────── */
+    .conv-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      font-size: 12px; color: var(--muted);
+      margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border);
+    }
+    .conv-row .effort {
+      font-weight: 600; padding: 1px 6px; border-radius: 4px; font-size: 10.5px;
+    }
+    .effort.minimal  { color: var(--green); background: #0d2e20; }
+    .effort.light    { color: #c9e070;       background: #1f2a10; }
+    .effort.moderate { color: var(--yellow); background: #2d2600; }
+    .effort.heavy    { color: var(--red);    background: #2a0d0d; }
+    .total-project {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-top: 4px; padding-top: 5px; border-top: 1px dashed var(--border);
+      font-weight: 700; font-size: 13px; color: var(--text);
+    }
+    .total-project .value { color: #ffe082; }
+
     .card-footer {
       margin-top: auto;
       padding: 10px 16px;
@@ -313,6 +333,19 @@ function buildCard(v) {
       <span class="value">${med != null ? fmt(med) + ` <small style="color:var(--muted)">(n=${v.market_sample_size})</small>` : '<span class="na">insufficient peers</span>'}</span>
     </div>
     ${pct != null ? `<div class="pct-label ${pclass}">${pctText(pct)} ${pct <= -25 ? '🔥' : under ? '✓' : pct >= 15 ? '↑' : '~'}</div>` : ''}
+    ${v.est_conversion_cost_eur != null ? `
+    <div class="conv-row"
+         title="Estimated DIY camper-conversion budget: €${(v.est_conversion_cost_low_eur||0).toLocaleString()}–€${(v.est_conversion_cost_high_eur||0).toLocaleString()}">
+      <span>🔧 Conversion: ~${fmt(v.est_conversion_cost_eur)}</span>
+      <span class="effort ${v.conversion_effort || 'moderate'}">${v.conversion_effort || '—'}</span>
+    </div>
+    ${v.total_project_cost_eur != null ? `
+    <div class="total-project" title="Asking price + conversion midpoint">
+      <span>Total project</span>
+      <span class="value">${fmt(v.total_project_cost_eur)}</span>
+    </div>
+    ` : ''}
+    ` : ''}
   </div>
 
   <div class="card-footer">
