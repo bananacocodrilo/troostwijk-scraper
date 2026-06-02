@@ -29,6 +29,7 @@ class Vehicle(BaseModel):
     source: str = "troostwijk"
     platform: Optional[str] = None
     thumbnail_url: Optional[str] = None
+    images: List[str] = []  # Up to 5 absolute image URLs, in display order
 
     # Mechanical
     year: Optional[int] = None

@@ -108,6 +108,8 @@ def _to_vehicle(listing: dict) -> Optional[dict]:
         "emission_standard":  None,
         "body_type":          listing.get("body_type"),
         "weight_kg":          None,
+        # Pass through up to 5 image URLs (already absolute from each parser).
+        "images":             listing.get("images") or [],
     }
 
 

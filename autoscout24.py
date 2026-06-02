@@ -197,6 +197,14 @@ def _parse_listing(item: dict, model_key: str) -> Optional[dict]:
     # relative URL → leave as-is; caller can prefix https://www.autoscout24.nl
     url = item.get("url") or ""
 
+    # Up to 5 image URLs (AutoScout24 ships absolute https URLs).
+    images: List[str] = []
+    for u in (item.get("images") or []):
+        if isinstance(u, str) and u.startswith("http"):
+            images.append(u)
+        if len(images) >= 5:
+            break
+
     return {
         "price_eur": price,
         "year": year,
@@ -205,6 +213,7 @@ def _parse_listing(item: dict, model_key: str) -> Optional[dict]:
         "url": url,
         "model_key": model_key,
         "source": "autoscout24",
+        "images": images,
     }
 
 

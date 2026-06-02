@@ -108,6 +108,7 @@ _SCHEMA: dict = {
     "url":                        None,
     "title":                      None,
     "thumbnail_url":              None,
+    "images":                     [],
     "source":                     None,
     "platform":                   None,
     # Vehicle
