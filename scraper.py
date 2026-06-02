@@ -9,7 +9,7 @@ import json
 import re
 import time
 from datetime import date, datetime, timezone
-from typing import Any, Optional
+from typing import Any, List, Optional
 from urllib.parse import parse_qs, quote, urlencode, urlparse, urlunparse
 
 from bs4 import BeautifulSoup
@@ -423,11 +423,20 @@ def parse_vehicle(html: str, url: str) -> Vehicle:
     )
 
     # First image is the canonical thumbnail; sort by ``order`` to be safe.
+    # ``images`` keeps up to 5 absolute URLs for dashboard rendering.
     images = lot.get("images") or []
     thumbnail_url = None
+    image_urls: List[str] = []
     if images:
         sorted_imgs = sorted(images, key=lambda i: i.get("order") or 0)
-        thumbnail_url = sorted_imgs[0].get("url")
+        for img in sorted_imgs:
+            u = img.get("url")
+            if isinstance(u, str) and u:
+                image_urls.append(u)
+            if len(image_urls) >= 5:
+                break
+        if image_urls:
+            thumbnail_url = image_urls[0]
 
     vehicle = Vehicle(
         title=title,
@@ -437,6 +446,7 @@ def parse_vehicle(html: str, url: str) -> Vehicle:
         source="troostwijk",
         platform=lot.get("platform"),
         thumbnail_url=thumbnail_url,
+        images=image_urls,
         year=year,
         first_registration=first_reg,
         km=km,

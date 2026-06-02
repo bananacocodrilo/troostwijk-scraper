@@ -75,6 +75,18 @@
       border-bottom: 1px solid var(--border);
       display: block;
     }
+    .card-thumbs { display: block; line-height: 0; }
+    .card-thumbs.multi {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+      background: var(--border);
+    }
+    .card-thumbs.multi .card-thumb {
+      aspect-ratio: 1 / 1;
+      border-bottom: none;
+    }
+    .card-thumbs.multi {
+      border-bottom: 1px solid var(--border);
+    }
     .card-thumb-placeholder {
       width: 100%; aspect-ratio: 4 / 3;
       background: var(--surface2);
@@ -433,8 +445,12 @@ function buildCard(v) {
   const dealScoreBadge = v.deal_score != null
     ? `<span class="deal-score-badge" title="Deal score (based on deal ratio vs market)">💰${v.deal_score}</span>`
     : '';
-  const thumb = v.thumbnail_url
-    ? `<a href="${v.url}" target="_blank" rel="noopener"><img class="card-thumb" src="${v.thumbnail_url}" alt="${(v.title || '').replace(/"/g, '&quot;')}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'card-thumb-placeholder',textContent:'image unavailable'}))" /></a>`
+  const imgList = Array.isArray(v.images) && v.images.length
+    ? v.images.slice(0, 2)
+    : (v.thumbnail_url ? [v.thumbnail_url] : []);
+  const altText = (v.title || '').replace(/"/g, '&quot;');
+  const thumb = imgList.length
+    ? `<a href="${v.url}" target="_blank" rel="noopener" class="card-thumbs ${imgList.length > 1 ? 'multi' : 'single'}">${imgList.map((src, i) => `<img class="card-thumb" src="${src}" alt="${altText}" loading="lazy" onerror="this.style.display='none'" />`).join('')}</a>`
     : `<div class="card-thumb-placeholder">no photo</div>`;
 
   return `

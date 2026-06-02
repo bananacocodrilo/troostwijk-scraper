@@ -103,6 +103,16 @@ def _parse_listing(item: dict) -> Optional[dict]:
         km = None
 
     title = item.get("title") or ""
+    # Up to 5 image URLs (mediumUrl preferred, fallback to largeUrl / url).
+    images: List[str] = []
+    for pic in (item.get("pictures") or []):
+        if not isinstance(pic, dict):
+            continue
+        u = pic.get("mediumUrl") or pic.get("largeUrl") or pic.get("url")
+        if isinstance(u, str) and u.startswith("http"):
+            images.append(u)
+        if len(images) >= 5:
+            break
     return {
         "price_eur": price_eur,
         "year": year,
@@ -110,6 +120,7 @@ def _parse_listing(item: dict) -> Optional[dict]:
         "title": title,
         "url": item.get("vipUrl") or "",
         "model_key": _model_key(title),
+        "images": images,
     }
 
 

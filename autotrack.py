@@ -185,6 +185,20 @@ def _parse_hit(raw: str, fallback_model_key: str) -> Optional[dict]:
     if not url:
         return None
 
+    # Up to 5 image URLs. AutoTrack's media.photos field stores relative paths
+    # like "59406388/0-abc.jpg"; the CDN base is https://cdn.autotrack.nl/.
+    images: List[str] = []
+    media = obj.get("media") or {}
+    for rel in (media.get("photos") or []):
+        if not isinstance(rel, str) or not rel:
+            continue
+        if rel.startswith("http"):
+            images.append(rel)
+        else:
+            images.append(f"https://cdn.autotrack.nl/{rel.lstrip('/')}")
+        if len(images) >= 5:
+            break
+
     return {
         "price_eur": price,
         "year":      year,
@@ -194,6 +208,7 @@ def _parse_hit(raw: str, fallback_model_key: str) -> Optional[dict]:
         "model_key": fallback_model_key,
         "source":    "autotrack",
         "body_type": alg.get("carrosserievormSlug"),
+        "images":    images,
     }
 
 
