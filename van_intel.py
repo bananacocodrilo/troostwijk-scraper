@@ -942,6 +942,33 @@ _HIGH_POWER_RE = re.compile(
 )
 _HIGH_POWER_BONUS = 10
 
+# 4x4 / AWD markers. All-wheel-drive in this van class is rare and
+# highly desirable for camper conversion — opens up forest tracks,
+# beach access, winter Alpine roads. VW 4Motion (Syncro on T-line),
+# Mercedes 4Matic (Vito), Nissan 4WD Trafic Quickshift X-Trail editions
+# are the prime targets. Add a small bonus to surface them.
+_OFFROAD_RE = re.compile(
+    r"\b(?:"
+    r"4x4|4\s*motion|4motion|syncro|"               # VW
+    r"4matic|4-matic|"                              # Mercedes
+    r"awd|all[-\s]wheel[-\s]drive|"                 # generic
+    r"quattro|"                                     # Audi (rare in this class)
+    r"4wd"
+    r")\b",
+    re.IGNORECASE,
+)
+_OFFROAD_BONUS = 10
+
+
+def _full_haystack(vehicle: dict) -> str:
+    """title + remarks + additional_information, joined, lowercased.
+    Used for keyword bonuses so listings that put the trim/engine info in
+    the description (not the title) don't get penalised."""
+    return " ".join(filter(None, [
+        vehicle.get("title"), vehicle.get("remarks"),
+        vehicle.get("additional_information"),
+    ])).lower()
+
 
 def _passenger_bonus(vehicle: dict) -> int:
     """Flat bonus for factory-passenger trims (Traveller, Caravelle, V-Class…).
@@ -949,16 +976,19 @@ def _passenger_bonus(vehicle: dict) -> int:
     seats = vehicle.get("seats") or 0
     if seats >= 7:
         return _PASSENGER_BONUS
-    title = vehicle.get("title") or ""
-    if _PASSENGER_TRIM_RE.search(title):
+    if _PASSENGER_TRIM_RE.search(_full_haystack(vehicle)):
         return _PASSENGER_BONUS
     return 0
 
 
 def _high_power_bonus(vehicle: dict) -> int:
-    """Flat bonus when title declares ≥180hp / ≥130kW / BiTDI."""
-    title = vehicle.get("title") or ""
-    return _HIGH_POWER_BONUS if _HIGH_POWER_RE.search(title) else 0
+    """Flat bonus when title or description declares ≥180hp / ≥130kW / BiTDI."""
+    return _HIGH_POWER_BONUS if _HIGH_POWER_RE.search(_full_haystack(vehicle)) else 0
+
+
+def _offroad_bonus(vehicle: dict) -> int:
+    """Flat bonus for 4x4 / 4Motion / Syncro / 4Matic / AWD markers."""
+    return _OFFROAD_BONUS if _OFFROAD_RE.search(_full_haystack(vehicle)) else 0
 
 
 def score_small_van(vehicle: dict) -> int:
@@ -976,7 +1006,7 @@ def score_small_van(vehicle: dict) -> int:
     raw = a + b + c + d
     quality = _GROUP_QUALITY.get(group, 0.90)
     base = round(raw * quality)
-    return min(base + _passenger_bonus(vehicle) + _high_power_bonus(vehicle), 100)
+    return min(base + _passenger_bonus(vehicle) + _high_power_bonus(vehicle) + _offroad_bonus(vehicle), 100)
 
 
 # ---------------------------------------------------------------------------
