@@ -87,6 +87,36 @@ def _is_permanent_reject(reason: Optional[str]) -> bool:
     return prefix in PERMANENT_REJECT_PREFIXES
 
 
+# Reasons whose verdict depends on the current size rules (group
+# required_length / required_height, weight-band thresholds, keyword
+# inference). Whenever any of those change in van_intel.py, the cached
+# rejections may now be wrong — call ``clear_rejects_by_reason()`` with
+# these prefixes so the affected URLs get rescraped on the next run.
+SIZE_REJECT_PREFIXES = (
+    "size_not_allowed",
+    "size_too_small",
+)
+
+
+def clear_rejects_by_reason(registry: dict, reason_prefixes: Iterable[str]) -> list[str]:
+    """Drop permanent_rejects whose reason starts with any of the given
+    prefixes. Returns the list of cleared URLs.
+
+    Call after rule changes in van_intel.py (size, year, emission, seats,
+    etc.) so URLs that would now pass under the new rules get a fresh
+    scrape instead of being eternally cached as 'no thanks'.
+    """
+    rejects = registry.get("permanent_rejects", {})
+    prefixes = tuple(reason_prefixes)
+    cleared = []
+    for url in list(rejects.keys()):
+        reason = (rejects[url].get("reason") or "").split(":", 1)[0].strip()
+        if reason in prefixes:
+            cleared.append(url)
+            del rejects[url]
+    return cleared
+
+
 def _parse_dt(value) -> Optional[datetime]:
     if not value:
         return None

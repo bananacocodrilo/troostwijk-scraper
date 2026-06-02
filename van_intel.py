@@ -472,6 +472,19 @@ def _detect_size(
     weight_kg: Optional[int] = None,
     body_type: Optional[str] = None,
 ) -> SizeDetection:
+    """Detect L/H from EXPLICIT codes only (e.g. ``L2H1``, ``\\bL2\\b``, ``\\bH1\\b``).
+
+    Heuristic inference — roofline keywords (high roof → H2), length keywords
+    (LWB → L3), empty-weight bands, body-type slugs — used to fill in
+    "probably L2 / H2" guesses, but those false-positives outweighed the
+    signal: they pushed otherwise-valid lots into size_not_allowed rejection
+    when nothing in the listing actually claimed an out-of-spec size.
+
+    Soft-gate philosophy now applied to size end-to-end: unknown = soft-pass.
+    The variant string is set only when the seller wrote a literal L/H code.
+    Weight / body_type / model_token arguments are accepted for backward
+    compatibility but no longer consulted.
+    """
     s = haystack.lower()
     evidence: List[str] = []
     confidence = "unknown"
@@ -489,25 +502,6 @@ def _detect_size(
             H, ev = _explicit_h(s)
             if ev:
                 evidence.append(ev); confidence = "explicit"
-
-        if H is None:
-            H, ev = _height_from_keywords(s)
-            if ev:
-                evidence.append(ev); confidence = "inferred" if confidence == "unknown" else confidence
-        if L is None:
-            L, ev = _length_from_keywords(s)
-            if ev:
-                evidence.append(ev); confidence = "inferred" if confidence == "unknown" else confidence
-
-        if L is None:
-            L, ev = _length_from_weight(model_token, weight_kg)
-            if ev:
-                evidence.append(ev); confidence = "guess" if confidence == "unknown" else confidence
-
-        if H is None:
-            H, ev = _height_from_bodytype(body_type)
-            if ev:
-                evidence.append(ev); confidence = "guess" if confidence == "unknown" else confidence
 
     return SizeDetection(L, H, confidence, evidence)
 
@@ -606,34 +600,6 @@ def classify_vehicle(
     det = _detect_size(
         haystack, model_token=token, weight_kg=weight_kg, body_type=body_type,
     )
-
-    # Small-van whitelist remap: most whitelist families have only L1/L2
-    # variants in their factory nomenclature (no L3). The shared
-    # length-keyword pipeline maps "LWB" / "Maxi" / "lang" to L3 because
-    # that's correct for big vans (Sprinter/Ducato/etc) — but for those
-    # small-van groups "long wheelbase" = L2 (the long variant of an
-    # L1/L2 platform). Clamp inferred L3/L4 down to L2 here so
-    # strict_filter doesn't false-reject "Trafic LWB 2020".
-    #
-    # Group-aware: only clamp when the matched group requires L2
-    # exclusively. Groups that legitimately allow L3 (e.g.
-    # ``vito_v_class_l2`` accepts Mercedes Extralang which IS L3-class)
-    # keep the detected length so the variant reflects reality.
-    group_rules = WHITELIST_GROUPS[group]
-    if group_rules.get("required_length") == [2]:
-        if det.length in (3, 4) and det.confidence in ("inferred", "guess"):
-            # Look for "explicit L3" / "explicit L4" from _explicit_l/_explicit_lh.
-            # Critical: do NOT match "→ L3" in weight-fallback evidence
-            # ("empty weight 2200kg ≥ 1900 → L3") — that's the inferred result
-            # we want to clamp, not an explicit signal blocking the clamp.
-            explicit_present = any(
-                re.search(r"\bexplicit\s+L\s*[34]\b", e, re.IGNORECASE) for e in det.evidence
-            )
-            if not explicit_present:
-                det = SizeDetection(
-                    length=2, height=det.height, confidence=det.confidence,
-                    evidence=det.evidence + [f"clamped L{det.length}→L2 for small-van group"],
-                )
 
     variant = _compose_variant(det.length, det.height)
 
