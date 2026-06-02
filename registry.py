@@ -73,6 +73,9 @@ PERMANENT_REJECT_PREFIXES = (
     "mileage_too_high",
     "year_below_minimum",
     "emission_below_euro6",
+    "seats_below_5",
+    # Legacy reason kept so URLs rejected by the pre-2026 (`< 6`) gate
+    # stay permanently-rejected and don't get re-scraped.
     "seats_below_6",
 )
 

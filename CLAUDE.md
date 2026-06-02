@@ -23,7 +23,7 @@ All other van families (Sprinter, Ducato, Boxer, Jumper, Crafter, TGE, Master, M
 **Soft-gate policy** — only *confirmed* violations reject:
 - Year known and `< min_year` for group → reject
 - Emission known and below Euro 6 → reject
-- Seats known and `< 6` → reject
+- Seats known and `< 5` → reject (5-seat Double Cab = valid camper candidate)
 - Size known and outside the group's allowed L/H → reject
 - Any of these unknown → PASS
 
@@ -107,7 +107,7 @@ Hidden gem = deal ratio > 25%, km < 150k, year ≥ 2017, size in `{L2H1, L2H2, L
 - `unknown`: every 12h
 - `ended`: never re-scrape
 
-`permanent_rejects` cache: URLs permanently rejected for stable reasons (`brand_not_in_whitelist`, `body_mismatch`, `vehicle_type`, `damage`, `size_not_allowed`, `mileage_too_high`, `year_below_minimum`, `emission_below_euro6`, `seats_below_6`, `smaller_sibling`) — skipped on all future discovery passes. **Note:** electric vehicles are NOT rejected — eVito / eTransporter / e-Expert and similar are valid camper-conversion candidates.
+`permanent_rejects` cache: URLs permanently rejected for stable reasons (`brand_not_in_whitelist`, `body_mismatch`, `vehicle_type`, `damage`, `size_not_allowed`, `mileage_too_high`, `year_below_minimum`, `emission_below_euro6`, `seats_below_5`, `smaller_sibling`) — skipped on all future discovery passes. **Note:** electric vehicles are NOT rejected — eVito / eTransporter / e-Expert and similar are valid camper-conversion candidates.
 
 Cold-start cap: `MAX_NEW_PER_RUN = 400` — full catalogue registered across 3-4 runs.
 

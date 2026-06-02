@@ -677,7 +677,9 @@ def strict_filter(vehicle, classification: Classification) -> Tuple[bool, Option
         if re.search(r"\beuro\s*[12345]\b|\beuro[12345]\b", es) and "euro 6" not in es and "euro6" not in es:
             return False, f"emission_below_euro6: {emission}"
 
-    # Seats — soft gate: only reject confirmed seats < 6
+    # Seats — soft gate: only reject confirmed seats < 5.
+    # 5-seat Double Cab configurations (2 front + 3 rear bench) are valid
+    # camper candidates; a sub-5 seat count is the hard cargo-van signal.
     seats = getattr(vehicle, "seats", None) if not isinstance(vehicle, dict) else vehicle.get("seats")
     title = getattr(vehicle, "title", None) if not isinstance(vehicle, dict) else vehicle.get("title")
     if seats is None:
@@ -687,8 +689,8 @@ def strict_filter(vehicle, classification: Classification) -> Tuple[bool, Option
         # "5 seater", "2p.", etc. A confirmed extraction is treated as the
         # same hard signal as a structured `seats` field.
         seats = _seats_from_text(title)
-    if seats is not None and seats < 6:
-        return False, f"seats_below_6: {seats}"
+    if seats is not None and seats < 5:
+        return False, f"seats_below_5: {seats}"
 
     # Body-type fallback (when seats still unknown): cargo-only body types
     # (Mercedes Vito 111 cargo, panel-van Boxer/Ducato, etc.) are 2-3 seats
@@ -700,7 +702,7 @@ def strict_filter(vehicle, classification: Classification) -> Tuple[bool, Option
             else vehicle.get("body_type")
         )
         if _is_cargo_body(body_type) and not _CREW_CAB_RE.search(title or ""):
-            return False, f"seats_below_6: inferred from cargo body_type={body_type}"
+            return False, f"seats_below_5: inferred from cargo body_type={body_type}"
 
     return True, None
 
