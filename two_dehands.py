@@ -27,6 +27,17 @@ HEADERS = {
 PRICE_MIN_EUR = 1_500
 PRICE_MAX_EUR = 45_000
 
+# 2dehands.be URL prefixes for non-vehicle categories (parts,
+# accessories, misc). Same `/v/` shape as Marktplaats — Adevinta API
+# powers both. Drop these at parse time so they never enter the cache
+# or the feed.
+_EXCLUDED_CATEGORY_PREFIXES = (
+    "/v/auto-onderdelen/",
+    "/v/auto-diversen/",
+    "/v/caravans-mobilhomes-en-kamperen/camper-accessoires/",
+    "/v/caravans-mobilhomes-en-kamperen/onderdelen-en-accessoires/",
+)
+
 # Default queries used by build_listings() when none are supplied
 DEFAULT_QUERIES = [
     # whitelist (camper-candidate)
@@ -110,6 +121,11 @@ def _parse_listing(item: dict) -> Optional[dict]:
         return None
     price_eur = cents / 100
     if not (PRICE_MIN_EUR <= price_eur <= PRICE_MAX_EUR):
+        return None
+
+    # Drop non-vehicle categories (parts, accessories, misc) — see _EXCLUDED_CATEGORY_PREFIXES.
+    vip = item.get("vipUrl") or ""
+    if vip.startswith(_EXCLUDED_CATEGORY_PREFIXES):
         return None
 
     attrs = {a["key"]: a.get("value") for a in (item.get("attributes") or [])}

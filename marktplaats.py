@@ -29,6 +29,19 @@ HEADERS = {
 PRICE_MIN_EUR = 1_500
 PRICE_MAX_EUR = 45_000
 
+# Marktplaats URL prefixes for categories that aren't actual vehicles.
+# Branded queries (e.g. "Ford Tourneo Custom") return matches across the
+# whole site, so we get parts (auto-onderdelen), accessories
+# (camper-accessoires), and miscellaneous (auto-diversen) listings
+# mixed in with the actual vans. Drop them at parse time so they never
+# enter the cache or the asking feed.
+_EXCLUDED_CATEGORY_PREFIXES = (
+    "/v/auto-onderdelen/",
+    "/v/auto-diversen/",
+    "/v/caravans-en-kamperen/camper-accessoires/",
+    "/v/caravans-en-kamperen/onderdelen-en-accessoires/",
+)
+
 # Model token → canonical key for bucketing. Multi-word tokens MUST come
 # before single-word tokens (e.g. "transit custom" before "transit") so
 # the substring match in _model_key() picks the more specific one first.
@@ -89,6 +102,14 @@ def _parse_listing(item: dict) -> Optional[dict]:
         return None
     price_eur = cents / 100
     if not (PRICE_MIN_EUR <= price_eur <= PRICE_MAX_EUR):
+        return None
+
+    # Marktplaats URL path encodes the category. We only want actual
+    # vehicles — drop car-parts ("auto-onderdelen"), car-misc
+    # ("auto-diversen"), and camper-accessory ("camper-accessoires")
+    # categories which leak in for branded-search queries.
+    vip = item.get("vipUrl") or ""
+    if vip.startswith(_EXCLUDED_CATEGORY_PREFIXES):
         return None
 
     attrs = {a["key"]: a.get("value") for a in (item.get("attributes") or [])}
