@@ -866,18 +866,40 @@ def _svs_value(deal_ratio: Optional[float]) -> int:
     return 2
 
 
+# Per-group quality factor for camper-base suitability. Applied as a
+# multiplicative scalar on the final score, so two otherwise-identical
+# vehicles in different groups rank by platform quality. Transit Custom
+# is the European benchmark for small-camper conversions (huge aftermarket
+# ecosystem, best resale, optimal payload/height). The NV300 platform
+# (Vivaro/Trafic/Primastar/Talento) sits ~12% below it — same dimensional
+# class but smaller camper-kit ecosystem and lower resale.
+_GROUP_QUALITY = {
+    "transit_custom_l2h1":         1.00,   # benchmark
+    "expert_jumpy_proace_l2":      0.95,   # great platform, slightly thinner aftermarket
+    "scudo_gen3":                  0.92,   # rebadged Expert; thin used-market data
+    "vivaro_trafic_primastar_l2":  0.88,   # NV300 platform — ~12% below Transit Custom
+    "t6_1_lwb":                    1.00,   # T6.1 California ecosystem rivals Transit Custom
+    "psa_l1l2h1":                  0.85,   # bigger / heavier; over-spec for stealth camper
+    "vito_v_class_l2":             0.95,   # premium chassis but quirky for DIY conversion
+    "hyundai_staria":              0.90,   # excellent for passenger use; new platform, rare in NL
+}
+
+
 def score_small_van(vehicle: dict) -> int:
     """Return a 0-100 camper-candidate suitability score."""
     variant    = vehicle.get("variant") or vehicle.get("van_type")
     fuel       = vehicle.get("fuel")
     deal_ratio = vehicle.get("deal_ratio")
+    group      = vehicle.get("model_group") or ""
 
     a = _svs_dual_use(vehicle)
     b = _svs_city_practicality(variant, fuel)
     c = _svs_conversion_potential(vehicle)
     d = _svs_value(deal_ratio)
 
-    return min(a + b + c + d, 100)
+    raw = a + b + c + d
+    quality = _GROUP_QUALITY.get(group, 0.90)
+    return min(round(raw * quality), 100)
 
 
 # ---------------------------------------------------------------------------
