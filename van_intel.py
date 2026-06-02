@@ -622,8 +622,12 @@ def classify_vehicle(
     group_rules = WHITELIST_GROUPS[group]
     if group_rules.get("required_length") == [2]:
         if det.length in (3, 4) and det.confidence in ("inferred", "guess"):
+            # Look for "explicit L3" / "explicit L4" from _explicit_l/_explicit_lh.
+            # Critical: do NOT match "→ L3" in weight-fallback evidence
+            # ("empty weight 2200kg ≥ 1900 → L3") — that's the inferred result
+            # we want to clamp, not an explicit signal blocking the clamp.
             explicit_present = any(
-                re.search(r"\bL\s*[34]\b", e, re.IGNORECASE) for e in det.evidence
+                re.search(r"\bexplicit\s+L\s*[34]\b", e, re.IGNORECASE) for e in det.evidence
             )
             if not explicit_present:
                 det = SizeDetection(
