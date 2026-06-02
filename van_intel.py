@@ -53,8 +53,17 @@ WHITELIST_GROUPS: dict = {
         "min_year": 2016,
     },
     "expert_jumpy_proace_l2": {
-        "label": "Peugeot Expert / Citroen Jumpy / Toyota ProAce",
-        "tokens": ["pro ace", "proace", "expert", "jumpy"],
+        "label": "Peugeot Expert / Citroen Jumpy / Toyota ProAce (+ passenger Traveller / SpaceTourer / ProAce Verso)",
+        # EMP2 platform. Cargo trio (Expert/Jumpy/ProAce) and passenger
+        # trio (Traveller/SpaceTourer/ProAce Verso) share the same chassis,
+        # same size codes, same min year — group them. The passenger trim
+        # already comes insulated with windows and seats (faster camper
+        # conversion), and gets an additional +15 score bonus downstream.
+        "tokens": [
+            "pro ace verso", "proace verso", "space tourer", "spacetourer",
+            "pro ace", "proace", "traveller",
+            "expert", "jumpy",
+        ],
         "required_length": [2],
         "required_height": None,
         "min_year": 2016,
@@ -855,6 +864,40 @@ _GROUP_QUALITY = {
 }
 
 
+# Title keywords that mark a factory passenger trim (already insulated,
+# windows fitted, seats + climate trim installed). These vans need much
+# less conversion work to become a camper than their cargo siblings, so
+# they earn a flat +PASSENGER_BONUS on the suitability score on top of
+# whatever the per-component scoring produced. Detection is OR'd with a
+# seats>=7 check — many listings drop the trim name and just say "9p".
+_PASSENGER_TRIM_RE = re.compile(
+    r"\b("
+    r"traveller|spacetourer|space\s*tourer|"          # PSA passenger trio
+    r"verso|"                                          # Toyota ProAce Verso
+    r"tourer|tourneo|"                                 # Vito Tourer, Ford Tourneo
+    r"caravelle|multivan|california|"                  # VW passenger T-line
+    r"v-class|v\s*klasse|"                             # Mercedes V-Class
+    r"combi|kombi|"                                    # generic passenger config
+    r"personenvervoer|personentransporter|"            # NL/DE legal designation
+    r"shuttle|bus\s+9p|9\s*persoons"                   # ad-hoc passenger markers
+    r")\b",
+    re.IGNORECASE,
+)
+_PASSENGER_BONUS = 15
+
+
+def _passenger_bonus(vehicle: dict) -> int:
+    """Flat bonus for factory-passenger trims (Traveller, Caravelle, V-Class…).
+    OR'd with seats>=7 since many listings drop the trim name and just say "9p"."""
+    seats = vehicle.get("seats") or 0
+    if seats >= 7:
+        return _PASSENGER_BONUS
+    title = vehicle.get("title") or ""
+    if _PASSENGER_TRIM_RE.search(title):
+        return _PASSENGER_BONUS
+    return 0
+
+
 def score_small_van(vehicle: dict) -> int:
     """Return a 0-100 camper-candidate suitability score."""
     variant    = vehicle.get("variant") or vehicle.get("van_type")
@@ -869,7 +912,8 @@ def score_small_van(vehicle: dict) -> int:
 
     raw = a + b + c + d
     quality = _GROUP_QUALITY.get(group, 0.90)
-    return min(round(raw * quality), 100)
+    base = round(raw * quality)
+    return min(base + _passenger_bonus(vehicle), 100)
 
 
 # ---------------------------------------------------------------------------

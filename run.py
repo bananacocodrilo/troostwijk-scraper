@@ -22,10 +22,13 @@ IDEAL_MODELS = [
     # transit_custom_l2h1 (incl. passenger Tourneo Custom)
     "Ford Transit Custom",
     "Ford Tourneo Custom",
-    # expert_jumpy_proace_l2
+    # expert_jumpy_proace_l2 (cargo + passenger variants share the EMP2 chassis)
     "Peugeot Expert",
+    "Peugeot Traveller",
     "Citroen Jumpy",
+    "Citroen SpaceTourer",
     "Toyota ProAce",
+    "Toyota ProAce Verso",
     # scudo_gen3 (gen-3, 2022+; rebadged Expert/Jumpy)
     "Fiat Scudo",
     # vivaro_trafic_primastar_l2 (incl. rebadged Fiat Talento)

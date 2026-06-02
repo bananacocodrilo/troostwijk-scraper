@@ -11,7 +11,7 @@ A second, complementary feed (`asking_feed.py` → `docs/asking.html`) reuses th
 | Group key | Models | Required size | min year | Notes |
 |-----------|--------|---------------|----------|-------|
 | `transit_custom_l2h1` | Ford Transit Custom + Ford Tourneo Custom (passenger) | L2H1 | 2016 | H1 is the only height variant |
-| `expert_jumpy_proace_l2` | Peugeot Expert / Citroën Jumpy / Toyota ProAce | L2, any H | 2016 | EMP2 platform gen-3 |
+| `expert_jumpy_proace_l2` | Peugeot Expert + Traveller / Citroën Jumpy + SpaceTourer / Toyota ProAce + ProAce Verso | L2, any H | 2016 | EMP2 platform — cargo + passenger trims share the chassis |
 | `scudo_gen3` | Fiat Scudo (gen 3, 2022+) | L2, any H | 2022 | Rebadged Expert/Jumpy; separate group to exclude old Scudo (2007-2016) |
 | `vivaro_trafic_primastar_l2` | Opel Vivaro / Renault Trafic / Nissan Primastar / Fiat Talento | L2, any H | 2015 | shared NV300 platform; Talento is rebadged Trafic |
 | `t6_1_lwb` | VW Transporter T6.1 | L2 (LWB), any H | 2020 | T6.1 facelift = Euro 6d |
