@@ -88,11 +88,15 @@ WHITELIST_GROUPS: dict = {
         "min_year": 2015,
     },
     "t6_1_lwb": {
-        "label": "VW Transporter T6.1",
+        "label": "VW Transporter T6 + T6.1 (Multivan / Caravelle / California)",
+        # T6 (2015-2019) and T6.1 (2019.5+) share the same LWB L2 chassis
+        # and are both Euro 6 from launch. The BiTDI 204hp engine is T6-only
+        # — top of the range, the prime camper-base engine for this group.
+        # min_year=2015 covers the full Euro-6 T6 era.
         "tokens": ["t6.1", "t6_1", "transporter"],
         "required_length": [2],
         "required_height": None,
-        "min_year": 2020,
+        "min_year": 2015,
     },
     "psa_l1l2h1": {
         "label": "Peugeot Boxer / Fiat Ducato / Citroen Jumper (L1H1 or L2H1 only)",
@@ -885,6 +889,23 @@ _PASSENGER_TRIM_RE = re.compile(
 )
 _PASSENGER_BONUS = 15
 
+# High-output engine markers (the user's "Tier A+" signal). 180hp+ is
+# uncommon in this class — most listings are 100-150hp. A top engine
+# means torque to spare for camper weight, better cruising at autobahn
+# speeds, and usually correlates with high-trim Highline / Avantgarde /
+# Tourer specs. Match: numeric "180hp"/"180pk"/"180ps" or above, kw form
+# "135kw"+ (≈ 180hp), or the explicit "BiTDI" / "Bi-TDI" marker
+# (VW's 204hp twin-turbo, T6 only).
+_HIGH_POWER_RE = re.compile(
+    r"\b(?:"
+    r"(?:1[89]\d|[2-9]\d{2})\s*(?:hp|pk|ps|bhp)"   # 180-999 hp/pk/ps/bhp
+    r"|(?:1[3-9]\d|[2-9]\d{2})\s*kw"               # 130+ kW ≈ 175+ hp
+    r"|bi[-\s]?tdi"                                 # VW BiTDI 204hp
+    r")\b",
+    re.IGNORECASE,
+)
+_HIGH_POWER_BONUS = 10
+
 
 def _passenger_bonus(vehicle: dict) -> int:
     """Flat bonus for factory-passenger trims (Traveller, Caravelle, V-Class…).
@@ -896,6 +917,12 @@ def _passenger_bonus(vehicle: dict) -> int:
     if _PASSENGER_TRIM_RE.search(title):
         return _PASSENGER_BONUS
     return 0
+
+
+def _high_power_bonus(vehicle: dict) -> int:
+    """Flat bonus when title declares ≥180hp / ≥130kW / BiTDI."""
+    title = vehicle.get("title") or ""
+    return _HIGH_POWER_BONUS if _HIGH_POWER_RE.search(title) else 0
 
 
 def score_small_van(vehicle: dict) -> int:
@@ -913,7 +940,7 @@ def score_small_van(vehicle: dict) -> int:
     raw = a + b + c + d
     quality = _GROUP_QUALITY.get(group, 0.90)
     base = round(raw * quality)
-    return min(base + _passenger_bonus(vehicle), 100)
+    return min(base + _passenger_bonus(vehicle) + _high_power_bonus(vehicle), 100)
 
 
 # ---------------------------------------------------------------------------
