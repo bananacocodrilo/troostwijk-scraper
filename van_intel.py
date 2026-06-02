@@ -679,10 +679,39 @@ def strict_filter(vehicle, classification: Classification) -> Tuple[bool, Option
 
     # Seats — soft gate: only reject confirmed seats < 6
     seats = getattr(vehicle, "seats", None) if not isinstance(vehicle, dict) else vehicle.get("seats")
+    if seats is None:
+        # Title-fallback: many marketplace listings (notably AutoTrack, which
+        # doesn't expose `seats` per listing in its search feed) put the
+        # passenger count directly in the title — "3-persoons", "2 PERSOONS",
+        # "5 seater", etc. A confirmed extraction is treated as the same hard
+        # signal as a structured `seats` field.
+        title = getattr(vehicle, "title", None) if not isinstance(vehicle, dict) else vehicle.get("title")
+        seats = _seats_from_text(title)
     if seats is not None and seats < 6:
         return False, f"seats_below_6: {seats}"
 
     return True, None
+
+
+_SEATS_FROM_TEXT_RE = re.compile(
+    r"\b([2-9])\s*[-–]?\s*"
+    r"(?:persoons?|personen|zits?|zit(?:plaatsen)?|seater?s?|sitze?r?|places?)\b",
+    re.IGNORECASE,
+)
+
+
+def _seats_from_text(text: Optional[str]) -> Optional[int]:
+    """Return seat count if explicitly stated in ``text`` (e.g. "3-persoons",
+    "5 seater", "2 zits"), else None. Multi-language (NL/EN/DE/FR)."""
+    if not text:
+        return None
+    m = _SEATS_FROM_TEXT_RE.search(text)
+    if not m:
+        return None
+    try:
+        return int(m.group(1))
+    except (ValueError, TypeError):
+        return None
 
 
 # ---------------------------------------------------------------------------
