@@ -771,23 +771,37 @@ _CREW_CAB_RE = re.compile(
 
 
 def _svs_dual_use(vehicle: dict) -> int:
-    """Dual-use utility — 0-45 pts.  6 seats = max, crew cab = strong signal."""
+    """Dual-use utility — 0-45 pts.  6 seats = max, crew cab = strong signal.
+
+    Marketplace sources (Marktplaats / AutoScout24 / AutoTrack / 2dehands)
+    don't expose ``seats`` per listing, so structured field is often None.
+    We cascade title-based inference: explicit count ("9-persoons", "2p"),
+    crew-cab markers ("DC", "Dubbele Cabine", "Combi") → assume 6 seats,
+    factory-passenger trim ("Multivan", "Traveller") → assume 7 seats.
+    Without this cascade asking-feed scores capped near 22 even for
+    perfect candidates.
+    """
     hay = " ".join(filter(None, [
         vehicle.get("title"), vehicle.get("remarks"),
         vehicle.get("additional_information"),
     ])).lower()
+    title = vehicle.get("title") or ""
 
     seats = vehicle.get("seats")
-    pts = 0
+    if seats is None:
+        seats = _seats_from_text(title)
+    if seats is None and _CREW_CAB_RE.search(hay):
+        seats = 6           # double cab = 5-6 seat factory bench
+    if seats is None and _PASSENGER_TRIM_RE.search(title):
+        seats = 7           # passenger trim = 7-9 seat factory config
 
+    pts = 0
     if seats is not None:
         if seats >= 6:    pts = 38
         elif seats == 5:  pts = 28
         elif seats == 4:  pts = 18
         elif seats == 3:  pts = 10
         else:             pts = 2
-    elif _CREW_CAB_RE.search(hay):
-        pts = 22
 
     if re.search(r"\b(anchor\s*point|rail|zitplaats|afneembare?\s*stoel|klapstoel)\b", hay):
         pts = min(pts + 7, 45)
@@ -796,9 +810,15 @@ def _svs_dual_use(vehicle: dict) -> int:
 
 
 def _svs_city_practicality(variant: Optional[str], fuel: Optional[str]) -> int:
-    """City practicality — 0-20 pts.  L1 > L2 > L3; petrol/hybrid bonus."""
+    """City practicality — 0-20 pts.  L1 > L2 > L3; petrol/hybrid bonus.
+
+    Whitelist groups are all small/medium L1-L2 vans by construction, so
+    unknown size defaults to 14 (between L2=15 and L3=10) rather than 10
+    — the soft-gate philosophy: no penalty for missing info on a known
+    small-van group.
+    """
     s = (variant or "").upper()
-    size_pts = 10
+    size_pts = 14
 
     m = re.match(r"L([1-4?])H([1-3?])$", s)
     if m:
@@ -807,7 +827,7 @@ def _svs_city_practicality(variant: Optional[str], fuel: Optional[str]) -> int:
         elif L == "2": size_pts = 15
         elif L == "3": size_pts = 10
         elif L == "4": size_pts = 4
-        else:          size_pts = 10
+        else:          size_pts = 14
 
     fuel_pts = 0
     f = (fuel or "").lower()
@@ -839,7 +859,23 @@ def _svs_conversion_potential(vehicle: dict) -> int:
     return min(pts, 20)
 
 
-def _svs_value(deal_ratio: Optional[float]) -> int:
+def _svs_value(deal_ratio: Optional[float], vehicle: Optional[dict] = None) -> int:
+    """Value points 0-15.
+
+    Auction feed: ``deal_ratio`` is hammer-vs-market — primary signal.
+    Asking feed: no hammer exists, so fall through to
+    ``price_pct_vs_median`` (the cohort percentile asking_feed computes).
+    A listing 15% below cohort median is treated like a deal_ratio of
+    ~0.15, etc.
+    """
+    if deal_ratio is None and vehicle is not None:
+        pct = vehicle.get("price_pct_vs_median")
+        if pct is not None:
+            if pct <= -25:  return 15
+            if pct <= -15:  return 12
+            if pct <= -5:   return 8
+            if pct <=  5:   return 5
+            return 2
     if deal_ratio is None:
         return 5
     if deal_ratio >= 0.30:  return 15
@@ -935,7 +971,7 @@ def score_small_van(vehicle: dict) -> int:
     a = _svs_dual_use(vehicle)
     b = _svs_city_practicality(variant, fuel)
     c = _svs_conversion_potential(vehicle)
-    d = _svs_value(deal_ratio)
+    d = _svs_value(deal_ratio, vehicle)
 
     raw = a + b + c + d
     quality = _GROUP_QUALITY.get(group, 0.90)
