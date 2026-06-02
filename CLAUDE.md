@@ -2,7 +2,7 @@
 
 ## Goal
 
-Find underpriced **camper-candidate small/mid vans** at **Troostwijk** and **Vavato** live auctions, filtered to a strict whitelist of 7 model groups (all in the Transit Custom L2H1 dimensional class — ~5.3m × 2.0m — Euro 6, 6-seat compatible). The pipeline discovers auction lots, classifies them against the whitelist, applies a strict-but-soft-gated filter (only confirmed violations reject), scores survivors for camper-conversion suitability and rental ROI, and surfaces hidden gems via Telegram alerts.
+Find underpriced **camper-candidate small/mid vans** at **Troostwijk** and **Vavato** live auctions, filtered to a strict whitelist of 8 model groups (mostly in the Transit Custom L2H1 dimensional class — ~5.3m × 2.0m — Euro 6, 6-seat compatible). The pipeline discovers auction lots, classifies them against the whitelist, applies a strict-but-soft-gated filter (only confirmed violations reject), scores survivors for camper-conversion suitability and rental ROI, and surfaces hidden gems via Telegram alerts.
 
 A second, complementary feed (`asking_feed.py` → `docs/asking.html`) reuses the same whitelist + classifier to surface **fixed-price marketplace listings** (Marktplaats, AutoScout24 NL/DE, 2dehands.be) aggregated and deduped across sources. Deal-ratio scoring doesn't apply (no hammer/auction), so listings are ranked by price percentile vs the cohort median of the same (model_group, year ±2). The two feeds run in the same `python3 run.py` invocation but produce independent outputs.
 
@@ -15,10 +15,11 @@ A second, complementary feed (`asking_feed.py` → `docs/asking.html`) reuses th
 | `scudo_gen3` | Fiat Scudo (gen 3, 2022+) | L2, any H | 2022 | Rebadged Expert/Jumpy; separate group to exclude old Scudo (2007-2016) |
 | `vivaro_trafic_primastar_l2` | Opel Vivaro / Renault Trafic / Nissan Primastar / Fiat Talento | L2, any H | 2015 | shared NV300 platform; Talento is rebadged Trafic |
 | `t6_1_lwb` | VW Transporter T6.1 | L2 (LWB), any H | 2020 | T6.1 facelift = Euro 6d |
+| `psa_l1l2h1` | Peugeot Boxer / Fiat Ducato / Citroën Jumper | L1 or L2, H1 only | 2016 | Low-roof short/medium Sevel-platform vans; H2/H3/L3/L4 reject |
 | `vito_v_class_l2` | Mercedes Vito / V-Class (Lang or Extralang) | L2 or L3, any H | 2015 | W447 chassis; Kompakt variant rejects via L1 keyword |
 | `hyundai_staria` | Hyundai Staria | any | 2021 | Korean MPV, single length (5253mm) |
 
-All other van families (Sprinter, Ducato, Boxer, Jumper, Crafter, TGE, Master, Movano, Daily, plain Transit, etc.) are rejected at the classifier stage as `brand_not_in_whitelist`.
+All other van families (Sprinter, Crafter, TGE, Master, Movano, Daily, plain Transit, etc.) are rejected at the classifier stage as `brand_not_in_whitelist`.
 
 **Soft-gate policy** — only *confirmed* violations reject:
 - Year known and `< min_year` for group → reject
