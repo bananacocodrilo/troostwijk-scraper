@@ -193,6 +193,7 @@ def _parse_hit(raw: str, fallback_model_key: str) -> Optional[dict]:
         "url":       url,
         "model_key": fallback_model_key,
         "source":    "autotrack",
+        "body_type": alg.get("carrosserievormSlug"),
     }
 
 

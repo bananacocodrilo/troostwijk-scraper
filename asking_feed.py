@@ -101,10 +101,12 @@ def _to_vehicle(listing: dict) -> Optional[dict]:
         "year":      listing.get("year"),
         "km":        listing.get("km"),
         "price_eur": listing.get("price_eur"),
-        # No marketplace exposes these — leave None, soft gate handles it
+        # Marketplace listings rarely expose these. AutoTrack ships
+        # body_type (carrosserievormSlug) per hit; others leave it None.
+        # Soft-gate handles None gracefully.
         "seats":              None,
         "emission_standard":  None,
-        "body_type":          None,
+        "body_type":          listing.get("body_type"),
         "weight_kg":          None,
     }
 

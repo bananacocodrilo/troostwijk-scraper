@@ -679,18 +679,50 @@ def strict_filter(vehicle, classification: Classification) -> Tuple[bool, Option
 
     # Seats — soft gate: only reject confirmed seats < 6
     seats = getattr(vehicle, "seats", None) if not isinstance(vehicle, dict) else vehicle.get("seats")
+    title = getattr(vehicle, "title", None) if not isinstance(vehicle, dict) else vehicle.get("title")
     if seats is None:
         # Title-fallback: many marketplace listings (notably AutoTrack, which
         # doesn't expose `seats` per listing in its search feed) put the
         # passenger count directly in the title — "3-persoons", "2 PERSOONS",
-        # "5 seater", etc. A confirmed extraction is treated as the same hard
-        # signal as a structured `seats` field.
-        title = getattr(vehicle, "title", None) if not isinstance(vehicle, dict) else vehicle.get("title")
+        # "5 seater", "2p.", etc. A confirmed extraction is treated as the
+        # same hard signal as a structured `seats` field.
         seats = _seats_from_text(title)
     if seats is not None and seats < 6:
         return False, f"seats_below_6: {seats}"
 
+    # Body-type fallback (when seats still unknown): cargo-only body types
+    # (Mercedes Vito 111 cargo, panel-van Boxer/Ducato, etc.) are 2-3 seats
+    # by default. Don't reject if the title shows a crew-cab marker, since
+    # those convert cargo chassis to 5-6 seat dubbele-cabine variants.
+    if seats is None:
+        body_type = (
+            getattr(vehicle, "body_type", None) if not isinstance(vehicle, dict)
+            else vehicle.get("body_type")
+        )
+        if _is_cargo_body(body_type) and not _CREW_CAB_RE.search(title or ""):
+            return False, f"seats_below_6: inferred from cargo body_type={body_type}"
+
     return True, None
+
+
+# Cargo-only body type slugs/labels seen across sources. Used as a
+# soft-gate seats-fallback for vans where the title carries no explicit
+# seat count and the listing doesn't expose `seats`.
+_CARGO_BODY_TYPES = {
+    "bedrijfswagen",          # autotrack carrosserievormSlug
+    "bestelwagen",            # marktplaats / 2dehands
+    "bestelauto",
+    "kastenwagen",            # german panel van
+    "gesloten bestelwagen",
+    "closed van", "panel van",
+    "furgon",                 # spanish
+}
+
+
+def _is_cargo_body(body_type) -> bool:
+    if not body_type:
+        return False
+    return str(body_type).lower() in _CARGO_BODY_TYPES
 
 
 _SEATS_FROM_TEXT_RE = re.compile(
@@ -726,7 +758,8 @@ def _seats_from_text(text: Optional[str]) -> Optional[int]:
 # ---------------------------------------------------------------------------
 
 _CREW_CAB_RE = re.compile(
-    r"\bcrew\s*cab\b|crewcab|\bdubbele\s*cabine\b|\bdouble\s*cab\b"
+    r"\bcrew\s*cab\b|crewcab|\bdubbele?\s*cabine?\b|\bdouble\s*cab\b"
+    r"|\bdc\b|\bd\.c\.\b"
     r"|5\s*seat|5-seat|5\s*persoons|vijf\s*personen|\bcombi\b"
     r"|6\s*seat|6-seat|6\s*persoons|zes\s*personen",
     re.IGNORECASE,
