@@ -6,6 +6,7 @@ import sys
 import asking_feed
 import bid_history
 import registry
+import risk
 from cost_model import (
     DEFAULT_BUYER_PREMIUM,
     compute_conversion_cost,
@@ -155,6 +156,8 @@ _SCHEMA: dict = {
     "total_project_cost_eur":       None,
     # Scores
     "score":                      None,
+    "risk_score":                 0,
+    "risk_flags":                 [],
     "is_hidden_gem":              False,
 }
 
@@ -339,6 +342,9 @@ def main():
         # cost_model adds deal_score separately — do NOT overwrite score.
         # score = suitability (always matches ScoreBreakdown fields).
         # deal_score = financial quality (deal_ratio-derived, shown separately).
+
+        # Risk metadata — purely additive (no impact on accept/reject).
+        v.update(risk.compute_risk(v))
 
         accepted.append(v)
 
