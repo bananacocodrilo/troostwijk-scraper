@@ -580,15 +580,15 @@
       "vat_margin": false,
       "bidding_status": "BIDDING_OPEN",
       "auction_start": "2026-05-22T14:00:00Z",
-      "auction_end": "2026-06-04T18:36:00Z",
+      "auction_end": null,
       "remarks": "Please note \u2013 Terms and conditions of sale:\nThis car is a used vehicle that is delivered without warranty or possibility of complaint.\nGiven the age and mileage, traces of use or (technical) defects may be present. It is the buyer's responsibility to inspect the vehicle during the viewing day.\nThe buyer is expressly requested to inspect the vehicle in person during the viewing day.\nBy participating in the viewing day and/or proceeding to purchase the vehicle, the buyer acknowledges and accepts that:\n\n\u2022 The vehicle is sold without any form of warranty or complaint.\n\u2022 The seller bears no responsibility for any defects, errors or deviations.\n\u2022 The buyer accepts the vehicle in the condition in which it is at that time.\n\nAfter purchase, no rescission, compensation or repair is possible, regardless of the nature of any defects that come to light after delivery.\n\nCome to the viewing day and assess the vehicle for yourself.",
       "additional_information": "| DOUBLE CAB | 6 PERSONS | TOWBAR | AIR CONDITIONING |",
       "lot_id": "a89901e7-1616-49b7-9538-0ab3ee96fdfe",
-      "current_bid_eur": 5000.0,
-      "buyer_premium_pct": 19.0,
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
       "total_cost_eur": null,
-      "bids_count": 49,
-      "reserve_met": false,
+      "bids_count": null,
+      "reserve_met": null,
       "market_median_eur": null,
       "market_sample_size": null,
       "deal_margin_eur": null,
@@ -625,7 +625,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-03T03:18:29.395611+00:00"
+      "last_scrape_at": "2026-06-03T17:11:20.428942+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/wurth-post-assembly-inserts-for-vw-transporter-A7-46763-130": {
       "title": "W\u00dcRTH Post Assembly Inserts for VW Transporter",
@@ -982,15 +982,15 @@
       "vat_margin": false,
       "bidding_status": "BIDDING_OPEN",
       "auction_start": "2026-05-27T16:00:00Z",
-      "auction_end": "2026-06-03T18:13:00Z",
+      "auction_end": null,
       "remarks": null,
       "additional_information": "1st owner, rims and tyres ok, clean interior, very economical diesel engine, few kilometres.",
       "lot_id": "b06b3df4-d79a-4d1b-8cb0-344d829d7d14",
-      "current_bid_eur": 8500.0,
-      "buyer_premium_pct": 0.0,
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
       "total_cost_eur": null,
-      "bids_count": 21,
-      "reserve_met": false,
+      "bids_count": null,
+      "reserve_met": null,
       "market_median_eur": null,
       "market_sample_size": null,
       "deal_margin_eur": null,
@@ -1027,7 +1027,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-03T11:06:55.885603+00:00"
+      "last_scrape_at": "2026-06-03T17:11:20.428942+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/citroen-jumper-30-2-2-hdi-l1h1-comfort-120hp-2019-%2528original-nl-%252B-1st-owner%2529-g-695-xg-A1-44369-59": {
       "title": "Citroen Jumper 30 2.2 HDI L1H1 Comfort 120hp 2019 (Original-NL + 1st Owner), G-695-XG",
@@ -1386,15 +1386,15 @@
       "vat_margin": false,
       "bidding_status": "BIDDING_OPEN",
       "auction_start": "2026-05-27T16:00:00Z",
-      "auction_end": "2026-06-03T18:03:00Z",
+      "auction_end": null,
       "remarks": null,
       "additional_information": "Fiat Talento\n2.0 Diesel\n161,000 Original kilometres, demonstrable with CARPASS\nEURO 6, vehicle allowed in any low emission zone\n1st Owner\nCruise control\nAir conditioning\nRear parking sensors\nDouble sliding door\nNavigation system\nRadio/Bluetooth/USB/AUX\nHands-free calling\nPower windows\nElectrically adjustable exterior mirrors",
       "lot_id": "60d1cd46-a6b5-4b41-8bfe-1f3e69a39091",
-      "current_bid_eur": 7638.0,
-      "buyer_premium_pct": 19.0,
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
       "total_cost_eur": null,
-      "bids_count": 19,
-      "reserve_met": false,
+      "bids_count": null,
+      "reserve_met": null,
       "market_median_eur": null,
       "market_sample_size": null,
       "deal_margin_eur": null,
@@ -1431,7 +1431,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-03T11:06:55.885603+00:00"
+      "last_scrape_at": "2026-06-03T17:11:20.428942+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/peugeot-traveller-2-0-bluehdi-busl-s-s-automatic-9-seater-car-A1-41302-20": {
       "title": "Peugeot - Traveller - 2.0 BlueHDi BusL.S&S - Automatic - 9 Seater Car",
@@ -1441,6 +1441,13 @@
       "source": "troostwijk",
       "platform": "TWK",
       "thumbnail_url": "https://media.tbauctions.com/image-media/2518ce4d-8f23-479f-9808-29fe17decaed/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/2518ce4d-8f23-479f-9808-29fe17decaed/file",
+        "https://media.tbauctions.com/image-media/33c363e3-eaf0-4beb-bdb0-f73f43dd2e73/file",
+        "https://media.tbauctions.com/image-media/0e718eed-4862-488d-bdb7-4f71dd968292/file",
+        "https://media.tbauctions.com/image-media/30fb5489-c703-42fa-bcfb-389a2c49d716/file",
+        "https://media.tbauctions.com/image-media/b1e325fb-442b-4d12-a0eb-90a4d062761a/file"
+      ],
       "year": null,
       "first_registration": null,
       "km": 94269,
@@ -1509,7 +1516,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-02T15:56:30.617708+00:00"
+      "last_scrape_at": "2026-06-03T17:11:20.428942+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/2020-fiat-talento-8%252B1-A3-43537-5037": {
       "title": "2020 Fiat Talento - 8+1",
@@ -2072,6 +2079,13 @@
       "source": "troostwijk",
       "platform": "VAVATO",
       "thumbnail_url": "https://media.tbauctions.com/image-media/3beb5fd3-d77e-414d-8eb6-833c1ebcb57c/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/3beb5fd3-d77e-414d-8eb6-833c1ebcb57c/file",
+        "https://media.tbauctions.com/image-media/2240200b-a2dd-4864-a444-573f561cf396/file",
+        "https://media.tbauctions.com/image-media/87c44960-b3e1-424b-ad44-17c6d8e35831/file",
+        "https://media.tbauctions.com/image-media/50e65862-77ed-4b85-92ed-ac2f17a3882c/file",
+        "https://media.tbauctions.com/image-media/7d13d8b5-a2ea-48d6-84e4-ce42dc8fcd1d/file"
+      ],
       "year": 2016,
       "first_registration": null,
       "km": 186171,
@@ -2095,15 +2109,15 @@
       "vat_margin": false,
       "bidding_status": "BIDDING_OPEN",
       "auction_start": "2026-05-27T16:00:00Z",
-      "auction_end": "2026-06-08T17:04:00Z",
+      "auction_end": null,
       "remarks": null,
       "additional_information": "Volkswagen Transporter T6 Kombi\n2.0 Diesel\nAutomatic gearbox\nEURO 6B, vehicle allowed in any low emission zone\n1st Owner\nEx Government\n9 Seats possible at COC\nAir conditioning\nRear parking sensors\nRadio/CD/USB/AUX\nPower windows\nElectrically adjustable exterior mirrors\nSliding door",
       "lot_id": "0769eb83-f505-4b34-9bda-f241ea842136",
-      "current_bid_eur": 4050.0,
-      "buyer_premium_pct": 19.0,
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
       "total_cost_eur": null,
-      "bids_count": 20,
-      "reserve_met": false,
+      "bids_count": null,
+      "reserve_met": null,
       "market_median_eur": null,
       "market_sample_size": null,
       "deal_margin_eur": null,
@@ -2140,7 +2154,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-02T16:03:00.022927+00:00"
+      "last_scrape_at": "2026-06-03T17:11:20.428942+00:00"
     },
     "https://www.vavato.com/en/l/2017-volkswagen-transporter-4x4-102000km-A3-44487-5026": {
       "title": "2017 Volkswagen Transporter - 4x4 - 102000km",
@@ -2552,6 +2566,91 @@
       "big_van_score": null,
       "small_van_score": null,
       "last_scrape_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.vavato.com/en/l/fiat-scudo-van-A3-44487-35662": {
+      "title": "Fiat Scudo Van",
+      "brand": "Fiat",
+      "model": null,
+      "url": "https://www.vavato.com/en/l/fiat-scudo-van-A3-44487-35662",
+      "source": "troostwijk",
+      "platform": "VAVATO",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/12a2ade7-a9d3-4499-8567-0f15fbca62cb/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/12a2ade7-a9d3-4499-8567-0f15fbca62cb/file",
+        "https://media.tbauctions.com/image-media/7038aa8f-ccd0-4d80-a763-0b45fb8e0f08/file",
+        "https://media.tbauctions.com/image-media/24921edd-8528-4ff4-9fc6-ce0918bd128a/file",
+        "https://media.tbauctions.com/image-media/a7c6a60a-634b-428c-beb8-172b36180450/file",
+        "https://media.tbauctions.com/image-media/b387c753-095f-47a2-b85a-08c3f09c08b7/file"
+      ],
+      "year": 2024,
+      "first_registration": "2024-02-27",
+      "km": null,
+      "fuel": "diesel",
+      "transmission": null,
+      "power_kw": 106,
+      "cylinder_cc": 1997,
+      "emission_standard": null,
+      "seats": null,
+      "doors": null,
+      "color": "Grey",
+      "weight_kg": null,
+      "load_kg": null,
+      "body_type": null,
+      "vin": null,
+      "city": "Ans",
+      "country_code": "BE",
+      "location": "Ans, BE",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": false,
+      "bidding_status": "BIDDING_OPEN",
+      "auction_start": "2026-06-03T16:00:00Z",
+      "auction_end": null,
+      "remarks": null,
+      "additional_information": null,
+      "lot_id": "6dc22282-a2d3-4de9-a26b-9f6c51be66ff",
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
+      "total_cost_eur": null,
+      "bids_count": null,
+      "reserve_met": null,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": null,
+      "is_valid_van": true,
+      "score": 25,
+      "scores": null,
+      "applied_rule_set": "scudo_gen3",
+      "passed_hard_filters": true,
+      "rejected_reason": "score_below_threshold: 25 < 30",
+      "reason_for_inclusion": [
+        "Fiat Scudo (gen 3, 2022+) (size unknown)",
+        "token: scudo",
+        "km ?, 2024"
+      ],
+      "fleet_type": "private",
+      "fleet_signals": null,
+      "model_group": "scudo_gen3",
+      "variant": null,
+      "classification_confidence": "low",
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-06-03T17:11:20.428942+00:00"
     }
   },
   "permanent_rejects": {
@@ -18349,6 +18448,121 @@
       "reason": "brand_not_in_whitelist",
       "title": "Ford - FPWG3400 - Pressure washer 234 Bar",
       "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.vavato.com/en/l/2019-peugeot-boxer-air-conditioning-euro-6b-towbar-A3-44487-10662": {
+      "reason": "seats_below_5: 3",
+      "title": "2019 Peugeot Boxer - air-conditioning - euro 6b - towbar",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.vavato.com/en/l/2021-citroen-jumper-A3-44487-4019": {
+      "reason": "seats_below_5: 3",
+      "title": "2021 Citro\u00ebn Jumper",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.vavato.com/en/l/mercedes-280s-1983-A3-43541-4697": {
+      "reason": "mileage_too_high: 326578km",
+      "title": "Mercedes 280S - 1983",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.vavato.com/en/l/2011-mercedes-c200-cdi-break-passenger-car-A3-43541-7001": {
+      "reason": "mileage_too_high: 383131km",
+      "title": "2011 Mercedes C200 CDI Break Passenger Car",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-i20-1-2i-i-drive-car-2011-A1-47183-16": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai - i20 - 1.2i i-Drive - Car - 2011",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2026-hyundai-hdg200025-7-5-kva-emergency-power-diesel-generator-A1-45403-56": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2026 hyundai HDG200025 7.5 KVA Emergency power diesel generator",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-pressure-washer-A3-43545-5127": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai Pressure Washer",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-air-compressors-A3-43545-5128": {
+      "reason": "brand_not_in_whitelist",
+      "title": "HYUNDAI - Air compressors",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-2016-r60vs-midi-excavator-A3-43543-157": {
+      "reason": "vehicle_type: forklift",
+      "title": "Hyundai - 2016 - R60VS - Midi Excavator",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.vavato.com/en/l/nissan-tl3513-cabstar-van-A3-44487-36098": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Nissan TL3513 Cabstar Van",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.vavato.com/en/l/1992-mercedes-benz-mb-100-d-t-market-truck-food-truck-A3-44487-13042": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1992 Mercedes-Benz MB 100 D-T Market Truck Food Truck",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.vavato.com/en/l/2013-ford-transit-custom-6-pers-tow-bar-new-tires-A3-44487-10042": {
+      "reason": "year_below_minimum: 2013 < 2016 (transit_custom_l2h1)",
+      "title": "2013 Ford Transit Custom - 6 pers - tow bar - new tires",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.vavato.com/en/l/2019-ford-transit-custom-commercial-vehicle-A3-44487-11051": {
+      "reason": "seats_below_5: 3",
+      "title": "2019 Ford Transit Custom - Commercial Vehicle",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.vavato.com/en/l/fiat-talento-14s-ecojet-van-%2528light-truck%2529-A3-44487-7007": {
+      "reason": "body_mismatch: light truck (chassis variant)",
+      "title": "Fiat Talento 14S Ecojet Van (light truck)",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.vavato.com/en/l/2012-mercedes-benz-vito-110cdi-air-conditioning-A3-44487-10043": {
+      "reason": "mileage_too_high: 288727km",
+      "title": "2012 Mercedes-Benz Vito 110CDI - air conditioning",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-mustang-mach-1-car-A1-47425-38": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford Mustang Mach 1 Car",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-1975-4000-6-y-oldtimer-tractor-A3-43543-17601": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - 1975 - 4000 6-Y - Oldtimer tractor",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-cougar-chevrolet-model-A1-47413-56": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford Cougar Chevrolet Model",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-focus-1-8-16v-ghia-car-2001-A1-47183-29": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - Focus - 1.8-16V Ghia - Car - 2001",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2006-toyota-42-7fgf25-forklift-A3-43544-337": {
+      "reason": "vehicle_type: forklift",
+      "title": "2006 Toyota 42-7FGF25 Forklift",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2015-toyota-40-8fdf35n-forklift-A3-43544-334": {
+      "reason": "vehicle_type: forklift",
+      "title": "2015 Toyota 40-8FDF35N Forklift",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.vavato.com/en/l/1972-opel-gt-1900-classic-car-A3-43541-18110": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1972 Opel GT 1900 Classic Car",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
+    },
+    "https://www.vavato.com/en/l/2014-renault-office-fw17b5-passenger-car-A3-44487-9044": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2014 Renault Office FW17B5 Passenger Car",
+      "rejected_at": "2026-06-03T17:11:20.428942+00:00"
     }
   }
 }
