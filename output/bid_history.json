@@ -2653,6 +2653,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-03T21:20:35.044334+00:00",
+          "current_bid_eur": 4550.0,
+          "bids_count": 22,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -3273,6 +3279,12 @@
           "ts": "2026-06-01T15:09:42.290554+00:00",
           "current_bid_eur": 5200.0,
           "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-03T21:20:35.044334+00:00",
+          "current_bid_eur": 10000.0,
+          "bids_count": 7,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -4426,6 +4438,12 @@
           "current_bid_eur": 4700.0,
           "bids_count": 10,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-03T21:20:35.044334+00:00",
+          "current_bid_eur": 6200.0,
+          "bids_count": 13,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -4617,6 +4635,12 @@
           "ts": "2026-06-02T16:03:00.048994+00:00",
           "current_bid_eur": 1050.0,
           "bids_count": 60,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-03T21:20:35.044334+00:00",
+          "current_bid_eur": 1100.0,
+          "bids_count": 61,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -5275,6 +5299,12 @@
           "current_bid_eur": 2605.0,
           "bids_count": 17,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-03T21:20:35.044334+00:00",
+          "current_bid_eur": 3550.0,
+          "bids_count": 23,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -5800,6 +5830,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-03T21:20:35.044334+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -5845,6 +5881,12 @@
           "current_bid_eur": 1450.0,
           "bids_count": 10,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-03T21:20:35.044334+00:00",
+          "current_bid_eur": 1550.0,
+          "bids_count": 12,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -5874,6 +5916,12 @@
           "ts": "2026-06-02T15:56:30.639398+00:00",
           "current_bid_eur": 11.0,
           "bids_count": 3,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-03T21:20:35.044334+00:00",
+          "current_bid_eur": 21.0,
+          "bids_count": 5,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -6046,6 +6094,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-03T21:20:35.044334+00:00",
+          "current_bid_eur": 2500.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -6103,6 +6157,21 @@
       "snapshots": [
         {
           "ts": "2026-06-03T17:11:20.443935+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "6e9ffa72-72fc-46ec-973d-70c9c6f8230e": {
+      "url": "https://www.troostwijkauctions.com/en/l/2018-mercedes-benz-vito-passenger-car-A1-46710-109",
+      "model_token": "vito",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-06-03T21:20:35.044334+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
