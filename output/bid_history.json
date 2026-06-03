@@ -79,6 +79,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-03T03:18:29.413846+00:00",
+          "current_bid_eur": 5000.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -4804,6 +4810,12 @@
           "current_bid_eur": 5638.0,
           "bids_count": 15,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-03T03:18:29.413846+00:00",
+          "current_bid_eur": 6138.0,
+          "bids_count": 16,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -5944,6 +5956,21 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "f8927de7-3c55-4ed6-b0ee-bbe1ee2acbeb": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-110-cdi-320-l-dc-lux-commercial-vehicle-A1-47183-27",
+      "model_token": "vito",
+      "year": 2011,
+      "snapshots": [
+        {
+          "ts": "2026-06-03T03:18:29.413846+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,

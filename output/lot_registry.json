@@ -382,7 +382,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-02T20:55:20.748059+00:00"
+      "last_scrape_at": "2026-06-03T03:18:29.395611+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/mak-volkswagen-transporter-wheels-A1-47011-55": {
       "title": "MAK Volkswagen Transporter Wheels",
@@ -392,6 +392,13 @@
       "source": "troostwijk",
       "platform": "TWK",
       "thumbnail_url": "https://media.tbauctions.com/image-media/6cd764e3-45ca-47bf-ac23-8ab00d77a0ab/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/6cd764e3-45ca-47bf-ac23-8ab00d77a0ab/file",
+        "https://media.tbauctions.com/image-media/0c4beed9-e6fd-45f5-827d-836eb1914b61/file",
+        "https://media.tbauctions.com/image-media/5368ed2f-fb96-40d9-909f-f7e428d14bea/file",
+        "https://media.tbauctions.com/image-media/4935ca8e-49e1-4831-a41b-41cb502a212d/file",
+        "https://media.tbauctions.com/image-media/5f068efa-0467-4ae6-a987-7ec8b5a04695/file"
+      ],
       "year": null,
       "first_registration": null,
       "km": null,
@@ -446,9 +453,9 @@
       "scores": null,
       "applied_rule_set": "t6_1_lwb",
       "passed_hard_filters": true,
-      "rejected_reason": null,
+      "rejected_reason": "score_below_threshold: 27 < 30",
       "reason_for_inclusion": [
-        "VW Transporter T6.1 (size unknown)",
+        "VW Transporter T6 + T6.1 (Multivan / Caravelle / California) (size unknown)",
         "token: transporter"
       ],
       "fleet_type": "private",
@@ -459,7 +466,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-02T13:03:13.417156+00:00"
+      "last_scrape_at": "2026-06-03T03:18:29.395611+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/battery-jumper-cable-%25282x%2529-A1-40520-2855": {
       "title": "Battery jumper cable (2x)",
@@ -543,6 +550,13 @@
       "source": "troostwijk",
       "platform": "TWK",
       "thumbnail_url": "https://media.tbauctions.com/image-media/d59375a8-0ac8-45b4-b3ae-64ed7eff6d4d/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/d59375a8-0ac8-45b4-b3ae-64ed7eff6d4d/file",
+        "https://media.tbauctions.com/image-media/94598269-bbfe-4107-afd4-651c130eb9ad/file",
+        "https://media.tbauctions.com/image-media/93877e95-888f-4a65-b281-e1bcebd5f7b5/file",
+        "https://media.tbauctions.com/image-media/6bdc68a0-b249-4053-9672-2cc596e01159/file",
+        "https://media.tbauctions.com/image-media/9432d587-fd9c-4479-b80b-383b25d0fdff/file"
+      ],
       "year": null,
       "first_registration": null,
       "km": 164165,
@@ -591,16 +605,16 @@
       "deal_ratio": null,
       "deal_score": null,
       "is_hidden_gem": false,
-      "van_type": "L2H2",
+      "van_type": null,
       "is_valid_van": true,
-      "score": 63,
+      "score": 62,
       "scores": null,
       "applied_rule_set": "expert_jumpy_proace_l2",
       "passed_hard_filters": true,
       "rejected_reason": null,
       "reason_for_inclusion": [
-        "Peugeot Expert / Citroen Jumpy / Toyota ProAce (L2H2)",
-        "token: pro ace; empty weight 1744kg in [1600,1800) \u2192 L2; bodytype 'Box construction' \u2192 H2",
+        "Peugeot Expert / Citroen Jumpy / Toyota ProAce (+ passenger Traveller / SpaceTourer / ProAce Verso) (size unknown)",
+        "token: pro ace",
         "164k km, year ?"
       ],
       "fleet_type": "private",
@@ -611,7 +625,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-02T13:03:13.417156+00:00"
+      "last_scrape_at": "2026-06-03T03:18:29.395611+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/wurth-post-assembly-inserts-for-vw-transporter-A7-46763-130": {
       "title": "W\u00dcRTH Post Assembly Inserts for VW Transporter",
@@ -698,6 +712,13 @@
       "source": "troostwijk",
       "platform": "TWK",
       "thumbnail_url": "https://media.tbauctions.com/image-media/169deeba-dacf-409c-89ca-c4bfb43e16b2/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/169deeba-dacf-409c-89ca-c4bfb43e16b2/file",
+        "https://media.tbauctions.com/image-media/2dfdd8da-ca6a-46f7-8551-f5f63ef9d47f/file",
+        "https://media.tbauctions.com/image-media/71451e9f-d209-415d-bdb7-cb66228fb1c7/file",
+        "https://media.tbauctions.com/image-media/bba39007-3c85-4a10-907f-de1b987bc87e/file",
+        "https://media.tbauctions.com/image-media/3be57729-590c-4e35-a466-4e19f5139efd/file"
+      ],
       "year": null,
       "first_registration": null,
       "km": null,
@@ -752,9 +773,9 @@
       "scores": null,
       "applied_rule_set": "t6_1_lwb",
       "passed_hard_filters": true,
-      "rejected_reason": null,
+      "rejected_reason": "score_below_threshold: 27 < 30",
       "reason_for_inclusion": [
-        "VW Transporter T6.1 (size unknown)",
+        "VW Transporter T6 + T6.1 (Multivan / Caravelle / California) (size unknown)",
         "token: transporter"
       ],
       "fleet_type": "private",
@@ -765,7 +786,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-02T13:03:13.417156+00:00"
+      "last_scrape_at": "2026-06-03T03:18:29.395611+00:00"
     },
     "https://www.vavato.com/en/l/2022-ford-tourneo-custom-%25288-seats%2529-A3-44485-11918": {
       "title": "2022 Ford Tourneo Custom - (8 seats)",
@@ -1009,6 +1030,13 @@
       "source": "troostwijk",
       "platform": "TWK",
       "thumbnail_url": "https://media.tbauctions.com/image-media/b25b29b7-f69f-4b33-8785-5acd342ad827/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/b25b29b7-f69f-4b33-8785-5acd342ad827/file",
+        "https://media.tbauctions.com/image-media/b61645a8-e0a1-4fd6-bf5d-cfb4b02beebe/file",
+        "https://media.tbauctions.com/image-media/af29c9e3-9e76-47ca-b59c-16f9b12918ec/file",
+        "https://media.tbauctions.com/image-media/d9a81369-3f78-4506-8640-2d4cacc7d296/file",
+        "https://media.tbauctions.com/image-media/9443872a-23cc-4579-ab8a-81a53a504e09/file"
+      ],
       "year": 2019,
       "first_registration": null,
       "km": 145466,
@@ -1032,15 +1060,15 @@
       "vat_margin": false,
       "bidding_status": "BIDDING_OPEN",
       "auction_start": "2026-05-29T14:00:00Z",
-      "auction_end": null,
+      "auction_end": "2026-06-09T17:20:00Z",
       "remarks": "Signs of wear/damage and wear all around by age/mileage. Mirror on the right damaged.\n<br><br/>\nThis car was originally delivered in the Netherlands\n<br><br/>\nFrom the first owner.\n<br><br/>\nCitroen Jumper 30 2.2 HDI L1H1 Comfort 120hp 2019 \n<br><br/>\nOptions:\nCruise control\nRadio system",
       "additional_information": "CAUTION! For Dutch buyers and buyers from outside the EU, the Rest-BPM is added, it appears later on the invoice and amounts to \u20ac6,113,-. So, total bid price + \u20ac6,113,-. The total price when bidding is therefore excl. BPM! (This is only relevant for Dutch buyers and buyers from outside the EU).\n<br><br>\nImportant: international buyers (within the EU) can reclaim the remaining amount Dutch BPM tax ('rest-BPM'). For this procedure, the buyer is obliged to keep the vehicle in the EU and a specific export procedure is required of \u20ac250,- excl. 21% VAT for this lot.",
       "lot_id": "a10092f8-5dee-4f05-8894-87e92291845b",
-      "current_bid_eur": null,
-      "buyer_premium_pct": null,
+      "current_bid_eur": 5000.0,
+      "buyer_premium_pct": 19.0,
       "total_cost_eur": null,
-      "bids_count": null,
-      "reserve_met": null,
+      "bids_count": 1,
+      "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
       "deal_margin_eur": null,
@@ -1077,7 +1105,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-02T13:03:13.417156+00:00"
+      "last_scrape_at": "2026-06-03T03:18:29.395611+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/ford-transit-custom-320-2-0-tdci-double-cab-l2h1-131hp-automatic-2020-vfx-54-j-A1-44369-2": {
       "title": "Ford Transit Custom 320 2.0 TDCI Double Cab L2H1 131HP Automatic 2020, VFX-54-J",
@@ -1355,10 +1383,10 @@
       "remarks": null,
       "additional_information": "Fiat Talento\n2.0 Diesel\n161,000 Original kilometres, demonstrable with CARPASS\nEURO 6, vehicle allowed in any low emission zone\n1st Owner\nCruise control\nAir conditioning\nRear parking sensors\nDouble sliding door\nNavigation system\nRadio/Bluetooth/USB/AUX\nHands-free calling\nPower windows\nElectrically adjustable exterior mirrors",
       "lot_id": "60d1cd46-a6b5-4b41-8bfe-1f3e69a39091",
-      "current_bid_eur": 5638.0,
+      "current_bid_eur": 6138.0,
       "buyer_premium_pct": 19.0,
       "total_cost_eur": null,
-      "bids_count": 15,
+      "bids_count": 16,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -1396,7 +1424,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-02T20:55:20.748059+00:00"
+      "last_scrape_at": "2026-06-03T03:18:29.395611+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/peugeot-traveller-2-0-bluehdi-busl-s-s-automatic-9-seater-car-A1-41302-20": {
       "title": "Peugeot - Traveller - 2.0 BlueHDi BusL.S&S - Automatic - 9 Seater Car",
@@ -18048,6 +18076,161 @@
       "reason": "brand_not_in_whitelist",
       "title": "Land Rover - 2017 - Range Rover Sport - D250 SE - N-741-SP",
       "rejected_at": "2026-06-02T20:55:20.748059+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-lopper-lever-%25282x%2529-A1-40890-152": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai lopper lever (2x)",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-high-pressure-cleaner-1500-watt-A1-40890-74": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai high-pressure cleaner 1500 Watt",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-hose-reel-automatic-20-meters-A1-40890-91": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai - hose reel automatic 20 meters",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-hose-reel-automatic-20-meters-A1-40890-98": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai - hose reel automatic 20 meters",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-allen-key-set-9-pieces-%25282x%2529-A1-40890-291": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai Allen Key Set 9 pieces (2x)",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-hose-reel-automatic-20-meters-A1-40890-16": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai - hose reel automatic 20 meters",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-demolition-hammer-1300w-A1-40890-75": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai Demolition Hammer 1300W",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-lopper-lever-%25282x%2529-A1-40890-152": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai lopper lever (2x)",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-high-pressure-cleaner-1500-watt-A1-40890-74": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai high-pressure cleaner 1500 Watt",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-hose-reel-automatic-20-meters-A1-40890-96": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai - hose reel automatic 20 meters",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-hose-reel-automatic-20-meters-A1-40890-98": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai - hose reel automatic 20 meters",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-sander-A1-40890-263": {
+      "reason": "brand_not_in_whitelist",
+      "title": "HYUNDAI sander",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-allen-key-set-9-pieces-%25282x%2529-A1-40890-291": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai Allen Key Set 9 pieces (2x)",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-demolition-hammer-1300w-A1-40890-75": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai Demolition Hammer 1300W",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-socket-set-10-piece-1-2-%25282x%2529-A1-40890-128": {
+      "reason": "brand_not_in_whitelist",
+      "title": "HYUNDAI socket set - 10-piece - 1/2 (2x)",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-ppe-set-safety-glasses-hearing-protection-gloves-%25282x%2529-A1-40890-364": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai PPE Set - Safety Glasses & Hearing Protection & Gloves (2x)",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-hy-55901-air-tool-set-5-piece-A1-40890-132": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai HY-55901 Air Tool Set 5-Piece",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.vavato.com/en/l/ford-fpwg3400-pressure-washer-234-bar-A3-46884-1564": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - FPWG3400 - Pressure washer 234 Bar",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.vavato.com/en/l/ford-fpwg3400-pressure-washer-234-bar-A3-46884-1563": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - FPWG3400 - Pressure washer 234 Bar",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.vavato.com/en/l/ford-2026-fdt-10200-%2528-4x-%2529-emergency-power-generator-A1-45403-55": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - 2026 - FDT 10200 ( 4x ) - Emergency power generator",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-110-cdi-320-l-dc-lux-commercial-vehicle-A1-47183-27": {
+      "reason": "mileage_too_high: 322896km",
+      "title": "Mercedes-Benz - Vito - 110 CDI 320 L.DC lux - Commercial vehicle",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-2006-viano-2-2-cdi-ambiente-l-mercedes-viano-vip-A1-47183-3": {
+      "reason": "mileage_too_high: 429776km",
+      "title": "Mercedes-Benz - 2006 - Viano - 2.2 CDI Ambiente L - Mercedes Viano VIP",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-b-class-180-ambition-2012-td-578-t-iaw-A1-44156-336": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes-Benz - B-Class - 180 Ambition 2012 TD-578-T iaw",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-2011-s-class-350-4m-passenger-car-A1-47183-38": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes-Benz - 2011 - S-class - 350 4M - Passenger car",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-2005-getz-1-3i-active-cool-car-A1-47183-8": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai - 2005 - Getz - 1.3i Active Cool - Car",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-universal-saw-stand-A1-40890-312": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai Universal saw stand",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-ppe-set-safety-glasses-hearing-protection-gloves-%25282x%2529-A1-40890-364": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai PPE Set - Safety Glasses & Hearing Protection & Gloves (2x)",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-fe320-semi-trailer-tractor-with-trailer-A1-47263-3": {
+      "reason": "vehicle_type: bundled with trailer",
+      "title": "Volvo - FE320 - Semi-trailer tractor with trailer",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-2005-focus-1-6-16v-first-ed-passenger-car-A1-47183-9": {
+      "reason": "mileage_too_high: 325393km",
+      "title": "Ford - 2005 - Focus - 1.6-16V First Ed. - Passenger car",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-2026-fg2500is-emergency-power-generator-A1-45403-134": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - 2026 - FG2500IS - Emergency power generator",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.vavato.com/en/l/ford-2026-fg2500is-emergency-power-generator-A1-45403-134": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - 2026 - FG2500IS - Emergency power generator",
+      "rejected_at": "2026-06-03T03:18:29.395611+00:00"
     }
   }
 }
