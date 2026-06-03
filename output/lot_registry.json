@@ -382,7 +382,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-03T03:18:29.395611+00:00"
+      "last_scrape_at": "2026-06-03T11:06:55.885603+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/mak-volkswagen-transporter-wheels-A1-47011-55": {
       "title": "MAK Volkswagen Transporter Wheels",
@@ -952,6 +952,13 @@
       "source": "troostwijk",
       "platform": "VAVATO",
       "thumbnail_url": "https://media.tbauctions.com/image-media/44d787bd-c5ec-4e09-a29c-a3ebbabd6a1f/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/44d787bd-c5ec-4e09-a29c-a3ebbabd6a1f/file",
+        "https://media.tbauctions.com/image-media/bf7099ae-ec37-45d8-b09f-98bef5cbc47a/file",
+        "https://media.tbauctions.com/image-media/09ab4543-a8a0-4e32-899a-5fa086ca3fda/file",
+        "https://media.tbauctions.com/image-media/2c72d74f-6237-4284-81f4-d557638fe2a8/file",
+        "https://media.tbauctions.com/image-media/372487fd-ebcc-45f7-8e8b-1c164650bb46/file"
+      ],
       "year": 2022,
       "first_registration": null,
       "km": 140784,
@@ -975,15 +982,15 @@
       "vat_margin": false,
       "bidding_status": "BIDDING_OPEN",
       "auction_start": "2026-05-27T16:00:00Z",
-      "auction_end": null,
+      "auction_end": "2026-06-03T18:13:00Z",
       "remarks": null,
       "additional_information": "1st owner, rims and tyres ok, clean interior, very economical diesel engine, few kilometres.",
       "lot_id": "b06b3df4-d79a-4d1b-8cb0-344d829d7d14",
-      "current_bid_eur": null,
-      "buyer_premium_pct": null,
+      "current_bid_eur": 8500.0,
+      "buyer_premium_pct": 0.0,
       "total_cost_eur": null,
-      "bids_count": null,
-      "reserve_met": null,
+      "bids_count": 21,
+      "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
       "deal_margin_eur": null,
@@ -1006,7 +1013,7 @@
       "scores": null,
       "applied_rule_set": "transit_custom_l2h1",
       "passed_hard_filters": true,
-      "rejected_reason": null,
+      "rejected_reason": "score_below_threshold: 27 < 30",
       "reason_for_inclusion": [
         "Ford Transit Custom / Tourneo Custom (size unknown)",
         "token: transit custom",
@@ -1020,7 +1027,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-02T13:03:13.417156+00:00"
+      "last_scrape_at": "2026-06-03T11:06:55.885603+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/citroen-jumper-30-2-2-hdi-l1h1-comfort-120hp-2019-%2528original-nl-%252B-1st-owner%2529-g-695-xg-A1-44369-59": {
       "title": "Citroen Jumper 30 2.2 HDI L1H1 Comfort 120hp 2019 (Original-NL + 1st Owner), G-695-XG",
@@ -1383,10 +1390,10 @@
       "remarks": null,
       "additional_information": "Fiat Talento\n2.0 Diesel\n161,000 Original kilometres, demonstrable with CARPASS\nEURO 6, vehicle allowed in any low emission zone\n1st Owner\nCruise control\nAir conditioning\nRear parking sensors\nDouble sliding door\nNavigation system\nRadio/Bluetooth/USB/AUX\nHands-free calling\nPower windows\nElectrically adjustable exterior mirrors",
       "lot_id": "60d1cd46-a6b5-4b41-8bfe-1f3e69a39091",
-      "current_bid_eur": 6138.0,
+      "current_bid_eur": 7638.0,
       "buyer_premium_pct": 19.0,
       "total_cost_eur": null,
-      "bids_count": 16,
+      "bids_count": 19,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -1424,7 +1431,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-03T03:18:29.395611+00:00"
+      "last_scrape_at": "2026-06-03T11:06:55.885603+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/peugeot-traveller-2-0-bluehdi-busl-s-s-automatic-9-seater-car-A1-41302-20": {
       "title": "Peugeot - Traveller - 2.0 BlueHDi BusL.S&S - Automatic - 9 Seater Car",
@@ -1546,10 +1553,10 @@
       "remarks": null,
       "additional_information": "Fiat Talento\n2.0 Diesel\n161,000 Original kilometres, demonstrable with CARPASS\nEURO 6, vehicle allowed in any low emission zone\n1st Owner\nCruise control\nAir conditioning\nRear parking sensors\nDouble sliding door\nNavigation system\nRadio/Bluetooth/USB/AUX\nHands-free calling\nPower windows\nElectrically adjustable exterior mirrors",
       "lot_id": "60d1cd46-a6b5-4b41-8bfe-1f3e69a39091",
-      "current_bid_eur": 5638.0,
+      "current_bid_eur": 7638.0,
       "buyer_premium_pct": 19.0,
       "total_cost_eur": null,
-      "bids_count": 15,
+      "bids_count": 19,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -1587,7 +1594,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-02T20:55:20.748059+00:00"
+      "last_scrape_at": "2026-06-03T11:06:55.885603+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/opel-vivaro-1-6-cdti-l2h1-dc-sport-ecoflex-%257C-v-172-tp-A1-44157-4580": {
       "title": "Opel Vivaro 1.6 CDTI L2H1 DC Sport EcoFlex | V-172-TP",
@@ -2143,6 +2150,13 @@
       "source": "troostwijk",
       "platform": "VAVATO",
       "thumbnail_url": "https://media.tbauctions.com/image-media/f19aa14a-fb47-4a2f-b56b-f4201730a330/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/f19aa14a-fb47-4a2f-b56b-f4201730a330/file",
+        "https://media.tbauctions.com/image-media/8b0399d2-cddf-4724-8a2c-c8bbed49d7f9/file",
+        "https://media.tbauctions.com/image-media/e3365e5a-a1a1-4b19-9bcb-6e87d71800d5/file",
+        "https://media.tbauctions.com/image-media/203453f4-1cfd-4c94-99c6-11eb59e1d105/file",
+        "https://media.tbauctions.com/image-media/604e584d-5d74-4427-9084-abefec1198ea/file"
+      ],
       "year": 2017,
       "first_registration": null,
       "km": 101471,
@@ -2211,7 +2225,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-02T16:03:00.022927+00:00"
+      "last_scrape_at": "2026-06-03T11:06:55.885603+00:00"
     },
     "https://www.vavato.com/en/l/2017-volkswagen-transporter-204hp-A3-44487-5025": {
       "title": "2017 Volkswagen Transporter - 204hp ",
@@ -2221,6 +2235,13 @@
       "source": "troostwijk",
       "platform": "VAVATO",
       "thumbnail_url": "https://media.tbauctions.com/image-media/c9aa1737-aedc-4311-ae5b-fb9a74378fff/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/c9aa1737-aedc-4311-ae5b-fb9a74378fff/file",
+        "https://media.tbauctions.com/image-media/04d7729c-fb14-4549-a0b3-e5b7a410e5e9/file",
+        "https://media.tbauctions.com/image-media/834c1355-9093-4800-9b89-78f3eaecc696/file",
+        "https://media.tbauctions.com/image-media/c8aedf9e-b28e-40c1-abc5-9f6a338342f5/file",
+        "https://media.tbauctions.com/image-media/8e1c61fa-9b1c-481b-b990-6913225f8a02/file"
+      ],
       "year": 2017,
       "first_registration": null,
       "km": 139623,
@@ -2289,7 +2310,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-02T16:03:00.022927+00:00"
+      "last_scrape_at": "2026-06-03T11:06:55.885603+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/2017-volkswagen-transporter-4x4-102000km-A3-44487-5026": {
       "title": "2017 Volkswagen Transporter - 4x4 - 102000km",
@@ -2455,6 +2476,13 @@
       "source": "troostwijk",
       "platform": "VAVATO",
       "thumbnail_url": "https://media.tbauctions.com/image-media/c9aa1737-aedc-4311-ae5b-fb9a74378fff/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/c9aa1737-aedc-4311-ae5b-fb9a74378fff/file",
+        "https://media.tbauctions.com/image-media/04d7729c-fb14-4549-a0b3-e5b7a410e5e9/file",
+        "https://media.tbauctions.com/image-media/834c1355-9093-4800-9b89-78f3eaecc696/file",
+        "https://media.tbauctions.com/image-media/c8aedf9e-b28e-40c1-abc5-9f6a338342f5/file",
+        "https://media.tbauctions.com/image-media/8e1c61fa-9b1c-481b-b990-6913225f8a02/file"
+      ],
       "year": 2017,
       "first_registration": null,
       "km": 139623,
@@ -2523,7 +2551,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-02T16:03:00.022927+00:00"
+      "last_scrape_at": "2026-06-03T11:06:55.885603+00:00"
     }
   },
   "permanent_rejects": {
@@ -18231,6 +18259,96 @@
       "reason": "brand_not_in_whitelist",
       "title": "Ford - 2026 - FG2500IS - Emergency power generator",
       "rejected_at": "2026-06-03T03:18:29.395611+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-socket-set-10-piece-1-2-%25282x%2529-A1-40890-128": {
+      "reason": "brand_not_in_whitelist",
+      "title": "HYUNDAI socket set - 10-piece - 1/2 (2x)",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-hose-reel-automatic-20-meters-A1-40890-91": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai - hose reel automatic 20 meters",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-hose-reel-automatic-20-meters-A1-40890-16": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai - hose reel automatic 20 meters",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-universal-saw-stand-A1-40890-312": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai Universal saw stand",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-hose-reel-automatic-20-meters-A1-40890-96": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai - hose reel automatic 20 meters",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-sander-A1-40890-263": {
+      "reason": "brand_not_in_whitelist",
+      "title": "HYUNDAI sander",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.vavato.com/en/l/2026-hyundai-hdg200025-7-5-kva-emergency-power-diesel-generator-A1-45403-56": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2026 hyundai HDG200025 7.5 KVA Emergency power diesel generator",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.vavato.com/en/l/ford-1975-4000-6-y-oldtimer-tractor-A3-43543-17601": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - 1975 - 4000 6-Y - Oldtimer tractor",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-crafter-commercial-vehicle-A1-46634-19": {
+      "reason": "mileage_too_high: 257922km",
+      "title": "Volkswagen Crafter Commercial Vehicle",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-c-class-w205-coilover-other-A3-43542-3160": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes C class W205 Coilover Other",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-2005-a-class-150-classic-passenger-car-A1-47183-48": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes-Benz - 2005 - A-class - 150 Classic - Passenger car",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-multi-brand-set-of-4-mercedes-tyres-%252B-rims-A3-43542-35677": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes multi brand Set of 4 Mercedes tyres + rims",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-1982-200-280-%2528w123%2529-230-e-31-jxn-5-A1-40726-105": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes-Benz 1982 200-280 (W123) 230 E 31-JXN-5",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/iveco-daily-35-10-td-horse-truck-horse-transport-A1-46774-15": {
+      "reason": "vehicle_type: horse transport",
+      "title": "Iveco - Daily - 35.10 td Horse truck - Horse transport",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.vavato.com/en/l/volkswagen-crafter-commercial-vehicle-A1-46634-19": {
+      "reason": "mileage_too_high: 257922km",
+      "title": "Volkswagen Crafter Commercial Vehicle",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-explorer-xenon-headlight-automotive-lighting-A3-43542-17317": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - Explorer - Xenon Headlight - Automotive Lighting",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-fpwg3400-pressure-washer-234-bar-A1-45570-1061": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - FPWG3400 - Pressure washer 234 Bar",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-fpwg3400-pressure-washer-234-bar-A1-45570-1060": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - FPWG3400 - Pressure washer 234 Bar",
+      "rejected_at": "2026-06-03T11:06:55.885603+00:00"
     }
   }
 }
