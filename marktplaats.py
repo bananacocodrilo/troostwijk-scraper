@@ -6,6 +6,7 @@ Used as a retail reference to compute deal margin against Troostwijk bids.
 """
 
 import json
+import re
 import statistics
 import time
 import urllib.parse
@@ -142,7 +143,85 @@ def _parse_listing(item: dict) -> Optional[dict]:
         "url": item.get("vipUrl") or "",
         "model_key": _model_key(title),
         "images": images,
+        # seats populated by enrich_listings_with_seats() — the search
+        # API doesn't expose it, only the per-listing VIP page does.
+        "seats": None,
     }
+
+
+# Marktplaats VIP (per-listing detail) page exposes the seat count in
+# two places: the JSON-LD blob (`vehicleSeatingCapacity`) and the
+# attribute table (`numberOfSeats` with Dutch label "Aantal stoelen").
+# Either form yields the same integer — match either.
+_VIP_SEATS_RE = re.compile(
+    r'"numberOfSeats","label":"Aantal\s+stoelen","value":"(\d+)"'
+    r'|"vehicleSeatingCapacity":"(\d+)"',
+)
+_VIP_BASE = "https://www.marktplaats.nl"
+
+
+def _fetch_vip_seats(vip_url: str) -> Optional[int]:
+    """Fetch one Marktplaats VIP page and extract seat count. None on
+    failure (network, missing, parse error) — caller treats unknown as
+    soft-pass."""
+    if not vip_url:
+        return None
+    url = vip_url if vip_url.startswith("http") else _VIP_BASE + vip_url
+    req = urllib.request.Request(url, headers={
+        **HEADERS,
+        "Accept": "text/html,application/xhtml+xml",
+    })
+    try:
+        with urllib.request.urlopen(req, timeout=12) as r:
+            html = r.read().decode("utf-8", errors="replace")
+    except Exception:
+        return None
+    m = _VIP_SEATS_RE.search(html)
+    if not m:
+        return None
+    val = m.group(1) or m.group(2)
+    try:
+        return int(val)
+    except (ValueError, TypeError):
+        return None
+
+
+def enrich_listings_with_seats(
+    listings: List[dict],
+    *,
+    max_fetches: int = 1000,
+    sleep_s: float = 0.25,
+) -> List[dict]:
+    """Mutate ``listings`` in place — fetch the VIP page for every entry
+    whose ``model_key`` is set (whitelist-candidate) and add ``seats``.
+
+    The search API caps at ~30 attributes per listing and doesn't include
+    seat count, so we have to fetch the per-listing page. We only enrich
+    listings that have a whitelist token in the title (the rest get
+    classifier-rejected downstream anyway and the seat count is wasted).
+
+    Bounded by ``max_fetches`` so a single refresh can't blow the GH
+    Actions timeout — uncached listings beyond the cap stay
+    ``seats=None`` and pass the soft-gate; the next refresh picks them
+    up if they're still active.
+    """
+    enriched_count = 0
+    skipped_no_token = 0
+    for listing in listings:
+        if enriched_count >= max_fetches:
+            break
+        if listing.get("seats") is not None:
+            continue
+        if not listing.get("model_key"):
+            skipped_no_token += 1
+            continue
+        listing["seats"] = _fetch_vip_seats(listing.get("url") or "")
+        enriched_count += 1
+        time.sleep(sleep_s)
+    if enriched_count:
+        print(f"  marktplaats VIP seats: enriched {enriched_count} listings "
+              f"(skipped {skipped_no_token} non-whitelist)")
+    return listings
 
 
 def fetch_market_prices(query: str, pages: int = 3) -> List[dict]:

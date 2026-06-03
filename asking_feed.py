@@ -103,10 +103,11 @@ def _to_vehicle(listing: dict) -> Optional[dict]:
         "year":      listing.get("year"),
         "km":        listing.get("km"),
         "price_eur": listing.get("price_eur"),
-        # Marketplace listings rarely expose these. AutoTrack ships
-        # body_type (carrosserievormSlug) per hit; others leave it None.
-        # Soft-gate handles None gracefully.
-        "seats":              None,
+        # Most marketplaces don't expose seats per listing. Marktplaats
+        # is enriched via VIP-page fetch (marktplaats.enrich_listings_with_seats),
+        # so its entries may carry a real seats value. Soft-gate handles
+        # the None case for sources that don't.
+        "seats":              listing.get("seats"),
         "emission_standard":  None,
         "body_type":          listing.get("body_type"),
         "weight_kg":          None,

@@ -105,6 +105,10 @@ def _fetch_marktplaats(pages: int = 3) -> List[dict]:
             item.setdefault("source", "marktplaats")
         print(f"{len(listings)} listings")
         all_listings.extend(listings)
+    # Enrich whitelist-candidate listings with VIP-page seats so 3-seat
+    # cargo vans get caught by strict_filter downstream. Bounded inside
+    # the helper — see marktplaats.enrich_listings_with_seats.
+    marktplaats.enrich_listings_with_seats(all_listings)
     return all_listings
 
 
