@@ -254,9 +254,18 @@
 
 <div class="controls">
   <label>
-    Group
+    Model
     <select id="groupFilter">
-      <option value="">All groups</option>
+      <option value="">All models</option>
+    </select>
+  </label>
+  <label>
+    Country
+    <select id="countryFilter">
+      <option value="">All countries</option>
+      <option value="NL">🇳🇱 NL</option>
+      <option value="BE">🇧🇪 BE</option>
+      <option value="DE">🇩🇪 DE</option>
     </select>
   </label>
   <label>
@@ -275,20 +284,16 @@
     </select>
   </label>
   <label>
-    Year ≥ <span id="yearMinVal">2014</span>
-    <input type="range" id="yearMinFilter" min="2010" max="2026" step="1" value="2014" />
+    Year ≥ <span id="yearMinVal">2016</span>
+    <input type="range" id="yearMinFilter" min="2010" max="2026" step="1" value="2016" />
   </label>
   <label>
-    Year ≤ <span id="yearMaxVal">2026</span>
-    <input type="range" id="yearMaxFilter" min="2010" max="2026" step="1" value="2026" />
+    Km ≤ <span id="kmMaxVal">260k</span>
+    <input type="range" id="kmMaxFilter" min="0" max="400000" step="10000" value="260000" />
   </label>
   <label>
-    Km ≤ <span id="kmMaxVal">300k</span>
-    <input type="range" id="kmMaxFilter" min="0" max="400000" step="10000" value="300000" />
-  </label>
-  <label>
-    Max price <span id="priceVal">€60k</span>
-    <input type="range" id="priceFilter" min="2000" max="60000" step="1000" value="60000" />
+    Max price <span id="priceVal">€17k</span>
+    <input type="range" id="priceFilter" min="2000" max="40000" step="500" value="17000" />
   </label>
   <label>
     Max risk <span id="riskVal">5</span>
@@ -297,8 +302,7 @@
   <label>
     Sort by
     <select id="sortBy">
-      <option value="under_first">⭐ Best deals first</option>
-      <option value="pct">% below median</option>
+      <option value="under_first">⭐ Cheapest vs peers</option>
       <option value="price">Price (lowest)</option>
       <option value="year">Year (newest)</option>
       <option value="km">Mileage (lowest)</option>
@@ -335,6 +339,23 @@ const SOURCE_LABEL = {
   'autoscout24_de':  '🇩🇪 AutoScout24',
   'autotrack':       '🇳🇱 AutoTrack',
 };
+
+const GROUP_LABEL = {
+  'transit_custom_l2h1':        'Transit Custom',
+  'expert_jumpy_proace_l2':     'Expert / Jumpy / ProAce',
+  'scudo_gen3':                  'Scudo (2022+)',
+  'vivaro_trafic_primastar_l2': 'Vivaro / Trafic / Primastar',
+  't6_1_lwb':                   'VW Transporter T6',
+  'psa_l1l2h1':                 'Boxer / Ducato / Jumper',
+  'vito_v_class_l2':            'Vito / V-Class',
+  'hyundai_staria':             'Hyundai Staria',
+};
+
+function countryFromSource(source) {
+  if (source === '2dehands') return 'BE';
+  if (source === 'autoscout24_de') return 'DE';
+  return 'NL';
+}
 
 function pctClass(pct) {
   if (pct == null) return 'unknown';
@@ -414,7 +435,7 @@ function buildCard(v) {
   ${riskBlock(v)}
 
   <div class="badges">
-    ${v.model_group ? `<span class="badge badge-size" title="Whitelist group">${v.model_group}</span>` : ''}
+    ${v.model_group ? `<span class="badge badge-size" title="${v.model_group}">${GROUP_LABEL[v.model_group] || v.model_group}</span>` : ''}
     ${v.variant ? `<span class="badge badge-size">${v.variant}</span>` : ''}
     ${v.classification_confidence ? `<span class="badge badge-source" title="Classifier confidence">${v.classification_confidence}</span>` : ''}
     ${under ? '<span class="badge badge-under">⭐ underpriced</span>' : ''}
@@ -430,7 +451,7 @@ function buildCard(v) {
 
   <div class="prices">
     <div class="price-row headline ${under ? 'underpriced' : ''}">
-      <span class="label">Asking price</span>
+      <span class="label">Asking price <small style="color:var(--muted);font-weight:400">(incl. BTW)</small></span>
       <span class="value headline-val">${price != null ? fmt(price) : '—'}</span>
     </div>
     <div class="price-row">
@@ -462,10 +483,10 @@ function buildCard(v) {
 
 function render() {
   const group   = document.getElementById('groupFilter').value;
+  const country = document.getElementById('countryFilter').value;
   const source  = document.getElementById('sourceFilter').value;
   const deal    = document.getElementById('dealFilter').value;
   const yearMin = parseInt(document.getElementById('yearMinFilter').value);
-  const yearMax = parseInt(document.getElementById('yearMaxFilter').value);
   const kmMax   = parseInt(document.getElementById('kmMaxFilter').value);
   const maxPrice = parseFloat(document.getElementById('priceFilter').value);
   const maxRisk  = parseInt(document.getElementById('riskFilter').value);
@@ -473,14 +494,11 @@ function render() {
 
   let filtered = allListings.filter(v => {
     if (group  && v.model_group !== group) return false;
+    if (country && countryFromSource(v.source) !== country) return false;
     if (source && v.source !== source) return false;
     if ((v.price_eur ?? 0) > maxPrice) return false;
     if ((v.risk_score ?? 0) > maxRisk) return false;
-    // Year range — soft on unknowns
-    if (v.year != null) {
-      if (v.year < yearMin || v.year > yearMax) return false;
-    }
-    // Km cap — soft on unknowns
+    if (v.year != null && v.year < yearMin) return false;
     if (v.km != null && v.km > kmMax) return false;
     if (deal === 'under' && !v.is_underpriced) return false;
     const p = v.price_pct_vs_median;
@@ -494,7 +512,6 @@ function render() {
     if (sortKey === 'year')   return (b.year ?? 0) - (a.year ?? 0);
     if (sortKey === 'km')     return (a.km ?? 9e9) - (b.km ?? 9e9);
     if (sortKey === 'score')  return (b.score ?? 0) - (a.score ?? 0);
-    if (sortKey === 'pct')    return (a.price_pct_vs_median ?? 999) - (b.price_pct_vs_median ?? 999);
     // 'under_first' default: underpriced first, then by score desc, then by price asc
     const au = a.is_underpriced ? 0 : 1;
     const bu = b.is_underpriced ? 0 : 1;
@@ -517,7 +534,7 @@ async function load() {
     // Populate group filter
     const groups = [...new Set(allListings.map(v => v.model_group).filter(Boolean))].sort();
     const gsel = document.getElementById('groupFilter');
-    groups.forEach(g => { const o = document.createElement('option'); o.value = g; o.textContent = g; gsel.appendChild(o); });
+    groups.forEach(g => { const o = document.createElement('option'); o.value = g; o.textContent = GROUP_LABEL[g] || g; gsel.appendChild(o); });
 
     // Populate source filter
     const sources = [...new Set(allListings.map(v => v.source).filter(Boolean))].sort();
@@ -547,6 +564,7 @@ async function load() {
 }
 
 document.getElementById('groupFilter').addEventListener('change', render);
+document.getElementById('countryFilter').addEventListener('change', render);
 document.getElementById('sourceFilter').addEventListener('change', render);
 document.getElementById('dealFilter').addEventListener('change', render);
 document.getElementById('sortBy').addEventListener('change', render);
@@ -559,21 +577,8 @@ document.getElementById('riskFilter').addEventListener('input', e => {
   document.getElementById('riskVal').textContent = e.target.value;
   render();
 });
-
-function clampYears() {
-  const a = document.getElementById('yearMinFilter');
-  const b = document.getElementById('yearMaxFilter');
-  if (parseInt(a.value) > parseInt(b.value)) a.value = b.value;
-  document.getElementById('yearMinVal').textContent = a.value;
-  document.getElementById('yearMaxVal').textContent = b.value;
-}
-document.getElementById('yearMinFilter').addEventListener('input', () => { clampYears(); render(); });
-document.getElementById('yearMaxFilter').addEventListener('input', () => {
-  const a = document.getElementById('yearMinFilter');
-  const b = document.getElementById('yearMaxFilter');
-  if (parseInt(b.value) < parseInt(a.value)) b.value = a.value;
-  document.getElementById('yearMinVal').textContent = a.value;
-  document.getElementById('yearMaxVal').textContent = b.value;
+document.getElementById('yearMinFilter').addEventListener('input', e => {
+  document.getElementById('yearMinVal').textContent = e.target.value;
   render();
 });
 document.getElementById('kmMaxFilter').addEventListener('input', e => {

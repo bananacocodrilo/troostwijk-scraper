@@ -335,6 +335,18 @@
 
 <div class="controls">
   <label>
+    Model
+    <select id="groupFilter">
+      <option value="">All models</option>
+    </select>
+  </label>
+  <label>
+    Country
+    <select id="countryFilter">
+      <option value="">All countries</option>
+    </select>
+  </label>
+  <label>
     Closing
     <select id="closingFilter">
       <option value="open">Open lots only</option>
@@ -345,16 +357,12 @@
     </select>
   </label>
   <label>
-    Year ≥ <span id="yearMinVal">2014</span>
-    <input type="range" id="yearMinFilter" min="2010" max="2026" step="1" value="2014" />
+    Year ≥ <span id="yearMinVal">2016</span>
+    <input type="range" id="yearMinFilter" min="2010" max="2026" step="1" value="2016" />
   </label>
   <label>
-    Year ≤ <span id="yearMaxVal">2026</span>
-    <input type="range" id="yearMaxFilter" min="2010" max="2026" step="1" value="2026" />
-  </label>
-  <label>
-    Km ≤ <span id="kmMaxVal">300k</span>
-    <input type="range" id="kmMaxFilter" min="0" max="400000" step="10000" value="300000" />
+    Km ≤ <span id="kmMaxVal">260k</span>
+    <input type="range" id="kmMaxFilter" min="0" max="400000" step="10000" value="260000" />
   </label>
   <label>
     Min score <span id="scoreVal">30</span>
@@ -369,12 +377,11 @@
     <select id="sortBy">
       <option value="closing">⏱️ Closing soonest</option>
       <option value="score">Suitability score</option>
-      <option value="deal_score">Deal score (financial)</option>
-      <option value="deal_margin_pct">Deal margin %</option>
+      <option value="deal_margin_pct">% below market value</option>
       <option value="max_recommended_bid_eur">Max bid (lowest first)</option>
       <option value="year">Year (newest)</option>
       <option value="km">Mileage (lowest)</option>
-      <option value="total_cost_eur">Price (lowest)</option>
+      <option value="total_cost_eur">Current bid (lowest)</option>
     </select>
   </label>
   <span id="count"></span>
@@ -399,6 +406,17 @@ function scoreClass(s) {
   if (s >= 50) return 's-mid';
   return 's-low';
 }
+
+const GROUP_LABEL = {
+  'transit_custom_l2h1':        'Transit Custom',
+  'expert_jumpy_proace_l2':     'Expert / Jumpy / ProAce',
+  'scudo_gen3':                  'Scudo (2022+)',
+  'vivaro_trafic_primastar_l2': 'Vivaro / Trafic / Primastar',
+  't6_1_lwb':                   'VW Transporter T6',
+  'psa_l1l2h1':                 'Boxer / Ducato / Jumper',
+  'vito_v_class_l2':            'Vito / V-Class',
+  'hyundai_staria':             'Hyundai Staria',
+};
 
 const FLEET_META = {
   utility:       { emoji: '🏛️',  label: 'utility / municipal' },
@@ -521,6 +539,10 @@ function buildCard(v) {
   const bidOverLimit = bid != null && maxBid != null && bid > maxBid;
   const marginClass = dealClass(margin);
   const barWidth = margin != null ? Math.min(Math.max(margin, 0), 100) : 0;
+  // Landed cost = final_cost_estimate minus reconditioning guess (user wants
+  // only known costs: bid + premium + VAT + transport + fixed fees).
+  const recon = v.reconditioning_cost_estimate || 0;
+  const knownCost = v.final_cost_estimate != null ? Math.round(v.final_cost_estimate - recon) : null;
 
   const open = (v.bidding_status || '').includes('OPEN');
   const ended = v.auction_end ? new Date(v.auction_end).getTime() <= Date.now() : false;
@@ -566,7 +588,7 @@ function buildCard(v) {
   ${countdownHtml(v)}
 
   <div class="badges">
-    ${v.model_group ? `<span class="badge badge-size" title="Whitelist group">${v.model_group}</span>` : ''}
+    ${v.model_group ? `<span class="badge badge-size" title="${v.model_group}">${GROUP_LABEL[v.model_group] || v.model_group}</span>` : ''}
     ${v.variant ? `<span class="badge badge-size">${v.variant}</span>` : (v.van_type ? `<span class="badge badge-size">${v.van_type}</span>` : '')}
     ${v.classification_confidence ? `<span class="badge" style="background:var(--surface2);color:var(--muted)" title="Classifier confidence">${v.classification_confidence}</span>` : ''}
     ${v.fuel ? `<span class="badge badge-fuel">${v.fuel}</span>` : ''}
@@ -596,16 +618,16 @@ function buildCard(v) {
       <span class="label">Current bid</span>
       <span class="value ${bidOverLimit ? 'over' : ''}">${bid != null ? fmt(bid) : '<span class="na">not yet captured</span>'}</span>
     </div>
-    ${v.final_cost_estimate != null ? `
+    ${knownCost != null ? `
     <div class="price-row" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px">
-      <span class="label" title="bid + 19% premium + €${v.fixed_fees_estimate||100} fees + €${v.transport_cost_estimate||'?'} transport + €${v.reconditioning_cost_estimate||'?'} recon">
-        💰 Est. total landed cost ℹ️
+      <span class="label" title="bid + buyer premium + fixed fees + transport${v.vat_applicable ? ' + 21% VAT' : ' (margin scheme)'}">
+        💰 Landed cost ℹ️
       </span>
-      <span class="value" style="color:var(--yellow)">${fmt(v.final_cost_estimate)}</span>
+      <span class="value" style="color:var(--yellow)">${fmt(knownCost)}</span>
     </div>
     <div class="price-row cost-breakdown">
       <span class="label" style="font-size:10px">
-        transport ~€${v.transport_cost_estimate||'?'} · recon ~€${v.reconditioning_cost_estimate||'?'} · fees €${v.fixed_fees_estimate||100}
+        transport ~€${v.transport_cost_estimate||'?'} · fees €${v.fixed_fees_estimate||100}
         ${v.vat_applicable ? '· +21% VAT' : '· margin scheme'}
       </span>
     </div>
@@ -652,11 +674,12 @@ function buildCard(v) {
 }
 
 function render() {
+  const group   = document.getElementById('groupFilter').value;
+  const country = document.getElementById('countryFilter').value;
   const closing = document.getElementById('closingFilter').value;
   const minScore = parseFloat(document.getElementById('scoreFilter').value);
   const maxRisk = parseInt(document.getElementById('riskFilter').value);
   const yearMin = parseInt(document.getElementById('yearMinFilter').value);
-  const yearMax = parseInt(document.getElementById('yearMaxFilter').value);
   const kmMax   = parseInt(document.getElementById('kmMaxFilter').value);
   const sortKey = document.getElementById('sortBy').value;
   const now = Date.now();
@@ -664,13 +687,11 @@ function render() {
   const endMs = v => v.auction_end ? new Date(v.auction_end).getTime() : null;
 
   let filtered = allVans.filter(v => {
+    if (group && v.model_group !== group) return false;
+    if (country && (v.country_code || '').toUpperCase() !== country) return false;
     if ((v.score ?? 0) < minScore) return false;
     if ((v.risk_score ?? 0) > maxRisk) return false;
-    // Year range — soft on unknowns (no year → still shown)
-    if (v.year != null) {
-      if (v.year < yearMin || v.year > yearMax) return false;
-    }
-    // Km cap — soft on unknowns
+    if (v.year != null && v.year < yearMin) return false;
     if (v.km != null && v.km > kmMax) return false;
     const em = endMs(v);
     if (closing === 'all') {
@@ -694,7 +715,6 @@ function render() {
       if (aClosed !== bClosed) return aClosed ? 1 : -1;
       return (ea ?? Infinity) - (eb ?? Infinity);
     }
-    if (sortKey === 'deal_score') return (b.deal_score ?? -1) - (a.deal_score ?? -1);
     if (sortKey === 'year') return (b.year ?? 0) - (a.year ?? 0);
     if (sortKey === 'km') return (a.km ?? 999999) - (b.km ?? 999999);
     if (sortKey === 'total_cost_eur') return (a.total_cost_eur ?? 999999) - (b.total_cost_eur ?? 999999);
@@ -729,12 +749,32 @@ async function load() {
     `;
     document.getElementById('updatedAt').textContent = 'Fetched ' + new Date().toLocaleTimeString();
 
+    // Populate group filter
+    const groups = [...new Set(allVans.map(v => v.model_group).filter(Boolean))].sort();
+    const gsel = document.getElementById('groupFilter');
+    groups.forEach(g => {
+      const o = document.createElement('option');
+      o.value = g; o.textContent = GROUP_LABEL[g] || g;
+      gsel.appendChild(o);
+    });
+    // Populate country filter from actual data
+    const countries = [...new Set(allVans.map(v => (v.country_code || '').toUpperCase()).filter(Boolean))].sort();
+    const csel = document.getElementById('countryFilter');
+    const FLAG = {NL:'🇳🇱',BE:'🇧🇪',DE:'🇩🇪',FR:'🇫🇷',LU:'🇱🇺'};
+    countries.forEach(c => {
+      const o = document.createElement('option');
+      o.value = c; o.textContent = `${FLAG[c] || ''} ${c}`;
+      csel.appendChild(o);
+    });
+
     render();
   } catch (e) {
     document.getElementById('grid').innerHTML = `<div class="empty">Failed to load data: ${e.message}</div>`;
   }
 }
 
+document.getElementById('groupFilter').addEventListener('change', render);
+document.getElementById('countryFilter').addEventListener('change', render);
 document.getElementById('closingFilter').addEventListener('change', render);
 document.getElementById('sortBy').addEventListener('change', render);
 document.getElementById('scoreFilter').addEventListener('input', e => {
@@ -745,21 +785,8 @@ document.getElementById('riskFilter').addEventListener('input', e => {
   document.getElementById('riskVal').textContent = e.target.value;
   render();
 });
-
-function clampYears() {
-  const a = document.getElementById('yearMinFilter');
-  const b = document.getElementById('yearMaxFilter');
-  if (parseInt(a.value) > parseInt(b.value)) a.value = b.value;
-  document.getElementById('yearMinVal').textContent = a.value;
-  document.getElementById('yearMaxVal').textContent = b.value;
-}
-document.getElementById('yearMinFilter').addEventListener('input', () => { clampYears(); render(); });
-document.getElementById('yearMaxFilter').addEventListener('input', () => {
-  const a = document.getElementById('yearMinFilter');
-  const b = document.getElementById('yearMaxFilter');
-  if (parseInt(b.value) < parseInt(a.value)) b.value = a.value;
-  document.getElementById('yearMinVal').textContent = a.value;
-  document.getElementById('yearMaxVal').textContent = b.value;
+document.getElementById('yearMinFilter').addEventListener('input', e => {
+  document.getElementById('yearMinVal').textContent = e.target.value;
   render();
 });
 document.getElementById('kmMaxFilter').addEventListener('input', e => {
