@@ -776,11 +776,11 @@
       "is_hidden_gem": false,
       "van_type": null,
       "is_valid_van": true,
-      "score": 27,
+      "score": 17,
       "scores": null,
       "applied_rule_set": "t6_1_lwb",
       "passed_hard_filters": true,
-      "rejected_reason": "score_below_threshold: 27 < 30",
+      "rejected_reason": "score_below_threshold: 17 < 30",
       "reason_for_inclusion": [
         "VW Transporter T6 + T6.1 (Multivan / Caravelle / California) (size unknown)",
         "token: transporter"
@@ -793,7 +793,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-04T10:21:36.691607+00:00"
+      "last_scrape_at": "2026-06-04T15:03:23.594245+00:00"
     },
     "https://www.vavato.com/en/l/2022-ford-tourneo-custom-%25288-seats%2529-A3-44485-11918": {
       "title": "2022 Ford Tourneo Custom - (8 seats)",
@@ -2863,10 +2863,10 @@
       "remarks": null,
       "additional_information": "6 types of rim and tire sets, for MB sprinter and Vito, to assess the quality and condition we recommend to use the viewing day",
       "lot_id": "087821c0-1d6d-4307-b9cf-d893ef7335a6",
-      "current_bid_eur": 30.0,
+      "current_bid_eur": 35.0,
       "buyer_premium_pct": 19.0,
       "total_cost_eur": null,
-      "bids_count": 5,
+      "bids_count": 6,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -2886,11 +2886,11 @@
       "is_hidden_gem": false,
       "van_type": null,
       "is_valid_van": true,
-      "score": 26,
+      "score": 16,
       "scores": null,
       "applied_rule_set": "vito_v_class_l2",
       "passed_hard_filters": true,
-      "rejected_reason": "score_below_threshold: 26 < 30",
+      "rejected_reason": "score_below_threshold: 16 < 30",
       "reason_for_inclusion": [
         "Mercedes Vito / V-Class (Lang or Extralang) (size unknown)",
         "token: vito"
@@ -2903,7 +2903,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-04T10:21:36.691607+00:00"
+      "last_scrape_at": "2026-06-04T15:03:23.594245+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/landrover-discovery-5-p340-3-0l-v6-german-registration-A1-47011-25": {
       "title": "Landrover Discovery 5 - P340 3.0L V6 German Registration.",
@@ -2947,10 +2947,10 @@
       "remarks": "Accessories\nAir conditioning Automatic \nFactory navigation\nLeather upholstery\nCruise Control\nMetallic paint\nAlloy wheels\nPower steering\nRadio-CD player\nFront and rear parking sensors \nCentral locking\nElectric windows\nRadio controls on the steering wheel\nRear camera\nElectric tailgate\nSeat heating\nPanoramic roof\nElectrically adjustable seats\nSigns of wear by age and mileage.\nThe car has (had) damage, but in our opinion it has been neatly repaired. No extensive technical investigation has been done by the selling party. You are welcome to come and view the car during the viewing day and possibly bring an expert with you to form your own opinion.\nThe car could be started and drives, come to the viewing day then there is a possibility to take a test drive.",
       "additional_information": null,
       "lot_id": "dad21424-31d9-49c5-a5ca-742fa13eb0d2",
-      "current_bid_eur": 12000.0,
+      "current_bid_eur": 13500.0,
       "buyer_premium_pct": 19.0,
       "total_cost_eur": null,
-      "bids_count": 8,
+      "bids_count": 14,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -2970,7 +2970,7 @@
       "is_hidden_gem": false,
       "van_type": null,
       "is_valid_van": true,
-      "score": 78,
+      "score": 68,
       "scores": null,
       "applied_rule_set": "expert_jumpy_proace_l2",
       "passed_hard_filters": true,
@@ -2990,7 +2990,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-04T10:21:36.691607+00:00"
+      "last_scrape_at": "2026-06-04T15:03:23.594245+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/renault-1-6-diesel-trafic-van-A7-47288-1106": {
       "title": "RENAULT - 1.6 diesel - TRAFIC - Van",
@@ -3161,6 +3161,255 @@
       "big_van_score": null,
       "small_van_score": null,
       "last_scrape_at": "2026-06-04T10:21:36.691607+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-2-0-tdi-l1h2-highl-dsg-commercial-vehicle-A1-46774-4": {
+      "title": "Volkswagen - Transporter - 2.0 TDI L1H2 Highl. DSG - Commercial vehicle",
+      "brand": "Volkswagen",
+      "model": "2.0 TDI L1H2 Highl. DSG",
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-2-0-tdi-l1h2-highl-dsg-commercial-vehicle-A1-46774-4",
+      "source": "troostwijk",
+      "platform": "TWK",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/a0600322-58f3-44a8-856f-70ff801ddfad/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/a0600322-58f3-44a8-856f-70ff801ddfad/file",
+        "https://media.tbauctions.com/image-media/46943abc-9f9f-4209-ad43-7b2b1a8e8f42/file",
+        "https://media.tbauctions.com/image-media/9dfa8824-abf9-42ed-bb66-9f9eb995abdf/file",
+        "https://media.tbauctions.com/image-media/f28cc7af-1e31-41c0-b0c5-bc91ad49ebe7/file",
+        "https://media.tbauctions.com/image-media/703ba132-f4ac-423e-bfa2-5155a86729a0/file"
+      ],
+      "year": null,
+      "first_registration": null,
+      "km": 231319,
+      "fuel": "diesel",
+      "transmission": "Vending machine 7",
+      "power_kw": 150,
+      "cylinder_cc": 1968,
+      "emission_standard": "6",
+      "seats": 5,
+      "doors": 5,
+      "color": "Black",
+      "weight_kg": 2036,
+      "load_kg": null,
+      "body_type": "Box construction",
+      "vin": null,
+      "city": "Zaltbommel",
+      "country_code": "NL",
+      "location": "Zaltbommel, NL",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": false,
+      "bidding_status": "BIDDING_OPEN",
+      "auction_start": "2026-05-27T14:00:00Z",
+      "auction_end": "2026-06-11T17:51:00Z",
+      "remarks": "CAUTION! This vehicle has a license plate registration, when you pick it up you must register it on the spot or export it, there are extra costs involved!",
+      "additional_information": "Double cab 5 seats",
+      "lot_id": "b3dd512d-308c-4624-8018-b11c83b6a0db",
+      "current_bid_eur": 5200.0,
+      "buyer_premium_pct": 19.0,
+      "total_cost_eur": null,
+      "bids_count": 20,
+      "reserve_met": false,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": "L1H2",
+      "is_valid_van": true,
+      "score": 49,
+      "scores": null,
+      "applied_rule_set": "t6_1_lwb",
+      "passed_hard_filters": true,
+      "rejected_reason": null,
+      "reason_for_inclusion": [
+        "VW Transporter T6 + T6.1 (Multivan / Caravelle / California) (L1H2)",
+        "token: transporter; explicit L1H2",
+        "231k km, year ?"
+      ],
+      "fleet_type": "private",
+      "fleet_signals": null,
+      "model_group": "t6_1_lwb",
+      "variant": "L1H2",
+      "classification_confidence": "high",
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/aluminum-roof-rack-for-opel-vivaro-with-gangway-and-loading-roller-A3-43542-11019": {
+      "title": "Aluminum Roof Rack for Opel Vivaro with Gangway and Loading Roller",
+      "brand": null,
+      "model": null,
+      "url": "https://www.troostwijkauctions.com/en/l/aluminum-roof-rack-for-opel-vivaro-with-gangway-and-loading-roller-A3-43542-11019",
+      "source": "troostwijk",
+      "platform": "VAVATO",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/afcc5f8a-1c53-4bb6-aeaf-61feb5ae4bfe/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/afcc5f8a-1c53-4bb6-aeaf-61feb5ae4bfe/file",
+        "https://media.tbauctions.com/image-media/1541ba50-6d56-4421-86b8-03689a483de6/file",
+        "https://media.tbauctions.com/image-media/1fc0ccfd-c2ee-49bc-9993-288149ef60a8/file"
+      ],
+      "year": null,
+      "first_registration": null,
+      "km": null,
+      "fuel": null,
+      "transmission": null,
+      "power_kw": null,
+      "cylinder_cc": null,
+      "emission_standard": null,
+      "seats": null,
+      "doors": null,
+      "color": null,
+      "weight_kg": null,
+      "load_kg": null,
+      "body_type": null,
+      "vin": null,
+      "city": "Ledeberg",
+      "country_code": "BE",
+      "location": "Ledeberg, BE",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": false,
+      "bidding_status": "BIDDING_NOT_YET_OPENED",
+      "auction_start": "2026-06-05T16:00:00Z",
+      "auction_end": null,
+      "remarks": null,
+      "additional_information": null,
+      "lot_id": "2b2a3303-37cc-4ee3-b597-1b8c32db97e2",
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
+      "total_cost_eur": null,
+      "bids_count": null,
+      "reserve_met": null,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": null,
+      "is_valid_van": true,
+      "score": 14,
+      "scores": null,
+      "applied_rule_set": "vivaro_trafic_primastar_l2",
+      "passed_hard_filters": true,
+      "rejected_reason": "score_below_threshold: 14 < 30",
+      "reason_for_inclusion": [
+        "Opel Vivaro / Renault Trafic / Nissan Primastar / Fiat Talento (size unknown)",
+        "token: vivaro"
+      ],
+      "fleet_type": "private",
+      "fleet_signals": null,
+      "model_group": "vivaro_trafic_primastar_l2",
+      "variant": null,
+      "classification_confidence": "low",
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.vavato.com/en/l/aluminum-roof-rack-for-opel-vivaro-with-gangway-and-loading-roller-A3-43542-11019": {
+      "title": "Aluminum Roof Rack for Opel Vivaro with Gangway and Loading Roller",
+      "brand": null,
+      "model": null,
+      "url": "https://www.vavato.com/en/l/aluminum-roof-rack-for-opel-vivaro-with-gangway-and-loading-roller-A3-43542-11019",
+      "source": "troostwijk",
+      "platform": "VAVATO",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/afcc5f8a-1c53-4bb6-aeaf-61feb5ae4bfe/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/afcc5f8a-1c53-4bb6-aeaf-61feb5ae4bfe/file",
+        "https://media.tbauctions.com/image-media/1541ba50-6d56-4421-86b8-03689a483de6/file",
+        "https://media.tbauctions.com/image-media/1fc0ccfd-c2ee-49bc-9993-288149ef60a8/file"
+      ],
+      "year": null,
+      "first_registration": null,
+      "km": null,
+      "fuel": null,
+      "transmission": null,
+      "power_kw": null,
+      "cylinder_cc": null,
+      "emission_standard": null,
+      "seats": null,
+      "doors": null,
+      "color": null,
+      "weight_kg": null,
+      "load_kg": null,
+      "body_type": null,
+      "vin": null,
+      "city": "Ledeberg",
+      "country_code": "BE",
+      "location": "Ledeberg, BE",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": false,
+      "bidding_status": "BIDDING_NOT_YET_OPENED",
+      "auction_start": "2026-06-05T16:00:00Z",
+      "auction_end": null,
+      "remarks": null,
+      "additional_information": null,
+      "lot_id": "2b2a3303-37cc-4ee3-b597-1b8c32db97e2",
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
+      "total_cost_eur": null,
+      "bids_count": null,
+      "reserve_met": null,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": null,
+      "is_valid_van": true,
+      "score": 14,
+      "scores": null,
+      "applied_rule_set": "vivaro_trafic_primastar_l2",
+      "passed_hard_filters": true,
+      "rejected_reason": "score_below_threshold: 14 < 30",
+      "reason_for_inclusion": [
+        "Opel Vivaro / Renault Trafic / Nissan Primastar / Fiat Talento (size unknown)",
+        "token: vivaro"
+      ],
+      "fleet_type": "private",
+      "fleet_signals": null,
+      "model_group": "vivaro_trafic_primastar_l2",
+      "variant": null,
+      "classification_confidence": "low",
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-06-04T15:03:23.594245+00:00"
     }
   },
   "permanent_rejects": {
@@ -20908,6 +21157,296 @@
       "reason": "brand_not_in_whitelist",
       "title": "Mercedes-Benz CLA200 d Business Solution AMG 136hp 2016 CLA-Class",
       "rejected_at": "2026-06-04T10:21:36.691607+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2021-peugeot-boxer-335-2-2-hdi-l3h2-pro-commercial-vehicle-A1-46710-283": {
+      "reason": "seats_below_5: 3",
+      "title": "2021 Peugeot Boxer 335 2.2 HDI L3H2 Pro Commercial Vehicle",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2009-bmw-1-series-116i-business-line-passenger-car-A1-42018-179": {
+      "reason": "mileage_too_high: 281652km",
+      "title": "2009 Bmw 1-series 116i Business Line passenger car",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-3-series-touring-318d-upgrade-edition-kp-516-b-A1-47011-41": {
+      "reason": "mileage_too_high: 302918km",
+      "title": "BMW 3 Series Touring 318d Upgrade Edition KP-516-B",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.vavato.com/en/l/ford-transit-custom-320-2-0-tdci-l1h1-tr-commercial-vehicle-A1-42018-140": {
+      "reason": "size_not_allowed: L1 (group requires L2)",
+      "title": "Ford Transit Custom 320 2.0 TDCI L1H1 Tr Commercial Vehicle",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.vavato.com/en/l/2020-fiat-ducato-35-3-0-cng-l4h2-commercial-vehicle-A1-41705-17": {
+      "reason": "size_not_allowed: L4 (group requires L2/3)",
+      "title": "2020 - Fiat - Ducato - 35 3.0 CNG L4H2 - Commercial vehicle",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-fdt-10200se-emergency-power-generator-generator-diesel-2026-A1-40264-73": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - FDT 10200SE - Emergency power generator / generator diesel 2026",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-thunderbird-landau-classic-car-A3-43546-16579": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford Thunderbird Landau Classic Car",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-mercury-couger-xr7-classic-car-A1-47425-37": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford Mercury Couger XR7 Classic Car",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.vavato.com/en/l/ford-thunderbird-landau-classic-car-A3-43546-16579": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford Thunderbird Landau Classic Car",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.vavato.com/en/l/1965-ford-4000-forestry-tractor-A3-43548-6110": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1965 Ford 4000 Forestry Tractor",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.vavato.com/en/l/2006-ford-ka-passenger-car-A3-43546-19100": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2006 Ford KA Passenger Car",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/peugeot-203c-classic-car-A3-43546-6001": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Peugeot - 203C - Classic car",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.vavato.com/en/l/peugeot-203c-classic-car-A3-43546-6001": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Peugeot - 203C - Classic car",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.vavato.com/en/l/2008-peugeot-407-coupe-hdi-1-6-passenger-car-A3-43546-7095": {
+      "reason": "mileage_too_high: 377676km",
+      "title": "2008 Peugeot 407 Coup\u00e9 HDI 1.6 Passenger car",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/citroen-jumper-2-2-diesel-van-A7-47288-1130": {
+      "reason": "year_below_minimum: 2012 < 2016 (psa_l1l2h1)",
+      "title": "CITROEN - JUMPER - 2.2 Diesel - Van",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/new-toyota-9fbm30t-forklift-A3-43548-354": {
+      "reason": "vehicle_type: forklift",
+      "title": "New Toyota 9FBM30T Forklift",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2011-toyota-yaris-car-A3-43546-393087": {
+      "reason": "mileage_too_high: 258983km",
+      "title": "2011 Toyota Yaris Car",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2008-nissan-qashqai-passenger-car-A3-43546-21465": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2008 Nissan Qashqai Passenger Car",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.vavato.com/en/l/2008-nissan-qashqai-passenger-car-A3-43546-21465": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2008 Nissan Qashqai Passenger Car",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1978-volkswagen-t2-bus-%257C-classic-vw-transporter-A1-47138-64": {
+      "reason": "vehicle_type: bus / coach",
+      "title": "1978 Volkswagen T2 Bus | Classic VW Transporter",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1995-volkswagen-t2-bus-%257C-classic-vw-transporter-A1-47139-12": {
+      "reason": "vehicle_type: bus / coach",
+      "title": "1995 Volkswagen T2 Bus | Classic VW Transporter",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1989-volkswagen-t2-kombi-%257C-classic-vw-transporter-A1-47138-109": {
+      "reason": "vehicle_type: bus / coach",
+      "title": "1989 Volkswagen T2 Kombi | Classic VW Transporter",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-1600-variant-l-%2528type-3%2529-squareback-classic-car-A3-43546-16580": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Volkswagen 1600 Variant-L (Type 3) Squareback Classic Car",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/peugeot-boxer-330-2-2-hdi-6-seater-double-cab-110hp-2013-%2528original-nl%2529-vd-010-r-A1-44369-35": {
+      "reason": "year_below_minimum: 2013 < 2016 (psa_l1l2h1)",
+      "title": "Peugeot Boxer 330 2.2 HDI 6-seater double cab 110hp 2013 (Original-NL), VD-010-R",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-vito-e-car-2021-A3-43546-8005": {
+      "reason": "mileage_too_high: 255500km",
+      "title": "Mercedes - Vito E - Car - 2021",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-rims-%2528originals%2529-A3-43542-7026": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes Rims (originals)",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2017-mercedes-benz-sprinter-commercial-vehicle-A1-46783-40": {
+      "reason": "body_mismatch: flatbed body",
+      "title": "2017 Mercedes-Benz Sprinter Commercial Vehicle",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.vavato.com/en/l/mercedes-vito-e-car-2021-A3-43546-8005": {
+      "reason": "mileage_too_high: 255500km",
+      "title": "Mercedes - Vito E - Car - 2021",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.vavato.com/en/l/2017-mercedes-benz-sprinter-commercial-vehicle-A1-46783-40": {
+      "reason": "body_mismatch: flatbed body",
+      "title": "2017 Mercedes-Benz Sprinter Commercial Vehicle",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1979-mercedes-benz-350-slc-class-classic-car-A1-41683-80": {
+      "reason": "damage: not starting",
+      "title": "1979 Mercedes-Benz 350 SLC-class Classic car",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-tire-A3-43542-393022": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai Tire",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.vavato.com/en/l/hyundai-tire-A3-43542-393022": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Hyundai Tire",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.vavato.com/en/l/new-toyota-9fbm30t-forklift-A3-43548-354": {
+      "reason": "vehicle_type: forklift",
+      "title": "New Toyota 9FBM30T Forklift",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/fiat-billboard-A1-47139-166": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Fiat billboard",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1965-fiat-osca-cabriolet-%257C-italian-classic-roadster-A1-47138-58": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1965 Fiat OSCA Cabriolet | Italian Classic Roadster",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2020-fiat-ducato-35-3-0-cng-l4h2-commercial-vehicle-A1-41705-17": {
+      "reason": "size_not_allowed: L4 (group requires L2/3)",
+      "title": "2020 - Fiat - Ducato - 35 3.0 CNG L4H2 - Commercial vehicle",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1960-fiat-osca-1500-s-spider-%257C-italian-classic-roadster-A1-47138-29": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1960 Fiat Osca 1500 S Spider | Italian Classic Roadster",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/vintage-illuminated-fiat-schade-garant-advertising-sign-%25E2%2580%2593-unique-eye-catcher-A1-41683-398": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Vintage illuminated FIAT Schade-Garant advertising sign \u2013 unique eye-catcher",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/lot-opel-dealer-advertising-panels-A3-43542-11030": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Lot Opel Dealer Advertising Panels",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.vavato.com/en/l/lot-opel-dealer-advertising-panels-A3-43542-11030": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Lot Opel Dealer Advertising Panels",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/renault-trafic-ambulance-belgian-papers-A1-39735-100": {
+      "reason": "vehicle_type: ambulance",
+      "title": "Renault Trafic Ambulance Belgian papers",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/renault-fregate-r1104-vintage-cars-%253E-15-A3-43546-36087": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Renault Fr\u00e9gate R1104 Vintage Cars > 15",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/renault-1-2-tce-h5f400-engine-car-A3-43542-33576": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Renault 1.2 TCe H5F400 Engine Car",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.vavato.com/en/l/renault-1-2-tce-h5f400-engine-car-A3-43542-33576": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Renault 1.2 TCe H5F400 Engine Car",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.vavato.com/en/l/2017-renault-mda2c-truck-A3-44489-6962": {
+      "reason": "mileage_too_high: 439385km",
+      "title": "2017 Renault MDA2C Truck",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/nissan-s1n1l150-forklift-trucks-2008-A7-47288-61": {
+      "reason": "vehicle_type: forklift",
+      "title": "NISSAN - S1N1L150 - Forklift Trucks - 2008",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/truck-part-air-spring-airsuspension-A3-43542-6839": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Truck part air spring airsuspension",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/large-lot-trailer-truck-truck-equipment-A3-43542-6003": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Large Lot Trailer truck truck equipment",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/truck-accessories-tensioning-tools-A3-43542-11893": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Truck accessories/tensioning tools",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2010-iveco-eurocargo-truck-A3-44487-16568": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2010 Iveco EUROCARGO Truck",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/man-2014-tgl-12-220-truck-A3-44487-6730": {
+      "reason": "brand_not_in_whitelist",
+      "title": "MAN - 2014 - TGL 12.220 - Truck",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1998-orthaus-ogt-24-b-inloader-A1-41683-273": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1998 Orthaus OGT 24 B Inloader",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2017-renault-mda2c-truck-A3-44489-6962": {
+      "reason": "mileage_too_high: 439385km",
+      "title": "2017 Renault MDA2C Truck",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2014-mercedes-benz-actos-truck-A3-44489-20144": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2014 Mercedes-Benz Actos Truck",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/tyres-with-rims-A1-47425-85": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Tyres with rims",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/wallpaper-cleaning-machine-A7-47288-270": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Wallpaper cleaning machine",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-transit-custom-320-2-0-tdci-l1h1-tr-commercial-vehicle-A1-42018-140": {
+      "reason": "size_not_allowed: L1 (group requires L2)",
+      "title": "Ford Transit Custom 320 2.0 TDCI L1H1 Tr Commercial Vehicle",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/peugeot-boxer-335-2-2-hdi-l2h2-xr-v-774-zs-A1-47011-7": {
+      "reason": "year_below_minimum: 2015 < 2016 (psa_l1l2h1)",
+      "title": "Peugeot Boxer 335 2.2 HDI L2H2 XR V-774-ZS",
+      "rejected_at": "2026-06-04T15:03:23.594245+00:00"
     }
   }
 }

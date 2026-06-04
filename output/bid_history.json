@@ -280,6 +280,12 @@
           "current_bid_eur": 4600.0,
           "bids_count": 17,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-04T15:03:23.615395+00:00",
+          "current_bid_eur": 5200.0,
+          "bids_count": 20,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -1012,6 +1018,12 @@
           "current_bid_eur": 3650.0,
           "bids_count": 15,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-04T15:03:23.615395+00:00",
+          "current_bid_eur": 5050.0,
+          "bids_count": 24,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -1068,6 +1080,18 @@
           "ts": "2026-06-02T15:56:30.639398+00:00",
           "current_bid_eur": 2300.0,
           "bids_count": 40,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-04T15:03:23.615395+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-04T15:03:23.615395+00:00",
+          "current_bid_eur": 2800.0,
+          "bids_count": 43,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -1440,6 +1464,12 @@
           "ts": "2026-06-02T15:56:30.639398+00:00",
           "current_bid_eur": 8100.0,
           "bids_count": 19,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-04T15:03:23.615395+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -3333,6 +3363,12 @@
           "ts": "2026-06-02T13:03:13.437987+00:00",
           "current_bid_eur": 1200.0,
           "bids_count": 4,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-04T15:03:23.615395+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -6337,6 +6373,111 @@
       "snapshots": [
         {
           "ts": "2026-06-04T10:21:36.712665+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "8affee6b-f68f-42e2-bb81-b64e6a3f11fc": {
+      "url": "https://www.troostwijkauctions.com/en/l/citroen-jumper-2-2-diesel-van-A7-47288-1130",
+      "model_token": "jumper",
+      "year": 2012,
+      "snapshots": [
+        {
+          "ts": "2026-06-04T15:03:23.615395+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "96165084-9074-44d0-b1d6-452a4c310e86": {
+      "url": "https://www.troostwijkauctions.com/en/l/1978-volkswagen-t2-bus-%257C-classic-vw-transporter-A1-47138-64",
+      "model_token": "transporter",
+      "year": 1978,
+      "snapshots": [
+        {
+          "ts": "2026-06-04T15:03:23.615395+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "02ae185e-e04f-4b04-a839-84cf1e47b729": {
+      "url": "https://www.troostwijkauctions.com/en/l/1995-volkswagen-t2-bus-%257C-classic-vw-transporter-A1-47139-12",
+      "model_token": "transporter",
+      "year": 1995,
+      "snapshots": [
+        {
+          "ts": "2026-06-04T15:03:23.615395+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "7be45649-9453-4bf4-be63-0918130c8af0": {
+      "url": "https://www.troostwijkauctions.com/en/l/1989-volkswagen-t2-kombi-%257C-classic-vw-transporter-A1-47138-109",
+      "model_token": "transporter",
+      "year": 1989,
+      "snapshots": [
+        {
+          "ts": "2026-06-04T15:03:23.615395+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "98635f14-0f48-4e88-ab40-bb7b6b829ae3": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-vito-e-car-2021-A3-43546-8005",
+      "model_token": "vito",
+      "year": 2021,
+      "snapshots": [
+        {
+          "ts": "2026-06-04T15:03:23.615395+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2b2a3303-37cc-4ee3-b597-1b8c32db97e2": {
+      "url": "https://www.troostwijkauctions.com/en/l/aluminum-roof-rack-for-opel-vivaro-with-gangway-and-loading-roller-A3-43542-11019",
+      "model_token": "vivaro",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-04T15:03:23.615395+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "73b2519b-b760-4219-9721-0ea8fc567f2b": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-trafic-ambulance-belgian-papers-A1-39735-100",
+      "model_token": "trafic",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-04T15:03:23.615395+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
