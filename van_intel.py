@@ -47,7 +47,11 @@ WHITELIST_GROUPS: dict = {
         "label": "Ford Transit Custom / Tourneo Custom",
         # Tourneo Custom is the passenger version of Transit Custom —
         # same body, factory 8-9 seats (great for 6-seat camper conversion).
-        "tokens": ["tourneo custom", "transit custom"],
+        # "transit" (bare) is a WEAK token: Troostwijk often mislabels Transit
+        # Customs as plain "Transit" in the lot title. It soft-passes with a
+        # -20 score penalty in score_small_van so confirmed Transit Customs
+        # rank higher. Multi-word "transit custom" wins via sort priority.
+        "tokens": ["tourneo custom", "transit custom", "transit"],
         "required_length": [2],
         "required_height": [1],
         "min_year": 2016,
@@ -69,14 +73,15 @@ WHITELIST_GROUPS: dict = {
         "min_year": 2016,
     },
     "scudo_gen3": {
-        "label": "Fiat Scudo (gen 3, 2022+)",
-        # Rebadged Expert/Jumpy/ProAce on the EMP2 platform. Distinct
-        # group with min_year=2022 to exclude the older Scudo (2007-2016,
-        # different & smaller vehicle).
+        "label": "Fiat Scudo (gen 3, 2016+)",
+        # Rebadged Expert/Jumpy/ProAce on the EMP2 platform. Gen 2 Scudo
+        # (2006-2016) was a different vehicle but shares the Expert Gen 2
+        # chassis — also valid, so min_year follows the expert_jumpy group
+        # (2016). Pre-2016 Scudo rejects on Euro 4/5 emission anyway.
         "tokens": ["scudo"],
         "required_length": [2],
         "required_height": None,
-        "min_year": 2022,
+        "min_year": 2016,
     },
     "vivaro_trafic_primastar_l2": {
         "label": "Opel Vivaro / Renault Trafic / Nissan Primastar / Fiat Talento",
@@ -89,26 +94,28 @@ WHITELIST_GROUPS: dict = {
     },
     "t6_1_lwb": {
         "label": "VW Transporter T6 + T6.1 (Multivan / Caravelle / California)",
-        # T6 (2015-2019) and T6.1 (2019.5+) share the same LWB L2 chassis
-        # and are both Euro 6 from launch. The BiTDI 204hp engine is T6-only
-        # — top of the range, the prime camper-base engine for this group.
-        # min_year=2015 covers the full Euro-6 T6 era.
+        # T6 (2015-2019) and T6.1 (2019.5+) share the LWB L2 chassis and
+        # are both Euro 6 from launch. L1 (SWB) is also allowed — Caravelle
+        # and Kombi variants in SWB are valid 6-seat adventure vans, just
+        # slightly penalised in scoring (-10) vs L2 for shorter sleeping space.
         "tokens": ["t6.1", "t6_1", "transporter"],
-        "required_length": [2],
+        "required_length": [1, 2],
         "required_height": None,
         "min_year": 2015,
     },
     "psa_l1l2h1": {
-        "label": "Peugeot Boxer / Fiat Ducato / Citroen Jumper (L1H1 or L2H1 only)",
-        # Only the low-roof short/medium variants qualify — the L3H2 / L4H3
-        # big-van conversions are out of scope (too large for 6-seat camper).
-        # H1 is therefore a HARD required height; L1 and L2 are accepted.
-        # Unknown size → soft-pass (lot may still be H1/L2 but not stated).
-        # Confirmed H2, H3, L3, L4 → reject.
+        "label": "Peugeot Boxer / Fiat Ducato / Citroen Jumper (L2–L3, any height)",
+        # Sevel-platform large van. L3H2 Ducato/Boxer is the EU camper gold
+        # standard — it was wrong to exclude it. New rules:
+        #   L1 (short, 2.8t) → reject (too small for practical camping)
+        #   L2 or L3         → accepted (L3H2 is preferred)
+        #   L4               → reject (too large / MAUT territory)
+        #   H1 / H2 / H3    → all accepted (H3 is a valid full-stand-up height)
+        # Unknown size → soft-pass (as always).
         # Min-year 2016 = Euro 6 era for this platform.
         "tokens": ["ducato", "jumper", "boxer"],
-        "required_length": [1, 2],
-        "required_height": [1],
+        "required_length": [2, 3],
+        "required_height": None,
         "min_year": 2016,
     },
     "vito_v_class_l2": {
@@ -898,7 +905,7 @@ _GROUP_QUALITY = {
     "scudo_gen3":                  0.92,   # rebadged Expert; thin used-market data
     "vivaro_trafic_primastar_l2":  0.88,   # NV300 platform — ~12% below Transit Custom
     "t6_1_lwb":                    1.00,   # T6.1 California ecosystem rivals Transit Custom
-    "psa_l1l2h1":                  0.85,   # bigger / heavier; over-spec for stealth camper
+    "psa_l1l2h1":                  0.90,   # L3H2 Ducato is the EU camper gold standard; raised from 0.85
     "vito_v_class_l2":             0.95,   # premium chassis but quirky for DIY conversion
     "hyundai_staria":              0.90,   # excellent for passenger use; new platform, rare in NL
 }
@@ -993,10 +1000,11 @@ def _offroad_bonus(vehicle: dict) -> int:
 
 def score_small_van(vehicle: dict) -> int:
     """Return a 0-100 camper-candidate suitability score."""
-    variant    = vehicle.get("variant") or vehicle.get("van_type")
-    fuel       = vehicle.get("fuel")
-    deal_ratio = vehicle.get("deal_ratio")
-    group      = vehicle.get("model_group") or ""
+    variant       = vehicle.get("variant") or vehicle.get("van_type")
+    fuel          = vehicle.get("fuel")
+    deal_ratio    = vehicle.get("deal_ratio")
+    group         = vehicle.get("model_group") or ""
+    matched_token = vehicle.get("matched_token")
 
     a = _svs_dual_use(vehicle)
     b = _svs_city_practicality(variant, fuel)
@@ -1006,6 +1014,27 @@ def score_small_van(vehicle: dict) -> int:
     raw = a + b + c + d
     quality = _GROUP_QUALITY.get(group, 0.90)
     base = round(raw * quality)
+
+    # Unknown-size penalty: listings without any explicit L/H code are
+    # uncertain — could be any size. Prefer listings that tell you what you're
+    # getting. Partial knowledge (one dimension unknown) gets a smaller penalty.
+    if variant is None:
+        base = max(0, base - 10)
+    elif "?" in variant:
+        base = max(0, base - 5)
+
+    # VW Transporter L1 (SWB / Caravelle Kurz): useful 6-seat van but
+    # shorter living space than L2 (LWB). Penalise slightly vs L2.
+    if group == "t6_1_lwb" and variant and variant.startswith("L1"):
+        base = max(0, base - 10)
+
+    # Weak transit match: "transit" (bare) fires when the lot says "Ford
+    # Transit" without "Custom". May be a mislabelled Transit Custom; may
+    # be a full-size Transit. Penalise heavily so confirmed Transit Customs
+    # always outrank these uncertain lots.
+    if matched_token == "transit":
+        base = max(0, base - 20)
+
     return min(base + _passenger_bonus(vehicle) + _high_power_bonus(vehicle) + _offroad_bonus(vehicle), 100)
 
 
@@ -1230,6 +1259,7 @@ def evaluate(vehicle) -> Evaluation:
         "emission_standard": getattr(vehicle, "emission_standard", None),
         "variant": cls.variant,
         "model_group": cls.group,
+        "matched_token": cls.matched_token,
         "deal_ratio": getattr(vehicle, "deal_ratio", None),
         "final_cost_estimate": getattr(vehicle, "final_cost_estimate", None),
     }

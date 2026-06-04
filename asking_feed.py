@@ -197,6 +197,7 @@ def build_feed(price_cache_path: str = "output/price_cache.json") -> List[dict]:
         v["model_group"]               = cls.group
         v["variant"]                   = cls.variant
         v["classification_confidence"] = cls.confidence
+        v["matched_token"]             = cls.matched_token
         v["score"]                     = score_small_van(v)
         # Conversion cost + total project cost. For asking listings,
         # acquisition cost = asking price (no premium/VAT/transport math
