@@ -746,10 +746,10 @@
       "remarks": null,
       "additional_information": null,
       "lot_id": "2d411857-d325-43db-bd73-650591b4f34c",
-      "current_bid_eur": 10250.0,
+      "current_bid_eur": 10500.0,
       "buyer_premium_pct": 19.0,
       "total_cost_eur": null,
-      "bids_count": 17,
+      "bids_count": 18,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -786,7 +786,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-03T21:20:35.024211+00:00"
+      "last_scrape_at": "2026-06-04T03:17:29.847197+00:00"
     },
     "https://www.vavato.com/en/l/2022-ford-tourneo-custom-%25288-seats%2529-A3-44485-11918": {
       "title": "2022 Ford Tourneo Custom - (8 seats)",
@@ -1122,6 +1122,13 @@
       "source": "troostwijk",
       "platform": "TWK",
       "thumbnail_url": "https://media.tbauctions.com/image-media/0bedfbf6-a6f2-47fe-b0ba-37d4375c145d/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/0bedfbf6-a6f2-47fe-b0ba-37d4375c145d/file",
+        "https://media.tbauctions.com/image-media/6a264c24-7edd-48f0-94c8-35371815f3e5/file",
+        "https://media.tbauctions.com/image-media/b712feaf-ffa5-4249-8665-4e56512cd8c1/file",
+        "https://media.tbauctions.com/image-media/1c4aa929-e367-41b1-891a-46284579e358/file",
+        "https://media.tbauctions.com/image-media/a72de118-d935-40c7-8ead-b6c22cbe3aa6/file"
+      ],
       "year": 2020,
       "first_registration": null,
       "km": 150309,
@@ -1149,10 +1156,10 @@
       "remarks": "Signs of wear/damage and wear all around by age/mileage. Various damage all around. Automatic transmission does not shift through, needs to be checked. Cracks windshield. \n<br><br/> \nTastefully executed Transit Custom Double cabin, from the 1st Dutch owner.\n<br><br/> \nOptions;\nDouble cabin, Double sliding door, Double rear door, Apple Carplay, Windshield heating, Reversing camera, Alloy wheels 18 inches, Cruise control, Automatic air conditioning, Front and rear parking sensors, Front seat armrest, Both front seats adjustable in height, Automatic lighting, DAB, Multifunction leather steering wheel, Heated seats, Electric folding exterior mirrors, etc.",
       "additional_information": null,
       "lot_id": "c61001a9-cd02-406a-8f80-42287ab479b0",
-      "current_bid_eur": 5200.0,
+      "current_bid_eur": 5600.0,
       "buyer_premium_pct": 19.0,
       "total_cost_eur": null,
-      "bids_count": 2,
+      "bids_count": 4,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -1190,7 +1197,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-02T15:28:02.952606+00:00"
+      "last_scrape_at": "2026-06-04T03:17:29.847197+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/ford-transit-custom-300-2-0-tdci-double-cab-limited-l2h1-170hp-automatic-2020-%2528original-nl%2529-vhd-68-g-A1-44369-3": {
       "title": "Ford Transit Custom 300 2.0 TDCI Double Cab Limited L2H1 170HP Automatic 2020 (Original-NL), VHD-68-G",
@@ -2248,7 +2255,7 @@
       "condition": "NOT_CHECKED",
       "appearance": "NOT_CHECKED",
       "vat_margin": false,
-      "bidding_status": "BIDDING_NOT_YET_OPENED",
+      "bidding_status": "BIDDING_OPEN",
       "auction_start": "2026-06-03T16:00:00Z",
       "auction_end": null,
       "remarks": "Maintenance booklet available digitally.\nNo inspection certificate.",
@@ -2295,7 +2302,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-03T11:06:55.885603+00:00"
+      "last_scrape_at": "2026-06-04T03:17:29.847197+00:00"
     },
     "https://www.vavato.com/en/l/2017-volkswagen-transporter-204hp-A3-44487-5025": {
       "title": "2017 Volkswagen Transporter - 204hp ",
@@ -2588,7 +2595,7 @@
       "condition": "NOT_CHECKED",
       "appearance": "NOT_CHECKED",
       "vat_margin": false,
-      "bidding_status": "BIDDING_NOT_YET_OPENED",
+      "bidding_status": "BIDDING_OPEN",
       "auction_start": "2026-06-03T16:00:00Z",
       "auction_end": null,
       "remarks": "Maintenance booklet available digitally.\nNo inspection certificate.",
@@ -2635,7 +2642,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-03T11:06:55.885603+00:00"
+      "last_scrape_at": "2026-06-04T03:17:29.847197+00:00"
     },
     "https://www.vavato.com/en/l/fiat-scudo-van-A3-44487-35662": {
       "title": "Fiat Scudo Van",
@@ -19824,6 +19831,156 @@
       "reason": "brand_not_in_whitelist",
       "title": "Peugeot 407 SW 2.0-16V ST 2007 | 18-XG-US",
       "rejected_at": "2026-06-03T21:20:35.024211+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/car-rain-cover-fiat-lancia-A1-41683-333": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Car rain cover Fiat Lancia",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-t1-bus-1963-A1-47413-101": {
+      "reason": "vehicle_type: bus / coach",
+      "title": "Volkswagen T1 Bus 1963",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2020-volkswagen-crafter-syn1e-light-truck-A3-44487-18434": {
+      "reason": "body_mismatch: light truck (chassis variant)",
+      "title": "2020 Volkswagen Crafter SYN1E Light Truck",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-electric-kids-car-A1-41683-394": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes Benz Electric Kids Car",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-rims-and-tire-sets-%25284x%2529-A1-46733-61": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes Rims and Tire Sets (4x)",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1978-mercedes-benz-350-slc-class-classic-car-A1-41683-81": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1978 Mercedes-Benz 350 SLC-class Classic car",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1995-mercedes-benz-408-d-xi-408d-commercial-vehicle-A1-41683-104": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1995 Mercedes-Benz 408 D-XI 408D Commercial Vehicle",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2004-mercedes-benz-c-class-combi-240-elegance-passenger-car-A1-41683-13": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2004 Mercedes-Benz C-Class Combi 240 Elegance Passenger car",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/seat-cordoba-1-6-16v-trendstyle-2007-%257C-38-xs-nh-A1-44155-4515": {
+      "reason": "mileage_too_high: 322770km",
+      "title": "SEAT Cordoba 1.6-16V Trendstyle 2007 | 38-XS-NH",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/porsche-cayenne-3-6-youngtimer-6-xjn-50-A1-47011-52": {
+      "reason": "mileage_too_high: 291554km",
+      "title": "Porsche Cayenne 3.6 YOUNGTIMER 6-XJN-50",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2005-ford-focus-c-max-passenger-car-A1-46403-51": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2005 Ford Focus c Max Passenger Car",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-grand-c-max-1-6-scti-titanium-40-rng-6-A1-47011-16": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford Grand C-Max 1.6 SCTi Titanium 40-RNG-6",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2006-subaru-forester-2-5-xt-passenger-car-A1-46710-138": {
+      "reason": "mileage_too_high: 272506km",
+      "title": "2006 Subaru Forester 2.5 xt Passenger car",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/toyota-7fbmf50-forklift-sideshift-fork-positioner-to-outside-the-carriage-A1-40264-3": {
+      "reason": "vehicle_type: forklift",
+      "title": "Toyota 7FBMF50 Forklift Sideshift - fork positioner to outside the carriage",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.vavato.com/en/l/toyota-7fbmf50-forklift-sideshift-fork-positioner-to-outside-the-carriage-A1-40264-3": {
+      "reason": "vehicle_type: forklift",
+      "title": "Toyota 7FBMF50 Forklift Sideshift - fork positioner to outside the carriage",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.vavato.com/en/l/toyota-2020-yaris-A3-43541-12452": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Toyota - 2020 - Yaris",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/opel-kadett-race-car-A3-43541-5011": {
+      "reason": "brand_not_in_whitelist",
+      "title": "opel - Kadett - Race car",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/renault-super-5-oldtimer-tractor-A1-41683-106": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Renault super 5 Oldtimer tractor",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/renault-super-53-88-oldtimer-tractor-A1-41683-108": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Renault Super 53/88 Oldtimer tractor",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2003-renault-laguna-grand-tour-1-8-16v-expression-passenger-car-A1-41683-99": {
+      "reason": "mileage_too_high: 304879km",
+      "title": "2003 Renault Laguna Grand Tour 1.8-16V Expression Passenger Car",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2006-nissan-titan-v8-passenger-car-lpg-A1-41683-1": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2006 Nissan Titan V8 Passenger Car LPG",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-seat-ibiza-airco-1-4-16v-trendstyle-passenger-car-A1-46710-274": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2007 SEAT Ibiza airco 1.4-16V Trendstyle Passenger car",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-transit-westfalia-nugget-1988-A3-44487-4696": {
+      "reason": "vehicle_type: motorhome",
+      "title": "Ford Transit Westfalia Nugget - 1988",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.vavato.com/en/l/ford-fdt-10200se-emergency-power-generator-generator-diesel-2026-A1-40264-73": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - FDT 10200SE - Emergency power generator / generator diesel 2026",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-dearborn-oldtimer-tractor-A1-41683-75": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford Dearborn Oldtimer tractor",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-1978-f350-passenger-car-A1-47136-124": {
+      "reason": "seats_below_5: 2",
+      "title": "ford - 1978 - F350 - - Passenger car",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-2014-focus-wagon-1-6-tdci-eco-l-ti-2-ttf-90-A1-40726-121": {
+      "reason": "mileage_too_high: 309636km",
+      "title": "Ford 2014 Focus Wagon 1.6 TDCI ECO. L. Ti., 2-TTF-90",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-focus-1-6-trend-91-zr-xg-A1-40726-475": {
+      "reason": "mileage_too_high: 335701km",
+      "title": "Ford - Focus - 1.6 Trend ,91-ZR-XG",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-focus-c-max-1-8-tdci-futura-61-rr-kr-A1-40726-416": {
+      "reason": "mileage_too_high: 379041km",
+      "title": "Ford Focus C-Max 1.8 TDCi Futura, 61-RR-KR",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/peugeot-2008-1-2-puretech-allure-110hp-2018-%2528original-nl%2529-rl-527-z-A1-44369-71": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Peugeot 2008 1.2 PureTech Allure 110hp 2018 (Original-NL), RL-527-Z",
+      "rejected_at": "2026-06-04T03:17:29.847197+00:00"
     }
   }
 }
