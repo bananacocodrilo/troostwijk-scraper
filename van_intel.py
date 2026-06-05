@@ -175,6 +175,7 @@ SMALLER_SIBLINGS: List[str] = [
     "caddy",
     "doblo", "fiorino",
     "nemo", "bipper",
+    "proace city",       # B-segment Berlingo-platform van, NOT the C-segment ProAce
     "expert traveller",  # 9-seat minibus variant of Expert
 ]
 
@@ -650,14 +651,36 @@ def strict_filter(vehicle, classification: Classification) -> Tuple[bool, Option
     *confirmed* violations of size / year / Euro / seats reject. Unknown
     values pass. The classifier itself is a hard gate — group=None
     rejects unconditionally as ``brand_not_in_whitelist``.
+
+    Seat-first policy: confirmed ≥ 6 seats overrides size restrictions.
+    A 9-seat Ducato L4H2 is a valid camper candidate regardless of length;
+    the vehicle explicitly signals passenger use. Size rules only apply
+    when seats are unknown (soft gate) or 5 (still check size).
     """
     if classification.group is None:
         return False, "brand_not_in_whitelist"
 
     rules = WHITELIST_GROUPS[classification.group]
 
-    # Size — parse the variant string back to L/H ints
-    if classification.variant:
+    # Seats — resolve first; drives size-gate bypass below.
+    seats = getattr(vehicle, "seats", None) if not isinstance(vehicle, dict) else vehicle.get("seats")
+    title = getattr(vehicle, "title", None) if not isinstance(vehicle, dict) else vehicle.get("title")
+    if seats is None:
+        # Title-fallback: many marketplace listings put the passenger count
+        # directly in the title — "3-persoons", "2 PERSOONS", "5 seater",
+        # "2p.", etc. A confirmed extraction is treated as the same hard
+        # signal as a structured `seats` field.
+        seats = _seats_from_text(title)
+    if seats is not None and seats < 5:
+        return False, f"seats_below_5: {seats}"
+
+    # Confirmed ≥ 6 seats → passenger van regardless of L/H code.
+    # Skip size gate entirely: the buyer already knows what body they're
+    # getting; a 9-seat Ducato L4H2 or a T6 Caravelle SWB are both valid.
+    confirmed_crew = seats is not None and seats >= 6
+
+    # Size — parse the variant string back to L/H ints (skipped for confirmed crew vans)
+    if not confirmed_crew and classification.variant:
         m = re.match(r"L([1-4?])H([1-3?])$", classification.variant)
         if m:
             L = None if m.group(1) == "?" else int(m.group(1))
@@ -685,21 +708,6 @@ def strict_filter(vehicle, classification: Classification) -> Tuple[bool, Option
         es = str(emission).lower()
         if re.search(r"\beuro\s*[12345]\b|\beuro[12345]\b", es) and "euro 6" not in es and "euro6" not in es:
             return False, f"emission_below_euro6: {emission}"
-
-    # Seats — soft gate: only reject confirmed seats < 5.
-    # 5-seat Double Cab configurations (2 front + 3 rear bench) are valid
-    # camper candidates; a sub-5 seat count is the hard cargo-van signal.
-    seats = getattr(vehicle, "seats", None) if not isinstance(vehicle, dict) else vehicle.get("seats")
-    title = getattr(vehicle, "title", None) if not isinstance(vehicle, dict) else vehicle.get("title")
-    if seats is None:
-        # Title-fallback: many marketplace listings (notably AutoTrack, which
-        # doesn't expose `seats` per listing in its search feed) put the
-        # passenger count directly in the title — "3-persoons", "2 PERSOONS",
-        # "5 seater", "2p.", etc. A confirmed extraction is treated as the
-        # same hard signal as a structured `seats` field.
-        seats = _seats_from_text(title)
-    if seats is not None and seats < 5:
-        return False, f"seats_below_5: {seats}"
 
     # Body-type fallback (when seats still unknown): cargo-only body types
     # (Mercedes Vito 111 cargo, panel-van Boxer/Ducato, etc.) are 2-3 seats

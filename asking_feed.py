@@ -18,8 +18,22 @@ import statistics
 from typing import Dict, List, Optional, Tuple
 
 from cost_model import compute_conversion_cost
-from van_intel import classify_vehicle, score_small_van, strict_filter
+from van_intel import (
+    HARD_REJECT_BODY, HARD_REJECT_DAMAGE, HARD_REJECT_TYPE,
+    _check_list, classify_vehicle, score_small_van, strict_filter,
+)
 import risk
+
+# Hard-reject patterns that apply to asking-price listings.
+# We apply HARD_REJECT_BODY and HARD_REJECT_DAMAGE in full.
+# HARD_REJECT_TYPE is applied minus the bare \bbus\b token, which fires
+# on legitimate "Jumpy Bus" / "Talento Bus" passenger-trim names.
+_ASKING_HARD_REJECT_BODY   = HARD_REJECT_BODY
+_ASKING_HARD_REJECT_DAMAGE = HARD_REJECT_DAMAGE
+_ASKING_HARD_REJECT_TYPE   = [
+    (pat, label) for pat, label in HARD_REJECT_TYPE
+    if label not in ("bus / coach",)   # "bus" hits Jumpy Bus, Talento Bus
+]
 
 # ---------------------------------------------------------------------------
 # Source metadata
@@ -186,6 +200,20 @@ def build_feed(price_cache_path: str = "output/price_cache.json") -> List[dict]:
     for listing in raw_listings:
         v = _to_vehicle(listing)
         if v is None:
+            continue
+
+        # Hard filters — same body/type/damage gates as the auction pipeline.
+        # These catch refrigerated vans (koelwagen), box trucks (bakwagen),
+        # pickups, campers-already-converted, etc. that the whitelist
+        # classifier alone can't distinguish from valid candidates.
+        haystack = (v.get("title") or "").lower()
+        hard_reject = (
+            _check_list(haystack, _ASKING_HARD_REJECT_BODY)
+            or _check_list(haystack, _ASKING_HARD_REJECT_DAMAGE)
+            or _check_list(haystack, _ASKING_HARD_REJECT_TYPE)
+        )
+        if hard_reject:
+            rejected_count += 1
             continue
 
         cls = classify_vehicle(v["title"], "")

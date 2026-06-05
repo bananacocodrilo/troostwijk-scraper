@@ -149,13 +149,16 @@ def _parse_listing(item: dict) -> Optional[dict]:
     }
 
 
-# Marktplaats VIP (per-listing detail) page exposes the seat count in
-# two places: the JSON-LD blob (`vehicleSeatingCapacity`) and the
-# attribute table (`numberOfSeats` with Dutch label "Aantal stoelen").
-# Either form yields the same integer — match either.
+# Marktplaats VIP (per-listing detail) page embeds structured attributes
+# as a JSON array inside the page HTML. The actual format (confirmed from
+# live pages) is:
+#   {"key":"numberOfSeats","label":"Aantal stoelen","value":"3","dataType":"Integer"}
+# Old regex was matching "numberOfSeats","label":... (wrong — key: prefix required).
+# Updated to fish for the key field then grab the value field nearby.
+# Also handle the older JSON-LD vehicleSeatingCapacity form as fallback.
 _VIP_SEATS_RE = re.compile(
-    r'"numberOfSeats","label":"Aantal\s+stoelen","value":"(\d+)"'
-    r'|"vehicleSeatingCapacity":"(\d+)"',
+    r'"key"\s*:\s*"numberOfSeats"[^}]{0,120}?"value"\s*:\s*"?(\d+)'
+    r'|"vehicleSeatingCapacity"\s*:\s*"?(\d+)',
 )
 _VIP_BASE = "https://www.marktplaats.nl"
 

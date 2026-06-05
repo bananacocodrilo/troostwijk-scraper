@@ -1,5 +1,47 @@
 [
   {
+    "title": "Opel Vivaro Combi 1.6 CDTI L1H1*Navi*Airco*9-Persoons*EXPORT",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2406210399-opel-vivaro-combi-1-6-cdti-l1h1-navi-airco-9-persoons-export",
+    "source": "marktplaats",
+    "year": 2018,
+    "km": 381850,
+    "price_eur": 7900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/5ba9fb58-0f1a-4d54-ae59-67321e79017b?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "vivaro_trafic_primastar_l2",
+    "variant": "L1H1",
+    "classification_confidence": "high",
+    "matched_token": "vivaro",
+    "score": 78,
+    "est_conversion_cost_eur": 2500,
+    "est_conversion_cost_low_eur": 1500,
+    "est_conversion_cost_high_eur": 3500,
+    "conversion_effort": "minimal",
+    "total_project_cost_eur": 10400.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (47,731/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (381,850) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 196,
+    "market_median_eur": 12900,
+    "price_pct_vs_median": -38.8,
+    "is_underpriced": true
+  },
+  {
     "title": "Ford Transit Custom Tourneo 2.0 TDCI 130 pk L2 EXPORT EUR6 9",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2401931823-ford-transit-custom-tourneo-2-0-tdci-130-pk-l2-export-eur6-9",
     "source": "marktplaats",
@@ -197,9 +239,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 25,
-    "market_median_eur": 12850,
-    "price_pct_vs_median": -22.6,
+    "market_sample_size": 26,
+    "market_median_eur": 13472,
+    "price_pct_vs_median": -26.1,
     "is_underpriced": true
   },
   {
@@ -239,9 +281,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 43,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -24.1,
+    "market_sample_size": 42,
+    "market_median_eur": 19850,
+    "price_pct_vs_median": -24.4,
     "is_underpriced": true
   },
   {
@@ -789,9 +831,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 43,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -34.4,
+    "market_sample_size": 42,
+    "market_median_eur": 19850,
+    "price_pct_vs_median": -34.8,
     "is_underpriced": true
   },
   {
@@ -1130,9 +1172,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 73,
-    "market_median_eur": 16950,
-    "price_pct_vs_median": -44.0,
+    "market_sample_size": 72,
+    "market_median_eur": 16948,
+    "price_pct_vs_median": -43.9,
     "is_underpriced": true
   },
   {
@@ -2406,9 +2448,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 19,
-    "market_median_eur": 22450,
-    "price_pct_vs_median": -33.6,
+    "market_sample_size": 20,
+    "market_median_eur": 22675,
+    "price_pct_vs_median": -34.3,
     "is_underpriced": true
   },
   {
@@ -2437,9 +2479,9 @@
     "total_project_cost_eur": 28700.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 19,
-    "market_median_eur": 22450,
-    "price_pct_vs_median": -29.0,
+    "market_sample_size": 20,
+    "market_median_eur": 22675,
+    "price_pct_vs_median": -29.7,
     "is_underpriced": true
   },
   {
@@ -2474,9 +2516,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 19,
-    "market_median_eur": 22450,
-    "price_pct_vs_median": -29.0,
+    "market_sample_size": 20,
+    "market_median_eur": 22675,
+    "price_pct_vs_median": -29.7,
     "is_underpriced": true
   },
   {
@@ -2555,9 +2597,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 19,
-    "market_median_eur": 22450,
-    "price_pct_vs_median": -24.3,
+    "market_sample_size": 20,
+    "market_median_eur": 22675,
+    "price_pct_vs_median": -25.0,
     "is_underpriced": true
   },
   {
@@ -2660,9 +2702,9 @@
     "total_project_cost_eur": 31635.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 19,
-    "market_median_eur": 22450,
-    "price_pct_vs_median": -15.9,
+    "market_sample_size": 20,
+    "market_median_eur": 22675,
+    "price_pct_vs_median": -16.7,
     "is_underpriced": true
   },
   {
@@ -3816,7 +3858,7 @@
     "total_project_cost_eur": 21749.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": -17.4,
     "is_underpriced": true
@@ -5073,7 +5115,7 @@
     "total_project_cost_eur": 26700.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": -26.2,
     "is_underpriced": true
@@ -5264,7 +5306,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": -15.6,
     "is_underpriced": true
@@ -5301,7 +5343,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": -15.3,
     "is_underpriced": true
@@ -6426,8 +6468,8 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 73,
-    "market_median_eur": 16950,
+    "market_sample_size": 72,
+    "market_median_eur": 16948,
     "price_pct_vs_median": -29.5,
     "is_underpriced": true
   },
@@ -6963,9 +7005,9 @@
     "total_project_cost_eur": 18450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 62,
-    "market_median_eur": 9500,
-    "price_pct_vs_median": -16.3,
+    "market_sample_size": 60,
+    "market_median_eur": 9748,
+    "price_pct_vs_median": -18.4,
     "is_underpriced": true
   },
   {
@@ -7226,7 +7268,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": -21.2,
     "is_underpriced": true
@@ -7338,9 +7380,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 25,
-    "market_median_eur": 12850,
-    "price_pct_vs_median": -53.7,
+    "market_sample_size": 26,
+    "market_median_eur": 13472,
+    "price_pct_vs_median": -55.8,
     "is_underpriced": true
   },
   {
@@ -7448,9 +7490,9 @@
     "total_project_cost_eur": 19250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 25,
-    "market_median_eur": 12850,
-    "price_pct_vs_median": -31.9,
+    "market_sample_size": 26,
+    "market_median_eur": 13472,
+    "price_pct_vs_median": -35.1,
     "is_underpriced": true
   },
   {
@@ -7534,9 +7576,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 25,
-    "market_median_eur": 12850,
-    "price_pct_vs_median": -30.0,
+    "market_sample_size": 26,
+    "market_median_eur": 13472,
+    "price_pct_vs_median": -33.2,
     "is_underpriced": true
   },
   {
@@ -7704,9 +7746,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 73,
-    "market_median_eur": 16950,
-    "price_pct_vs_median": -32.2,
+    "market_sample_size": 72,
+    "market_median_eur": 16948,
+    "price_pct_vs_median": -32.1,
     "is_underpriced": true
   },
   {
@@ -9740,9 +9782,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": -39.1,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": -39.3,
     "is_underpriced": true
   },
   {
@@ -10029,9 +10071,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 43,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -59.7,
+    "market_sample_size": 42,
+    "market_median_eur": 19850,
+    "price_pct_vs_median": -59.9,
     "is_underpriced": true
   },
   {
@@ -10102,9 +10144,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 43,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -58.2,
+    "market_sample_size": 42,
+    "market_median_eur": 19850,
+    "price_pct_vs_median": -58.4,
     "is_underpriced": true
   },
   {
@@ -10262,9 +10304,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": -24.8,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": -25.1,
     "is_underpriced": true
   },
   {
@@ -10337,42 +10379,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": -24.4,
-    "is_underpriced": true
-  },
-  {
-    "title": "Mercedes Vito AMBULANCE 2015 - BELGISCH VOERTUIG - COMPLEET",
-    "url": "https://www.2dehands.be/v/auto-s/mercedes-benz/m2406904942-mercedes-vito-ambulance-2015-belgisch-voertuig-compleet",
-    "source": "2dehands",
-    "year": 2015,
-    "km": null,
-    "price_eur": 9200.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/27465bb3-d65a-44db-b9d9-a2bb38a24eb9?rule=ecg_mp_eps$_82.jpg",
-      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/db621e46-e4cc-48d7-a9cc-28a4b424ef34?rule=ecg_mp_eps$_82.jpg",
-      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/9b418198-f2e1-4f87-8ed3-2feef9f349fb?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "vito_v_class_l2",
-    "variant": null,
-    "classification_confidence": "low",
-    "matched_token": "vito",
-    "score": 16,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 19700.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 43,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -53.4,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": -24.7,
     "is_underpriced": true
   },
   {
@@ -10403,9 +10412,9 @@
     "total_project_cost_eur": 19945.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": -20.6,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": -21.0,
     "is_underpriced": true
   },
   {
@@ -10932,9 +10941,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 43,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -44.3,
+    "market_sample_size": 42,
+    "market_median_eur": 19850,
+    "price_pct_vs_median": -44.6,
     "is_underpriced": true
   },
   {
@@ -11516,9 +11525,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 43,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -34.4,
+    "market_sample_size": 42,
+    "market_median_eur": 19850,
+    "price_pct_vs_median": -34.8,
     "is_underpriced": true
   },
   {
@@ -11886,9 +11895,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 43,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -26.6,
+    "market_sample_size": 42,
+    "market_median_eur": 19850,
+    "price_pct_vs_median": -27.0,
     "is_underpriced": true
   },
   {
@@ -13633,9 +13642,9 @@
     "total_project_cost_eur": 15499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 62,
-    "market_median_eur": 9500,
-    "price_pct_vs_median": -47.4,
+    "market_sample_size": 60,
+    "market_median_eur": 9748,
+    "price_pct_vs_median": -48.7,
     "is_underpriced": true
   },
   {
@@ -13664,9 +13673,9 @@
     "total_project_cost_eur": 15499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 62,
-    "market_median_eur": 9500,
-    "price_pct_vs_median": -47.4,
+    "market_sample_size": 60,
+    "market_median_eur": 9748,
+    "price_pct_vs_median": -48.7,
     "is_underpriced": true
   },
   {
@@ -13706,7 +13715,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": -51.8,
     "is_underpriced": true
@@ -13781,7 +13790,7 @@
     "total_project_cost_eur": 16500.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": -45.0,
     "is_underpriced": true
@@ -13812,7 +13821,7 @@
     "total_project_cost_eur": 16500.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": -45.0,
     "is_underpriced": true
@@ -13854,7 +13863,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": -43.1,
     "is_underpriced": true
@@ -13958,7 +13967,7 @@
     "total_project_cost_eur": 17400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": -36.7,
     "is_underpriced": true
@@ -14073,9 +14082,9 @@
     "total_project_cost_eur": 17499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 62,
-    "market_median_eur": 9500,
-    "price_pct_vs_median": -26.3,
+    "market_sample_size": 60,
+    "market_median_eur": 9748,
+    "price_pct_vs_median": -28.2,
     "is_underpriced": true
   },
   {
@@ -14179,7 +14188,7 @@
     "total_project_cost_eur": 17750.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": -33.5,
     "is_underpriced": true
@@ -14351,7 +14360,7 @@
     "total_project_cost_eur": 18450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": -27.1,
     "is_underpriced": true
@@ -14382,9 +14391,9 @@
     "total_project_cost_eur": 18450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 62,
-    "market_median_eur": 9500,
-    "price_pct_vs_median": -16.3,
+    "market_sample_size": 60,
+    "market_median_eur": 9748,
+    "price_pct_vs_median": -18.4,
     "is_underpriced": true
   },
   {
@@ -14481,7 +14490,7 @@
     "total_project_cost_eur": 18495.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": -26.7,
     "is_underpriced": true
@@ -15264,7 +15273,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": -36.5,
     "is_underpriced": true
@@ -15373,7 +15382,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": -26.2,
     "is_underpriced": true
@@ -15445,7 +15454,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": -15.6,
     "is_underpriced": true
@@ -15762,6 +15771,39 @@
     "is_underpriced": false
   },
   {
+    "title": "Ford Tourneo Custom 2.0 TDCI L1H1 TITANIUM 8 PLACES CUIR GPS",
+    "url": "https://www.2dehands.be/v/auto-s/ford/m2405113451-ford-tourneo-custom-2-0-tdci-l1h1-titanium-8-places-cuir-gps",
+    "source": "2dehands",
+    "year": 2020,
+    "km": 41150,
+    "price_eur": 34990.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/a4d7cca4-cb32-4a02-a932-2e8be9926171?rule=ecg_mp_eps$_82.jpg",
+      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/991e4f84-952a-48be-a720-3b53c1fec38c?rule=ecg_mp_eps$_82.jpg",
+      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/5171a6d9-a34a-4dfa-8d87-09b991393973?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "transit_custom_l2h1",
+    "variant": "L1H1",
+    "classification_confidence": "high",
+    "matched_token": "tourneo custom",
+    "score": 84,
+    "est_conversion_cost_eur": 2500,
+    "est_conversion_cost_low_eur": 1500,
+    "est_conversion_cost_high_eur": 3500,
+    "conversion_effort": "minimal",
+    "total_project_cost_eur": 37490.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 115,
+    "market_median_eur": 19450,
+    "price_pct_vs_median": 79.9,
+    "is_underpriced": false
+  },
+  {
     "title": "Peugeot Expert Combi 2.0 BlueHdi L2-H1 50.000KM 2021",
     "url": "https://www.2dehands.be/v/auto-s/peugeot/m2406982910-peugeot-expert-combi-2-0-bluehdi-l2-h1-50-000km-2021",
     "source": "2dehands",
@@ -15954,9 +15996,9 @@
     "total_project_cost_eur": 20300.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 62,
-    "market_median_eur": 9500,
-    "price_pct_vs_median": 87.4,
+    "market_sample_size": 60,
+    "market_median_eur": 9748,
+    "price_pct_vs_median": 82.6,
     "is_underpriced": false
   },
   {
@@ -16018,8 +16060,8 @@
     "total_project_cost_eur": 32345.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 73,
-    "market_median_eur": 16950,
+    "market_sample_size": 72,
+    "market_median_eur": 16948,
     "price_pct_vs_median": 46.6,
     "is_underpriced": false
   },
@@ -16470,9 +16512,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 25,
-    "market_median_eur": 12850,
-    "price_pct_vs_median": 16.7,
+    "market_sample_size": 26,
+    "market_median_eur": 13472,
+    "price_pct_vs_median": 11.3,
     "is_underpriced": false
   },
   {
@@ -16794,9 +16836,40 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 73,
-    "market_median_eur": 16950,
+    "market_sample_size": 72,
+    "market_median_eur": 16948,
     "price_pct_vs_median": 5.9,
+    "is_underpriced": false
+  },
+  {
+    "title": "Ford Transit Custom Gbdc 2.0 Tdci 130PK 300 L1h1 2023 6-zits",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2405590268-ford-transit-custom-gbdc-2-0-tdci-130pk-300-l1h1-2023-6-zits",
+    "source": "marktplaats",
+    "year": 2023,
+    "km": 31973,
+    "price_eur": 30900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/f00d0ca7-9cad-4845-9695-f10a03164d4c?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "transit_custom_l2h1",
+    "variant": "L1H1",
+    "classification_confidence": "high",
+    "matched_token": "transit custom",
+    "score": 69,
+    "est_conversion_cost_eur": 12750,
+    "est_conversion_cost_low_eur": 8500,
+    "est_conversion_cost_high_eur": 17000,
+    "conversion_effort": "heavy",
+    "total_project_cost_eur": 43650.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 112,
+    "market_median_eur": 23422,
+    "price_pct_vs_median": 31.9,
     "is_underpriced": false
   },
   {
@@ -17096,9 +17169,9 @@
     "total_project_cost_eur": 27445.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 109.6,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 108.7,
     "is_underpriced": false
   },
   {
@@ -17396,9 +17469,9 @@
     "total_project_cost_eur": 22950.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 25,
-    "market_median_eur": 12850,
-    "price_pct_vs_median": 20.2,
+    "market_sample_size": 26,
+    "market_median_eur": 13472,
+    "price_pct_vs_median": 14.7,
     "is_underpriced": false
   },
   {
@@ -17440,8 +17513,8 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 73,
-    "market_median_eur": 16950,
+    "market_sample_size": 72,
+    "market_median_eur": 16948,
     "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
@@ -17918,8 +17991,8 @@
     "total_project_cost_eur": 29450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 73,
-    "market_median_eur": 16950,
+    "market_sample_size": 72,
+    "market_median_eur": 16948,
     "price_pct_vs_median": 29.5,
     "is_underpriced": false
   },
@@ -19124,9 +19197,48 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": -13.9,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": -14.2,
+    "is_underpriced": false
+  },
+  {
+    "title": "Peugeot Boxer 2.2 BlueHDI 141 PK / EURO 6 / L1H1 / 9 PERSOON",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2405137997-peugeot-boxer-2-2-bluehdi-141-pk-euro-6-l1h1-9-persoon",
+    "source": "marktplaats",
+    "year": 2019,
+    "km": 148786,
+    "price_eur": 14950.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/7532bc82-be58-4ed6-89db-69dbdfe19fcf?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ab4b9953-ef6b-47b9-b7d8-f3a827e55a82?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/338bec4f-6f13-4e1c-932e-ecaaa4435743?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L1H1",
+    "classification_confidence": "high",
+    "matched_token": "boxer",
+    "score": 62,
+    "est_conversion_cost_eur": 12750,
+    "est_conversion_cost_low_eur": 8500,
+    "est_conversion_cost_high_eur": 17000,
+    "conversion_effort": "heavy",
+    "total_project_cost_eur": 27700.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (21,255/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 83,
+    "market_median_eur": 13345,
+    "price_pct_vs_median": 12.0,
     "is_underpriced": false
   },
   {
@@ -19643,7 +19755,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": -8.3,
     "is_underpriced": false
@@ -19775,7 +19887,7 @@
     "total_project_cost_eur": 19250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": 7.8,
     "is_underpriced": false
@@ -19885,7 +19997,7 @@
     "total_project_cost_eur": 20450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": 18.8,
     "is_underpriced": false
@@ -19949,7 +20061,7 @@
     "total_project_cost_eur": 20450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": 18.8,
     "is_underpriced": false
@@ -19991,7 +20103,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": 19.3,
     "is_underpriced": false
@@ -20349,6 +20461,45 @@
     "is_underpriced": false
   },
   {
+    "title": "Toyota ProAce Worker 2.0 D-4D L3H1 | DC | 6 Zits | Trekhaak",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2404034930-toyota-proace-worker-2-0-d-4d-l3h1-dc-6-zits-trekhaak",
+    "source": "marktplaats",
+    "year": 2020,
+    "km": 131666,
+    "price_eur": 17500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/76f64008-dff5-47a4-984f-4b64ada1f422?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/c90ed992-e13e-46fc-840f-403ac9ef4c1a?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6f77b87e-f743-4bcd-8e97-c20f67aa2e35?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "expert_jumpy_proace_l2",
+    "variant": "L3H1",
+    "classification_confidence": "high",
+    "matched_token": "pro ace",
+    "score": 58,
+    "est_conversion_cost_eur": 7500,
+    "est_conversion_cost_low_eur": 5000,
+    "est_conversion_cost_high_eur": 10000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 25000.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (21,944/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 138,
+    "market_median_eur": 15700,
+    "price_pct_vs_median": 11.5,
+    "is_underpriced": false
+  },
+  {
     "title": "Opel Vivaro 1.6 CDTI L2H1 DC Sport EcoFlex Dubbele Cabine Du",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2398252408-opel-vivaro-1-6-cdti-l2h1-dc-sport-ecoflex-dubbele-cabine-du",
     "source": "marktplaats",
@@ -20485,7 +20636,7 @@
     "total_project_cost_eur": 26450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": 73.9,
     "is_underpriced": false
@@ -20557,7 +20708,7 @@
     "total_project_cost_eur": 27450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": 83.0,
     "is_underpriced": false
@@ -20917,7 +21068,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": 21.4,
     "is_underpriced": false
@@ -21053,7 +21204,7 @@
     "total_project_cost_eur": 36795.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": 55.0,
     "is_underpriced": false
@@ -21735,6 +21886,37 @@
     "is_underpriced": false
   },
   {
+    "title": "Opel Vivaro 2.0 CDTI L3H1  DC  6 Zits  Airco  Cruise  Camera",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/a1525906118-opel-vivaro-2-0-cdti-l3h1-dc-6-zits-airco-cruise-camera",
+    "source": "marktplaats",
+    "year": 2020,
+    "km": 62103,
+    "price_eur": 23000.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://admarkt-cdn.marktplaats.com/api/v1/icas-mp-pro-admarkt/images/9a/9a3f9954-1071-4912-b124-83f3ed1fdfa2?rule=eps_82.JPG"
+    ],
+    "model_group": "vivaro_trafic_primastar_l2",
+    "variant": "L3H1",
+    "classification_confidence": "high",
+    "matched_token": "vivaro",
+    "score": 54,
+    "est_conversion_cost_eur": 7500,
+    "est_conversion_cost_low_eur": 5000,
+    "est_conversion_cost_high_eur": 10000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 30500.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 222,
+    "market_median_eur": 15174,
+    "price_pct_vs_median": 51.6,
+    "is_underpriced": false
+  },
+  {
     "title": "Renault Trafic 1.6 dCi L2 DC Dubbel Cabine Euro 6/ Cruise/ N",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2405132985-renault-trafic-1-6-dci-l2-dc-dubbel-cabine-euro-6-cruise-n",
     "source": "marktplaats",
@@ -22010,9 +22192,9 @@
     "total_project_cost_eur": 20150.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 25.2,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 24.7,
     "is_underpriced": false
   },
   {
@@ -22151,9 +22333,9 @@
     "total_project_cost_eur": 21200.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 34.0,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 33.5,
     "is_underpriced": false
   },
   {
@@ -22190,9 +22372,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 42.4,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 41.8,
     "is_underpriced": false
   },
   {
@@ -22264,9 +22446,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 47.1,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 46.4,
     "is_underpriced": false
   },
   {
@@ -23015,9 +23197,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 43,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": 21.2,
+    "market_sample_size": 42,
+    "market_median_eur": 19850,
+    "price_pct_vs_median": 20.6,
     "is_underpriced": false
   },
   {
@@ -23211,9 +23393,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 43,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": 26.1,
+    "market_sample_size": 42,
+    "market_median_eur": 19850,
+    "price_pct_vs_median": 25.4,
     "is_underpriced": false
   },
   {
@@ -23405,9 +23587,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 43,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": 36.5,
+    "market_sample_size": 42,
+    "market_median_eur": 19850,
+    "price_pct_vs_median": 35.8,
     "is_underpriced": false
   },
   {
@@ -23519,9 +23701,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 43,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": 41.5,
+    "market_sample_size": 42,
+    "market_median_eur": 19850,
+    "price_pct_vs_median": 40.8,
     "is_underpriced": false
   },
   {
@@ -24477,9 +24659,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 19,
-    "market_median_eur": 22450,
-    "price_pct_vs_median": -10.9,
+    "market_sample_size": 20,
+    "market_median_eur": 22675,
+    "price_pct_vs_median": -11.8,
     "is_underpriced": false
   },
   {
@@ -24739,9 +24921,9 @@
     "total_project_cost_eur": 18200.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 62,
-    "market_median_eur": 9500,
-    "price_pct_vs_median": 36.3,
+    "market_sample_size": 60,
+    "market_median_eur": 9748,
+    "price_pct_vs_median": 32.8,
     "is_underpriced": false
   },
   {
@@ -25004,7 +25186,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": 0.0,
     "is_underpriced": false
@@ -25043,7 +25225,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": 5.8,
     "is_underpriced": false
@@ -25969,8 +26151,8 @@
     "total_project_cost_eur": 27650.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 73,
-    "market_median_eur": 16950,
+    "market_sample_size": 72,
+    "market_median_eur": 16948,
     "price_pct_vs_median": -12.1,
     "is_underpriced": false
   },
@@ -26036,6 +26218,45 @@
     "market_sample_size": 36,
     "market_median_eur": 15475,
     "price_pct_vs_median": 3.1,
+    "is_underpriced": false
+  },
+  {
+    "title": "Volkswagen Transporter 2.0 TSI L2H1 Benzine Dubbele Schuifde",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2406748109-volkswagen-transporter-2-0-tsi-l2h1-benzine-dubbele-schuifde",
+    "source": "marktplaats",
+    "year": 2018,
+    "km": 171682,
+    "price_eur": 15950.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e27681b1-85f1-4a6b-bc36-cd59f192a2db?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/353503e1-3d9b-40c1-a854-2b468b5dd1fa?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/68cba0dc-8964-4fda-90b0-6ac1637a90bc?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "t6_1_lwb",
+    "variant": "L2H1",
+    "classification_confidence": "high",
+    "matched_token": "transporter",
+    "score": 28,
+    "est_conversion_cost_eur": 12750,
+    "est_conversion_cost_low_eur": 8500,
+    "est_conversion_cost_high_eur": 17000,
+    "conversion_effort": "heavy",
+    "total_project_cost_eur": 28700.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (21,460/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 89,
+    "market_median_eur": 18500,
+    "price_pct_vs_median": -13.8,
     "is_underpriced": false
   },
   {
@@ -26324,8 +26545,8 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 73,
-    "market_median_eur": 16950,
+    "market_sample_size": 72,
+    "market_median_eur": 16948,
     "price_pct_vs_median": 11.8,
     "is_underpriced": false
   },
@@ -28647,9 +28868,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 3.8,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 3.3,
     "is_underpriced": false
   },
   {
@@ -28717,9 +28938,9 @@
     "total_project_cost_eur": 27750.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 26.1,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 25.5,
     "is_underpriced": false
   },
   {
@@ -29073,8 +29294,8 @@
     "total_project_cost_eur": 29450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 73,
-    "market_median_eur": 16950,
+    "market_sample_size": 72,
+    "market_median_eur": 16948,
     "price_pct_vs_median": 11.8,
     "is_underpriced": false
   },
@@ -29645,9 +29866,9 @@
     "total_project_cost_eur": 27350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 41.6,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 41.0,
     "is_underpriced": false
   },
   {
@@ -29709,9 +29930,9 @@
     "total_project_cost_eur": 36650.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 19,
-    "market_median_eur": 22450,
-    "price_pct_vs_median": 6.5,
+    "market_sample_size": 20,
+    "market_median_eur": 22675,
+    "price_pct_vs_median": 5.4,
     "is_underpriced": false
   },
   {
@@ -30299,9 +30520,9 @@
     "total_project_cost_eur": 23745.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 62,
-    "market_median_eur": 9500,
-    "price_pct_vs_median": 15.7,
+    "market_sample_size": 60,
+    "market_median_eur": 9748,
+    "price_pct_vs_median": 12.8,
     "is_underpriced": false
   },
   {
@@ -30435,9 +30656,48 @@
     "total_project_cost_eur": 24700.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": 9.6,
+    "is_underpriced": false
+  },
+  {
+    "title": "Peugeot Boxer 2.2 BlueHDi 120PK L2H2 2x Schuifdeur - Airco -",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2405505724-peugeot-boxer-2-2-bluehdi-120pk-l2h2-2x-schuifdeur-airco",
+    "source": "marktplaats",
+    "year": 2020,
+    "km": 192318,
+    "price_eur": 11950.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/059acd6a-6a9a-47c3-95dd-3ea02ccf8637?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1aac6810-6140-4d03-89e7-58cb310e75cd?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1487751d-5a28-4afd-b480-414f823cda8c?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "boxer",
+    "score": 25,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 22450.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (32,053/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 80,
+    "market_median_eur": 13950,
+    "price_pct_vs_median": -14.3,
     "is_underpriced": false
   },
   {
@@ -30628,6 +30888,45 @@
     "market_sample_size": 230,
     "market_median_eur": 13950,
     "price_pct_vs_median": -10.4,
+    "is_underpriced": false
+  },
+  {
+    "title": "Peugeot Boxer 2.2 BlueHDi 140 pk L2H2 Premium Navi, Camera L",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2403795003-peugeot-boxer-2-2-bluehdi-140-pk-l2h2-premium-navi-camera-l",
+    "source": "marktplaats",
+    "year": 2020,
+    "km": 156061,
+    "price_eur": 12600.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e8d78c2b-f61f-4c7f-9c23-56b6d51310af?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/649bf84e-51ca-47f5-bf57-d40a56194dce?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/be399c11-ee29-46ac-830e-21cc04afafe5?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "boxer",
+    "score": 25,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 23100.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (26,010/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 80,
+    "market_median_eur": 13950,
+    "price_pct_vs_median": -9.7,
     "is_underpriced": false
   },
   {
@@ -31643,7 +31942,7 @@
     "total_project_cost_eur": 27700.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": 37.2,
     "is_underpriced": false
@@ -31802,7 +32101,7 @@
     "total_project_cost_eur": 27750.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": 37.6,
     "is_underpriced": false
@@ -31978,6 +32277,45 @@
     "market_sample_size": 198,
     "market_median_eur": 12900,
     "price_pct_vs_median": 22.1,
+    "is_underpriced": false
+  },
+  {
+    "title": "Peugeot Boxer 2.2 BlueHDi 120PK L2H2 Premium | Euro 6 | Mult",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2400982135-peugeot-boxer-2-2-bluehdi-120pk-l2h2-premium-euro-6-mult",
+    "source": "marktplaats",
+    "year": 2022,
+    "km": 155702,
+    "price_eur": 15750.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/da1715e9-4af4-478b-91cb-517eb000708f?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/07f5959f-81d0-41dd-8004-6620f7f8640b?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/f34a6c28-6dda-4859-a654-80ab888a2681?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "boxer",
+    "score": 25,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 26250.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (38,925/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 64,
+    "market_median_eur": 17500,
+    "price_pct_vs_median": -10.0,
     "is_underpriced": false
   },
   {
@@ -32375,7 +32713,7 @@
     "total_project_cost_eur": 30199.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": -7.7,
     "is_underpriced": false
@@ -32719,6 +33057,45 @@
     "is_underpriced": false
   },
   {
+    "title": "Renault Master / Citroen Jumper 2.2 BlueHDi 88Kw-120Pk L2/H2",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2406594085-renault-master-citroen-jumper-2-2-bluehdi-88kw-120pk-l2-h2",
+    "source": "marktplaats",
+    "year": 2023,
+    "km": 77790,
+    "price_eur": 18900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/b4ab5b44-fc4e-4550-a8fc-717474bd2813?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/9a7e034b-29db-41e5-b67f-69086c750e9e?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d295fe14-583b-4799-bbfe-86bbb6c6a127?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 25,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 29400.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (25,930/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 46,
+    "market_median_eur": 19375,
+    "price_pct_vs_median": -2.5,
+    "is_underpriced": false
+  },
+  {
     "title": "Opel Vivaro 1.5 CDTI L2H1 Marge BTW en BPM vrij! Airco Cruis",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2404015321-opel-vivaro-1-5-cdti-l2h1-marge-btw-en-bpm-vrij-airco-cruis",
     "source": "marktplaats",
@@ -32865,18 +33242,20 @@
     "is_underpriced": false
   },
   {
-    "title": "Citro\u00ebn Jumper koelwagen GB 30 L2h2 2.0 Bluehdi 130pk 2019",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2385003455-citroen-jumper-koelwagen-gb-30-l2h2-2-0-bluehdi-130pk-2019",
+    "title": "Citro\u00ebn Jumper 2.2 HDI L2H2 Carplay/ Navi/ Climate/ Cruise/",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2396393149-citroen-jumper-2-2-hdi-l2h2-carplay-navi-climate-cruise",
     "source": "marktplaats",
-    "year": 2019,
-    "km": null,
-    "price_eur": 19800.0,
+    "year": 2023,
+    "km": 54501,
+    "price_eur": 19944.0,
     "seats": null,
     "emission_standard": null,
     "body_type": null,
     "weight_kg": null,
     "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0eddc7f3-c08f-420b-a0be-a77d7b995a94?rule=ecg_mp_eps$_82.jpg"
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/b7017192-0acf-4124-8416-8f8aca2be6cb?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/76351723-ddb7-44c6-a95d-ba8ae491085b?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/16666706-b4c1-4d33-a73d-f209b6cb5225?rule=ecg_mp_eps$_82.jpg"
     ],
     "model_group": "psa_l1l2h1",
     "variant": "L2H2",
@@ -32887,7 +33266,7 @@
     "est_conversion_cost_low_eur": 7000,
     "est_conversion_cost_high_eur": 14000,
     "conversion_effort": "moderate",
-    "total_project_cost_eur": 30300.0,
+    "total_project_cost_eur": 30444.0,
     "risk_score": 0,
     "risk_flags": [],
     "market_sample_size": 99,
@@ -32962,7 +33341,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": 5.6,
     "is_underpriced": false
@@ -33001,7 +33380,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": 10.8,
     "is_underpriced": false
@@ -33116,7 +33495,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": 15.6,
     "is_underpriced": false
@@ -33149,7 +33528,7 @@
     "total_project_cost_eur": 34650.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": 15.9,
     "is_underpriced": false
@@ -33458,7 +33837,7 @@
     "total_project_cost_eur": 35250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": 19.0,
     "is_underpriced": false
@@ -33534,7 +33913,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": 21.4,
     "is_underpriced": false
@@ -34891,8 +35270,8 @@
     "total_project_cost_eur": 33499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 73,
-    "market_median_eur": 16950,
+    "market_sample_size": 72,
+    "market_median_eur": 16948,
     "price_pct_vs_median": 35.7,
     "is_underpriced": false
   },
@@ -37804,7 +38183,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": -10.3,
     "is_underpriced": false
@@ -37868,7 +38247,7 @@
     "total_project_cost_eur": 29300.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": -0.5,
     "is_underpriced": false
@@ -37901,7 +38280,7 @@
     "total_project_cost_eur": 29495.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": 0.5,
     "is_underpriced": false
@@ -38012,7 +38391,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": 15.9,
     "is_underpriced": false
@@ -39158,8 +39537,8 @@
     "total_project_cost_eur": 31499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 73,
-    "market_median_eur": 16950,
+    "market_sample_size": 72,
+    "market_median_eur": 16948,
     "price_pct_vs_median": 23.9,
     "is_underpriced": false
   },
@@ -39922,8 +40301,8 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 73,
-    "market_median_eur": 16950,
+    "market_sample_size": 72,
+    "market_median_eur": 16948,
     "price_pct_vs_median": 47.5,
     "is_underpriced": false
   },
@@ -40673,9 +41052,9 @@
     "total_project_cost_eur": 21440.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": -8.1,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": -8.5,
     "is_underpriced": false
   },
   {
@@ -40706,9 +41085,9 @@
     "total_project_cost_eur": 21450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": -8.0,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": -8.4,
     "is_underpriced": false
   },
   {
@@ -40739,9 +41118,9 @@
     "total_project_cost_eur": 21450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": -8.0,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": -8.4,
     "is_underpriced": false
   },
   {
@@ -40801,9 +41180,9 @@
     "total_project_cost_eur": 22000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": -3.4,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": -3.8,
     "is_underpriced": false
   },
   {
@@ -40867,9 +41246,9 @@
     "total_project_cost_eur": 22400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 0.0,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": -0.4,
     "is_underpriced": false
   },
   {
@@ -40900,9 +41279,9 @@
     "total_project_cost_eur": 22450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 0.4,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
   {
@@ -40933,9 +41312,9 @@
     "total_project_cost_eur": 22450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 0.4,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
   {
@@ -40966,9 +41345,9 @@
     "total_project_cost_eur": 22950.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 4.6,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 4.2,
     "is_underpriced": false
   },
   {
@@ -40997,9 +41376,9 @@
     "total_project_cost_eur": 22999.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 5.0,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 4.6,
     "is_underpriced": false
   },
   {
@@ -41164,9 +41543,9 @@
     "total_project_cost_eur": 23450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 8.8,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 8.4,
     "is_underpriced": false
   },
   {
@@ -41382,9 +41761,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 25.2,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 24.7,
     "is_underpriced": false
   },
   {
@@ -41932,9 +42311,9 @@
     "total_project_cost_eur": 27450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 42.4,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 41.8,
     "is_underpriced": false
   },
   {
@@ -42027,9 +42406,9 @@
     "total_project_cost_eur": 28350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 50.0,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 49.4,
     "is_underpriced": false
   },
   {
@@ -42060,9 +42439,9 @@
     "total_project_cost_eur": 28350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 43,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -9.6,
+    "market_sample_size": 42,
+    "market_median_eur": 19850,
+    "price_pct_vs_median": -10.1,
     "is_underpriced": false
   },
   {
@@ -42594,9 +42973,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 43,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": 1.0,
+    "market_sample_size": 42,
+    "market_median_eur": 19850,
+    "price_pct_vs_median": 0.5,
     "is_underpriced": false
   },
   {
@@ -42693,9 +43072,9 @@
     "total_project_cost_eur": 31000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 72.3,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 71.5,
     "is_underpriced": false
   },
   {
@@ -43690,9 +44069,9 @@
     "total_project_cost_eur": 34450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 11900,
-    "price_pct_vs_median": 101.3,
+    "market_sample_size": 113,
+    "market_median_eur": 11950,
+    "price_pct_vs_median": 100.4,
     "is_underpriced": false
   },
   {
@@ -45220,9 +45599,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 43,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": 51.6,
+    "market_sample_size": 42,
+    "market_median_eur": 19850,
+    "price_pct_vs_median": 50.9,
     "is_underpriced": false
   },
   {
@@ -46143,9 +46522,9 @@
     "total_project_cost_eur": 47400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 15,
-    "market_median_eur": 27800,
-    "price_pct_vs_median": 32.7,
+    "market_sample_size": 12,
+    "market_median_eur": 26175,
+    "price_pct_vs_median": 41.0,
     "is_underpriced": false
   },
   {
@@ -46886,9 +47265,9 @@
     "total_project_cost_eur": 33400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 19,
-    "market_median_eur": 22450,
-    "price_pct_vs_median": 2.0,
+    "market_sample_size": 20,
+    "market_median_eur": 22675,
+    "price_pct_vs_median": 1.0,
     "is_underpriced": false
   },
   {
@@ -47328,37 +47707,6 @@
     "is_underpriced": false
   },
   {
-    "title": "Fiat Ducato 2.5 TD Alkoof camper 1996 / 5 slaapplaatsen",
-    "url": "https://www.marktplaats.nl/v/caravans-en-kamperen/campers/m2405037615-fiat-ducato-2-5-td-alkoof-camper-1996-5-slaapplaatsen",
-    "source": "marktplaats",
-    "year": null,
-    "km": null,
-    "price_eur": 6250.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/80acec0e-a4bf-4629-b5e1-f0dd725af8ce?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "psa_l1l2h1",
-    "variant": null,
-    "classification_confidence": "low",
-    "matched_token": "ducato",
-    "score": 14,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 16750.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_median_eur": null,
-    "market_sample_size": 0,
-    "price_pct_vs_median": null,
-    "is_underpriced": false
-  },
-  {
     "title": "Veiling: Bestelwagen Citro\u00ebn Jumper Diesel 120pk",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/a1526672719-veiling-bestelwagen-citroen-jumper-diesel-120pk",
     "source": "marktplaats",
@@ -47551,37 +47899,6 @@
     "is_underpriced": false
   },
   {
-    "title": "Veiling: Pick-Up Bestelwagen Peugeot Boxer Diesel 140pk 2020",
-    "url": "https://www.2dehands.be/v/auto-s/bestelwagens-en-lichte-vracht/a162986900-veiling-pick-up-bestelwagen-peugeot-boxer-diesel-140pk-2020",
-    "source": "2dehands",
-    "year": null,
-    "km": null,
-    "price_eur": 8470.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://admarkt-cdn.2dehands.com/api/v1/icas-twh-pro-admarkt/images/6c/6c7db7a7-b65a-4355-81aa-b023951e94ea?rule=eps_82.JPG"
-    ],
-    "model_group": "psa_l1l2h1",
-    "variant": null,
-    "classification_confidence": "low",
-    "matched_token": "boxer",
-    "score": 14,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 18970.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_median_eur": null,
-    "market_sample_size": 0,
-    "price_pct_vs_median": null,
-    "is_underpriced": false
-  },
-  {
     "title": "Renault Trafic | Goed onderhouden | Direct rijklaar | BTW",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2363162178-renault-trafic-goed-onderhouden-direct-rijklaar-btw",
     "source": "marktplaats",
@@ -47607,9 +47924,9 @@
     "total_project_cost_eur": 19500.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 62,
-    "market_median_eur": 9500,
-    "price_pct_vs_median": -5.3,
+    "market_sample_size": 60,
+    "market_median_eur": 9748,
+    "price_pct_vs_median": -7.7,
     "is_underpriced": false
   },
   {
@@ -47675,9 +47992,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 62,
-    "market_median_eur": 9500,
-    "price_pct_vs_median": 0.0,
+    "market_sample_size": 60,
+    "market_median_eur": 9748,
+    "price_pct_vs_median": -2.5,
     "is_underpriced": false
   },
   {
@@ -47841,7 +48158,7 @@
     "total_project_cost_eur": 21400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 107,
+    "market_sample_size": 105,
     "market_median_eur": 10900,
     "price_pct_vs_median": 0.0,
     "is_underpriced": false
@@ -49406,37 +49723,6 @@
     "is_underpriced": false
   },
   {
-    "title": "Camper Fiat Ducato 2.8 JTD  Elnagh Marlin",
-    "url": "https://www.marktplaats.nl/v/caravans-en-kamperen/campers/m2406847919-camper-fiat-ducato-2-8-jtd-elnagh-marlin",
-    "source": "marktplaats",
-    "year": null,
-    "km": 120000,
-    "price_eur": 17750.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/062e2234-4c77-445e-9115-d0570fedbdf9?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "psa_l1l2h1",
-    "variant": null,
-    "classification_confidence": "low",
-    "matched_token": "ducato",
-    "score": 14,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 28250.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_median_eur": null,
-    "market_sample_size": 0,
-    "price_pct_vs_median": null,
-    "is_underpriced": false
-  },
-  {
     "title": "Renault Trafic 2.0dCi 120PK Lang / Camera / Cruisecontrol /",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2396305917-renault-trafic-2-0dci-120pk-lang-camera-cruisecontrol",
     "source": "marktplaats",
@@ -50117,7 +50403,7 @@
     "total_project_cost_eur": 32450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 166,
+    "market_sample_size": 167,
     "market_median_eur": 18900,
     "price_pct_vs_median": 16.1,
     "is_underpriced": false
@@ -50864,37 +51150,6 @@
     "is_underpriced": false
   },
   {
-    "title": "Fiat Ducato Camper - Nieuwe Accu & APK, 105.000 km",
-    "url": "https://www.marktplaats.nl/v/caravans-en-kamperen/campers/m2404014222-fiat-ducato-camper-nieuwe-accu-apk-105-000-km",
-    "source": "marktplaats",
-    "year": null,
-    "km": null,
-    "price_eur": 27000.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/fd1a3975-81c9-41f0-a245-e8c629c78c7b?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "psa_l1l2h1",
-    "variant": null,
-    "classification_confidence": "low",
-    "matched_token": "ducato",
-    "score": 14,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 37500.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_median_eur": null,
-    "market_sample_size": 0,
-    "price_pct_vs_median": null,
-    "is_underpriced": false
-  },
-  {
     "title": "Peugeot Boxer 140PK Laadklep D'Hollandia Zijdeur Bakwwagen A",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2403846947-peugeot-boxer-140pk-laadklep-d-hollandia-zijdeur-bakwwagen-a",
     "source": "marktplaats",
@@ -51029,18 +51284,20 @@
     "is_underpriced": false
   },
   {
-    "title": "Fiat Ducato | 2.2 MultiJet 140pk Bakwagen 222cm Hoog",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/a1526672217-fiat-ducato-2-2-multijet-140pk-bakwagen-222cm-hoog",
+    "title": "Fiat Ducato 2.3MultiJet 130PK Mobiel Kantoor | Showroom | Na",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2396592572-fiat-ducato-2-3multijet-130pk-mobiel-kantoor-showroom-na",
     "source": "marktplaats",
-    "year": 2022,
-    "km": 85025,
-    "price_eur": 28900.0,
+    "year": 2018,
+    "km": 11821,
+    "price_eur": 29750.0,
     "seats": null,
     "emission_standard": null,
     "body_type": null,
     "weight_kg": null,
     "images": [
-      "https://admarkt-cdn.marktplaats.com/api/v1/icas-mp-pro-admarkt/images/ef/efde38cd-cabb-4b77-b515-f665e8d52679?rule=eps_82.JPG"
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/89f46d87-081a-497f-b8ba-4ac2d88096c8?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/92f21b3e-006a-4148-a010-5ac87e33dcd9?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e0a37a3f-fd30-4472-ad97-e49d33983af9?rule=ecg_mp_eps$_82.jpg"
     ],
     "model_group": "psa_l1l2h1",
     "variant": null,
