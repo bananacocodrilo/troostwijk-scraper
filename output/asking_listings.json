@@ -80,9 +80,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 67,
-    "market_median_eur": 17314,
-    "price_pct_vs_median": -42.8,
+    "market_sample_size": 59,
+    "market_median_eur": 17995,
+    "price_pct_vs_median": -45.0,
     "is_underpriced": true
   },
   {
@@ -111,9 +111,55 @@
     "total_project_cost_eur": 18000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": -26.2,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": -28.7,
+    "is_underpriced": true
+  },
+  {
+    "title": "Transit/Tourneo Custom 9-Sitzer*Tempomat*LED*PDC",
+    "url": "https://www.autoscout24.de/angebote/ford-tourneo-custom-transit-tourneo-custom-9-sitzer-tempomat-led-pdc-diesel-schwarz-cat_ma29mo74251-3bc0dd15-4014-4220-8940-8bd503a6a976",
+    "source": "autoscout24_de",
+    "year": 2019,
+    "km": 168318,
+    "price_eur": 16880.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://prod.pictures.autoscout24.net/listing-images/3bc0dd15-4014-4220-8940-8bd503a6a976_98579f45-33bf-4da4-98cd-3923495d2782.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/3bc0dd15-4014-4220-8940-8bd503a6a976_4acab9b6-28a7-40a7-a545-013cb810bf07.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/3bc0dd15-4014-4220-8940-8bd503a6a976_22b87981-8139-4d4a-9504-d84f232abcef.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/3bc0dd15-4014-4220-8940-8bd503a6a976_ba64add9-ff47-4451-908c-f7e03d1a4c61.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/3bc0dd15-4014-4220-8940-8bd503a6a976_0e7a56cb-6686-4d49-abb2-731dc8dc45fc.jpg/250x188.webp"
+    ],
+    "model_group": "transit_custom_l2h1",
+    "variant": null,
+    "classification_confidence": "low",
+    "matched_token": "tourneo custom",
+    "score": 70,
+    "est_conversion_cost_eur": 2500,
+    "est_conversion_cost_low_eur": 1500,
+    "est_conversion_cost_high_eur": 3500,
+    "conversion_effort": "minimal",
+    "total_project_cost_eur": 19380.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (24,045/yr) \u2014 above-average wear",
+        "severity": "warn"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (168,318) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 82,
+    "market_median_eur": 19975,
+    "price_pct_vs_median": -15.5,
     "is_underpriced": true
   },
   {
@@ -153,9 +199,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -23.0,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -23.2,
     "is_underpriced": true
   },
   {
@@ -207,7 +253,7 @@
     "year": 2016,
     "km": 202041,
     "price_eur": 9950.0,
-    "seats": null,
+    "seats": 6,
     "emission_standard": null,
     "body_type": null,
     "weight_kg": null,
@@ -239,9 +285,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 26,
-    "market_median_eur": 13472,
-    "price_pct_vs_median": -26.1,
+    "market_sample_size": 21,
+    "market_median_eur": 15000,
+    "price_pct_vs_median": -33.7,
     "is_underpriced": true
   },
   {
@@ -595,6 +641,37 @@
     "is_underpriced": true
   },
   {
+    "title": "Ford Transit Custom GB 2.0 Tdci 130PK 300 L2h1 Automaat 2018",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2372222125-ford-transit-custom-gb-2-0-tdci-130pk-300-l2h1-automaat-2018",
+    "source": "marktplaats",
+    "year": 2018,
+    "km": null,
+    "price_eur": 14500.0,
+    "seats": 5,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/cc66c1df-7645-479f-bb41-0a5f8713e324?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "transit_custom_l2h1",
+    "variant": "L2H1",
+    "classification_confidence": "high",
+    "matched_token": "transit custom",
+    "score": 56,
+    "est_conversion_cost_eur": 12750,
+    "est_conversion_cost_low_eur": 8500,
+    "est_conversion_cost_high_eur": 17000,
+    "conversion_effort": "heavy",
+    "total_project_cost_eur": 27250.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 59,
+    "market_median_eur": 17995,
+    "price_pct_vs_median": -19.4,
+    "is_underpriced": true
+  },
+  {
     "title": "Ford Transit Custom 340 2.0 TDCI L2H1 Trend DC 130PK airco c",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2404104160-ford-transit-custom-340-2-0-tdci-l2h1-trend-dc-130pk-airco-c",
     "source": "marktplaats",
@@ -628,9 +705,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -21.0,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -21.3,
     "is_underpriced": true
   },
   {
@@ -938,6 +1015,37 @@
     "is_underpriced": true
   },
   {
+    "title": "Ford Transit Custom 2.2 Tdci 74KW 2016",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2397370112-ford-transit-custom-2-2-tdci-74kw-2016",
+    "source": "marktplaats",
+    "year": 2016,
+    "km": 155000,
+    "price_eur": 11450.0,
+    "seats": 5,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/43d6a24d-fd12-40eb-ab0b-ea8a6aa6caf9?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "transit_custom_l2h1",
+    "variant": null,
+    "classification_confidence": "low",
+    "matched_token": "transit custom",
+    "score": 45,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 21950.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 21,
+    "market_median_eur": 15000,
+    "price_pct_vs_median": -23.7,
+    "is_underpriced": true
+  },
+  {
     "title": "Ford Transit Custom 2.0TDCi 130PK Automaat Limited Dubbele C",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2405695536-ford-transit-custom-2-0tdci-130pk-automaat-limited-dubbele-c",
     "source": "marktplaats",
@@ -976,9 +1084,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -17.5,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -17.8,
     "is_underpriced": true
   },
   {
@@ -1026,43 +1134,6 @@
     "is_underpriced": true
   },
   {
-    "title": "Ford Transit Custom GB 2.0 Tdci 105PK 320 L2h1 2018",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2407211259-ford-transit-custom-gb-2-0-tdci-105pk-320-l2h1-2018",
-    "source": "marktplaats",
-    "year": 2018,
-    "km": 195190,
-    "price_eur": 8950.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/716e2e55-495e-4bb4-babb-bdaa70e2f805?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": "L2H1",
-    "classification_confidence": "high",
-    "matched_token": "transit custom",
-    "score": 28,
-    "est_conversion_cost_eur": 12750,
-    "est_conversion_cost_low_eur": 8500,
-    "est_conversion_cost_high_eur": 17000,
-    "conversion_effort": "heavy",
-    "total_project_cost_eur": 21700.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (24,398/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 67,
-    "market_median_eur": 17314,
-    "price_pct_vs_median": -48.3,
-    "is_underpriced": true
-  },
-  {
     "title": "Volkswagen Transporter CDC 2.0 TDI 102pk L2h1",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2345717613-volkswagen-transporter-cdc-2-0-tdi-102pk-l2h1",
     "source": "marktplaats",
@@ -1102,79 +1173,6 @@
     "market_sample_size": 72,
     "market_median_eur": 16948,
     "price_pct_vs_median": -43.9,
-    "is_underpriced": true
-  },
-  {
-    "title": "Ford Transit Custom GB 2.0 Tdci 130PK 290 L2h1 Automaat 2017",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2399904731-ford-transit-custom-gb-2-0-tdci-130pk-290-l2h1-automaat-2017",
-    "source": "marktplaats",
-    "year": 2017,
-    "km": 128832,
-    "price_eur": 9600.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/f5dc6e01-8c2b-4be9-bdf4-48f90c5bae0e?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": "L2H1",
-    "classification_confidence": "high",
-    "matched_token": "transit custom",
-    "score": 28,
-    "est_conversion_cost_eur": 12750,
-    "est_conversion_cost_low_eur": 8500,
-    "est_conversion_cost_high_eur": 17000,
-    "conversion_effort": "heavy",
-    "total_project_cost_eur": 22350.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 46,
-    "market_median_eur": 15725,
-    "price_pct_vs_median": -39.0,
-    "is_underpriced": true
-  },
-  {
-    "title": "Ford Transit Custom GB 2.0 Tdci 130PK 340 L2h1 2019 Wit",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2405309231-ford-transit-custom-gb-2-0-tdci-130pk-340-l2h1-2019-wit",
-    "source": "marktplaats",
-    "year": 2019,
-    "km": 229878,
-    "price_eur": 10950.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/e15cd726-245d-439d-91b2-55ee49c6e3fc?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": "L2H1",
-    "classification_confidence": "high",
-    "matched_token": "transit custom",
-    "score": 28,
-    "est_conversion_cost_eur": 12750,
-    "est_conversion_cost_low_eur": 8500,
-    "est_conversion_cost_high_eur": 17000,
-    "conversion_effort": "heavy",
-    "total_project_cost_eur": 23700.0,
-    "risk_score": 3,
-    "risk_flags": [
-      {
-        "code": "very_high_km_per_year",
-        "label": "Very high km/year (32,839/yr) \u2014 highway-thrashed risk",
-        "severity": "high"
-      },
-      {
-        "code": "high_total_km",
-        "label": "High total km (229,878) \u2014 transmission/engine wear risk",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -44.6,
     "is_underpriced": true
   },
   {
@@ -1260,9 +1258,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": -38.7,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": -40.0,
     "is_underpriced": true
   },
   {
@@ -1293,9 +1291,9 @@
     "total_project_cost_eur": 25750.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 67,
-    "market_median_eur": 17314,
-    "price_pct_vs_median": -24.9,
+    "market_sample_size": 59,
+    "market_median_eur": 17995,
+    "price_pct_vs_median": -27.8,
     "is_underpriced": true
   },
   {
@@ -1330,9 +1328,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": -28.9,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": -30.4,
     "is_underpriced": true
   },
   {
@@ -1372,37 +1370,6 @@
     "market_sample_size": 104,
     "market_median_eur": 19675,
     "price_pct_vs_median": -29.1,
-    "is_underpriced": true
-  },
-  {
-    "title": "Ford Transit Custom GB 2.0 Tdci 130PK 300 L2h1 Automaat 2018",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2372222125-ford-transit-custom-gb-2-0-tdci-130pk-300-l2h1-automaat-2018",
-    "source": "marktplaats",
-    "year": 2018,
-    "km": null,
-    "price_eur": 14500.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/cc66c1df-7645-479f-bb41-0a5f8713e324?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": "L2H1",
-    "classification_confidence": "high",
-    "matched_token": "transit custom",
-    "score": 28,
-    "est_conversion_cost_eur": 12750,
-    "est_conversion_cost_low_eur": 8500,
-    "est_conversion_cost_high_eur": 17000,
-    "conversion_effort": "heavy",
-    "total_project_cost_eur": 27250.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 67,
-    "market_median_eur": 17314,
-    "price_pct_vs_median": -16.3,
     "is_underpriced": true
   },
   {
@@ -1472,9 +1439,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -30.0,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -30.3,
     "is_underpriced": true
   },
   {
@@ -1515,43 +1482,6 @@
     "is_underpriced": true
   },
   {
-    "title": "Ford Transit Custom | 2.0 TDCI 131pk L2H1 Inrichting Euro6",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/a1526478379-ford-transit-custom-2-0-tdci-131pk-l2h1-inrichting-euro6",
-    "source": "marktplaats",
-    "year": 2022,
-    "km": 179208,
-    "price_eur": 16750.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://admarkt-cdn.marktplaats.com/api/v1/icas-mp-pro-admarkt/images/bc/bc4b3067-5e7d-402d-8ff3-c9c303e56dde?rule=eps_82.JPG"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": "L2H1",
-    "classification_confidence": "high",
-    "matched_token": "transit custom",
-    "score": 28,
-    "est_conversion_cost_eur": 12750,
-    "est_conversion_cost_low_eur": 8500,
-    "est_conversion_cost_high_eur": 17000,
-    "conversion_effort": "heavy",
-    "total_project_cost_eur": 29500.0,
-    "risk_score": 2,
-    "risk_flags": [
-      {
-        "code": "very_high_km_per_year",
-        "label": "Very high km/year (44,802/yr) \u2014 highway-thrashed risk",
-        "severity": "high"
-      }
-    ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -26.3,
-    "is_underpriced": true
-  },
-  {
     "title": "Ford Transit Custom 2.0 TDCI L2H1  2800KG Trekgew.  Trekhaak",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/a1524683999-ford-transit-custom-2-0-tdci-l2h1-2800kg-trekgew-trekhaak",
     "source": "marktplaats",
@@ -1583,9 +1513,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": -22.6,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": -25.4,
     "is_underpriced": true
   },
   {
@@ -1622,9 +1552,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": -22.6,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": -25.4,
     "is_underpriced": true
   },
   {
@@ -1661,9 +1591,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -17.5,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -17.8,
     "is_underpriced": true
   },
   {
@@ -1700,9 +1630,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -17.5,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -17.8,
     "is_underpriced": true
   },
   {
@@ -1739,9 +1669,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -16.8,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -17.1,
     "is_underpriced": true
   },
   {
@@ -1778,9 +1708,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": -16.7,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": -19.7,
     "is_underpriced": true
   },
   {
@@ -5097,45 +5027,6 @@
     "is_underpriced": true
   },
   {
-    "title": "Ford Transit Custom 2.0 TDCI 130PK L2 EURO 6 - Airco - Cruis",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2406983759-ford-transit-custom-2-0-tdci-130pk-l2-euro-6-airco-cruis",
-    "source": "marktplaats",
-    "year": 2022,
-    "km": 121333,
-    "price_eur": 13900.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/bf1cf29c-0711-46a9-9dd2-0c1c88643939?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ee550a48-f57c-4027-b0cf-e0f11cb815bc?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6c0bbaad-0bfd-45df-bf92-60d40fdf7ee3?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": "L2H?",
-    "classification_confidence": "high",
-    "matched_token": "transit custom",
-    "score": 23,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 24400.0,
-    "risk_score": 2,
-    "risk_flags": [
-      {
-        "code": "very_high_km_per_year",
-        "label": "Very high km/year (30,333/yr) \u2014 highway-thrashed risk",
-        "severity": "high"
-      }
-    ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -38.8,
-    "is_underpriced": true
-  },
-  {
     "title": "Ford Transit Custom | L2 | 2.0 TDCi | Euro 6 | BTW-auto",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2403757526-ford-transit-custom-l2-2-0-tdci-euro-6-btw-auto",
     "source": "marktplaats",
@@ -5167,9 +5058,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": -23.5,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": -25.1,
     "is_underpriced": true
   },
   {
@@ -6705,51 +6596,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 67,
-    "market_median_eur": 17314,
-    "price_pct_vs_median": -80.1,
-    "is_underpriced": true
-  },
-  {
-    "title": "Ford Transit Custom 2.2 Tdci 74KW 2016",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2406176638-ford-transit-custom-2-2-tdci-74kw-2016",
-    "source": "marktplaats",
-    "year": 2016,
-    "km": 220169,
-    "price_eur": 5950.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/a6ac6f50-b2f8-4900-8163-6f7072311242?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": null,
-    "classification_confidence": "low",
-    "matched_token": "transit custom",
-    "score": 17,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 16450.0,
-    "risk_score": 2,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (22,016/yr) \u2014 above-average wear",
-        "severity": "warn"
-      },
-      {
-        "code": "high_total_km",
-        "label": "High total km (220,169) \u2014 transmission/engine wear risk",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 26,
-    "market_median_eur": 13472,
-    "price_pct_vs_median": -55.8,
+    "market_sample_size": 59,
+    "market_median_eur": 17995,
+    "price_pct_vs_median": -80.8,
     "is_underpriced": true
   },
   {
@@ -6857,9 +6706,9 @@
     "total_project_cost_eur": 19250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 26,
-    "market_median_eur": 13472,
-    "price_pct_vs_median": -35.1,
+    "market_sample_size": 21,
+    "market_median_eur": 15000,
+    "price_pct_vs_median": -41.7,
     "is_underpriced": true
   },
   {
@@ -6904,48 +6753,6 @@
     "market_sample_size": 90,
     "market_median_eur": 18500,
     "price_pct_vs_median": -51.6,
-    "is_underpriced": true
-  },
-  {
-    "title": "Ford Transit Custom 2.2 Tdci 74KW 2016 Grijs",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2386129101-ford-transit-custom-2-2-tdci-74kw-2016-grijs",
-    "source": "marktplaats",
-    "year": 2016,
-    "km": 231815,
-    "price_eur": 8999.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/190f036d-fc70-4496-8acb-6916adab9a74?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": null,
-    "classification_confidence": "low",
-    "matched_token": "transit custom",
-    "score": 17,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 19499.0,
-    "risk_score": 2,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (23,181/yr) \u2014 above-average wear",
-        "severity": "warn"
-      },
-      {
-        "code": "high_total_km",
-        "label": "High total km (231,815) \u2014 transmission/engine wear risk",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 26,
-    "market_median_eur": 13472,
-    "price_pct_vs_median": -33.2,
     "is_underpriced": true
   },
   {
@@ -7104,40 +6911,9 @@
     "total_project_cost_eur": 21450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 26,
-    "market_median_eur": 13472,
-    "price_pct_vs_median": -18.7,
-    "is_underpriced": true
-  },
-  {
-    "title": "Ford Transit Custom 2.2 Tdci 74KW 2016",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2397370112-ford-transit-custom-2-2-tdci-74kw-2016",
-    "source": "marktplaats",
-    "year": 2016,
-    "km": 155000,
-    "price_eur": 11450.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/43d6a24d-fd12-40eb-ab0b-ea8a6aa6caf9?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": null,
-    "classification_confidence": "low",
-    "matched_token": "transit custom",
-    "score": 17,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 21950.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 26,
-    "market_median_eur": 13472,
-    "price_pct_vs_median": -15.0,
+    "market_sample_size": 21,
+    "market_median_eur": 15000,
+    "price_pct_vs_median": -27.0,
     "is_underpriced": true
   },
   {
@@ -7221,9 +6997,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": -42.9,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": -44.8,
     "is_underpriced": true
   },
   {
@@ -7302,48 +7078,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": -40.7,
-    "is_underpriced": true
-  },
-  {
-    "title": "Ford Transit Custom 2.0 TDCI EURO 6 - Airco - Cruise - PDC -",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2406962943-ford-transit-custom-2-0-tdci-euro-6-airco-cruise-pdc",
-    "source": "marktplaats",
-    "year": 2019,
-    "km": 156024,
-    "price_eur": 12499.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/05d94348-5732-40dd-8b22-4f6461babaa8?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/22b2de2e-6a1b-4cb7-8471-ec7196b7ab3d?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/f4d0c4df-7c8c-4808-a159-d0b6781ad2bd?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": null,
-    "classification_confidence": "low",
-    "matched_token": "transit custom",
-    "score": 17,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 22999.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (22,289/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -36.7,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": -42.7,
     "is_underpriced": true
   },
   {
@@ -7427,48 +7164,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 46,
-    "market_median_eur": 15725,
-    "price_pct_vs_median": -18.3,
-    "is_underpriced": true
-  },
-  {
-    "title": "Ford Transit Custom 2.0 TDCI EURO 6 - Airco - Cruise - Trekh",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2407137521-ford-transit-custom-2-0-tdci-euro-6-airco-cruise-trekh",
-    "source": "marktplaats",
-    "year": 2019,
-    "km": 174183,
-    "price_eur": 12900.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/fb00a4ac-4883-4f9c-ac23-a9df055c940d?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d362aee2-22d8-4a2e-816d-2d7c1f0205ca?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/a20c5bdf-2cba-46ab-ba77-9a13bf481df4?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": null,
-    "classification_confidence": "low",
-    "matched_token": "transit custom",
-    "score": 17,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 23400.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (24,883/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -34.7,
+    "market_sample_size": 38,
+    "market_median_eur": 16675,
+    "price_pct_vs_median": -22.9,
     "is_underpriced": true
   },
   {
@@ -7534,9 +7232,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": -34.8,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": -37.0,
     "is_underpriced": true
   },
   {
@@ -7610,85 +7308,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -38.8,
-    "is_underpriced": true
-  },
-  {
-    "title": "Ford Transit Custom X SPORT AUTOMAAT 290 2.0 TDCI LENGTE 2",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2407011459-ford-transit-custom-x-sport-automaat-290-2-0-tdci-lengte-2",
-    "source": "marktplaats",
-    "year": 2018,
-    "km": 179215,
-    "price_eur": 13945.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/baad7385-118d-4139-9497-c79ea7d92088?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": null,
-    "classification_confidence": "low",
-    "matched_token": "transit custom",
-    "score": 17,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 24445.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (22,401/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 67,
-    "market_median_eur": 17314,
-    "price_pct_vs_median": -19.5,
-    "is_underpriced": true
-  },
-  {
-    "title": "Ford Transit Custom 2.0 TDCI 130PK EURO 6 - Airco - Navi - C",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2407206135-ford-transit-custom-2-0-tdci-130pk-euro-6-airco-navi-c",
-    "source": "marktplaats",
-    "year": 2021,
-    "km": 129482,
-    "price_eur": 13950.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/d467c64f-a72f-4122-a304-4e75514b6e23?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/395249ca-43f7-4e4a-af0c-26bb27fd67a6?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/c9542e45-3e9f-4262-b38d-1750612a496e?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": null,
-    "classification_confidence": "low",
-    "matched_token": "transit custom",
-    "score": 17,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 24450.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (25,896/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": -33.6,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -39.0,
     "is_underpriced": true
   },
   {
@@ -7875,9 +7497,9 @@
     "total_project_cost_eur": 26250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -20.3,
+    "market_sample_size": 82,
+    "market_median_eur": 19975,
+    "price_pct_vs_median": -21.2,
     "is_underpriced": true
   },
   {
@@ -7961,45 +7583,6 @@
     "is_underpriced": true
   },
   {
-    "title": "Ford Transit Custom 2.0TDCi 130PK Lang | 2xSchuifdeur | Airc",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2406600198-ford-transit-custom-2-0tdci-130pk-lang-2xschuifdeur-airc",
-    "source": "marktplaats",
-    "year": 2022,
-    "km": 163824,
-    "price_eur": 15995.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/53d9dd00-6ea2-4bb4-a98a-5fe38708e006?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/78e70038-8154-47c4-989c-fc37166d7e40?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0349c3af-5bba-4389-835a-ceec177f2c4f?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": null,
-    "classification_confidence": "low",
-    "matched_token": "transit custom",
-    "score": 17,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 26495.0,
-    "risk_score": 2,
-    "risk_flags": [
-      {
-        "code": "very_high_km_per_year",
-        "label": "Very high km/year (40,956/yr) \u2014 highway-thrashed risk",
-        "severity": "high"
-      }
-    ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -29.6,
-    "is_underpriced": true
-  },
-  {
     "title": "Ford Transit Custom 2.0TDCi 130PK Limited | Navigatie | Came",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2405313299-ford-transit-custom-2-0tdci-130pk-limited-navigatie-came",
     "source": "marktplaats",
@@ -8033,9 +7616,48 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": -23.8,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": -26.4,
+    "is_underpriced": true
+  },
+  {
+    "title": "Ford Transit Custom 2.0TDCi 130PK Lang | 2xSchuifdeur | Airc",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2406600198-ford-transit-custom-2-0tdci-130pk-lang-2xschuifdeur-airc",
+    "source": "marktplaats",
+    "year": 2022,
+    "km": 163824,
+    "price_eur": 15995.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/53d9dd00-6ea2-4bb4-a98a-5fe38708e006?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/78e70038-8154-47c4-989c-fc37166d7e40?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/0349c3af-5bba-4389-835a-ceec177f2c4f?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "transit_custom_l2h1",
+    "variant": null,
+    "classification_confidence": "low",
+    "matched_token": "transit custom",
+    "score": 17,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 26495.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (40,956/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -29.8,
     "is_underpriced": true
   },
   {
@@ -8188,9 +7810,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -22.8,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -23.0,
     "is_underpriced": true
   },
   {
@@ -8221,9 +7843,9 @@
     "total_project_cost_eur": 28150.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -22.3,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -22.6,
     "is_underpriced": true
   },
   {
@@ -8254,9 +7876,9 @@
     "total_project_cost_eur": 28350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": -15.0,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": -17.8,
     "is_underpriced": true
   },
   {
@@ -8287,9 +7909,9 @@
     "total_project_cost_eur": 28400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -21.2,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -21.5,
     "is_underpriced": true
   },
   {
@@ -8398,9 +8020,9 @@
     "total_project_cost_eur": 29100.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -18.2,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -18.4,
     "is_underpriced": true
   },
   {
@@ -8431,9 +8053,9 @@
     "total_project_cost_eur": 29150.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -17.9,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -18.2,
     "is_underpriced": true
   },
   {
@@ -8470,9 +8092,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -17.5,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -17.8,
     "is_underpriced": true
   },
   {
@@ -8509,9 +8131,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -17.1,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -17.3,
     "is_underpriced": true
   },
   {
@@ -14047,9 +13669,9 @@
     "total_project_cost_eur": 20500.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": -58.2,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": -59.7,
     "is_underpriced": true
   },
   {
@@ -14078,9 +13700,9 @@
     "total_project_cost_eur": 21500.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -44.3,
+    "market_sample_size": 82,
+    "market_median_eur": 19975,
+    "price_pct_vs_median": -44.9,
     "is_underpriced": true
   },
   {
@@ -14109,9 +13731,9 @@
     "total_project_cost_eur": 22750.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 46,
-    "market_median_eur": 15725,
-    "price_pct_vs_median": -22.1,
+    "market_sample_size": 38,
+    "market_median_eur": 16675,
+    "price_pct_vs_median": -26.5,
     "is_underpriced": true
   },
   {
@@ -14148,9 +13770,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -31.6,
+    "market_sample_size": 82,
+    "market_median_eur": 19975,
+    "price_pct_vs_median": -32.4,
     "is_underpriced": true
   },
   {
@@ -14185,9 +13807,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -29.6,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -29.8,
     "is_underpriced": true
   },
   {
@@ -14216,9 +13838,9 @@
     "total_project_cost_eur": 27000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -16.5,
+    "market_sample_size": 82,
+    "market_median_eur": 19975,
+    "price_pct_vs_median": -17.4,
     "is_underpriced": true
   },
   {
@@ -14255,9 +13877,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": -19.3,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": -22.0,
     "is_underpriced": true
   },
   {
@@ -14327,9 +13949,9 @@
     "total_project_cost_eur": 37490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": 79.7,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": 75.8,
     "is_underpriced": false
   },
   {
@@ -14389,9 +14011,9 @@
     "total_project_cost_eur": 28400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": 31.1,
+    "market_sample_size": 82,
+    "market_median_eur": 19975,
+    "price_pct_vs_median": 29.7,
     "is_underpriced": false
   },
   {
@@ -14420,9 +14042,9 @@
     "total_project_cost_eur": 30400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": 41.3,
+    "market_sample_size": 82,
+    "market_median_eur": 19975,
+    "price_pct_vs_median": 39.7,
     "is_underpriced": false
   },
   {
@@ -14459,7 +14081,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 53,
+    "market_sample_size": 51,
     "market_median_eur": 27900,
     "price_pct_vs_median": 59.3,
     "is_underpriced": false
@@ -14657,9 +14279,9 @@
     "total_project_cost_eur": 28499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 67,
-    "market_median_eur": 17314,
-    "price_pct_vs_median": 50.2,
+    "market_sample_size": 59,
+    "market_median_eur": 17995,
+    "price_pct_vs_median": 44.5,
     "is_underpriced": false
   },
   {
@@ -14698,9 +14320,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 17.1,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": 12.8,
     "is_underpriced": false
   },
   {
@@ -15119,55 +14741,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 26,
-    "market_median_eur": 13472,
-    "price_pct_vs_median": 11.3,
-    "is_underpriced": false
-  },
-  {
-    "title": "Transit/Tourneo Custom 9-Sitzer*Tempomat*LED*PDC",
-    "url": "https://www.autoscout24.de/angebote/ford-tourneo-custom-transit-tourneo-custom-9-sitzer-tempomat-led-pdc-diesel-schwarz-cat_ma29mo74251-3bc0dd15-4014-4220-8940-8bd503a6a976",
-    "source": "autoscout24_de",
-    "year": 2019,
-    "km": 168318,
-    "price_eur": 16880.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://prod.pictures.autoscout24.net/listing-images/3bc0dd15-4014-4220-8940-8bd503a6a976_98579f45-33bf-4da4-98cd-3923495d2782.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/3bc0dd15-4014-4220-8940-8bd503a6a976_4acab9b6-28a7-40a7-a545-013cb810bf07.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/3bc0dd15-4014-4220-8940-8bd503a6a976_22b87981-8139-4d4a-9504-d84f232abcef.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/3bc0dd15-4014-4220-8940-8bd503a6a976_ba64add9-ff47-4451-908c-f7e03d1a4c61.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/3bc0dd15-4014-4220-8940-8bd503a6a976_0e7a56cb-6686-4d49-abb2-731dc8dc45fc.jpg/250x188.webp"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": null,
-    "classification_confidence": "low",
-    "matched_token": "tourneo custom",
-    "score": 70,
-    "est_conversion_cost_eur": 2500,
-    "est_conversion_cost_low_eur": 1500,
-    "est_conversion_cost_high_eur": 3500,
-    "conversion_effort": "minimal",
-    "total_project_cost_eur": 19380.0,
-    "risk_score": 2,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (24,045/yr) \u2014 above-average wear",
-        "severity": "warn"
-      },
-      {
-        "code": "high_total_km",
-        "label": "High total km (168,318) \u2014 transmission/engine wear risk",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -14.5,
+    "market_sample_size": 21,
+    "market_median_eur": 15000,
+    "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
   {
@@ -15198,9 +14774,9 @@
     "total_project_cost_eur": 24944.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": 13.6,
+    "market_sample_size": 82,
+    "market_median_eur": 19975,
+    "price_pct_vs_median": 12.4,
     "is_underpriced": false
   },
   {
@@ -15271,9 +14847,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": 9.8,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": 9.4,
     "is_underpriced": false
   },
   {
@@ -15302,9 +14878,9 @@
     "total_project_cost_eur": 28450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 67,
-    "market_median_eur": 17314,
-    "price_pct_vs_median": 49.9,
+    "market_sample_size": 59,
+    "market_median_eur": 17995,
+    "price_pct_vs_median": 44.2,
     "is_underpriced": false
   },
   {
@@ -15420,7 +14996,7 @@
     "year": 2023,
     "km": 31973,
     "price_eur": 30900.0,
-    "seats": null,
+    "seats": 6,
     "emission_standard": null,
     "body_type": null,
     "weight_kg": null,
@@ -15439,9 +15015,9 @@
     "total_project_cost_eur": 43650.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 29.3,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": 24.6,
     "is_underpriced": false
   },
   {
@@ -16041,9 +15617,9 @@
     "total_project_cost_eur": 22950.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 26,
-    "market_median_eur": 13472,
-    "price_pct_vs_median": 14.7,
+    "market_sample_size": 21,
+    "market_median_eur": 15000,
+    "price_pct_vs_median": 3.0,
     "is_underpriced": false
   },
   {
@@ -16129,9 +15705,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": -8.1,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": -10.1,
     "is_underpriced": false
   },
   {
@@ -16168,9 +15744,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": -10.0,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": -13.0,
     "is_underpriced": false
   },
   {
@@ -16180,7 +15756,7 @@
     "year": 2021,
     "km": 174147,
     "price_eur": 18900.0,
-    "seats": null,
+    "seats": 6,
     "emission_standard": null,
     "body_type": null,
     "weight_kg": null,
@@ -16207,9 +15783,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": -10.0,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": -13.0,
     "is_underpriced": false
   },
   {
@@ -16277,9 +15853,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": 0.1,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": -2.0,
     "is_underpriced": false
   },
   {
@@ -16316,9 +15892,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": 0.0,
+    "market_sample_size": 82,
+    "market_median_eur": 19975,
+    "price_pct_vs_median": -1.1,
     "is_underpriced": false
   },
   {
@@ -16419,9 +15995,9 @@
     "total_project_cost_eur": 28440.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": 6.0,
+    "market_sample_size": 82,
+    "market_median_eur": 19975,
+    "price_pct_vs_median": 4.8,
     "is_underpriced": false
   },
   {
@@ -16458,9 +16034,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -4.3,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -4.6,
     "is_underpriced": false
   },
   {
@@ -16470,7 +16046,7 @@
     "year": 2019,
     "km": 91045,
     "price_eur": 21950.0,
-    "seats": null,
+    "seats": 6,
     "emission_standard": null,
     "body_type": null,
     "weight_kg": null,
@@ -16491,9 +16067,9 @@
     "total_project_cost_eur": 34700.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": 11.1,
+    "market_sample_size": 82,
+    "market_median_eur": 19975,
+    "price_pct_vs_median": 9.9,
     "is_underpriced": false
   },
   {
@@ -16561,48 +16137,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -3.2,
-    "is_underpriced": false
-  },
-  {
-    "title": "Ford Transit Custom 2.0 TDCI 170pk L2H1 Dubbele Cabine Euro6",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2398660300-ford-transit-custom-2-0-tdci-170pk-l2h1-dubbele-cabine-euro6",
-    "source": "marktplaats",
-    "year": 2021,
-    "km": 173873,
-    "price_eur": 22750.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/680a0cc5-4e53-4e91-9e46-0c935b16d9e5?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3d059daf-18f1-489c-a8a8-fa53978e5177?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8af00ba3-ecb0-4066-b98c-45c061c9b0d3?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": "L2H1",
-    "classification_confidence": "high",
-    "matched_token": "transit custom",
-    "score": 66,
-    "est_conversion_cost_eur": 7500,
-    "est_conversion_cost_low_eur": 5000,
-    "est_conversion_cost_high_eur": 10000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 30250.0,
-    "risk_score": 2,
-    "risk_flags": [
-      {
-        "code": "very_high_km_per_year",
-        "label": "Very high km/year (34,774/yr) \u2014 highway-thrashed risk",
-        "severity": "high"
-      }
-    ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": 8.4,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -3.5,
     "is_underpriced": false
   },
   {
@@ -16639,9 +16176,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": 17.6,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": 15.1,
     "is_underpriced": false
   },
   {
@@ -16676,9 +16213,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": 17.8,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": 15.3,
     "is_underpriced": false
   },
   {
@@ -16715,9 +16252,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": 22.5,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": 19.8,
     "is_underpriced": false
   },
   {
@@ -16752,9 +16289,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": 13.8,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": 10.0,
     "is_underpriced": false
   },
   {
@@ -16828,9 +16365,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": 9.6,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": 9.2,
     "is_underpriced": false
   },
   {
@@ -16950,39 +16487,6 @@
     "is_underpriced": false
   },
   {
-    "title": "Ford Transit Custom 2.0 TDCI 130pk L2H1 Dubbele Cabine Inric",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2405500227-ford-transit-custom-2-0-tdci-130pk-l2h1-dubbele-cabine-inric",
-    "source": "marktplaats",
-    "year": 2021,
-    "km": 94827,
-    "price_eur": 25750.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/5ecc8f8a-ad25-4fa7-ba8a-8280ce382db8?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/11400bcd-2b68-4444-8403-cbaeff73f060?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/5e7f7361-188b-4b3c-8493-5f1e4f4172e1?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": "L2H1",
-    "classification_confidence": "high",
-    "matched_token": "transit custom",
-    "score": 66,
-    "est_conversion_cost_eur": 7500,
-    "est_conversion_cost_low_eur": 5000,
-    "est_conversion_cost_high_eur": 10000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 33250.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": 22.6,
-    "is_underpriced": false
-  },
-  {
     "title": "Ford Transit Custom 2.0 TDCI 131pk L2H1 Dubbele Cabine Euro6",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2399328823-ford-transit-custom-2-0-tdci-131pk-l2h1-dubbele-cabine-euro6",
     "source": "marktplaats",
@@ -17010,9 +16514,9 @@
     "total_project_cost_eur": 33350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": 23.1,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": 19.0,
     "is_underpriced": false
   },
   {
@@ -17049,9 +16553,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": 14.0,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": 13.6,
     "is_underpriced": false
   },
   {
@@ -17088,9 +16592,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": 18.4,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": 18.0,
     "is_underpriced": false
   },
   {
@@ -17100,7 +16604,7 @@
     "year": 2023,
     "km": 98303,
     "price_eur": 26900.0,
-    "seats": null,
+    "seats": 6,
     "emission_standard": null,
     "body_type": null,
     "weight_kg": null,
@@ -17127,9 +16631,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 12.6,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": 8.5,
     "is_underpriced": false
   },
   {
@@ -17172,45 +16676,6 @@
     "is_underpriced": false
   },
   {
-    "title": "Ford Transit Custom 2.0 TDCI 170pk L2H1 Dubbele Cabine Euro6",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2398009371-ford-transit-custom-2-0-tdci-170pk-l2h1-dubbele-cabine-euro6",
-    "source": "marktplaats",
-    "year": 2021,
-    "km": 132639,
-    "price_eur": 27400.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/db55000f-f639-4dd0-8c85-bf2cbf4fe097?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/20483268-7e40-4deb-823a-88f733e87fe2?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/de63e63c-1b2c-4ba0-b735-57108e1303f5?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": "L2H1",
-    "classification_confidence": "high",
-    "matched_token": "transit custom",
-    "score": 66,
-    "est_conversion_cost_eur": 7500,
-    "est_conversion_cost_low_eur": 5000,
-    "est_conversion_cost_high_eur": 10000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 34900.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (26,527/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": 30.5,
-    "is_underpriced": false
-  },
-  {
     "title": "Ford Transit Custom 300 2.0 TDCI 170 PK L2H1 Limited DC | Du",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2402090281-ford-transit-custom-300-2-0-tdci-170-pk-l2h1-limited-dc-du",
     "source": "marktplaats",
@@ -17244,9 +16709,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": 32.6,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": 28.2,
     "is_underpriced": false
   },
   {
@@ -17277,9 +16742,9 @@
     "total_project_cost_eur": 35350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": 32.7,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": 28.2,
     "is_underpriced": false
   },
   {
@@ -17310,9 +16775,9 @@
     "total_project_cost_eur": 35400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 16.7,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": 12.5,
     "is_underpriced": false
   },
   {
@@ -17349,9 +16814,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 16.7,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": 12.5,
     "is_underpriced": false
   },
   {
@@ -17380,9 +16845,9 @@
     "total_project_cost_eur": 35500.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 17.2,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": 12.9,
     "is_underpriced": false
   },
   {
@@ -17507,7 +16972,7 @@
     "year": 2022,
     "km": 127625,
     "price_eur": 35950.0,
-    "seats": null,
+    "seats": 6,
     "emission_standard": null,
     "body_type": null,
     "weight_kg": null,
@@ -17534,9 +16999,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": 58.2,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": 57.7,
     "is_underpriced": false
   },
   {
@@ -17576,9 +17041,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": 13.9,
+    "market_sample_size": 82,
+    "market_median_eur": 19975,
+    "price_pct_vs_median": 12.6,
     "is_underpriced": false
   },
   {
@@ -18156,9 +17621,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 67,
-    "market_median_eur": 17314,
-    "price_pct_vs_median": 3.7,
+    "market_sample_size": 59,
+    "market_median_eur": 17995,
+    "price_pct_vs_median": -0.3,
     "is_underpriced": false
   },
   {
@@ -18200,9 +17665,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 67,
-    "market_median_eur": 17314,
-    "price_pct_vs_median": 3.7,
+    "market_sample_size": 59,
+    "market_median_eur": 17995,
+    "price_pct_vs_median": -0.3,
     "is_underpriced": false
   },
   {
@@ -18266,7 +17731,7 @@
     "total_project_cost_eur": 45970.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 53,
+    "market_sample_size": 51,
     "market_median_eur": 27900,
     "price_pct_vs_median": 55.8,
     "is_underpriced": false
@@ -20375,9 +19840,120 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": 2.4,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": 0.3,
+    "is_underpriced": false
+  },
+  {
+    "title": "Ford Transit Custom 2.0 TDCI 170pk L2H1 Dubbele Cabine Euro6",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2398660300-ford-transit-custom-2-0-tdci-170pk-l2h1-dubbele-cabine-euro6",
+    "source": "marktplaats",
+    "year": 2021,
+    "km": 173873,
+    "price_eur": 22750.0,
+    "seats": 5,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/680a0cc5-4e53-4e91-9e46-0c935b16d9e5?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3d059daf-18f1-489c-a8a8-fa53978e5177?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8af00ba3-ecb0-4066-b98c-45c061c9b0d3?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "transit_custom_l2h1",
+    "variant": "L2H1",
+    "classification_confidence": "high",
+    "matched_token": "transit custom",
+    "score": 56,
+    "est_conversion_cost_eur": 7500,
+    "est_conversion_cost_low_eur": 5000,
+    "est_conversion_cost_high_eur": 10000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 30250.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (34,774/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": 4.7,
+    "is_underpriced": false
+  },
+  {
+    "title": "Ford Transit Custom 2.0 TDCI 130pk L2H1 Dubbele Cabine Inric",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2405500227-ford-transit-custom-2-0-tdci-130pk-l2h1-dubbele-cabine-inric",
+    "source": "marktplaats",
+    "year": 2021,
+    "km": 94827,
+    "price_eur": 25750.0,
+    "seats": 5,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/5ecc8f8a-ad25-4fa7-ba8a-8280ce382db8?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/11400bcd-2b68-4444-8403-cbaeff73f060?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/5e7f7361-188b-4b3c-8493-5f1e4f4172e1?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "transit_custom_l2h1",
+    "variant": "L2H1",
+    "classification_confidence": "high",
+    "matched_token": "transit custom",
+    "score": 56,
+    "est_conversion_cost_eur": 7500,
+    "est_conversion_cost_low_eur": 5000,
+    "est_conversion_cost_high_eur": 10000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 33250.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": 18.5,
+    "is_underpriced": false
+  },
+  {
+    "title": "Ford Transit Custom 2.0 TDCI 170pk L2H1 Dubbele Cabine Euro6",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2398009371-ford-transit-custom-2-0-tdci-170pk-l2h1-dubbele-cabine-euro6",
+    "source": "marktplaats",
+    "year": 2021,
+    "km": 132639,
+    "price_eur": 27400.0,
+    "seats": 5,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/db55000f-f639-4dd0-8c85-bf2cbf4fe097?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/20483268-7e40-4deb-823a-88f733e87fe2?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/de63e63c-1b2c-4ba0-b735-57108e1303f5?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "transit_custom_l2h1",
+    "variant": "L2H1",
+    "classification_confidence": "high",
+    "matched_token": "transit custom",
+    "score": 56,
+    "est_conversion_cost_eur": 7500,
+    "est_conversion_cost_low_eur": 5000,
+    "est_conversion_cost_high_eur": 10000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 34900.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (26,527/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": 26.1,
     "is_underpriced": false
   },
   {
@@ -20441,9 +20017,9 @@
     "total_project_cost_eur": 52690.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 67.1,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": 61.1,
     "is_underpriced": false
   },
   {
@@ -20472,9 +20048,9 @@
     "total_project_cost_eur": 21200.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 67,
-    "market_median_eur": 17314,
-    "price_pct_vs_median": -7.9,
+    "market_sample_size": 59,
+    "market_median_eur": 17995,
+    "price_pct_vs_median": -11.4,
     "is_underpriced": false
   },
   {
@@ -20503,9 +20079,9 @@
     "total_project_cost_eur": 27500.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": -12.7,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": -14.6,
     "is_underpriced": false
   },
   {
@@ -20536,9 +20112,9 @@
     "total_project_cost_eur": 23245.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 46,
-    "market_median_eur": 15725,
-    "price_pct_vs_median": 14.4,
+    "market_sample_size": 38,
+    "market_median_eur": 16675,
+    "price_pct_vs_median": 7.9,
     "is_underpriced": false
   },
   {
@@ -20571,9 +20147,9 @@
     "total_project_cost_eur": 35490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": 28.3,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": 25.6,
     "is_underpriced": false
   },
   {
@@ -20610,9 +20186,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": 32.9,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": 28.4,
     "is_underpriced": false
   },
   {
@@ -20649,9 +20225,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 33.1,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": 28.3,
     "is_underpriced": false
   },
   {
@@ -20691,39 +20267,6 @@
     "market_sample_size": 44,
     "market_median_eur": 23800,
     "price_pct_vs_median": 34.4,
-    "is_underpriced": false
-  },
-  {
-    "title": "Ford Transit Custom 300 2.0 TDCI Limited DC | 360 Camera | A",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2399222710-ford-transit-custom-300-2-0-tdci-limited-dc-360-camera-a",
-    "source": "marktplaats",
-    "year": 2024,
-    "km": 26330,
-    "price_eur": 43845.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1349ccfc-7e22-40ed-beb7-93c936cc1be6?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/78dc2b5b-7590-448b-88fa-27bb7fd9a42f?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ae54aabf-9b39-4c9b-a470-9f409860468d?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": null,
-    "classification_confidence": "low",
-    "matched_token": "transit custom",
-    "score": 55,
-    "est_conversion_cost_eur": 5250,
-    "est_conversion_cost_low_eur": 3500,
-    "est_conversion_cost_high_eur": 7000,
-    "conversion_effort": "light",
-    "total_project_cost_eur": 49095.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 84,
-    "market_median_eur": 25925,
-    "price_pct_vs_median": 69.1,
     "is_underpriced": false
   },
   {
@@ -24171,9 +23714,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": 7.8,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": 5.5,
     "is_underpriced": false
   },
   {
@@ -24210,9 +23753,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": 22.6,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": 18.5,
     "is_underpriced": false
   },
   {
@@ -24249,9 +23792,42 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 20.9,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": 16.6,
+    "is_underpriced": false
+  },
+  {
+    "title": "Ford Transit Custom 300 2.0 TDCI Limited DC | 360 Camera | A",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2399222710-ford-transit-custom-300-2-0-tdci-limited-dc-360-camera-a",
+    "source": "marktplaats",
+    "year": 2024,
+    "km": 26330,
+    "price_eur": 43845.0,
+    "seats": 5,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1349ccfc-7e22-40ed-beb7-93c936cc1be6?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/78dc2b5b-7590-448b-88fa-27bb7fd9a42f?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ae54aabf-9b39-4c9b-a470-9f409860468d?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "transit_custom_l2h1",
+    "variant": null,
+    "classification_confidence": "low",
+    "matched_token": "transit custom",
+    "score": 45,
+    "est_conversion_cost_eur": 5250,
+    "est_conversion_cost_low_eur": 3500,
+    "est_conversion_cost_high_eur": 7000,
+    "conversion_effort": "light",
+    "total_project_cost_eur": 49095.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 80,
+    "market_median_eur": 25925,
+    "price_pct_vs_median": 69.1,
     "is_underpriced": false
   },
   {
@@ -24442,9 +24018,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": 23.8,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": 19.7,
     "is_underpriced": false
   },
   {
@@ -24481,9 +24057,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": 18.6,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": 18.2,
     "is_underpriced": false
   },
   {
@@ -24961,9 +24537,9 @@
     "total_project_cost_eur": 28450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 67,
-    "market_median_eur": 17314,
-    "price_pct_vs_median": -9.3,
+    "market_sample_size": 59,
+    "market_median_eur": 17995,
+    "price_pct_vs_median": -12.8,
     "is_underpriced": false
   },
   {
@@ -25252,9 +24828,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": -5.0,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": -7.0,
     "is_underpriced": false
   },
   {
@@ -25394,9 +24970,9 @@
     "total_project_cost_eur": 32200.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": -0.1,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": -2.3,
     "is_underpriced": false
   },
   {
@@ -25505,9 +25081,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": -4.7,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": -7.9,
     "is_underpriced": false
   },
   {
@@ -25544,9 +25120,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": -2.4,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": -5.6,
     "is_underpriced": false
   },
   {
@@ -25616,48 +25192,9 @@
     "total_project_cost_eur": 33595.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": -0.7,
-    "is_underpriced": false
-  },
-  {
-    "title": "Ford Transit Custom 2.0 TDCI L2H1 Euro6 Airco | Camera | App",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2407141453-ford-transit-custom-2-0-tdci-l2h1-euro6-airco-camera-app",
-    "source": "marktplaats",
-    "year": 2021,
-    "km": 109172,
-    "price_eur": 20850.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/abffbaab-9c1a-4262-b163-eb47a84d939a?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ae19e26b-d0d8-4dee-ae41-f9f0dc77b694?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/47619f28-4b4b-405f-b745-40d2e2948438?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": "L2H1",
-    "classification_confidence": "high",
-    "matched_token": "transit custom",
-    "score": 28,
-    "est_conversion_cost_eur": 12750,
-    "est_conversion_cost_low_eur": 8500,
-    "est_conversion_cost_high_eur": 17000,
-    "conversion_effort": "heavy",
-    "total_project_cost_eur": 33600.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (21,834/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": -0.7,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": -4.1,
     "is_underpriced": false
   },
   {
@@ -25694,9 +25231,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": -0.5,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": -3.8,
     "is_underpriced": false
   },
   {
@@ -25733,40 +25270,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": -0.5,
-    "is_underpriced": false
-  },
-  {
-    "title": "Ford Transit Custom GB 2.0 Tdci 130PK 300 L2h1 Automaat 2021",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2406722587-ford-transit-custom-gb-2-0-tdci-130pk-300-l2h1-automaat-2021",
-    "source": "marktplaats",
-    "year": 2021,
-    "km": null,
-    "price_eur": 21500.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8ffb8379-f73d-46fc-bd9d-8cef7b647bf6?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": "L2H1",
-    "classification_confidence": "high",
-    "matched_token": "transit custom",
-    "score": 28,
-    "est_conversion_cost_eur": 12750,
-    "est_conversion_cost_low_eur": 8500,
-    "est_conversion_cost_high_eur": 17000,
-    "conversion_effort": "heavy",
-    "total_project_cost_eur": 34250.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": 2.4,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": -3.8,
     "is_underpriced": false
   },
   {
@@ -25803,9 +25309,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -4.5,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -4.8,
     "is_underpriced": false
   },
   {
@@ -25881,9 +25387,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": 3.6,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": 0.1,
     "is_underpriced": false
   },
   {
@@ -25920,9 +25426,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": -8.6,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": -11.9,
     "is_underpriced": false
   },
   {
@@ -25959,9 +25465,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": -8.4,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": -11.7,
     "is_underpriced": false
   },
   {
@@ -26035,9 +25541,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": -8.4,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": -11.7,
     "is_underpriced": false
   },
   {
@@ -26109,9 +25615,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": 7.2,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": 3.6,
     "is_underpriced": false
   },
   {
@@ -26185,9 +25691,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": 8.1,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": 4.5,
     "is_underpriced": false
   },
   {
@@ -26224,9 +25730,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": 8.8,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": 5.2,
     "is_underpriced": false
   },
   {
@@ -26255,9 +25761,9 @@
     "total_project_cost_eur": 35650.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": 15.9,
+    "market_sample_size": 82,
+    "market_median_eur": 19975,
+    "price_pct_vs_median": 14.6,
     "is_underpriced": false
   },
   {
@@ -26368,9 +25874,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 3.8,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
   {
@@ -26407,9 +25913,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": 27.9,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": 25.1,
     "is_underpriced": false
   },
   {
@@ -26510,9 +26016,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": 30.9,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": 28.1,
     "is_underpriced": false
   },
   {
@@ -26549,9 +26055,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 8.4,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": 4.5,
     "is_underpriced": false
   },
   {
@@ -26588,9 +26094,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 8.4,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": 4.5,
     "is_underpriced": false
   },
   {
@@ -26627,7 +26133,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": 0.1,
     "is_underpriced": false
@@ -26740,48 +26246,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 11.9,
-    "is_underpriced": false
-  },
-  {
-    "title": "Ford Transit Custom 300 2.0 TDCI L2H1 Trend | Beklding Vinyl",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2406938566-ford-transit-custom-300-2-0-tdci-l2h1-trend-beklding-vinyl",
-    "source": "marktplaats",
-    "year": 2024,
-    "km": 50285,
-    "price_eur": 26845.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/3d634aa8-3238-4c6c-8b08-29f947b238ba?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/21ccf06f-ff9e-4c9f-aa0a-c7c686a5f7f8?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/6f9b5b9a-defe-4b44-8f8e-92048a5a8e9b?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": "L2H1",
-    "classification_confidence": "high",
-    "matched_token": "transit custom",
-    "score": 28,
-    "est_conversion_cost_eur": 12750,
-    "est_conversion_cost_low_eur": 8500,
-    "est_conversion_cost_high_eur": 17000,
-    "conversion_effort": "heavy",
-    "total_project_cost_eur": 39595.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (25,142/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 84,
-    "market_median_eur": 25925,
-    "price_pct_vs_median": 3.5,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": 7.9,
     "is_underpriced": false
   },
   {
@@ -26816,7 +26283,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": 3.6,
     "is_underpriced": false
@@ -26849,7 +26316,7 @@
     "total_project_cost_eur": 39700.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": 4.0,
     "is_underpriced": false
@@ -26888,7 +26355,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": 7.6,
     "is_underpriced": false
@@ -26927,7 +26394,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": 7.6,
     "is_underpriced": false
@@ -26966,26 +26433,26 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": 7.6,
     "is_underpriced": false
   },
   {
     "title": "Ford Transit Custom 2.0 TDCI 136pk L2H1 Euro6 Airco | Camera",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2399022288-ford-transit-custom-2-0-tdci-136pk-l2h1-euro6-airco-camera",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2406714548-ford-transit-custom-2-0-tdci-136pk-l2h1-euro6-airco-camera",
     "source": "marktplaats",
     "year": 2024,
-    "km": 66332,
+    "km": 66410,
     "price_eur": 28500.0,
     "seats": null,
     "emission_standard": null,
     "body_type": null,
     "weight_kg": null,
     "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/c70af13c-20de-47c0-a761-76f50bc02c82?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/fbfefaad-3f04-4348-95a1-d951051b5862?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/fbc78b38-b4ff-4f9b-93f4-243e9566267a?rule=ecg_mp_eps$_82.jpg"
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/21e3f4e1-e368-4fbf-9db4-154827e99554?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/913b4f1e-1534-4980-ab4f-17f004b38c5e?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/2ab5c4ef-5b62-4535-ad17-b45c13c7c34a?rule=ecg_mp_eps$_82.jpg"
     ],
     "model_group": "transit_custom_l2h1",
     "variant": "L2H1",
@@ -27001,11 +26468,11 @@
     "risk_flags": [
       {
         "code": "very_high_km_per_year",
-        "label": "Very high km/year (33,166/yr) \u2014 highway-thrashed risk",
+        "label": "Very high km/year (33,205/yr) \u2014 highway-thrashed risk",
         "severity": "high"
       }
     ],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": 9.9,
     "is_underpriced": false
@@ -27044,7 +26511,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": 9.9,
     "is_underpriced": false
@@ -27083,7 +26550,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": 11.5,
     "is_underpriced": false
@@ -27122,7 +26589,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": 11.5,
     "is_underpriced": false
@@ -27192,7 +26659,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": 15.3,
     "is_underpriced": false
@@ -27270,43 +26737,6 @@
     "is_underpriced": false
   },
   {
-    "title": "Ford Transit Custom GB 2.0 Tdci 130PK 300 L2h1 Automaat 2023",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2404911525-ford-transit-custom-gb-2-0-tdci-130pk-300-l2h1-automaat-2023",
-    "source": "marktplaats",
-    "year": 2023,
-    "km": 77744,
-    "price_eur": 32950.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/1e9e04b1-fd01-4e0c-9bf3-12a8512389d0?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": "L2H1",
-    "classification_confidence": "high",
-    "matched_token": "transit custom",
-    "score": 28,
-    "est_conversion_cost_eur": 12750,
-    "est_conversion_cost_low_eur": 8500,
-    "est_conversion_cost_high_eur": 17000,
-    "conversion_effort": "heavy",
-    "total_project_cost_eur": 45700.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (25,914/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 37.9,
-    "is_underpriced": false
-  },
-  {
     "title": "Ford E-Transit Custom 340 L2 H1 Trend 65 kWh Black Line",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2398352764-ford-e-transit-custom-340-l2-h1-trend-65-kwh-black-line",
     "source": "marktplaats",
@@ -27334,7 +26764,7 @@
     "total_project_cost_eur": 46700.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 53,
+    "market_sample_size": 51,
     "market_median_eur": 27900,
     "price_pct_vs_median": 21.7,
     "is_underpriced": false
@@ -27367,7 +26797,7 @@
     "total_project_cost_eur": 47700.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": 34.8,
     "is_underpriced": false
@@ -27400,7 +26830,7 @@
     "total_project_cost_eur": 48700.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": 38.7,
     "is_underpriced": false
@@ -27439,9 +26869,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 58.8,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": 53.1,
     "is_underpriced": false
   },
   {
@@ -27536,7 +26966,7 @@
     "total_project_cost_eur": 57595.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 26,
+    "market_sample_size": 25,
     "market_median_eur": 28900,
     "price_pct_vs_median": 55.2,
     "is_underpriced": false
@@ -28106,9 +27536,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": 1.9,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": -0.3,
     "is_underpriced": false
   },
   {
@@ -34049,9 +33479,9 @@
     "total_project_cost_eur": 29450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": -4.1,
+    "market_sample_size": 82,
+    "market_median_eur": 19975,
+    "price_pct_vs_median": -5.1,
     "is_underpriced": false
   },
   {
@@ -34113,9 +33543,9 @@
     "total_project_cost_eur": 38450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": 23.0,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": 22.6,
     "is_underpriced": false
   },
   {
@@ -34214,7 +33644,7 @@
     "total_project_cost_eur": 53450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": 65.7,
     "is_underpriced": false
@@ -37566,9 +36996,9 @@
     "total_project_cost_eur": 26295.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 67,
-    "market_median_eur": 17314,
-    "price_pct_vs_median": -8.8,
+    "market_sample_size": 59,
+    "market_median_eur": 17995,
+    "price_pct_vs_median": -12.2,
     "is_underpriced": false
   },
   {
@@ -37708,9 +37138,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 67,
-    "market_median_eur": 17314,
-    "price_pct_vs_median": -2.7,
+    "market_sample_size": 59,
+    "market_median_eur": 17995,
+    "price_pct_vs_median": -6.4,
     "is_underpriced": false
   },
   {
@@ -37885,9 +37315,9 @@
     "total_project_cost_eur": 29400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": -3.0,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": -5.0,
     "is_underpriced": false
   },
   {
@@ -38099,9 +37529,9 @@
     "total_project_cost_eur": 31350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 131,
-    "market_median_eur": 20995,
-    "price_pct_vs_median": -0.7,
+    "market_sample_size": 122,
+    "market_median_eur": 21725,
+    "price_pct_vs_median": -4.0,
     "is_underpriced": false
   },
   {
@@ -38169,9 +37599,9 @@
     "total_project_cost_eur": 31495.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": 6.3,
+    "market_sample_size": 82,
+    "market_median_eur": 19975,
+    "price_pct_vs_median": 5.1,
     "is_underpriced": false
   },
   {
@@ -38239,9 +37669,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -4.1,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -4.4,
     "is_underpriced": false
   },
   {
@@ -38274,9 +37704,9 @@
     "total_project_cost_eur": 32400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": 10.9,
+    "market_sample_size": 82,
+    "market_median_eur": 19975,
+    "price_pct_vs_median": 9.6,
     "is_underpriced": false
   },
   {
@@ -38465,7 +37895,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": -12.3,
     "is_underpriced": false
@@ -38543,9 +37973,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": -4.0,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": -7.4,
     "is_underpriced": false
   },
   {
@@ -38683,9 +38113,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": -0.0,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": -3.6,
     "is_underpriced": false
   },
   {
@@ -38753,9 +38183,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 3.8,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
   {
@@ -38958,7 +38388,7 @@
     "total_project_cost_eur": 36300.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": -0.5,
     "is_underpriced": false
@@ -39038,7 +38468,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": 7.6,
     "is_underpriced": false
@@ -39075,7 +38505,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 84,
+    "market_sample_size": 80,
     "market_median_eur": 25925,
     "price_pct_vs_median": 11.7,
     "is_underpriced": false
@@ -39108,9 +38538,9 @@
     "total_project_cost_eur": 42450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 33.7,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": 28.9,
     "is_underpriced": false
   },
   {
@@ -39139,7 +38569,7 @@
     "total_project_cost_eur": 44490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 53,
+    "market_sample_size": 51,
     "market_median_eur": 27900,
     "price_pct_vs_median": 21.8,
     "is_underpriced": false
@@ -39234,9 +38664,9 @@
     "total_project_cost_eur": 53378.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 114,
-    "market_median_eur": 23898,
-    "price_pct_vs_median": 79.4,
+    "market_sample_size": 107,
+    "market_median_eur": 24795,
+    "price_pct_vs_median": 72.9,
     "is_underpriced": false
   },
   {
@@ -49074,9 +48504,9 @@
     "total_project_cost_eur": 37450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": 38.4,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": 35.4,
     "is_underpriced": false
   },
   {
@@ -49169,9 +48599,9 @@
     "total_project_cost_eur": 27814.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 118,
-    "market_median_eur": 19475,
-    "price_pct_vs_median": -11.1,
+    "market_sample_size": 108,
+    "market_median_eur": 19900,
+    "price_pct_vs_median": -13.0,
     "is_underpriced": false
   },
   {
@@ -49202,9 +48632,9 @@
     "total_project_cost_eur": 31000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 91,
-    "market_median_eur": 19750,
-    "price_pct_vs_median": 3.8,
+    "market_sample_size": 82,
+    "market_median_eur": 19975,
+    "price_pct_vs_median": 2.6,
     "is_underpriced": false
   },
   {
@@ -49233,9 +48663,9 @@
     "total_project_cost_eur": 31490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 131,
-    "market_median_eur": 22727,
-    "price_pct_vs_median": -7.6,
+    "market_sample_size": 124,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -7.9,
     "is_underpriced": false
   },
   {
@@ -49268,7 +48698,7 @@
     "total_project_cost_eur": 47444.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 26,
+    "market_sample_size": 25,
     "market_median_eur": 28900,
     "price_pct_vs_median": 27.8,
     "is_underpriced": false
