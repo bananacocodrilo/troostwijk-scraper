@@ -128,7 +128,9 @@ def notify_gems(accepted: Iterable[dict], *, state_path: str = STATE_PATH,
     for v in accepted:
         if not v.get("is_hidden_gem"):
             continue
-        lot_id = v.get("lot_id")
+        # Use lot_id when available (stable across URL variants); fall back
+        # to URL so notifications still work even if lot_id is missing.
+        lot_id = v.get("lot_id") or v.get("url")
         if not lot_id or lot_id in alerted:
             continue
         end = _parse_end(v.get("auction_end"))

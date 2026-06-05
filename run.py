@@ -112,6 +112,7 @@ def _model_key(title: str) -> str:
 _SCHEMA: dict = {
     # Identity
     "url":                        None,
+    "lot_id":                     None,
     "title":                      None,
     "thumbnail_url":              None,
     "images":                     [],
