@@ -6745,6 +6745,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-05T16:26:24.608125+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -7000,6 +7006,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-05T16:26:24.608125+00:00",
+          "current_bid_eur": 2500.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -7300,6 +7312,111 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "d177eadd-9ae7-423f-98c8-87fd05611591": {
+      "url": "https://www.vavato.com/en/l/2020-ford-transit-A3-46707-1",
+      "model_token": "transit",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-05T16:26:24.608125+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "623c981b-e922-442c-a981-aded67b9ed50": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-commercial-vehicle-A1-46844-21",
+      "model_token": "vito",
+      "year": 2003,
+      "snapshots": [
+        {
+          "ts": "2026-06-05T16:26:24.608125+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "f9e623a6-16ff-4a1c-bbf2-415b1f46a245": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-111-cdi-long-dc-comfort-%257C-vz-084-r-i-A1-44159-5107",
+      "model_token": "vito",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-05T16:26:24.608125+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "344b591c-a322-47a8-8a63-383d25fb976f": {
+      "url": "https://www.troostwijkauctions.com/en/l/2008-mercedes-benz-vito-120-cdi-320-l-dc-std-commercial-vehicle-A1-46875-2",
+      "model_token": "vito",
+      "year": 2008,
+      "snapshots": [
+        {
+          "ts": "2026-06-05T16:26:24.608125+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "5ba11d52-a985-4210-b745-a087c194204a": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-commercial-vehicle-A1-46844-12",
+      "model_token": "transit",
+      "year": 2011,
+      "snapshots": [
+        {
+          "ts": "2026-06-05T16:26:24.608125+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "35d78329-43d6-4d99-8c1b-8524ea4f5cf1": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-350-2-2-tdci-l2h3-trend%257C-v-304-un-A1-44158-5100",
+      "model_token": "transit",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-06-05T16:26:24.608125+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "94b86491-5687-4123-92b1-6c6a9866c8eb": {
+      "url": "https://www.vavato.com/en/l/2018-ford-transit-A3-46707-7",
+      "model_token": "transit",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-06-05T16:26:24.608125+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
