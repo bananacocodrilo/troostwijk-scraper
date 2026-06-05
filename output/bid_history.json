@@ -6747,7 +6747,7 @@
           "status": "BIDDING_NOT_YET_OPENED"
         },
         {
-          "ts": "2026-06-05T16:26:24.608125+00:00",
+          "ts": "2026-06-05T16:50:08.288290+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
@@ -6976,6 +6976,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-05T16:50:08.288290+00:00",
+          "current_bid_eur": 1000.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -7008,9 +7014,9 @@
           "status": "BIDDING_NOT_YET_OPENED"
         },
         {
-          "ts": "2026-06-05T16:26:24.608125+00:00",
-          "current_bid_eur": 2500.0,
-          "bids_count": 1,
+          "ts": "2026-06-05T16:50:08.288290+00:00",
+          "current_bid_eur": 2700.0,
+          "bids_count": 3,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -7323,55 +7329,10 @@
       "year": 2020,
       "snapshots": [
         {
-          "ts": "2026-06-05T16:26:24.608125+00:00",
+          "ts": "2026-06-05T16:50:08.288290+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
-        }
-      ],
-      "final_hammer_eur": null,
-      "closed_at": null
-    },
-    "623c981b-e922-442c-a981-aded67b9ed50": {
-      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-commercial-vehicle-A1-46844-21",
-      "model_token": "vito",
-      "year": 2003,
-      "snapshots": [
-        {
-          "ts": "2026-06-05T16:26:24.608125+00:00",
-          "current_bid_eur": null,
-          "bids_count": null,
-          "status": "BIDDING_OPEN"
-        }
-      ],
-      "final_hammer_eur": null,
-      "closed_at": null
-    },
-    "f9e623a6-16ff-4a1c-bbf2-415b1f46a245": {
-      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-111-cdi-long-dc-comfort-%257C-vz-084-r-i-A1-44159-5107",
-      "model_token": "vito",
-      "year": null,
-      "snapshots": [
-        {
-          "ts": "2026-06-05T16:26:24.608125+00:00",
-          "current_bid_eur": null,
-          "bids_count": null,
-          "status": "BIDDING_OPEN"
-        }
-      ],
-      "final_hammer_eur": null,
-      "closed_at": null
-    },
-    "344b591c-a322-47a8-8a63-383d25fb976f": {
-      "url": "https://www.troostwijkauctions.com/en/l/2008-mercedes-benz-vito-120-cdi-320-l-dc-std-commercial-vehicle-A1-46875-2",
-      "model_token": "vito",
-      "year": 2008,
-      "snapshots": [
-        {
-          "ts": "2026-06-05T16:26:24.608125+00:00",
-          "current_bid_eur": null,
-          "bids_count": null,
-          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -7383,7 +7344,7 @@
       "year": 2011,
       "snapshots": [
         {
-          "ts": "2026-06-05T16:26:24.608125+00:00",
+          "ts": "2026-06-05T16:50:08.288290+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
@@ -7398,7 +7359,7 @@
       "year": 2015,
       "snapshots": [
         {
-          "ts": "2026-06-05T16:26:24.608125+00:00",
+          "ts": "2026-06-05T16:50:08.288290+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
@@ -7413,10 +7374,40 @@
       "year": 2018,
       "snapshots": [
         {
-          "ts": "2026-06-05T16:26:24.608125+00:00",
+          "ts": "2026-06-05T16:50:08.288290+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "623c981b-e922-442c-a981-aded67b9ed50": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-commercial-vehicle-A1-46844-21",
+      "model_token": "vito",
+      "year": 2003,
+      "snapshots": [
+        {
+          "ts": "2026-06-05T16:50:08.288290+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "f9e623a6-16ff-4a1c-bbf2-415b1f46a245": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-111-cdi-long-dc-comfort-%257C-vz-084-r-i-A1-44159-5107",
+      "model_token": "vito",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-05T16:50:08.288290+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
