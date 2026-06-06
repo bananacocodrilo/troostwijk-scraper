@@ -4146,15 +4146,15 @@
       "vat_margin": false,
       "bidding_status": "BIDDING_OPEN",
       "auction_start": "2026-06-05T12:00:00Z",
-      "auction_end": null,
+      "auction_end": "2026-06-18T17:42:00Z",
       "remarks": "Oil consumption; DPF filter needs to be replaced to pass the MOT. <BR>\n(PLEASE NOTE! this vehicle has a license plate registration, when you pick it up you must register it on the spot with a third party or export it, there are extra costs involved)",
       "additional_information": "Two new Dunlop front tyres available (invoice available for inspection); Equipped with a tow bar and cruise control. <br>",
       "lot_id": "e18f0e9f-4c0c-41c1-9025-6f7d6abcb957",
-      "current_bid_eur": null,
-      "buyer_premium_pct": null,
+      "current_bid_eur": 250.0,
+      "buyer_premium_pct": 0.0,
       "total_cost_eur": null,
-      "bids_count": null,
-      "reserve_met": null,
+      "bids_count": 1,
+      "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
       "deal_margin_eur": null,
@@ -4191,7 +4191,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-05T16:50:08.263855+00:00"
+      "last_scrape_at": "2026-06-06T13:28:52.969388+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-caravelle-2-0-tdi-A1-42020-127": {
       "title": "Volkswagen Transporter Caravelle 2.0 TDI",
@@ -24949,6 +24949,31 @@
       "reason": "brand_not_in_whitelist",
       "title": "Piaggio Ape 50 Microcar",
       "rejected_at": "2026-06-06T08:48:08.803354+00:00"
+    },
+    "https://www.vavato.com/en/l/land-rover-range-rover-sport-5-0-v8-sc-svr-567hp-automatic-2018-tb-701-n-A1-41528-22": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Land Rover Range Rover Sport 5.0 V8 SC SVR 567HP Automatic 2018, TB-701-N",
+      "rejected_at": "2026-06-06T13:28:52.969388+00:00"
+    },
+    "https://www.vavato.com/en/l/2008-land-rover-range-sport-light-truck-passenger-car-A3-43541-7033": {
+      "reason": "body_mismatch: light truck (chassis variant)",
+      "title": "2008 Land Rover Range Sport Light Truck Passenger Car",
+      "rejected_at": "2026-06-06T13:28:52.969388+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/renault-master-borco-hohns-food-truck-A1-47155-7004": {
+      "reason": "body_mismatch: refrigerated body",
+      "title": "Renault Master Borco H\u00f6hns Food Truck",
+      "rejected_at": "2026-06-06T13:28:52.969388+00:00"
+    },
+    "https://www.vavato.com/en/l/2004-bmw-525-i-touring-3-0-car-A3-43541-33583": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2004 BMW 525 I Touring 3.0 Car",
+      "rejected_at": "2026-06-06T13:28:52.969388+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/nissan-qashqai-1-2-tekna-%253B-k-016-vj-A1-40683-248": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Nissan Qashqai 1.2 Tekna ; K-016-VJ",
+      "rejected_at": "2026-06-06T13:28:52.969388+00:00"
     }
   }
 }
