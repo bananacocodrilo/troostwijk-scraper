@@ -5521,6 +5521,12 @@
           "current_bid_eur": 5050.0,
           "bids_count": 29,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-08T15:52:16.062459+00:00",
+          "current_bid_eur": 7500.0,
+          "bids_count": 34,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -7381,6 +7387,12 @@
           "current_bid_eur": 1000.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-08T15:52:16.062459+00:00",
+          "current_bid_eur": 1200.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -7573,6 +7585,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-08T15:52:16.062459+00:00",
+          "current_bid_eur": 1200.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -7695,6 +7713,12 @@
           "ts": "2026-06-07T19:30:27.630977+00:00",
           "current_bid_eur": 2100.0,
           "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-08T15:52:16.062459+00:00",
+          "current_bid_eur": 3000.0,
+          "bids_count": 4,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -7843,6 +7867,66 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "d7763b92-f3a2-4f07-b772-ed0313b7c4a0": {
+      "url": "https://www.troostwijkauctions.com/en/l/2008-opel-vivaro-passenger-car-A1-46711-163",
+      "model_token": "vivaro",
+      "year": 2008,
+      "snapshots": [
+        {
+          "ts": "2026-06-08T15:52:16.062459+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "7aee72ff-d60d-4704-baea-6548cf3d218e": {
+      "url": "https://www.troostwijkauctions.com/en/l/2023-renault-trafic-passenger-car-A3-44489-19278",
+      "model_token": "trafic",
+      "year": 2023,
+      "snapshots": [
+        {
+          "ts": "2026-06-08T15:52:16.062459+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "f3d3cb55-b632-452b-92ac-0f658e3f54a6": {
+      "url": "https://www.troostwijkauctions.com/en/l/2024-renault-trafic-passenger-car-A3-44489-19279",
+      "model_token": "trafic",
+      "year": 2024,
+      "snapshots": [
+        {
+          "ts": "2026-06-08T15:52:16.062459+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "0c3f2aa9-a027-413a-ad7d-3b2ed7552f09": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-kitchen-bed-pop-up-roof-awning-camper-A1-46711-322",
+      "model_token": "transporter",
+      "year": 1994,
+      "snapshots": [
+        {
+          "ts": "2026-06-08T15:52:16.062459+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
