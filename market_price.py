@@ -196,31 +196,38 @@ def _stalest_source(cache: dict) -> str:
 # Public entry point
 # ---------------------------------------------------------------------------
 
-def build_price_index_cached(path: str = CACHE_PATH) -> PriceIndex:
+def build_price_index_cached(path: str = CACHE_PATH, refresh: bool = True) -> PriceIndex:
     """Refresh the stalest price source, then build a PriceIndex from all cached data.
 
     One source is fetched per call. Over 4 runs every source stays within 24h
-    of freshness at the 6h GH Actions cadence."""
+    of freshness at the 6h GH Actions cadence.
+
+    Pass ``refresh=False`` to skip the HTTP fetch and build from cached data only
+    (used when the time budget is exhausted and we just need the index structure).
+    """
     cache = _load_cache(path)
 
-    # Pick and refresh the stalest source
-    source_name = _stalest_source(cache)
-    fetcher = _SOURCES[source_name]
-    listings = fetcher()
+    if refresh:
+        # Pick and refresh the stalest source
+        source_name = _stalest_source(cache)
+        fetcher = _SOURCES[source_name]
+        listings = fetcher()
 
-    cache[source_name] = {
-        "updated_at": datetime.now(timezone.utc).isoformat(),
-        "listings": listings,
-    }
-    _save_cache(cache, path)
+        cache[source_name] = {
+            "updated_at": datetime.now(timezone.utc).isoformat(),
+            "listings": listings,
+        }
+        _save_cache(cache, path)
 
-    ages = {
-        name: f"{(datetime.now(timezone.utc) - datetime.fromisoformat(cache[name]['updated_at'])).total_seconds()/3600:.0f}h"
-        if name in cache else "never"
-        for name in _SOURCES
-    }
-    total = sum(len(cache[n].get("listings", [])) for n in _SOURCES if n in cache)
-    print(f"  price cache: refreshed={source_name} ages={ages} total={total} listings")
+        ages = {
+            name: f"{(datetime.now(timezone.utc) - datetime.fromisoformat(cache[name]['updated_at'])).total_seconds()/3600:.0f}h"
+            if name in cache else "never"
+            for name in _SOURCES
+        }
+        total = sum(len(cache[n].get("listings", [])) for n in _SOURCES if n in cache)
+        print(f"  price cache: refreshed={source_name} ages={ages} total={total} listings")
+    else:
+        print("  price cache: skipped refresh (time budget), using cached data")
 
     # Build PriceIndex from all cached sources
     all_listings: List[dict] = []

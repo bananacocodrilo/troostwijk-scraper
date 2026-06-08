@@ -2,6 +2,7 @@ import json
 import os
 import re
 import sys
+import time as _time
 
 import asking_feed
 import bid_history
@@ -179,6 +180,18 @@ def _dump_vans(path: str, vans: list[dict]):
 
 
 def main():
+    # Time budget — gives us a clean exit before GH Actions kills the job.
+    # Scrape job timeout is 50 min; we stop accepting new lots at 40 min
+    # and skip market refresh at 46 min, leaving ≥4 min for output + commit.
+    _start = _time.monotonic()
+    _SCRAPE_DEADLINE  = 40 * 60   # stop URL scraping after this many seconds
+    _MARKET_DEADLINE  = 46 * 60   # skip market price refresh after this
+
+    def _elapsed() -> float:
+        return _time.monotonic() - _start
+
+    def _fmt(s: float) -> str:
+        return f"{s/60:.1f}min"
     # 1. Collect lot URLs from every source first, then scrape once. The
     #    scrape step is the expensive bit, so deduping URLs upstream
     #    avoids re-fetching lots that appear under multiple sources.
@@ -240,10 +253,26 @@ def main():
     urls_to_scrape, refresh_stats = registry.select_urls_to_scrape(all_urls, reg)
     print(f"  registry: refreshing {len(urls_to_scrape)}/{len(all_urls)} URLs — {refresh_stats}")
 
-    # 3. Scrape only the selected URLs. Parallelised across 4 browser
-    #    contexts — network-bound, so threads share CPU well and we get
-    #    ~3× wall-time speedup vs serial.
-    fresh_results = crawl_parallel(urls_to_scrape, workers=4)
+    # 3. Scrape only the selected URLs, in batches of 60 so we can check
+    #    elapsed time between batches and stop gracefully before GH Actions
+    #    kills the job. Each batch takes ~2-4 min with 4 Playwright workers.
+    #    Unscraped URLs stay in the registry and get picked up next run.
+    _BATCH = 60
+    fresh_results: list[dict] = []
+    total_batches = (len(urls_to_scrape) + _BATCH - 1) // _BATCH
+    for _bi, _start_i in enumerate(range(0, len(urls_to_scrape), _BATCH)):
+        if _elapsed() > _SCRAPE_DEADLINE:
+            _skipped = len(urls_to_scrape) - _start_i
+            print(
+                f"  ⏰ soft deadline at {_fmt(_elapsed())} — stopping after "
+                f"batch {_bi}/{total_batches}, skipping {_skipped} URLs "
+                f"(will retry next run)"
+            )
+            break
+        _batch = urls_to_scrape[_start_i:_start_i + _BATCH]
+        print(f"  scrape batch {_bi+1}/{total_batches} "
+              f"({len(_batch)} URLs, elapsed {_fmt(_elapsed())})")
+        fresh_results.extend(crawl_parallel(_batch, workers=4))
 
     # 4. Merge fresh data into registry and persist.
     registry.merge(reg, fresh_results)
@@ -281,8 +310,14 @@ def main():
     bid_history.update(fresh_results, model_token_of=_model_key)
     hammer_index = bid_history.load_index()
 
-    # 4b. Combined market price index (Marktplaats + AutoScout24)
-    price_index = build_price_index_cached()
+    # 4b. Combined market price index (Marktplaats + AutoScout24).
+    # Skip the HTTP refresh if we're running low on time — use the cached
+    # data from the previous run instead. The index will be slightly stale
+    # but still good enough for deal-ratio math; the next run will refresh.
+    _do_refresh = _elapsed() < _MARKET_DEADLINE
+    if not _do_refresh:
+        print(f"  ⏰ skipping market refresh at {_fmt(_elapsed())} — using cached prices")
+    price_index = build_price_index_cached(refresh=_do_refresh)
 
     # 5. Attach market data + compute true cost + re-filter
     accepted = []
@@ -416,6 +451,8 @@ def main():
     print("\nbuilding asking-price feed...")
     asking_count = asking_feed.write_feed()
     print(f"  wrote {asking_count} listings to output/asking_listings.json")
+
+    print(f"\n⏱️  total run time: {_fmt(_elapsed())}")
 
 
 if __name__ == "__main__":
