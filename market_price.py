@@ -106,9 +106,12 @@ def _fetch_marktplaats(pages: int = 3) -> List[dict]:
         print(f"{len(listings)} listings")
         all_listings.extend(listings)
     # Enrich whitelist-candidate listings with VIP-page seats so 3-seat
-    # cargo vans get caught by strict_filter downstream. Bounded inside
-    # the helper — see marktplaats.enrich_listings_with_seats.
-    marktplaats.enrich_listings_with_seats(all_listings)
+    # cargo vans get caught by strict_filter downstream. Capped at 200 per
+    # run (~50s) so a Marktplaats refresh day doesn't push the GH Actions
+    # total over 60 min. Seat data persists in price_cache.json across runs,
+    # so coverage builds up incrementally (~11 Marktplaats cycles per week
+    # covers all ~2200 whitelist-keyed listings within a week).
+    marktplaats.enrich_listings_with_seats(all_listings, max_fetches=200)
     return all_listings
 
 

@@ -192,38 +192,44 @@ def _fetch_vip_seats(vip_url: str) -> Optional[int]:
 def enrich_listings_with_seats(
     listings: List[dict],
     *,
-    max_fetches: int = 1000,
+    max_fetches: int = 200,
     sleep_s: float = 0.25,
+    workers: int = 3,
 ) -> List[dict]:
     """Mutate ``listings`` in place — fetch the VIP page for every entry
     whose ``model_key`` is set (whitelist-candidate) and add ``seats``.
 
-    The search API caps at ~30 attributes per listing and doesn't include
-    seat count, so we have to fetch the per-listing page. We only enrich
-    listings that have a whitelist token in the title (the rest get
-    classifier-rejected downstream anyway and the seat count is wasted).
-
-    Bounded by ``max_fetches`` so a single refresh can't blow the GH
-    Actions timeout — uncached listings beyond the cap stay
-    ``seats=None`` and pass the soft-gate; the next refresh picks them
-    up if they're still active.
+    Fetches run in a small thread pool (default 3 workers) so wall-clock
+    time is ~workers× faster than serial. Each thread sleeps ``sleep_s``
+    after its request to avoid hammering Marktplaats.
     """
-    enriched_count = 0
-    skipped_no_token = 0
-    for listing in listings:
-        if enriched_count >= max_fetches:
-            break
-        if listing.get("seats") is not None:
-            continue
-        if not listing.get("model_key"):
-            skipped_no_token += 1
-            continue
-        listing["seats"] = _fetch_vip_seats(listing.get("url") or "")
-        enriched_count += 1
+    import concurrent.futures
+
+    candidates = [
+        l for l in listings
+        if l.get("seats") is None and l.get("model_key")
+    ][:max_fetches]
+
+    if not candidates:
+        return listings
+
+    def _fetch_one(listing):
+        url = listing.get("url") or ""
+        seats = _fetch_vip_seats(url)
         time.sleep(sleep_s)
-    if enriched_count:
-        print(f"  marktplaats VIP seats: enriched {enriched_count} listings "
-              f"(skipped {skipped_no_token} non-whitelist)")
+        return listing, seats
+
+    enriched_count = 0
+    with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
+        for listing, seats in pool.map(_fetch_one, candidates):
+            if seats is not None:
+                listing["seats"] = seats
+                enriched_count += 1
+
+    skipped = sum(1 for l in listings if not l.get("model_key") and l.get("seats") is None)
+    if enriched_count or candidates:
+        print(f"  marktplaats VIP seats: enriched {enriched_count}/{len(candidates)} listings "
+              f"(skipped {skipped} non-whitelist, cap={max_fetches})")
     return listings
 
 

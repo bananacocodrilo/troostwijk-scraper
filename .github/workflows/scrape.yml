@@ -9,9 +9,12 @@ permissions:
   contents: write
 
 jobs:
+  # ── Job 1: auction scraping + market prices + asking feed ───────────────
+  # Needs Playwright/Chromium. Timeout raised to 50 min (was 60 — trim
+  # headroom so job 2 always gets a chance to run within the GH 6h window).
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 50
 
     steps:
       - uses: actions/checkout@v4
@@ -34,9 +37,6 @@ jobs:
           playwright install chromium --with-deps
 
       - name: Run scraper
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python run.py
 
       - name: Commit results
@@ -47,13 +47,66 @@ jobs:
           git add output/notified.json 2>/dev/null || true
           git diff --cached --quiet && { echo "no changes"; exit 0; }
           git commit -m "update"
-          # Retry push with -X theirs rebase to survive concurrent CI runs racing
-          # on output/*.json. Our run's output is always fresher than what we'd
-          # otherwise discard — but theirs is also a valid recent state; the
-          # next run will overwrite. Up to 3 attempts.
           for i in 1 2 3; do
             git pull --rebase -X theirs origin main && git push && exit 0
             echo "push attempt $i failed, retrying..."
             sleep $((i * 5))
           done
           echo "push failed after 3 attempts"; exit 1
+
+  # ── Job 2: Telegram notifications ────────────────────────────────────────
+  # Runs after scrape (even if scrape partially failed — uses if: always()
+  # so a scrape timeout doesn't silently skip notifications). No Playwright
+  # needed — just reads the committed latest.json and fires alerts for
+  # hidden gems closing within 24h.
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    needs: scrape
+    if: always()
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main   # always get the latest commit (scrape may have just pushed)
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: pip-
+
+      - name: Install deps (no Playwright)
+        run: pip install -r requirements.txt
+
+      - name: Send Telegram notifications
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python - <<'EOF'
+          import json
+          from notify import notify_gems
+          with open("output/latest.json") as f:
+              vans = json.load(f)
+          sent = notify_gems(vans)
+          print(f"sent {sent} Telegram alert(s)")
+          EOF
+
+      - name: Commit notified.json if updated
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add output/notified.json 2>/dev/null || true
+          git diff --cached --quiet && { echo "no changes"; exit 0; }
+          git commit -m "update notified.json"
+          for i in 1 2 3; do
+            git pull --rebase -X theirs origin main && git push && exit 0
+            sleep $((i * 5))
+          done
