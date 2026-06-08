@@ -6205,6 +6205,12 @@
           "current_bid_eur": 145.0,
           "bids_count": 10,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-08T03:20:30.007199+00:00",
+          "current_bid_eur": 185.0,
+          "bids_count": 14,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -6621,6 +6627,12 @@
           "ts": "2026-06-07T09:06:18.744200+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-08T03:20:30.007199+00:00",
+          "current_bid_eur": 6700.0,
+          "bids_count": 2,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -7228,6 +7240,12 @@
           "current_bid_eur": 6700.0,
           "bids_count": 31,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-08T03:20:30.007199+00:00",
+          "current_bid_eur": 7100.0,
+          "bids_count": 33,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -7666,6 +7684,12 @@
           "current_bid_eur": 120.0,
           "bids_count": 3,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-08T03:20:30.007199+00:00",
+          "current_bid_eur": 1140.0,
+          "bids_count": 4,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -7681,6 +7705,81 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "990e60fe-6511-4fe8-99e5-17600f77cc08": {
+      "url": "https://www.troostwijkauctions.com/en/l/2007-ford-transit-260s-2-2-tdci-dc-disabled-transportation-wheelchair-disabled-24-vdd-5-A1-40726-21",
+      "model_token": "transit",
+      "year": 2007,
+      "snapshots": [
+        {
+          "ts": "2026-06-08T03:20:30.007199+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "fec16453-95e9-45e6-9526-7c3b3b6eeda3": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-expert-2-0-bluehdi-premium-vhj-14-s-A1-39871-56",
+      "model_token": "expert",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-08T03:20:30.007199+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "71ab6960-f768-45e6-af89-db2ebc989bbb": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-2-0-tdi-l2h1-comfortline-vs-882-t-A1-39871-23",
+      "model_token": "transporter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-08T03:20:30.007199+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "a40f1160-d1c4-4784-8820-5ce5c054681d": {
+      "url": "https://www.troostwijkauctions.com/en/l/2007-volkswagen-transporter-2-5-tdi-340-mhd-commercial-vehicle-A1-39085-6",
+      "model_token": "transporter",
+      "year": 2007,
+      "snapshots": [
+        {
+          "ts": "2026-06-08T03:20:30.007199+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "28872f24-521a-4982-ac5d-0e134b34e9e6": {
+      "url": "https://www.troostwijkauctions.com/en/l/2019-mercedes-benz-vito-2-2-119cdi-bluetec-commercial-vehicle-A1-39085-1",
+      "model_token": "vito",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-06-08T03:20:30.007199+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
