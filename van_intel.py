@@ -711,15 +711,20 @@ def strict_filter(vehicle, classification: Classification) -> Tuple[bool, Option
 
     # Body-type fallback (when seats still unknown): cargo-only body types
     # (Mercedes Vito 111 cargo, panel-van Boxer/Ducato, etc.) are 2-3 seats
-    # by default. Don't reject if the title shows a crew-cab marker, since
-    # those convert cargo chassis to 5-6 seat dubbele-cabine variants.
+    # by default. Don't reject if title OR description shows a crew-cab
+    # marker, since those convert cargo chassis to 5-6 seat variants.
     if seats is None:
         body_type = (
             getattr(vehicle, "body_type", None) if not isinstance(vehicle, dict)
             else vehicle.get("body_type")
         )
-        if _is_cargo_body(body_type) and not _CREW_CAB_RE.search(title or ""):
-            return False, f"seats_below_5: inferred from cargo body_type={body_type}"
+        if _is_cargo_body(body_type):
+            remarks = (
+                getattr(vehicle, "remarks", None) if not isinstance(vehicle, dict)
+                else vehicle.get("remarks")
+            ) or ""
+            if not _CREW_CAB_RE.search(title or "") and not _CREW_CAB_RE.search(remarks):
+                return False, f"seats_below_5: inferred from cargo body_type={body_type}"
 
     return True, None
 

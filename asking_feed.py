@@ -117,15 +117,21 @@ def _to_vehicle(listing: dict) -> Optional[dict]:
         "year":      listing.get("year"),
         "km":        listing.get("km"),
         "price_eur": listing.get("price_eur"),
-        # Most marketplaces don't expose seats per listing. Marktplaats
-        # is enriched via VIP-page fetch (marktplaats.enrich_listings_with_seats),
-        # so its entries may carry a real seats value. Soft-gate handles
-        # the None case for sources that don't.
         "seats":              listing.get("seats"),
         "emission_standard":  None,
-        "body_type":          listing.get("body_type"),
+        # Infer body_type from Marktplaats URL category. Listings under
+        # /auto-s/bestelauto-s/ are cargo-registered vans (bestelwagen).
+        # strict_filter uses this + crew-cab check to gate seat inference.
+        "body_type":          (
+            "bestelwagen"
+            if "bestelauto" in url
+            else listing.get("body_type")
+        ),
         "weight_kg":          None,
-        # Pass through up to 5 image URLs (already absolute from each parser).
+        # Description / seller free-text — stored as `remarks` so that
+        # strict_filter and score_small_van see crew-cab/seat signals that
+        # the seller put in the description rather than the title.
+        "remarks":            listing.get("description") or "",
         "images":             listing.get("images") or [],
     }
 
@@ -202,11 +208,11 @@ def build_feed(price_cache_path: str = "output/price_cache.json") -> List[dict]:
         if v is None:
             continue
 
-        # Hard filters — same body/type/damage gates as the auction pipeline.
-        # These catch refrigerated vans (koelwagen), box trucks (bakwagen),
-        # pickups, campers-already-converted, etc. that the whitelist
-        # classifier alone can't distinguish from valid candidates.
-        haystack = (v.get("title") or "").lower()
+        # Hard filters — scan title AND description (sellers often put
+        # "koelwagen" or "bakwagen" in the body text rather than the title).
+        haystack = " ".join(filter(None, [
+            v.get("title"), v.get("remarks"),
+        ])).lower()
         hard_reject = (
             _check_list(haystack, _ASKING_HARD_REJECT_BODY)
             or _check_list(haystack, _ASKING_HARD_REJECT_DAMAGE)

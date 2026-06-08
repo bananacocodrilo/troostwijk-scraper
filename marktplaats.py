@@ -114,6 +114,7 @@ def _parse_listing(item: dict) -> Optional[dict]:
         return None
 
     attrs = {a["key"]: a.get("value") for a in (item.get("attributes") or [])}
+    ext   = {a["key"]: a.get("value") for a in (item.get("extendedAttributes") or [])}
     try:
         year = int(attrs.get("constructionYear") or 0) or None
     except (ValueError, TypeError):
@@ -124,7 +125,24 @@ def _parse_listing(item: dict) -> Optional[dict]:
     except (ValueError, TypeError):
         km = None
 
+    # Seat count: extendedAttributes "numberOfSeats" value is e.g. "6 stoelen".
+    # Parse the leading digit. Falls back to None (VIP enrichment fills later).
+    seats: Optional[int] = None
+    seat_raw = ext.get("numberOfSeats") or ""
+    if seat_raw:
+        import re as _re
+        m = _re.match(r"(\d+)", str(seat_raw).strip())
+        if m:
+            seats = int(m.group(1))
+
     title = item.get("title") or ""
+    # Description: seller-written free text, often contains seat count,
+    # crew-cab markers ("6 stoelen", "kombi", "dubbele cabine"), or cargo
+    # signals ("bestelwagen", "laadbak") that the title omits. Stored as
+    # `description` so asking_feed can pass it as `remarks` to strict_filter
+    # and the scoring functions.
+    description = (item.get("description") or "").strip()
+
     # Up to 5 image URLs (mediumUrl preferred, fallback to largeUrl / url).
     images: List[str] = []
     for pic in (item.get("pictures") or []):
@@ -136,16 +154,15 @@ def _parse_listing(item: dict) -> Optional[dict]:
         if len(images) >= 5:
             break
     return {
-        "price_eur": price_eur,
-        "year": year,
-        "km": km,
-        "title": title,
-        "url": item.get("vipUrl") or "",
-        "model_key": _model_key(title),
-        "images": images,
-        # seats populated by enrich_listings_with_seats() — the search
-        # API doesn't expose it, only the per-listing VIP page does.
-        "seats": None,
+        "price_eur":   price_eur,
+        "year":        year,
+        "km":          km,
+        "title":       title,
+        "description": description,
+        "url":         item.get("vipUrl") or "",
+        "model_key":   _model_key(title),
+        "images":      images,
+        "seats":       seats,  # None unless extendedAttributes or VIP fill it
     }
 
 
