@@ -119,12 +119,13 @@ def _to_vehicle(listing: dict) -> Optional[dict]:
         "price_eur": listing.get("price_eur"),
         "seats":              listing.get("seats"),
         "emission_standard":  None,
-        # Infer body_type from Marktplaats URL category. Listings under
-        # /auto-s/bestelauto-s/ are cargo-registered vans (bestelwagen).
+        # Infer body_type from URL category:
+        # - Marktplaats: /auto-s/bestelauto-s/ → cargo van
+        # - 2dehands: /auto-s/bestelwagens-en-lichte-vracht/ → cargo van
         # strict_filter uses this + crew-cab check to gate seat inference.
         "body_type":          (
             "bestelwagen"
-            if "bestelauto" in url
+            if ("bestelauto" in url or "bestelwagens" in url)
             else listing.get("body_type")
         ),
         "weight_kg":          None,
@@ -222,7 +223,7 @@ def build_feed(price_cache_path: str = "output/price_cache.json") -> List[dict]:
             rejected_count += 1
             continue
 
-        cls = classify_vehicle(v["title"], "")
+        cls = classify_vehicle(v["title"], v.get("remarks") or "")
         passed, _reason = strict_filter(v, cls)
         if not passed:
             rejected_count += 1

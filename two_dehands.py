@@ -115,6 +115,7 @@ def _fetch_page(query: str, offset: int = 0) -> List[dict]:
 
 
 def _parse_listing(item: dict) -> Optional[dict]:
+    import re as _re
     price_info = item.get("priceInfo") or {}
     cents = price_info.get("priceCents")
     if not isinstance(cents, (int, float)):
@@ -129,6 +130,7 @@ def _parse_listing(item: dict) -> Optional[dict]:
         return None
 
     attrs = {a["key"]: a.get("value") for a in (item.get("attributes") or [])}
+    ext   = {a["key"]: a.get("value") for a in (item.get("extendedAttributes") or [])}
     try:
         year = int(attrs.get("constructionYear") or 0) or None
     except (ValueError, TypeError):
@@ -139,7 +141,17 @@ def _parse_listing(item: dict) -> Optional[dict]:
     except (ValueError, TypeError):
         km = None
 
+    # Seat count from extendedAttributes — same Adevinta platform as Marktplaats,
+    # same field name. Value is e.g. "6 stoelen" or "3 zitplaatsen"; parse leading int.
+    seats: Optional[int] = None
+    seat_raw = ext.get("numberOfSeats") or ""
+    if seat_raw:
+        m = _re.match(r"(\d+)", str(seat_raw).strip())
+        if m:
+            seats = int(m.group(1))
+
     title = item.get("title") or ""
+    description = (item.get("description") or "").strip()
     images: List[str] = []
     for pic in (item.get("pictures") or []):
         if not isinstance(pic, dict):
@@ -150,14 +162,16 @@ def _parse_listing(item: dict) -> Optional[dict]:
         if len(images) >= 5:
             break
     return {
-        "price_eur": price_eur,
-        "year": year,
-        "km": km,
-        "title": title,
-        "url": item.get("vipUrl") or "",
-        "model_key": _model_key(title),
-        "source": "2dehands",
-        "images": images,
+        "price_eur":   price_eur,
+        "year":        year,
+        "km":          km,
+        "title":       title,
+        "description": description,
+        "url":         item.get("vipUrl") or "",
+        "model_key":   _model_key(title),
+        "source":      "2dehands",
+        "images":      images,
+        "seats":       seats,
     }
 
 
