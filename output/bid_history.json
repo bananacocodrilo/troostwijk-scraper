@@ -2551,6 +2551,12 @@
           "current_bid_eur": 7600.0,
           "bids_count": 14,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-09T13:41:21.755045+00:00",
+          "current_bid_eur": 8200.0,
+          "bids_count": 16,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -4846,6 +4852,12 @@
           "current_bid_eur": 1200.0,
           "bids_count": 63,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-09T13:41:21.755045+00:00",
+          "current_bid_eur": 1400.0,
+          "bids_count": 67,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -6979,6 +6991,12 @@
           "current_bid_eur": 1500.0,
           "bids_count": 2,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-09T13:41:21.755045+00:00",
+          "current_bid_eur": 1550.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -7786,6 +7804,12 @@
           "current_bid_eur": 3000.0,
           "bids_count": 4,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-09T13:41:21.755045+00:00",
+          "current_bid_eur": 3500.0,
+          "bids_count": 6,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -8056,6 +8080,36 @@
       "snapshots": [
         {
           "ts": "2026-06-09T09:56:26.911755+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "562b05ed-31ca-483c-bf8b-543291d94649": {
+      "url": "https://www.troostwijkauctions.com/en/l/2018-opel-vivaro-1-6-cdti-l2h1-business%252B-ecoflex-commercial-vehicle-A1-46711-35",
+      "model_token": "vivaro",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-06-09T13:41:21.755045+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "30a8e6cb-bce2-41aa-990e-b860501ec83c": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-1991-transporter-kombi-camper-A1-46711-166",
+      "model_token": "transporter",
+      "year": 1991,
+      "snapshots": [
+        {
+          "ts": "2026-06-09T13:41:21.755045+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
