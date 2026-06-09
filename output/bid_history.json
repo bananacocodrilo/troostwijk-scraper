@@ -5806,6 +5806,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-09T20:30:29.116968+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -6294,6 +6300,12 @@
           "ts": "2026-06-09T09:56:26.911755+00:00",
           "current_bid_eur": 225.0,
           "bids_count": 18,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-09T20:30:29.116968+00:00",
+          "current_bid_eur": 1049.0,
+          "bids_count": 37,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -7747,6 +7759,12 @@
           "current_bid_eur": 3800.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-09T20:30:29.116968+00:00",
+          "current_bid_eur": 4050.0,
+          "bids_count": 2,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -8266,6 +8284,21 @@
       "snapshots": [
         {
           "ts": "2026-06-09T15:06:25.831128+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "166d45f6-6e1f-4bd6-be22-5aeb2e241091": {
+      "url": "https://www.vavato.com/en/l/peugeot-boxer-van-A3-44489-20211",
+      "model_token": "boxer",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-09T20:30:29.116968+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"

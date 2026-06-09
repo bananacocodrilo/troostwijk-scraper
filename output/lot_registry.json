@@ -918,7 +918,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-09T09:56:26.883811+00:00"
+      "last_scrape_at": "2026-06-09T20:30:29.087463+00:00"
     },
     "https://www.vavato.com/en/l/2020-fiat-talento-8%252B1-A3-43537-5037": {
       "title": "2020 Fiat Talento - 8+1",
@@ -1217,10 +1217,10 @@
       "remarks": "Please note \u2013 Terms and conditions of sale:\nThis car is a used vehicle that is delivered without warranty or possibility of complaint.\nGiven the age and mileage, traces of use or (technical) defects may be present. It is the buyer's responsibility to inspect the vehicle during the viewing day.\nThe buyer is expressly requested to inspect the vehicle in person during the viewing day.\nBy participating in the viewing day and/or proceeding to purchase the vehicle, the buyer acknowledges and accepts that:\n\n\u2022 The vehicle is sold without any form of warranty or complaint.\n\u2022 The seller bears no responsibility for any defects, errors or deviations.\n\u2022 The buyer accepts the vehicle in the condition in which it is at that time.\n\nAfter purchase, no rescission, compensation or repair is possible, regardless of the nature of any defects that come to light after delivery.\n\nCome to the viewing day and assess the vehicle for yourself.",
       "additional_information": "| NAVI | CAMERA | AIRCO 1 OWNER | VOLL MAINTENANCE",
       "lot_id": "56c7354e-b029-4c79-9c2e-e43776f98894",
-      "current_bid_eur": 225.0,
+      "current_bid_eur": 1049.0,
       "buyer_premium_pct": 19.0,
       "total_cost_eur": null,
-      "bids_count": 18,
+      "bids_count": 37,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -1258,7 +1258,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-09T09:56:26.883811+00:00"
+      "last_scrape_at": "2026-06-09T20:30:29.087463+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/2019-peugeot-traveller-1-5-bluehdi-busl-s-s-commercial-vehicle-A1-42019-151": {
       "title": "2019 Peugeot Traveller 1.5 BlueHDi BusL.S&S Commercial Vehicle",
@@ -1343,7 +1343,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-09T09:56:26.883811+00:00"
+      "last_scrape_at": "2026-06-09T20:30:29.087463+00:00"
     },
     "https://www.vavato.com/en/l/2017-renault-trafic-double-cab-92-000km-A3-44486-5024": {
       "title": "2017 Renault Trafic Double Cab 92.000km",
@@ -4437,15 +4437,15 @@
       "vat_margin": false,
       "bidding_status": "BIDDING_OPEN",
       "auction_start": "2026-06-06T08:00:00Z",
-      "auction_end": null,
+      "auction_end": "2026-06-16T18:58:00Z",
       "remarks": null,
       "additional_information": "Documents present: registration certificate part I, Identification report, inspection certificate, certificate of conformity",
       "lot_id": "d177eadd-9ae7-423f-98c8-87fd05611591",
-      "current_bid_eur": null,
-      "buyer_premium_pct": null,
+      "current_bid_eur": 4050.0,
+      "buyer_premium_pct": 19.0,
       "total_cost_eur": null,
-      "bids_count": null,
-      "reserve_met": null,
+      "bids_count": 2,
+      "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
       "deal_margin_eur": null,
@@ -4482,7 +4482,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-08T15:52:16.033216+00:00"
+      "last_scrape_at": "2026-06-09T20:30:29.087463+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/2023-renault-trafic-passenger-car-A3-44489-19278": {
       "title": "2023 Renault Trafic Passenger Car",
@@ -28535,6 +28535,516 @@
       "reason": "body_mismatch: light truck (chassis variant)",
       "title": "2006 Nissan Pathfinder Light Truck",
       "rejected_at": "2026-06-09T15:06:25.801690+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/kia-2018-picanto-1-0-cvvt-eco-plusl-car-A1-41302-9": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Kia - 2018 - Picanto - 1.0 CVVT Eco.PlusL - Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2020-volvo-xc40-1st-owner-A3-43541-5006": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2020 Volvo XC40 1st owner",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/austin-morris-eight-tourer-classic-car-A3-43541-19000": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Austin - Morris - Eight Tourer - Classic car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-328-junior-car-de-la-chapelle-stimula-other-vehicles-A3-43541-19002": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW 328 Junior Car - De La Chapelle Stimula - Other vehicles",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2011-mini-one-convertible-passenger-car-A3-43541-5272": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2011 Mini One Convertible Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1999-rover-400-passenger-car-A3-43541-21525": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1999 Rover 400 Passenger car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2004-bmw-525-i-touring-3-0-car-A3-43541-33583": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2004 BMW 525 I Touring 3.0 Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2017-mazda-cx5-A3-43541-11180": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2017 Mazda CX5",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2018-bmw-520d-x-drive-touring-g31-car-A3-43541-39024": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2018 BMW 520d x drive Touring G31 Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2019-alfa-romeo-stelvio-q4-2-0-petrol-A3-43541-5002": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2019 Alfa Romeo Stelvio Q4 2.0 Petrol",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2019-land-rover-discovery-suv-A3-43541-38070": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2019 Land Rover Discovery SUV",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2021-bmw-ix-xdrive40-A3-43541-8099": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2021 BMW IX XDRIVE40",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1961-rolls-royce-silver-cloud-ii-classic-car-A1-47107-1": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1961 Rolls-Royce Silver Cloud II Classic Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/austin-frogeye-healy-sprite-mkii-classic-car-A3-43541-19007": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Austin - Frogeye - Healy Sprite MKII - Classic Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1973-vw-cox-vintage-cars-%253E-15-A3-43541-30909": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1973 Vw Cox Vintage Cars > 15",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-chevrolet-uplander-3-9-v6-invalid-carriage-A3-43541-18398": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2007 Chevrolet Uplander 3.9 V6 Invalid carriage",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-1993-480-s-e2-passenger-car-A1-47107-18": {
+      "reason": "mileage_too_high: 260476km",
+      "title": "Volvo - 1993 - 480 - S E2 - Passenger car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2009-skoda-fabia-80000-km-very-good-condition-A3-43541-5023": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2009 Skoda Fabia - 80000 km - very good condition ",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1990-subaru-justy-classic-car-A3-43541-18397": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1990 Subaru Justy Classic Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2009-kia-ceed-passenger-car-A3-43541-19210": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2009 Kia Ceed Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mitsubishi-2020-space-star-1-0-cool%252B-passenger-car-A1-41302-17": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mitsubishi - 2020 - Space Star - 1.0 Cool+ - Passenger car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2022-mercedes-benz-s-350-d-A3-43541-8098": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2022 Mercedes-Benz S 350 d",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1997-lancia-delta-passenger-car-A3-43541-18399": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1997 Lancia Delta Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2010-skoda-fabia-A3-43541-12458": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2010 Skoda Fabia",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2015-mini-cooper-d-A3-43541-4023": {
+      "reason": "mileage_too_high: 257482km",
+      "title": "2015 Mini Cooper D",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2018-ssangyong-rexton-2-2-diesel-4wd-suv-passenger-car-A3-43541-34003": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2018 Ssangyong Rexton 2.2 diesel 4WD SUV Passenger car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2010-mini-cooper-d-A3-43541-4037": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2010 Mini Cooper D",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/subaru-mini-jumbo-1991-A3-43541-4695": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Subaru Mini Jumbo - 1991",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2013-aston-martin-db9-v12-car-A3-43541-36491": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2013 Aston Martin DB9 V12 Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2001-chevrolet-tahoe-classic-car-A3-43541-11466": {
+      "reason": "mileage_too_high: 370000km",
+      "title": "2001 Chevrolet Tahoe - Classic Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2003-chrysler-pt-cruiser-A3-43541-18430": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2003 Chrysler PT Cruiser",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2004-volkswagen-new-beetle-cabriolet-cabriolet-passenger-car-A3-43541-7029": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2004 Volkswagen New Beetle Cabriolet Cabriolet Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-sl-class-roadster-amg-43-375hp-automatic-2023-gbd-94-n-A1-41528-37": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes-Benz SL-class Roadster AMG 43 375HP Automatic 2023, GBD-94-N",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-t-roc-1-5-tsi-automatic-2022-A1-41528-27": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Volkswagen T-Roc 1.5 TSI Automatic 2022",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-up%2521-1-0-2021-A1-41528-10": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Volkswagen Up! 1.0 2021",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-t-roc-r-line-2-0-tsi-4motion-190hp-automatic-2023-A1-41528-23": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Volkswagen T-Roc R-Line 2.0 TSI 4Motion 190HP Automatic 2023",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2012-porsche-cayenne-gts-pack-A3-43541-4818": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2012 Porsche Cayenne GTS Pack",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2014-ford-focus-passenger-car-A3-43541-6152": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2014 Ford Focus Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/dodge-caliber-1-8-s-2009-%257C-23-jvl-9-A1-44157-3302": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Dodge Caliber 1.8 S 2009 | 23-JVL-9",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1997-opel-vectra-1-8i-16v-gl-passenger-car-A1-42019-155": {
+      "reason": "body_mismatch: pickup",
+      "title": "1997 Opel Vectra 1.8i-16V GL Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-focus-wagon-1-8-16v-ambiente-flexifuel-2008-%257C-11-zd-dk-i-A1-44157-4676": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford Focus Wagon 1.8-16V Ambiente Flexifuel 2008 | 11-ZD-DK i",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/kia-picanto-1-0-seven-2010-%257C-96-nlz-5-A1-44157-4781": {
+      "reason": "mileage_too_high: 277446km",
+      "title": "Kia Picanto 1.0 Seven 2010 | 96-NLZ-5",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-3-series-touring-320d-ede-executive-2013-%257C-2-kzh-35-A1-44157-4814": {
+      "reason": "mileage_too_high: 391899km",
+      "title": "BMW 3 Series Touring 320d EDE Executive 2013 | 2-KZH-35",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/jeep-cherokee-3-7i-v6-limited-%257C-09-lz-vk-i-A1-44157-4796": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Jeep Cherokee 3.7i V6 Limited | 09-LZ-VK i",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2009-volvo-v70-2-0d-momentum-passenger-car-06-pzv-2-A1-42019-186": {
+      "reason": "mileage_too_high: 273719km",
+      "title": "2009 Volvo V70 2.0D Momentum Passenger Car 06-PZV-2",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ferrari-portofino-3-9-v8-hele-car-2018%257Ctf-738-t%257Ciaw-A1-44157-332": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ferrari - Portofino - 3.9 V8 HELE - Car - 2018|TF-738-T|IAW",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2001-mini-mini-1-6-one-salt-passenger-car-A1-42019-218": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2001 Mini Mini 1.6 One Salt Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-fiesta-1-4-titanium-2011-%257C-47-rbt-9-A1-44157-5154": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford Fiesta 1.4 Titanium 2011 | 47-RBT-9",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2001-cadillac-cadillac-de-ville-car-A1-42019-203": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2001 Cadillac CADILLAC DE VILLE Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-a-class-250-sport-prestige-2015-%257C-g-471-nh-A1-44157-4572": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes-Benz A-Class 250 Sport Prestige 2015 | G-471-NH",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1992-jeep-jy9s-A3-43541-18391": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1992 Jeep JY9S",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-z3-passenger-car-A3-43541-21520": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW Z3 Passenger car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-2015-c-max-1-0-titanium-passenger-car-A1-41302-15": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - 2015 - C-Max - 1.0 Titanium - Passenger car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2010-ford-fiesta-ja8-car-A3-43541-35710": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2010 Ford Fiesta JA8 Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/skoda-2012-fabia-combi-1-2-tsi-elegance-passenger-car-A1-41302-11": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Skoda - 2012 - Fabia Combi - 1.2 TSI Elegance - Passenger car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/off-road-vehicle-A7-47248-98": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Off-road vehicle ",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-mini-1-4-one-passenger-car-A1-47118-25": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2007 Mini 1.4 One Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2006-ford-maverick-3-0-v6-4wd-passenger-car-A1-47118-16": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2006 Ford Maverick 3.0 V6 4WD Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2006-chevrolet-matiz-1-0-class-passenger-car-A1-47118-21": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2006 Chevrolet Matiz 1.0 Class Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-mini-1-6-cooper-passenger-car-A1-47118-3": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2007 Mini 1.6 Cooper Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2011-bmw-3-series-316d-business-line-passenger-car-A1-47118-17": {
+      "reason": "mileage_too_high: 346397km",
+      "title": "2011 BMW 3 Series 316d Business Line Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-range-rover-sport-3-6-A3-43541-4702": {
+      "reason": "mileage_too_high: 344648km",
+      "title": "2007 Range Rover Sport 3.6",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-focus-tunier-2019-1-0-ecoboost-trend-edition-focus-turnier-passenger-car-A1-39735-101": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford Focus Tunier - 2019 - 1.0 Ecoboost Trend Edition - Focus Turnier - Passenger car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-1971-164-classic-car-A3-43541-2264": {
+      "reason": "mileage_too_high: 296080km",
+      "title": "Volvo 1971 - 164 - Classic car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2022-skoda-octavia-rs-A3-43541-38072": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2022 \u0160koda Octavia RS",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-bmw-318i-passenger-car-A3-43541-19212": {
+      "reason": "mileage_too_high: 283657km",
+      "title": "2007 BMW 318I Passenger car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-mini-cooper-one-passenger-car-A3-43541-19211": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2007 Mini Cooper One Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1994-mercedes-c-220-elegance-passenger-car-A3-43541-7002": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1994 Mercedes C 220 El\u00e9gance Passenger car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2005-mercedes-benz-a-150-passenger-car-A3-43541-9035": {
+      "reason": "damage: not starting",
+      "title": "2005 MERCEDES-BENZ A 150 Passenger car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1992-daihatsu-feroza-passenger-car-A3-43541-9036": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1992 DAIHATSU Feroza Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2019-porsche-macan-sport-design-%257C-sport-chrono-%257C-pasm-%257C-bose-%257C-sports-exhaust-%257C-360%25C2%25B0-camera-%257C-21%2522-sport-classic-%257C-51-351-km-A3-43541-10045": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2019 Porsche Macan - Sport Design | Sport Chrono | PASM | BOSE | Sports exhaust | 360\u00b0 Camera | 21\" Sport Classic | 51,351 km",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2012-mini-coopers-all4-passenger-car-A3-43541-5276": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2012 Mini CooperS ALL4 Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2009-kia-carens-2-0-cvvt-x-ecutive-passenger-car-A1-42019-211": {
+      "reason": "mileage_too_high: 282959km",
+      "title": "2009 Kia Carens 2.0 CVVT X-ecutive Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mini-1-5-cooper-business-edition-2022-%257C-p-539-jp-A1-44157-4144": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mini 1.5 Cooper Business Edition 2022 | P-539-JP",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-c-class-c-63-amg-s-2021-%257C-08-57-03-A1-44157-3760": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes-Benz C-Class C 63 AMG S 2021 | 08-57-03",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2009-skoda-yeti-1-8-tsi-elegance4x4-passenger-car-A1-42019-214": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2009 Skoda Yeti 1.8 TSI Elegance4x4 Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/jeep-wrangler-unlimited-4xe-380-sahara-2022-%257C-86-81-24-A1-44157-4651": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Jeep Wrangler Unlimited 4xe 380 Sahara 2022 | 86-81-24",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2009-chevrolet-aveo-1-4-16v-ls-passenger-car-A1-42019-207": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2009 Chevrolet Aveo 1.4 16V LS Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-7-series-740li-car-2009%257Ck-506-gr%257Ciaw-A1-44157-321": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW - 7 Series - 740Li - Car - 2009|K-506-GR|IAW",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2006-porsche-cayenne-4-5-s-passenger-car-A1-42019-172": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2006 Porsche Cayenne 4.5 S Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-ka-1-3-apple-2005-%257C-40-rl-zv-A1-44157-4762": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford Ka 1.3 Apple 2005 | 40-RL-ZV",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/alfa-romeo-mito-1-4-distinctive-%257C-rf-272-v-A1-44157-4374": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Alfa Romeo MiTo 1.4 Distinctive | RF-272-V",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/land-rover-2014-range-rover-sport-3-0-tdv6-hse-dyn-passenger-car-A1-42019-179": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Land Rover - 2014 - Range Rover Sport - 3.0 TDV6 HSE Dyn. - Passenger car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-beetle-1200-classic-car-A3-43546-13021": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Volkswagen Beetle 1200 Classic Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-post-welding-wire-A7-47753-332": {
+      "reason": "brand_not_in_whitelist",
+      "title": "HYUNDAI Post Welding Wire",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-post-welding-wire-A7-47753-336": {
+      "reason": "brand_not_in_whitelist",
+      "title": "HYUNDAI Post Welding Wire",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/hyundai-wia-lv500rm-vertical-cnc-lathe-2018-A1-47716-17": {
+      "reason": "brand_not_in_whitelist",
+      "title": "HYUNDAI WIA - LV500RM - Vertical CNC Lathe - 2018",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-x4-m40i-high-executive-%257C-j-013-rs-A1-44157-4731": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW X4 M40i High Executive | J-013-RS",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mazda-3-1-6-citd-business-00-lxr-7-A1-39871-28": {
+      "reason": "mileage_too_high: 401863km",
+      "title": "Mazda 3 1.6 CiTD Business, 00-LXR-7",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2011-ford-s-max-2-0-titanium-passenger-car-41-pdk-8-A1-42019-190": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2011 Ford S-Max 2.0 Titanium Passenger Car 41-PDK-8",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-1-series-114i-ede-business-gs-844-x-A1-39871-6": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW 1 Series 114i EDE Business, GS-844-X",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/land-rover-range-rover-evoque-2-2-td4-4wd-pure-ps-036-s-A1-39871-36": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Land Rover Range Rover Evoque 2.2 TD4 4WD Pure, PS-036-S",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/peugeot-boxer-van-A3-44489-20208": {
+      "reason": "seats_below_5: 3",
+      "title": "Peugeot Boxer Van",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/toyota-50-5-fd-60-forklift-trucks-2008-A1-41947-14": {
+      "reason": "vehicle_type: forklift",
+      "title": "Toyota - 50-5-FD-60 - Forklift Trucks - 2008",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2012-nissan-note-passenger-car-A3-43546-11986": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2012 Nissan Note Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2015-volkswagen-transporter-passenger-car-A3-44487-19025": {
+      "reason": "seats_below_5: 3",
+      "title": "2015 Volkswagen Transporter Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2022-volkswagen-crafter-2-0-tdi-syn1e-light-truck-A3-44489-6318": {
+      "reason": "body_mismatch: light truck (chassis variant)",
+      "title": "2022 Volkswagen Crafter 2.0 TDI SYN1E Light Truck",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2003-dodge-dodge-ram-1500-passenger-A1-42019-217": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2003 Dodge DODGE RAM 1500 Passenger",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2014-mini-mini-countryman-2-0-cooper-sd-all4-passenger-car-A1-46774-35": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2014 Mini Mini Countryman 2.0 Cooper SD ALL4 Passenger Car",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.vavato.com/en/l/peugeot-boxer-van-A3-44489-20211": {
+      "reason": "seats_below_5: 3",
+      "title": "Peugeot Boxer Van",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.vavato.com/en/l/2021-man-tge-3-180-equipped-van-automatic-tow-bar-air-conditioning-A3-44489-10062": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2021 MAN TGE 3.180 equipped van - automatic, tow bar, air conditioning",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-magellan-35b-camper-A3-43546-9051": {
+      "reason": "vehicle_type: camper (pre-converted)",
+      "title": "Ford Magellan 35B Camper",
+      "rejected_at": "2026-06-09T20:30:29.087463+00:00"
     }
   }
 }
