@@ -7459,6 +7459,12 @@
           "current_bid_eur": 2000.0,
           "bids_count": 11,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-09T15:06:25.831128+00:00",
+          "current_bid_eur": 2100.0,
+          "bids_count": 12,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -8110,6 +8116,156 @@
       "snapshots": [
         {
           "ts": "2026-06-09T13:41:21.755045+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "919be283-b919-42f3-aa4e-e04582139f18": {
+      "url": "https://www.vavato.com/en/l/ford-custom-transit-van-A3-44489-20205",
+      "model_token": "transit",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-09T15:06:25.831128+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "23880c03-54e2-4a9e-a785-419248a2aa89": {
+      "url": "https://www.vavato.com/en/l/peugeot-boxer-van-A3-44489-20208",
+      "model_token": "boxer",
+      "year": 2022,
+      "snapshots": [
+        {
+          "ts": "2026-06-09T15:06:25.831128+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "1f972db9-f8f8-4469-adc7-8eed36706117": {
+      "url": "https://www.vavato.com/en/l/peugeot-boxer-refrigerated-truck-A3-44489-20210",
+      "model_token": "boxer",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-09T15:06:25.831128+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "972e749c-c14c-4d6f-8f9c-ecda5948297e": {
+      "url": "https://www.vavato.com/en/l/peugeot-boxer-van-A3-44489-20209",
+      "model_token": "boxer",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-06-09T15:06:25.831128+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "1c70abe3-55fb-4051-b6f9-7dfdec08285c": {
+      "url": "https://www.vavato.com/en/l/ford-custom-7%252B1-transit-commercial-vehicle-A3-44489-5106",
+      "model_token": "transit",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-06-09T15:06:25.831128+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "70852974-17ff-443a-b5b1-269ce0d37fb7": {
+      "url": "https://www.vavato.com/en/l/2005-ford-transit-commercial-vehicle-A3-44489-11052",
+      "model_token": "transit",
+      "year": 2005,
+      "snapshots": [
+        {
+          "ts": "2026-06-09T15:06:25.831128+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "dd1d5376-95ac-4484-9f5d-04de0f071ff4": {
+      "url": "https://www.vavato.com/en/l/peugeot-boxer-van-A3-44489-20206",
+      "model_token": "boxer",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-06-09T15:06:25.831128+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "d7b7fce2-77f5-4301-9bdf-b448a4932053": {
+      "url": "https://www.vavato.com/en/l/peugeot-expert-van-A3-44489-20207",
+      "model_token": "expert",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-06-09T15:06:25.831128+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "6404ee7f-0558-4afe-9c7c-aa04159d54a3": {
+      "url": "https://www.vavato.com/en/l/mercedes-benz-vito-commercial-vehicle-A3-44489-5105",
+      "model_token": "vito",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-06-09T15:06:25.831128+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "5a199e15-1bd6-4cd9-8914-b92a0c10f616": {
+      "url": "https://www.vavato.com/en/l/2002-opel-vivaro-A3-44489-11911",
+      "model_token": "vivaro",
+      "year": 2002,
+      "snapshots": [
+        {
+          "ts": "2026-06-09T15:06:25.831128+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
