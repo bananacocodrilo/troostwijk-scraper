@@ -310,6 +310,12 @@
           "current_bid_eur": 6400.0,
           "bids_count": 26,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-10T03:10:22.830589+00:00",
+          "current_bid_eur": 6600.0,
+          "bids_count": 27,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -8299,6 +8305,66 @@
       "snapshots": [
         {
           "ts": "2026-06-09T20:30:29.116968+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "1d2106dc-1321-496d-9e1e-e918832d16b2": {
+      "url": "https://www.troostwijkauctions.com/en/l/citroen-jumper-30-2-2-hdi-l2h1-ec-vz-814-f-A1-40727-460",
+      "model_token": "jumper",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-10T03:10:22.830589+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "55e90a9b-e6bc-4c13-b78d-1a15fe67e10d": {
+      "url": "https://www.troostwijkauctions.com/en/l/iveco-ml-120e22-p-tijhof-car-transporter-truck-2007-A1-41947-67",
+      "model_token": "transporter",
+      "year": 2007,
+      "snapshots": [
+        {
+          "ts": "2026-06-10T03:10:22.830589+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "9c9528b7-13a4-43c0-93c2-84c707c8f152": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-ducato-camper-91-zsn-1-A1-40727-346",
+      "model_token": "ducato",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-10T03:10:22.830589+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "290e4779-1ead-4571-ad57-16364b96ce17": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-ducato-camper-11-k-2-8-jtd-kampeerwagen-zd-753-v-A1-40727-32",
+      "model_token": "ducato",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-10T03:10:22.830589+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
