@@ -316,6 +316,12 @@
           "current_bid_eur": 6600.0,
           "bids_count": 27,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
+          "current_bid_eur": 7400.0,
+          "bids_count": 31,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -7690,6 +7696,12 @@
           "current_bid_eur": 400.0,
           "bids_count": 4,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
+          "current_bid_eur": 420.0,
+          "bids_count": 5,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -8125,6 +8137,12 @@
           "current_bid_eur": 2500.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
+          "current_bid_eur": 2700.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -8145,6 +8163,12 @@
           "ts": "2026-06-10T20:42:04.563922+00:00",
           "current_bid_eur": 2600.0,
           "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
+          "current_bid_eur": 2800.0,
+          "bids_count": 4,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -8386,6 +8410,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -8557,6 +8587,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
+          "current_bid_eur": 3600.0,
+          "bids_count": 2,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -8587,6 +8623,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -8617,6 +8659,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -8677,6 +8725,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -8692,6 +8746,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -8989,6 +9049,126 @@
       "snapshots": [
         {
           "ts": "2026-06-10T20:42:04.563922+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "90ad8328-93cd-4652-b63e-4e053308d0a3": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-260s-2-2-tdci-dc-van-A1-47737-28",
+      "model_token": "transit",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "5d9429b5-e3a2-467c-a009-e14d986efb23": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-custom-270-2-2-tdci-l1h1adc-van-A1-47737-24",
+      "model_token": "transit custom",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "bc88467f-87d3-4486-8f73-d1a572041557": {
+      "url": "https://www.vavato.com/en/l/2017-renault-trafic-double-cab-92-000km-A3-44489-5024",
+      "model_token": "trafic",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "43987b39-c8da-4f89-81dc-f7e36b3d99e0": {
+      "url": "https://www.vavato.com/en/l/2012-fiat-scudo-2-0-diesel-A3-44489-1",
+      "model_token": "scudo",
+      "year": 2012,
+      "snapshots": [
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "3e2f0647-276b-4a1a-829d-229800936ce2": {
+      "url": "https://www.vavato.com/en/l/subaru-2011-forester-awd-boxer-diesel-car-A3-43546-16843",
+      "model_token": "boxer",
+      "year": 2011,
+      "snapshots": [
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "0c3ce76c-c212-467a-b7ee-36795bf29353": {
+      "url": "https://www.vavato.com/en/l/2005-mercedes-benz-vito-8%252B1-minibus-automatic-A3-44489-5009",
+      "model_token": "vito",
+      "year": 2005,
+      "snapshots": [
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "4a767993-6bb7-40d9-a02f-ba394a1704dc": {
+      "url": "https://www.vavato.com/en/l/2017-volkswagen-transporter-kombi-4x4-minibus-A3-44489-5027",
+      "model_token": "transporter",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "e5113dfd-4162-42cf-8de3-1979ba1ebc45": {
+      "url": "https://www.vavato.com/en/l/2019-citroen-jumpy-7%252B1-minibus-93-000km-A3-44489-5110",
+      "model_token": "jumpy",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-06-11T03:10:19.124398+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
