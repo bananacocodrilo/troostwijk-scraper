@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asking Prices Aggregator</title>
+  <title>High-Roof Asking Prices</title>
   <style>
     :root {
       --bg: #0f1117;
@@ -12,7 +12,7 @@
       --border: #2e3250;
       --text: #e8eaf2;
       --muted: #7b82a8;
-      --accent: #5b7fff;
+      --accent: #2dd4a0;
       --green: #2dd4a0;
       --yellow: #f5c842;
       --red: #f55;
@@ -243,14 +243,14 @@
   <span class="nav-sep">|</span>
   <a href="l2h2.html">🏕️ High-Roof Auctions</a>
   <span class="nav-sep">|</span>
-  <a href="asking.html" class="active">🛒 Asking Prices</a>
+  <a href="asking.html">🛒 Asking Prices</a>
   <span class="nav-sep">|</span>
-  <a href="asking_l2h2.html">🏕️ High-Roof Asking</a>
+  <a href="asking_l2h2.html" class="active">🏕️ High-Roof Asking</a>
 </nav>
 
 <header>
   <div>
-    <h1>🛒 Asking <span>Prices</span></h1>
+    <h1>🏕️ High-Roof <span>Asking</span></h1>
   </div>
   <div class="stats" id="stats"></div>
   <div class="meta" id="updatedAt">Loading…</div>
@@ -322,7 +322,7 @@
 
 <script src="overrides.js"></script>
 <script>
-const DATA_URL = 'https://raw.githubusercontent.com/bananacocodrilo/troostwijk-scraper/main/output/asking_listings.json';
+const DATA_URL = 'https://raw.githubusercontent.com/bananacocodrilo/troostwijk-scraper/main/output/asking_l2h2.json';
 
 let allListings = [];
 

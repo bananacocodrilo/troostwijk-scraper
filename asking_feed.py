@@ -21,7 +21,7 @@ from cost_model import compute_conversion_cost
 import registry
 from van_intel import (
     HARD_REJECT_BODY, HARD_REJECT_DAMAGE, HARD_REJECT_TYPE,
-    _check_list, classify_vehicle, score_small_van, strict_filter,
+    _check_list, classify_vehicle, is_high_roof, score_small_van, strict_filter,
 )
 import risk
 
@@ -303,11 +303,17 @@ def build_feed(price_cache_path: str = "output/price_cache.json") -> List[dict]:
 def write_feed(
     price_cache_path: str = "output/price_cache.json",
     out_path: str = "output/asking_listings.json",
+    high_roof_path: str = "output/asking_l2h2.json",
 ) -> int:
     feed = build_feed(price_cache_path)
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, "w") as f:
         json.dump(feed, f, indent=2, default=str)
+    # High-roof asking feed: only confirmed H2/H3 listings (no guessing).
+    high = [v for v in feed if is_high_roof(v)]
+    with open(high_roof_path, "w") as f:
+        json.dump(high, f, indent=2, default=str)
+    print(f"  asking_feed: wrote {len(feed)} listings ({len(high)} high-roof) ")
     return len(feed)
 
 

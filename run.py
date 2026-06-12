@@ -17,7 +17,7 @@ from cost_model import (
 from market_price import build_price_index_cached
 from notify import notify_gems
 from scraper import VAVATO_BASE, crawl_parallel, get_category_urls, get_lot_urls
-from van_intel import SCORE_THRESHOLD, WHITELIST_GROUPS, WHITELIST_TOKENS, score_small_van
+from van_intel import SCORE_THRESHOLD, WHITELIST_GROUPS, WHITELIST_TOKENS, is_high_roof, score_small_van
 
 MAX_BID_TARGET_FRACTION = 0.65
 
@@ -402,8 +402,10 @@ def main():
     accepted.sort(key=lambda v: v.get("score") or 0, reverse=True)
 
     _dump_vans("output/latest.json", accepted)
-    # High-roof feed: all groups except transit_custom_l2h1 (H1-only).
-    l2h2 = [v for v in accepted if v.get("model_group") != "transit_custom_l2h1"]
+    # High-roof feed: only lots with a CONFIRMED high roof (H2/H3 in the
+    # size code). Unknown height is excluded — no guessing. Length-agnostic
+    # so L2H2 / L3H2 / L3H3 all qualify.
+    l2h2 = [v for v in accepted if is_high_roof(v)]
     _dump_vans("output/l2h2.json", l2h2)
     _dump("output/rejected.json", {
         v["url"]: v.get("rejected_reason") or "unknown"

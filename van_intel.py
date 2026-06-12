@@ -157,6 +157,20 @@ _TOKEN_TO_GROUP.sort(key=lambda x: (-(" " in x[0]), -len(x[0])))
 WHITELIST_TOKENS: set = {tok for tok, _ in _TOKEN_TO_GROUP}
 
 
+def is_high_roof(vehicle) -> bool:
+    """True when the size code confirms a HIGH roof (H2 or H3).
+
+    Reads the ``variant`` / ``van_type`` size code (e.g. "L2H2", "L3H2",
+    "L?H2"). Unknown height ("L2H?", None) is NOT high-roof — we don't
+    guess (same policy as size detection). Length-agnostic so L2H2 / L3H2
+    / L3H3 all qualify. Used to build the high-roof auction + asking feeds."""
+    if isinstance(vehicle, dict):
+        var = vehicle.get("variant") or vehicle.get("van_type") or ""
+    else:
+        var = getattr(vehicle, "variant", None) or getattr(vehicle, "van_type", None) or ""
+    return "H2" in var or "H3" in var
+
+
 # Smaller siblings that disqualify a match even if a primary token hits.
 # These are panel/utility vans we do NOT want even though they share a
 # brand with whitelisted models (e.g. "Transit Connect" is a different
