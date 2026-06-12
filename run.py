@@ -388,6 +388,9 @@ def main():
     accepted.sort(key=lambda v: v.get("score") or 0, reverse=True)
 
     _dump_vans("output/latest.json", accepted)
+    # High-roof feed: all groups except transit_custom_l2h1 (H1-only).
+    l2h2 = [v for v in accepted if v.get("model_group") != "transit_custom_l2h1"]
+    _dump_vans("output/l2h2.json", l2h2)
     _dump("output/rejected.json", {
         v["url"]: v.get("rejected_reason") or "unknown"
         for v in rejected if v.get("url")

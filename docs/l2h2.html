@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Camper Candidate Dashboard</title>
+  <title>L2H2 High-Roof Candidates</title>
   <style>
     :root {
       --bg: #0f1117;
@@ -12,7 +12,7 @@
       --border: #2e3250;
       --text: #e8eaf2;
       --muted: #7b82a8;
-      --accent: #5b7fff;
+      --accent: #2dd4a0;
       --green: #2dd4a0;
       --yellow: #f5c842;
       --red: #f55;
@@ -320,16 +320,16 @@
 <body>
 
 <nav class="nav-bar">
-  <a href="index.html" class="active">🚐 Camper Candidates</a>
+  <a href="index.html">🚐 Camper Candidates</a>
   <span class="nav-sep">|</span>
-  <a href="l2h2.html">🏕️ High-Roof (L2H2)</a>
+  <a href="l2h2.html" class="active">🏕️ High-Roof (L2H2)</a>
   <span class="nav-sep">|</span>
   <a href="asking.html">🛒 Asking Prices</a>
 </nav>
 
 <header>
   <div>
-    <h1>🚐 Camper <span>Candidates</span></h1>
+    <h1>🏕️ High-Roof <span>Candidates</span></h1>
   </div>
   <div class="stats" id="stats"></div>
   <div class="meta" id="updatedAt">Loading…</div>
@@ -394,7 +394,7 @@
 </div>
 
 <script>
-const DATA_URL = 'https://raw.githubusercontent.com/bananacocodrilo/troostwijk-scraper/main/output/latest.json';
+const DATA_URL = 'https://raw.githubusercontent.com/bananacocodrilo/troostwijk-scraper/main/output/l2h2.json';
 
 let allVans = [];
 
