@@ -166,16 +166,20 @@ def _parse_listing(item: dict) -> Optional[dict]:
     }
 
 
-# Marktplaats VIP (per-listing detail) page embeds structured attributes
-# as a JSON array inside the page HTML. The actual format (confirmed from
-# live pages) is:
-#   {"key":"numberOfSeats","label":"Aantal stoelen","value":"3","dataType":"Integer"}
-# Old regex was matching "numberOfSeats","label":... (wrong — key: prefix required).
-# Updated to fish for the key field then grab the value field nearby.
-# Also handle the older JSON-LD vehicleSeatingCapacity form as fallback.
+# Marktplaats VIP (per-listing detail) page embeds the seat count. The
+# format changed in 2026: the old structured JSON attribute
+#   {"key":"numberOfSeats","label":"Aantal stoelen","value":"3",...}
+# is gone — current pages render a spec row instead:
+#   <dt>Aantal zitplaatsen</dt><dd>6</dd>   (value sits in a sibling tag)
+# Primary pattern reads that rendered row; the legacy JSON-attribute and
+# JSON-LD forms are kept as fallbacks for any page still serving them.
+# Listings without the field (seller left it blank) yield None → unknown →
+# soft-pass, same as before.
 _VIP_SEATS_RE = re.compile(
-    r'"key"\s*:\s*"numberOfSeats"[^}]{0,120}?"value"\s*:\s*"?(\d+)'
+    r'Aantal (?:zitplaatsen|stoelen)\s*:?\s*(?:<[^>]+>\s*){0,3}([0-9]{1,2})\b'
+    r'|"key"\s*:\s*"numberOfSeats"[^}]{0,120}?"value"\s*:\s*"?(\d+)'
     r'|"vehicleSeatingCapacity"\s*:\s*"?(\d+)',
+    re.IGNORECASE,
 )
 _VIP_BASE = "https://www.marktplaats.nl"
 
@@ -199,7 +203,7 @@ def _fetch_vip_seats(vip_url: str) -> Optional[int]:
     m = _VIP_SEATS_RE.search(html)
     if not m:
         return None
-    val = m.group(1) or m.group(2)
+    val = m.group(1) or m.group(2) or m.group(3)
     try:
         return int(val)
     except (ValueError, TypeError):
