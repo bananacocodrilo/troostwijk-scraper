@@ -74,10 +74,19 @@ PERMANENT_REJECT_PREFIXES = (
     "year_below_minimum",
     "emission_below_euro6",
     "seats_below_5",
+    # Manual dismissal from the dashboard (user_overrides.json). Reconciled
+    # every run by apply_user_overrides(): added when a URL is dismissed,
+    # removed when it is un-dismissed.
+    "user_dismissed",
     # Legacy reason kept so URLs rejected by the pre-2026 (`< 6`) gate
     # stay permanently-rejected and don't get re-scraped.
     "seats_below_6",
 )
+
+# Reject reason recorded for lots the user manually dismissed in the
+# dashboard. Kept as a named constant so apply_user_overrides() can find
+# and reconcile exactly these entries without touching real rejections.
+USER_DISMISSED_REASON = "user_dismissed"
 
 
 def _is_permanent_reject(reason: Optional[str]) -> bool:
@@ -276,3 +285,62 @@ def all_known_vehicles(registry: dict) -> list[dict]:
     """Return every vehicle dict in the registry (fresh + stale) — the
     union that ``run.py`` runs cost/filter/notification over."""
     return list(registry.get("lots", {}).values())
+
+
+# ---------------------------------------------------------------------------
+# User overrides (dashboard dismiss / bookmark → output/user_overrides.json)
+# ---------------------------------------------------------------------------
+
+USER_OVERRIDES_PATH = "output/user_overrides.json"
+
+
+def load_user_overrides(path: str = USER_OVERRIDES_PATH) -> dict:
+    """Load the dashboard's dismiss/bookmark file. Tolerant of a missing or
+    corrupt file — returns an empty structure so the pipeline never breaks."""
+    try:
+        with open(path) as f:
+            data = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {"dismissed": {}, "bookmarked": {}}
+    return {
+        "dismissed": data.get("dismissed") or {},
+        "bookmarked": data.get("bookmarked") or {},
+    }
+
+
+def apply_user_overrides(registry: dict, dismissed_urls: Iterable[str],
+                         *, now: Optional[datetime] = None) -> tuple[int, int]:
+    """Reconcile manually-dismissed URLs into ``permanent_rejects``.
+
+    The set of ``permanent_rejects`` entries whose reason is
+    ``user_dismissed`` is made to match ``dismissed_urls`` exactly:
+
+      • a newly-dismissed URL is added (and dropped from ``lots`` so it
+        leaves the feeds immediately and is skipped on future discovery)
+      • a URL no longer in ``dismissed_urls`` (un-dismissed in the
+        dashboard) has its ``user_dismissed`` reject removed, so it gets
+        re-discovered and re-scraped on the next pass
+
+    Real rejections (wrong brand, too old, …) are never touched. Returns
+    ``(added, removed)`` counts."""
+    now_iso = (now or datetime.now(timezone.utc)).isoformat()
+    rejects = registry.setdefault("permanent_rejects", {})
+    lots = registry.setdefault("lots", {})
+    dismissed = set(dismissed_urls)
+
+    added = 0
+    for url in dismissed:
+        entry = rejects.get(url)
+        if not entry or entry.get("reason") != USER_DISMISSED_REASON:
+            rejects[url] = {"reason": USER_DISMISSED_REASON, "rejected_at": now_iso}
+            added += 1
+        lots.pop(url, None)
+
+    removed = 0
+    for url in list(rejects.keys()):
+        if rejects[url].get("reason") == USER_DISMISSED_REASON and url not in dismissed:
+            del rejects[url]
+            removed += 1
+
+    return added, removed
+

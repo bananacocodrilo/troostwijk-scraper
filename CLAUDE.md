@@ -135,7 +135,9 @@ Cold-start cap: `MAX_NEW_PER_RUN = 400` — full catalogue registered across 3-4
 | `fleet.py` | Fleet-type classification (utility/delivery/solar/telecom/…) |
 | `models.py` | Pydantic `Vehicle` dataclass (incl. `model_group`, `variant`, `classification_confidence`) |
 | `docs/index.html` | Camper-candidate dashboard (auction feed) |
+| `docs/l2h2.html` | High-roof (L2H2) dashboard — same features as `index.html`, loads `l2h2.json` (all whitelist groups except `transit_custom_l2h1`, which is H1-only) |
 | `docs/asking.html` | Asking-price aggregator dashboard (Marktplaats / AutoScout24 / 2dehands / Autotrack) |
+| `docs/overrides.js` | Shared dismiss/bookmark layer for all three dashboards — per-card ✕/★ buttons, localStorage state, GitHub-PAT sync to `user_overrides.json` |
 
 ---
 
@@ -144,11 +146,13 @@ Cold-start cap: `MAX_NEW_PER_RUN = 400` — full catalogue registered across 3-4
 | File | Contents |
 |------|---------|
 | `latest.json` | Accepted camper candidates from the auction feed, sorted by `score` (small-van suitability) |
+| `l2h2.json` | Subset of `latest.json` — accepted candidates excluding `transit_custom_l2h1` (the only H1-only group). Feeds `docs/l2h2.html`. |
 | `asking_listings.json` | Deduped cross-source asking-price feed (Marktplaats / AutoScout24 / 2dehands / Autotrack), filtered through the same whitelist as the auction feed. Sorted underpriced-first. |
 | `rejected.json` | `{url: reason}` map for all rejected vehicles |
 | `lot_registry.json` | Per-URL last-scrape state + permanent rejects |
 | `bid_history.json` | Hammer history per model token |
 | `price_cache.json` | Per-source listings cache populated by `market_price.build_price_index_cached`; read by `asking_feed.py` |
+| `user_overrides.json` | Dashboard dismiss/bookmark state — `{dismissed:{url:…}, bookmarked:{url:…}}`. Written by the browser via the GitHub Contents API (PAT); read by `run.py`/`registry.py` (dismissed → `permanent_rejects` reason `user_dismissed`, reconciled every run) and `asking_feed.py` (dismissed dropped from feed). |
 | `notified.json` | Telegram notification log |
 
 ## Logs

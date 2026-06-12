@@ -393,6 +393,7 @@
   <div class="empty">Loading van data…</div>
 </div>
 
+<script src="overrides.js"></script>
 <script>
 const DATA_URL = 'https://raw.githubusercontent.com/bananacocodrilo/troostwijk-scraper/main/output/latest.json';
 
@@ -576,6 +577,7 @@ function buildCard(v) {
 
   return `
 <div class="card" data-brand="${brand}" data-score="${score}">
+  ${Overrides.cardButtonsHtml(v.url)}
   ${thumb}
   <div class="card-top">
     <div class="score-badge ${scoreClass(score)}" title="Suitability score (year + mileage + size + fuel + bonuses)">${score}</div>
@@ -725,6 +727,7 @@ function render() {
     return (b.score ?? 0) - (a.score ?? 0);
   });
 
+  filtered = Overrides.applyFilter(filtered);
   document.getElementById('count').textContent = `${filtered.length} van${filtered.length !== 1 ? 's' : ''} shown`;
   document.getElementById('grid').innerHTML = filtered.length
     ? filtered.map(buildCard).join('')
@@ -800,6 +803,7 @@ document.getElementById('kmMaxFilter').addEventListener('input', e => {
 setInterval(() => { if (allVans.length) render(); }, 60000);
 
 load();
+Overrides.init({ onChange: render });
 </script>
 </body>
 </html>

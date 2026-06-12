@@ -21,6 +21,11 @@ from van_intel import SCORE_THRESHOLD, WHITELIST_GROUPS, WHITELIST_TOKENS, score
 
 MAX_BID_TARGET_FRACTION = 0.65
 
+# Whitelist tokens, longest-first. Hoisted to module scope because
+# _model_key() runs once per lot in the main loop AND once per lot inside
+# bid_history.update() — re-sorting the set on every call was pure waste.
+_SORTED_WHITELIST_TOKENS = sorted(WHITELIST_TOKENS, key=len, reverse=True)
+
 # Priority models for exact-name brand search against Troostwijk + Vavato.
 # One per whitelist canonical name; we run a focused search for each
 # because many fitting vans get mis-listed in "Cars" rather than the
@@ -97,7 +102,7 @@ def _model_key(title: str) -> str:
     bid history / price index lookups). Multi-word tokens checked first."""
     s = (title or "").lower()
     # Iterate longest-first so "transit custom" beats "transporter" etc.
-    for token in sorted(WHITELIST_TOKENS, key=len, reverse=True):
+    for token in _SORTED_WHITELIST_TOKENS:
         if " " in token or "." in token:
             parts = re.split(r"[\s.]+", token)
             pat = r"\b" + r"\s*\.?\s*".join(re.escape(p) for p in parts) + r"\b"
@@ -250,6 +255,14 @@ def main():
     if pruned:
         print(f"  registry: pruned {pruned} stale entries (auction ended > {registry.PRUNE_DAYS_AFTER_END}d ago)")
 
+    # Apply dashboard dismiss/bookmark overrides. Dismissed URLs are folded
+    # into permanent_rejects so they drop out of the feeds and stop being
+    # re-scraped; un-dismissed URLs are released back for re-discovery.
+    overrides = registry.load_user_overrides()
+    ov_added, ov_removed = registry.apply_user_overrides(reg, overrides["dismissed"].keys())
+    if ov_added or ov_removed:
+        print(f"  registry: user overrides — dismissed +{ov_added}, released {ov_removed}")
+
     urls_to_scrape, refresh_stats = registry.select_urls_to_scrape(all_urls, reg)
     print(f"  registry: refreshing {len(urls_to_scrape)}/{len(all_urls)} URLs — {refresh_stats}")
 
@@ -294,14 +307,15 @@ def main():
         if lot_id is None:
             _deduped.append(v)
             continue
-        existing = _seen_lot_ids.get(lot_id)
-        if existing is None:
-            _seen_lot_ids[lot_id] = v
+        prev = _seen_lot_ids.get(lot_id)
+        if prev is None:
+            _seen_lot_ids[lot_id] = (len(_deduped), v)
             _deduped.append(v)
         elif "troostwijkauctions.com" in v.get("url", ""):
-            # Prefer TWK URL — replace in-place
-            _deduped[_deduped.index(existing)] = v
-            _seen_lot_ids[lot_id] = v
+            # Prefer TWK URL — replace in-place at the tracked index (O(1))
+            idx, _ = prev
+            _deduped[idx] = v
+            _seen_lot_ids[lot_id] = (idx, v)
     all_results = _deduped
 
     # 4a. Persist a bid-history snapshot of every freshly-scraped lot.

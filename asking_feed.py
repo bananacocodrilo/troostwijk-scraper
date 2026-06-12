@@ -18,6 +18,7 @@ import statistics
 from typing import Dict, List, Optional, Tuple
 
 from cost_model import compute_conversion_cost
+import registry
 from van_intel import (
     HARD_REJECT_BODY, HARD_REJECT_DAMAGE, HARD_REJECT_TYPE,
     _check_list, classify_vehicle, score_small_van, strict_filter,
@@ -247,6 +248,16 @@ def build_feed(price_cache_path: str = "output/price_cache.json") -> List[dict]:
 
     deduped = _dedupe(survivors)
 
+    # Drop listings the user manually dismissed in the dashboard. Done after
+    # dedupe (so a dismissed cross-listing can't resurface under another
+    # source) and before cohort medians so dismissed prices don't skew them.
+    dismissed = set(registry.load_user_overrides()["dismissed"].keys())
+    dismissed_dropped = 0
+    if dismissed:
+        before = len(deduped)
+        deduped = [v for v in deduped if v.get("url") not in dismissed]
+        dismissed_dropped = before - len(deduped)
+
     buckets = _bucket(deduped)
     for v in deduped:
         g, y, p = v.get("model_group"), v.get("year"), v.get("price_eur")
@@ -283,6 +294,7 @@ def build_feed(price_cache_path: str = "output/price_cache.json") -> List[dict]:
         f"  asking_feed: in={len(raw_listings)} "
         f"classified_pass={len(survivors)} "
         f"deduped={len(deduped)} "
+        f"dismissed_dropped={dismissed_dropped} "
         f"rejected={rejected_count}"
     )
     return deduped
