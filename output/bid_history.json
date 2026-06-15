@@ -10762,6 +10762,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-15T17:31:15.111412+00:00",
+          "current_bid_eur": 3750.0,
+          "bids_count": 9,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -10777,6 +10783,66 @@
           "current_bid_eur": 2.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "595c4170-f8f1-42e3-aa3a-4584ac428cbb": {
+      "url": "https://www.troostwijkauctions.com/en/l/lohr-truck-and-machine-transporter-semi-trailer-A1-42021-63",
+      "model_token": "transporter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-15T17:31:15.111412+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "374d6c51-78c2-4a4b-90e3-ded4a1d86621": {
+      "url": "https://www.troostwijkauctions.com/en/l/2019-mercedes-benz-vito-2-2-119cdi-bluetec-commercial-vehicle-A1-39089-5",
+      "model_token": "vito",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-06-15T17:31:15.111412+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "529e111a-404b-4533-9616-f444b85476fc": {
+      "url": "https://www.vavato.com/en/l/2017-ford-transit-350-2-2-tdci-l3h2-tr-commercial-vehicle-A3-44490-5055",
+      "model_token": "transit",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-06-15T17:31:15.111412+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "1c7ff4e0-3719-4942-bd94-c82af13eeec5": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-2022-traveller-2-0-bluehdi-busl-s-s-automatic-9-seater-car-A1-41303-7",
+      "model_token": "traveller",
+      "year": 2022,
+      "snapshots": [
+        {
+          "ts": "2026-06-15T17:31:15.111412+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
