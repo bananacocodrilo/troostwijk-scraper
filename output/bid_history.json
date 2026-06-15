@@ -2611,6 +2611,12 @@
           "current_bid_eur": 540.0,
           "bids_count": 3,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-15T21:31:12.112425+00:00",
+          "current_bid_eur": 580.0,
+          "bids_count": 5,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -7810,6 +7816,12 @@
           "current_bid_eur": 5200.0,
           "bids_count": 46,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-15T21:31:12.112425+00:00",
+          "current_bid_eur": 6400.0,
+          "bids_count": 48,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -7999,6 +8011,12 @@
           "current_bid_eur": 5550.0,
           "bids_count": 7,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-15T21:31:12.112425+00:00",
+          "current_bid_eur": 6550.0,
+          "bids_count": 9,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -8074,6 +8092,12 @@
           "current_bid_eur": 3750.0,
           "bids_count": 7,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-15T21:31:12.112425+00:00",
+          "current_bid_eur": 4000.0,
+          "bids_count": 8,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -8133,6 +8157,12 @@
           "ts": "2026-06-11T20:54:33.809251+00:00",
           "current_bid_eur": 1640.0,
           "bids_count": 14,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-15T21:31:12.112425+00:00",
+          "current_bid_eur": 2540.0,
+          "bids_count": 27,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -9892,6 +9922,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-15T21:31:12.112425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -10843,6 +10879,66 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "20c6706d-c5cd-46fc-97a9-c3b7a5f8fa94": {
+      "url": "https://www.troostwijkauctions.com/en/l/2020-iveco-daily-35s18-2-998cc-camper-motorhome-racing-transporter-81-380-km-A1-47467-10001",
+      "model_token": "transporter",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-15T21:31:12.112425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "5da1b7c0-0859-4bd7-bc62-173dcc339afd": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-2-5-tdi-340-dc-%257C-79-vnh-9-i-A1-44161-5289",
+      "model_token": "transporter",
+      "year": 2008,
+      "snapshots": [
+        {
+          "ts": "2026-06-15T21:31:12.112425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "39609a78-98b9-4cc8-800a-cff970a2dbda": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-2-0-tdi-l2h1-highline-dc-%257C-vh-804-x-i-A1-44161-5290",
+      "model_token": "transporter",
+      "year": 2013,
+      "snapshots": [
+        {
+          "ts": "2026-06-15T21:31:12.112425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "066b34ca-d848-49f3-81f8-389bb17bd756": {
+      "url": "https://www.troostwijkauctions.com/en/l/subaru-tribeca-3-0r-boxer-h6-luxury-245hp-2008-orig-nl-28-vg-zd-youngtimer-A1-44374-41",
+      "model_token": "boxer",
+      "year": 2008,
+      "snapshots": [
+        {
+          "ts": "2026-06-15T21:31:12.112425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
