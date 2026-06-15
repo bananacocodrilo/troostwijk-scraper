@@ -9769,6 +9769,12 @@
           "current_bid_eur": 100.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-15T12:06:05.110668+00:00",
+          "current_bid_eur": 140.0,
+          "bids_count": 5,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -9946,6 +9952,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-15T12:06:05.110668+00:00",
+          "current_bid_eur": 520.0,
+          "bids_count": 25,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -10041,6 +10053,12 @@
           "ts": "2026-06-12T03:30:10.473058+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-15T12:06:05.110668+00:00",
+          "current_bid_eur": 500.0,
+          "bids_count": 6,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -10729,6 +10747,36 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "4df919ed-be9f-4f76-ae3b-4a1232ede4e3": {
+      "url": "https://www.vavato.com/en/l/mercedes-benz-116-cdi-vito-commercial-vehicle-A3-44489-5132",
+      "model_token": "vito",
+      "year": 2022,
+      "snapshots": [
+        {
+          "ts": "2026-06-15T12:06:05.110668+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "73ab421f-71d4-4f24-b87d-ca5f06d0ea1e": {
+      "url": "https://www.troostwijkauctions.com/en/l/opel-vivaro-1-6-cdti-l2h1-dc-sport-ecoflex-%257C-v-172-tp-A1-44160-4580",
+      "model_token": "vivaro",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-06-15T12:06:05.110668+00:00",
+          "current_bid_eur": 2.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
