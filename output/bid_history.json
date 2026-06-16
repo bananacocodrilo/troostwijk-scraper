@@ -7651,6 +7651,12 @@
           "current_bid_eur": 7000.0,
           "bids_count": 33,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-16T11:23:18.739103+00:00",
+          "current_bid_eur": 8000.0,
+          "bids_count": 35,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -7680,6 +7686,12 @@
           "ts": "2026-06-05T14:56:10.558295+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-16T11:23:18.739103+00:00",
+          "current_bid_eur": 55.0,
+          "bids_count": 1,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -7822,6 +7834,12 @@
           "current_bid_eur": 6400.0,
           "bids_count": 48,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-16T11:23:18.739103+00:00",
+          "current_bid_eur": 7400.0,
+          "bids_count": 50,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -7899,6 +7917,12 @@
           "ts": "2026-06-15T10:02:08.618789+00:00",
           "current_bid_eur": 4000.0,
           "bids_count": 10,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-16T11:23:18.739103+00:00",
+          "current_bid_eur": 4250.0,
+          "bids_count": 11,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -8016,6 +8040,12 @@
           "ts": "2026-06-15T21:31:12.112425+00:00",
           "current_bid_eur": 6550.0,
           "bids_count": 9,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-16T11:23:18.739103+00:00",
+          "current_bid_eur": 7050.0,
+          "bids_count": 10,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -8355,6 +8385,12 @@
           "ts": "2026-06-12T03:30:10.473058+00:00",
           "current_bid_eur": 3750.0,
           "bids_count": 9,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-16T11:23:18.739103+00:00",
+          "current_bid_eur": 5500.0,
+          "bids_count": 15,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -9250,6 +9286,12 @@
           "current_bid_eur": 4250.0,
           "bids_count": 20,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-16T11:23:18.739103+00:00",
+          "current_bid_eur": 4500.0,
+          "bids_count": 21,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -9366,6 +9408,12 @@
           "ts": "2026-06-15T10:02:08.618789+00:00",
           "current_bid_eur": 1400.0,
           "bids_count": 5,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-16T11:23:18.739103+00:00",
+          "current_bid_eur": 1600.0,
+          "bids_count": 7,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -9891,6 +9939,12 @@
           "ts": "2026-06-15T10:02:08.618789+00:00",
           "current_bid_eur": 2900.0,
           "bids_count": 5,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-16T11:23:18.739103+00:00",
+          "current_bid_eur": 3500.0,
+          "bids_count": 11,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -10768,6 +10822,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-16T11:23:18.739103+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -10818,6 +10878,12 @@
           "ts": "2026-06-15T12:06:05.110668+00:00",
           "current_bid_eur": 2.0,
           "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-16T11:23:18.739103+00:00",
+          "current_bid_eur": 12.0,
+          "bids_count": 3,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -10936,6 +11002,81 @@
       "snapshots": [
         {
           "ts": "2026-06-15T21:31:12.112425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "1d1005e1-62ea-4391-8b13-f162bb1aa073": {
+      "url": "https://www.vavato.com/en/l/2017-ford-transit-1-5-tdci-cabinets-trend-long-48-547km-light-truck-%25286307x%2529-A3-44490-6996",
+      "model_token": "transit",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-06-16T11:23:18.739103+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "7a6c6a57-c040-4daf-9f8a-0a2d3ad5095b": {
+      "url": "https://www.troostwijkauctions.com/en/l/2015-citroen-jumper-30-2-2-hdi-l1h1-commercial-vehicle-A3-44490-5016",
+      "model_token": "jumper",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-06-16T11:23:18.739103+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "ab937865-2add-48dc-9317-1f29c4038bc5": {
+      "url": "https://www.troostwijkauctions.com/en/l/toyota-2020-proace-shuttle-1-5-d-4d-cool-co-med-car-A1-41303-8",
+      "model_token": "pro ace",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-16T11:23:18.739103+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "f4fbef7f-dc22-40c0-8736-f5f33ec42235": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-custom-290-2-2-tdci-l1h1-sp-commercial-vehicle-A1-47855-2",
+      "model_token": "transit custom",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-16T11:23:18.739103+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "af5fc86f-8172-431d-ad3a-b449d3b6258f": {
+      "url": "https://www.troostwijkauctions.com/en/l/citroen-jumper-l4h2-transporter-A1-47477-1024",
+      "model_token": "transporter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-16T11:23:18.739103+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
