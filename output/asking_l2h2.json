@@ -39,47 +39,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 29,
-    "market_median_eur": 18999,
-    "price_pct_vs_median": -34.3,
-    "is_underpriced": true
-  },
-  {
-    "title": "Citro\u00ebn Jumper Gbdc 35 L2h2 2.2 HDi 130PK FAP Zwaar 2016",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2393618688-citroen-jumper-gbdc-35-l2h2-2-2-hdi-130pk-fap-zwaar-2016",
-    "source": "marktplaats",
-    "year": 2016,
-    "km": 155000,
-    "price_eur": 9500.0,
-    "seats": 7,
-    "emission_standard": null,
-    "body_type": "bestelwagen",
-    "weight_kg": null,
-    "remarks": "Zeer nette en betrouwbare citroen jumper altijd goed onderhouden de auto is voorzien van een 2.2L motor en heeft 150.000 Km gelopen nap het is een nl auto onderhoud boekje is er dealer onderhouden nie",
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/76d5534c-34dd-4fe1-b905-18b9e46cb57b?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "psa_l1l2h1",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "jumper",
-    "score": 74,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 20000.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_total_km",
-        "label": "High total km (155,000) \u2014 transmission/engine wear risk",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 17,
-    "market_median_eur": 13000,
-    "price_pct_vs_median": -26.9,
+    "market_sample_size": 30,
+    "market_median_eur": 19250,
+    "price_pct_vs_median": -35.1,
     "is_underpriced": true
   },
   {
@@ -122,9 +84,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 29,
-    "market_median_eur": 22950,
-    "price_pct_vs_median": -21.8,
+    "market_sample_size": 32,
+    "market_median_eur": 22472,
+    "price_pct_vs_median": -20.1,
     "is_underpriced": true
   },
   {
@@ -167,9 +129,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 29,
-    "market_median_eur": 22950,
-    "price_pct_vs_median": -21.8,
+    "market_sample_size": 32,
+    "market_median_eur": 22472,
+    "price_pct_vs_median": -20.1,
     "is_underpriced": true
   },
   {
@@ -207,7 +169,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 18,
+    "market_sample_size": 17,
     "market_median_eur": 14950,
     "price_pct_vs_median": -43.1,
     "is_underpriced": true
@@ -241,7 +203,7 @@
     "total_project_cost_eur": 20490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 23,
+    "market_sample_size": 19,
     "market_median_eur": 13900,
     "price_pct_vs_median": -28.1,
     "is_underpriced": true
@@ -279,9 +241,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 10,
-    "market_median_eur": 24240,
-    "price_pct_vs_median": -35.0,
+    "market_sample_size": 11,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -30.9,
     "is_underpriced": true
   },
   {
@@ -311,7 +273,7 @@
     "total_project_cost_eur": 20200.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 22,
+    "market_sample_size": 21,
     "market_median_eur": 13900,
     "price_pct_vs_median": 7.6,
     "is_underpriced": false
@@ -343,9 +305,43 @@
     "total_project_cost_eur": 21150.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 26,
+    "market_sample_size": 22,
     "market_median_eur": 13900,
     "price_pct_vs_median": 14.4,
+    "is_underpriced": false
+  },
+  {
+    "title": "Fiat Ducato 2.3 MultiJet 120 pk Dubbel Cabine L2H2 Navi Came",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2410995437-fiat-ducato-2-3-multijet-120-pk-dubbel-cabine-l2h2-navi-came",
+    "source": "marktplaats",
+    "year": 2021,
+    "km": 99348,
+    "price_eur": 22800.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": "bestelwagen",
+    "weight_kg": null,
+    "remarks": "Fiat ducato 2.3 Multijet 120 pk dubbel cabine l2h2 navi camera, cruise control, trekhaak 2.500 Kg, 6-zits, nap algemene informatie carrosserievorm: bestelauto modelreeks: 2014 - 2021 kleur: zwart cabi",
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/01f83102-57d3-4c5e-961a-b2a02599626b?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/177c01e4-95e6-40e6-aefa-d248b3390bf0?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/2541570d-7be8-43bc-8a94-6676056deb2c?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "ducato",
+    "score": 59,
+    "est_conversion_cost_eur": 5250,
+    "est_conversion_cost_low_eur": 3500,
+    "est_conversion_cost_high_eur": 7000,
+    "conversion_effort": "light",
+    "total_project_cost_eur": 28050.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 15,
+    "market_median_eur": 15750,
+    "price_pct_vs_median": 44.8,
     "is_underpriced": false
   },
   {
@@ -381,7 +377,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 23,
+    "market_sample_size": 19,
     "market_median_eur": 13900,
     "price_pct_vs_median": 14.7,
     "is_underpriced": false
@@ -451,7 +447,7 @@
     "total_project_cost_eur": 25900.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 18,
+    "market_sample_size": 17,
     "market_median_eur": 14950,
     "price_pct_vs_median": 3.0,
     "is_underpriced": false
@@ -487,9 +483,9 @@
     "total_project_cost_eur": 37480.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 10,
-    "market_median_eur": 24240,
-    "price_pct_vs_median": 11.3,
+    "market_sample_size": 11,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": 18.3,
     "is_underpriced": false
   },
   {
@@ -587,7 +583,7 @@
     "total_project_cost_eur": 24250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 23,
+    "market_sample_size": 19,
     "market_median_eur": 13900,
     "price_pct_vs_median": -1.1,
     "is_underpriced": false
@@ -651,9 +647,9 @@
     "total_project_cost_eur": 45450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 7,
-    "market_median_eur": 27769,
-    "price_pct_vs_median": 25.9,
+    "market_sample_size": 8,
+    "market_median_eur": 27374,
+    "price_pct_vs_median": 27.7,
     "is_underpriced": false
   }
 ]
