@@ -7201,6 +7201,12 @@
           "current_bid_eur": 3300.0,
           "bids_count": 42,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-16T16:46:09.733824+00:00",
+          "current_bid_eur": 5000.0,
+          "bids_count": 54,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -8047,6 +8053,12 @@
           "current_bid_eur": 7050.0,
           "bids_count": 10,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-16T16:46:09.733824+00:00",
+          "current_bid_eur": 7550.0,
+          "bids_count": 11,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -8127,6 +8139,12 @@
           "ts": "2026-06-15T21:31:12.112425+00:00",
           "current_bid_eur": 4000.0,
           "bids_count": 8,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-16T16:46:09.733824+00:00",
+          "current_bid_eur": 4500.0,
+          "bids_count": 10,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -9763,6 +9781,12 @@
           "current_bid_eur": 290.0,
           "bids_count": 3,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-16T16:46:09.733824+00:00",
+          "current_bid_eur": 580.0,
+          "bids_count": 6,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -11077,6 +11101,66 @@
       "snapshots": [
         {
           "ts": "2026-06-16T11:23:18.739103+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "d1914b1c-eb9a-495d-9c26-ed53b510ad33": {
+      "url": "https://www.vavato.com/en/l/2020-opel-vivaro-light-truck-A3-44490-6030",
+      "model_token": "vivaro",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-16T16:46:09.733824+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "4ca32f98-14c7-4c9d-8b7a-cd2da177727a": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-109-cdi-commercial-vehicle-A1-47855-3",
+      "model_token": "vito",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-16T16:46:09.733824+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "806c597b-f51a-40c4-b3ed-8ae05b5b903d": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-114-cdi-lang-car-2016-A1-41303-44",
+      "model_token": "vito",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-06-16T16:46:09.733824+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "5d490113-e98c-4572-a5a7-fe084b25c9eb": {
+      "url": "https://www.troostwijkauctions.com/en/l/toyota-proace-worker-1-6-d-4d-profession-commercial-vehicle-A1-47855-5",
+      "model_token": "pro ace",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-16T16:46:09.733824+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
