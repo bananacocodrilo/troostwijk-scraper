@@ -40,8 +40,8 @@
       }
     ],
     "market_sample_size": 30,
-    "market_median_eur": 19250,
-    "price_pct_vs_median": -35.1,
+    "market_median_eur": 18500,
+    "price_pct_vs_median": -32.5,
     "is_underpriced": true
   },
   {
@@ -84,9 +84,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 32,
-    "market_median_eur": 22472,
-    "price_pct_vs_median": -20.1,
+    "market_sample_size": 31,
+    "market_median_eur": 22500,
+    "price_pct_vs_median": -20.2,
     "is_underpriced": true
   },
   {
@@ -129,9 +129,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 32,
-    "market_median_eur": 22472,
-    "price_pct_vs_median": -20.1,
+    "market_sample_size": 31,
+    "market_median_eur": 22500,
+    "price_pct_vs_median": -20.2,
     "is_underpriced": true
   },
   {
@@ -169,9 +169,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 17,
-    "market_median_eur": 14950,
-    "price_pct_vs_median": -43.1,
+    "market_sample_size": 18,
+    "market_median_eur": 15175,
+    "price_pct_vs_median": -44.0,
     "is_underpriced": true
   },
   {
@@ -241,9 +241,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 11,
-    "market_median_eur": 22800,
-    "price_pct_vs_median": -30.9,
+    "market_sample_size": 12,
+    "market_median_eur": 23875,
+    "price_pct_vs_median": -34.0,
     "is_underpriced": true
   },
   {
@@ -339,9 +339,9 @@
     "total_project_cost_eur": 28050.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 15,
-    "market_median_eur": 15750,
-    "price_pct_vs_median": 44.8,
+    "market_sample_size": 16,
+    "market_median_eur": 18350,
+    "price_pct_vs_median": 24.3,
     "is_underpriced": false
   },
   {
@@ -447,9 +447,9 @@
     "total_project_cost_eur": 25900.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 17,
-    "market_median_eur": 14950,
-    "price_pct_vs_median": 3.0,
+    "market_sample_size": 18,
+    "market_median_eur": 15175,
+    "price_pct_vs_median": 1.5,
     "is_underpriced": false
   },
   {
@@ -483,9 +483,9 @@
     "total_project_cost_eur": 37480.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 11,
-    "market_median_eur": 22800,
-    "price_pct_vs_median": 18.3,
+    "market_sample_size": 12,
+    "market_median_eur": 23875,
+    "price_pct_vs_median": 13.0,
     "is_underpriced": false
   },
   {
@@ -517,9 +517,9 @@
     "total_project_cost_eur": 46739.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 7,
-    "market_median_eur": 34950,
-    "price_pct_vs_median": 3.7,
+    "market_sample_size": 8,
+    "market_median_eur": 29870,
+    "price_pct_vs_median": 21.3,
     "is_underpriced": false
   },
   {
@@ -621,6 +621,78 @@
     "is_underpriced": false
   },
   {
+    "title": "\u00eb-Jumper L3 H2 70 kWh",
+    "url": "https://www.autoscout24.nl/aanbod/citroen-jumper-e-jumper-l3-h2-70-kwh-elektrisch-wit-cat_ma21mo14710-0b54b5aa-89bd-47f0-b3b1-d43eb4f13982",
+    "source": "autoscout24_nl",
+    "year": 2023,
+    "km": 2458,
+    "price_eur": 24950.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://prod.pictures.autoscout24.net/listing-images/0b54b5aa-89bd-47f0-b3b1-d43eb4f13982_49adf851-8181-485f-8fe2-a863a548da3a.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/0b54b5aa-89bd-47f0-b3b1-d43eb4f13982_6075f75f-121e-47d6-9546-f4d4ec27fa8c.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/0b54b5aa-89bd-47f0-b3b1-d43eb4f13982_8e5e863c-6273-4fea-b779-380a2547eb10.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/0b54b5aa-89bd-47f0-b3b1-d43eb4f13982_b516f1d5-7173-4e4d-a46d-d25523db50ad.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/0b54b5aa-89bd-47f0-b3b1-d43eb4f13982_3d087eef-623f-4bdb-a09f-c30a3b4e6e46.jpg/250x188.webp"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 21,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 35450.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 9,
+    "market_median_eur": 26980,
+    "price_pct_vs_median": -7.5,
+    "is_underpriced": false
+  },
+  {
+    "title": "BOXER KASTEN 2,2D PRO L3H2 PDC, KLIMA, TEMPOMAT",
+    "url": "https://www.autoscout24.de/angebote/peugeot-boxer-boxer-kasten-2-2d-pro-l3h2-pdc-klima-tempomat-diesel-weiss-cat_ma55mo14821-ba553212-828a-41ba-b578-e649da8d3935",
+    "source": "autoscout24_de",
+    "year": 2022,
+    "km": 1010,
+    "price_eur": 31970.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://prod.pictures.autoscout24.net/listing-images/ba553212-828a-41ba-b578-e649da8d3935_9a26cca4-551d-4628-9d96-40e266b3bb54.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/ba553212-828a-41ba-b578-e649da8d3935_88efbbc1-aa78-4858-9783-4c35afcd14b4.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/ba553212-828a-41ba-b578-e649da8d3935_babc0c47-d6d8-44ea-8b20-58d54772f809.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/ba553212-828a-41ba-b578-e649da8d3935_44ce4f48-70d4-4b1a-b532-cbd8fee6ce98.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/ba553212-828a-41ba-b578-e649da8d3935_e8c67433-c20e-4388-be1e-f8c2bfbcd3cf.jpg/250x188.webp"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "boxer",
+    "score": 21,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 42470.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 12,
+    "market_median_eur": 23875,
+    "price_pct_vs_median": 33.9,
+    "is_underpriced": false
+  },
+  {
     "title": "FIAT DUCATO H3L3 10-2023 AUTOMAAT 38.000 KM LUXE UITVOERING",
     "url": "https://www.marktplaats.nl/v/caravans-en-kamperen/campers/m2409980207-fiat-ducato-h3l3-10-2023-automaat-38-000-km-luxe-uitvoering",
     "source": "marktplaats",
@@ -647,9 +719,9 @@
     "total_project_cost_eur": 45450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 8,
-    "market_median_eur": 27374,
-    "price_pct_vs_median": 27.7,
+    "market_sample_size": 9,
+    "market_median_eur": 26980,
+    "price_pct_vs_median": 29.5,
     "is_underpriced": false
   }
 ]
