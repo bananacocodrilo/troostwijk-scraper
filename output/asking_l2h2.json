@@ -1,50 +1,5 @@
 [
   {
-    "title": "Volkswagen Transporter Kombi 2.0 TDI L2H3 Highline | Navigat",
-    "url": "https://www.2dehands.be/v/auto-s/volkswagen/m2409492344-volkswagen-transporter-kombi-2-0-tdi-l2h3-highline-navigat",
-    "source": "2dehands",
-    "year": 2017,
-    "km": 315522,
-    "price_eur": 12490.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "Executive plus-pakket, climatic airconditioning (9ap), cruise control icm euro 6 motoren (8t2), lichtmetalen velgen \"clayton\" 6\u00bd j x 16 (cla), parkeerhulp achter (7x1), parkeersensor voor. V",
-    "images": [
-      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/bede1520-19ad-48f1-9390-8a482e348afc?rule=ecg_mp_eps$_82.jpg",
-      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/527481e3-29ee-4732-bb8d-8a23d5f4b7de?rule=ecg_mp_eps$_82.jpg",
-      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/13378ea7-11eb-4d8d-ada0-db593fcb4364?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "t6_1_lwb",
-    "variant": "L2H3",
-    "classification_confidence": "high",
-    "matched_token": "transporter",
-    "score": 84,
-    "est_conversion_cost_eur": 2500,
-    "est_conversion_cost_low_eur": 1500,
-    "est_conversion_cost_high_eur": 3500,
-    "conversion_effort": "minimal",
-    "total_project_cost_eur": 14990.0,
-    "risk_score": 3,
-    "risk_flags": [
-      {
-        "code": "very_high_km_per_year",
-        "label": "Very high km/year (35,058/yr) \u2014 highway-thrashed risk",
-        "severity": "high"
-      },
-      {
-        "code": "high_total_km",
-        "label": "High total km (315,522) \u2014 transmission/engine wear risk",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 30,
-    "market_median_eur": 18500,
-    "price_pct_vs_median": -32.5,
-    "is_underpriced": true
-  },
-  {
     "title": "Ford Transit 2.0TDCI L3H2 Kombi |Personenbus | 9-Persoons |",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2401074767-ford-transit-2-0tdci-l3h2-kombi-personenbus-9-persoons",
     "source": "marktplaats",
@@ -84,9 +39,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 31,
-    "market_median_eur": 22500,
-    "price_pct_vs_median": -20.2,
+    "market_sample_size": 32,
+    "market_median_eur": 22700,
+    "price_pct_vs_median": -20.9,
     "is_underpriced": true
   },
   {
@@ -129,9 +84,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 31,
-    "market_median_eur": 22500,
-    "price_pct_vs_median": -20.2,
+    "market_sample_size": 32,
+    "market_median_eur": 22700,
+    "price_pct_vs_median": -20.9,
     "is_underpriced": true
   },
   {
@@ -169,9 +124,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 18,
-    "market_median_eur": 15175,
-    "price_pct_vs_median": -44.0,
+    "market_sample_size": 21,
+    "market_median_eur": 14950,
+    "price_pct_vs_median": -43.1,
     "is_underpriced": true
   },
   {
@@ -203,9 +158,9 @@
     "total_project_cost_eur": 20490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 19,
-    "market_median_eur": 13900,
-    "price_pct_vs_median": -28.1,
+    "market_sample_size": 20,
+    "market_median_eur": 13450,
+    "price_pct_vs_median": -25.7,
     "is_underpriced": true
   },
   {
@@ -241,9 +196,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 12,
-    "market_median_eur": 23875,
-    "price_pct_vs_median": -34.0,
+    "market_sample_size": 13,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": -30.9,
     "is_underpriced": true
   },
   {
@@ -273,9 +228,9 @@
     "total_project_cost_eur": 20200.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 21,
-    "market_median_eur": 13900,
-    "price_pct_vs_median": 7.6,
+    "market_sample_size": 23,
+    "market_median_eur": 13990,
+    "price_pct_vs_median": 6.9,
     "is_underpriced": false
   },
   {
@@ -305,7 +260,7 @@
     "total_project_cost_eur": 21150.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 22,
+    "market_sample_size": 23,
     "market_median_eur": 13900,
     "price_pct_vs_median": 14.4,
     "is_underpriced": false
@@ -339,9 +294,9 @@
     "total_project_cost_eur": 28050.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 16,
-    "market_median_eur": 18350,
-    "price_pct_vs_median": 24.3,
+    "market_sample_size": 18,
+    "market_median_eur": 17875,
+    "price_pct_vs_median": 27.6,
     "is_underpriced": false
   },
   {
@@ -377,43 +332,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 19,
-    "market_median_eur": 13900,
-    "price_pct_vs_median": 14.7,
-    "is_underpriced": false
-  },
-  {
-    "title": "Fiat Professional Ducato",
-    "url": "https://www.2dehands.be/v/auto-s/fiat/m2411186826-fiat-professional-ducato",
-    "source": "2dehands",
-    "year": 2026,
-    "km": 33,
-    "price_eur": 37448.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "te koop : fiat ducato l3h2 aut 180pk beschikbaar vanaf 07/2026 wij bieden extra garantie, financiering en overname van uw huidige wagen aan. Aanbod exclusief leveringskosten van \u20ac 298 btwi. Indi",
-    "images": [
-      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/5b928436-4486-4b86-8f3c-ce147a16446f?rule=ecg_mp_eps$_82.jpg",
-      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/76bcd43b-50c8-4fa4-a58d-1aaa548e4219?rule=ecg_mp_eps$_82.jpg",
-      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/b2fb2fbe-ae74-4817-ac2e-33c497b30a6c?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "psa_l1l2h1",
-    "variant": "L3H2",
-    "classification_confidence": "high",
-    "matched_token": "ducato",
-    "score": 31,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 47948.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 2,
-    "market_median_eur": null,
-    "price_pct_vs_median": null,
+    "market_sample_size": 20,
+    "market_median_eur": 13450,
+    "price_pct_vs_median": 18.6,
     "is_underpriced": false
   },
   {
@@ -447,9 +368,9 @@
     "total_project_cost_eur": 25900.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 18,
-    "market_median_eur": 15175,
-    "price_pct_vs_median": 1.5,
+    "market_sample_size": 21,
+    "market_median_eur": 14950,
+    "price_pct_vs_median": 3.0,
     "is_underpriced": false
   },
   {
@@ -483,9 +404,9 @@
     "total_project_cost_eur": 37480.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 12,
-    "market_median_eur": 23875,
-    "price_pct_vs_median": 13.0,
+    "market_sample_size": 13,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": 18.3,
     "is_underpriced": false
   },
   {
@@ -517,9 +438,9 @@
     "total_project_cost_eur": 46739.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 8,
-    "market_median_eur": 29870,
-    "price_pct_vs_median": 21.3,
+    "market_sample_size": 7,
+    "market_median_eur": 27769,
+    "price_pct_vs_median": 30.5,
     "is_underpriced": false
   },
   {
@@ -547,72 +468,6 @@
     "est_conversion_cost_high_eur": 14000,
     "conversion_effort": "moderate",
     "total_project_cost_eur": 52058.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_median_eur": null,
-    "market_sample_size": 0,
-    "price_pct_vs_median": null,
-    "is_underpriced": false
-  },
-  {
-    "title": "Peugeot Boxer L3-H2-3.5t//130pk-Euro6B-Pdc-Cruis-Trekhaak!",
-    "url": "https://www.2dehands.be/v/auto-s/peugeot/m2409796979-peugeot-boxer-l3-h2-3-5t-130pk-euro6b-pdc-cruis-trekhaak",
-    "source": "2dehands",
-    "year": 2017,
-    "km": 76000,
-    "price_eur": 13750.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "New opstock in ons wagenpark!! (Peugeot boxer bluehdi 130l3-h2 lichtevracht) pdc-airco-bluetooth-trekhaak! Nette bestelwagen direct leverbaar!* /Rechtstreeks van eerste eigenaar/ btw aftrekbaar voor o",
-    "images": [
-      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/4caaac84-7043-4136-b4a9-1e57d4386892?rule=ecg_mp_eps$_82.jpg",
-      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/de8a2366-d2ce-4754-819a-244475aad4bb?rule=ecg_mp_eps$_82.jpg",
-      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/4822fb2b-821e-4743-a52d-d3acf9b98a6f?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "psa_l1l2h1",
-    "variant": "L3H2",
-    "classification_confidence": "high",
-    "matched_token": "boxer",
-    "score": 21,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 24250.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 19,
-    "market_median_eur": 13900,
-    "price_pct_vs_median": -1.1,
-    "is_underpriced": false
-  },
-  {
-    "title": "Peugeot Boxer",
-    "url": "https://www.2dehands.be/v/auto-s/peugeot/a163100591-peugeot-boxer",
-    "source": "2dehands",
-    "year": null,
-    "km": null,
-    "price_eur": 14990.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "Boxer e-boxer ft 435 l3h2 beschikbaar voor 14990 spoticar is de nieuwe tweedehands site voor de netwerken peugeot occasion, citro\u00ebn select, opel certified used cars en ds certified.met een paar klikke",
-    "images": [
-      "https://admarkt-cdn.2dehands.com/api/v1/icas-twh-pro-admarkt/images/07/07e64979-7d77-45fc-b629-8e3e026e4e8d?rule=eps_82.JPG"
-    ],
-    "model_group": "psa_l1l2h1",
-    "variant": "L3H2",
-    "classification_confidence": "high",
-    "matched_token": "boxer",
-    "score": 21,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 25490.0,
     "risk_score": 0,
     "risk_flags": [],
     "market_median_eur": null,
@@ -651,9 +506,9 @@
     "total_project_cost_eur": 35450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 9,
-    "market_median_eur": 26980,
-    "price_pct_vs_median": -7.5,
+    "market_sample_size": 10,
+    "market_median_eur": 25965,
+    "price_pct_vs_median": -3.9,
     "is_underpriced": false
   },
   {
@@ -687,9 +542,9 @@
     "total_project_cost_eur": 42470.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 12,
-    "market_median_eur": 23875,
-    "price_pct_vs_median": 33.9,
+    "market_sample_size": 13,
+    "market_median_eur": 22800,
+    "price_pct_vs_median": 40.2,
     "is_underpriced": false
   },
   {
@@ -719,9 +574,9 @@
     "total_project_cost_eur": 45450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 9,
-    "market_median_eur": 26980,
-    "price_pct_vs_median": 29.5,
+    "market_sample_size": 10,
+    "market_median_eur": 25965,
+    "price_pct_vs_median": 34.6,
     "is_underpriced": false
   }
 ]
