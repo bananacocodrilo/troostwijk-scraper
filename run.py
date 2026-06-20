@@ -324,14 +324,16 @@ def main():
     bid_history.update(fresh_results, model_token_of=_model_key)
     hammer_index = bid_history.load_index()
 
-    # 4b. Combined market price index (Marktplaats + AutoScout24).
+    # 4b. Combined market price index (NL + DE marketplaces + NL lease).
     # Skip the HTTP refresh if we're running low on time — use the cached
     # data from the previous run instead. The index will be slightly stale
     # but still good enough for deal-ratio math; the next run will refresh.
+    # max_sources=3: with 10 sources every one refreshes within ~3-4 runs so
+    # the German marketplaces and lease aggregators don't starve.
     _do_refresh = _elapsed() < _MARKET_DEADLINE
     if not _do_refresh:
         print(f"  ⏰ skipping market refresh at {_fmt(_elapsed())} — using cached prices")
-    price_index = build_price_index_cached(refresh=_do_refresh)
+    price_index = build_price_index_cached(refresh=_do_refresh, max_sources=3)
 
     # 5. Attach market data + compute true cost + re-filter
     accepted = []

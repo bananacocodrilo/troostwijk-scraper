@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Camper Candidate Dashboard</title>
+  <title>High-Roof Asking Prices</title>
   <style>
     :root {
       --bg: #0f1117;
@@ -12,7 +12,7 @@
       --border: #2e3250;
       --text: #e8eaf2;
       --muted: #7b82a8;
-      --accent: #5b7fff;
+      --accent: #2dd4a0;
       --green: #2dd4a0;
       --yellow: #f5c842;
       --red: #f55;
@@ -22,7 +22,6 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background: var(--bg); color: var(--text); font: 14px/1.5 'Inter', system-ui, sans-serif; min-height: 100vh; }
 
-    /* ── HEADER ─────────────────────────────── */
     header {
       background: var(--surface);
       border-bottom: 1px solid var(--border);
@@ -36,7 +35,6 @@
     .stat { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 4px 12px; font-size: 12px; }
     .stat b { color: var(--accent); }
 
-    /* ── CONTROLS ────────────────────────────── */
     .controls {
       display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
       padding: 14px 24px; border-bottom: 1px solid var(--border);
@@ -49,7 +47,6 @@
     #scoreVal { font-weight: 600; color: var(--accent); min-width: 28px; }
     #count { margin-left: auto; color: var(--muted); font-size: 12px; }
 
-    /* ── GRID ────────────────────────────────── */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -57,7 +54,6 @@
       padding: 24px;
     }
 
-    /* ── CARD ────────────────────────────────── */
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -68,6 +64,7 @@
       transition: transform .15s, border-color .15s;
     }
     .card:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .card.underpriced { border-color: var(--green); }
 
     .card-thumb {
       width: 100%; aspect-ratio: 4 / 3;
@@ -79,13 +76,11 @@
     .card-thumbs.multi {
       display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
       background: var(--border);
+      border-bottom: 1px solid var(--border);
     }
     .card-thumbs.multi .card-thumb {
       aspect-ratio: 1 / 1;
       border-bottom: none;
-    }
-    .card-thumbs.multi {
-      border-bottom: 1px solid var(--border);
     }
     .card-thumb-placeholder {
       width: 100%; aspect-ratio: 4 / 3;
@@ -108,7 +103,7 @@
     .score-badge.s-high { color: var(--green); background: #0d2e20; }
     .score-badge.s-mid  { color: var(--yellow); background: #2d2600; }
     .score-badge.s-low  { color: var(--muted); }
-    .card-title { font-weight: 700; font-size: 15px; line-height: 1.3; }
+    .card-title { font-weight: 700; font-size: 15px; line-height: 1.3; word-break: break-word; }
     .card-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
 
     .badges { display: flex; gap: 6px; flex-wrap: wrap; padding: 0 16px 8px; }
@@ -116,122 +111,11 @@
       font-size: 11px; font-weight: 600; padding: 2px 8px;
       border-radius: 20px; border: 1px solid transparent;
     }
-    .badge-size    { background: #1a2a4a; color: #7ab4ff; border-color: #2a3a6a; }
-    .badge-fuel    { background: #1a2a1a; color: #7affa0; border-color: #2a4a2a; }
-    .badge-open    { background: #2a1a00; color: #ffb84d; border-color: #4a3000; }
-    .badge-closed  { background: #2a1a1a; color: var(--muted); border-color: var(--border); }
-    .badge-vat     { background: #1a1a3a; color: #b0b4ff; border-color: #2a2a6a; }
-    .badge-gem     { background: #1a2a1a; color: var(--green); border-color: #2a5a2a; }
-    /* Fleet provenance */
-    .badge-fleet-utility      { background: #0d2e20; color: var(--green); border-color: #1a4a30; }
-    .badge-fleet-telecom      { background: #1a2a4a; color: #7ab4ff; border-color: #2a3a6a; }
-    .badge-fleet-solar        { background: #2d2600; color: var(--yellow); border-color: #4a3d00; }
-    .badge-fleet-hire         { background: #2a263a; color: #b0b4ff; border-color: #3a3650; }
-    .badge-fleet-construction { background: #2d1f00; color: #f5a142; border-color: #4a3600; }
-    .badge-fleet-workshop     { background: #2a1a3a; color: #c485ff; border-color: #4a2a5a; }
-    .badge-fleet-refrigeration { background: #1a3a3a; color: #85d5e8; border-color: #2a5a5a; }
-    .badge-fleet-delivery     { background: #2a0d0d; color: var(--red); border-color: #5a1a1a; }
-
-    /* ── COUNTDOWN ───────────────────────────── */
-    .countdown {
-      font-size: 18px; font-weight: 800; letter-spacing: -0.3px;
-      padding: 8px 14px; border-radius: 8px;
-      background: var(--surface2); color: var(--text);
-      display: flex; align-items: center; justify-content: center; gap: 6px;
-      margin: 0 16px;
-      border: 1px solid var(--border);
-    }
-    .countdown.urgent { background: #3a0d0d; color: #ff8a8a; border-color: #6a1a1a; animation: pulse 1.4s ease-in-out infinite; }
-    .countdown.soon   { background: #3a2d00; color: var(--yellow); border-color: #5a4500; }
-    .countdown.ok     { background: #0d2a1a; color: var(--green); border-color: #1a4a2a; }
-    .countdown.ended  { background: var(--surface2); color: var(--muted); border-color: var(--border); font-size: 14px; font-weight: 600; }
-    @keyframes pulse { 0%,100% { opacity: 1 } 50% { opacity: 0.55 } }
-
-    .price-row.cost-breakdown { margin-top: -2px; }
-    .price-row.cost-breakdown .label { color: var(--muted); opacity: 0.7; }
-
-    .specs {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 3px 8px;
-      padding: 8px 16px;
-      font-size: 12px; color: var(--muted);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .specs .s-icon { margin-right: 4px; }
-
-    /* ── PRICE SECTION ───────────────────────── */
-    .prices { padding: 12px 16px; display: flex; flex-direction: column; gap: 5px; }
-    .price-row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
-    .price-row .label { color: var(--muted); }
-    .price-row .value { font-weight: 600; }
-    .price-row .value.na { color: var(--muted); font-style: italic; font-weight: 400; }
-    .price-row .value.over { color: var(--red); }
-    .price-row.max-bid {
-      background: #0d2a1a; border: 1px solid #1a4a2a; border-radius: 6px;
-      padding: 6px 10px; margin-bottom: 4px;
-    }
-    .price-row.max-bid .label { color: var(--text); font-weight: 600; }
-    .max-bid-val { color: var(--green) !important; font-size: 15px !important; }
-    .price-row.over-limit { background: #2a0d0d; border-color: #5a1a1a; }
-    .price-row.over-limit .max-bid-val { color: var(--red) !important; }
-    .deal-bar {
-      margin-top: 8px; border-radius: 6px; overflow: hidden;
-      height: 6px; background: var(--surface2);
-    }
-    .deal-fill {
-      height: 100%; border-radius: 6px;
-      transition: width .3s;
-    }
-    .deal-positive { background: var(--green); }
-    .deal-neutral  { background: var(--yellow); }
-    .deal-negative { background: var(--red); }
-    .deal-label {
-      font-size: 13px; font-weight: 700; margin-top: 4px;
-      text-align: right;
-    }
-    .deal-label.positive { color: var(--green); }
-    .deal-label.neutral  { color: var(--yellow); }
-    .deal-label.negative { color: var(--red); }
-    .deal-label.unknown  { color: var(--muted); }
-
-    /* ── CONVERSION COST ─────────────────────── */
-    .conv-row {
-      display: flex; justify-content: space-between; align-items: baseline;
-      font-size: 12px; color: var(--muted);
-    }
-    .conv-row .effort {
-      font-weight: 600;
-      padding: 1px 6px; border-radius: 4px; font-size: 10.5px;
-    }
-    .effort.minimal  { color: var(--green); background: #0d2e20; }
-    .effort.light    { color: #c9e070;       background: #1f2a10; }
-    .effort.moderate { color: var(--yellow); background: #2d2600; }
-    .effort.heavy    { color: var(--red);    background: #2a0d0d; }
-    .total-project {
-      display: flex; justify-content: space-between; align-items: baseline;
-      margin-top: 4px; padding-top: 5px; border-top: 1px dashed var(--border);
-      font-weight: 700; font-size: 13px; color: var(--text);
-    }
-    .total-project .value { color: #ffe082; }
-
-    /* ── SCORE AXES ──────────────────────────── */
-    .axes {
-      padding: 8px 16px;
-      border-top: 1px solid var(--border);
-      display: flex; gap: 4px; flex-wrap: wrap;
-    }
-    .axis {
-      font-size: 10px; padding: 2px 7px; border-radius: 4px;
-      background: var(--surface2); color: var(--muted);
-    }
-    .axis b { color: var(--text); }
-    .axis-total { font-size: 11px; font-weight: 700; color: var(--accent); padding: 2px 4px; }
-    .deal-score-badge {
-      font-size: 11px; font-weight: 700; background: #0d2a1a; color: var(--green);
-      border: 1px solid #2a5a2a; border-radius: 5px; padding: 1px 6px;
-      vertical-align: middle; margin-left: 4px; cursor: help;
-    }
+    .badge-size      { background: #1a2a4a; color: #7ab4ff; border-color: #2a3a6a; }
+    .badge-source    { background: #22263a; color: var(--muted); border-color: var(--border); }
+    .badge-under     { background: #0d2e20; color: var(--green); border-color: #1a4a30; }
+    .badge-over      { background: #2a0d0d; color: var(--red); border-color: #5a1a1a; }
+    .badge-fair      { background: #2d2600; color: var(--yellow); border-color: #4a3d00; }
 
     /* ── RISK BADGE ──────────────────────────── */
     .risk-pill {
@@ -245,7 +129,6 @@
     .risk-pill.r-low   { background: #2d2600; color: var(--yellow); border-color: #4a3d00; }
     .risk-pill.r-mid   { background: #2d1f00; color: #f5a142; border-color: #4a3600; }
     .risk-pill.r-high  { background: #3a0d0d; color: #ff8a8a; border-color: #6a1a1a; }
-    /* <details> reset — used to expand the flag list under the pill */
     details.risk-details { margin: 6px 16px 0; }
     details.risk-details > summary {
       list-style: none; cursor: pointer; outline: none;
@@ -266,16 +149,58 @@
     .risk-flag-list li.sev-warn { border-left-color: var(--yellow); }
     .risk-flag-list li.sev-high { border-left-color: var(--red); color: #ff8a8a; }
 
-    /* ── REMARKS ─────────────────────────────── */
-    .remarks {
+    .specs {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 3px 8px;
       padding: 8px 16px;
+      font-size: 12px; color: var(--muted);
       border-top: 1px solid var(--border);
-      font-size: 11.5px; color: var(--muted);
-      font-style: italic; line-height: 1.4;
+      border-bottom: 1px solid var(--border);
     }
-    .remarks strong { color: var(--yellow); font-style: normal; }
+    .specs .s-icon { margin-right: 4px; }
 
-    /* ── FOOTER ──────────────────────────────── */
+    .prices { padding: 12px 16px; display: flex; flex-direction: column; gap: 5px; }
+    .price-row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+    .price-row .label { color: var(--muted); }
+    .price-row .value { font-weight: 600; }
+    .price-row .value.na { color: var(--muted); font-style: italic; font-weight: 400; }
+    .price-row.headline {
+      background: var(--surface2); border: 1px solid var(--border); border-radius: 6px;
+      padding: 8px 12px; margin-bottom: 4px;
+    }
+    .price-row.headline .label { color: var(--text); font-weight: 600; }
+    .headline-val { color: var(--accent) !important; font-size: 18px !important; }
+    .price-row.headline.underpriced { background: #0d2a1a; border-color: #1a4a2a; }
+    .price-row.headline.underpriced .headline-val { color: var(--green) !important; }
+    .pct-label {
+      font-size: 13px; font-weight: 700; margin-top: 4px;
+      text-align: right;
+    }
+    .pct-label.under   { color: var(--green); }
+    .pct-label.fair    { color: var(--yellow); }
+    .pct-label.over    { color: var(--red); }
+    .pct-label.unknown { color: var(--muted); }
+
+    /* ── CONVERSION COST ─────────────────────── */
+    .conv-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      font-size: 12px; color: var(--muted);
+      margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border);
+    }
+    .conv-row .effort {
+      font-weight: 600; padding: 1px 6px; border-radius: 4px; font-size: 10.5px;
+    }
+    .effort.minimal  { color: var(--green); background: #0d2e20; }
+    .effort.light    { color: #c9e070;       background: #1f2a10; }
+    .effort.moderate { color: var(--yellow); background: #2d2600; }
+    .effort.heavy    { color: var(--red);    background: #2a0d0d; }
+    .total-project {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-top: 4px; padding-top: 5px; border-top: 1px dashed var(--border);
+      font-weight: 700; font-size: 13px; color: var(--text);
+    }
+    .total-project .value { color: #ffe082; }
+
     .card-footer {
       margin-top: auto;
       padding: 10px 16px;
@@ -289,13 +214,11 @@
     }
     .card-footer a:hover { text-decoration: underline; }
 
-    /* ── EMPTY / ERROR ───────────────────────── */
     .empty {
       grid-column: 1/-1; text-align: center;
       padding: 64px; color: var(--muted); font-size: 15px;
     }
 
-    /* ── NAV BAR ────────────────────────────────── */
     .nav-bar {
       background: var(--surface2);
       border-bottom: 1px solid var(--border);
@@ -311,27 +234,23 @@
     .nav-bar a:hover { color: var(--text); border-color: var(--border); }
     .nav-bar a.active { color: var(--accent); background: var(--surface); border-color: var(--border); }
     .nav-sep { color: var(--border); }
-
-      .grid { padding: 12px; gap: 12px; }
-      .controls { gap: 8px; }
-    }
   </style>
 </head>
 <body>
 
 <nav class="nav-bar">
-  <a href="index.html" class="active">🚐 Camper Candidates</a>
+  <a href="index.html" class="active">🏕️ High-Roof L2H2</a>
   <span class="nav-sep">|</span>
-  <a href="l2h2.html">🏕️ High-Roof Auctions</a>
+  <a href="asking.html">🛒 All Asking</a>
   <span class="nav-sep">|</span>
-  <a href="asking.html">🛒 Asking Prices</a>
+  <a href="auctions.html">🔨 Auctions</a>
   <span class="nav-sep">|</span>
-  <a href="asking_l2h2.html">🏕️ High-Roof Asking</a>
+  <a href="l2h2.html">🔨 Auction L2H2</a>
 </nav>
 
 <header>
   <div>
-    <h1>🚐 Camper <span>Candidates</span></h1>
+    <h1>🏕️ High-Roof <span>Asking</span></h1>
   </div>
   <div class="stats" id="stats"></div>
   <div class="meta" id="updatedAt">Loading…</div>
@@ -348,16 +267,24 @@
     Country
     <select id="countryFilter">
       <option value="">All countries</option>
+      <option value="NL">🇳🇱 NL</option>
+      <option value="BE">🇧🇪 BE</option>
+      <option value="DE">🇩🇪 DE</option>
     </select>
   </label>
   <label>
-    Closing
-    <select id="closingFilter">
-      <option value="open">Open lots only</option>
-      <option value="1">Closing in 24h</option>
-      <option value="3">Closing in 3 days</option>
-      <option value="7">Closing in 7 days</option>
-      <option value="all">All (incl. closed)</option>
+    Source
+    <select id="sourceFilter">
+      <option value="">All sources</option>
+    </select>
+  </label>
+  <label>
+    Deal
+    <select id="dealFilter">
+      <option value="">All listings</option>
+      <option value="under">Underpriced only</option>
+      <option value="fair">Fair price (±15%)</option>
+      <option value="over">Overpriced (+15%)</option>
     </select>
   </label>
   <label>
@@ -369,37 +296,35 @@
     <input type="range" id="kmMaxFilter" min="0" max="400000" step="10000" value="260000" />
   </label>
   <label>
-    Min score <span id="scoreVal">30</span>
-    <input type="range" id="scoreFilter" min="0" max="100" step="5" value="30" />
+    Max price <span id="priceVal">€17k</span>
+    <input type="range" id="priceFilter" min="2000" max="40000" step="500" value="17000" />
   </label>
   <label>
     Max risk <span id="riskVal">5</span>
-    <input type="range" id="riskFilter" min="0" max="5" step="1" value="5" title="Hide lots with risk_score above this" />
+    <input type="range" id="riskFilter" min="0" max="5" step="1" value="5" title="Hide listings with risk_score above this" />
   </label>
   <label>
     Sort by
     <select id="sortBy">
-      <option value="closing">⏱️ Closing soonest</option>
-      <option value="score">Suitability score</option>
-      <option value="deal_margin_pct">% below market value</option>
-      <option value="max_recommended_bid_eur">Max bid (lowest first)</option>
+      <option value="under_first">⭐ Cheapest vs peers</option>
+      <option value="price">Price (lowest)</option>
       <option value="year">Year (newest)</option>
       <option value="km">Mileage (lowest)</option>
-      <option value="total_cost_eur">Current bid (lowest)</option>
+      <option value="score">Suitability score</option>
     </select>
   </label>
   <span id="count"></span>
 </div>
 
 <div class="grid" id="grid">
-  <div class="empty">Loading van data…</div>
+  <div class="empty">Loading listings…</div>
 </div>
 
 <script src="overrides.js"></script>
 <script>
-const DATA_URL = 'https://raw.githubusercontent.com/bananacocodrilo/troostwijk-scraper/main/output/latest.json';
+const DATA_URL = 'https://raw.githubusercontent.com/bananacocodrilo/troostwijk-scraper/main/output/asking_l2h2.json';
 
-let allVans = [];
+let allListings = [];
 
 function fmt(n, prefix='€') {
   if (n == null) return null;
@@ -412,6 +337,19 @@ function scoreClass(s) {
   return 's-low';
 }
 
+const SOURCE_LABEL = {
+  'marktplaats':      '🇳🇱 Marktplaats',
+  '2dehands':         '🇧🇪 2dehands',
+  'autoscout24_nl':   '🇳🇱 AutoScout24',
+  'autoscout24_de':   '🇩🇪 AutoScout24',
+  'autotrack':        '🇳🇱 AutoTrack',
+  'kleinanzeigen_de': '🇩🇪 Kleinanzeigen',
+  'mobile_de':        '🇩🇪 mobile.de',
+  'regeljelease':     '🇳🇱 Regeljelease (lease)',
+  'financiallease':   '🇳🇱 FinancialLease (lease)',
+  'rosfinance':       '🇳🇱 RosFinance (lease)',
+};
+
 const GROUP_LABEL = {
   'transit_custom_l2h1':        'Transit Custom',
   'expert_jumpy_proace_l2':     'Expert / Jumpy / ProAce',
@@ -421,32 +359,34 @@ const GROUP_LABEL = {
   'psa_l1l2h1':                 'Boxer / Ducato / Jumper',
   'vito_v_class_l2':            'Vito / V-Class',
   'hyundai_staria':             'Hyundai Staria',
+  'ford_transit_l2h2':          'Ford Transit (full-size)',
+  'mercedes_sprinter':          'Mercedes Sprinter',
+  'vw_crafter_tge':             'VW Crafter / MAN TGE',
+  'renault_master_grp':         'Master / Movano / Interstar',
 };
 
-const FLEET_META = {
-  utility:       { emoji: '🏛️',  label: 'utility / municipal' },
-  telecom:       { emoji: '📡',  label: 'telecom installer' },
-  solar:         { emoji: '☀️',  label: 'solar installer' },
-  construction:  { emoji: '🏗️',  label: 'construction' },
-  workshop:      { emoji: '🔧',  label: 'service van' },
-  refrigeration: { emoji: '❄️',  label: 'refrigerated' },
-  delivery:      { emoji: '📦',  label: 'courier / delivery' },
-  hire:          { emoji: '🚚',  label: 'ex-rental / lease' },
-};
-
-function fleetBadge(v) {
-  if (!v.fleet_type || v.fleet_type === 'private') return '';
-  const m = FLEET_META[v.fleet_type];
-  if (!m) return '';
-  const tip = (v.fleet_signals || []).join(', ') || m.label;
-  return `<span class="badge badge-fleet-${v.fleet_type}" title="${m.label} — matched: ${tip}">${m.emoji} ${m.label}</span>`;
+function countryFromSource(source) {
+  if (source === '2dehands') return 'BE';
+  if (source === 'autoscout24_de' || source === 'kleinanzeigen_de' || source === 'mobile_de') return 'DE';
+  return 'NL';
 }
 
-function dealClass(pct) {
+// Prefer the explicit per-listing country field; fall back to the source heuristic.
+function countryOf(v) {
+  return v.country ? v.country.toUpperCase() : countryFromSource(v.source);
+}
+
+function pctClass(pct) {
   if (pct == null) return 'unknown';
-  if (pct >= 25)  return 'positive';
-  if (pct >= 0)   return 'neutral';
-  return 'negative';
+  if (pct <= -15)  return 'under';
+  if (pct >=  15)  return 'over';
+  return 'fair';
+}
+
+function pctText(pct) {
+  if (pct == null) return 'no peer data';
+  const sign = pct > 0 ? '+' : '';
+  return `${sign}${pct.toFixed(0)}% vs median`;
 }
 
 function riskPillClass(score) {
@@ -465,9 +405,6 @@ function riskPillLabel(score, flags) {
 }
 
 function riskBlock(v) {
-  // Build the expandable risk pill + flag list. Empty score → still
-  // show a small green "Clean" pill (no expansion). Score>0 → wrap
-  // in <details> so user can click to see the flag breakdown.
   const score = v.risk_score ?? 0;
   const flags = v.risk_flags || [];
   const cls = riskPillClass(score);
@@ -488,180 +425,68 @@ function riskBlock(v) {
     </details>`;
 }
 
-function timeUntil(iso) {
-  if (!iso) return null;
-  const ms = new Date(iso).getTime() - Date.now();
-  if (ms <= 0) return { ended: true, ms };
-  const sec = Math.floor(ms / 1000);
-  const d = Math.floor(sec / 86400);
-  const h = Math.floor((sec % 86400) / 3600);
-  const m = Math.floor((sec % 3600) / 60);
-  let str;
-  if (d >= 2)      str = `${d}d ${h}h`;
-  else if (d >= 1) str = `${d}d ${h}h ${m}m`;
-  else if (h >= 1) str = `${h}h ${m}m`;
-  else             str = `${m}m`;
-  let cls;
-  if      (ms < 6  * 3600 * 1000) cls = 'urgent';
-  else if (ms < 48 * 3600 * 1000) cls = 'soon';
-  else                            cls = 'ok';
-  return { ended: false, ms, str, cls };
-}
-
-function countdownHtml(v) {
-  const t = timeUntil(v.auction_end);
-  if (!t) return `<div class="countdown ended" title="Bid/end-time data missing for this lot">⚠️ no end-time data</div>`;
-  if (t.ended) return `<div class="countdown ended">⛔ Auction closed</div>`;
-  return `<div class="countdown ${t.cls}" data-end="${v.auction_end}">⏱️ ${t.str} left</div>`;
-}
-
-function stripHtml(s) {
-  // Source remarks sometimes contain raw <b><i>…</b> that, once truncated, leaves
-  // dangling tags. Strip all tags + decode entities before rendering.
-  const t = document.createElement('template');
-  t.innerHTML = String(s).replace(/<[^>]*>/g, ' ');
-  return (t.content.textContent || '').replace(/\s+/g, ' ').trim();
-}
-
-function remarks(v) {
-  const parts = [v.remarks, v.additional_information].filter(Boolean).map(stripHtml).filter(Boolean);
-  if (!parts.length) return '';
-  const full = parts.join(' · ');
-  const text = full.slice(0, 300);
-  const hasDamage = /broken|defect|kapot|schade|damage|stuk|niet start/i.test(text);
-  const label = hasDamage ? '<strong>⚠️ Note:</strong> ' : '';
-  const esc = text.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  return `<div class="remarks">${label}${esc}${full.length > 300 ? '…' : ''}</div>`;
-}
-
 function buildCard(v) {
   const score = v.score ?? 0;
-  const bid = v.current_bid_eur;
-  const total = v.total_cost_eur;
-  const market = v.market_median_eur;
-  const margin = v.deal_margin_pct;
-  const maxBid = v.max_recommended_bid_eur;
-  const bidOverLimit = bid != null && maxBid != null && bid > maxBid;
-  const marginClass = dealClass(margin);
-  const barWidth = margin != null ? Math.min(Math.max(margin, 0), 100) : 0;
-  // Landed cost = final_cost_estimate minus reconditioning guess (user wants
-  // only known costs: bid + premium + VAT + transport + fixed fees).
-  const recon = v.reconditioning_cost_estimate || 0;
-  const knownCost = v.final_cost_estimate != null ? Math.round(v.final_cost_estimate - recon) : null;
+  const price = v.price_eur;
+  const med   = v.market_median_eur;
+  const pct   = v.price_pct_vs_median;
+  const under = v.is_underpriced;
+  const pclass = pctClass(pct);
+  const srcLabel = SOURCE_LABEL[v.source] || v.source || '—';
 
-  const open = (v.bidding_status || '').includes('OPEN');
-  const ended = v.auction_end ? new Date(v.auction_end).getTime() <= Date.now() : false;
-  const liveOpen = open && !ended;
-  const vatOk = v.vat_margin === false;
-  const hasCrew = /5\s*seat|crew\s*cab|dubbele\s*cabine/i.test((v.title||'') + (v.remarks||''));
-
-  const axes = v.scores ? Object.entries(v.scores)
-    .filter(([k, val]) => val > 0 && k !== 'vat_deductible')
-    .map(([k, val]) => `<span class="axis">${k.replace(/_/g,' ')}: <b>${val}</b></span>`)
-    .join('') : '';
-
-  const axesSum = v.scores ? Math.min(Object.values(v.scores).reduce((a,b) => a+b, 0), 100) : null;
-
-  const location = [v.city, v.country_code].filter(Boolean).join(', ') || '—';
-  const brand = v.brand || (v.title || '').split(/[\s\-]/)[0];
-  const rules = v.applied_rule_set ? `<span style="color:var(--muted);font-size:10px">${v.applied_rule_set}</span>` : '';
-  const dealScoreBadge = v.deal_score != null
-    ? `<span class="deal-score-badge" title="Deal score (based on deal ratio vs market)">💰${v.deal_score}</span>`
-    : '';
-  const riskHtml = riskBlock(v);
-  const imgList = Array.isArray(v.images) && v.images.length
-    ? v.images.slice(0, 2)
-    : (v.thumbnail_url ? [v.thumbnail_url] : []);
+  const imgList = Array.isArray(v.images) && v.images.length ? v.images.slice(0, 2) : [];
   const altText = (v.title || '').replace(/"/g, '&quot;');
   const thumb = imgList.length
-    ? `<a href="${v.url}" target="_blank" rel="noopener" class="card-thumbs ${imgList.length > 1 ? 'multi' : 'single'}">${imgList.map((src, i) => `<img class="card-thumb" src="${src}" alt="${altText}" loading="lazy" onerror="this.style.display='none'" />`).join('')}</a>`
-    : `<div class="card-thumb-placeholder">no photo</div>`;
+    ? `<a href="${v.url}" target="_blank" rel="noopener" class="card-thumbs ${imgList.length > 1 ? 'multi' : 'single'}">${imgList.map(src => `<img class="card-thumb" src="${src}" alt="${altText}" loading="lazy" onerror="this.style.display='none'" />`).join('')}</a>`
+    : '';
 
   return `
-<div class="card" data-brand="${brand}" data-score="${score}">
+<div class="card ${under ? 'underpriced' : ''}">
   ${Overrides.cardButtonsHtml(v.url)}
   ${thumb}
   <div class="card-top">
     <div class="score-badge ${scoreClass(score)}" title="Suitability score (year + mileage + size + fuel + bonuses)">${score}</div>
     <div>
-      <div class="card-title">${v.title || '—'} ${dealScoreBadge}</div>
-      <div class="card-sub">${v.van_type || 'size unknown'} · ${location}</div>
+      <div class="card-title">${v.title || '—'}</div>
+      <div class="card-sub">${srcLabel}${v.variant ? ' · ' + v.variant : ''}</div>
     </div>
   </div>
 
-  ${riskHtml}
-
-  ${countdownHtml(v)}
+  ${riskBlock(v)}
 
   <div class="badges">
     ${v.model_group ? `<span class="badge badge-size" title="${v.model_group}">${GROUP_LABEL[v.model_group] || v.model_group}</span>` : ''}
-    ${v.variant ? `<span class="badge badge-size">${v.variant}</span>` : (v.van_type ? `<span class="badge badge-size">${v.van_type}</span>` : '')}
-    ${v.classification_confidence ? `<span class="badge" style="background:var(--surface2);color:var(--muted)" title="Classifier confidence">${v.classification_confidence}</span>` : ''}
-    ${v.fuel ? `<span class="badge badge-fuel">${v.fuel}</span>` : ''}
-    ${liveOpen ? '<span class="badge badge-open">Bidding open</span>' : '<span class="badge badge-closed">Closed</span>'}
-    ${v.is_hidden_gem ? '<span class="badge badge-gem">💎 Hidden gem</span>' : ''}
-    ${hasCrew ? '<span class="badge badge-crew">5-seat / crew cab</span>' : ''}
-    ${fleetBadge(v)}
+    ${v.variant ? `<span class="badge badge-size">${v.variant}</span>` : ''}
+    ${v.classification_confidence ? `<span class="badge badge-source" title="Classifier confidence">${v.classification_confidence}</span>` : ''}
+    ${under ? '<span class="badge badge-under">⭐ underpriced</span>' : ''}
+    ${pclass === 'over' && pct != null ? '<span class="badge badge-over">⚠️ above median</span>' : ''}
   </div>
 
   <div class="specs">
     <span><span class="s-icon">📅</span>${v.year ?? '—'}</span>
     <span><span class="s-icon">🛣️</span>${v.km != null ? (v.km/1000).toFixed(0)+'k km' : '—'}</span>
-    <span><span class="s-icon">⚙️</span>${v.transmission || '—'}</span>
-    <span><span class="s-icon">⚡</span>${v.emission_standard || '—'}</span>
-    <span><span class="s-icon">💺</span>${v.seats != null ? v.seats+' seats' : '—'}</span>
-    <span><span class="s-icon">🎨</span>${v.color || '—'}</span>
+    <span><span class="s-icon">🏷️</span>${v.source ? v.source.replace(/_/g, ' ') : '—'}</span>
+    <span><span class="s-icon">📊</span>n=${v.market_sample_size ?? 0}</span>
   </div>
 
   <div class="prices">
-    ${maxBid != null ? `
-    <div class="price-row max-bid ${bidOverLimit ? 'over-limit' : ''}">
-      <span class="label">🎯 Max recommended bid</span>
-      <span class="value max-bid-val">${fmt(maxBid)}${bidOverLimit ? ' ⚠️ exceeded' : ''}</span>
+    <div class="price-row headline ${under ? 'underpriced' : ''}">
+      <span class="label">Asking price <small style="color:var(--muted);font-weight:400">(incl. BTW)</small></span>
+      <span class="value headline-val">${price != null ? fmt(price) : '—'}</span>
     </div>
-    ` : ''}
     <div class="price-row">
-      <span class="label">Current bid</span>
-      <span class="value ${bidOverLimit ? 'over' : ''}">${bid != null ? fmt(bid) : '<span class="na">not yet captured</span>'}</span>
+      <span class="label">Peer median (±2yr)</span>
+      <span class="value">${med != null ? fmt(med) + ` <small style="color:var(--muted)">(n=${v.market_sample_size})</small>` : '<span class="na">insufficient peers</span>'}</span>
     </div>
-    ${knownCost != null ? `
-    <div class="price-row" style="border-top:1px solid var(--border);margin-top:6px;padding-top:6px">
-      <span class="label" title="bid + buyer premium + fixed fees + transport${v.vat_applicable ? ' + 21% VAT' : ' (margin scheme)'}">
-        💰 Landed cost ℹ️
-      </span>
-      <span class="value" style="color:var(--yellow)">${fmt(knownCost)}</span>
-    </div>
-    <div class="price-row cost-breakdown">
-      <span class="label" style="font-size:10px">
-        transport ~€${v.transport_cost_estimate||'?'} · fees €${v.fixed_fees_estimate||100}
-        ${v.vat_applicable ? '· +21% VAT' : '· margin scheme'}
-      </span>
-    </div>
-    ` : ''}
-    <div class="price-row">
-      <span class="label">Market value</span>
-      <span class="value">${(v.estimated_market_value||market) != null ? fmt(v.estimated_market_value||market) + (v.market_sample_size >= 3 ? ` <small style="color:var(--muted)">(n=${v.market_sample_size})</small>` : ' <small style="color:var(--muted)">(heuristic)</small>') : '<span class="na">—</span>'}</span>
-    </div>
-    ${v.deal_ratio != null ? (() => {
-      const dr = v.deal_ratio;
-      const pct = Math.round(dr * 100);
-      const cls = dr > 0.15 ? 'positive' : dr >= 0 ? 'neutral' : 'negative';
-      const emoji = dr > 0.25 ? '💎' : dr > 0.10 ? '✓' : dr >= 0 ? '~' : '↑';
-      return `<div class="deal-label ${cls}" style="margin-top:6px">
-        Deal ratio ${pct >= 0 ? '+' : ''}${pct}% vs market ${emoji}
-      </div>`;
-    })() : (margin != null ? `
-    <div class="deal-bar"><div class="deal-fill ${marginClass === 'positive' ? 'deal-positive' : marginClass === 'neutral' ? 'deal-neutral' : 'deal-negative'}" style="width:${barWidth}%"></div></div>
-    <div class="deal-label ${marginClass}">${margin >= 0 ? '+' : ''}${margin.toFixed(0)}% ${margin >= 20 ? '🔥' : margin >= 0 ? '✓' : '↑'}</div>
-    ` : '')}
+    ${pct != null ? `<div class="pct-label ${pclass}">${pctText(pct)} ${pct <= -25 ? '🔥' : under ? '✓' : pct >= 15 ? '↑' : '~'}</div>` : ''}
     ${v.est_conversion_cost_eur != null ? `
-    <div class="conv-row" style="margin-top:6px;border-top:1px solid var(--border);padding-top:6px"
+    <div class="conv-row"
          title="Estimated DIY camper-conversion budget: €${(v.est_conversion_cost_low_eur||0).toLocaleString()}–€${(v.est_conversion_cost_high_eur||0).toLocaleString()}">
       <span>🔧 Conversion: ~${fmt(v.est_conversion_cost_eur)}</span>
       <span class="effort ${v.conversion_effort || 'moderate'}">${v.conversion_effort || '—'}</span>
     </div>
     ${v.total_project_cost_eur != null ? `
-    <div class="total-project" title="Acquisition (landed cost) + conversion midpoint">
+    <div class="total-project" title="Asking price + conversion midpoint">
       <span>Total project</span>
       <span class="value">${fmt(v.total_project_cost_eur)}</span>
     </div>
@@ -669,12 +494,9 @@ function buildCard(v) {
     ` : ''}
   </div>
 
-  ${axes ? `<div class="axes">${axes}<span class="axis-total">= ${axesSum}</span></div>` : ''}
-  ${remarks(v)}
-
   <div class="card-footer">
-    <span>${v.condition || ''} · ${v.platform || 'TWK'} · ${v.country_code || ''}</span>
-    <a href="${v.url}" target="_blank" rel="noopener">View on Troostwijk →</a>
+    <span>${v.model_group || ''}</span>
+    <a href="${v.url}" target="_blank" rel="noopener">View listing →</a>
   </div>
 </div>`;
 }
@@ -682,97 +504,79 @@ function buildCard(v) {
 function render() {
   const group   = document.getElementById('groupFilter').value;
   const country = document.getElementById('countryFilter').value;
-  const closing = document.getElementById('closingFilter').value;
-  const minScore = parseFloat(document.getElementById('scoreFilter').value);
-  const maxRisk = parseInt(document.getElementById('riskFilter').value);
+  const source  = document.getElementById('sourceFilter').value;
+  const deal    = document.getElementById('dealFilter').value;
   const yearMin = parseInt(document.getElementById('yearMinFilter').value);
   const kmMax   = parseInt(document.getElementById('kmMaxFilter').value);
-  const sortKey = document.getElementById('sortBy').value;
-  const now = Date.now();
+  const maxPrice = parseFloat(document.getElementById('priceFilter').value);
+  const maxRisk  = parseInt(document.getElementById('riskFilter').value);
+  const sortKey  = document.getElementById('sortBy').value;
 
-  const endMs = v => v.auction_end ? new Date(v.auction_end).getTime() : null;
-
-  let filtered = allVans.filter(v => {
-    if (group && v.model_group !== group) return false;
-    if (country && (v.country_code || '').toUpperCase() !== country) return false;
-    if ((v.score ?? 0) < minScore) return false;
+  let filtered = allListings.filter(v => {
+    if (group  && v.model_group !== group) return false;
+    if (country && countryOf(v) !== country) return false;
+    if (source && v.source !== source) return false;
+    if ((v.price_eur ?? 0) > maxPrice) return false;
     if ((v.risk_score ?? 0) > maxRisk) return false;
     if (v.year != null && v.year < yearMin) return false;
     if (v.km != null && v.km > kmMax) return false;
-    const em = endMs(v);
-    if (closing === 'all') {
-      // no time filter
-    } else if (closing === 'open') {
-      if (em != null && em <= now) return false;
-    } else {
-      const days = parseFloat(closing);
-      if (em == null) return false;
-      if (em <= now) return false;
-      if (em - now > days * 86400000) return false;
-    }
+    if (deal === 'under' && !v.is_underpriced) return false;
+    const p = v.price_pct_vs_median;
+    if (deal === 'fair' && (p == null || p < -15 || p > 15)) return false;
+    if (deal === 'over' && (p == null || p < 15)) return false;
     return true;
   });
 
   filtered.sort((a, b) => {
-    if (sortKey === 'closing') {
-      const ea = endMs(a), eb = endMs(b);
-      const aClosed = ea != null && ea <= now;
-      const bClosed = eb != null && eb <= now;
-      if (aClosed !== bClosed) return aClosed ? 1 : -1;
-      return (ea ?? Infinity) - (eb ?? Infinity);
-    }
-    if (sortKey === 'year') return (b.year ?? 0) - (a.year ?? 0);
-    if (sortKey === 'km') return (a.km ?? 999999) - (b.km ?? 999999);
-    if (sortKey === 'total_cost_eur') return (a.total_cost_eur ?? 999999) - (b.total_cost_eur ?? 999999);
-    if (sortKey === 'max_recommended_bid_eur') return (a.max_recommended_bid_eur ?? 999999) - (b.max_recommended_bid_eur ?? 999999);
-    if (sortKey === 'deal_margin_pct') return (b.deal_margin_pct ?? -99) - (a.deal_margin_pct ?? -99);
-    return (b.score ?? 0) - (a.score ?? 0);
+    if (sortKey === 'price')  return (a.price_eur ?? 9e9) - (b.price_eur ?? 9e9);
+    if (sortKey === 'year')   return (b.year ?? 0) - (a.year ?? 0);
+    if (sortKey === 'km')     return (a.km ?? 9e9) - (b.km ?? 9e9);
+    if (sortKey === 'score')  return (b.score ?? 0) - (a.score ?? 0);
+    // 'under_first' default: underpriced first, then by score desc, then by price asc
+    const au = a.is_underpriced ? 0 : 1;
+    const bu = b.is_underpriced ? 0 : 1;
+    if (au !== bu) return au - bu;
+    if ((b.score ?? 0) !== (a.score ?? 0)) return (b.score ?? 0) - (a.score ?? 0);
+    return (a.price_eur ?? 9e9) - (b.price_eur ?? 9e9);
   });
 
   filtered = Overrides.applyFilter(filtered);
-  document.getElementById('count').textContent = `${filtered.length} van${filtered.length !== 1 ? 's' : ''} shown`;
+  document.getElementById('count').textContent = `${filtered.length} listing${filtered.length !== 1 ? 's' : ''} shown`;
   document.getElementById('grid').innerHTML = filtered.length
     ? filtered.map(buildCard).join('')
-    : '<div class="empty">No vans match the current filters.</div>';
+    : '<div class="empty">No listings match the current filters.</div>';
 }
 
 async function load() {
   try {
     const r = await fetch(DATA_URL + '?t=' + Date.now());
-    allVans = await r.json();
-
-    // Stats
-    const now = Date.now();
-    const endMs = v => v.auction_end ? new Date(v.auction_end).getTime() : null;
-    const live = allVans.filter(v => { const e = endMs(v); return e == null || e > now; });
-    const gems = live.filter(v => (v.deal_ratio ?? -1) >= 0.25);
-    const withBid = live.filter(v => v.current_bid_eur != null);
-    const closingSoon = live.filter(v => { const e = endMs(v); return e != null && e - now < 24 * 3600 * 1000; });
-    document.getElementById('stats').innerHTML = `
-      <div class="stat"><b>${live.length}</b> open · <b>${allVans.length - live.length}</b> closed</div>
-      <div class="stat"><b>${gems.length}</b> 🔥 deals ≥20% below market</div>
-      <div class="stat"><b>${withBid.length}</b> with live bid</div>
-      <div class="stat"><b>${closingSoon.length}</b> ⏱️ closing &lt;24h</div>
-    `;
-    document.getElementById('updatedAt').textContent = 'Fetched ' + new Date().toLocaleTimeString();
+    allListings = await r.json();
 
     // Populate group filter
-    const groups = [...new Set(allVans.map(v => v.model_group).filter(Boolean))].sort();
+    const groups = [...new Set(allListings.map(v => v.model_group).filter(Boolean))].sort();
     const gsel = document.getElementById('groupFilter');
-    groups.forEach(g => {
+    groups.forEach(g => { const o = document.createElement('option'); o.value = g; o.textContent = GROUP_LABEL[g] || g; gsel.appendChild(o); });
+
+    // Populate source filter
+    const sources = [...new Set(allListings.map(v => v.source).filter(Boolean))].sort();
+    const ssel = document.getElementById('sourceFilter');
+    sources.forEach(s => {
       const o = document.createElement('option');
-      o.value = g; o.textContent = GROUP_LABEL[g] || g;
-      gsel.appendChild(o);
+      o.value = s;
+      o.textContent = SOURCE_LABEL[s] || s;
+      ssel.appendChild(o);
     });
-    // Populate country filter from actual data
-    const countries = [...new Set(allVans.map(v => (v.country_code || '').toUpperCase()).filter(Boolean))].sort();
-    const csel = document.getElementById('countryFilter');
-    const FLAG = {NL:'🇳🇱',BE:'🇧🇪',DE:'🇩🇪',FR:'🇫🇷',LU:'🇱🇺'};
-    countries.forEach(c => {
-      const o = document.createElement('option');
-      o.value = c; o.textContent = `${FLAG[c] || ''} ${c}`;
-      csel.appendChild(o);
-    });
+
+    // Stats
+    const under = allListings.filter(v => v.is_underpriced).length;
+    const withMedian = allListings.filter(v => v.market_median_eur != null).length;
+    document.getElementById('stats').innerHTML = `
+      <div class="stat"><b>${allListings.length}</b> listings</div>
+      <div class="stat"><b>${under}</b> ⭐ underpriced (≥15% below median)</div>
+      <div class="stat"><b>${withMedian}</b> with peer median</div>
+      <div class="stat"><b>${sources.length}</b> sources</div>
+    `;
+    document.getElementById('updatedAt').textContent = 'Fetched ' + new Date().toLocaleTimeString();
 
     render();
   } catch (e) {
@@ -782,10 +586,12 @@ async function load() {
 
 document.getElementById('groupFilter').addEventListener('change', render);
 document.getElementById('countryFilter').addEventListener('change', render);
-document.getElementById('closingFilter').addEventListener('change', render);
+document.getElementById('sourceFilter').addEventListener('change', render);
+document.getElementById('dealFilter').addEventListener('change', render);
 document.getElementById('sortBy').addEventListener('change', render);
-document.getElementById('scoreFilter').addEventListener('input', e => {
-  document.getElementById('scoreVal').textContent = parseFloat(e.target.value).toFixed(0);
+document.getElementById('priceFilter').addEventListener('input', e => {
+  const v = parseFloat(e.target.value);
+  document.getElementById('priceVal').textContent = '€' + Math.round(v/1000) + 'k';
   render();
 });
 document.getElementById('riskFilter').addEventListener('input', e => {
@@ -800,9 +606,6 @@ document.getElementById('kmMaxFilter').addEventListener('input', e => {
   document.getElementById('kmMaxVal').textContent = Math.round(parseInt(e.target.value)/1000) + 'k';
   render();
 });
-
-// Keep countdowns ticking — re-render once a minute.
-setInterval(() => { if (allVans.length) render(); }, 60000);
 
 load();
 Overrides.init({ onChange: render });

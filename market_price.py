@@ -24,8 +24,13 @@ from typing import Dict, List, Optional
 
 import autoscout24
 import autotrack
+import financiallease
 import gaspedaal
+import kleinanzeigen_de
 import marktplaats
+import mobile_de
+import regeljelease
+import rosfinance
 import two_dehands
 
 CACHE_PATH = "output/price_cache.json"
@@ -150,12 +155,64 @@ def _fetch_autotrack(pages: int = 4) -> List[dict]:
         return []
 
 
+def _fetch_kleinanzeigen(pages: int = 3) -> List[dict]:
+    print("Refreshing Kleinanzeigen.de...")
+    try:
+        return kleinanzeigen_de.build_listings(pages_per_model=pages)
+    except Exception as e:
+        print(f"  kleinanzeigen failed: {e}")
+        return []
+
+
+def _fetch_mobile_de(pages: int = 3) -> List[dict]:
+    print("Refreshing mobile.de...")
+    try:
+        return mobile_de.build_listings(pages_per_model=pages)
+    except Exception as e:
+        print(f"  mobile.de failed: {e}")
+        return []
+
+
+def _fetch_regeljelease(pages: int = 1) -> List[dict]:
+    print("Refreshing Regeljelease.nl...")
+    try:
+        return regeljelease.build_listings(pages_per_model=pages)
+    except Exception as e:
+        print(f"  regeljelease failed: {e}")
+        return []
+
+
+def _fetch_financiallease(pages: int = 2) -> List[dict]:
+    print("Refreshing Financiallease.nl...")
+    try:
+        return financiallease.build_listings(pages_per_brand=pages)
+    except Exception as e:
+        print(f"  financiallease failed: {e}")
+        return []
+
+
+def _fetch_rosfinance(pages: int = 1) -> List[dict]:
+    print("Refreshing Rosfinance.nl...")
+    try:
+        return rosfinance.build_listings(pages_per_model=pages)
+    except Exception as e:
+        print(f"  rosfinance failed: {e}")
+        return []
+
+
 _SOURCES = {
-    "marktplaats": _fetch_marktplaats,
-    "autoscout24": _fetch_autoscout24,
-    "gaspedaal":   _fetch_gaspedaal,
-    "2dehands":    _fetch_2dehands,
-    "autotrack":   _fetch_autotrack,
+    "marktplaats":     _fetch_marktplaats,
+    "autoscout24":     _fetch_autoscout24,
+    "gaspedaal":       _fetch_gaspedaal,
+    "2dehands":        _fetch_2dehands,
+    "autotrack":       _fetch_autotrack,
+    # German marketplaces (L2H2 pivot)
+    "kleinanzeigen_de": _fetch_kleinanzeigen,
+    "mobile_de":        _fetch_mobile_de,
+    # Dutch financial-lease aggregators (upfront purchase price)
+    "regeljelease":    _fetch_regeljelease,
+    "financiallease":  _fetch_financiallease,
+    "rosfinance":      _fetch_rosfinance,
 }
 
 
@@ -177,8 +234,8 @@ def _save_cache(cache: dict, path: str = CACHE_PATH) -> None:
         json.dump(cache, f)
 
 
-def _stalest_source(cache: dict) -> str:
-    """Return the name of the source with the oldest (or missing) update."""
+def _stalest_sources(cache: dict, n: int = 1) -> List[str]:
+    """Return the ``n`` source names with the oldest (or missing) updates."""
     epoch = datetime(1970, 1, 1, tzinfo=timezone.utc)
     def age(name: str) -> float:
         ts = cache.get(name, {}).get("updated_at")
@@ -189,35 +246,44 @@ def _stalest_source(cache: dict) -> str:
             return (datetime.now(timezone.utc) - dt).total_seconds()
         except ValueError:
             return float("inf")
-    return max(_SOURCES, key=age)
+    return sorted(_SOURCES, key=age, reverse=True)[:max(1, n)]
+
+
+def _stalest_source(cache: dict) -> str:
+    """Backward-compatible single-source helper."""
+    return _stalest_sources(cache, 1)[0]
 
 
 # ---------------------------------------------------------------------------
 # Public entry point
 # ---------------------------------------------------------------------------
 
-def build_price_index_cached(path: str = CACHE_PATH, refresh: bool = True) -> PriceIndex:
-    """Refresh the stalest price source, then build a PriceIndex from all cached data.
+def build_price_index_cached(
+    path: str = CACHE_PATH,
+    refresh: bool = True,
+    max_sources: int = 1,
+) -> PriceIndex:
+    """Refresh the ``max_sources`` stalest price sources, then build a
+    PriceIndex from all cached data.
 
-    One source is fetched per call. Over 4 runs every source stays within 24h
-    of freshness at the 6h GH Actions cadence.
+    With 10 sources, ``max_sources=3`` cycles every source through a refresh
+    within ~3-4 runs at the 6h GH Actions cadence — fast enough that the
+    German marketplaces and Dutch lease aggregators don't starve.
 
-    Pass ``refresh=False`` to skip the HTTP fetch and build from cached data only
-    (used when the time budget is exhausted and we just need the index structure).
+    Pass ``refresh=False`` to skip the HTTP fetch and build from cached data
+    only (used when the time budget is exhausted).
     """
     cache = _load_cache(path)
 
     if refresh:
-        # Pick and refresh the stalest source
-        source_name = _stalest_source(cache)
-        fetcher = _SOURCES[source_name]
-        listings = fetcher()
-
-        cache[source_name] = {
-            "updated_at": datetime.now(timezone.utc).isoformat(),
-            "listings": listings,
-        }
-        _save_cache(cache, path)
+        for source_name in _stalest_sources(cache, max_sources):
+            fetcher = _SOURCES[source_name]
+            listings = fetcher()
+            cache[source_name] = {
+                "updated_at": datetime.now(timezone.utc).isoformat(),
+                "listings": listings,
+            }
+            _save_cache(cache, path)
 
         ages = {
             name: f"{(datetime.now(timezone.utc) - datetime.fromisoformat(cache[name]['updated_at'])).total_seconds()/3600:.0f}h"
@@ -225,7 +291,7 @@ def build_price_index_cached(path: str = CACHE_PATH, refresh: bool = True) -> Pr
             for name in _SOURCES
         }
         total = sum(len(cache[n].get("listings", [])) for n in _SOURCES if n in cache)
-        print(f"  price cache: refreshed={source_name} ages={ages} total={total} listings")
+        print(f"  price cache: refreshed up to {max_sources} stalest, ages={ages} total={total} listings")
     else:
         print("  price cache: skipped refresh (time budget), using cached data")
 

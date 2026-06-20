@@ -47,16 +47,19 @@ _BASE_PRICES = {
     # Conservative asking-price medians; only used when market-data sources
     # return fewer than 3 samples. Added 2022 band for newer stock.
     "small_van":   {2022: 30_000, 2020: 24_000, 2017: 16_000, 2014: 10_000},
-    # Legacy big-van entries kept for any pre-pivot cached entries that
-    # still pass through compute_costs (they'll be rejected upstream by
-    # van_intel, but the function should not crash on them).
-    "psa":         {2020: 18_000, 2017: 12_000, 2014: 7_500},
-    "premium":     {2020: 25_000, 2017: 17_000, 2014: 11_000},
-    "mid":         {2020: 20_000, 2017: 13_500, 2014: 9_000},
+    # High-roof panel-van families (L2H2 pivot — now active whitelist groups).
+    # Conservative L2H2 asking medians; only used when market-data sources
+    # return fewer than 3 samples.
+    #   premium → Sprinter / Crafter / TGE (best build, strongest resale)
+    #   mid     → full-size Transit / Master / Movano / Interstar
+    #   psa     → Ducato / Boxer / Jumper (Sevel large)
+    "psa":         {2022: 26_000, 2020: 21_000, 2017: 15_000, 2014: 9_000},
+    "premium":     {2022: 32_000, 2020: 26_000, 2017: 18_000, 2014: 11_000},
+    "mid":         {2022: 28_000, 2020: 22_000, 2017: 15_000, 2014: 9_500},
 }
 
 _MODEL_GROUP = {
-    # Camper-candidate whitelist
+    # Small camper-candidate whitelist
     "trafic": "small_van", "vivaro": "small_van", "primastar": "small_van",
     "talento": "small_van",
     "expert": "small_van", "jumpy": "small_van", "proace": "small_van",
@@ -66,13 +69,12 @@ _MODEL_GROUP = {
     "vito": "small_van",
     "v-klasse": "small_van", "v klasse": "small_van", "v-class": "small_van",
     "staria": "small_van",
-    # PSA trio — L1H1/L2H1 variants are now whitelisted and priced as small_van.
-    # (L3H2+ are rejected by van_intel before reaching cost_model.)
-    "boxer": "small_van", "ducato": "small_van", "jumper": "small_van",
-    # Legacy big-van mapping (harmless, retained for any stale cached entries
-    # that pre-date the whitelist pivot and still hit compute_costs).
-    "sprinter": "premium", "crafter": "premium", "tge": "premium",
-    "transit": "mid", "master": "mid", "movano": "mid", "daily": "mid",
+    # Sevel large (Ducato / Boxer / Jumper) — any height whitelisted.
+    "boxer": "psa", "ducato": "psa", "jumper": "psa",
+    # High-roof panel-van families (L2H2 pivot — now whitelisted).
+    "sprinter": "premium", "crafter": "premium", "e-crafter": "premium", "tge": "premium",
+    "transit": "mid", "master": "mid", "movano": "mid",
+    "interstar": "mid", "nv400": "mid", "daily": "mid",
 }
 
 _DAMAGE_HINTS = re.compile(

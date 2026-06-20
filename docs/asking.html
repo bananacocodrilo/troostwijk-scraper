@@ -239,13 +239,13 @@
 <body>
 
 <nav class="nav-bar">
-  <a href="index.html">🚐 Camper Candidates</a>
+  <a href="index.html">🏕️ High-Roof L2H2</a>
   <span class="nav-sep">|</span>
-  <a href="l2h2.html">🏕️ High-Roof Auctions</a>
+  <a href="asking.html" class="active">🛒 All Asking</a>
   <span class="nav-sep">|</span>
-  <a href="asking.html" class="active">🛒 Asking Prices</a>
+  <a href="auctions.html">🔨 Auctions</a>
   <span class="nav-sep">|</span>
-  <a href="asking_l2h2.html">🏕️ High-Roof Asking</a>
+  <a href="l2h2.html">🔨 Auction L2H2</a>
 </nav>
 
 <header>
@@ -338,11 +338,16 @@ function scoreClass(s) {
 }
 
 const SOURCE_LABEL = {
-  'marktplaats':     '🇳🇱 Marktplaats',
-  '2dehands':        '🇧🇪 2dehands',
-  'autoscout24_nl':  '🇳🇱 AutoScout24',
-  'autoscout24_de':  '🇩🇪 AutoScout24',
-  'autotrack':       '🇳🇱 AutoTrack',
+  'marktplaats':      '🇳🇱 Marktplaats',
+  '2dehands':         '🇧🇪 2dehands',
+  'autoscout24_nl':   '🇳🇱 AutoScout24',
+  'autoscout24_de':   '🇩🇪 AutoScout24',
+  'autotrack':        '🇳🇱 AutoTrack',
+  'kleinanzeigen_de': '🇩🇪 Kleinanzeigen',
+  'mobile_de':        '🇩🇪 mobile.de',
+  'regeljelease':     '🇳🇱 Regeljelease (lease)',
+  'financiallease':   '🇳🇱 FinancialLease (lease)',
+  'rosfinance':       '🇳🇱 RosFinance (lease)',
 };
 
 const GROUP_LABEL = {
@@ -354,12 +359,21 @@ const GROUP_LABEL = {
   'psa_l1l2h1':                 'Boxer / Ducato / Jumper',
   'vito_v_class_l2':            'Vito / V-Class',
   'hyundai_staria':             'Hyundai Staria',
+  'ford_transit_l2h2':          'Ford Transit (full-size)',
+  'mercedes_sprinter':          'Mercedes Sprinter',
+  'vw_crafter_tge':             'VW Crafter / MAN TGE',
+  'renault_master_grp':         'Master / Movano / Interstar',
 };
 
 function countryFromSource(source) {
   if (source === '2dehands') return 'BE';
-  if (source === 'autoscout24_de') return 'DE';
+  if (source === 'autoscout24_de' || source === 'kleinanzeigen_de' || source === 'mobile_de') return 'DE';
   return 'NL';
+}
+
+// Prefer the explicit per-listing country field; fall back to the source heuristic.
+function countryOf(v) {
+  return v.country ? v.country.toUpperCase() : countryFromSource(v.source);
 }
 
 function pctClass(pct) {
@@ -500,7 +514,7 @@ function render() {
 
   let filtered = allListings.filter(v => {
     if (group  && v.model_group !== group) return false;
-    if (country && countryFromSource(v.source) !== country) return false;
+    if (country && countryOf(v) !== country) return false;
     if (source && v.source !== source) return false;
     if ((v.price_eur ?? 0) > maxPrice) return false;
     if ((v.risk_score ?? 0) > maxRisk) return false;

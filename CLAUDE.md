@@ -2,31 +2,38 @@
 
 ## Goal
 
-Find underpriced **camper-candidate small/mid vans** at **Troostwijk** and **Vavato** live auctions, filtered to a strict whitelist of 8 model groups (mostly in the Transit Custom L2H1 dimensional class — ~5.3m × 2.0m — Euro 6, 6-seat compatible). The pipeline discovers auction lots, classifies them against the whitelist, applies a strict-but-soft-gated filter (only confirmed violations reject), scores survivors for camper-conversion suitability and rental ROI, and surfaces hidden gems via Telegram alerts.
+> **June 2026 pivot — L2H2 high-roof, German-first, asking-feed primary.** Three learnings reshaped the project: (1) **auctions aren't worth it** — the Troostwijk/Vavato pipeline is kept but is no longer the focus; (2) only **L2H2 high-roof** vans are usable (the camper conversion needs standing height); (3) **6 seats is a plus, not a requirement** — seats no longer gate. The **German market** (much better stock/price) and Dutch **financial-lease** stock (buy-upfront price) are now primary inputs. The headline dashboard is the **asking-price L2H2 feed** (`docs/index.html`); auctions are demoted to `docs/auctions.html`.
 
-A second, complementary feed (`asking_feed.py` → `docs/asking.html`) reuses the same whitelist + classifier to surface **fixed-price marketplace listings** (Marktplaats, AutoScout24 NL/DE, 2dehands.be) aggregated and deduped across sources. Deal-ratio scoring doesn't apply (no hammer/auction), so listings are ranked by price percentile vs the cohort median of the same (model_group, year ±2). The two feeds run in the same `python3 run.py` invocation but produce independent outputs.
+The **asking feed** (`asking_feed.py`) is now the primary product: it aggregates fixed-price marketplace + lease listings across NL/DE/BE, classifies them against the whitelist, applies the soft-gated filter, scores for camper-conversion suitability, and ranks by within-market price percentile vs the cohort median of the same (model_group, **market**, year ±2) — where *market* is `de` vs `nl`(+be), since German prices run well below Benelux. The confirmed-H2/H3 subset feeds `docs/index.html` (the L2H2 dashboard); the full feed feeds `docs/asking.html`.
+
+The **auction feed** (legacy, secondary) still discovers Troostwijk/Vavato lots, runs the same classifier/cost model, and surfaces hidden gems via Telegram. It shares `van_intel.py`, so it automatically inherits the high-roof families, seats relaxation, and roof scoring. Outputs feed `docs/auctions.html` + `docs/l2h2.html`. All feeds run in one `python3 run.py` invocation.
 
 **Whitelist groups (the only models that pass the classifier):**
 
 | Group key | Models | Required size | min year | Notes |
 |-----------|--------|---------------|----------|-------|
-| `transit_custom_l2h1` | Ford Transit Custom + Ford Tourneo Custom (passenger) | L2H1 | 2016 | H1 is the only height variant |
+| `transit_custom_l2h1` | Ford Transit Custom + Ford Tourneo Custom (passenger) | L2H1 | 2016 | H1 is the only height variant; bare "transit" routes to `ford_transit_l2h2` |
 | `expert_jumpy_proace_l2` | Peugeot Expert + Traveller / Citroën Jumpy + SpaceTourer / Toyota ProAce + ProAce Verso | L2, any H | 2016 | EMP2 platform — cargo + passenger trims share the chassis |
 | `scudo_gen3` | Fiat Scudo (gen 3, 2022+) | L2, any H | 2022 | Rebadged Expert/Jumpy; separate group to exclude old Scudo (2007-2016) |
 | `vivaro_trafic_primastar_l2` | Opel Vivaro / Renault Trafic / Nissan Primastar / Fiat Talento | L2, any H | 2015 | shared NV300 platform; Talento is rebadged Trafic |
 | `t6_1_lwb` | VW Transporter T6 + T6.1 (Multivan / Caravelle / California) | L2 (LWB), any H | 2015 | Both T6 and T6.1 are Euro 6 from launch; BiTDI 204hp is T6-only |
-| `psa_l1l2h1` | Peugeot Boxer / Fiat Ducato / Citroën Jumper | L1 or L2, H1 only | 2016 | Low-roof short/medium Sevel-platform vans; H2/H3/L3/L4 reject |
+| `psa_l1l2h1` | Peugeot Boxer / Fiat Ducato / Citroën Jumper | L2 or L3, any H | 2016 | Sevel-platform; L2H2/L3H2 are the camper gold standard. L1/L4 reject |
 | `vito_v_class_l2` | Mercedes Vito / V-Class (Lang or Extralang) | L2 or L3, any H | 2015 | W447 chassis; Kompakt variant rejects via L1 keyword |
 | `hyundai_staria` | Hyundai Staria | any | 2021 | Korean MPV, single length (5253mm) |
+| `ford_transit_l2h2` | Ford Transit (full-size, **not** Custom) | L2 or L3, any H | 2016 | High-roof pivot; "transit connect/courier" reject via siblings |
+| `mercedes_sprinter` | Mercedes Sprinter | L2 or L3, any H | 2016 | High-roof pivot; the global stand-up campervan benchmark |
+| `vw_crafter_tge` | VW Crafter (gen 2) / MAN TGE / e-Crafter | L2 or L3, any H | 2017 | High-roof pivot; gen-2 is VW's own platform |
+| `renault_master_grp` | Renault Master / Opel Movano / Nissan Interstar (NV400) | L2 or L3, any H | 2016 | High-roof pivot; shared platform |
 
-All other van families (Sprinter, Crafter, TGE, Master, Movano, Daily, plain Transit, etc.) are rejected at the classifier stage as `brand_not_in_whitelist`.
+Height is soft-gated everywhere (unknown passes); the L2H2 feeds filter to a CONFIRMED H2/H3 via `is_high_roof()`. Other van families (Daily, plain Transit Connect, etc.) still reject as `brand_not_in_whitelist`.
 
 **Soft-gate policy** — only *confirmed* violations reject:
 - Year known and `< min_year` for group → reject
 - Emission known and below Euro 6 → reject
-- Seats known and `< 5` → reject (5-seat Double Cab = valid camper candidate)
 - Size known and outside the group's allowed L/H → reject
 - Any of these unknown → PASS
+
+**Seats are NOT gated** (June 2026 pivot): cargo panel vans are the desirable conversion bases, so a 2-seat L2H2 cargo van passes. Seats are a scoring bonus only (6+ = plus). **Roof height is the dominant score factor**: confirmed H2/H3 → big bonus, confirmed H1 → penalty, so a 2-seat L2H2 outranks a 6-seat L1H1.
 
 Exception: model classification is a hard gate. No whitelist token match → reject.
 
@@ -129,15 +136,20 @@ Cold-start cap: `MAX_NEW_PER_RUN = 400` — full catalogue registered across 3-4
 | `gaspedaal.py` | Gaspedaal NL aggregator price index (schema.org JSON-LD) |
 | `two_dehands.py` | 2dehands.be price index (same Adevinta API as Marktplaats) |
 | `autotrack.py` | AutoTrack NL price index (RSC-chunk extraction from Next.js SPA) |
-| `market_price.py` | Combined multi-source PriceIndex facade |
-| `asking_feed.py` | Asking-price aggregator — reuses `price_cache.json` to emit a deduped cross-source feed of whitelist-matching listings |
+| `kleinanzeigen_de.py` | Kleinanzeigen.de (DE) — server-rendered HTML scrape (`article.aditem`). Works over plain HTTP |
+| `mobile_de.py` | mobile.de (DE) — consumer JSON API via curl_cffi, optional `MOBILE_DE_PROXY`. **Akamai-blocked from datacenter/CI IPs** → degrades to `[]`; needs a residential IP/proxy |
+| `regeljelease.py` | Regeljelease.nl (NL financial lease) — **upfront purchase price** from embedded vehicle JSON on `/aanbod/<brand>/<model>` SEO pages |
+| `financiallease.py` | Financiallease.nl (NL financial lease) — **upfront purchase price** from Magento brand catalog cards (`/aanbod/<brand>`) |
+| `rosfinance.py` | Rosfinance.nl (NL lease) — best-effort stub; JS SPA + authenticated API, returns `[]` |
+| `market_price.py` | Combined multi-source PriceIndex facade; rotating refresh of the N stalest sources (`max_sources`) |
+| `asking_feed.py` | Asking-price aggregator (PRIMARY) — reuses `price_cache.json` to emit a deduped, country-aware cross-source feed of whitelist-matching listings |
 | `notify.py` | Telegram alerts for hidden gems closing within 24h |
 | `fleet.py` | Fleet-type classification (utility/delivery/solar/telecom/…) |
 | `models.py` | Pydantic `Vehicle` dataclass (incl. `model_group`, `variant`, `classification_confidence`) |
-| `docs/index.html` | Camper-candidate dashboard (auction feed) |
-| `docs/l2h2.html` | High-roof auction dashboard — same features as `index.html`, loads `l2h2.json` (auction lots with a CONFIRMED H2/H3 size code; unknown height excluded) |
-| `docs/asking.html` | Asking-price aggregator dashboard (Marktplaats / AutoScout24 / 2dehands / Autotrack) |
-| `docs/asking_l2h2.html` | High-roof asking dashboard — same as `asking.html`, loads `asking_l2h2.json` (asking listings with a confirmed H2/H3 size code) |
+| `docs/index.html` | **PRIMARY dashboard** — high-roof L2H2 asking feed (loads `asking_l2h2.json`) |
+| `docs/asking.html` | Full asking-price aggregator dashboard (all sources, loads `asking_listings.json`) |
+| `docs/auctions.html` | Auction camper-candidate dashboard (legacy, loads `latest.json`) |
+| `docs/l2h2.html` | High-roof auction dashboard (loads `l2h2.json`; usually empty — auction height mostly unknown) |
 | `docs/overrides.js` | Shared dismiss/bookmark layer for all dashboards — per-card ✕/★ buttons, localStorage state, GitHub-PAT sync to `user_overrides.json` |
 
 ---
@@ -148,8 +160,8 @@ Cold-start cap: `MAX_NEW_PER_RUN = 400` — full catalogue registered across 3-4
 |------|---------|
 | `latest.json` | Accepted camper candidates from the auction feed, sorted by `score` (small-van suitability) |
 | `l2h2.json` | Auction lots with a CONFIRMED high roof (H2/H3 in the size code; unknown-height excluded per no-guessing). Feeds `docs/l2h2.html`. Often empty — most auction lots have unknown height. |
-| `asking_listings.json` | Deduped cross-source asking-price feed (Marktplaats / AutoScout24 / 2dehands / Autotrack), filtered through the same whitelist as the auction feed. Sorted underpriced-first. |
-| `asking_l2h2.json` | Subset of `asking_listings.json` with a confirmed H2/H3 size code. Feeds `docs/asking_l2h2.html`. |
+| `asking_listings.json` | Deduped, country-aware cross-source asking-price feed (Marktplaats / AutoScout24 / 2dehands / Autotrack / Kleinanzeigen / mobile.de / NL-lease). Feeds `docs/asking.html`. Sorted underpriced-first. |
+| `asking_l2h2.json` | Subset of `asking_listings.json` with a confirmed H2/H3 size code. Feeds the **primary** `docs/index.html`. |
 | `rejected.json` | `{url: reason}` map for all rejected vehicles |
 | `lot_registry.json` | Per-URL last-scrape state + permanent rejects |
 | `bid_history.json` | Hammer history per model token |
@@ -178,8 +190,15 @@ Cold-start cap: `MAX_NEW_PER_RUN = 400` — full catalogue registered across 3-4
 | AutoTrack | NL (dealer) | Next.js RSC chunk extraction (`self.__next_f.push`) |
 | Gaspedaal | NL aggregator | schema.org `ItemList` JSON-LD |
 | 2dehands.be | BE (C2C + dealer) | Adevinta JSON API (same as Marktplaats) |
+| Kleinanzeigen.de | DE (C2C + dealer) | server-rendered HTML (`article.aditem`), plain HTTP |
+| mobile.de | DE (dealer) | consumer JSON API via curl_cffi (+ optional proxy) — **Akamai-blocked from datacenter/CI IPs** |
+| Regeljelease.nl | NL (financial lease) | embedded vehicle JSON on SEO pages — **upfront purchase price** |
+| Financiallease.nl | NL (financial lease) | Magento brand catalog cards — **upfront purchase price** |
+| Rosfinance.nl | NL (financial lease) | best-effort only (JS SPA + authed API → empty) |
 
-mobile.de and lacentrale.fr block headless HTTP requests (403).
+Cohort medians are computed per **market** (`de` vs `nl`+`be`) so German listings aren't all flagged underpriced against Benelux medians. Lease sources contribute the **upfront purchase price** (not the monthly payment) so they're comparable to marketplace asking prices.
+
+mobile.de is reachable only from a residential IP or via `MOBILE_DE_PROXY`; lacentrale.fr blocks headless HTTP (403). The pipeline degrades to `[]` for any blocked source — it never breaks the run.
 
 ---
 
@@ -205,6 +224,9 @@ Logs go to both stdout and `logs/latest.log`. Uses `output/lot_registry.json` if
 
 ## Known quirks
 
+- **mobile.de Akamai block**: mobile.de hard-blocks datacenter/CI IPs (HTTP 403 or a 200 "behavioral content" JS challenge) across plain HTTP, headless Playwright, AND curl_cffi. `mobile_de.py` degrades to `[]` from CI; set `MOBILE_DE_PROXY` (residential proxy) or run locally from a residential IP to get data. `curl_cffi` is a requirement for its TLS impersonation.
+- **Seats are not gated**: post-pivot, `strict_filter` never rejects on seats (cargo panel vans are wanted). `seats_below_5` is no longer emitted (kept in `registry.permanent_rejects` recognised set for back-compat). Seats remain a scoring bonus; **roof height (H2/H3) is the dominant score factor** in `score_small_van`.
+- **bare "transit"**: routes to `ford_transit_l2h2` (full-size Transit), NOT Transit Custom. "transit custom"/"tourneo custom" win via multi-word sort; "transit connect"/"transit courier" reject via `SMALLER_SIBLINGS`.
 - **networkidle timeout**: Must use `domcontentloaded` + `wait_for_selector("script#__NEXT_DATA__", state="attached")`. Never switch back to networkidle.
 - **Word-boundary filters**: All keyword lists in `van_intel.py` use `\b` regex boundaries to avoid "bus" matching "business", "partner" matching "business partner", etc.
 - **engine failure false positive**: Pattern uses negative lookbehind for "no/geen/kein" and excludes "engine failure codes" (OBD context).

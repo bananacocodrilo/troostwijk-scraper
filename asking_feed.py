@@ -52,17 +52,51 @@ _HOST_PREFIX: Dict[str, str] = {
     "autoscout24_nl":   "https://www.autoscout24.nl",
     "autoscout24_de":   "https://www.autoscout24.de",
     "autotrack":        "",
+    # German + Dutch-lease sources all emit absolute URLs already.
+    "kleinanzeigen_de": "",
+    "mobile_de":        "",
+    "regeljelease":     "",
+    "financiallease":   "",
+    "rosfinance":       "",
+}
+
+# Country per source — listings may already carry a "country" field (the new
+# sources do); this is the fallback for the legacy NL/BE sources.
+_SOURCE_COUNTRY: Dict[str, str] = {
+    "marktplaats":      "nl",
+    "autotrack":        "nl",
+    "gaspedaal":        "nl",
+    "autoscout24_nl":   "nl",
+    "2dehands":         "be",
+    "autoscout24_de":   "de",
+    "kleinanzeigen_de": "de",
+    "mobile_de":        "de",
+    "regeljelease":     "nl",
+    "financiallease":   "nl",
+    "rosfinance":       "nl",
 }
 
 # Preference order when the same physical vehicle appears on multiple sites.
-# Direct C2C/dealer sites beat aggregators (gaspedaal is already dropped).
+# Direct C2C/dealer marketplaces beat lease aggregators (gaspedaal is dropped).
 _SOURCE_RANK: Dict[str, int] = {
-    "marktplaats":     0,
-    "2dehands":        1,
-    "autotrack":       2,
-    "autoscout24_nl":  3,
-    "autoscout24_de":  4,
+    "marktplaats":      0,
+    "2dehands":         1,
+    "autotrack":        2,
+    "autoscout24_nl":   3,
+    "autoscout24_de":   4,
+    "kleinanzeigen_de": 5,
+    "mobile_de":        6,
+    "regeljelease":     7,
+    "financiallease":   8,
+    "rosfinance":       9,
 }
+
+
+def _market(country: Optional[str]) -> str:
+    """Cohort market bucket. DE prices run well below NL/BE, so German
+    listings are compared within their own market; NL and BE (Benelux,
+    similar pricing) are pooled together as 'nl'."""
+    return "de" if country == "de" else "nl"
 
 # Underpriced flag thresholds
 _UNDERPRICED_PCT  = -15   # at least 15% below cohort median
@@ -115,6 +149,7 @@ def _to_vehicle(listing: dict) -> Optional[dict]:
         "title":     title,
         "url":       url,
         "source":    source,
+        "country":   listing.get("country") or _SOURCE_COUNTRY.get(source) or "nl",
         "year":      listing.get("year"),
         "km":        listing.get("km"),
         "price_eur": listing.get("price_eur"),
@@ -145,16 +180,17 @@ def _to_vehicle(listing: dict) -> Optional[dict]:
 def _dedupe_key(v: dict) -> Optional[tuple]:
     """Group identical vehicles cross-listed on multiple sites.
 
-    Same vehicle = same model_group, same year, ±2k km, ±€500 price.
-    Returns None when any required dimension is missing — those entries
-    bypass dedup (kept as-is)."""
+    Same vehicle = same model_group, same market, same year, ±2k km, ±€500
+    price. Market is included so a NL and a DE listing at the same price are
+    never merged. Returns None when any required dimension is missing — those
+    entries bypass dedup (kept as-is)."""
     group = v.get("model_group")
     year  = v.get("year")
     km    = v.get("km")
     price = v.get("price_eur")
     if not group or year is None or km is None or price is None:
         return None
-    return (group, int(year), int(km) // 2000, int(price) // 500)
+    return (group, _market(v.get("country")), int(year), int(km) // 2000, int(price) // 500)
 
 
 def _dedupe(vehicles: List[dict]) -> List[dict]:
@@ -175,23 +211,24 @@ def _dedupe(vehicles: List[dict]) -> List[dict]:
 # Cohort median / percentile
 # ---------------------------------------------------------------------------
 
-def _bucket(vehicles: List[dict]) -> Dict[Tuple[str, int], List[float]]:
-    """Return {(model_group, year) → sorted list of prices}, pooled across
-    ±2 years downstream via _cohort_prices()."""
-    out: Dict[Tuple[str, int], List[float]] = {}
+def _bucket(vehicles: List[dict]) -> Dict[Tuple[str, str, int], List[float]]:
+    """Return {(model_group, market, year) → list of prices}, pooled across
+    ±2 years downstream via _cohort_prices(). Market (de vs nl/be) is part of
+    the key so 'underpriced' is judged within the same market."""
+    out: Dict[Tuple[str, str, int], List[float]] = {}
     for v in vehicles:
         g = v.get("model_group")
         y = v.get("year")
         p = v.get("price_eur")
         if g and y is not None and p is not None:
-            out.setdefault((g, int(y)), []).append(float(p))
+            out.setdefault((g, _market(v.get("country")), int(y)), []).append(float(p))
     return out
 
 
-def _cohort_prices(buckets: Dict, group: str, year: int) -> List[float]:
+def _cohort_prices(buckets: Dict, group: str, market: str, year: int) -> List[float]:
     pool: List[float] = []
     for dy in range(-2, 3):
-        pool.extend(buckets.get((group, year + dy), []))
+        pool.extend(buckets.get((group, market, year + dy), []))
     return pool
 
 
@@ -267,7 +304,7 @@ def build_feed(price_cache_path: str = "output/price_cache.json") -> List[dict]:
             v["price_pct_vs_median"]   = None
             v["is_underpriced"]        = False
             continue
-        pool = _cohort_prices(buckets, g, int(y))
+        pool = _cohort_prices(buckets, g, _market(v.get("country")), int(y))
         n = len(pool)
         v["market_sample_size"] = n
         if n >= 3:

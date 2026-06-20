@@ -47,11 +47,11 @@ WHITELIST_GROUPS: dict = {
         "label": "Ford Transit Custom / Tourneo Custom",
         # Tourneo Custom is the passenger version of Transit Custom —
         # same body, factory 8-9 seats (great for 6-seat camper conversion).
-        # "transit" (bare) is a WEAK token: Troostwijk often mislabels Transit
-        # Customs as plain "Transit" in the lot title. It soft-passes with a
-        # -20 score penalty in score_small_van so confirmed Transit Customs
-        # rank higher. Multi-word "transit custom" wins via sort priority.
-        "tokens": ["tourneo custom", "transit custom", "transit"],
+        # Only the multi-word tokens belong here. The bare "transit" token now
+        # routes to `ford_transit_l2h2` (the full-size Transit, which DOES come
+        # in L2H2), and "transit custom"/"tourneo custom" still win for this
+        # group via multi-word sort priority.
+        "tokens": ["tourneo custom", "transit custom"],
         "required_length": [2],
         "required_height": [1],
         "min_year": 2016,
@@ -140,6 +140,54 @@ WHITELIST_GROUPS: dict = {
         "required_length": None,
         "required_height": None,
         "min_year": 2021,
+    },
+    # -----------------------------------------------------------------------
+    # High-roof panel-van families (L2H2 pivot — June 2026).
+    # These big vans were previously rejected as brand_not_in_whitelist, but
+    # they are the families that actually ship L2H2 (standing-height) — the
+    # only dimensional class usable for the camper conversion. required_height
+    # stays None (soft-gate: unknown height passes); the L2H2 feeds filter to
+    # CONFIRMED H2/H3 via is_high_roof(). required_length=[2,3] accepts the
+    # medium/long wheelbases and rejects L1 (too short) / L4 (jumbo) when the
+    # length is confirmed.
+    # -----------------------------------------------------------------------
+    "ford_transit_l2h2": {
+        "label": "Ford Transit (full-size, L2/L3 high-roof) — NOT Transit Custom",
+        # Bare "transit". Transit Custom / Tourneo Custom are caught first by
+        # their multi-word tokens; "transit connect" / "transit courier" reject
+        # via SMALLER_SIBLINGS before reaching here.
+        "tokens": ["transit"],
+        "required_length": [2, 3],
+        "required_height": None,
+        "min_year": 2016,
+    },
+    "mercedes_sprinter": {
+        "label": "Mercedes Sprinter (L2/L3 high-roof)",
+        # Euro 6 from 2016 (W906 facelift / W907 from 2018). The classic
+        # stand-up panel van; L2H2 / L3H2 are the prime conversion bases.
+        "tokens": ["sprinter"],
+        "required_length": [2, 3],
+        "required_height": None,
+        "min_year": 2016,
+    },
+    "vw_crafter_tge": {
+        "label": "VW Crafter (gen 2) / MAN TGE",
+        # Gen-2 Crafter (2017+) is VW's own platform (shared with MAN TGE),
+        # Euro 6. The pre-2017 Crafter was Sprinter-based — min_year 2017
+        # targets the new generation. e-Crafter is a valid EV base too.
+        "tokens": ["e-crafter", "crafter", "tge"],
+        "required_length": [2, 3],
+        "required_height": None,
+        "min_year": 2017,
+    },
+    "renault_master_grp": {
+        "label": "Renault Master / Opel Movano / Nissan Interstar (NV400)",
+        # Shared platform, Euro 6 from 2016. Movano/Interstar/NV400 are
+        # rebadged Masters. L2H2 / L3H2 stand-up panel vans.
+        "tokens": ["master", "movano", "interstar", "nv400"],
+        "required_length": [2, 3],
+        "required_height": None,
+        "min_year": 2016,
     },
 }
 
@@ -662,39 +710,24 @@ def strict_filter(vehicle, classification: Classification) -> Tuple[bool, Option
     """Apply the camper-candidate hard gate to a classified vehicle.
 
     Returns ``(passed, rejected_reason)``. Soft-gate policy: only
-    *confirmed* violations of size / year / Euro / seats reject. Unknown
+    *confirmed* violations of size / year / Euro reject. Unknown
     values pass. The classifier itself is a hard gate — group=None
     rejects unconditionally as ``brand_not_in_whitelist``.
 
-    Seat-first policy: confirmed ≥ 6 seats overrides size restrictions.
-    A 9-seat Ducato L4H2 is a valid camper candidate regardless of length;
-    the vehicle explicitly signals passenger use. Size rules only apply
-    when seats are unknown (soft gate) or 5 (still check size).
+    Seats are NOT gated (June 2026 L2H2 pivot): cargo panel vans are the
+    desirable conversion bases, and a 6-seat crew cab is a scoring bonus,
+    not a requirement. The per-group size gate always applies — a confirmed
+    length/height outside the group's allowed set rejects.
     """
     if classification.group is None:
         return False, "brand_not_in_whitelist"
 
     rules = WHITELIST_GROUPS[classification.group]
 
-    # Seats — resolve first; drives size-gate bypass below.
-    seats = getattr(vehicle, "seats", None) if not isinstance(vehicle, dict) else vehicle.get("seats")
-    title = getattr(vehicle, "title", None) if not isinstance(vehicle, dict) else vehicle.get("title")
-    if seats is None:
-        # Title-fallback: many marketplace listings put the passenger count
-        # directly in the title — "3-persoons", "2 PERSOONS", "5 seater",
-        # "2p.", etc. A confirmed extraction is treated as the same hard
-        # signal as a structured `seats` field.
-        seats = _seats_from_text(title)
-    if seats is not None and seats < 5:
-        return False, f"seats_below_5: {seats}"
-
-    # Confirmed ≥ 6 seats → passenger van regardless of L/H code.
-    # Skip size gate entirely: the buyer already knows what body they're
-    # getting; a 9-seat Ducato L4H2 or a T6 Caravelle SWB are both valid.
-    confirmed_crew = seats is not None and seats >= 6
-
-    # Size — parse the variant string back to L/H ints (skipped for confirmed crew vans)
-    if not confirmed_crew and classification.variant:
+    # Size — parse the variant string back to L/H ints. Soft gate: only a
+    # CONFIRMED length/height outside the group's allowed set rejects;
+    # unknown dimensions ("?") pass.
+    if classification.variant:
         m = re.match(r"L([1-4?])H([1-3?])$", classification.variant)
         if m:
             L = None if m.group(1) == "?" else int(m.group(1))
@@ -722,23 +755,6 @@ def strict_filter(vehicle, classification: Classification) -> Tuple[bool, Option
         es = str(emission).lower()
         if re.search(r"\beuro\s*[12345]\b|\beuro[12345]\b", es) and "euro 6" not in es and "euro6" not in es:
             return False, f"emission_below_euro6: {emission}"
-
-    # Body-type fallback (when seats still unknown): cargo-only body types
-    # (Mercedes Vito 111 cargo, panel-van Boxer/Ducato, etc.) are 2-3 seats
-    # by default. Don't reject if title OR description shows a crew-cab
-    # marker, since those convert cargo chassis to 5-6 seat variants.
-    if seats is None:
-        body_type = (
-            getattr(vehicle, "body_type", None) if not isinstance(vehicle, dict)
-            else vehicle.get("body_type")
-        )
-        if _is_cargo_body(body_type):
-            remarks = (
-                getattr(vehicle, "remarks", None) if not isinstance(vehicle, dict)
-                else vehicle.get("remarks")
-            ) or ""
-            if not _CREW_CAB_RE.search(title or "") and not _CREW_CAB_RE.search(remarks):
-                return False, f"seats_below_5: inferred from cargo body_type={body_type}"
 
     return True, None
 
@@ -805,15 +821,17 @@ _CREW_CAB_RE = re.compile(
 
 
 def _svs_dual_use(vehicle: dict) -> int:
-    """Dual-use utility — 0-45 pts.  6 seats = max, crew cab = strong signal.
+    """Dual-use utility — 0-30 pts.  Seats are a BONUS, not the headline.
+
+    Post-pivot (June 2026) the decisive factor is roof height, not seats —
+    a 6-seat crew cab is a nice-to-have, so this component is capped at 30
+    (was 45) and the roof term in score_small_van carries more weight.
 
     Marketplace sources (Marktplaats / AutoScout24 / AutoTrack / 2dehands)
     don't expose ``seats`` per listing, so structured field is often None.
     We cascade title-based inference: explicit count ("9-persoons", "2p"),
     crew-cab markers ("DC", "Dubbele Cabine", "Combi") → assume 6 seats,
     factory-passenger trim ("Multivan", "Traveller") → assume 7 seats.
-    Without this cascade asking-feed scores capped near 22 even for
-    perfect candidates.
     """
     hay = " ".join(filter(None, [
         vehicle.get("title"), vehicle.get("remarks"),
@@ -831,16 +849,16 @@ def _svs_dual_use(vehicle: dict) -> int:
 
     pts = 0
     if seats is not None:
-        if seats >= 6:    pts = 38
-        elif seats == 5:  pts = 28
-        elif seats == 4:  pts = 18
-        elif seats == 3:  pts = 10
+        if seats >= 6:    pts = 22
+        elif seats == 5:  pts = 16
+        elif seats == 4:  pts = 10
+        elif seats == 3:  pts = 6
         else:             pts = 2
 
     if re.search(r"\b(anchor\s*point|rail|zitplaats|afneembare?\s*stoel|klapstoel)\b", hay):
-        pts = min(pts + 7, 45)
+        pts = min(pts + 5, 30)
 
-    return min(pts, 45)
+    return min(pts, 30)
 
 
 def _svs_city_practicality(variant: Optional[str], fuel: Optional[str]) -> int:
@@ -935,6 +953,11 @@ _GROUP_QUALITY = {
     "psa_l1l2h1":                  0.90,   # L3H2 Ducato is the EU camper gold standard; raised from 0.85
     "vito_v_class_l2":             0.95,   # premium chassis but quirky for DIY conversion
     "hyundai_staria":              0.90,   # excellent for passenger use; new platform, rare in NL
+    # High-roof panel-van families (L2H2 pivot) — the prime conversion bases.
+    "ford_transit_l2h2":           0.95,   # huge aftermarket, the US/UK conversion staple
+    "mercedes_sprinter":           1.00,   # the global stand-up campervan benchmark
+    "vw_crafter_tge":              0.98,   # gen-2 Crafter / TGE, excellent build
+    "renault_master_grp":          0.90,   # Master/Movano/Interstar — cheap, capable base
 }
 
 
@@ -1031,7 +1054,6 @@ def score_small_van(vehicle: dict) -> int:
     fuel          = vehicle.get("fuel")
     deal_ratio    = vehicle.get("deal_ratio")
     group         = vehicle.get("model_group") or ""
-    matched_token = vehicle.get("matched_token")
 
     a = _svs_dual_use(vehicle)
     b = _svs_city_practicality(variant, fuel)
@@ -1041,6 +1063,18 @@ def score_small_van(vehicle: dict) -> int:
     raw = a + b + c + d
     quality = _GROUP_QUALITY.get(group, 0.90)
     base = round(raw * quality)
+
+    # Roof height is the decisive factor post-pivot (June 2026): the camper
+    # conversion needs standing height. Reward a CONFIRMED high roof (H2/H3)
+    # heavily; penalise a confirmed low roof (H1 = no standing). Unknown
+    # height stays neutral (no guess). This swing (≈50 pts) deliberately
+    # outweighs the seat bonus so a 2-seat L2H2 cargo van outranks a
+    # 6-seat L1H1.
+    if variant:
+        if "H2" in variant or "H3" in variant:
+            base = base + 28
+        elif "H1" in variant:
+            base = max(0, base - 22)
 
     # Unknown-size penalty: listings without any explicit L/H code are
     # uncertain — could be any size. Prefer listings that tell you what you're
@@ -1054,13 +1088,6 @@ def score_small_van(vehicle: dict) -> int:
     # shorter living space than L2 (LWB). Penalise slightly vs L2.
     if group == "t6_1_lwb" and variant and variant.startswith("L1"):
         base = max(0, base - 10)
-
-    # Weak transit match: "transit" (bare) fires when the lot says "Ford
-    # Transit" without "Custom". May be a mislabelled Transit Custom; may
-    # be a full-size Transit. Penalise heavily so confirmed Transit Customs
-    # always outrank these uncertain lots.
-    if matched_token == "transit":
-        base = max(0, base - 20)
 
     return min(base + _passenger_bonus(vehicle) + _high_power_bonus(vehicle) + _offroad_bonus(vehicle), 100)
 
