@@ -44,6 +44,10 @@
     .controls label { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
     .controls select, .controls input[type=range] { background: var(--surface2); border: 1px solid var(--border); color: var(--text); border-radius: 6px; padding: 4px 8px; font-size: 13px; cursor: pointer; }
     .controls input[type=range] { width: 110px; padding: 0; }
+    .controls input[type=checkbox] { width: 15px; height: 15px; accent-color: var(--accent); cursor: pointer; margin: 0; }
+    .controls label.check { cursor: pointer; color: var(--text); font-weight: 600; }
+    .controls .hint { font-size: 10px; color: var(--muted); opacity: .75; border: 1px solid var(--border); border-radius: 4px; padding: 0 4px; }
+    .tagline { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
     #scoreVal { font-weight: 600; color: var(--accent); min-width: 28px; }
     #count { margin-left: auto; color: var(--muted); font-size: 12px; }
 
@@ -251,6 +255,7 @@
 <header>
   <div>
     <h1>🛒 Asking <span>Prices</span></h1>
+    <p class="tagline">All sources · NL + DE + BE · default view: ≤200k km · ≤€13k (+VAT) · 2017+</p>
   </div>
   <div class="stats" id="stats"></div>
   <div class="meta" id="updatedAt">Loading…</div>
@@ -288,20 +293,24 @@
     </select>
   </label>
   <label>
-    Year ≥ <span id="yearMinVal">2016</span>
-    <input type="range" id="yearMinFilter" min="2010" max="2026" step="1" value="2016" />
+    Year ≥ <span id="yearMinVal">2017</span>
+    <input type="range" id="yearMinFilter" min="2010" max="2026" step="1" value="2017" />
   </label>
   <label>
-    Km ≤ <span id="kmMaxVal">260k</span>
-    <input type="range" id="kmMaxFilter" min="0" max="400000" step="10000" value="260000" />
+    Km ≤ <span id="kmMaxVal">200k</span>
+    <input type="range" id="kmMaxFilter" min="0" max="400000" step="10000" value="200000" />
   </label>
-  <label>
-    Max price <span id="priceVal">€17k</span>
-    <input type="range" id="priceFilter" min="2000" max="40000" step="500" value="17000" />
+  <label title="Asking price. Lease sources (Regeljelease / FinancialLease) are ex-VAT; marketplaces are usually incl-VAT or margin.">
+    Max price <span id="priceVal">€13k</span> <span class="hint">+VAT</span>
+    <input type="range" id="priceFilter" min="2000" max="40000" step="500" value="13000" />
   </label>
   <label>
     Max risk <span id="riskVal">5</span>
     <input type="range" id="riskFilter" min="0" max="5" step="1" value="5" title="Hide listings with risk_score above this" />
+  </label>
+  <label class="check" title="Only crew-cab / 6+ seat vans (from seat data, or a 'Dubbele Cabine / DC / 6-persoons' title marker). Seats are a plus, not required.">
+    <input type="checkbox" id="sixSeatFilter" />
+    6+ seats
   </label>
   <label>
     Sort by
@@ -374,6 +383,15 @@ function countryFromSource(source) {
 // Prefer the explicit per-listing country field; fall back to the source heuristic.
 function countryOf(v) {
   return v.country ? v.country.toUpperCase() : countryFromSource(v.source);
+}
+
+// 6+ seat detection: structured seats when known, else a crew-cab / passenger
+// marker in the title or remarks (seats data is sparse on marketplace listings).
+function isSixSeater(v) {
+  if (v.seats != null) return v.seats >= 6;
+  const hay = (v.title || '') + ' ' + (v.remarks || '');
+  return /\b(dubbele?\s*cab\w*|dubbel\s*cabine|doppelkab\w*|crew\s*cab|mixto|kombi|combi|dc)\b/i.test(hay)
+      || /\b[6-9]\s*-?\s*(persoons|pers|zit\w*|sitz\w*|seat\w*)\b/i.test(hay);
 }
 
 function pctClass(pct) {
@@ -510,6 +528,7 @@ function render() {
   const kmMax   = parseInt(document.getElementById('kmMaxFilter').value);
   const maxPrice = parseFloat(document.getElementById('priceFilter').value);
   const maxRisk  = parseInt(document.getElementById('riskFilter').value);
+  const sixSeat  = document.getElementById('sixSeatFilter').checked;
   const sortKey  = document.getElementById('sortBy').value;
 
   let filtered = allListings.filter(v => {
@@ -520,6 +539,7 @@ function render() {
     if ((v.risk_score ?? 0) > maxRisk) return false;
     if (v.year != null && v.year < yearMin) return false;
     if (v.km != null && v.km > kmMax) return false;
+    if (sixSeat && !isSixSeater(v)) return false;
     if (deal === 'under' && !v.is_underpriced) return false;
     const p = v.price_pct_vs_median;
     if (deal === 'fair' && (p == null || p < -15 || p > 15)) return false;
@@ -589,6 +609,7 @@ document.getElementById('countryFilter').addEventListener('change', render);
 document.getElementById('sourceFilter').addEventListener('change', render);
 document.getElementById('dealFilter').addEventListener('change', render);
 document.getElementById('sortBy').addEventListener('change', render);
+document.getElementById('sixSeatFilter').addEventListener('change', render);
 document.getElementById('priceFilter').addEventListener('input', e => {
   const v = parseFloat(e.target.value);
   document.getElementById('priceVal').textContent = '€' + Math.round(v/1000) + 'k';
