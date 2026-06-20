@@ -12016,6 +12016,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-20T14:05:16.593365+00:00",
+          "current_bid_eur": 1000.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -12253,6 +12259,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-20T14:05:16.593365+00:00",
+          "current_bid_eur": 2000.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -12984,6 +12996,51 @@
           "ts": "2026-06-20T09:08:22.421177+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2e078398-9c09-4e18-93c3-e85bced4eda0": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-1-9-tdi-340-commercial-vehicle-A1-46613-315",
+      "model_token": "transporter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-20T14:05:16.593365+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "f0bf4fff-4c01-479c-bb75-b7a4f7962456": {
+      "url": "https://www.vavato.com/en/l/volkswagen-crafter-35-2-0-tdi-l2h1-bmdc-commercial-vehicle-drive-on-trailer-A1-47403-12",
+      "model_token": "crafter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-20T14:05:16.593365+00:00",
+          "current_bid_eur": 2500.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "1a63caf9-d2db-4f49-99fe-8a5bc47bc057": {
+      "url": "https://www.vavato.com/en/l/2010-mercedes-benz-sprinter-516-2-2-cdi-432-dc-commercial-vehicle-A1-42630-90",
+      "model_token": "sprinter",
+      "year": 2010,
+      "snapshots": [
+        {
+          "ts": "2026-06-20T14:05:16.593365+00:00",
+          "current_bid_eur": 15.0,
+          "bids_count": 2,
           "status": "BIDDING_OPEN"
         }
       ],
