@@ -155,7 +155,7 @@ def _fetch_autotrack(pages: int = 4) -> List[dict]:
         return []
 
 
-def _fetch_kleinanzeigen(pages: int = 3) -> List[dict]:
+def _fetch_kleinanzeigen(pages: int = 8) -> List[dict]:
     print("Refreshing Kleinanzeigen.de...")
     try:
         return kleinanzeigen_de.build_listings(pages_per_model=pages)

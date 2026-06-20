@@ -20,9 +20,16 @@ from typing import List, Optional
 from bs4 import BeautifulSoup
 
 BASE = "https://www.kleinanzeigen.de"
-# c216 = Autos category. Search path: /s-autos/<keyword>/k0c216
-#        paginated:           /s-autos/seite:N/<keyword>/k0c216
-_CAT = "k0c216"
+# Two disjoint catalogues hold our vehicles:
+#   Autos                    -> /s-autos/<keyword>/k0c216           (passenger / pkw)
+#   Nutzfahrzeuge & Anhaenger -> /s-nutzfahrzeuge-anhaenger/<kw>/k0c280  (cargo vans)
+# High-roof panel vans (Sprinter/Crafter/Transit/Ducato...) live almost
+# entirely in the Nutzfahrzeuge category, which has ZERO overlap with Autos,
+# so both must be queried. Paginated form: /<path>/seite:N/<keyword>/<cat>.
+_CATEGORIES = [
+    ("s-autos", "k0c216"),
+    ("s-nutzfahrzeuge-anhaenger", "k0c280"),
+]
 
 HEADERS = {
     "User-Agent": (
@@ -67,10 +74,10 @@ _PRICE_RE = re.compile(r"(\d{1,3}(?:\.\d{3})*|\d+)\s*€")
 _YEAR_RE = re.compile(r"\b(19|20)\d{2}\b")
 
 
-def _search_url(keyword: str, page: int = 1) -> str:
+def _search_url(path: str, cat: str, keyword: str, page: int = 1) -> str:
     if page <= 1:
-        return f"{BASE}/s-autos/{keyword}/{_CAT}"
-    return f"{BASE}/s-autos/seite:{page}/{keyword}/{_CAT}"
+        return f"{BASE}/{path}/{keyword}/{cat}"
+    return f"{BASE}/{path}/seite:{page}/{keyword}/{cat}"
 
 
 def _fetch_html(url: str) -> Optional[str]:
@@ -146,31 +153,39 @@ def _parse_article(art) -> Optional[dict]:
     }
 
 
-def fetch_market_prices(model_key: str, pages: int = 3) -> List[dict]:
+def fetch_market_prices(model_key: str, pages: int = 8) -> List[dict]:
     keyword = _MODEL_SLUGS.get(model_key)
     if not keyword:
         return []
     results: List[dict] = []
-    for page in range(1, pages + 1):
-        html = _fetch_html(_search_url(keyword, page))
-        if not html:
-            break
-        soup = BeautifulSoup(html, "html.parser")
-        articles = soup.select("article.aditem")
-        if not articles:
-            break
-        for art in articles:
-            parsed = _parse_article(art)
-            if parsed:
+    seen: set = set()   # dedupe by ad id / url across both categories
+    for path, cat in _CATEGORIES:
+        for page in range(1, pages + 1):
+            html = _fetch_html(_search_url(path, cat, keyword, page))
+            if not html:
+                break
+            soup = BeautifulSoup(html, "html.parser")
+            articles = soup.select("article.aditem")
+            if not articles:
+                break
+            for art in articles:
+                adid = art.get("data-adid") or ""
+                parsed = _parse_article(art)
+                if not parsed:
+                    continue
+                key = adid or parsed["url"]
+                if key in seen:
+                    continue
+                seen.add(key)
                 parsed["model_key"] = model_key
                 results.append(parsed)
-        time.sleep(0.5)
+            time.sleep(0.5)
     return results
 
 
 def build_listings(
     model_keys: Optional[List[str]] = None,
-    pages_per_model: int = 3,
+    pages_per_model: int = 8,
 ) -> List[dict]:
     target = model_keys or list(_MODEL_SLUGS.keys())
     all_listings: List[dict] = []
