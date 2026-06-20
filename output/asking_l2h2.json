@@ -1,95 +1,5 @@
 [
   {
-    "title": "Ford Transit 2.0TDCI L3H2 Kombi |Personenbus | 9-Persoons |",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2401074767-ford-transit-2-0tdci-l3h2-kombi-personenbus-9-persoons",
-    "source": "marktplaats",
-    "year": 2018,
-    "km": 190115,
-    "price_eur": 17950.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": "bestelwagen",
-    "weight_kg": null,
-    "remarks": "Met deze ford transit kun jij weer jaren vooruit. De kilometerstand is 190115 en de onderhoudsgeschiedenis is bekend. Met zijn dieselmotor en handgeschakelde zesversnellingsbak is dit een prima auto v",
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ba1ffafa-0a2c-441b-889a-3b8b17911fa0?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ff5496c9-f28d-45e2-9213-61299a671b54?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/7b836193-e095-443a-88e8-b2accb3dd12e?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": "L3H2",
-    "classification_confidence": "high",
-    "matched_token": "transit",
-    "score": 59,
-    "est_conversion_cost_eur": 2500,
-    "est_conversion_cost_low_eur": 1500,
-    "est_conversion_cost_high_eur": 3500,
-    "conversion_effort": "minimal",
-    "total_project_cost_eur": 20450.0,
-    "risk_score": 2,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (23,764/yr) \u2014 above-average wear",
-        "severity": "warn"
-      },
-      {
-        "code": "high_total_km",
-        "label": "High total km (190,115) \u2014 transmission/engine wear risk",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 32,
-    "market_median_eur": 22700,
-    "price_pct_vs_median": -20.9,
-    "is_underpriced": true
-  },
-  {
-    "title": "Ford Transit 2.0TDCI L3H2 Kombi | Personenbus | 9-Persoons |",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2400860835-ford-transit-2-0tdci-l3h2-kombi-personenbus-9-persoons",
-    "source": "marktplaats",
-    "year": 2018,
-    "km": 194860,
-    "price_eur": 17950.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": "bestelwagen",
-    "weight_kg": null,
-    "remarks": "Van jouw nieuwe auto verlang je rijplezier, maar ook optimaal comfort en veiligheid. Daarom is de ford transit de auto die jij zoekt. De aandrijving komt voor rekening van een dieselmotor en een... Fo",
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8ea256cc-1974-4ab2-866b-c957287082ec?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/988378f1-91ff-4db5-939f-fc983fc5f669?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/5a38ab7a-eac8-4f79-bfd6-3c9c2f5168b8?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "transit_custom_l2h1",
-    "variant": "L3H2",
-    "classification_confidence": "high",
-    "matched_token": "transit",
-    "score": 59,
-    "est_conversion_cost_eur": 2500,
-    "est_conversion_cost_low_eur": 1500,
-    "est_conversion_cost_high_eur": 3500,
-    "conversion_effort": "minimal",
-    "total_project_cost_eur": 20450.0,
-    "risk_score": 2,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (24,357/yr) \u2014 above-average wear",
-        "severity": "warn"
-      },
-      {
-        "code": "high_total_km",
-        "label": "High total km (194,860) \u2014 transmission/engine wear risk",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 32,
-    "market_median_eur": 22700,
-    "price_pct_vs_median": -20.9,
-    "is_underpriced": true
-  },
-  {
     "title": "Peugeot Boxer 2.2 BleuHDi L2H2 2020 157000 motorprobleem",
     "url": "https://www.2dehands.be/v/auto-s/peugeot/m2370072968-peugeot-boxer-2-2-bleuhdi-l2h2-2020-157000-motorprobleem",
     "source": "2dehands",
@@ -158,9 +68,9 @@
     "total_project_cost_eur": 20490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 20,
-    "market_median_eur": 13450,
-    "price_pct_vs_median": -25.7,
+    "market_sample_size": 19,
+    "market_median_eur": 13000,
+    "price_pct_vs_median": -23.2,
     "is_underpriced": true
   },
   {
@@ -197,9 +107,52 @@
       }
     ],
     "market_sample_size": 13,
-    "market_median_eur": 22800,
-    "price_pct_vs_median": -30.9,
+    "market_median_eur": 21500,
+    "price_pct_vs_median": -26.7,
     "is_underpriced": true
+  },
+  {
+    "title": "Volkswagen Transporter 2.0 TDI L2H2 Highline Dubbel Cabine -",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2407479791-volkswagen-transporter-2-0-tdi-l2h2-highline-dubbel-cabine",
+    "source": "marktplaats",
+    "year": 2016,
+    "km": 215627,
+    "price_eur": 16500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": "bestelwagen",
+    "weight_kg": null,
+    "remarks": "Algemene informatie carrosserievorm: bestelauto kleur: zwart technische informatie vermogen: 103 kw (140 pk) transmissie: 7 versnellingen, automaat acceleratie (0-100): 12,6 s topsnelheid: 166 km/u ma",
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/8e5e97bc-97f7-4b14-a553-4f3f8b10c0de?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "model_group": "t6_1_lwb",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "transporter",
+    "score": 66,
+    "est_conversion_cost_eur": 5250,
+    "est_conversion_cost_low_eur": 3500,
+    "est_conversion_cost_high_eur": 7000,
+    "conversion_effort": "light",
+    "total_project_cost_eur": 21750.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (21,562/yr) \u2014 above-average wear",
+        "severity": "warn"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (215,627) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 25,
+    "market_median_eur": 18000,
+    "price_pct_vs_median": -8.3,
+    "is_underpriced": false
   },
   {
     "title": "Citroen Jumper 2.0 BlueHDi 130PK L2H2 - DC - AC - EURO 6",
@@ -228,41 +181,9 @@
     "total_project_cost_eur": 20200.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 23,
-    "market_median_eur": 13990,
-    "price_pct_vs_median": 6.9,
-    "is_underpriced": false
-  },
-  {
-    "title": "Peugeot Boxer L2H2 DUBBEL CABINE 7 personen IMPERIAAL",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/a1525934721-peugeot-boxer-l2h2-dubbel-cabine-7-personen-imperiaal",
-    "source": "marktplaats",
-    "year": 2018,
-    "km": 127902,
-    "price_eur": 15900.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": "bestelwagen",
-    "weight_kg": null,
-    "remarks": "Eu verantwoordelijke: stellantis nederland b.v. Lemelerbergweg 12 1101aj amsterdam, nl 0882112700 www.stellantis.com customercare.nl@stellantis.com nette peugeot boxer 2.2 L2h2 dubbel cabine met imper",
-    "images": [
-      "https://admarkt-cdn.marktplaats.com/api/v1/icas-mp-pro-admarkt/images/2f/2f4f9a23-c900-4d08-b3f5-929c7bfd7461?rule=eps_82.JPG"
-    ],
-    "model_group": "psa_l1l2h1",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "boxer",
-    "score": 59,
-    "est_conversion_cost_eur": 5250,
-    "est_conversion_cost_low_eur": 3500,
-    "est_conversion_cost_high_eur": 7000,
-    "conversion_effort": "light",
-    "total_project_cost_eur": 21150.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 23,
-    "market_median_eur": 13900,
-    "price_pct_vs_median": 14.4,
+    "market_sample_size": 24,
+    "market_median_eur": 13945,
+    "price_pct_vs_median": 7.2,
     "is_underpriced": false
   },
   {
@@ -278,7 +199,7 @@
     "weight_kg": null,
     "remarks": "Fiat ducato 2.3 Multijet 120 pk dubbel cabine l2h2 navi camera, cruise control, trekhaak 2.500 Kg, 6-zits, nap algemene informatie carrosserievorm: bestelauto modelreeks: 2014 - 2021 kleur: zwart cabi",
     "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/01f83102-57d3-4c5e-961a-b2a02599626b?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/ca64a517-1173-4948-a13f-e244dd3c2ceb?rule=ecg_mp_eps$_82.jpg",
       "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/177c01e4-95e6-40e6-aefa-d248b3390bf0?rule=ecg_mp_eps$_82.jpg",
       "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/2541570d-7be8-43bc-8a94-6676056deb2c?rule=ecg_mp_eps$_82.jpg"
     ],
@@ -295,8 +216,8 @@
     "risk_score": 0,
     "risk_flags": [],
     "market_sample_size": 18,
-    "market_median_eur": 17875,
-    "price_pct_vs_median": 27.6,
+    "market_median_eur": 15575,
+    "price_pct_vs_median": 46.4,
     "is_underpriced": false
   },
   {
@@ -332,9 +253,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 20,
-    "market_median_eur": 13450,
-    "price_pct_vs_median": 18.6,
+    "market_sample_size": 19,
+    "market_median_eur": 13000,
+    "price_pct_vs_median": 22.7,
     "is_underpriced": false
   },
   {
@@ -405,8 +326,8 @@
     "risk_score": 0,
     "risk_flags": [],
     "market_sample_size": 13,
-    "market_median_eur": 22800,
-    "price_pct_vs_median": 18.3,
+    "market_median_eur": 21500,
+    "price_pct_vs_median": 25.5,
     "is_underpriced": false
   },
   {
@@ -438,9 +359,9 @@
     "total_project_cost_eur": 46739.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 7,
-    "market_median_eur": 27769,
-    "price_pct_vs_median": 30.5,
+    "market_sample_size": 6,
+    "market_median_eur": 27374,
+    "price_pct_vs_median": 32.4,
     "is_underpriced": false
   },
   {
@@ -506,9 +427,9 @@
     "total_project_cost_eur": 35450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 10,
-    "market_median_eur": 25965,
-    "price_pct_vs_median": -3.9,
+    "market_sample_size": 9,
+    "market_median_eur": 24950,
+    "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
   {
@@ -543,40 +464,8 @@
     "risk_score": 0,
     "risk_flags": [],
     "market_sample_size": 13,
-    "market_median_eur": 22800,
-    "price_pct_vs_median": 40.2,
-    "is_underpriced": false
-  },
-  {
-    "title": "FIAT DUCATO H3L3 10-2023 AUTOMAAT 38.000 KM LUXE UITVOERING",
-    "url": "https://www.marktplaats.nl/v/caravans-en-kamperen/campers/m2409980207-fiat-ducato-h3l3-10-2023-automaat-38-000-km-luxe-uitvoering",
-    "source": "marktplaats",
-    "year": 2023,
-    "km": 38000,
-    "price_eur": 34950.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "Fiat ducato h3l3 bj 10-2023 automaat 38.000 Km luxe uitvoering met oa. Private glas adaptiv cruis control en lane depart bouwjaar 10-2023 merk fiat ducato brandstof diesel gebruik ca. 1:13,4 Lengte 6",
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/add5b1e7-98b0-471a-bcce-c0ad0c445bbe?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "model_group": "psa_l1l2h1",
-    "variant": "L?H3",
-    "classification_confidence": "high",
-    "matched_token": "ducato",
-    "score": 19,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 45450.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 10,
-    "market_median_eur": 25965,
-    "price_pct_vs_median": 34.6,
+    "market_median_eur": 21500,
+    "price_pct_vs_median": 48.7,
     "is_underpriced": false
   }
 ]
