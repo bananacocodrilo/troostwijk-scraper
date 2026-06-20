@@ -123,9 +123,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 35,
-    "market_median_eur": 18000,
-    "price_pct_vs_median": -30.6,
+    "market_sample_size": 80,
+    "market_median_eur": 18650,
+    "price_pct_vs_median": -33.0,
     "is_underpriced": true
   },
   {
@@ -727,9 +727,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 11,
-    "market_median_eur": 28976,
-    "price_pct_vs_median": -31.1,
+    "market_sample_size": 25,
+    "market_median_eur": 27358,
+    "price_pct_vs_median": -27.1,
     "is_underpriced": true
   },
   {
@@ -810,9 +810,9 @@
     "total_project_cost_eur": 32490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 11,
-    "market_median_eur": 28976,
-    "price_pct_vs_median": -24.1,
+    "market_sample_size": 25,
+    "market_median_eur": 27358,
+    "price_pct_vs_median": -19.6,
     "is_underpriced": true
   },
   {
@@ -1502,6 +1502,138 @@
     "is_underpriced": true
   },
   {
+    "title": "Renault Master III Kasten L2H2 HKa 3,5t/HU&AU bis 11/26",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-kasten-l2h2-hka-3-5t-hu-au-bis-11-26/3432850132-216-146",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2017,
+    "km": 430000,
+    "price_eur": 5299.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/44/4407b72c-3dd3-4d36-8354-96c8f8386676?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 15799.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (47,777/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (430,000) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 62,
+    "market_median_eur": 11450,
+    "price_pct_vs_median": -53.7,
+    "is_underpriced": true
+  },
+  {
+    "title": "Peugeot Boxer Kasten 2.2 BlueHDi L2H2 Pro 140 S | 1Hand!",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/peugeot-boxer-kasten-2-2-bluehdi-l2h2-pro-140-s-1hand-/3439775359-216-3795",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 270358,
+    "price_eur": 5490.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/c7/c74f3394-bb85-4b56-aaae-07bf341386a4?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "boxer",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 15990.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (54,071/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (270,358) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 70,
+    "market_median_eur": 14625,
+    "price_pct_vs_median": -62.5,
+    "is_underpriced": true
+  },
+  {
+    "title": "Renault Master III Kasten L2H2 HKa 3,5t   Neuer T\u00fcv",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-kasten-l2h2-hka-3-5t-neuer-tuev/3436780883-216-9652",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2017,
+    "km": 361300,
+    "price_eur": 6450.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/eb/ebbce2e8-e5b7-486e-821e-52fb79e79ee6?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 16950.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (40,144/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (361,300) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 62,
+    "market_median_eur": 11450,
+    "price_pct_vs_median": -43.7,
+    "is_underpriced": true
+  },
+  {
     "title": "Opel Movano 2.3 D 81KW 2016",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2338564336-opel-movano-2-3-d-81kw-2016",
     "source": "marktplaats",
@@ -1573,9 +1705,53 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 16,
-    "market_median_eur": 11995,
-    "price_pct_vs_median": -42.5,
+    "market_sample_size": 62,
+    "market_median_eur": 11450,
+    "price_pct_vs_median": -39.7,
+    "is_underpriced": true
+  },
+  {
+    "title": "Renault master III L2H2  Anh\u00e4ngerkupplung  Clima",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-l2h2-anhaengerkupplung-clima/3433157677-216-2239",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2017,
+    "km": 219000,
+    "price_eur": 7900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/b8/b846139d-eda7-4f20-866f-18ea69086f3a?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 18400.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (24,333/yr) \u2014 above-average wear",
+        "severity": "warn"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (219,000) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 62,
+    "market_median_eur": 11450,
+    "price_pct_vs_median": -31.0,
     "is_underpriced": true
   },
   {
@@ -1659,6 +1835,94 @@
     "market_sample_size": 109,
     "market_median_eur": 14500,
     "price_pct_vs_median": -45.2,
+    "is_underpriced": true
+  },
+  {
+    "title": "Opel Movano L2H2 Klima PDC 3,5t R\u00fcckfahrkamera Gewerbe/Export",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-l2h2-klima-pdc-3-5t-rueckfahrkamera-gewerbe-export/3317479684-216-4736",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2018,
+    "km": 226500,
+    "price_eur": 7990.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/95/95bea014-6add-41d5-8932-f9aaa25c16c6?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 18490.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (28,312/yr) \u2014 above-average wear",
+        "severity": "warn"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (226,500) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 79,
+    "market_median_eur": 12300,
+    "price_pct_vs_median": -35.0,
+    "is_underpriced": true
+  },
+  {
+    "title": "Opel Movano B L2H2 3,5t B\u00c4R Cargolift Ladebord. Klima",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-b-l2h2-3-5t-baer-cargolift-ladebord-klima/3438448818-216-8113",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2019,
+    "km": 362662,
+    "price_eur": 7999.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/e1/e10add21-f837-487e-9f2f-369353fa293f?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 18499.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (51,808/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (362,662) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 98,
+    "market_median_eur": 13994,
+    "price_pct_vs_median": -42.8,
     "is_underpriced": true
   },
   {
@@ -1774,6 +2038,39 @@
     "is_underpriced": true
   },
   {
+    "title": "Citro\u00ebn Jumper L2H3 2.0HDi 130PS|12/2018|KAMERA|TEMPOMAT|EURO6|",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/citro-n-jumper-l2h3-2-0hdi-130ps-12-2018-kamera-tempomat-euro6-/3432765312-216-1926",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2018,
+    "km": 189,
+    "price_eur": 8500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/39/39129578-0658-4b82-b01f-6d86be0442a2?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H3",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 19000.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 107,
+    "market_median_eur": 11000,
+    "price_pct_vs_median": -22.7,
+    "is_underpriced": true
+  },
+  {
     "title": "Renault Master III Kasten L2H2 HKa 3,5t",
     "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-kasten-l2h2-hka-3-5t/3439140216-216-3752",
     "source": "kleinanzeigen_de",
@@ -1807,9 +2104,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 23,
-    "market_median_eur": 12980,
-    "price_pct_vs_median": -34.5,
+    "market_sample_size": 79,
+    "market_median_eur": 12300,
+    "price_pct_vs_median": -30.9,
     "is_underpriced": true
   },
   {
@@ -1898,6 +2195,39 @@
     "is_underpriced": true
   },
   {
+    "title": "Fiat Ducato Kasten L2H2 2.3 Autom. Getriebe Problem!",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/fiat-ducato-kasten-l2h2-2-3-autom-getriebe-problem-/3438360384-216-8048",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2017,
+    "km": 86000,
+    "price_eur": 8990.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/b5/b5ba4bb3-5faa-4674-a336-ffc874a241af?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "ducato",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 19490.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 88,
+    "market_median_eur": 10950,
+    "price_pct_vs_median": -17.9,
+    "is_underpriced": true
+  },
+  {
     "title": "Renault Master T35 2.3 dCi L2H2 Energy 1e eigenaar first own",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2410156328-renault-master-t35-2-3-dci-l2h2-energy-1e-eigenaar-first-own",
     "source": "marktplaats",
@@ -1974,6 +2304,50 @@
     "market_sample_size": 77,
     "market_median_eur": 13700,
     "price_pct_vs_median": -30.7,
+    "is_underpriced": true
+  },
+  {
+    "title": "Fiat Ducato Hochr.-Kasten 35 140 L2H2 RS: 3450 mm",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/fiat-ducato-hochr-kasten-35-140-l2h2-rs-3450-mm/3430760134-216-4766",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 290439,
+    "price_eur": 9500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/88/884efd4b-796d-4367-ba17-6528ea5e1211?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "ducato",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 20000.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (58,087/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (290,439) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 70,
+    "market_median_eur": 14625,
+    "price_pct_vs_median": -35.0,
     "is_underpriced": true
   },
   {
@@ -2320,6 +2694,45 @@
     "market_sample_size": 112,
     "market_median_eur": 18800,
     "price_pct_vs_median": -40.2,
+    "is_underpriced": true
+  },
+  {
+    "title": "Renault Master L2 H2",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-l2-h2/3436679442-216-6273",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 165000,
+    "price_eur": 11500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/cb/cbcaa388-d64d-457e-83e0-b15cebb43b08?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 22000.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (33,000/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 84,
+    "market_median_eur": 15895,
+    "price_pct_vs_median": -27.7,
     "is_underpriced": true
   },
   {
@@ -2801,6 +3214,39 @@
     "is_underpriced": true
   },
   {
+    "title": "Opel Movano C Kasten HKa L2H2 3,5t Edition",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-c-kasten-hka-l2h2-3-5t-edition/3437040708-216-2921",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2023,
+    "km": 9500,
+    "price_eur": 14990.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/fb/fbaeb716-5d04-428b-9882-062f6a2aa791?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 25490.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 60,
+    "market_median_eur": 18500,
+    "price_pct_vs_median": -19.0,
+    "is_underpriced": true
+  },
+  {
     "title": "Renault Master T33 2.3 dCi 150 L2H2 Energy Comfort Geveerde",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2410835247-renault-master-t33-2-3-dci-150-l2h2-energy-comfort-geveerde",
     "source": "marktplaats",
@@ -3073,6 +3519,50 @@
     "is_underpriced": true
   },
   {
+    "title": "Crafter Kastenwagen L3H2",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/crafter-kastenwagen-l3h2/3436135206-216-2512",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2020,
+    "km": 258000,
+    "price_eur": 9999.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/cf/cfd54923-648a-43e5-b37a-1ea47320d623?rule=$_2.AUTO"
+    ],
+    "model_group": "vw_crafter_tge",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "crafter",
+    "score": 51,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 20499.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (43,000/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (258,000) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 80,
+    "market_median_eur": 18650,
+    "price_pct_vs_median": -46.4,
+    "is_underpriced": true
+  },
+  {
     "title": "Volkswagen Crafter GB 2.0 TDI 177pk L3h3 364/3500 FWD 2018",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2412141532-volkswagen-crafter-gb-2-0-tdi-177pk-l3h3-364-3500-fwd-2018",
     "source": "marktplaats",
@@ -3206,39 +3696,6 @@
     "market_sample_size": 40,
     "market_median_eur": 22000,
     "price_pct_vs_median": -42.0,
-    "is_underpriced": true
-  },
-  {
-    "title": "Volkswagen Crafter Kasten 35 lang L3H2 Hochdach",
-    "url": "https://www.kleinanzeigen.de/s-anzeige/volkswagen-crafter-kasten-35-lang-l3h2-hochdach/3439208473-216-4891",
-    "source": "kleinanzeigen_de",
-    "country": "de",
-    "year": 2017,
-    "km": 168000,
-    "price_eur": 12990.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/1c/1c9148e1-ea0c-4fe5-b3bc-082ddf4afe04?rule=$_2.AUTO"
-    ],
-    "model_group": "vw_crafter_tge",
-    "variant": "L3H2",
-    "classification_confidence": "high",
-    "matched_token": "crafter",
-    "score": 51,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 23490.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 18,
-    "market_median_eur": 16494,
-    "price_pct_vs_median": -21.2,
     "is_underpriced": true
   },
   {
@@ -4394,6 +4851,39 @@
     "is_underpriced": true
   },
   {
+    "title": "Verkaufe Citroen Jumper H2L4 Auto Transporter Lieferfahrzeug Van Buss incl. Anh\u00e4nger Kupplung  Klimaanlage Navi Tempomat",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/verkaufe-citroen-jumper-h2l4-auto-transporter-lieferfahrzeug-van-buss-incl-anhaenger-kupplung-klimaanlage-navi-tempomat/3434667246-216-23867",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2017,
+    "km": 112561,
+    "price_eur": 11900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/53/53db0f03-c774-41e1-8fe0-ded38e39568e?rule=$_2.AUTO"
+    ],
+    "model_group": "t6_1_lwb",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "transporter",
+    "score": 50,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 22400.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 32,
+    "market_median_eur": 14850,
+    "price_pct_vs_median": -19.9,
+    "is_underpriced": true
+  },
+  {
     "title": "Ford Transit 350 2.0 TDCI L3H2 inrichting airco cruise stoel",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2411299235-ford-transit-350-2-0-tdci-l3h2-inrichting-airco-cruise-stoel",
     "source": "marktplaats",
@@ -4722,9 +5212,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 28,
-    "market_median_eur": 12740,
-    "price_pct_vs_median": -58.5,
+    "market_sample_size": 98,
+    "market_median_eur": 13994,
+    "price_pct_vs_median": -62.2,
     "is_underpriced": true
   },
   {
@@ -4794,9 +5284,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 30,
-    "market_median_eur": 11244,
-    "price_pct_vs_median": -46.6,
+    "market_sample_size": 107,
+    "market_median_eur": 11000,
+    "price_pct_vs_median": -45.5,
     "is_underpriced": true
   },
   {
@@ -4838,9 +5328,53 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 21,
-    "market_median_eur": 10900,
-    "price_pct_vs_median": -45.0,
+    "market_sample_size": 68,
+    "market_median_eur": 10250,
+    "price_pct_vs_median": -41.5,
+    "is_underpriced": true
+  },
+  {
+    "title": "Renault Master L3H2 2018",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-l3h2-2018/3438031463-216-3178",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2018,
+    "km": 365450,
+    "price_eur": 6500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/d1/d1f7c1f6-9c5c-4653-9f72-2d5d5c356244?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 17000.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (45,681/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (365,450) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 79,
+    "market_median_eur": 12300,
+    "price_pct_vs_median": -47.2,
     "is_underpriced": true
   },
   {
@@ -4888,6 +5422,50 @@
     "is_underpriced": true
   },
   {
+    "title": "Opel Movano C Kasten HKa L3H2 3,5t Edition KLIMA NAVI",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-c-kasten-hka-l3h2-3-5t-edition-klima-navi/3437050274-216-3140",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2022,
+    "km": 256000,
+    "price_eur": 7500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/3c/3c926cf4-2be5-479c-b3b4-52fb3a7c6024?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 18000.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (64,000/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (256,000) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 77,
+    "market_median_eur": 17250,
+    "price_pct_vs_median": -56.5,
+    "is_underpriced": true
+  },
+  {
     "title": "Renault Master III L3H2",
     "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-l3h2/3439571944-216-8830",
     "source": "kleinanzeigen_de",
@@ -4926,9 +5504,97 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 20,
-    "market_median_eur": 15720,
-    "price_pct_vs_median": -50.1,
+    "market_sample_size": 84,
+    "market_median_eur": 15895,
+    "price_pct_vs_median": -50.6,
+    "is_underpriced": true
+  },
+  {
+    "title": "Opel Movano L3H2 Klima 2.Hand Kastenwagen",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-l3h2-klima-2-hand-kastenwagen/3439737044-216-3877",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2017,
+    "km": 329000,
+    "price_eur": 7878.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/ab/abe06cd1-a236-4066-a4d6-0588f21d034c?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 18378.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (36,555/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (329,000) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 62,
+    "market_median_eur": 11450,
+    "price_pct_vs_median": -31.2,
+    "is_underpriced": true
+  },
+  {
+    "title": "Fiat Ducato L3H2 Koffer 140 PS Euro 6 T\u00dcV 02/2027 Top Zustand",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/fiat-ducato-l3h2-koffer-140-ps-euro-6-tuev-02-2027-top-zustand/3438766022-216-8097",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2018,
+    "km": 304000,
+    "price_eur": 7900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/b5/b5d69f1d-a2b3-4e8e-b2b3-5345270b4c28?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "ducato",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 18400.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (38,000/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (304,000) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 107,
+    "market_median_eur": 11000,
+    "price_pct_vs_median": -28.2,
     "is_underpriced": true
   },
   {
@@ -4965,9 +5631,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 21,
-    "market_median_eur": 14500,
-    "price_pct_vs_median": -44.8,
+    "market_sample_size": 86,
+    "market_median_eur": 13950,
+    "price_pct_vs_median": -42.7,
     "is_underpriced": true
   },
   {
@@ -5001,39 +5667,6 @@
     "market_sample_size": 72,
     "market_median_eur": 13892,
     "price_pct_vs_median": -38.8,
-    "is_underpriced": true
-  },
-  {
-    "title": "Citro\u00ebn Jumper L3H2 1. Hand 85.000 km T\u00dcV 08/2027 AHK MwSt.",
-    "url": "https://www.kleinanzeigen.de/s-anzeige/citro-n-jumper-l3h2-1-hand-85-000-km-tuev-08-2027-ahk-mwst-/3438972531-216-1758",
-    "source": "kleinanzeigen_de",
-    "country": "de",
-    "year": 2016,
-    "km": 85500,
-    "price_eur": 8900.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/02/021cde28-b492-488f-aa8e-c0ed5b4feaaf?rule=$_2.AUTO"
-    ],
-    "model_group": "psa_l1l2h1",
-    "variant": "L3H2",
-    "classification_confidence": "high",
-    "matched_token": "jumper",
-    "score": 49,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 19400.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 21,
-    "market_median_eur": 10900,
-    "price_pct_vs_median": -18.3,
     "is_underpriced": true
   },
   {
@@ -5244,9 +5877,9 @@
     "total_project_cost_eur": 20100.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 16,
-    "market_median_eur": 11995,
-    "price_pct_vs_median": -20.0,
+    "market_sample_size": 62,
+    "market_median_eur": 11450,
+    "price_pct_vs_median": -16.2,
     "is_underpriced": true
   },
   {
@@ -5525,6 +6158,133 @@
     "is_underpriced": true
   },
   {
+    "title": "Renault Master III Kasten L3H2 HKa 3,5t",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-kasten-l3h2-hka-3-5t/3436005297-216-4604",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 210660,
+    "price_eur": 11900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/c8/c8ece4c5-1915-4a80-8454-2b04d98f8331?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 22400.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (42,132/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (210,660) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 84,
+    "market_median_eur": 15895,
+    "price_pct_vs_median": -25.1,
+    "is_underpriced": true
+  },
+  {
+    "title": "Renault Master L3H2 zu verkaufen",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-l3h2-zu-verkaufen/3439546173-216-8238",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2020,
+    "km": 320733,
+    "price_eur": 12500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/32/32a9e2cc-c4a9-4a6c-8dc8-ce8144b63d25?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 23000.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (53,455/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (320,733) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 102,
+    "market_median_eur": 14985,
+    "price_pct_vs_median": -16.6,
+    "is_underpriced": true
+  },
+  {
+    "title": "Renault Master 100KW L3H2*Assist*Klima*Kamera*",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-100kw-l3h2-assist-klima-kamera-/3432465987-216-25821",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 182000,
+    "price_eur": 12500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/1d/1d4a2934-01a9-48f8-b43d-d806bee7bbce?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 23000.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (36,400/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 84,
+    "market_median_eur": 15895,
+    "price_pct_vs_median": -21.4,
+    "is_underpriced": true
+  },
+  {
     "title": "Renault Master 2.3DCi 150PK L3H2 Imperiaal | Trekhaak | Kast",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2409602216-renault-master-2-3dci-150pk-l3h2-imperiaal-trekhaak-kast",
     "source": "marktplaats",
@@ -5614,6 +6374,45 @@
     "market_sample_size": 104,
     "market_median_eur": 16900,
     "price_pct_vs_median": -18.9,
+    "is_underpriced": true
+  },
+  {
+    "title": "Opel Movano L3H2",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-l3h2/3437010213-216-4438",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2022,
+    "km": 119000,
+    "price_eur": 13900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/88/88c5847a-62f2-40c6-8c94-4d606d76f54e?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 24400.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (29,750/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 77,
+    "market_median_eur": 17250,
+    "price_pct_vs_median": -19.4,
     "is_underpriced": true
   },
   {
@@ -5729,9 +6528,48 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 9,
-    "market_median_eur": 18445,
-    "price_pct_vs_median": -24.2,
+    "market_sample_size": 37,
+    "market_median_eur": 17499,
+    "price_pct_vs_median": -20.1,
+    "is_underpriced": true
+  },
+  {
+    "title": "Fiat Ducato 33 120 L3H2*Hoch&Lang*Klima*RCAM*TEMPOMAT",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/fiat-ducato-33-120-l3h2-hoch-lang-klima-rcam-tempomat/3412595904-216-1013",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2024,
+    "km": 166800,
+    "price_eur": 14490.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/5b/5b219c56-0894-475f-840e-1fca0e8ae9cc?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "ducato",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 24990.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (83,400/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 23,
+    "market_median_eur": 22900,
+    "price_pct_vs_median": -36.7,
     "is_underpriced": true
   },
   {
@@ -5817,6 +6655,39 @@
     "market_sample_size": 120,
     "market_median_eur": 20950,
     "price_pct_vs_median": -28.6,
+    "is_underpriced": true
+  },
+  {
+    "title": "Opel Movano C *2.2 Diesel (BlueHDi)*L3H2*Guter Zustand",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-c-2-2-diesel-bluehdi-l3h2-guter-zustand/3425938386-216-29928",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2023,
+    "km": 29846,
+    "price_eur": 15500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/60/60f9cf67-2359-4611-a73d-fd0eba582288?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 26000.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 60,
+    "market_median_eur": 18500,
+    "price_pct_vs_median": -16.2,
     "is_underpriced": true
   },
   {
@@ -5938,6 +6809,45 @@
     "is_underpriced": true
   },
   {
+    "title": "Renault Master III Kasten 3,5t BLUE dCi 150 ENERGY L3H2",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-kasten-3-5t-blue-dci-150-energy-l3h2/3435936045-216-8090",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2024,
+    "km": 160000,
+    "price_eur": 16850.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/52/525b75de-7190-40c2-8fae-763417b62cb8?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 27350.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (80,000/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 35,
+    "market_median_eur": 21600,
+    "price_pct_vs_median": -22.0,
+    "is_underpriced": true
+  },
+  {
     "title": "Renault Master 2.3DCi 135PK L3H2 Maxi | Euro 6 | Airco | Cru",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2405385072-renault-master-2-3dci-135pk-l3h2-maxi-euro-6-airco-cru",
     "source": "marktplaats",
@@ -5976,45 +6886,6 @@
     "market_sample_size": 108,
     "market_median_eur": 23898,
     "price_pct_vs_median": -20.9,
-    "is_underpriced": true
-  },
-  {
-    "title": "Opel Movano L3H2 Edition Klima Tempo Schwingsitz  Mwst",
-    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-l3h2-edition-klima-tempo-schwingsitz-mwst/3391594960-216-23801",
-    "source": "kleinanzeigen_de",
-    "country": "de",
-    "year": 2023,
-    "km": 78600,
-    "price_eur": 18999.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/d2/d21419ca-cd2a-4f84-8dbf-53e7a2bbfcf3?rule=$_2.AUTO"
-    ],
-    "model_group": "renault_master_grp",
-    "variant": "L3H2",
-    "classification_confidence": "high",
-    "matched_token": "movano",
-    "score": 49,
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 29499.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (26,200/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 13,
-    "market_median_eur": 22500,
-    "price_pct_vs_median": -15.6,
     "is_underpriced": true
   },
   {
@@ -6201,6 +7072,226 @@
     "is_underpriced": true
   },
   {
+    "title": "Renault Master 3 2.3Diesel  H2/H3 Maxi",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-3-2-3diesel-h2-h3-maxi/3433012808-216-3371",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2016,
+    "km": 179058,
+    "price_eur": 8900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/3a/3a3f8ca1-7bcf-4f7c-ae0f-3413738f4f49?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 47,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 19400.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 46,
+    "market_median_eur": 10824,
+    "price_pct_vs_median": -17.8,
+    "is_underpriced": true
+  },
+  {
+    "title": "Renault Master III Kombi L2H2 3,3t 9Sitzer Klima",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-kombi-l2h2-3-3t-9sitzer-klima/3435232347-216-24679",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2016,
+    "km": 212000,
+    "price_eur": 11900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/2b/2b54e6ef-6313-443c-ad44-04ce8c46c9c8?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 91,
+    "est_conversion_cost_eur": 2500,
+    "est_conversion_cost_low_eur": 1500,
+    "est_conversion_cost_high_eur": 3500,
+    "conversion_effort": "minimal",
+    "total_project_cost_eur": 14400.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (21,200/yr) \u2014 above-average wear",
+        "severity": "warn"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (212,000) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 46,
+    "market_median_eur": 10824,
+    "price_pct_vs_median": 9.9,
+    "is_underpriced": false
+  },
+  {
+    "title": "Opel Movano B Kasten/Kombi HKa L2H2 3,5t",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-b-kasten-kombi-hka-l2h2-3-5t/3436922867-216-1345",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 156525,
+    "price_eur": 13999.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/f9/f97a46a8-5af0-4dc6-8b41-a048b67656eb?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 91,
+    "est_conversion_cost_eur": 2500,
+    "est_conversion_cost_low_eur": 1500,
+    "est_conversion_cost_high_eur": 3500,
+    "conversion_effort": "minimal",
+    "total_project_cost_eur": 16499.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (31,305/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (156,525) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 84,
+    "market_median_eur": 15895,
+    "price_pct_vs_median": -11.9,
+    "is_underpriced": false
+  },
+  {
+    "title": "Opel Movano B 2,3 Kombi L2H2 9 Sitze T\u00dcV 06/2028",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-b-2-3-kombi-l2h2-9-sitze-tuev-06-2028/3435779187-216-8897",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2017,
+    "km": 128000,
+    "price_eur": 14900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/61/610f670e-2b04-44b2-a404-850ce1849b3c?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 91,
+    "est_conversion_cost_eur": 2500,
+    "est_conversion_cost_low_eur": 1500,
+    "est_conversion_cost_high_eur": 3500,
+    "conversion_effort": "minimal",
+    "total_project_cost_eur": 17400.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 62,
+    "market_median_eur": 11450,
+    "price_pct_vs_median": 30.1,
+    "is_underpriced": false
+  },
+  {
+    "title": "Fiat Ducato 2.3 Hochr.-Kombi 33 150 L2H2 9 Sitze",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/fiat-ducato-2-3-hochr-kombi-33-150-l2h2-9-sitze/3438426005-216-2116",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2017,
+    "km": 108206,
+    "price_eur": 18900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/00/007d2134-979a-4c8d-9ba0-8a4f0704c2fa?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "ducato",
+    "score": 91,
+    "est_conversion_cost_eur": 2500,
+    "est_conversion_cost_low_eur": 1500,
+    "est_conversion_cost_high_eur": 3500,
+    "conversion_effort": "minimal",
+    "total_project_cost_eur": 21400.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 88,
+    "market_median_eur": 10950,
+    "price_pct_vs_median": 72.6,
+    "is_underpriced": false
+  },
+  {
+    "title": "Opel Movano B Kasten/Kombi GKa L3H3 3,5t/Kamera/Navi",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-b-kasten-kombi-gka-l3h3-3-5t-kamera-navi/3433721726-216-26389",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 76000,
+    "price_eur": 18999.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/70/70351201-929c-46d1-81dc-cab5f49523f8?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L3H3",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 86,
+    "est_conversion_cost_eur": 2500,
+    "est_conversion_cost_low_eur": 1500,
+    "est_conversion_cost_high_eur": 3500,
+    "conversion_effort": "minimal",
+    "total_project_cost_eur": 21499.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 84,
+    "market_median_eur": 15895,
+    "price_pct_vs_median": 19.5,
+    "is_underpriced": false
+  },
+  {
     "title": "Volkswagen Transporter 2.0 TDI L2H2 Highline Dubbel Cabine -",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2407479791-volkswagen-transporter-2-0-tdi-l2h2-highline-dubbel-cabine",
     "source": "marktplaats",
@@ -6337,6 +7428,50 @@
     "is_underpriced": false
   },
   {
+    "title": "Citro\u00ebn Jumper 33 L2H2 | 9 Sitzer AHK Navi 96 kW (131...",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/citro-n-jumper-33-l2h2-9-sitzer-ahk-navi-96-kw-131-/3432119499-216-5923",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2016,
+    "km": 230000,
+    "price_eur": 9520.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/d2/d2e45cd5-1cf9-461e-acdb-d4119aeba140?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 73,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 20020.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (23,000/yr) \u2014 above-average wear",
+        "severity": "warn"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (230,000) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 68,
+    "market_median_eur": 10250,
+    "price_pct_vs_median": -7.1,
+    "is_underpriced": false
+  },
+  {
     "title": "Peugeot Boxer 2.0d 6 Sitze L2H2 klima tronic",
     "url": "https://www.kleinanzeigen.de/s-anzeige/peugeot-boxer-2-0d-6-sitze-l2h2-klima-tronic/3438603754-216-9658",
     "source": "kleinanzeigen_de",
@@ -6364,9 +7499,9 @@
     "total_project_cost_eur": 25000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 28,
-    "market_median_eur": 12250,
-    "price_pct_vs_median": 18.4,
+    "market_sample_size": 103,
+    "market_median_eur": 11990,
+    "price_pct_vs_median": 20.9,
     "is_underpriced": false
   },
   {
@@ -6957,9 +8092,9 @@
     "total_project_cost_eur": 26490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 30,
-    "market_median_eur": 11244,
-    "price_pct_vs_median": 42.2,
+    "market_sample_size": 107,
+    "market_median_eur": 11000,
+    "price_pct_vs_median": 45.4,
     "is_underpriced": false
   },
   {
@@ -7500,6 +8635,45 @@
     "is_underpriced": false
   },
   {
+    "title": "Renault Master 2.3 Blue dCi L2H2 Klima*RFK*3-Sitzer*LED*Kasten*",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-2-3-blue-dci-l2h2-klima-rfk-3-sitzer-led-kasten-/3420287809-216-19380",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2022,
+    "km": 111000,
+    "price_eur": 15890.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/2c/2ca8d3ab-71f5-4b8a-b9fd-8a5a4c3b47bc?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 59,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 26390.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (27,750/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 77,
+    "market_median_eur": 17250,
+    "price_pct_vs_median": -7.9,
+    "is_underpriced": false
+  },
+  {
     "title": "Peugeot Boxer 2.0 BlueHDI L2H2 Pro 3p Lease \u20ac276 p/m, Impe",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2405778726-peugeot-boxer-2-0-bluehdi-l2h2-pro-3p-lease-276-p-m-impe",
     "source": "marktplaats",
@@ -7568,6 +8742,39 @@
     "market_sample_size": 112,
     "market_median_eur": 18800,
     "price_pct_vs_median": -12.8,
+    "is_underpriced": false
+  },
+  {
+    "title": "Renault Master L2H2 2.3 dCi Klima 3-Sitzer",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-l2h2-2-3-dci-klima-3-sitzer/3438909589-216-22047",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2022,
+    "km": 27122,
+    "price_eur": 23480.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/2a/2a1d6d75-acc2-4171-aeaf-79444812ea1e?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 59,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 33980.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 77,
+    "market_median_eur": 17250,
+    "price_pct_vs_median": 36.1,
     "is_underpriced": false
   },
   {
@@ -7712,6 +8919,45 @@
     "market_sample_size": 90,
     "market_median_eur": 26900,
     "price_pct_vs_median": 48.3,
+    "is_underpriced": false
+  },
+  {
+    "title": "Mercedes Sprinter 314 CDI,L2H2,1.H,3S,Regale,MwSt,T\u00dcV+Service Neu",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/mercedes-sprinter-314-cdi-l2h2-1-h-3s-regale-mwst-tuev-service-neu/3406174626-216-2469",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2018,
+    "km": 191000,
+    "price_eur": 16699.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/a6/a6492ba3-6c32-402d-bf6f-de3c2fe6949d?rule=$_2.AUTO"
+    ],
+    "model_group": "mercedes_sprinter",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "sprinter",
+    "score": 56,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 27199.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (23,875/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 30,
+    "market_median_eur": 14750,
+    "price_pct_vs_median": 13.2,
     "is_underpriced": false
   },
   {
@@ -8820,9 +10066,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 11,
-    "market_median_eur": 28976,
-    "price_pct_vs_median": -6.8,
+    "market_sample_size": 25,
+    "market_median_eur": 27358,
+    "price_pct_vs_median": -1.3,
     "is_underpriced": false
   },
   {
@@ -9130,6 +10376,45 @@
     "is_underpriced": false
   },
   {
+    "title": "Mercedes-Benz Sprinter 317 CDI L2H2 | 1. Hand | nur 94.000 | MwSt",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/mercedes-benz-sprinter-317-cdi-l2h2-1-hand-nur-94-000-mwst/3423561926-216-6621",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2022,
+    "km": 93686,
+    "price_eur": 30900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/ac/ac944797-8daa-4f3e-a216-4b79f566c11d?rule=$_2.AUTO"
+    ],
+    "model_group": "mercedes_sprinter",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "sprinter",
+    "score": 56,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 41400.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (23,421/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 25,
+    "market_median_eur": 27358,
+    "price_pct_vs_median": 12.9,
+    "is_underpriced": false
+  },
+  {
     "title": "Mercedes-Benz Sprinter 319CDi 3.0V6 L2H2 Edition | 10\" Navig",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2406491959-mercedes-benz-sprinter-319cdi-3-0v6-l2h2-edition-10-navig",
     "source": "marktplaats",
@@ -9397,6 +10682,39 @@
     "is_underpriced": false
   },
   {
+    "title": "Mercedes-Benz Sprinter 315 Kasten L2H2 FWD*Klima*Vorr\u00fcst. AHK*",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/mercedes-benz-sprinter-315-kasten-l2h2-fwd-klima-vorruest-ahk-/3415432645-216-3877",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2024,
+    "km": 30000,
+    "price_eur": 38068.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/16/16e14f5c-38fc-4616-bd34-edc4c6520bb7?rule=$_2.AUTO"
+    ],
+    "model_group": "mercedes_sprinter",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "sprinter",
+    "score": 56,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 48568.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 20,
+    "market_median_eur": 40448,
+    "price_pct_vs_median": -5.9,
+    "is_underpriced": false
+  },
+  {
     "title": "Mercedes-Benz Sprinter 319 3.0 CDI L2H2 / 7G-Tronic / Laadkl",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2411356829-mercedes-benz-sprinter-319-3-0-cdi-l2h2-7g-tronic-laadkl",
     "source": "marktplaats",
@@ -9621,6 +10939,45 @@
     "is_underpriced": false
   },
   {
+    "title": "Mercedes-Benz Sprinter 317 CDI Kasten Standard Hoch L2H2 Pro",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/mercedes-benz-sprinter-317-cdi-kasten-standard-hoch-l2h2-pro/3407527303-216-1745",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2025,
+    "km": 25800,
+    "price_eur": 45672.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/b7/b70debee-67bf-48e1-9dbe-63219e3064f3?rule=$_2.AUTO"
+    ],
+    "model_group": "mercedes_sprinter",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "sprinter",
+    "score": 56,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 56172.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (25,800/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 13,
+    "market_median_eur": 45672,
+    "price_pct_vs_median": 0.0,
+    "is_underpriced": false
+  },
+  {
     "title": "Ford transit. L2H2",
     "url": "https://www.2dehands.be/v/auto-s/bestelwagens-en-lichte-vracht/m2409262194-ford-transit-l2h2",
     "source": "2dehands",
@@ -9651,6 +11008,39 @@
     "market_median_eur": null,
     "market_sample_size": 0,
     "price_pct_vs_median": null,
+    "is_underpriced": false
+  },
+  {
+    "title": "Ford Transit L2H2",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/ford-transit-l2h2/3439310247-216-4356",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2020,
+    "km": 76500,
+    "price_eur": 17999.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/b1/b1846818-79ca-46dd-a9bf-b4de1021864b?rule=$_2.AUTO"
+    ],
+    "model_group": "ford_transit_l2h2",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "transit",
+    "score": 55,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 28499.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 19,
+    "market_median_eur": 14700,
+    "price_pct_vs_median": 22.4,
     "is_underpriced": false
   },
   {
@@ -9686,6 +11076,45 @@
     "market_sample_size": 13,
     "market_median_eur": 13500,
     "price_pct_vs_median": 40.4,
+    "is_underpriced": false
+  },
+  {
+    "title": "Volkswagen Crafter L2H2 Kasten MR 1.HAND/KLIMA/SHZ/R-CAM",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/volkswagen-crafter-l2h2-kasten-mr-1-hand-klima-shz-r-cam/3439523397-216-3033",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 156056,
+    "price_eur": 21790.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/a0/a071a196-0617-42b1-85be-3b832a4d6c4a?rule=$_2.AUTO"
+    ],
+    "model_group": "vw_crafter_tge",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "crafter",
+    "score": 55,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 32290.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (31,211/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 70,
+    "market_median_eur": 20494,
+    "price_pct_vs_median": 6.3,
     "is_underpriced": false
   },
   {
@@ -9757,9 +11186,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 27,
-    "market_median_eur": 21980,
-    "price_pct_vs_median": 8.7,
+    "market_sample_size": 70,
+    "market_median_eur": 20494,
+    "price_pct_vs_median": 16.6,
     "is_underpriced": false
   },
   {
@@ -9796,9 +11225,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 27,
-    "market_median_eur": 21980,
-    "price_pct_vs_median": 17.8,
+    "market_sample_size": 70,
+    "market_median_eur": 20494,
+    "price_pct_vs_median": 26.4,
     "is_underpriced": false
   },
   {
@@ -9940,6 +11369,39 @@
     "is_underpriced": false
   },
   {
+    "title": "Citro\u00ebn Jumper L3H2 3-SITZER/NAVI/KAMERA/AHK/TEMPOMAT",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/citro-n-jumper-l3h2-3-sitzer-navi-kamera-ahk-tempomat/3436790418-216-20297",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 49895,
+    "price_eur": 16490.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/2c/2c94c01f-2235-4bc9-910b-97e6deb2fe17?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 54,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 26990.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 70,
+    "market_median_eur": 14625,
+    "price_pct_vs_median": 12.8,
+    "is_underpriced": false
+  },
+  {
     "title": "Peugeot Boxer L3H2 PLATEAU BASCULANT ELECTRIQUE 3PLACES",
     "url": "https://www.2dehands.be/v/auto-s/bestelwagens-en-lichte-vracht/m2408417213-peugeot-boxer-l3h2-plateau-basculant-electrique-3places",
     "source": "2dehands",
@@ -10045,6 +11507,158 @@
     "is_underpriced": false
   },
   {
+    "title": "citr\u00f6n Jumper L2 H2",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/citroen-jumper-l2-h2/3434475305-216-2275",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2017,
+    "km": 129000,
+    "price_eur": 9900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/bf/bf65d2ce-fb0e-4d11-8572-779a06cdf4fa?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 20400.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 88,
+    "market_median_eur": 10950,
+    "price_pct_vs_median": -9.6,
+    "is_underpriced": false
+  },
+  {
+    "title": "Fiat Ducato Hochr.-Kasten 33 130 L2H2 RS: 3450 mm",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/fiat-ducato-hochr-kasten-33-130-l2h2-rs-3450-mm/3437761351-216-9043",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2018,
+    "km": 222475,
+    "price_eur": 9999.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/e5/e5f50d10-347a-47a6-be05-71b5259eea5c?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "ducato",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 20499.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (27,809/yr) \u2014 above-average wear",
+        "severity": "warn"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (222,475) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 107,
+    "market_median_eur": 11000,
+    "price_pct_vs_median": -9.1,
+    "is_underpriced": false
+  },
+  {
+    "title": "Opel Movano H2 L2",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-h2-l2/3431235640-216-6403",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2018,
+    "km": 259000,
+    "price_eur": 10999.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 21499.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (32,375/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (259,000) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 79,
+    "market_median_eur": 12300,
+    "price_pct_vs_median": -10.6,
+    "is_underpriced": false
+  },
+  {
+    "title": "Citroen Jumper l2H2",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/citroen-jumper-l2h2/3435790726-216-3346",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2016,
+    "km": 165000,
+    "price_eur": 11000.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/e6/e60f08ee-21b3-4741-9c59-9848ad0e53a7?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 21500.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 68,
+    "market_median_eur": 10250,
+    "price_pct_vs_median": 7.3,
+    "is_underpriced": false
+  },
+  {
     "title": "Fiat Ducato 35 Panorama L2H2 1Hand*Klima*Tempomat*",
     "url": "https://www.kleinanzeigen.de/s-anzeige/fiat-ducato-35-panorama-l2h2-1hand-klima-tempomat-/3439360705-216-3380",
     "source": "kleinanzeigen_de",
@@ -10083,9 +11697,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 23,
-    "market_median_eur": 11499,
-    "price_pct_vs_median": 0.0,
+    "market_sample_size": 88,
+    "market_median_eur": 10950,
+    "price_pct_vs_median": 5.0,
     "is_underpriced": false
   },
   {
@@ -10151,9 +11765,9 @@
     "total_project_cost_eur": 22490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 30,
-    "market_median_eur": 11244,
-    "price_pct_vs_median": 6.6,
+    "market_sample_size": 107,
+    "market_median_eur": 11000,
+    "price_pct_vs_median": 9.0,
     "is_underpriced": false
   },
   {
@@ -10263,6 +11877,72 @@
     "is_underpriced": false
   },
   {
+    "title": "Citroen Jumper L2H2 BlueHDi 130",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/citroen-jumper-l2h2-bluehdi-130/3438451259-216-20393",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2018,
+    "km": 83000,
+    "price_eur": 13000.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/07/0742f600-e62b-4784-8a3e-149c3d39a09d?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 23500.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 107,
+    "market_median_eur": 11000,
+    "price_pct_vs_median": 18.2,
+    "is_underpriced": false
+  },
+  {
+    "title": "Citr\u00f6en Jumper L2H2 2.0 BlueHDI 130PS Klima PDC Tempomat MwSt",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/citroeen-jumper-l2h2-2-0-bluehdi-130ps-klima-pdc-tempomat-mwst/3391823043-216-19803",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2018,
+    "km": 154500,
+    "price_eur": 13088.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/fc/fc918acd-b1a5-4f5f-aa0c-fbcd180cde5c?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 23588.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 107,
+    "market_median_eur": 11000,
+    "price_pct_vs_median": 19.0,
+    "is_underpriced": false
+  },
+  {
     "title": "Peugeot Boxer 2.0 BlueHDI L2/H2 130PK PDC AIRCO NAVI CRUISE",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2411838447-peugeot-boxer-2-0-bluehdi-l2-h2-130pk-pdc-airco-navi-cruise",
     "source": "marktplaats",
@@ -10295,6 +11975,78 @@
     "market_sample_size": 98,
     "market_median_eur": 13990,
     "price_pct_vs_median": -3.9,
+    "is_underpriced": false
+  },
+  {
+    "title": "OPEL Movano B 2.3 Diesel L2H2*W\u00dcRTH*Regal*Werkstatt*230V*Kamera*",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-b-2-3-diesel-l2h2-wuerth-regal-werkstatt-230v-kamera-/3391226834-216-8835",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2020,
+    "km": 132850,
+    "price_eur": 13450.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/08/08cc15f1-bd0c-46ff-9bc5-62ae9d16e764?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 23950.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (22,141/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 102,
+    "market_median_eur": 14985,
+    "price_pct_vs_median": -10.2,
+    "is_underpriced": false
+  },
+  {
+    "title": "Peugeot Boxer 2.2 HDI L2H2 Premium Regale AHK Navi Standheizung",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/peugeot-boxer-2-2-hdi-l2h2-premium-regale-ahk-navi-standheizung/3432350975-280-2932",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": null,
+    "km": null,
+    "price_eur": 13490.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/75/75ea47ac-d6f4-4dbb-afad-c6d7bec13841?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "boxer",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 23990.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_median_eur": null,
+    "market_sample_size": 0,
+    "price_pct_vs_median": null,
     "is_underpriced": false
   },
   {
@@ -10358,9 +12110,9 @@
     "total_project_cost_eur": 24299.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 23,
-    "market_median_eur": 11499,
-    "price_pct_vs_median": 20.0,
+    "market_sample_size": 88,
+    "market_median_eur": 10950,
+    "price_pct_vs_median": 26.0,
     "is_underpriced": false
   },
   {
@@ -10432,6 +12184,78 @@
     "is_underpriced": false
   },
   {
+    "title": "Fiat Ducato/L2H2/3,5 t/AHK/Navi/Bluetooth/Klima/Regalsystem",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/fiat-ducato-l2h2-3-5-t-ahk-navi-bluetooth-klima-regalsystem/3439789813-216-2124",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2019,
+    "km": 85400,
+    "price_eur": 13900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/b1/b16da578-d8df-425b-923e-a9343b947a2d?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "ducato",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 24400.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 103,
+    "market_median_eur": 11990,
+    "price_pct_vs_median": 15.9,
+    "is_underpriced": false
+  },
+  {
+    "title": "Peugeot Boxer Kasten Hochraum 335 L2H2 Premium BlueHDi AHK Klima",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/peugeot-boxer-kasten-hochraum-335-l2h2-premium-bluehdi-ahk-klima-/3436229903-216-18924",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2020,
+    "km": 124300,
+    "price_eur": 13999.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/2c/2c6fc64a-288d-4289-aa7f-947a02c44f40?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "boxer",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 24499.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (20,716/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 86,
+    "market_median_eur": 13950,
+    "price_pct_vs_median": 0.4,
+    "is_underpriced": false
+  },
+  {
     "title": "Fiat Ducato L2H2 1st eig ohboek 41.000 km airco camera gps",
     "url": "https://www.2dehands.be/v/auto-s/bestelwagens-en-lichte-vracht/m2405017583-fiat-ducato-l2h2-1st-eig-ohboek-41-000-km-airco-camera-gps",
     "source": "2dehands",
@@ -10464,6 +12288,45 @@
     "market_sample_size": 109,
     "market_median_eur": 14500,
     "price_pct_vs_median": -0.3,
+    "is_underpriced": false
+  },
+  {
+    "title": "Peugeot Peugeot Boxer Kasten L2H2*KLIMA*KAM*PDC*1HAND",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/peugeot-peugeot-boxer-kasten-l2h2-klima-kam-pdc-1hand/3433425087-216-6093",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 136916,
+    "price_eur": 14480.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/1e/1e358a16-c30e-4acd-8658-aaaf73098ec6?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "boxer",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 24980.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (27,383/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 70,
+    "market_median_eur": 14625,
+    "price_pct_vs_median": -1.0,
     "is_underpriced": false
   },
   {
@@ -10505,6 +12368,39 @@
     "market_sample_size": 94,
     "market_median_eur": 16500,
     "price_pct_vs_median": -12.1,
+    "is_underpriced": false
+  },
+  {
+    "title": "Peugeot  Boxer  L2 H2 T\u00dcV Neu, 71.400 km, R\u00fcckfahrkamera",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/peugeot-boxer-l2-h2-tuev-neu-71-400-km-rueckfahrkamera/3439793608-216-1005",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2019,
+    "km": 71460,
+    "price_eur": 14600.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/1d/1d4fa1d6-018e-439e-ab55-b80d5faafd83?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "boxer",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 25100.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 103,
+    "market_median_eur": 11990,
+    "price_pct_vs_median": 21.8,
     "is_underpriced": false
   },
   {
@@ -10575,6 +12471,45 @@
     "market_sample_size": 98,
     "market_median_eur": 13990,
     "price_pct_vs_median": 6.5,
+    "is_underpriced": false
+  },
+  {
+    "title": "OPEL MOVANO B 2.3D L2 H2 KLIMA W\u00fcrth Regale 115Tkm Mwst 2021",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-b-2-3d-l2-h2-klima-wuerth-regale-115tkm-mwst-2021/3437447039-216-1386",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 115400,
+    "price_eur": 14900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/de/de7d5694-91c9-4ae8-b51b-472272120cac?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 25400.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (23,080/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 84,
+    "market_median_eur": 15895,
+    "price_pct_vs_median": -6.3,
     "is_underpriced": false
   },
   {
@@ -10650,6 +12585,45 @@
     "is_underpriced": false
   },
   {
+    "title": "Renault Interstar NV400 L2H2 T\u00fcvNeu+Service AHK 1Hand",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-interstar-nv400-l2h2-tuevneu-service-ahk-1hand/3437918488-216-1857",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2022,
+    "km": 147865,
+    "price_eur": 14980.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/6c/6cc8cbef-7952-4661-a09c-5b92c1a231be?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "interstar",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 25480.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (36,966/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 77,
+    "market_median_eur": 17250,
+    "price_pct_vs_median": -13.2,
+    "is_underpriced": false
+  },
+  {
     "title": "Opel Movano GB 2.3 Cdti Biturbo 145pk 3500 L2h2 FWD S&S",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2410746765-opel-movano-gb-2-3-cdti-biturbo-145pk-3500-l2h2-fwd-s-s",
     "source": "marktplaats",
@@ -10686,6 +12660,45 @@
     "market_sample_size": 89,
     "market_median_eur": 15950,
     "price_pct_vs_median": -6.0,
+    "is_underpriced": false
+  },
+  {
+    "title": "Citro\u00ebn Jumper 2,2 GR.Kasten 33 L2H2 BlueHDi 165*SORTIMO",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/citro-n-jumper-2-2-gr-kasten-33-l2h2-bluehdi-165-sortimo/3431480548-216-4557",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 143750,
+    "price_eur": 15100.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/3c/3c1f4516-ddcb-4d99-8e2e-81df49bbea28?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 25600.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (28,750/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 70,
+    "market_median_eur": 14625,
+    "price_pct_vs_median": 3.2,
     "is_underpriced": false
   },
   {
@@ -10792,6 +12805,84 @@
     "is_underpriced": false
   },
   {
+    "title": "Renault Master III Kasten L2H2 HKa 3,5t",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-kasten-l2h2-hka-3-5t/3437257752-216-1096",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 148370,
+    "price_eur": 15900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/42/42527fba-127a-4cba-8089-9d285933d8ef?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 26400.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (29,674/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 84,
+    "market_median_eur": 15895,
+    "price_pct_vs_median": 0.0,
+    "is_underpriced": false
+  },
+  {
+    "title": "Renault Trafic 2.0 DCI Kasten L2H2 3,0t Komfort | NAVI",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-trafic-2-0-dci-kasten-l2h2-3-0t-komfort-navi/3438479369-216-1309",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 103630,
+    "price_eur": 15900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/0a/0a4c0f45-b1ab-472f-8826-95a71f03e21a?rule=$_2.AUTO"
+    ],
+    "model_group": "vivaro_trafic_primastar_l2",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "trafic",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 26400.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (20,726/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 67,
+    "market_median_eur": 14161,
+    "price_pct_vs_median": 12.3,
+    "is_underpriced": false
+  },
+  {
     "title": "Citroen Jumper bestel 33 2.2 BlueHDi 140 L2H2 CAMERA*AIRCO*",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2407767802-citroen-jumper-bestel-33-2-2-bluehdi-140-l2h2-camera-airco",
     "source": "marktplaats",
@@ -10860,6 +12951,39 @@
     "is_underpriced": false
   },
   {
+    "title": "Renault Master 2.3 dCi Diesel L2H2 Kam|Klima|PDC",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-2-3-dci-diesel-l2h2-kam-klima-pdc/3436737085-216-20297",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 95135,
+    "price_eur": 15989.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/77/77510bba-466f-4cc3-8d70-098bad22db44?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 26489.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 84,
+    "market_median_eur": 15895,
+    "price_pct_vs_median": 0.6,
+    "is_underpriced": false
+  },
+  {
     "title": "Citroen Jumper 2.2 BlueHDi 140 L2H2",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2411566435-citroen-jumper-2-2-bluehdi-140-l2h2",
     "source": "marktplaats",
@@ -10893,6 +13017,39 @@
     "is_underpriced": false
   },
   {
+    "title": "Renault Trafic L2H2 Hochdach Mwst AHK A/C Service Neu",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-trafic-l2h2-hochdach-mwst-ahk-a-c-service-neu/3436817464-216-9196",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2018,
+    "km": 86000,
+    "price_eur": 15990.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/5e/5e15299c-f5e7-4200-811a-23b08b192a0b?rule=$_2.AUTO"
+    ],
+    "model_group": "vivaro_trafic_primastar_l2",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "trafic",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 26490.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 93,
+    "market_median_eur": 12699,
+    "price_pct_vs_median": 25.9,
+    "is_underpriced": false
+  },
+  {
     "title": "Fiat Ducato Elektro L2H2 Autom. 29tkm Garantie",
     "url": "https://www.kleinanzeigen.de/s-anzeige/fiat-ducato-elektro-l2h2-autom-29tkm-garantie/3399564688-216-8620",
     "source": "kleinanzeigen_de",
@@ -10920,9 +13077,9 @@
     "total_project_cost_eur": 26499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 16,
-    "market_median_eur": 14850,
-    "price_pct_vs_median": 7.7,
+    "market_sample_size": 70,
+    "market_median_eur": 14625,
+    "price_pct_vs_median": 9.4,
     "is_underpriced": false
   },
   {
@@ -11132,6 +13289,195 @@
     "is_underpriced": false
   },
   {
+    "title": "Renault Master III Kasten L2H2 HKa 3,3t Klima 1.Hand",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-kasten-l2h2-hka-3-3t-klima-1-hand/3437956648-216-7037",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2022,
+    "km": 103900,
+    "price_eur": 17200.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/9b/9b92dd24-120d-4e4d-bbe6-1ddb87a114ab?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 27700.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (25,975/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 77,
+    "market_median_eur": 17250,
+    "price_pct_vs_median": -0.3,
+    "is_underpriced": false
+  },
+  {
+    "title": "Renault MASTER III L2H2 HKa 3,3t NAVI/KAMERA/AHK/TEMPOMA",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-l2h2-hka-3-3t-navi-kamera-ahk-tempoma/3433119200-216-795",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2020,
+    "km": 96486,
+    "price_eur": 17400.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/63/633d6432-c049-40b2-aeb5-840214a79174?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 27900.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 102,
+    "market_median_eur": 14985,
+    "price_pct_vs_median": 16.1,
+    "is_underpriced": false
+  },
+  {
+    "title": "Fiat Ducato Hochr.-Kasten 33 140 L2H2 AHK DAB+ TEMP",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/fiat-ducato-hochr-kasten-33-140-l2h2-ahk-dab-temp/3351761789-216-18038",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 110145,
+    "price_eur": 17450.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/8c/8c5aaeca-3290-49c5-b6c4-cbf91aa37748?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "ducato",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 27950.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (22,029/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 70,
+    "market_median_eur": 14625,
+    "price_pct_vs_median": 19.3,
+    "is_underpriced": false
+  },
+  {
+    "title": "Fiat Ducato L2H2 Automatik T\u00dcV Service NEU",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/fiat-ducato-l2h2-automatik-tuev-service-neu/3437215737-216-19880",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 120000,
+    "price_eur": 17499.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/e4/e4e14cc9-a1d4-4687-a187-7a3857831fc1?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "ducato",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 27999.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (24,000/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 70,
+    "market_median_eur": 14625,
+    "price_pct_vs_median": 19.7,
+    "is_underpriced": false
+  },
+  {
+    "title": "Renault Trafic Kasten L2H2 3,0t Komfort |HOCHDACH|NAVI",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-trafic-kasten-l2h2-3-0t-komfort-hochdach-navi/3438462251-216-1309",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2022,
+    "km": 111130,
+    "price_eur": 17500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/b6/b69f9319-006e-4f6f-b17a-f614d889ae25?rule=$_2.AUTO"
+    ],
+    "model_group": "vivaro_trafic_primastar_l2",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "trafic",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 28000.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (27,782/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 51,
+    "market_median_eur": 15700,
+    "price_pct_vs_median": 11.5,
+    "is_underpriced": false
+  },
+  {
     "title": "Renault Master 2.3 dCi 135 PK L2 H2 Airco Trekhaak Camera",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2411216673-renault-master-2-3-dci-135-pk-l2-h2-airco-trekhaak-camera",
     "source": "marktplaats",
@@ -11192,9 +13538,9 @@
     "total_project_cost_eur": 28400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 19,
-    "market_median_eur": 14200,
-    "price_pct_vs_median": 26.1,
+    "market_sample_size": 80,
+    "market_median_eur": 13886,
+    "price_pct_vs_median": 28.9,
     "is_underpriced": false
   },
   {
@@ -11455,6 +13801,39 @@
     "is_underpriced": false
   },
   {
+    "title": "Renault Master l2h2",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-l2h2/3435089665-216-16555",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 85000,
+    "price_eur": 18500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/12/12e74657-668c-4e38-a5fc-db529f1c174e?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 29000.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 84,
+    "market_median_eur": 15895,
+    "price_pct_vs_median": 16.4,
+    "is_underpriced": false
+  },
+  {
     "title": "Renault Master 2.3 dCi 135 PK L2H2 servicewagen Inrichting",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2407751543-renault-master-2-3-dci-135-pk-l2h2-servicewagen-inrichting",
     "source": "marktplaats",
@@ -11592,6 +13971,72 @@
     "market_sample_size": 94,
     "market_median_eur": 16500,
     "price_pct_vs_median": 17.9,
+    "is_underpriced": false
+  },
+  {
+    "title": "Renault Master III Kasten L2H2 HKa 3,3t",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-kasten-l2h2-hka-3-3t/3437589473-216-2588",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 57300,
+    "price_eur": 19754.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/d8/d87e8203-4ba2-4cf8-8a1d-c36ca8e811bc?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 30254.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 84,
+    "market_median_eur": 15895,
+    "price_pct_vs_median": 24.3,
+    "is_underpriced": false
+  },
+  {
+    "title": "Renault Master III Kasten L2H2 HKa 3,5t Navi/AHK/Kamera+",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-kasten-l2h2-hka-3-5t-navi-ahk-kamera-/3437550311-216-788",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2020,
+    "km": 55074,
+    "price_eur": 19800.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/8c/8c112e89-67a6-4e7d-88b7-4f9cdcc5f060?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 30300.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 102,
+    "market_median_eur": 14985,
+    "price_pct_vs_median": 32.1,
     "is_underpriced": false
   },
   {
@@ -11776,6 +14221,78 @@
     "is_underpriced": false
   },
   {
+    "title": "Renault Master III Kasten L2H2 HKa 3,3t *BT*MWST*KLIMA*",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-kasten-l2h2-hka-3-3t-bt-mwst-klima-/3438350281-216-2998",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 99990,
+    "price_eur": 19990.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/ce/ce37b653-7595-4f80-a24d-48a38944796d?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 30490.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 84,
+    "market_median_eur": 15895,
+    "price_pct_vs_median": 25.8,
+    "is_underpriced": false
+  },
+  {
+    "title": "Renault Master 2.3 D L2H2 AUTOMATIK AHK NAVI CAM LED PDC",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-2-3-d-l2h2-automatik-ahk-navi-cam-led-pdc/3436010067-216-612",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2020,
+    "km": 123764,
+    "price_eur": 19990.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/6f/6fd0bcff-215a-414a-90e9-cd241c06467a?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 30490.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (20,627/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 102,
+    "market_median_eur": 14985,
+    "price_pct_vs_median": 33.4,
+    "is_underpriced": false
+  },
+  {
     "title": "Citroen Jumper 2.2 BlueHDi 120PK L2H2 2023 <20700km> NIEUWST",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2405791216-citroen-jumper-2-2-bluehdi-120pk-l2h2-2023-20700km-nieuwst",
     "source": "marktplaats",
@@ -11885,6 +14402,45 @@
     "is_underpriced": false
   },
   {
+    "title": "Opel Movano B L2H2 KLIMA BOTT-SCHRANK AHK LEITER EUR6",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-b-l2h2-klima-bott-schrank-ahk-leiter-eur6/3437668191-216-5976",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 119000,
+    "price_eur": 21490.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/7a/7a9e72f7-d81e-4b1d-a774-483b0d959e9d?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 31990.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (23,800/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 84,
+    "market_median_eur": 15895,
+    "price_pct_vs_median": 35.2,
+    "is_underpriced": false
+  },
+  {
     "title": "Opel Movano GB 2.2 Diesel 120pk L2h2 2023 Zwart",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2411408972-opel-movano-gb-2-2-diesel-120pk-l2h2-2023-zwart",
     "source": "marktplaats",
@@ -11980,9 +14536,9 @@
     "total_project_cost_eur": 33000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 8,
-    "market_median_eur": 24310,
-    "price_pct_vs_median": -7.4,
+    "market_sample_size": 35,
+    "market_median_eur": 21600,
+    "price_pct_vs_median": 4.2,
     "is_underpriced": false
   },
   {
@@ -12152,9 +14708,9 @@
     "total_project_cost_eur": 35371.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 8,
-    "market_median_eur": 24310,
-    "price_pct_vs_median": 2.3,
+    "market_sample_size": 35,
+    "market_median_eur": 21600,
+    "price_pct_vs_median": 15.1,
     "is_underpriced": false
   },
   {
@@ -12443,9 +14999,9 @@
     "total_project_cost_eur": 36490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 20,
-    "market_median_eur": 15720,
-    "price_pct_vs_median": 65.3,
+    "market_sample_size": 84,
+    "market_median_eur": 15895,
+    "price_pct_vs_median": 63.5,
     "is_underpriced": false
   },
   {
@@ -12480,9 +15036,42 @@
     "total_project_cost_eur": 37480.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 15,
-    "market_median_eur": 15999,
-    "price_pct_vs_median": 68.6,
+    "market_sample_size": 53,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 74.1,
+    "is_underpriced": false
+  },
+  {
+    "title": "Renault Master FWD Kasten L2H2 3,5t dCi 135 MwSt ausweisb.",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-fwd-kasten-l2h2-3-5t-dci-135-mwst-ausweisb-/2545583317-216-7819",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 88273,
+    "price_eur": 27500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/79/7906df18-3391-428b-9f42-79cdf4a067ab?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 38000.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 84,
+    "market_median_eur": 15895,
+    "price_pct_vs_median": 73.0,
     "is_underpriced": false
   },
   {
@@ -12513,9 +15102,9 @@
     "total_project_cost_eur": 38490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 20,
-    "market_median_eur": 18500,
-    "price_pct_vs_median": 51.3,
+    "market_sample_size": 77,
+    "market_median_eur": 17250,
+    "price_pct_vs_median": 62.3,
     "is_underpriced": false
   },
   {
@@ -12730,6 +15319,39 @@
     "is_underpriced": false
   },
   {
+    "title": "Opel Movano L2H3 2024 9900km",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-l2h3-2024-9900km/3431742324-216-6476",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2024,
+    "km": 9900,
+    "price_eur": 29900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/5a/5a747338-0dd1-4a29-905a-5475939ff1da?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L2H3",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 40400.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 35,
+    "market_median_eur": 21600,
+    "price_pct_vs_median": 38.4,
+    "is_underpriced": false
+  },
+  {
     "title": "Opel Movano 35 2.2 CDTI 140 pk Aut. L2H2 NL Auto/ LED/ Virtu",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2410264388-opel-movano-35-2-2-cdti-140-pk-aut-l2h2-nl-auto-led-virtu",
     "source": "marktplaats",
@@ -12762,6 +15384,39 @@
     "market_sample_size": 90,
     "market_median_eur": 26900,
     "price_pct_vs_median": 11.3,
+    "is_underpriced": false
+  },
+  {
+    "title": "Fiat Ducato L2 H2 103 KW nur 1800 km ! Top Ausstattung !",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/fiat-ducato-l2-h2-103-kw-nur-1800-km-top-ausstattung-/3438513501-216-18404",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2023,
+    "km": 1800,
+    "price_eur": 29999.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/60/60d52520-bffc-4521-8d34-c6d671d6c4d1?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "ducato",
+    "score": 53,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 40499.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 37,
+    "market_median_eur": 17499,
+    "price_pct_vs_median": 71.4,
     "is_underpriced": false
   },
   {
@@ -13116,6 +15771,83 @@
     "market_sample_size": 70,
     "market_median_eur": 27700,
     "price_pct_vs_median": 62.4,
+    "is_underpriced": false
+  },
+  {
+    "title": "Volkswagen Crafter Kasten 35 lang L3H2 Hochdach",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/volkswagen-crafter-kasten-35-lang-l3h2-hochdach/3439208473-216-4891",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2017,
+    "km": 168000,
+    "price_eur": 12990.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/1c/1c9148e1-ea0c-4fe5-b3bc-082ddf4afe04?rule=$_2.AUTO"
+    ],
+    "model_group": "vw_crafter_tge",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "crafter",
+    "score": 51,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 23490.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 38,
+    "market_median_eur": 15250,
+    "price_pct_vs_median": -14.8,
+    "is_underpriced": false
+  },
+  {
+    "title": "Mercedes-Benz Sprinter Kasten 316*L3H2*HochLang*Klima*Kamera*",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/mercedes-benz-sprinter-kasten-316-l3h2-hochlang-klima-kamera-/3438939675-216-30144",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2018,
+    "km": 246900,
+    "price_eur": 15990.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/c7/c7777a4a-2df2-4e7e-8035-5314690322bd?rule=$_2.AUTO"
+    ],
+    "model_group": "mercedes_sprinter",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "sprinter",
+    "score": 51,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 26490.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (30,862/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (246,900) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 30,
+    "market_median_eur": 14750,
+    "price_pct_vs_median": 8.4,
     "is_underpriced": false
   },
   {
@@ -13748,9 +16480,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 35,
-    "market_median_eur": 18000,
-    "price_pct_vs_median": 25.3,
+    "market_sample_size": 80,
+    "market_median_eur": 18650,
+    "price_pct_vs_median": 20.9,
     "is_underpriced": false
   },
   {
@@ -14235,6 +16967,39 @@
     "market_sample_size": 121,
     "market_median_eur": 26800,
     "price_pct_vs_median": -10.8,
+    "is_underpriced": false
+  },
+  {
+    "title": "Volkswagen Crafter 30 Kasten 2.0 TDI MR HD L3H3  Navi Kamer",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/volkswagen-crafter-30-kasten-2-0-tdi-mr-hd-l3h3-navi-kamer/3439574766-216-3129",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2020,
+    "km": 75710,
+    "price_eur": 23940.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/7c/7c972b7b-21b0-45de-b66d-3602c903242c?rule=$_2.AUTO"
+    ],
+    "model_group": "vw_crafter_tge",
+    "variant": "L3H3",
+    "classification_confidence": "high",
+    "matched_token": "crafter",
+    "score": 51,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 34440.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 80,
+    "market_median_eur": 18650,
+    "price_pct_vs_median": 28.4,
     "is_underpriced": false
   },
   {
@@ -17208,6 +19973,45 @@
     "is_underpriced": false
   },
   {
+    "title": "Ford Transit 2.0 TDCi Trend 350 L3 H2 ~ 3,5 t ~ AHK ~ Klima ~TOP~",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/ford-transit-2-0-tdci-trend-350-l3-h2-3-5-t-ahk-klima-top-/3439739801-216-20942",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2019,
+    "km": 168500,
+    "price_eur": 11999.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/c6/c6cafd8a-12e7-4992-8508-b34e5609629c?rule=$_2.AUTO"
+    ],
+    "model_group": "ford_transit_l2h2",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "transit",
+    "score": 50,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 22499.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (24,071/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 26,
+    "market_median_eur": 13900,
+    "price_pct_vs_median": -13.7,
+    "is_underpriced": false
+  },
+  {
     "title": "Ford Transit L3H2 2.0 tdci 1st eig ohboek 2 schuifdeuren",
     "url": "https://www.2dehands.be/v/auto-s/bestelwagens-en-lichte-vracht/m2408600406-ford-transit-l3h2-2-0-tdci-1st-eig-ohboek-2-schuifdeuren",
     "source": "2dehands",
@@ -17346,9 +20150,9 @@
     "total_project_cost_eur": 31500.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 4,
-    "market_median_eur": 15095,
-    "price_pct_vs_median": 39.1,
+    "market_sample_size": 26,
+    "market_median_eur": 13900,
+    "price_pct_vs_median": 51.1,
     "is_underpriced": false
   },
   {
@@ -17621,6 +20425,39 @@
     "market_sample_size": 30,
     "market_median_eur": 26000,
     "price_pct_vs_median": -4.0,
+    "is_underpriced": false
+  },
+  {
+    "title": "Ford Transit L3H2 Doppelkabine, Automatik, 170 PS AT Motor 80.000",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/ford-transit-l3h2-doppelkabine-automatik-170-ps-at-motor-80-000/3435934212-216-7730",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2017,
+    "km": 80000,
+    "price_eur": 24999.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/57/57949fc2-23d0-465d-9ece-76d73d36ead6?rule=$_2.AUTO"
+    ],
+    "model_group": "ford_transit_l2h2",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "transit",
+    "score": 50,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 35499.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 25,
+    "market_median_eur": 11999,
+    "price_pct_vs_median": 108.3,
     "is_underpriced": false
   },
   {
@@ -17935,6 +20772,111 @@
     "is_underpriced": false
   },
   {
+    "title": "Citro\u00ebn Jumper L3H2 1. Hand 85.000 km T\u00dcV 08/2027 AHK MwSt.",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/citro-n-jumper-l3h2-1-hand-85-000-km-tuev-08-2027-ahk-mwst-/3438972531-216-1758",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2016,
+    "km": 85500,
+    "price_eur": 8900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/02/021cde28-b492-488f-aa8e-c0ed5b4feaaf?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 19400.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 68,
+    "market_median_eur": 10250,
+    "price_pct_vs_median": -13.2,
+    "is_underpriced": false
+  },
+  {
+    "title": "Citro\u00ebn jumper L3h2",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/citro-n-jumper-l3h2/3432577745-216-1758",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2016,
+    "km": 165000,
+    "price_eur": 9399.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/f2/f25c62d4-ee60-4534-83bc-c476a896a15f?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 19899.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 68,
+    "market_median_eur": 10250,
+    "price_pct_vs_median": -8.3,
+    "is_underpriced": false
+  },
+  {
+    "title": "Citro\u00ebn Jumper Grossraumkasten 33 L3H2 PROLINE BlueHDi*",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/citro-n-jumper-grossraumkasten-33-l3h2-proline-bluehdi-/3430441021-216-1905",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2019,
+    "km": 148000,
+    "price_eur": 10490.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/16/162a61d2-9568-4741-99ca-887fef6b65b5?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 20990.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (21,142/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 103,
+    "market_median_eur": 11990,
+    "price_pct_vs_median": -12.5,
+    "is_underpriced": false
+  },
+  {
     "title": "Peugeot Boxer 435 2.0 BlueHDI 165pk L3H3 Premium Airco/Navi/",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2409938737-peugeot-boxer-435-2-0-bluehdi-165pk-l3h3-premium-airco-navi",
     "source": "marktplaats",
@@ -18003,9 +20945,9 @@
     "total_project_cost_eur": 22499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 21,
-    "market_median_eur": 10900,
-    "price_pct_vs_median": 10.1,
+    "market_sample_size": 68,
+    "market_median_eur": 10250,
+    "price_pct_vs_median": 17.1,
     "is_underpriced": false
   },
   {
@@ -18042,20 +20984,20 @@
     "is_underpriced": false
   },
   {
-    "title": "Renault Master L3H2 zu verkaufen",
-    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-l3h2-zu-verkaufen/3439546173-216-8238",
+    "title": "Renault Master 2.3 DCI*L3H2*Langstreckenfahrzeug",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-2-3-dci-l3h2-langstreckenfahrzeug/3433148871-216-4769",
     "source": "kleinanzeigen_de",
     "country": "de",
-    "year": 2020,
-    "km": 320733,
-    "price_eur": 12500.0,
+    "year": 2019,
+    "km": 149836,
+    "price_eur": 12300.0,
     "seats": null,
     "emission_standard": null,
     "body_type": null,
     "weight_kg": null,
     "remarks": "",
     "images": [
-      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/32/32a9e2cc-c4a9-4a6c-8dc8-ce8144b63d25?rule=$_2.AUTO"
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/af/afc77277-ab73-41ef-9a6d-461c089547bb?rule=$_2.AUTO"
     ],
     "model_group": "renault_master_grp",
     "variant": "L3H2",
@@ -18066,23 +21008,51 @@
     "est_conversion_cost_low_eur": 7000,
     "est_conversion_cost_high_eur": 14000,
     "conversion_effort": "moderate",
-    "total_project_cost_eur": 23000.0,
-    "risk_score": 3,
+    "total_project_cost_eur": 22800.0,
+    "risk_score": 1,
     "risk_flags": [
       {
-        "code": "very_high_km_per_year",
-        "label": "Very high km/year (53,455/yr) \u2014 highway-thrashed risk",
-        "severity": "high"
-      },
-      {
-        "code": "high_total_km",
-        "label": "High total km (320,733) \u2014 transmission/engine wear risk",
+        "code": "high_km_per_year",
+        "label": "High km/year (21,405/yr) \u2014 above-average wear",
         "severity": "warn"
       }
     ],
-    "market_sample_size": 27,
-    "market_median_eur": 14300,
-    "price_pct_vs_median": -12.6,
+    "market_sample_size": 98,
+    "market_median_eur": 13994,
+    "price_pct_vs_median": -12.1,
+    "is_underpriced": false
+  },
+  {
+    "title": "OPEL MOVANO L3H2",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-l3h2/3416146914-216-8255",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2019,
+    "km": 136000,
+    "price_eur": 13300.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/42/426f3a01-9cac-4484-8d30-aa06306056d3?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 23800.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 98,
+    "market_median_eur": 13994,
+    "price_pct_vs_median": -5.0,
     "is_underpriced": false
   },
   {
@@ -18116,6 +21086,50 @@
     "market_sample_size": 109,
     "market_median_eur": 14500,
     "price_pct_vs_median": -6.9,
+    "is_underpriced": false
+  },
+  {
+    "title": "Renault Master L3H2",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-l3h2/3434531289-216-7531",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2018,
+    "km": 380000,
+    "price_eur": 13500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/47/476659da-beee-418b-9a59-adfe736ffbf7?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 24000.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (47,500/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (380,000) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 79,
+    "market_median_eur": 12300,
+    "price_pct_vs_median": 9.8,
     "is_underpriced": false
   },
   {
@@ -18189,6 +21203,45 @@
     "is_underpriced": false
   },
   {
+    "title": "Citro\u00ebn Jumper Grossraumkasten 33 L3H2 Control BlueHDi",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/citro-n-jumper-grossraumkasten-33-l3h2-control-bluehdi/3431343321-216-6068",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 111000,
+    "price_eur": 13999.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/b3/b3d9bb94-e048-40d4-a811-eebbfb368757?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 24499.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (22,200/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 70,
+    "market_median_eur": 14625,
+    "price_pct_vs_median": -4.3,
+    "is_underpriced": false
+  },
+  {
     "title": "Peugeot Boxer L3H2 - 165 PK - trekhaak - nieuwe banden",
     "url": "https://www.2dehands.be/v/auto-s/bestelwagens-en-lichte-vracht/m2409175385-peugeot-boxer-l3h2-165-pk-trekhaak-nieuwe-banden",
     "source": "2dehands",
@@ -18219,6 +21272,78 @@
     "market_sample_size": 104,
     "market_median_eur": 15625,
     "price_pct_vs_median": -7.2,
+    "is_underpriced": false
+  },
+  {
+    "title": "Renault Master III Kasten L3H2 HKa 3,5t",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-kasten-l3h2-hka-3-5t/3436229991-216-4604",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2022,
+    "km": 129100,
+    "price_eur": 14900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/7a/7a3ea049-e180-444b-8ff4-c1d673c30a68?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 25400.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (32,275/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 77,
+    "market_median_eur": 17250,
+    "price_pct_vs_median": -13.6,
+    "is_underpriced": false
+  },
+  {
+    "title": "Citro\u00ebn Jumper Grossraumkasten 33 L3H2 Business BlueHDi",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/citro-n-jumper-grossraumkasten-33-l3h2-business-bluehdi/3437825699-216-7947",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2019,
+    "km": 112000,
+    "price_eur": 15300.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/a8/a80f910b-4e50-43cf-b18d-8b6b7f4bb031?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 25800.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 103,
+    "market_median_eur": 11990,
+    "price_pct_vs_median": 27.6,
     "is_underpriced": false
   },
   {
@@ -18305,6 +21430,39 @@
     "is_underpriced": false
   },
   {
+    "title": "Fiat Ducato 2.3*140ps*L3H2*CarPlay*Kamera*Klimaauto.*Navi*T\u00fcv Neu",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/fiat-ducato-2-3-140ps-l3h2-carplay-kamera-klimaauto-navi-tuev-neu/3408578867-216-5425",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2020,
+    "km": 116700,
+    "price_eur": 15500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/27/27fd7155-fab8-4e10-a91b-475b47b5d8d4?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "ducato",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 26000.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 86,
+    "market_median_eur": 13950,
+    "price_pct_vs_median": 11.1,
+    "is_underpriced": false
+  },
+  {
     "title": "Fiat E-Ducato 3.5T L3H2 Maxi 47 kWh - Snelladen - Camera - C",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2410974517-fiat-e-ducato-3-5t-l3h2-maxi-47-kwh-snelladen-camera-c",
     "source": "marktplaats",
@@ -18340,6 +21498,78 @@
     "is_underpriced": false
   },
   {
+    "title": "Peugeot Boxer Kasten  L3H2 Klima*Kamera*Tempomat*",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/peugeot-boxer-kasten-l3h2-klima-kamera-tempomat-/3438183102-216-3018",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2022,
+    "km": 163000,
+    "price_eur": 15950.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/a2/a2610526-6206-4498-8882-c66c21ac0e9f?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "boxer",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 26450.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (40,750/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 53,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 2.9,
+    "is_underpriced": false
+  },
+  {
+    "title": "Peugeot Boxer 3 Kastenwagen L3H2 Typ 16 4035mm",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/peugeot-boxer-3-kastenwagen-l3h2-typ-16-4035mm/3437186759-216-23286",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2019,
+    "km": 111300,
+    "price_eur": 15987.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/e3/e3da10c6-f689-4b9b-be54-351da5b57eb3?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "boxer",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 26487.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 103,
+    "market_median_eur": 11990,
+    "price_pct_vs_median": 33.3,
+    "is_underpriced": false
+  },
+  {
     "title": "Renault Master III 2.3 dCi L3H2*nur 68 TKm*Kamera*Klima*",
     "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-2-3-dci-l3h2-nur-68-tkm-kamera-klima-/3439310810-216-8795",
     "source": "kleinanzeigen_de",
@@ -18367,9 +21597,9 @@
     "total_project_cost_eur": 26495.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 23,
-    "market_median_eur": 12980,
-    "price_pct_vs_median": 23.2,
+    "market_sample_size": 79,
+    "market_median_eur": 12300,
+    "price_pct_vs_median": 30.0,
     "is_underpriced": false
   },
   {
@@ -18515,6 +21745,39 @@
     "is_underpriced": false
   },
   {
+    "title": "Opel Movano C HKa L3H2 3,5t Edition *165PS*",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-c-hka-l3h2-3-5t-edition-165ps-/3437947119-216-16347",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2022,
+    "km": 30669,
+    "price_eur": 17250.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/c0/c074fd97-a149-4a8d-99eb-a3c2cd2f040c?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 27750.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 77,
+    "market_median_eur": 17250,
+    "price_pct_vs_median": 0.0,
+    "is_underpriced": false
+  },
+  {
     "title": "Opel Movano 2,3 CDTI\"L3H2\" 3,5t+KAMERA+AHK+KLIMA+NAVI",
     "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-2-3-cdti-l3h2-3-5t-kamera-ahk-klima-navi/3439629663-216-1968",
     "source": "kleinanzeigen_de",
@@ -18542,9 +21805,9 @@
     "total_project_cost_eur": 27897.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 27,
-    "market_median_eur": 14300,
-    "price_pct_vs_median": 21.7,
+    "market_sample_size": 102,
+    "market_median_eur": 14985,
+    "price_pct_vs_median": 16.1,
     "is_underpriced": false
   },
   {
@@ -18684,6 +21947,39 @@
     "is_underpriced": false
   },
   {
+    "title": "Citro\u00ebn Jumper Behindertengerecht 35 L3H2 Profi verglast",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/citro-n-jumper-behindertengerecht-35-l3h2-profi-verglast/3436441691-216-369",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2017,
+    "km": 112000,
+    "price_eur": 17990.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/c7/c7f4c43a-e110-4e92-983e-258771f02b18?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 28490.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 88,
+    "market_median_eur": 10950,
+    "price_pct_vs_median": 64.3,
+    "is_underpriced": false
+  },
+  {
     "title": "Citroen Jumper L3H2 2.2 2021",
     "url": "https://www.kleinanzeigen.de/s-anzeige/citroen-jumper-l3h2-2-2-2021/3439336770-216-2893",
     "source": "kleinanzeigen_de",
@@ -18717,9 +22013,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 16,
-    "market_median_eur": 14850,
-    "price_pct_vs_median": 21.2,
+    "market_sample_size": 70,
+    "market_median_eur": 14625,
+    "price_pct_vs_median": 23.1,
     "is_underpriced": false
   },
   {
@@ -18753,6 +22049,39 @@
     "market_sample_size": 98,
     "market_median_eur": 13990,
     "price_pct_vs_median": 30.7,
+    "is_underpriced": false
+  },
+  {
+    "title": "Peugeot Boxer 165 Blue HDI L3H2",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/peugeot-boxer-165-blue-hdi-l3h2/3435827993-216-2469",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 86692,
+    "price_eur": 18900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/cc/cc4946c1-99b0-491c-a556-87484bc57d34?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "boxer",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 29400.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 70,
+    "market_median_eur": 14625,
+    "price_pct_vs_median": 29.2,
     "is_underpriced": false
   },
   {
@@ -18794,6 +22123,45 @@
     "market_sample_size": 104,
     "market_median_eur": 16900,
     "price_pct_vs_median": 12.1,
+    "is_underpriced": false
+  },
+  {
+    "title": "Opel Movano L3H2 Edition Klima Tempo Schwingsitz  Mwst",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-l3h2-edition-klima-tempo-schwingsitz-mwst/3391594960-216-23801",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2023,
+    "km": 78600,
+    "price_eur": 18999.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/d2/d21419ca-cd2a-4f84-8dbf-53e7a2bbfcf3?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 29499.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (26,200/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 60,
+    "market_median_eur": 18500,
+    "price_pct_vs_median": 2.7,
     "is_underpriced": false
   },
   {
@@ -18911,9 +22279,9 @@
     "total_project_cost_eur": 30499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 18,
-    "market_median_eur": 16494,
-    "price_pct_vs_median": 21.3,
+    "market_sample_size": 38,
+    "market_median_eur": 15250,
+    "price_pct_vs_median": 31.1,
     "is_underpriced": false
   },
   {
@@ -19139,6 +22507,39 @@
     "is_underpriced": false
   },
   {
+    "title": "Opel Movano 2.2 DOKA Pritsche+Plane L3H2",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-2-2-doka-pritsche-plane-l3h2/3384763547-216-9335",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2022,
+    "km": 36000,
+    "price_eur": 21990.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/7c/7c6dff12-d93a-4149-b703-cba38dde0175?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 32490.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 77,
+    "market_median_eur": 17250,
+    "price_pct_vs_median": 27.5,
+    "is_underpriced": false
+  },
+  {
     "title": "Peugeot Boxer L3H2 Kasten 335 BlueHDi NAVI/KLIMA/CAM",
     "url": "https://www.kleinanzeigen.de/s-anzeige/peugeot-boxer-l3h2-kasten-335-bluehdi-navi-klima-cam/3438701289-216-20103",
     "source": "kleinanzeigen_de",
@@ -19172,7 +22573,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 6,
+    "market_sample_size": 23,
     "market_median_eur": 22900,
     "price_pct_vs_median": 0.0,
     "is_underpriced": false
@@ -19238,9 +22639,9 @@
     "total_project_cost_eur": 34250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 8,
-    "market_median_eur": 24310,
-    "price_pct_vs_median": -2.3,
+    "market_sample_size": 35,
+    "market_median_eur": 21600,
+    "price_pct_vs_median": 10.0,
     "is_underpriced": false
   },
   {
@@ -19432,6 +22833,39 @@
     "is_underpriced": false
   },
   {
+    "title": "Opel Movano Kasten AUTOMATIK 35 L3H2 BlueHDI 140*KAM",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-kasten-automatik-35-l3h2-bluehdi-140-kam/3437542745-216-6592",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2024,
+    "km": 33841,
+    "price_eur": 24980.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/60/60727f71-2707-4f8c-8bda-749cebb604ce?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 35480.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 35,
+    "market_median_eur": 21600,
+    "price_pct_vs_median": 15.6,
+    "is_underpriced": false
+  },
+  {
     "title": "Opel Movano Kasten 2.2 L3H2 140 Edition KAMERA NAVI",
     "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-kasten-2-2-l3h2-140-edition-kamera-navi/3439256063-216-1738",
     "source": "kleinanzeigen_de",
@@ -19459,9 +22893,9 @@
     "total_project_cost_eur": 35490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 8,
-    "market_median_eur": 24310,
-    "price_pct_vs_median": 2.8,
+    "market_sample_size": 35,
+    "market_median_eur": 21600,
+    "price_pct_vs_median": 15.7,
     "is_underpriced": false
   },
   {
@@ -19533,6 +22967,39 @@
     "market_sample_size": 90,
     "market_median_eur": 26900,
     "price_pct_vs_median": 3.9,
+    "is_underpriced": false
+  },
+  {
+    "title": "Citro\u00ebn Jumper 35 L3H2 Doppelkabine Klima AHK",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/citro-n-jumper-35-l3h2-doppelkabine-klima-ahk/3406912604-216-22290",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2023,
+    "km": 17000,
+    "price_eur": 28998.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/43/43643e2b-15fe-49bd-b77d-4e220aa47579?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 39498.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 37,
+    "market_median_eur": 17499,
+    "price_pct_vs_median": 65.7,
     "is_underpriced": false
   },
   {
@@ -19879,6 +23346,122 @@
     "market_sample_size": 44,
     "market_median_eur": 31625,
     "price_pct_vs_median": 35.8,
+    "is_underpriced": false
+  },
+  {
+    "title": "Renault Master 3  2.3 dCi Diesel  H2/H3 Maxi",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-3-2-3-dci-diesel-h2-h3-maxi/3435011708-216-6278",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2018,
+    "km": 299400,
+    "price_eur": 12200.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/b8/b8f1a3e6-45d7-440a-a119-fa132124f520?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 47,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 22700.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (37,425/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (299,400) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 79,
+    "market_median_eur": 12300,
+    "price_pct_vs_median": -0.8,
+    "is_underpriced": false
+  },
+  {
+    "title": "Opel Movano 2,2 Diesel H2L3 165 PS Klima Tempo Asystent",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-2-2-diesel-h2l3-165-ps-klima-tempo-asystent/3133369111-216-21556",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2022,
+    "km": 133133,
+    "price_eur": 15500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/8d/8d52809a-dd52-4fcf-a2bb-ade52ba1874a?rule=$_2.AUTO"
+    ],
+    "model_group": "renault_master_grp",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 47,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 26000.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (33,283/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 77,
+    "market_median_eur": 17250,
+    "price_pct_vs_median": -10.1,
+    "is_underpriced": false
+  },
+  {
+    "title": "Fiat Ducato 2,3 HDI Maxi Hoch+Lang*L5/H2*Garantie*",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/fiat-ducato-2-3-hdi-maxi-hoch-lang-l5-h2-garantie-/3438634063-216-1329",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 39000,
+    "price_eur": 24990.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/c6/c6fdb242-a17a-4be0-996e-2b544e8bbf57?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "ducato",
+    "score": 47,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 35490.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 70,
+    "market_median_eur": 14625,
+    "price_pct_vs_median": 70.9,
     "is_underpriced": false
   }
 ]
