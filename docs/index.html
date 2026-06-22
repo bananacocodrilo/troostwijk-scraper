@@ -326,6 +326,7 @@
       <option value="score">Suitability score</option>
     </select>
   </label>
+  <button id="exportBtn" title="Download the currently shown listings (after filters + dismissed/bookmarked) as evaluation JSON" style="background:var(--accent);color:#06281e;border:none;border-radius:6px;padding:5px 12px;font-size:13px;font-weight:700;cursor:pointer;">⬇ Export JSON</button>
   <span id="count"></span>
 </div>
 
@@ -338,6 +339,7 @@
 const DATA_URL = 'https://raw.githubusercontent.com/bananacocodrilo/troostwijk-scraper/main/output/asking_l2h2.json';
 
 let allListings = [];
+let shownListings = [];   // current filtered+override-applied view, for export
 
 function fmt(n, prefix='€') {
   if (n == null) return null;
@@ -402,6 +404,129 @@ function isSixSeater(v) {
 // length (L?, no variant) is never treated as L3, so it always shows.
 function isL3(v) {
   return /^l3/i.test(v.variant || '');
+}
+
+// ── Export ───────────────────────────────────────────────────────────────
+// Maps the currently-shown listings (filters + dismiss/bookmark applied) to a
+// structured evaluation schema and downloads them as JSON. Fields we don't have
+// data for are null/"unknown" so the shape is consistent for downstream review.
+const SOURCE_NAME = {
+  marktplaats:'Marktplaats', '2dehands':'2dehands.be', autoscout24_nl:'AutoScout24 (NL)',
+  autoscout24_de:'AutoScout24 (DE)', autotrack:'AutoTrack', kleinanzeigen_de:'Kleinanzeigen.de',
+  mobile_de:'mobile.de', regeljelease:'Regeljelease', financiallease:'FinancialLease', rosfinance:'RosFinance',
+};
+const TOKEN_MAKE = {
+  'transit custom':'Ford','tourneo custom':'Ford','transit':'Ford',
+  expert:'Peugeot',jumpy:'Citroën',proace:'Toyota','pro ace':'Toyota','proace verso':'Toyota','pro ace verso':'Toyota',
+  traveller:'Peugeot',spacetourer:'Citroën','space tourer':'Citroën',scudo:'Fiat',
+  vivaro:'Opel',trafic:'Renault',primastar:'Nissan',talento:'Fiat',
+  transporter:'Volkswagen','t6.1':'Volkswagen',t6_1:'Volkswagen',crafter:'Volkswagen','e-crafter':'Volkswagen',tge:'MAN',
+  boxer:'Peugeot',ducato:'Fiat',jumper:'Citroën',
+  vito:'Mercedes-Benz','v-class':'Mercedes-Benz','v-klasse':'Mercedes-Benz','v klasse':'Mercedes-Benz',
+  sprinter:'Mercedes-Benz',staria:'Hyundai',
+  master:'Renault',movano:'Opel',interstar:'Nissan',nv400:'Nissan',
+};
+const CONF_SCORE = { high:0.9, medium:0.6, low:0.35 };
+// Sources that are dealer-only; the rest (marktplaats/2dehands) are mixed C2C+dealer → null.
+const DEALER_SOURCES = ['autoscout24_nl','autoscout24_de','autotrack','kleinanzeigen_de','mobile_de','regeljelease','financiallease','rosfinance'];
+
+function titleCase(s){ return (s||'').replace(/\b\w/g, c => c.toUpperCase()); }
+function djb2(str){ let h=5381; for(let i=0;i<str.length;i++) h=((h<<5)+h+str.charCodeAt(i))>>>0; return h.toString(36); }
+function listingId(v){
+  const m=(v.url||'').match(/(\d{5,})/);
+  return `${v.source||'src'}_${m?m[1]:djb2(v.url||v.title||'')}`;
+}
+function parsePowerHp(hay){
+  let m=hay.match(/(\d{2,3})\s*(?:pk|hp|ps|bhp)\b/i);
+  if(m) return parseInt(m[1]);
+  m=hay.match(/(\d{2,3})\s*kw\b/i);
+  if(m) return Math.round(parseInt(m[1])*1.341);
+  return null;
+}
+function parseTransmission(hay){
+  if(/\b(automaat|automatic|automatik|dsg|tiptronic|s-tronic|aut\.?)\b/i.test(hay)) return 'automatic';
+  if(/\b(handgeschakeld|manual|schaltgetriebe|manueel|6-?bak|5-?bak)\b/i.test(hay)) return 'manual';
+  return null;
+}
+function parseEngine(hay){ const m=hay.match(/\b(\d\.\d)\b/); return m ? m[1]+' diesel' : null; }
+function standingHeight(variant){
+  const s=(variant||'').toUpperCase();
+  if(s.includes('H2')||s.includes('H3')) return true;
+  if(s.includes('H1')) return false;
+  return null;
+}
+function rustRisk(v){
+  const f=(v.risk_flags||[]).map(x=>((x.label||'')+' '+(x.code||''))).join(' ').toLowerCase();
+  return /rust|corros|roest/.test(f) ? 'high' : 'unknown';
+}
+function toExport(v){
+  const hay=(v.title||'')+' '+(v.remarks||'');
+  return {
+    id: listingId(v),
+    source: SOURCE_NAME[v.source]||v.source||null,
+    url: v.url||null,
+    basic:{
+      make: TOKEN_MAKE[v.matched_token]||null,
+      model: v.matched_token ? titleCase(v.matched_token) : null,
+      variant: null,
+      year: v.year??null,
+      mileage_km: v.km??null,
+      price_eur: v.price_eur??null,          // asking price as shown; VAT treatment varies by source
+      country: v.country ? v.country.toUpperCase() : null,
+      dealer: DEALER_SOURCES.includes(v.source) ? true : null,
+    },
+    configuration:{
+      body_type: v.variant||null,
+      seats: v.seats??null,                  // structured data only — never inferred from text
+      layout: /\b(dubbele?\s*cab\w*|doppelkab\w*|crew\s*cab|dc)\b/i.test(hay) ? 'double_cab' : null,
+      bulkhead:{ present:null, type:null, removable:null },
+    },
+    technical:{
+      engine: parseEngine(hay),
+      power_hp: parsePowerHp(hay),
+      emissions: v.emission_standard || (/euro\s?6/i.test(hay) ? 'Euro 6' : 'unknown'),
+      transmission: parseTransmission(hay),
+    },
+    condition:{ service_history:'unknown', accident_free:'unknown', rust_risk: rustRisk(v) },
+    camper_relevance:{
+      standing_height: standingHeight(v.variant),
+      side_sleep_possible:null,
+      estimated_bed_width_mm:null,
+      estimated_bed_length_mm:null,
+      bed_difficulty_score:null,
+    },
+    financials:{
+      estimated_bpm_eur:null,
+      total_import_cost_estimate:null,
+      road_tax_nl_camper_estimate_month:null,
+    },
+    metadata:{
+      last_seen: new Date().toISOString().slice(0,10),
+      photos_count: Array.isArray(v.images) ? v.images.length : 0,
+      confidence_score: CONF_SCORE[v.classification_confidence]??null,
+    },
+    // FleetView's own computed intel — not in the target schema, but kept because
+    // it's the most useful evaluation signal we already have.
+    fleetview_signals:{
+      suitability_score: v.score??null,
+      risk_score: v.risk_score??null,
+      market_median_eur: v.market_median_eur??null,
+      price_pct_vs_median: v.price_pct_vs_median??null,
+      is_underpriced: !!v.is_underpriced,
+      est_conversion_cost_eur: v.est_conversion_cost_eur??null,
+      total_project_cost_eur: v.total_project_cost_eur??null,
+      conversion_effort: v.conversion_effort??null,
+    },
+  };
+}
+function exportListings(){
+  const arr=(shownListings||[]).map(toExport);
+  const blob=new Blob([JSON.stringify(arr,null,2)],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=`fleetview-export-${new Date().toISOString().slice(0,10)}-${arr.length}.json`;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
 }
 
 function pctClass(pct) {
@@ -573,6 +698,7 @@ function render() {
   });
 
   filtered = Overrides.applyFilter(filtered);
+  shownListings = filtered;
   document.getElementById('count').textContent = `${filtered.length} listing${filtered.length !== 1 ? 's' : ''} shown`;
   document.getElementById('grid').innerHTML = filtered.length
     ? filtered.map(buildCard).join('')
@@ -623,6 +749,7 @@ document.getElementById('dealFilter').addEventListener('change', render);
 document.getElementById('sortBy').addEventListener('change', render);
 document.getElementById('sixSeatFilter').addEventListener('change', render);
 document.getElementById('showL3Filter').addEventListener('change', render);
+document.getElementById('exportBtn').addEventListener('click', exportListings);
 document.getElementById('priceFilter').addEventListener('input', e => {
   const v = parseFloat(e.target.value);
   document.getElementById('priceVal').textContent = '€' + Math.round(v/1000) + 'k';
