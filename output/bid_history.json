@@ -10699,6 +10699,12 @@
           "current_bid_eur": 5000.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-22T21:01:06.007593+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -13432,6 +13438,36 @@
       "snapshots": [
         {
           "ts": "2026-06-22T16:58:21.223939+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "83961fbe-a49a-457d-a88a-e56c5d0fab04": {
+      "url": "https://www.troostwijkauctions.com/en/l/2014-volkswagen-vw-crafter-2-0-tdi-roof-rail-fitted-out-euro-6-5t-A3-44490-10092",
+      "model_token": "crafter",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-06-22T21:01:06.007593+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "033675b8-df58-4ce9-88fa-b212f3400a1c": {
+      "url": "https://www.troostwijkauctions.com/en/l/2013-mercedes-sprinter-frigo-32%25C2%25B0c-first-owner-A3-44490-5029",
+      "model_token": "sprinter",
+      "year": 2013,
+      "snapshots": [
+        {
+          "ts": "2026-06-22T21:01:06.007593+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
