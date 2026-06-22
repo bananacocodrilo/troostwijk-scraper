@@ -8536,6 +8536,12 @@
           "current_bid_eur": 12500.0,
           "bids_count": 29,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-22T03:24:18.929500+00:00",
+          "current_bid_eur": 13000.0,
+          "bids_count": 30,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -9478,6 +9484,12 @@
           "current_bid_eur": 8500.0,
           "bids_count": 30,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-22T03:24:18.929500+00:00",
+          "current_bid_eur": 9000.0,
+          "bids_count": 31,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -9636,6 +9648,12 @@
           "ts": "2026-06-21T14:11:18.030256+00:00",
           "current_bid_eur": 4000.0,
           "bids_count": 19,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-22T03:24:18.929500+00:00",
+          "current_bid_eur": 5500.0,
+          "bids_count": 22,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -10158,6 +10176,12 @@
           "ts": "2026-06-19T10:59:09.450049+00:00",
           "current_bid_eur": 750.0,
           "bids_count": 37,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-22T03:24:18.929500+00:00",
+          "current_bid_eur": 850.0,
+          "bids_count": 39,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -11377,6 +11401,12 @@
           "current_bid_eur": 1150.0,
           "bids_count": 4,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-22T03:24:18.929500+00:00",
+          "current_bid_eur": 1800.0,
+          "bids_count": 17,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -12213,6 +12243,12 @@
           "ts": "2026-06-21T03:16:10.520706+00:00",
           "current_bid_eur": 7200.0,
           "bids_count": 12,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-22T03:24:18.929500+00:00",
+          "current_bid_eur": 7400.0,
+          "bids_count": 13,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -13143,6 +13179,21 @@
           "ts": "2026-06-20T14:05:16.593365+00:00",
           "current_bid_eur": 15.0,
           "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "979902b3-7c74-4b53-bca4-5f266b47efc9": {
+      "url": "https://www.vavato.com/en/l/2007-mercedes-sprinter-311cdi-tow-truck-A3-44490-35643",
+      "model_token": "sprinter",
+      "year": 2007,
+      "snapshots": [
+        {
+          "ts": "2026-06-22T03:24:18.929500+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
           "status": "BIDDING_OPEN"
         }
       ],
