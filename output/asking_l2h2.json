@@ -1,5 +1,49 @@
 [
   {
+    "title": "Volkswagen T6 Transporter Kasten-Kombi Kasten Hochdach lang",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/volkswagen-t6-transporter-kasten-kombi-kasten-hochdach-lang/3439851737-216-2943",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2018,
+    "km": 205730,
+    "price_eur": 8500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/ea/ea84d77e-7a2b-47b8-8555-5535bacf7f73?rule=$_2.AUTO"
+    ],
+    "model_group": "t6_1_lwb",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "transporter",
+    "score": 90,
+    "est_conversion_cost_eur": 2500,
+    "est_conversion_cost_low_eur": 1500,
+    "est_conversion_cost_high_eur": 3500,
+    "conversion_effort": "minimal",
+    "total_project_cost_eur": 11000.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (25,716/yr) \u2014 above-average wear",
+        "severity": "warn"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (205,730) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 43,
+    "market_median_eur": 15899,
+    "price_pct_vs_median": -46.5,
+    "is_underpriced": true
+  },
+  {
     "title": "Ford Transit 3.5T L3H2 DUBBEL CABINE",
     "url": "https://www.2dehands.be/v/auto-s/ford/m2411918810-ford-transit-3-5t-l3h2-dubbel-cabine",
     "source": "2dehands",
@@ -4490,6 +4534,39 @@
     "is_underpriced": true
   },
   {
+    "title": "Mercedes-Benz Sprinter 314 CDi Hochdach Servo ABS EFH KlimaKamera",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/mercedes-benz-sprinter-314-cdi-hochdach-servo-abs-efh-klimakamera/3439642906-216-3477",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 64000,
+    "price_eur": 22499.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/ed/edf7d744-4c90-49e5-94ad-1f70b6e6270f?rule=$_2.AUTO"
+    ],
+    "model_group": "mercedes_sprinter",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "sprinter",
+    "score": 50,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 32999.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 53,
+    "market_median_eur": 26999,
+    "price_pct_vs_median": -16.7,
+    "is_underpriced": true
+  },
+  {
     "title": "Citroen Jumper 35 2.0 BlueHDi L3H3 EURO 6 MOTOR DEFEKT",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2409639757-citroen-jumper-35-2-0-bluehdi-l3h3-euro-6-motor-defekt",
     "source": "marktplaats",
@@ -5661,6 +5738,89 @@
     "is_underpriced": true
   },
   {
+    "title": "VW Crafter 35, 2.0 TDI Hochdach-Kasten, 140 PS, EZ 06/2020",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/vw-crafter-35-2-0-tdi-hochdach-kasten-140-ps-ez-06-2020/3437672756-216-1302",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2020,
+    "km": 186000,
+    "price_eur": 12850.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/6c/6c6c9256-fd62-417c-a34c-8151c031342b?rule=$_2.AUTO"
+    ],
+    "model_group": "vw_crafter_tge",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "crafter",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 23350.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (31,000/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 76,
+    "market_median_eur": 18650,
+    "price_pct_vs_median": -31.1,
+    "is_underpriced": true
+  },
+  {
+    "title": "Volkswagen Crafter Kasten 35 lang plus Hochdach Klima",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/volkswagen-crafter-kasten-35-lang-plus-hochdach-klima/3438338890-216-30113",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2022,
+    "km": 447000,
+    "price_eur": 13499.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/2a/2a273cc5-6d77-4270-809d-82ad389da7b1?rule=$_2.AUTO"
+    ],
+    "model_group": "vw_crafter_tge",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "crafter",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 23999.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (111,750/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (447,000) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 52,
+    "market_median_eur": 22728,
+    "price_pct_vs_median": -40.6,
+    "is_underpriced": true
+  },
+  {
     "title": "Opel Movano L3H2",
     "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-l3h2/3437010213-216-4438",
     "source": "kleinanzeigen_de",
@@ -6094,6 +6254,45 @@
     "is_underpriced": true
   },
   {
+    "title": "Volkswagen Crafter 2.0 TDI Kasten 35 lang Hochdach*Klima*",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/volkswagen-crafter-2-0-tdi-kasten-35-lang-hochdach-klima-/3439715185-216-2417",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2022,
+    "km": 169000,
+    "price_eur": 17999.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/0b/0b732102-90ff-4c5b-b8fa-4b7abb4bfbf4?rule=$_2.AUTO"
+    ],
+    "model_group": "vw_crafter_tge",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "crafter",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 28499.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (42,250/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 52,
+    "market_median_eur": 22728,
+    "price_pct_vs_median": -20.8,
+    "is_underpriced": true
+  },
+  {
     "title": "Renault Master 2.3DCi 135PK L3H2 Maxi | Euro 6 | Airco | Cru",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2405385072-renault-master-2-3dci-135pk-l3h2-maxi-euro-6-airco-cru",
     "source": "marktplaats",
@@ -6323,6 +6522,83 @@
     "market_sample_size": 77,
     "market_median_eur": 26900,
     "price_pct_vs_median": -15.2,
+    "is_underpriced": true
+  },
+  {
+    "title": "Citro\u00ebn jumper 2.0 HDI  Maxi Hochdach, T\u00fcv/Au 05.27",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/citro-n-jumper-2-0-hdi-maxi-hochdach-tuev-au-05-27/3437731297-216-9676",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2016,
+    "km": 235480,
+    "price_eur": 5750.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/28/28eace44-afa8-43d6-8fd2-feca3a5b9452?rule=$_2.AUTO"
+    ],
+    "model_group": "psa_l1l2h1",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "jumper",
+    "score": 47,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 16250.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (23,548/yr) \u2014 above-average wear",
+        "severity": "warn"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (235,480) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 73,
+    "market_median_eur": 9999,
+    "price_pct_vs_median": -42.5,
+    "is_underpriced": true
+  },
+  {
+    "title": "Renault Trafic 1.6 DCI Hochdach*1.Hand*Start/Stopp*Euro-5*PDC",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-trafic-1-6-dci-hochdach-1-hand-start-stopp-euro-5-pdc/3436510418-216-8804",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2016,
+    "km": 196000,
+    "price_eur": 6490.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/3f/3f727027-1f27-49af-b764-00e9cfbb9e05?rule=$_2.AUTO"
+    ],
+    "model_group": "vivaro_trafic_primastar_l2",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "trafic",
+    "score": 47,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 16990.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 68,
+    "market_median_eur": 11075,
+    "price_pct_vs_median": -41.4,
     "is_underpriced": true
   },
   {
@@ -18425,6 +18701,39 @@
     "is_underpriced": false
   },
   {
+    "title": "Aufstelldach Hochdach Schlafdach Mercedes Vito nachr\u00fcsten einbau",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/aufstelldach-hochdach-schlafdach-mercedes-vito-nachruesten-einbau/3432693413-280-6273",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": null,
+    "km": null,
+    "price_eur": 4950.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/8e/8e44d5e3-82bb-4710-9ba3-599e4ef4aefb?rule=$_2.AUTO"
+    ],
+    "model_group": "vito_v_class_l2",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "vito",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 15450.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_median_eur": null,
+    "market_sample_size": 0,
+    "price_pct_vs_median": null,
+    "is_underpriced": false
+  },
+  {
     "title": "Citro\u00ebn Jumper L3H2 1. Hand 85.000 km T\u00dcV 08/2027 AHK MwSt.",
     "url": "https://www.kleinanzeigen.de/s-anzeige/citro-n-jumper-l3h2-1-hand-85-000-km-tuev-08-2027-ahk-mwst-/3438972531-216-1758",
     "source": "kleinanzeigen_de",
@@ -19322,6 +19631,50 @@
     "is_underpriced": false
   },
   {
+    "title": "Volkswagen Crafter Kasten Kasten 35 lang Hochdach FWD,LKW",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/volkswagen-crafter-kasten-kasten-35-lang-hochdach-fwd-lkw/3439089940-216-922",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2019,
+    "km": 237000,
+    "price_eur": 15900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/4a/4a05a50e-cfbc-40cb-8a05-4d08e57709dd?rule=$_2.AUTO"
+    ],
+    "model_group": "vw_crafter_tge",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "crafter",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 26400.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (33,857/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (237,000) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 73,
+    "market_median_eur": 17890,
+    "price_pct_vs_median": -11.1,
+    "is_underpriced": false
+  },
+  {
     "title": "Peugeot Boxer Kasten  L3H2 Klima*Kamera*Tempomat*",
     "url": "https://www.kleinanzeigen.de/s-anzeige/peugeot-boxer-kasten-l3h2-klima-kamera-tempomat-/3438183102-216-3018",
     "source": "kleinanzeigen_de",
@@ -19789,6 +20142,72 @@
     "market_sample_size": 71,
     "market_median_eur": 16950,
     "price_pct_vs_median": 5.3,
+    "is_underpriced": false
+  },
+  {
+    "title": "Volkswagen Crafter Kasten 35+HOCHDACH+AHK+FSE+",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/volkswagen-crafter-kasten-35-hochdach-ahk-fse-/3439121305-216-2777",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2018,
+    "km": 106760,
+    "price_eur": 17890.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/8e/8ee67afd-3b03-47ed-8675-863f054b788f?rule=$_2.AUTO"
+    ],
+    "model_group": "vw_crafter_tge",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "crafter",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 28390.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 59,
+    "market_median_eur": 15999,
+    "price_pct_vs_median": 11.8,
+    "is_underpriced": false
+  },
+  {
+    "title": "Volkswagen Crafter 2.0 TDI Kasten  mittellang Hochdach  58.000KM",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/volkswagen-crafter-2-0-tdi-kasten-mittellang-hochdach-58-000km/3407134988-216-23801",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2018,
+    "km": 58600,
+    "price_eur": 17899.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/da/dac06900-5ca4-4897-8dc4-119371c3483a?rule=$_2.AUTO"
+    ],
+    "model_group": "vw_crafter_tge",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "crafter",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 28399.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 59,
+    "market_median_eur": 15999,
+    "price_pct_vs_median": 11.9,
     "is_underpriced": false
   },
   {
@@ -20348,6 +20767,45 @@
     "is_underpriced": false
   },
   {
+    "title": "Volkswagen Crafter 2.0TDI Kasten LR Hochdach R-Kamera PDC",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/volkswagen-crafter-2-0tdi-kasten-lr-hochdach-r-kamera-pdc/3382062790-216-6826",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2022,
+    "km": 167950,
+    "price_eur": 20825.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/84/8474e8f2-bc77-4a16-bdab-3b60e5ad836d?rule=$_2.AUTO"
+    ],
+    "model_group": "vw_crafter_tge",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "crafter",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 31325.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (41,987/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 52,
+    "market_median_eur": 22728,
+    "price_pct_vs_median": -8.4,
+    "is_underpriced": false
+  },
+  {
     "title": "Citro\u00ebn Jumper 35 2.2 BlueHDi 140 L3H2 Control 141PK, RIJKL",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2409760550-citroen-jumper-35-2-2-bluehdi-140-l3h2-control-141pk-rijkl",
     "source": "marktplaats",
@@ -20897,6 +21355,39 @@
     "is_underpriced": false
   },
   {
+    "title": "VW Crafter 35 Maxi Hochdach Langer Radstand",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/vw-crafter-35-maxi-hochdach-langer-radstand/3390486589-216-13329",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2018,
+    "km": 57000,
+    "price_eur": 26050.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/42/4216e216-872e-4d67-a4f0-97448eb59eea?rule=$_2.AUTO"
+    ],
+    "model_group": "vw_crafter_tge",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "crafter",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 36550.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 59,
+    "market_median_eur": 15999,
+    "price_pct_vs_median": 62.8,
+    "is_underpriced": false
+  },
+  {
     "title": "Renault Master T35 2.3dCi 136pk L3H2 Energy | Navi | Airco |",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2411606914-renault-master-t35-2-3dci-136pk-l3h2-energy-navi-airco",
     "source": "marktplaats",
@@ -20995,6 +21486,39 @@
     "market_sample_size": 32,
     "market_median_eur": 21225,
     "price_pct_vs_median": 40.6,
+    "is_underpriced": false
+  },
+  {
+    "title": "Volkswagen Crafter Kasten Kasten 35 mittellang Hochdach RWD",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/volkswagen-crafter-kasten-kasten-35-mittellang-hochdach-rwd/3175328621-216-7495",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2021,
+    "km": 89648,
+    "price_eur": 30190.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/15/156de2f4-18ed-465e-9cc2-82d9e7dbaba5?rule=$_2.AUTO"
+    ],
+    "model_group": "vw_crafter_tge",
+    "variant": "L?H2",
+    "classification_confidence": "high",
+    "matched_token": "crafter",
+    "score": 49,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 40690.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 64,
+    "market_median_eur": 19990,
+    "price_pct_vs_median": 51.0,
     "is_underpriced": false
   },
   {

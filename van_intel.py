@@ -362,13 +362,19 @@ FUEL_SOFT_PENALTY = {"cng", "lpg", "waterstof", "hydrogen"}
 # Size detection (unchanged tier pipeline — still useful for L2 confirmation)
 # ---------------------------------------------------------------------------
 
+# Ordered most-specific (H3) → least (H1) so "superhochdach" can't be eaten
+# by the bare "hochdach" (H2) rule. German compounds are spelled both spaced
+# and glued in real listings, so each tier covers the one-word form too.
 _HEIGHT_KEYWORDS: List[Tuple[str, int, str]] = [
-    (r"\b(super|extra|ultra)\s*(high|hoog|hoch)\s*(roof|dak|dach)\b", 3, "super-high roof"),
+    (r"\b(super|extra|ultra)\s*(high|hoog|hoch)\s*(roof|dak|dach)\b"
+     r"|\bsuper-?hochdach\b|\bsuper-?hoogdak\b",                       3, "super-high roof"),
     (r"\bh\s*3\b|\bhochdach\s*3\b",                                    3, "H3 marker"),
-    (r"\bhigh\s*roof\b|\bhoog\s*dak\b|\bhochdach\b",                   2, "high roof"),
-    (r"\bmedium\s*roof\b|\bhalfhoog\b|\bmid\s*roof\b",                 2, "medium roof"),
+    (r"\bhigh\s*roof\b|\bhoog\s*dak\b|\bhoogdak\b|\bhochdach\b",       2, "high roof"),
+    (r"\bmedium\s*roof\b|\bhalfhoog\b|\bmid\s*roof\b"
+     r"|\bmittelhoch(dach)?\b",                                        2, "medium roof"),
     (r"\blow\s*roof\b|\bstandard\s*roof\b|\bnormaal\s*dak\b"
-     r"|\bstandaard\s*dak\b|\bflach(es)?\s*dach\b",                    1, "low/standard roof"),
+     r"|\bstandaard\s*dak\b|\bflach(es)?\s*dach\b|\bflachdach\b"
+     r"|\bnormaldach\b",                                               1, "low/standard roof"),
 ]
 
 _LENGTH_KEYWORDS: List[Tuple[str, int, str]] = [
@@ -555,18 +561,21 @@ def _detect_size(
     weight_kg: Optional[int] = None,
     body_type: Optional[str] = None,
 ) -> SizeDetection:
-    """Detect L/H from EXPLICIT codes only (e.g. ``L2H1``, ``\\bL2\\b``, ``\\bH1\\b``).
+    """Detect L/H from EXPLICIT codes (e.g. ``L2H1``, ``\\bL2\\b``, ``\\bH1\\b``)
+    plus seller-stated roof terminology (``Hochdach`` / ``hoog dak`` / ``high
+    roof`` → H2, ``Superhochdach`` → H3, ``flach`` / ``low roof`` → H1).
 
-    Heuristic inference — roofline keywords (high roof → H2), length keywords
-    (LWB → L3), empty-weight bands, body-type slugs — used to fill in
-    "probably L2 / H2" guesses, but those false-positives outweighed the
-    signal: they pushed otherwise-valid lots into size_not_allowed rejection
-    when nothing in the listing actually claimed an out-of-spec size.
+    Roof words are read as CONFIRMED height — a seller writing "Hochdach" is
+    stating a fact about the roof, the same epistemic status as a literal "H2"
+    code, and far more common in real (esp. German) listings. This is the only
+    inference path enabled: LENGTH stays explicit-code-only, and the
+    weight-band / body-type guesses remain disabled — those false-positives
+    pushed otherwise-valid lots into size_not_allowed rejection when nothing in
+    the listing actually claimed an out-of-spec size.
 
-    Soft-gate philosophy now applied to size end-to-end: unknown = soft-pass.
-    The variant string is set only when the seller wrote a literal L/H code.
-    Weight / body_type / model_token arguments are accepted for backward
-    compatibility but no longer consulted.
+    Soft-gate philosophy still applies: unknown length/height = soft-pass. The
+    weight / body_type / model_token arguments are accepted for backward
+    compatibility but not consulted (length is never inferred).
     """
     s = haystack.lower()
     evidence: List[str] = []
@@ -585,6 +594,13 @@ def _detect_size(
             H, ev = _explicit_h(s)
             if ev:
                 evidence.append(ev); confidence = "explicit"
+
+    # Roofline keywords → CONFIRMED height (height dimension only; never length).
+    # Only consulted when an explicit H digit wasn't already found.
+    if H is None:
+        H, ev = _height_from_keywords(s)
+        if ev:
+            evidence.append(ev); confidence = "explicit"
 
     return SizeDetection(L, H, confidence, evidence)
 

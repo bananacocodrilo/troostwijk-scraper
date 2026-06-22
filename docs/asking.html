@@ -312,6 +312,10 @@
     <input type="checkbox" id="sixSeatFilter" />
     6+ seats
   </label>
+  <label class="check" title="L3 / long-wheelbase vans are harder to park and hidden by default. Tick to include them. Only CONFIRMED L3 (explicit L3 code) is hidden — unknown length always shows.">
+    <input type="checkbox" id="showL3Filter" />
+    Show L3
+  </label>
   <label>
     Sort by
     <select id="sortBy">
@@ -392,6 +396,12 @@ function isSixSeater(v) {
   const hay = (v.title || '') + ' ' + (v.remarks || '');
   return /\b(dubbele?\s*cab\w*|dubbel\s*cabine|doppelkab\w*|crew\s*cab|mixto|kombi|combi|dc)\b/i.test(hay)
       || /\b[6-9]\s*-?\s*(persoons|pers|zit\w*|sitz\w*|seat\w*)\b/i.test(hay);
+}
+
+// CONFIRMED L3 only (explicit L3 code or roof-confirmed L3xx variant). Unknown
+// length (L?, no variant) is never treated as L3, so it always shows.
+function isL3(v) {
+  return /^l3/i.test(v.variant || '');
 }
 
 function pctClass(pct) {
@@ -529,6 +539,7 @@ function render() {
   const maxPrice = parseFloat(document.getElementById('priceFilter').value);
   const maxRisk  = parseInt(document.getElementById('riskFilter').value);
   const sixSeat  = document.getElementById('sixSeatFilter').checked;
+  const showL3   = document.getElementById('showL3Filter').checked;
   const sortKey  = document.getElementById('sortBy').value;
 
   let filtered = allListings.filter(v => {
@@ -540,6 +551,7 @@ function render() {
     if (v.year != null && v.year < yearMin) return false;
     if (v.km != null && v.km > kmMax) return false;
     if (sixSeat && !isSixSeater(v)) return false;
+    if (!showL3 && isL3(v)) return false;
     if (deal === 'under' && !v.is_underpriced) return false;
     const p = v.price_pct_vs_median;
     if (deal === 'fair' && (p == null || p < -15 || p > 15)) return false;
@@ -610,6 +622,7 @@ document.getElementById('sourceFilter').addEventListener('change', render);
 document.getElementById('dealFilter').addEventListener('change', render);
 document.getElementById('sortBy').addEventListener('change', render);
 document.getElementById('sixSeatFilter').addEventListener('change', render);
+document.getElementById('showL3Filter').addEventListener('change', render);
 document.getElementById('priceFilter').addEventListener('input', e => {
   const v = parseFloat(e.target.value);
   document.getElementById('priceVal').textContent = '€' + Math.round(v/1000) + 'k';

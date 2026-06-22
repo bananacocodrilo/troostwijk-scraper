@@ -81,13 +81,12 @@ raw_listing
 - `strict_filter(vehicle, classification) -> (passed, reason)` — applies the camper-candidate hard gate (soft on unknowns).
 - `evaluate(vehicle) -> Evaluation` — composed entry point; calls hard filters → classify → strict_filter → score.
 
-**Multi-signal L/H detection** (`_detect_size`):
-1. Explicit `L<n>H<m>` in title
+**L/H detection** (`_detect_size`) — height has two confirmed sources, length only one:
+1. Explicit `L<n>H<m>` in title (sets both)
 2. Standalone `\bL[1-4]\b` / `\bH[1-3]\b`
-3. Roofline keywords (high roof → H2/H3, low roof → H1)
-4. Length keywords (LWB/Maxi → L3 generally, but **clamped to L2** for whitelist groups whose `required_length=[2]` only, since those families have no L3 variants in their factory nomenclature; the `vito_v_class_l2` group accepts L3 since Mercedes Extralang is genuinely L3-class)
-5. Weight fallback (per-model bands tuned for the small-van families)
-6. Bodytype attribute fallback (box construction → H2)
+3. **Roofline keywords → CONFIRMED height (height only, never length)**: `Hochdach`/`hoog dak`/`high roof`/`medium roof` → H2, `Superhochdach`/`extra-high roof` → H3, `flach`/`low`/`standard roof` → H1. A seller writing "Hochdach" is *stating* the roof, same epistemic status as a literal `H2` code — this is reading text, not guessing — and is how German listings actually describe height. This is the lever that fills the high-roof feed.
+
+**Length stays explicit-code-only.** The legacy heuristics — length keywords (LWB/Maxi → L3), weight bands, bodytype → H2 — remain **disabled dead code** (`_length_from_keywords` / `_length_from_weight` / `_height_from_bodytype` are never called): their false-positives pushed valid lots into `size_not_allowed`. So "Sprinter lang Hochdach" → `L?H2` (height confirmed, length unknown), NOT `L3H2`.
 
 **Model matching priority** (`_match_whitelist_token`):
 1. Multi-word tokens first (`"transit custom"` beats `"transit"`, which is NOT in the whitelist)
@@ -230,7 +229,8 @@ Logs go to both stdout and `logs/latest.log`. Uses `output/lot_registry.json` if
 - **networkidle timeout**: Must use `domcontentloaded` + `wait_for_selector("script#__NEXT_DATA__", state="attached")`. Never switch back to networkidle.
 - **Word-boundary filters**: All keyword lists in `van_intel.py` use `\b` regex boundaries to avoid "bus" matching "business", "partner" matching "business partner", etc.
 - **engine failure false positive**: Pattern uses negative lookbehind for "no/geen/kein" and excludes "engine failure codes" (OBD context).
-- **LWB → L2 clamp**: "LWB" / "Maxi" / "lang" map to L3 globally (correct for big vans) but are clamped down to L2 inside `classify_vehicle` for whitelist groups whose `required_length=[2]` only, since those families have no L3 variants. The `vito_v_class_l2` group (Mercedes Extralang really IS L3-class) is exempt. Explicit "L3" / "L4" markers still reject for L2-only groups.
+- **Roofline keywords = confirmed height**: `Hochdach`/`hoog dak`/`high roof` → H2, `Superhochdach` → H3, `flach`/`low roof` → H1 are treated as *explicit* height (read from seller text, not guessed) and feed `is_high_roof()` → the primary L2H2 dashboard. This is the only inference path enabled. **Length is never inferred** — `_length_from_keywords` / `_length_from_weight` / `_height_from_bodytype` stay dead code, so there is no "LWB→L3" clamp to worry about; only an explicit `L3`/`L4` code sets length (and still rejects for L2-only groups). After any height/size rule change, clear stale rejects: `registry.clear_rejects_by_reason(reg, registry.SIZE_REJECT_PREFIXES)`.
+- **Show L3 dashboard toggle**: `docs/index.html` + `docs/asking.html` have a `#showL3Filter` checkbox, **unchecked by default**, that hides CONFIRMED-L3 (`variant` starting `L3`) cards — long-wheelbase vans are harder to park. Unknown length (`L?`) always shows. Inverse of the unchecked-by-default `#sixSeatFilter` (which *includes* a desirable subset). L3 still flows through the classifier/feeds; this is purely a view filter.
 - **T6.1 detection**: permissive — any "Transporter" match enters the `t6_1_lwb` group; soft-gates on year (rejects only if `year < 2020` confirmed). Lots without an explicit year pass through.
 - **GraphQL parse error**: `Response.json: No resource with given identifier found` is benign — fires when response body isn't buffered yet. Wrapped in try/except.
 - **cold-start run time**: First run ~15-20 min on GH Actions (400 URL cap, 4 workers). Subsequent runs 5-10 min.
