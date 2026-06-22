@@ -102,9 +102,9 @@ total = hammer + buyer_premium + VAT (if non-margin-scheme) + transport + recon 
 ```
 Market value priority: hammer history (≥5 samples) → multi-source median (≥3) → heuristic.
 
-`_BASE_PRICES["small_van"]` is the heuristic value table for the whitelist groups. Legacy big-van groups (psa/premium/mid) are retained harmlessly for cached pre-pivot entries.
+`_BASE_PRICES["small_van"]` is the heuristic value table for the small-van whitelist groups; `psa`/`premium`/`mid` are the **active** high-roof base-price tables (Ducato-Boxer-Jumper / Sprinter-Crafter-TGE / Transit-Master-Movano respectively), used only when market-data sources return < 3 samples.
 
-Hidden gem = deal ratio > 25%, km < 150k, year ≥ 2017, size in `{L2H1, L2H2, L2H?, L2}`.
+Hidden gem = deal ratio > 25%, km < 200k, year ≥ 2017, and a camper-candidate size: **any confirmed high roof (H2/H3 at any length — so big-van L3H2/L3H3/L?H2 qualify)** or the L2 small-van set `{L2H1, L2H2, L2H?, L2}`. This matches the asking feed's L2H2 scope (the auction feed shares `van_intel.py`, but the cost-model gem rule is auction-specific and was aligned to the pivot June 2026).
 
 ### Stage 5 — Registry + persistence (`registry.py`, `bid_history.py`)
 `output/lot_registry.json` — priority-refresh state per URL. Tiers:

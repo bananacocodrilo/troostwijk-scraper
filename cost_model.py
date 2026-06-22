@@ -21,12 +21,13 @@ DEFAULT_BUYER_PREMIUM = 0.19  # Troostwijk standard; overridden by real GraphQL 
 VAT_RATE = 0.21             # Dutch BTW for private buyers on non-margin-scheme lots
 
 # Transport estimates by van size (€). Small-van L2 / L2H1 fits a
-# regular open trailer; big-van L3H2+ needs a low-loader. Entries for
-# the (now-rejected) big-van sizes are kept harmlessly for cached
-# lot_registry.json entries that pre-date the whitelist pivot.
+# regular open trailer; big high-roof L3H2+ needs a low-loader. High-roof
+# (H2/H3) lots of unknown length default to a mid low-loader rate via the
+# H2/H3 fallback in _transport_estimate().
 _TRANSPORT = {
     "L2H1": 550, "L2H2": 650, "L2H?": 600, "L2": 550,
     "L4H3": 1300, "L3H3": 1200, "L3H2": 1100, "L4H2": 1200,
+    "L2H3": 750, "L?H2": 700, "L?H3": 800,
     "H2+": 900, "H3": 1000, "L3": 1000, "panel": 700,
 }
 _TRANSPORT_DEFAULT = 600
@@ -89,7 +90,16 @@ _DAMAGE_HINTS = re.compile(
 # ---------------------------------------------------------------------------
 
 def _transport_estimate(van_type: Optional[str]) -> int:
-    return _TRANSPORT.get((van_type or "").upper(), _TRANSPORT_DEFAULT)
+    vt = (van_type or "").upper()
+    if vt in _TRANSPORT:
+        return _TRANSPORT[vt]
+    # Any other confirmed high roof (H2/H3) needs a low-loader, not the
+    # small-van default — keeps big-van final_cost (and deal_ratio) honest.
+    if "H3" in vt:
+        return 900
+    if "H2" in vt:
+        return 800
+    return _TRANSPORT_DEFAULT
 
 
 def _recon_estimate(
@@ -150,8 +160,10 @@ def _market_heuristic(
         elif km >= 100_000:
             base = int(base * 0.90)
 
-    # Size premium — L2H2 / L2 baseline; H1 slightly under, big sizes
-    # over (only relevant for legacy cached big-van entries).
+    # Size premium — L2H2 / L2 baseline; H1 slightly under, big high-roof
+    # sizes over. Big-van high-roof families are first-class post-pivot, but
+    # the premium/mid/psa _BASE_PRICES are already L2H2 medians, so the bumps
+    # here apply mainly to legacy small-van bases scaled up to a long/high body.
     vt = (van_type or "").upper()
     if vt in ("L3H2", "L4H3", "L3H3", "L4H2"):
         base = int(base * 1.15)
@@ -248,16 +260,20 @@ def compute_costs(v: dict, model_token: Optional[str] = None) -> dict:
     deal_score = _deal_score(deal_ratio)
 
     # Hidden gem ───────────────────────────────────────────────────────────
-    # Camper-candidate sweet-spot only: L2 / L2H1 / L2H2 plus wildcards
-    # where the known dimension matches. The whitelist groups are all
-    # L2-only, with Transit Custom being H1-only and the others mostly
-    # H1 with rare H2 conversions.
-    GEM_SIZES = {"L2H1", "L2H2", "L2H?", "L2"}
+    # Camper-candidate sweet-spot. Matches the asking feed's scope (June 2026
+    # L2H2 pivot): any CONFIRMED high roof (H2/H3 at ANY length — so big-van
+    # L3H2/L3H3/L?H2 lots qualify, not just small L2 vans) PLUS the L2
+    # small-van set (Transit Custom / Expert / Vito etc.). Unknown height in
+    # the L2 set still passes (soft-gate); confirmed L1 / long low-roof do not.
+    # km bar relaxed 150k→200k to match the asking dashboard default (≤200k).
+    vt = (van_type or "").upper()
+    L2_SWEET_SPOT = {"L2H1", "L2H2", "L2H?", "L2"}
+    gem_size = ("H2" in vt or "H3" in vt) or vt in L2_SWEET_SPOT
     is_gem = bool(
         deal_ratio is not None and deal_ratio > 0.25
-        and km is not None and km < 150_000
+        and km is not None and km < 200_000
         and year is not None and year >= 2017
-        and (van_type or "").upper() in GEM_SIZES
+        and gem_size
     )
 
     return {
