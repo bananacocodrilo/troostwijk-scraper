@@ -8479,6 +8479,12 @@
           "current_bid_eur": 10000.0,
           "bids_count": 25,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-22T16:58:21.223939+00:00",
+          "current_bid_eur": 11000.0,
+          "bids_count": 27,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -8835,6 +8841,12 @@
           "ts": "2026-06-22T12:03:24.995296+00:00",
           "current_bid_eur": 5700.0,
           "bids_count": 13,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-22T16:58:21.223939+00:00",
+          "current_bid_eur": 7200.0,
+          "bids_count": 16,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -9514,6 +9526,12 @@
           "current_bid_eur": 10500.0,
           "bids_count": 34,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-22T16:58:21.223939+00:00",
+          "current_bid_eur": 15500.0,
+          "bids_count": 44,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -9684,6 +9702,12 @@
           "ts": "2026-06-22T12:03:24.995296+00:00",
           "current_bid_eur": 9500.0,
           "bids_count": 30,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-22T16:58:21.223939+00:00",
+          "current_bid_eur": 13000.0,
+          "bids_count": 34,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -10545,6 +10569,12 @@
           "ts": "2026-06-21T10:01:22.133377+00:00",
           "current_bid_eur": 540.0,
           "bids_count": 8,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-22T16:58:21.223939+00:00",
+          "current_bid_eur": 580.0,
+          "bids_count": 10,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -12445,6 +12475,12 @@
           "current_bid_eur": 2000.0,
           "bids_count": 3,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-22T16:58:21.223939+00:00",
+          "current_bid_eur": 2100.0,
+          "bids_count": 4,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -13231,6 +13267,12 @@
           "current_bid_eur": 2600.0,
           "bids_count": 2,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-22T16:58:21.223939+00:00",
+          "current_bid_eur": 2800.0,
+          "bids_count": 4,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -13275,6 +13317,12 @@
           "ts": "2026-06-22T12:03:24.995296+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-22T16:58:21.223939+00:00",
+          "current_bid_eur": 1000.0,
+          "bids_count": 1,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -13333,6 +13381,57 @@
       "snapshots": [
         {
           "ts": "2026-06-22T12:03:24.995296+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-22T16:58:21.223939+00:00",
+          "current_bid_eur": 3250.0,
+          "bids_count": 7,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "e3ba05b2-8afa-4bc8-8f2c-83a5919b5cd3": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-111-cdi-343-dc-std-107hp-2006-vn-790-p-A1-44379-11",
+      "model_token": "vito",
+      "year": 2006,
+      "snapshots": [
+        {
+          "ts": "2026-06-22T16:58:21.223939+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "046f59d0-c76c-4b6a-bbb1-9849ae962f75": {
+      "url": "https://www.troostwijkauctions.com/en/l/2020-ford-transit-custom-320-2-0-tdci-l2h1-sp-commercial-vehicle-A1-47550-3",
+      "model_token": "transit custom",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-22T16:58:21.223939+00:00",
+          "current_bid_eur": 2500.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "908c607f-9a86-4a0d-a34f-f5c30f74e74c": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-260s-fd-dc-125-camper-125hp-2003-j-557-jb-A1-44379-66",
+      "model_token": "transit",
+      "year": 2003,
+      "snapshots": [
+        {
+          "ts": "2026-06-22T16:58:21.223939+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
