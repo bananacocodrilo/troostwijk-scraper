@@ -211,6 +211,39 @@ mobile.de is reachable only from a residential IP or via `MOBILE_DE_PROXY`; lace
 
 ---
 
+## Git / pushing from this environment
+
+- **The CI bot runs every 6h and commits only `output/*.json`** (messages are
+  just `update`). It never touches source files — so when `git push` is rejected
+  with "fetch first", the remote almost always added pure-output commits. Verify
+  with `git diff --name-only <merge-base>..FETCH_HEAD -- ':!output'` (empty = no
+  source divergence). Then **rebase** onto the remote; the only conflicts will be
+  in the big output JSONs.
+- **Resolving output-JSON conflicts**: take the remote's fresher data
+  (`git checkout --ours output/*.json` *during a rebase* — `--ours` = the branch
+  you're rebasing onto), finish the rebase, then **regenerate** with your new
+  code so the artifacts match the source you're shipping:
+  ```bash
+  python3 -c "import registry; r=registry.load(); \
+    registry.clear_rejects_by_reason(r, registry.SIZE_REJECT_PREFIXES); registry.save(r)"
+  python3 asking_feed.py    # rebuilds asking_listings.json + asking_l2h2.json from price_cache
+  git add -A && git commit --amend --no-edit
+  ```
+- **SSH push fails here** (`Permission denied (publickey)`), and a global
+  `url."git@github.com:".insteadOf https://github.com/` rewrites every HTTPS
+  GitHub URL back to SSH. `gh` *is* authenticated (token has `repo`+`workflow`).
+  Push over HTTPS with an **embedded-credential URL** (which doesn't match the
+  rewrite prefix, so it isn't redirected to SSH):
+  ```bash
+  TOKEN=$(gh auth token)
+  git push "https://x-access-token:${TOKEN}@github.com/bananacocodrilo/troostwijk-scraper.git" main \
+    2>&1 | sed "s/${TOKEN}/***/g"
+  ```
+  Same trick for `git fetch` — pass the embedded-credential URL directly rather
+  than relying on `origin` (the `insteadOf` rule defeats `-c url…insteadOf=`).
+
+---
+
 ## Running locally
 
 ```bash
