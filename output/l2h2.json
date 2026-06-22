@@ -1,1 +1,60 @@
-[]
+[
+  {
+    "url": "https://www.troostwijkauctions.com/en/l/fiat-ducato-l2h2-van-A3-44492-5557",
+    "lot_id": "5195143b-c4c3-459c-af22-232c45e3a4c9",
+    "title": "Fiat - Ducato - L2H2 - Van",
+    "thumbnail_url": "https://media.tbauctions.com/image-media/1ab86129-d36e-44c3-aa77-d1a89b7405ae/file",
+    "images": [
+      "https://media.tbauctions.com/image-media/1ab86129-d36e-44c3-aa77-d1a89b7405ae/file",
+      "https://media.tbauctions.com/image-media/b5a4c321-81cb-46ec-8291-4f2cb0e9f5f9/file",
+      "https://media.tbauctions.com/image-media/e23a7157-4763-46c4-9b6b-1c1084770a8e/file",
+      "https://media.tbauctions.com/image-media/9ea7f7c1-29e1-4121-9ab8-5361a502f228/file",
+      "https://media.tbauctions.com/image-media/938f6448-c35e-4a39-9ebd-a17ea227ad6d/file"
+    ],
+    "source": "troostwijk",
+    "platform": "VAVATO",
+    "year": null,
+    "km": 209222,
+    "fuel": "diesel",
+    "emission_standard": null,
+    "van_type": "L2H2",
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "seats": 3,
+    "body_type": null,
+    "weight_kg": null,
+    "load_kg": null,
+    "city": "Maasmechelen",
+    "country_code": "BE",
+    "current_bid_eur": null,
+    "buyer_premium_pct": null,
+    "bids_count": null,
+    "auction_end": null,
+    "bidding_status": "BIDDING_NOT_YET_OPENED",
+    "condition": "NOT_CHECKED",
+    "vat_margin": true,
+    "estimated_market_value": 11250,
+    "market_value_source": "heuristic",
+    "max_recommended_bid_eur": 6145,
+    "final_cost_estimate": null,
+    "transport_cost_estimate": 650,
+    "reconditioning_cost_estimate": 3000,
+    "deal_ratio": null,
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 16645,
+    "score": 59,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_total_km",
+        "label": "High total km (209,222) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "is_hidden_gem": false
+  }
+]
