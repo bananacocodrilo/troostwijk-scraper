@@ -10126,6 +10126,12 @@
           "current_bid_eur": 5700.0,
           "bids_count": 72,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": 5900.0,
+          "bids_count": 73,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -10347,6 +10353,12 @@
           "ts": "2026-06-22T12:03:24.995296+00:00",
           "current_bid_eur": 4000.0,
           "bids_count": 16,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": 4200.0,
+          "bids_count": 17,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -11491,6 +11503,12 @@
           "current_bid_eur": 1800.0,
           "bids_count": 17,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": 2200.0,
+          "bids_count": 20,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -12339,6 +12357,12 @@
           "ts": "2026-06-22T12:03:24.995296+00:00",
           "current_bid_eur": 7600.0,
           "bids_count": 14,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": 8200.0,
+          "bids_count": 17,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -13468,6 +13492,441 @@
       "snapshots": [
         {
           "ts": "2026-06-22T21:01:06.007593+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "4e8364b0-dbd1-448a-a256-1715f2d060b2": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-trafic-1-6-dci-t29l2h1luxen-v-521-bd-A1-48000-129",
+      "model_token": "trafic",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "8ce78c31-a5d6-4d1f-b172-64772adeaae4": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-automatic-315-2-2-cdi-432-vt-392-v-A1-48000-8",
+      "model_token": "sprinter",
+      "year": 2006,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2fa9f7a7-8f98-4ec2-a46f-105c38f87bc8": {
+      "url": "https://www.troostwijkauctions.com/en/l/vauxhall-movano-belgium-A1-48000-113",
+      "model_token": "movano",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "f51670ef-7fbd-4f8a-bf8a-428f898ef413": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-416-2-2-cdi-432-hd-v-832-vt-A1-48000-110",
+      "model_token": "sprinter",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "6b005e5c-b380-4d01-8e3f-6d9cbde70e8c": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-crafter-35-2-0-tdi-l4h3-vjl-75-h-A1-48000-25",
+      "model_token": "crafter",
+      "year": 2021,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "fcd506b3-d1c3-4387-ae0b-8a4c40817325": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-350l-2-2-tdci-cvra-cvrb-114kw-belgian-A1-48000-45",
+      "model_token": "transit",
+      "year": 2012,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "b1544047-d2e7-457b-a122-009cc38ab380": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-drive-on-car-316-2-2-cdi-l3-v-499-zr-A1-48000-49",
+      "model_token": "sprinter",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "764926ed-3ca1-45ea-9507-966f6c30e740": {
+      "url": "https://www.troostwijkauctions.com/en/l/opel-movano-2-3-turbo-l3h2-vkd-82-h-A1-48000-40",
+      "model_token": "movano",
+      "year": 2021,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "7db43d7a-a0cb-4cbf-94bd-9ee3516fc015": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-scudo-german-A1-48000-104",
+      "model_token": "scudo",
+      "year": 2022,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "5683105c-224d-4b08-b9a0-cec9e2860b4f": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-119-cdi-long-4x4-v-421-dt-A1-48000-54",
+      "model_token": "vito",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "a1fc7d65-31c9-49c2-a552-dbe7c33afc4a": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-trafic-1-6-dci-t27l1h1comen-commercial-vehicle-A1-48000-80",
+      "model_token": "trafic",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "fd107ee8-d5ef-4c16-becc-deba484a7535": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-master-t352-3dci-l4h2-elco-vhp-71-g-A1-48000-39",
+      "model_token": "master",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2e8e356e-2483-4eca-a39b-97d32bcc1ced": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-crafter-drive-on-trailer-35-2-5-tdi-l3-02-vdl-1-A1-48000-70",
+      "model_token": "crafter",
+      "year": 2007,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "04c29e8f-bcc3-4845-8ff2-b159610d2503": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-automatic-350-2-0-tdcil4h1trsk-vtl-29-x-A1-48000-37",
+      "model_token": "transit",
+      "year": 2023,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "65a16193-c7c4-4d44-94f1-572d8f1f800e": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-111-cdi-lang-buspro%252B-v-365-lr-A1-48000-106",
+      "model_token": "vito",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "8eb57483-c0d2-48e8-ba49-ab2c813e9d4e": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-boxer-335-2-0-hdi-l2h2-pro-vz-983-g-A1-48000-42",
+      "model_token": "boxer",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "615a7972-12a9-4505-86dd-3b2772d0f184": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-crafter-35-2-0-tdi-l4h3-vjl-66-h-A1-48000-17",
+      "model_token": "crafter",
+      "year": 2021,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2a80ce1a-1c0b-4dd7-bc34-eb9c39d99ab6": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-313-2-2-cdi-366-v-927-gj-A1-48000-66",
+      "model_token": "sprinter",
+      "year": 2012,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "42963aba-ec64-4895-ab01-7f2b385bccbc": {
+      "url": "https://www.troostwijkauctions.com/en/l/vauxhall-movano-2-3dci-l2h2-belgian-A1-48000-48",
+      "model_token": "movano",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "52263849-3ebe-4ff3-828d-f42b4dcebff9": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-master-t35-2-3-dci-l3-euvi-v-467-nz-A1-48000-44",
+      "model_token": "master",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "3ba64b1a-8241-4a2f-877d-eeef22b118eb": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-boxer-435-3-0-hdi-115kw-vvv-38-r-A1-48000-22",
+      "model_token": "boxer",
+      "year": 2011,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "b77f15e2-3773-45da-b0dd-523e4b54f1ed": {
+      "url": "https://www.troostwijkauctions.com/en/l/2010-mercedes-benz-sprinter-sweeper-dirt-body-tipper-210-2-2-cdi-325-dc-commercial-vehicle-pick-up-A1-47544-10",
+      "model_token": "sprinter",
+      "year": 2010,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "71a02de3-6031-4fa1-aeb3-ef0a59aead89": {
+      "url": "https://www.troostwijkauctions.com/en/l/2010-ford-transit-260s-2-2-tdci-commercial-vehicle-A1-47544-60",
+      "model_token": "transit",
+      "year": 2010,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "021ded83-1419-403d-b8eb-b7d3ad92671a": {
+      "url": "https://www.troostwijkauctions.com/en/l/2017-mercedes-benz-sprinter-511-2-2-cdi-366-commercial-vehicle-pick-up-A1-47544-1",
+      "model_token": "sprinter",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "b1d19f24-0757-4ecb-a558-76963541b33c": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-crafter-35-2-5-tdi-l2h1-dc-109hp-2008-%2528original-nl%2529-62-vpj-5-A1-44376-56",
+      "model_token": "crafter",
+      "year": 2008,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "3055d77a-9758-4071-8c12-93d70394760c": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-313-2-2-cdi-432-hd-127hp-20121-%2528original-nl%252B1st-owner%2529-42-tjr-9-wheelchair-lift-A1-44376-7",
+      "model_token": "sprinter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "d1ec5681-501c-46b0-a12d-491398925cb7": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-314-2-2-cdi-l3h2-functional-euro-vi-d-2019-org-nl-v-089-xj-A1-44376-27",
+      "model_token": "sprinter",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "f8a9bfc9-14f2-4bdc-9281-641a3a91c58a": {
+      "url": "https://www.vavato.com/en/l/2017-mercedes-benz-v-class-passenger-car-A3-43550-19283",
+      "model_token": "v-class",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "4d63133e-df9e-41ac-b29e-0eff5f17db88": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-custom-280-2-0-tdci-l1h1-tr-commercial-vehicle-A1-47550-4",
+      "model_token": "transit custom",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-23T03:13:12.610666+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
