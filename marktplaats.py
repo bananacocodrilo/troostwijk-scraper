@@ -13,6 +13,8 @@ import urllib.parse
 import urllib.request
 from typing import Dict, List, Optional
 
+import vat
+
 SEARCH_URL = "https://www.marktplaats.nl/lrp/api/search"
 CATEGORY_ID = 571  # Vrachtwagens en campers (Trucks & Vans)
 
@@ -115,6 +117,14 @@ def _parse_listing(item: dict) -> Optional[dict]:
 
     attrs = {a["key"]: a.get("value") for a in (item.get("attributes") or [])}
     ext   = {a["key"]: a.get("value") for a in (item.get("extendedAttributes") or [])}
+    # Defensive structured VAT hint: Adevinta sometimes exposes a BTW/VAT
+    # attribute on car listings. Map its value to a scheme; None if absent.
+    vat_hint = None
+    for _k, _val in {**attrs, **ext}.items():
+        if any(t in str(_k).lower() for t in ("btw", "vat", "mwst")):
+            vat_hint = vat.hint_from_text(_val)
+            if vat_hint:
+                break
     try:
         year = int(attrs.get("constructionYear") or 0) or None
     except (ValueError, TypeError):
@@ -163,6 +173,7 @@ def _parse_listing(item: dict) -> Optional[dict]:
         "model_key":   _model_key(title),
         "images":      images,
         "seats":       seats,  # None unless extendedAttributes or VIP fill it
+        "vat_hint":    vat_hint,
     }
 
 

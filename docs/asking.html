@@ -316,6 +316,10 @@
     <input type="checkbox" id="showL3Filter" />
     Show L3
   </label>
+  <label class="check" title="Show VAT-included prices (flat 21%). Grosses up ex-VAT / lease / VAT-reclaimable listings to what a private buyer pays; margin & incl listings are unchanged. Off = prices as listed.">
+    <input type="checkbox" id="vatInclFilter" />
+    💶 VAT-incl
+  </label>
   <label>
     Sort by
     <select id="sortBy">
@@ -340,6 +344,7 @@ const DATA_URL = 'https://raw.githubusercontent.com/bananacocodrilo/troostwijk-s
 
 let allListings = [];
 let shownListings = [];   // current filtered+override-applied view, for export
+let vatIncl = false;      // VAT-incl display toggle (21% gross basis)
 
 function fmt(n, prefix='€') {
   if (n == null) return null;
@@ -405,6 +410,20 @@ function isSixSeater(v) {
 function isL3(v) {
   return /^l3/i.test(v.variant || '');
 }
+
+// VAT scheme → short card label.
+const VAT_LABEL = { margin:'marge', incl:'incl. btw', excl:'excl. btw', vat_deductible:'btw verrekenbaar' };
+// Displayed price honours the VAT-incl toggle: grossed (price_gross_eur) when on,
+// raw asking price when off. dispPct/dispUnder recompute the deal vs median on the
+// same basis so an ex-VAT listing isn't shown as artificially cheap.
+function dispPrice(v){ return (vatIncl && v.price_gross_eur != null) ? v.price_gross_eur : v.price_eur; }
+function dispPct(v){
+  if (!vatIncl) return v.price_pct_vs_median;
+  const med = v.market_median_eur, p = dispPrice(v);
+  if (med == null || p == null) return null;
+  return Math.round((p - med) / med * 1000) / 10;
+}
+function dispUnder(v){ return vatIncl ? (dispPct(v) != null && dispPct(v) <= -15) : v.is_underpriced; }
 
 // ── Export ───────────────────────────────────────────────────────────────
 // Maps the currently-shown listings (filters + dismiss/bookmark applied) to a
@@ -476,6 +495,8 @@ function toExport(v){
     country: v.country ? v.country.toUpperCase() : null,
     dealer: DEALER_SOURCES.includes(v.source) ? true : null,
     price_eur: v.price_eur??null,            // asking price as shown (VAT treatment varies by source)
+    vat_scheme: v.vat_scheme||'unknown',     // margin | incl | excl | vat_deductible | unknown
+    price_gross_eur: v.price_gross_eur??null,// private-buyer price incl 21% VAT (=price_eur unless ex-VAT/reclaimable)
     market_median_eur: v.market_median_eur??null,
     price_vs_median_pct: v.price_pct_vs_median??null,
     underpriced: !!v.is_underpriced,
@@ -549,10 +570,10 @@ function riskBlock(v) {
 
 function buildCard(v) {
   const score = v.score ?? 0;
-  const price = v.price_eur;
+  const price = dispPrice(v);
   const med   = v.market_median_eur;
-  const pct   = v.price_pct_vs_median;
-  const under = v.is_underpriced;
+  const pct   = dispPct(v);
+  const under = dispUnder(v);
   const pclass = pctClass(pct);
   const srcLabel = SOURCE_LABEL[v.source] || v.source || '—';
 
@@ -580,6 +601,7 @@ function buildCard(v) {
     ${v.model_group ? `<span class="badge badge-size" title="${v.model_group}">${GROUP_LABEL[v.model_group] || v.model_group}</span>` : ''}
     ${v.variant ? `<span class="badge badge-size">${v.variant}</span>` : ''}
     ${v.classification_confidence ? `<span class="badge badge-source" title="Classifier confidence">${v.classification_confidence}</span>` : ''}
+    ${v.vat_scheme && v.vat_scheme !== 'unknown' ? `<span class="badge badge-source" title="VAT scheme (${v.vat_confidence || ''})">${VAT_LABEL[v.vat_scheme] || v.vat_scheme}</span>` : ''}
     ${under ? '<span class="badge badge-under">⭐ underpriced</span>' : ''}
     ${pclass === 'over' && pct != null ? '<span class="badge badge-over">⚠️ above median</span>' : ''}
   </div>
@@ -593,7 +615,7 @@ function buildCard(v) {
 
   <div class="prices">
     <div class="price-row headline ${under ? 'underpriced' : ''}">
-      <span class="label">Asking price <small style="color:var(--muted);font-weight:400">(incl. BTW)</small></span>
+      <span class="label">Asking price <small style="color:var(--muted);font-weight:400">${vatIncl && v.price_gross_eur != null && v.price_gross_eur !== v.price_eur ? '(incl. 21% BTW ✦)' : '(as listed)'}</small></span>
       <span class="value headline-val">${price != null ? fmt(price) : '—'}</span>
     </div>
     <div class="price-row">
@@ -634,13 +656,14 @@ function render() {
   const maxRisk  = parseInt(document.getElementById('riskFilter').value);
   const sixSeat  = document.getElementById('sixSeatFilter').checked;
   const showL3   = document.getElementById('showL3Filter').checked;
+  vatIncl        = document.getElementById('vatInclFilter').checked;
   const sortKey  = document.getElementById('sortBy').value;
 
   let filtered = allListings.filter(v => {
     if (group  && v.model_group !== group) return false;
     if (country && countryOf(v) !== country) return false;
     if (source && v.source !== source) return false;
-    if ((v.price_eur ?? 0) > maxPrice) return false;
+    if ((dispPrice(v) ?? 0) > maxPrice) return false;
     if ((v.risk_score ?? 0) > maxRisk) return false;
     if (v.year != null && v.year < yearMin) return false;
     if (v.km != null && v.km > kmMax) return false;
@@ -654,16 +677,16 @@ function render() {
   });
 
   filtered.sort((a, b) => {
-    if (sortKey === 'price')  return (a.price_eur ?? 9e9) - (b.price_eur ?? 9e9);
+    if (sortKey === 'price')  return (dispPrice(a) ?? 9e9) - (dispPrice(b) ?? 9e9);
     if (sortKey === 'year')   return (b.year ?? 0) - (a.year ?? 0);
     if (sortKey === 'km')     return (a.km ?? 9e9) - (b.km ?? 9e9);
     if (sortKey === 'score')  return (b.score ?? 0) - (a.score ?? 0);
     // 'under_first' default: underpriced first, then by score desc, then by price asc
-    const au = a.is_underpriced ? 0 : 1;
-    const bu = b.is_underpriced ? 0 : 1;
+    const au = dispUnder(a) ? 0 : 1;
+    const bu = dispUnder(b) ? 0 : 1;
     if (au !== bu) return au - bu;
     if ((b.score ?? 0) !== (a.score ?? 0)) return (b.score ?? 0) - (a.score ?? 0);
-    return (a.price_eur ?? 9e9) - (b.price_eur ?? 9e9);
+    return (dispPrice(a) ?? 9e9) - (dispPrice(b) ?? 9e9);
   });
 
   filtered = Overrides.applyFilter(filtered);
@@ -718,6 +741,7 @@ document.getElementById('dealFilter').addEventListener('change', render);
 document.getElementById('sortBy').addEventListener('change', render);
 document.getElementById('sixSeatFilter').addEventListener('change', render);
 document.getElementById('showL3Filter').addEventListener('change', render);
+document.getElementById('vatInclFilter').addEventListener('change', render);
 document.getElementById('exportBtn').addEventListener('click', exportListings);
 document.getElementById('priceFilter').addEventListener('input', e => {
   const v = parseFloat(e.target.value);

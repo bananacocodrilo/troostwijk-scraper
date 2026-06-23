@@ -24,6 +24,7 @@ from van_intel import (
     _check_list, classify_vehicle, is_high_roof, score_small_van, strict_filter,
 )
 import risk
+import vat
 
 # Hard-reject patterns that apply to asking-price listings.
 # We apply HARD_REJECT_BODY and HARD_REJECT_DAMAGE in full.
@@ -170,6 +171,9 @@ def _to_vehicle(listing: dict) -> Optional[dict]:
         # the seller put in the description rather than the title.
         "remarks":            listing.get("description") or "",
         "images":             listing.get("images") or [],
+        # Optional structured VAT signal from the scraper (incl/excl/margin/
+        # vat_deductible/None); vat.detect_vat() falls back to text + source default.
+        "vat_hint":           listing.get("vat_hint"),
     }
 
 
@@ -272,6 +276,10 @@ def build_feed(price_cache_path: str = "output/price_cache.json") -> List[dict]:
         v["classification_confidence"] = cls.confidence
         v["matched_token"]             = cls.matched_token
         v["score"]                     = score_small_van(v)
+        # VAT scheme + private-buyer gross price (labelling only — cohort
+        # medians below stay on the raw price_eur). 21% flat, aggressive on
+        # ambiguous reclaimable-VAT. See vat.py.
+        v.update(vat.detect_vat(v))
         # Conversion cost + total project cost. For asking listings,
         # acquisition cost = asking price (no premium/VAT/transport math
         # to add — the listing price is what you pay private-party).
@@ -327,6 +335,8 @@ def build_feed(price_cache_path: str = "output/price_cache.json") -> List[dict]:
         x.get("price_eur") or 0,
     ))
 
+    import collections
+    vat_dist = collections.Counter(v.get("vat_scheme") for v in deduped)
     print(
         f"  asking_feed: in={len(raw_listings)} "
         f"classified_pass={len(survivors)} "
@@ -334,6 +344,7 @@ def build_feed(price_cache_path: str = "output/price_cache.json") -> List[dict]:
         f"dismissed_dropped={dismissed_dropped} "
         f"rejected={rejected_count}"
     )
+    print(f"  asking_feed: vat_scheme={dict(vat_dist)}")
     return deduped
 
 

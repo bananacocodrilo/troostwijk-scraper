@@ -163,6 +163,18 @@ def _parse_listing(item: dict, model_key: str) -> Optional[dict]:
     if not (PRICE_MIN_EUR <= price <= PRICE_MAX_EUR):
         return None
 
+    # Defensive structured VAT hint from the price object (keys vary across
+    # AS24 payloads; absent → None → vat.detect_vat falls back to text/source).
+    _p = item.get("price") or {}
+    _ptype = str(_p.get("priceType") or _p.get("vatType") or "").lower()
+    if _p.get("vatReclaimable") is True or _p.get("taxDeductible") is True:
+        vat_hint = "vat_deductible"
+    elif "net" in _ptype or "excl" in _ptype:
+        vat_hint = "excl"
+    elif "gross" in _ptype or "incl" in _ptype:
+        vat_hint = "incl"
+    else:
+        vat_hint = None
     # --- year --- (from "MM-YYYY" tracking string)
     year = None
     first_reg = (item.get("tracking") or {}).get("firstRegistration") or ""
@@ -214,6 +226,7 @@ def _parse_listing(item: dict, model_key: str) -> Optional[dict]:
         "model_key": model_key,
         "source": "autoscout24",
         "images": images,
+        "vat_hint": vat_hint,
     }
 
 

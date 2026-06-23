@@ -162,6 +162,8 @@ def _parse_hit(raw: str, fallback_model_key: str) -> Optional[dict]:
     price = float(price)
     if not (PRICE_MIN_EUR <= price <= PRICE_MAX_EUR):
         return None
+    # AutoTrack quotes the consumer total incl. BTW.
+    vat_hint = "incl" if prijs.get("totaalInclusiefBtw") else None
 
     auto = obj.get("autogegevens") or {}
     alg  = auto.get("algemeen") or {}
@@ -209,6 +211,7 @@ def _parse_hit(raw: str, fallback_model_key: str) -> Optional[dict]:
         "source":    "autotrack",
         "body_type": alg.get("carrosserievormSlug"),
         "images":    images,
+        "vat_hint":  vat_hint,
     }
 
 

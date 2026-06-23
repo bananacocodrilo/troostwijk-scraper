@@ -12,6 +12,8 @@ import urllib.parse
 import urllib.request
 from typing import List, Optional
 
+import vat
+
 SEARCH_URL = "https://www.2dehands.be/lrp/api/search"
 
 HEADERS = {
@@ -131,6 +133,13 @@ def _parse_listing(item: dict) -> Optional[dict]:
 
     attrs = {a["key"]: a.get("value") for a in (item.get("attributes") or [])}
     ext   = {a["key"]: a.get("value") for a in (item.get("extendedAttributes") or [])}
+    # Defensive structured VAT hint (same Adevinta platform as Marktplaats).
+    vat_hint = None
+    for _k, _val in {**attrs, **ext}.items():
+        if any(t in str(_k).lower() for t in ("btw", "vat", "mwst")):
+            vat_hint = vat.hint_from_text(_val)
+            if vat_hint:
+                break
     try:
         year = int(attrs.get("constructionYear") or 0) or None
     except (ValueError, TypeError):
@@ -172,6 +181,7 @@ def _parse_listing(item: dict) -> Optional[dict]:
         "source":      "2dehands",
         "images":      images,
         "seats":       seats,
+        "vat_hint":    vat_hint,
     }
 
 

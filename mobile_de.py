@@ -152,6 +152,9 @@ def _parse_item(item: dict, model_key: str) -> Optional[dict]:
         "source": "mobile_de",
         "country": "de",
         "images": images,
+        # We capture price.gross (consumer incl-VAT price) above, so the
+        # displayed price already includes VAT → no grossing-up needed.
+        "vat_hint": "incl",
     }
 
 
