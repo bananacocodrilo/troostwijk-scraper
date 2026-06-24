@@ -10048,6 +10048,12 @@
           "current_bid_eur": 130.0,
           "bids_count": 4,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-24T02:53:31.215153+00:00",
+          "current_bid_eur": 160.0,
+          "bids_count": 7,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -10401,6 +10407,12 @@
           "ts": "2026-06-23T03:13:12.610666+00:00",
           "current_bid_eur": 4200.0,
           "bids_count": 17,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-24T02:53:31.215153+00:00",
+          "current_bid_eur": 4400.0,
+          "bids_count": 18,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -11670,6 +11682,12 @@
           "ts": "2026-06-23T15:03:20.318925+00:00",
           "current_bid_eur": 2400.0,
           "bids_count": 22,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-24T02:53:31.215153+00:00",
+          "current_bid_eur": 2700.0,
+          "bids_count": 25,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -13330,6 +13348,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-24T02:53:31.215153+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -13954,6 +13978,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-24T02:53:31.215153+00:00",
+          "current_bid_eur": 6200.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -14638,6 +14668,51 @@
       "snapshots": [
         {
           "ts": "2026-06-23T20:30:14.744488+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "aab3eead-258a-4e70-be92-48bb3381bcd3": {
+      "url": "https://www.vavato.com/en/l/2021-volkswagen-crafter-35-2-0-tdi-l4h3-commercial-vehicle-box-truck-A1-47544-2",
+      "model_token": "crafter",
+      "year": 2021,
+      "snapshots": [
+        {
+          "ts": "2026-06-24T02:53:31.215153+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "458f8134-8993-4ddb-81ca-1bce7877a440": {
+      "url": "https://www.vavato.com/en/l/2010-mercedes-benz-sprinter-513-cdi-commercial-vehicle-A1-47537-1",
+      "model_token": "sprinter",
+      "year": 2010,
+      "snapshots": [
+        {
+          "ts": "2026-06-24T02:53:31.215153+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "5a8fc09f-50c7-462e-8c53-c4e803a2cbe2": {
+      "url": "https://www.troostwijkauctions.com/en/l/2018-opel-vivaro-1-6-cdti-l2h1-business%252B-ecoflex-commercial-vehicle-A1-46712-35",
+      "model_token": "vivaro",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-06-24T02:53:31.215153+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
