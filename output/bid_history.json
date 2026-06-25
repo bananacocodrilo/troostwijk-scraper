@@ -10219,6 +10219,12 @@
           "current_bid_eur": 2200.0,
           "bids_count": 36,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-25T14:33:25.926542+00:00",
+          "current_bid_eur": 2300.0,
+          "bids_count": 37,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -10455,6 +10461,12 @@
           "ts": "2026-06-25T09:20:05.080838+00:00",
           "current_bid_eur": 6400.0,
           "bids_count": 28,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-25T14:33:25.926542+00:00",
+          "current_bid_eur": 6600.0,
+          "bids_count": 29,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -11098,6 +11110,12 @@
           "current_bid_eur": 650.0,
           "bids_count": 13,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-25T14:33:25.926542+00:00",
+          "current_bid_eur": 2700.0,
+          "bids_count": 47,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -11685,6 +11703,12 @@
           "ts": "2026-06-25T09:20:05.080838+00:00",
           "current_bid_eur": 5200.0,
           "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-25T14:33:25.926542+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -15385,6 +15409,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-06-25T14:33:25.926542+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -15610,6 +15640,51 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "6400ca32-1e36-4921-8f76-07e19fe7ada9": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-ducato-150-multijet-optima-deluxe-t65-ge-camper-mobile-home-A3-43559-17354",
+      "model_token": "ducato",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-06-25T14:33:25.926542+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "994d2670-f121-4c32-9c7d-e0ff0a0f45ca": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-ducato-250-toskana-exclusive-hobby-750-limited-edition-camper-mobile-home-A3-43559-17355",
+      "model_token": "ducato",
+      "year": 2009,
+      "snapshots": [
+        {
+          "ts": "2026-06-25T14:33:25.926542+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "ff68b4ad-c8b5-4bca-8be5-3eb98a762166": {
+      "url": "https://www.troostwijkauctions.com/en/l/2024-fiat-ducato-250-benimar-belair-tessoro-t442-limited-edition-camper-mobile-home-A3-43559-17356",
+      "model_token": "ducato",
+      "year": 2024,
+      "snapshots": [
+        {
+          "ts": "2026-06-25T14:33:25.926542+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
