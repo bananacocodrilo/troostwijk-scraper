@@ -10078,6 +10078,12 @@
           "current_bid_eur": 190.0,
           "bids_count": 10,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-26T19:51:09.850294+00:00",
+          "current_bid_eur": 200.0,
+          "bids_count": 11,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -12051,6 +12057,12 @@
           "ts": "2026-06-26T09:23:18.179631+00:00",
           "current_bid_eur": 1250.0,
           "bids_count": 30,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-26T19:51:09.850294+00:00",
+          "current_bid_eur": 2100.0,
+          "bids_count": 46,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -14167,6 +14179,12 @@
           "current_bid_eur": 2300.0,
           "bids_count": 20,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-26T19:51:09.850294+00:00",
+          "current_bid_eur": 5300.0,
+          "bids_count": 44,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -14242,6 +14260,12 @@
           "current_bid_eur": 2000.0,
           "bids_count": 8,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-26T19:51:09.850294+00:00",
+          "current_bid_eur": 2200.0,
+          "bids_count": 10,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -14305,6 +14329,12 @@
           "current_bid_eur": 6000.0,
           "bids_count": 19,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-26T19:51:09.850294+00:00",
+          "current_bid_eur": 7200.0,
+          "bids_count": 25,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -14358,6 +14388,12 @@
           "ts": "2026-06-25T20:28:30.723511+00:00",
           "current_bid_eur": 2800.0,
           "bids_count": 13,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-26T19:51:09.850294+00:00",
+          "current_bid_eur": 7000.0,
+          "bids_count": 32,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -14421,6 +14457,12 @@
           "ts": "2026-06-26T09:23:18.179631+00:00",
           "current_bid_eur": 1600.0,
           "bids_count": 9,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-26T19:51:09.850294+00:00",
+          "current_bid_eur": 5000.0,
+          "bids_count": 15,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -15117,6 +15159,12 @@
           "ts": "2026-06-24T02:53:31.215153+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-26T19:51:09.850294+00:00",
+          "current_bid_eur": 3200.0,
+          "bids_count": 1,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -16294,6 +16342,21 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "cffd2f7f-510f-473b-ae77-127010c779eb": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-crafter-35-2-0-tdi-l3h2-%257C-vs-877-p-A1-44164-4845",
+      "model_token": "crafter",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-06-26T19:51:09.850294+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
