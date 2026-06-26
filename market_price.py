@@ -49,6 +49,15 @@ _MP_QUERIES = [
     # and the auction-side PriceIndex still uses them for fallback medians.
     "Mercedes Sprinter", "Ford Transit", "Renault Master",
     "Volkswagen Crafter", "Opel Movano", "MAN TGE", "Iveco Daily",
+    # High-roof sweeps: each big-van model paired with "l2h2" catches listings
+    # buried past page 3 in the generic model search (Marktplaats has 200-800+
+    # results per model; page 3 = position 300). 2 pages covers ~200 results
+    # which is enough for these targeted queries. "hoog dak" sweeps the NL
+    # roofline keyword variant that may not appear in the l2h2 queries.
+    "Citroen Jumper l2h2", "Fiat Ducato l2h2", "Peugeot Boxer l2h2",
+    "Mercedes Sprinter l2h2", "Volkswagen Crafter l2h2", "Ford Transit l2h2",
+    "Renault Master l2h2", "Opel Movano l2h2", "Mercedes Vito l2h2",
+    "hoog dak",
 ]
 
 

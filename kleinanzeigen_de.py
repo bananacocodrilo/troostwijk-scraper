@@ -68,7 +68,38 @@ _MODEL_SLUGS = {
     "trafic":         "renault-trafic",
     "transporter":    "vw-transporter",
     "staria":         "hyundai-staria",
+    # Hochdach sweeps: model+keyword catches H2/H3 listings buried in generic
+    # model searches. model_key is inferred from title by _infer_model_key.
+    "_sprinter_hd":   "mercedes-sprinter hochdach",
+    "_crafter_hd":    "vw-crafter hochdach",
+    "_transit_hd":    "ford-transit hochdach",
+    "_ducato_hd":     "fiat-ducato hochdach",
+    "_jumper_hd":     "citroen-jumper hochdach",
+    "_boxer_hd":      "peugeot-boxer hochdach",
+    "_master_hd":     "renault-master hochdach",
+    "_movano_hd":     "opel-movano hochdach",
 }
+
+# For the "_hochdach" sweep the model_key is inferred from the listing title
+# (same tokens used by marktplaats._model_key). Sets contribute to the asking
+# feed classification but not to PriceIndex medians (model_key stays None when
+# no token matches — fine, medians come from the model-specific passes).
+_TITLE_TOKENS = [
+    ("transit custom", "transit_custom"), ("transit", "transit"),
+    ("sprinter", "sprinter"), ("crafter", "crafter"), ("tge", "tge"),
+    ("ducato", "ducato"), ("boxer", "boxer"), ("jumper", "jumper"),
+    ("master", "master"), ("movano", "movano"),
+    ("vito", "vito"), ("expert", "expert"), ("jumpy", "jumpy"),
+    ("proace", "proace"), ("vivaro", "vivaro"), ("trafic", "trafic"),
+    ("transporter", "transporter"),
+]
+
+def _infer_model_key(title: str) -> Optional[str]:
+    s = title.lower()
+    for token, key in _TITLE_TOKENS:
+        if re.search(rf"\b{re.escape(token)}\b", s):
+            return key
+    return None
 
 _PRICE_RE = re.compile(r"(\d{1,3}(?:\.\d{3})*|\d+)\s*€")
 _YEAR_RE = re.compile(r"\b(19|20)\d{2}\b")
@@ -177,7 +208,11 @@ def fetch_market_prices(model_key: str, pages: int = 8) -> List[dict]:
                 if key in seen:
                     continue
                 seen.add(key)
-                parsed["model_key"] = model_key
+                parsed["model_key"] = (
+                    _infer_model_key(parsed.get("title", ""))
+                    if model_key.startswith("_")
+                    else model_key
+                )
                 results.append(parsed)
             time.sleep(0.5)
     return results

@@ -54,6 +54,8 @@ DEFAULT_QUERIES = [
     # legacy big-van
     "Mercedes Sprinter", "Ford Transit", "Renault Master",
     "Volkswagen Crafter", "Opel Movano", "MAN TGE", "Iveco Daily",
+    # High-roof keyword sweep: catch L2H2 listings buried past page 3.
+    "l2h2",
 ]
 
 # Token → canonical model_key used by PriceIndex bucketing.
