@@ -1858,7 +1858,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-25T14:33:25.875281+00:00"
+      "last_scrape_at": "2026-06-26T14:29:23.837569+00:00"
     },
     "https://www.vavato.com/en/l/renault-trafic-van-A1-47735-6": {
       "title": "Renault - Trafic - Van",
@@ -2835,10 +2835,10 @@
       "remarks": null,
       "additional_information": "Not roadworthy;\nBattery empty or defective - mileage not readable ;\nThe mileage, operating hours and other data are to be understood as non-binding guideline values. No guarantee is given for the correctness of the information ;\nThis lot has not been tested for functionality. Parts may be damaged or missing. The seller does not assume any warranty for road and operational safety;",
       "lot_id": "edf52857-b277-430b-aaaf-c6763f6b7769",
-      "current_bid_eur": 1400.0,
+      "current_bid_eur": 1550.0,
       "buyer_premium_pct": 19.0,
       "total_cost_eur": null,
-      "bids_count": 21,
+      "bids_count": 24,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -2875,7 +2875,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-06-25T14:33:25.875281+00:00"
+      "last_scrape_at": "2026-06-26T14:29:23.837569+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/opel-vivaro-transporter-A1-47800-23": {
       "title": "Opel Vivaro Transporter",
@@ -10095,6 +10095,431 @@
       "big_van_score": null,
       "small_van_score": null,
       "last_scrape_at": "2026-06-26T13:11:21.813052+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2020-renault-master-tow-truck-A3-46076-5271": {
+      "title": "2020 Renault Master Tow Truck",
+      "brand": "Renault",
+      "model": "Master Takelwagen",
+      "url": "https://www.troostwijkauctions.com/en/l/2020-renault-master-tow-truck-A3-46076-5271",
+      "source": "troostwijk",
+      "platform": "VAVATO",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/023df2bc-3c0b-4767-852e-f4dc17136dde/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/023df2bc-3c0b-4767-852e-f4dc17136dde/file",
+        "https://media.tbauctions.com/image-media/bd0fd031-5e4a-4913-94ec-9628243589db/file",
+        "https://media.tbauctions.com/image-media/4487f082-de17-4937-bed4-d369f6c88337/file",
+        "https://media.tbauctions.com/image-media/72b8e2f2-42bf-453a-bd58-b73bafab56e2/file",
+        "https://media.tbauctions.com/image-media/346d348d-bde8-4b07-92a7-e812df712436/file"
+      ],
+      "year": 2020,
+      "first_registration": null,
+      "km": 49201,
+      "fuel": null,
+      "transmission": null,
+      "power_kw": null,
+      "cylinder_cc": 2299,
+      "emission_standard": null,
+      "seats": null,
+      "doors": null,
+      "color": null,
+      "weight_kg": null,
+      "load_kg": null,
+      "body_type": null,
+      "vin": null,
+      "city": "Hasselt",
+      "country_code": "BE",
+      "location": "Hasselt, BE",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": false,
+      "bidding_status": "BIDDING_NOT_YET_OPENED",
+      "auction_start": "2026-07-01T16:00:00Z",
+      "auction_end": null,
+      "remarks": null,
+      "additional_information": null,
+      "lot_id": "6a077a1b-3375-421b-9391-4a253ddfb6d6",
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
+      "total_cost_eur": null,
+      "bids_count": null,
+      "reserve_met": null,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": null,
+      "is_valid_van": true,
+      "score": 14,
+      "scores": null,
+      "applied_rule_set": "renault_master_grp",
+      "passed_hard_filters": true,
+      "rejected_reason": "score_below_threshold: 14 < 30",
+      "reason_for_inclusion": [
+        "Renault Master / Opel Movano / Nissan Interstar (NV400) (size unknown)",
+        "token: master",
+        "49k km, 2020"
+      ],
+      "fleet_type": "private",
+      "fleet_signals": null,
+      "model_group": "renault_master_grp",
+      "variant": null,
+      "classification_confidence": "low",
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2020-renault-master-truck-A3-46076-37037": {
+      "title": "2020 Renault Master Truck",
+      "brand": "Renault",
+      "model": null,
+      "url": "https://www.troostwijkauctions.com/en/l/2020-renault-master-truck-A3-46076-37037",
+      "source": "troostwijk",
+      "platform": "VAVATO",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/7c32cfc8-7c95-4280-a14c-aac96aedcf9e/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/7c32cfc8-7c95-4280-a14c-aac96aedcf9e/file",
+        "https://media.tbauctions.com/image-media/26eecf5c-4edc-470f-8e7c-acd0a4902ec1/file",
+        "https://media.tbauctions.com/image-media/60d6ec64-56e9-4186-aed1-740280ca8512/file",
+        "https://media.tbauctions.com/image-media/77c03f8c-1f7d-4136-b231-999aba562fd6/file",
+        "https://media.tbauctions.com/image-media/054a08b6-d47c-408e-ae48-29c136d0f735/file"
+      ],
+      "year": 2020,
+      "first_registration": null,
+      "km": 87840,
+      "fuel": null,
+      "transmission": null,
+      "power_kw": null,
+      "cylinder_cc": 2299,
+      "emission_standard": null,
+      "seats": 3,
+      "doors": null,
+      "color": null,
+      "weight_kg": null,
+      "load_kg": null,
+      "body_type": null,
+      "vin": null,
+      "city": "BRUSSEL",
+      "country_code": "BE",
+      "location": "BRUSSEL, BE",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": false,
+      "bidding_status": "BIDDING_NOT_YET_OPENED",
+      "auction_start": "2026-07-01T16:00:00Z",
+      "auction_end": null,
+      "remarks": null,
+      "additional_information": "Renault Master transformed into a professional mobile pet grooming unit. Autonomous vehicle equipped with a Honda EU30is generator, E.L.M. Leblanc gas boiler for hot water production, Dometic reversible air conditioning with remote control, 400 L clean water tank and 330 L waste water tank. Equipped with a large stainless steel bathtub with hand shower, height-adjustable electric grooming table, animal support arms, stainless steel worktop,  stainless steel sink, plenty of storage space, wall-mounted wardrobes, interior LED lighting, side windows with blackouts, 230 V electrical sockets and ventilated outdoor technical compartments. Vehicle fully equipped for a professional home grooming activity. Maintenance carried out exclusively in the Renault network. Licence B. Technical inspection valid until 26/01/2026. Mileage: 87.840 km.\n\nEquipment to check/select in the ad if available:\n\n* Air conditioning cell\n* Hot water heating\n* Honda EU30is generator set\n* Electric table\n* Stainless steel bathtub\n* LED lighting\n* Clean water tank\n* Waste water tank\n* 230V sockets\n* Built-in storage\n* Cell ventilation\n* Autonomous vehicle",
+      "lot_id": "e1d9c567-1af3-4489-ad9c-7320935a020a",
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
+      "total_cost_eur": null,
+      "bids_count": null,
+      "reserve_met": null,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": null,
+      "is_valid_van": true,
+      "score": 20,
+      "scores": null,
+      "applied_rule_set": "renault_master_grp",
+      "passed_hard_filters": true,
+      "rejected_reason": "score_below_threshold: 20 < 30",
+      "reason_for_inclusion": [
+        "Renault Master / Opel Movano / Nissan Interstar (NV400) (size unknown)",
+        "token: master",
+        "87k km, 2020"
+      ],
+      "fleet_type": "private",
+      "fleet_signals": null,
+      "model_group": "renault_master_grp",
+      "variant": null,
+      "classification_confidence": "low",
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.vavato.com/en/l/2020-renault-master-tow-truck-A3-46076-5271": {
+      "title": "2020 Renault Master Tow Truck",
+      "brand": "Renault",
+      "model": "Master Takelwagen",
+      "url": "https://www.vavato.com/en/l/2020-renault-master-tow-truck-A3-46076-5271",
+      "source": "troostwijk",
+      "platform": "VAVATO",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/023df2bc-3c0b-4767-852e-f4dc17136dde/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/023df2bc-3c0b-4767-852e-f4dc17136dde/file",
+        "https://media.tbauctions.com/image-media/bd0fd031-5e4a-4913-94ec-9628243589db/file",
+        "https://media.tbauctions.com/image-media/4487f082-de17-4937-bed4-d369f6c88337/file",
+        "https://media.tbauctions.com/image-media/72b8e2f2-42bf-453a-bd58-b73bafab56e2/file",
+        "https://media.tbauctions.com/image-media/346d348d-bde8-4b07-92a7-e812df712436/file"
+      ],
+      "year": 2020,
+      "first_registration": null,
+      "km": 49201,
+      "fuel": null,
+      "transmission": null,
+      "power_kw": null,
+      "cylinder_cc": 2299,
+      "emission_standard": null,
+      "seats": null,
+      "doors": null,
+      "color": null,
+      "weight_kg": null,
+      "load_kg": null,
+      "body_type": null,
+      "vin": null,
+      "city": "Hasselt",
+      "country_code": "BE",
+      "location": "Hasselt, BE",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": false,
+      "bidding_status": "BIDDING_NOT_YET_OPENED",
+      "auction_start": "2026-07-01T16:00:00Z",
+      "auction_end": null,
+      "remarks": null,
+      "additional_information": null,
+      "lot_id": "6a077a1b-3375-421b-9391-4a253ddfb6d6",
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
+      "total_cost_eur": null,
+      "bids_count": null,
+      "reserve_met": null,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": null,
+      "is_valid_van": true,
+      "score": 14,
+      "scores": null,
+      "applied_rule_set": "renault_master_grp",
+      "passed_hard_filters": true,
+      "rejected_reason": "score_below_threshold: 14 < 30",
+      "reason_for_inclusion": [
+        "Renault Master / Opel Movano / Nissan Interstar (NV400) (size unknown)",
+        "token: master",
+        "49k km, 2020"
+      ],
+      "fleet_type": "private",
+      "fleet_signals": null,
+      "model_group": "renault_master_grp",
+      "variant": null,
+      "classification_confidence": "low",
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-2-0-tdi-l2h1-%2522automatic%2522-highline-204hp-2018-%2528original-nl%2529-v-921-sg-commercial-vehicle-A1-44383-40": {
+      "title": "Volkswagen Transporter 2.0 TDI L2H1 \"Automatic\" Highline 204hp 2018 (Original-NL), V-921-SG Commercial Vehicle",
+      "brand": "Volkswagen",
+      "model": "2.0 TDI L2H1 \"Automaat\" Highline",
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-2-0-tdi-l2h1-%2522automatic%2522-highline-204hp-2018-%2528original-nl%2529-v-921-sg-commercial-vehicle-A1-44383-40",
+      "source": "troostwijk",
+      "platform": "TWK",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/9a2c7b18-7b94-43d0-8cf5-825aa537bd11/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/9a2c7b18-7b94-43d0-8cf5-825aa537bd11/file",
+        "https://media.tbauctions.com/image-media/fabb8e30-f638-4470-9956-0b8e1ac0004d/file",
+        "https://media.tbauctions.com/image-media/8a48b252-8065-4741-8562-85877657d87e/file",
+        "https://media.tbauctions.com/image-media/9a38bccd-aaba-46b2-a540-ac18775195bd/file",
+        "https://media.tbauctions.com/image-media/14fc23e4-d062-4cf8-926b-4c0c5b925242/file"
+      ],
+      "year": 2018,
+      "first_registration": null,
+      "km": 192690,
+      "fuel": "diesel",
+      "transmission": "Semi-Automatic (7)",
+      "power_kw": 150,
+      "cylinder_cc": 1968,
+      "emission_standard": "6",
+      "seats": 3,
+      "doors": null,
+      "color": "blue",
+      "weight_kg": 1975,
+      "load_kg": null,
+      "body_type": "Box construction",
+      "vin": null,
+      "city": "Tiel",
+      "country_code": "NL",
+      "location": "Tiel, NL",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": false,
+      "bidding_status": "BIDDING_OPEN",
+      "auction_start": "2026-06-26T14:00:00Z",
+      "auction_end": null,
+      "remarks": "Signs of wear/damage and wear all around by age/mileage. \n<br><br/>\nVolkswagen Transporter 2.0 TDI L2H1 \"Automatic\" Highline 204hp 2018\n<br><br/>\nOriginally delivered in the Netherlands!\n<br><br/>\nOptions:\nAir conditioning, luxury leather seats, tow bar, metallic paint, cruise control, reversing camera, parking sensors, alloy wheels, Highline edition, etc.",
+      "additional_information": null,
+      "lot_id": "976057b8-969f-477c-a09e-ed3cbf1a2cfa",
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
+      "total_cost_eur": null,
+      "bids_count": null,
+      "reserve_met": null,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": "L2H1",
+      "is_valid_van": true,
+      "score": 22,
+      "scores": null,
+      "applied_rule_set": "t6_1_lwb",
+      "passed_hard_filters": true,
+      "rejected_reason": "score_below_threshold: 22 < 30",
+      "reason_for_inclusion": [
+        "VW Transporter T6 + T6.1 (Multivan / Caravelle / California) (L2H1)",
+        "token: transporter; explicit L2H1",
+        "192k km, 2018"
+      ],
+      "fleet_type": "private",
+      "fleet_signals": null,
+      "model_group": "t6_1_lwb",
+      "variant": "L2H1",
+      "classification_confidence": "high",
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.vavato.com/en/l/2019-volkswagen-crafter-passenger-car-A3-46076-8101": {
+      "title": "2019 Volkswagen Crafter Passenger Car",
+      "brand": "Volkswagen",
+      "model": null,
+      "url": "https://www.vavato.com/en/l/2019-volkswagen-crafter-passenger-car-A3-46076-8101",
+      "source": "troostwijk",
+      "platform": "VAVATO",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/0e4b2a12-1933-476a-b40d-ec3d0fd248a1/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/0e4b2a12-1933-476a-b40d-ec3d0fd248a1/file",
+        "https://media.tbauctions.com/image-media/cc1f3271-e6ff-4ea7-aede-d797299aa09e/file",
+        "https://media.tbauctions.com/image-media/e7e54300-dd73-444e-917a-1171f9add97f/file",
+        "https://media.tbauctions.com/image-media/4f218e54-3c31-44b3-81e0-0a3548142c17/file",
+        "https://media.tbauctions.com/image-media/9e6c57c4-3e5a-4dcb-a07c-2a2d939d9694/file"
+      ],
+      "year": 2019,
+      "first_registration": null,
+      "km": 173915,
+      "fuel": "diesel",
+      "transmission": "Automatic transmission",
+      "power_kw": 130,
+      "cylinder_cc": 1968,
+      "emission_standard": null,
+      "seats": 3,
+      "doors": 2,
+      "color": null,
+      "weight_kg": null,
+      "load_kg": null,
+      "body_type": null,
+      "vin": null,
+      "city": "sint jansteen",
+      "country_code": "NL",
+      "location": "sint jansteen, NL",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": false,
+      "bidding_status": "BIDDING_NOT_YET_OPENED",
+      "auction_start": "2026-07-01T16:00:00Z",
+      "auction_end": null,
+      "remarks": null,
+      "additional_information": null,
+      "lot_id": "992b6572-7bbd-4ae4-9702-596e7ec9bb6b",
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
+      "total_cost_eur": null,
+      "bids_count": null,
+      "reserve_met": null,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": null,
+      "is_valid_van": true,
+      "score": 22,
+      "scores": null,
+      "applied_rule_set": "vw_crafter_tge",
+      "passed_hard_filters": true,
+      "rejected_reason": "score_below_threshold: 22 < 30",
+      "reason_for_inclusion": [
+        "VW Crafter (gen 2) / MAN TGE (size unknown)",
+        "token: crafter",
+        "173k km, 2019"
+      ],
+      "fleet_type": "private",
+      "fleet_signals": null,
+      "model_group": "vw_crafter_tge",
+      "variant": null,
+      "classification_confidence": "low",
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-06-26T14:29:23.837569+00:00"
     }
   },
   "permanent_rejects": {
@@ -54462,6 +54887,276 @@
       "reason": "mileage_too_high: 443977km",
       "title": "2004 Nissan Primastar 100.27-310 1.9CDi Commercial Vehicle",
       "rejected_at": "2026-06-26T13:11:21.813052+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2012-volvo-fles-fll42n250-truck-A3-44492-35402": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2012 Volvo FLES FLL42N250 Truck",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/truck-wheels-%25284x%2529-A1-47404-252": {
+      "reason": "vehicle_type: forklift",
+      "title": "Truck wheels (4x)",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/truck-wheels-%25284x%2529-A1-47404-251": {
+      "reason": "vehicle_type: forklift",
+      "title": "Truck wheels (4x)",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2015-schmitz-cargobull-scb*s3b-semi-trailer-refrigerated-trailer-A1-47404-54": {
+      "reason": "body_mismatch: refrigerated body",
+      "title": "2015 Schmitz Cargobull SCB*S3B Semi-trailer / refrigerated trailer",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2016-krone-tks-meethang-semi-trailer-A1-47404-55": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2016 Krone TKS Meethang Semi-trailer",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/car-ambulance-trailer-A1-47404-224": {
+      "reason": "vehicle_type: ambulance",
+      "title": "Car Ambulance Trailer",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/continental-mpt-12-5r20-tire-%25284x%2529-A1-47377-1006": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Continental MPT 12.5R20 tire (4x)",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2006-daf-fa-lf55-220-truck-A1-47404-40": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2006 Daf FA LF55.220 Truck",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2009-daf-lf-55-220-flatbed-A1-47404-14": {
+      "reason": "body_mismatch: flatbed body",
+      "title": "2009 DAF LF 55.220 Flatbed",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2005-nooteboom-mco-48-03-v-extendible-hydraulically-steered-semi-lowloader-A1-47404-61": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2005 Nooteboom MCO-48-03 V extendible hydraulically steered semi lowloader",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2008-draco-ass-324-low-loader-A1-47404-60": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2008 Draco ASS 324 Low Loader",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/continental-radial-mpt-truck-tire-%25284x%2529-A1-47377-1007": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Continental Radial MPT Truck Tire (4x)",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2016-kogel-s24-1-semi-trailer-A3-46076-37044": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2016 K\u00f6gel S24-1 Semi-trailer",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/1994-stevens-t655-02-pigeon-transport-semi-trailer-A3-46076-17137": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1994 STEVENS T655-02 Pigeon Transport Semi-trailer",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2014-man-tgx-animal-transport-truck-A3-46076-17140": {
+      "reason": "mileage_too_high: 850000km",
+      "title": "2014 MAN TGX Animal Transport Truck",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2016-kogel-son-24-semi-trailer-A3-46076-37043": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2016 K\u00f6gel Son 24 Semi-trailer",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/kogel-s24-1-semi-trailer-A3-46076-37045": {
+      "reason": "brand_not_in_whitelist",
+      "title": "K\u00f6gel S24-1 Semi-trailer",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2013-man-tgx-16x18400-truck-A3-46076-17139": {
+      "reason": "body_mismatch: chassis cab",
+      "title": "2013 MAN TGX 16x18400 Truck",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2016-daf-xf-460-truck-A3-46076-37039": {
+      "reason": "vehicle_type: tractor unit",
+      "title": "2016 DAF XF 460 Truck",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2005-t-tec-pigeon-transport-semi-trailer-A3-46076-17138": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2005 T-TEC Pigeon Transport Semi-trailer",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.vavato.com/en/l/fiat-ducato-refrigerated-truck-maxi-commercial-vehicle-A3-46076-5275": {
+      "reason": "body_mismatch: refrigerated body",
+      "title": "Fiat Ducato Refrigerated Truck MAXI Commercial Vehicle",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.vavato.com/en/l/2023-iveco-daily-tractor-combination-%2528car-transport%2529-A3-46076-13023": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2023 Iveco Daily Tractor combination (car transport)",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.vavato.com/en/l/ford-transit-light-truck-6-seats-2-2-tdci-van-A3-46076-7053": {
+      "reason": "body_mismatch: light truck (chassis variant)",
+      "title": "Ford Transit Light Truck 6 seats. 2.2 TDci van",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.vavato.com/en/l/volkswagen-id-3-pure-automatic-2022-A1-41531-42": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Volkswagen ID.3 Pure Automatic 2022",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.vavato.com/en/l/volkswagen-taigo-1-0-tsi-2023-A1-41531-40": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Volkswagen Taigo 1.0 TSI 2023",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.vavato.com/en/l/volkswagen-id-3-pro-58-kwh-150kw-automatic-2023-A1-41531-6": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Volkswagen ID.3 Pro 58 kWh 150KW Automatic 2023",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-transit-light-truck-6-seats-2-2-tdci-van-A3-46076-7053": {
+      "reason": "body_mismatch: light truck (chassis variant)",
+      "title": "Ford Transit Light Truck 6 seats. 2.2 TDci van",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.vavato.com/en/l/2012-peugeot-expert-xsahz8-passenger-car-A3-46076-9033": {
+      "reason": "year_below_minimum: 2012 < 2016 (expert_jumpy_proace_l2)",
+      "title": "2012 Peugeot Expert XSAHZ8 Passenger Car",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-toyota-42-7fgf25-forklift-A3-46078-401": {
+      "reason": "vehicle_type: forklift",
+      "title": "2007 Toyota 42-7FGF25 Forklift",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.vavato.com/en/l/2020-fiat-abarth-595-1-4-t-jet-car-A3-43559-39115": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2020 Fiat Abarth 595 1.4 T - Jet Car",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/opel-tigra-twintop-1-4-16v-rhythm-90hp-2007-%2528original-nl%2529-79-ts-pb-A1-44383-23": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Opel Tigra TwinTop 1.4-16V Rhythm 90hp 2007 (Original-NL), 79-TS-PB",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/opel-vivaro-camper-2-0-114hp-2012-%2528original-nl%2529-ps-446-t-A1-44383-20": {
+      "reason": "vehicle_type: camper (pre-converted)",
+      "title": "Opel Vivaro -Camper- 2.0 114hp 2012 (Original-NL), PS-446-T ",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-cl63-amg-performance-package-v8-571-2010-A1-48030-13": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes-Benz CL63 AMG Performance Package V8 571 - 2010",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/jaguar-mk-ii-340-classic-car-1968-A1-46613-6": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Jaguar - MK II - 340 - Classic car - 1968",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mini-2006-convertible-1-6-cooper-s-60-nkj-9-A1-48000-149": {
+      "reason": "brand_not_in_whitelist",
+      "title": "MINI - 2006 - Convertible - 1.6 Cooper S - 60-NKJ-9",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/cupra-formentor-1-4-phev-245-2021-A1-48030-6": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Cupra Formentor 1.4 PHEV 245 - 2021",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-v60-hybrid-2-4-d6-awd-pl-i-momentem-passenger-car-2014-A1-46613-171": {
+      "reason": "mileage_too_high: 269921km",
+      "title": "Volvo - V60 - Hybrid- 2.4 D6 AWD - Pl.i Momentem - Passenger car - 2014",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/porsche-911-992-4-0-gt3-car-2021-A1-46613-4": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Porsche - 911 - 992 - 4.0 GT3 - Car - 2021",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-2013-3-serie-cabriolet-330i-exclusive-automatic-j-086-kj-A1-48000-121": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW - 2013 - 3-serie Cabriolet - 330i Exclusive Automatic - J-086-KJ",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-530-xd-touring-high-executive-2011-A1-46613-58": {
+      "reason": "mileage_too_high: 314253km",
+      "title": "BMW - 530 XD - Touring High Executive - 2011",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mini-2008-3-door-1-4-one-pepper-81-zj-sb-A1-48000-21": {
+      "reason": "brand_not_in_whitelist",
+      "title": "MINI - 2008 - 3-Door - 1.4 One Pepper - 81-ZJ-SB",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-xc90-3-2-kinetic-passenger-car-2007-A1-46613-510": {
+      "reason": "mileage_too_high: 302960km",
+      "title": "Volvo - XC90 - 3.2 Kinetic - Passenger car - 2007",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/kia-cee%2527d-1-6-crdi-comfort-pack-passenger-car-2013-A1-46613-298": {
+      "reason": "mileage_too_high: 388506km",
+      "title": "Kia - cee'd - 1.6 CRDi Comfort Pack - Passenger car - 2013",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/kia-optima-2-0-cvvt-hyb-superp-passenger-car-2014-A1-46613-413": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Kia - Optima - 2.0 CVVT Hyb.SuperP. - Passenger car - 2014",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/kia-2006-picanto-1-0-lx-93-tj-rl-A1-48000-7": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Kia - 2006 - Picanto - 1.0 LX - 93-TJ-RL",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.vavato.com/en/l/mercedes-benz-mille-miglia-1-of-630-sl280-classic-car-A3-43559-20752": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes-Benz - Mille Miglia 1 OF 630 - SL280 - Classic car",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2012-hyundai-ix20-jc-5p21-car-A3-43559-35532": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2012 Hyundai Ix20 JC/5P21 Car",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2007-hyundai-terracan-passenger-car-A3-43559-8102": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2007 Hyundai Terracan Passenger Car",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2016-hyundai-robex-160w-9a-tire-excavator-A1-47377-20": {
+      "reason": "vehicle_type: excavator",
+      "title": "2016 Hyundai Robex 160W-9A Tire Excavator",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.vavato.com/en/l/2012-hyundai-ix20-jc-5p21-car-A3-43559-35532": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2012 Hyundai Ix20 JC/5P21 Car",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.vavato.com/en/l/2007-hyundai-terracan-passenger-car-A3-43559-8102": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2007 Hyundai Terracan Passenger Car",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2016-nissan-juke-1-2-dig-t-car-A3-43559-39116": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2016 Nissan Juke 1.2 DIG - T Car",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/fiat-commercial-vehicle-A1-40054-36": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Fiat Commercial Vehicle",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
+    },
+    "https://www.vavato.com/en/l/fiat-commercial-vehicle-A1-40054-36": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Fiat Commercial Vehicle",
+      "rejected_at": "2026-06-26T14:29:23.837569+00:00"
     }
   }
 }

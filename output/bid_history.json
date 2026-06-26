@@ -10294,6 +10294,12 @@
           "current_bid_eur": 1400.0,
           "bids_count": 21,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-26T14:29:23.888824+00:00",
+          "current_bid_eur": 1550.0,
+          "bids_count": 24,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -16180,6 +16186,111 @@
       "snapshots": [
         {
           "ts": "2026-06-26T13:11:21.863635+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "6a077a1b-3375-421b-9391-4a253ddfb6d6": {
+      "url": "https://www.troostwijkauctions.com/en/l/2020-renault-master-tow-truck-A3-46076-5271",
+      "model_token": "master",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-26T14:29:23.888824+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "61e0a267-0b8b-4e9e-8815-775fa29845fa": {
+      "url": "https://www.vavato.com/en/l/fiat-ducato-refrigerated-truck-maxi-commercial-vehicle-A3-46076-5275",
+      "model_token": "ducato",
+      "year": 2013,
+      "snapshots": [
+        {
+          "ts": "2026-06-26T14:29:23.888824+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "bd38049b-1db3-4942-8222-a8ea95384930": {
+      "url": "https://www.vavato.com/en/l/ford-transit-light-truck-6-seats-2-2-tdci-van-A3-46076-7053",
+      "model_token": "transit",
+      "year": 2013,
+      "snapshots": [
+        {
+          "ts": "2026-06-26T14:29:23.888824+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "bc5f4476-ca67-43a8-8b05-fd076110d810": {
+      "url": "https://www.vavato.com/en/l/2012-peugeot-expert-xsahz8-passenger-car-A3-46076-9033",
+      "model_token": "expert",
+      "year": 2012,
+      "snapshots": [
+        {
+          "ts": "2026-06-26T14:29:23.888824+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "8d890b4a-bb99-4555-8d58-5bfee4a20ff9": {
+      "url": "https://www.troostwijkauctions.com/en/l/opel-vivaro-camper-2-0-114hp-2012-%2528original-nl%2529-ps-446-t-A1-44383-20",
+      "model_token": "vivaro",
+      "year": 2012,
+      "snapshots": [
+        {
+          "ts": "2026-06-26T14:29:23.888824+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "976057b8-969f-477c-a09e-ed3cbf1a2cfa": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-2-0-tdi-l2h1-%2522automatic%2522-highline-204hp-2018-%2528original-nl%2529-v-921-sg-commercial-vehicle-A1-44383-40",
+      "model_token": "transporter",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-06-26T14:29:23.888824+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "992b6572-7bbd-4ae4-9702-596e7ec9bb6b": {
+      "url": "https://www.vavato.com/en/l/2019-volkswagen-crafter-passenger-car-A3-46076-8101",
+      "model_token": "crafter",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-06-26T14:29:23.888824+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
