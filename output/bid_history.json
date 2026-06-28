@@ -10126,6 +10126,12 @@
           "current_bid_eur": 210.0,
           "bids_count": 12,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-28T19:37:16.328311+00:00",
+          "current_bid_eur": 470.0,
+          "bids_count": 27,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -10302,6 +10308,12 @@
           "ts": "2026-06-25T14:33:25.926542+00:00",
           "current_bid_eur": 2300.0,
           "bids_count": 37,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-28T19:37:16.328311+00:00",
+          "current_bid_eur": 2400.0,
+          "bids_count": 38,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -11214,6 +11226,12 @@
           "ts": "2026-06-24T09:12:29.252491+00:00",
           "current_bid_eur": 810.0,
           "bids_count": 16,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-28T19:37:16.328311+00:00",
+          "current_bid_eur": 860.0,
+          "bids_count": 17,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -14365,10 +14383,16 @@
           "current_bid_eur": 5800.0,
           "bids_count": 46,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-28T19:37:16.328311+00:00",
+          "current_bid_eur": 7400.0,
+          "bids_count": 55,
+          "status": "BIDDING_OPEN"
         }
       ],
-      "final_hammer_eur": null,
-      "closed_at": null
+      "final_hammer_eur": 7400.0,
+      "closed_at": "2026-06-28T19:25:00Z"
     },
     "7db43d7a-a0cb-4cbf-94bd-9ee3516fc015": {
       "url": "https://www.troostwijkauctions.com/en/l/fiat-scudo-german-A1-48000-104",
@@ -14406,8 +14430,8 @@
           "status": "BIDDING_OPEN"
         }
       ],
-      "final_hammer_eur": null,
-      "closed_at": null
+      "final_hammer_eur": 12250.0,
+      "closed_at": "2026-06-28T19:25:00Z"
     },
     "5683105c-224d-4b08-b9a0-cec9e2860b4f": {
       "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-119-cdi-long-4x4-v-421-dt-A1-48000-54",
@@ -14464,10 +14488,16 @@
           "current_bid_eur": 3200.0,
           "bids_count": 20,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-28T19:37:16.328311+00:00",
+          "current_bid_eur": 4400.0,
+          "bids_count": 30,
+          "status": "BIDDING_OPEN"
         }
       ],
-      "final_hammer_eur": null,
-      "closed_at": null
+      "final_hammer_eur": 4400.0,
+      "closed_at": "2026-06-28T19:29:00Z"
     },
     "fd107ee8-d5ef-4c16-becc-deba484a7535": {
       "url": "https://www.troostwijkauctions.com/en/l/renault-master-t352-3dci-l4h2-elco-vhp-71-g-A1-48000-39",
@@ -15562,6 +15592,12 @@
           "current_bid_eur": 540.0,
           "bids_count": 3,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-28T19:37:16.328311+00:00",
+          "current_bid_eur": 4225.0,
+          "bids_count": 56,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -16444,6 +16480,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-28T19:37:16.328311+00:00",
+          "current_bid_eur": 1.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -16714,6 +16756,21 @@
       "snapshots": [
         {
           "ts": "2026-06-28T09:02:34.673194+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "40cf3358-cdfa-40f4-8fa1-9522b0a77c81": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-car-2014-A1-47153-600",
+      "model_token": "sprinter",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-06-28T19:37:16.328311+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
