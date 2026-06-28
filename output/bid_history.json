@@ -10201,6 +10201,12 @@
           "current_bid_eur": 1200.0,
           "bids_count": 20,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-28T02:59:18.381994+00:00",
+          "current_bid_eur": 1450.0,
+          "bids_count": 26,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -11001,6 +11007,12 @@
           "ts": "2026-06-26T13:11:21.863635+00:00",
           "current_bid_eur": 1800.0,
           "bids_count": 53,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-28T02:59:18.381994+00:00",
+          "current_bid_eur": 2200.0,
+          "bids_count": 59,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -14305,6 +14317,12 @@
           "current_bid_eur": 5300.0,
           "bids_count": 44,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-28T02:59:18.381994+00:00",
+          "current_bid_eur": 5800.0,
+          "bids_count": 46,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -14331,6 +14349,12 @@
           "ts": "2026-06-25T20:28:30.723511+00:00",
           "current_bid_eur": 4600.0,
           "bids_count": 13,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-28T02:59:18.381994+00:00",
+          "current_bid_eur": 6200.0,
+          "bids_count": 21,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -14589,6 +14613,12 @@
           "ts": "2026-06-26T19:51:09.850294+00:00",
           "current_bid_eur": 5000.0,
           "bids_count": 15,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-28T02:59:18.381994+00:00",
+          "current_bid_eur": 5400.0,
+          "bids_count": 17,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -16540,6 +16570,21 @@
       "snapshots": [
         {
           "ts": "2026-06-26T19:51:09.850294+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "7def5c1b-af99-49c6-bfd2-2c23fa20beee": {
+      "url": "https://www.troostwijkauctions.com/en/l/2015-mercedes-benz-sprinter-be-trekker-A1-47334-34",
+      "model_token": "sprinter",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-06-28T02:59:18.381994+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
