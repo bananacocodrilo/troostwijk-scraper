@@ -9181,6 +9181,12 @@
           "current_bid_eur": 3400.0,
           "bids_count": 5,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-29T03:09:15.377761+00:00",
+          "current_bid_eur": 3500.0,
+          "bids_count": 6,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -10372,6 +10378,12 @@
           "current_bid_eur": 1600.0,
           "bids_count": 25,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-29T03:09:15.377761+00:00",
+          "current_bid_eur": 1701.0,
+          "bids_count": 27,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -10857,6 +10869,12 @@
           "ts": "2026-06-28T13:42:09.845112+00:00",
           "current_bid_eur": 1410.0,
           "bids_count": 17,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-29T03:09:15.377761+00:00",
+          "current_bid_eur": 1560.0,
+          "bids_count": 20,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -11574,6 +11592,12 @@
           "ts": "2026-06-27T19:23:14.658599+00:00",
           "current_bid_eur": 4000.0,
           "bids_count": 10,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-29T03:09:15.377761+00:00",
+          "current_bid_eur": 4250.0,
+          "bids_count": 11,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -12916,6 +12940,12 @@
           "current_bid_eur": 15194.0,
           "bids_count": 28,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-29T03:09:15.377761+00:00",
+          "current_bid_eur": 15694.0,
+          "bids_count": 29,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -13104,6 +13134,12 @@
           "ts": "2026-06-27T13:33:25.013934+00:00",
           "current_bid_eur": 6200.0,
           "bids_count": 14,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-29T03:09:15.377761+00:00",
+          "current_bid_eur": 6400.0,
+          "bids_count": 15,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -15502,6 +15538,12 @@
           "current_bid_eur": 2600.0,
           "bids_count": 2,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-29T03:09:15.377761+00:00",
+          "current_bid_eur": 2800.0,
+          "bids_count": 4,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -16159,6 +16201,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-29T03:09:15.377761+00:00",
+          "current_bid_eur": 520.0,
+          "bids_count": 2,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -16428,6 +16476,12 @@
           "ts": "2026-06-27T02:51:35.689443+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-29T03:09:15.377761+00:00",
+          "current_bid_eur": 3000.0,
+          "bids_count": 1,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -16774,6 +16828,51 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "973a0ae9-ec14-4494-9629-35e3d7700b78": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-master-t28-2-5d-l1h1-commercial-vehicle-A1-39097-60",
+      "model_token": "master",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-29T03:09:15.377761+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "ea07a12c-7ac1-4e56-a7c0-34ec6c93b37e": {
+      "url": "https://www.troostwijkauctions.com/en/l/2007-volkswagen-transporter-2-5-tdi-340-mhd-commercial-vehicle-A1-39097-8",
+      "model_token": "transporter",
+      "year": 2007,
+      "snapshots": [
+        {
+          "ts": "2026-06-29T03:09:15.377761+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "b9ec5c16-a8e5-4bed-a043-315c488f562c": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-crafter-35-2-0-tdi-l3h3-hi-commercial-vehicle-A1-47940-8",
+      "model_token": "crafter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-29T03:09:15.377761+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
