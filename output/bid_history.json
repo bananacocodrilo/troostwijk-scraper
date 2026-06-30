@@ -10828,6 +10828,12 @@
           "current_bid_eur": 4000.0,
           "bids_count": 31,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T09:28:19.387355+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -13162,6 +13168,12 @@
           "current_bid_eur": 14000.0,
           "bids_count": 32,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T09:28:19.387355+00:00",
+          "current_bid_eur": 14250.0,
+          "bids_count": 33,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -13923,7 +13935,7 @@
     "0fbc19ff-9563-4b83-a90a-ebcc456fd901": {
       "url": "https://www.troostwijkauctions.com/en/l/mak-volkswagen-transporter-wheels-A1-48066-36",
       "model_token": "transporter",
-      "year": null,
+      "year": 2010,
       "snapshots": [
         {
           "ts": "2026-06-19T20:11:08.703655+00:00",
@@ -14247,6 +14259,12 @@
           "ts": "2026-06-29T11:01:18.170024+00:00",
           "current_bid_eur": 1400.0,
           "bids_count": 5,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T09:28:19.387355+00:00",
+          "current_bid_eur": 1600.0,
+          "bids_count": 7,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -15274,6 +15292,12 @@
           "current_bid_eur": 2500.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T09:28:19.387355+00:00",
+          "current_bid_eur": 3000.0,
+          "bids_count": 6,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -15658,6 +15682,12 @@
           "current_bid_eur": 1100.0,
           "bids_count": 2,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T09:28:19.387355+00:00",
+          "current_bid_eur": 1200.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -15943,6 +15973,12 @@
           "current_bid_eur": 3750.0,
           "bids_count": 8,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T09:28:19.387355+00:00",
+          "current_bid_eur": 4000.0,
+          "bids_count": 9,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -16056,6 +16092,12 @@
           "ts": "2026-06-30T03:01:06.971227+00:00",
           "current_bid_eur": 1200.0,
           "bids_count": 3,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T09:28:19.387355+00:00",
+          "current_bid_eur": 1300.0,
+          "bids_count": 4,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -16314,6 +16356,12 @@
           "ts": "2026-06-29T11:01:18.170024+00:00",
           "current_bid_eur": 3200.0,
           "bids_count": 3,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T09:28:19.387355+00:00",
+          "current_bid_eur": 3300.0,
+          "bids_count": 4,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -17083,6 +17131,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T09:28:19.387355+00:00",
+          "current_bid_eur": 2750.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -17275,6 +17329,51 @@
       "snapshots": [
         {
           "ts": "2026-06-30T03:01:06.971227+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "86aed898-f233-4b8e-9ac2-e3f268945998": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-311-2-2-cdi-432-hd-9-pers-wheelchair-bus-%257C-77-jzt-5-i-A1-44165-5109",
+      "model_token": "sprinter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T09:28:19.387355+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "528c34d0-9d3b-4b7f-ad1f-2eb5ece3aca7": {
+      "url": "https://www.troostwijkauctions.com/en/l/subaru-tribeca-3-0r-boxer-h6-luxury-245hp-2008-orig-nl-28-vg-zd-youngtimer-A1-44381-50",
+      "model_token": "boxer",
+      "year": 2008,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T09:28:19.387355+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "ee7a1dd7-10b8-4bf9-acd9-8217c812173d": {
+      "url": "https://www.vavato.com/en/l/2011-mercedes-sprinter-automatic-gearbox%252Blift-light-cargo-A3-46076-5037",
+      "model_token": "sprinter",
+      "year": 2011,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T09:28:19.387355+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
