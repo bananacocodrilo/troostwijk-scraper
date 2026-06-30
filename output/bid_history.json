@@ -10822,6 +10822,12 @@
           "current_bid_eur": 3900.0,
           "bids_count": 30,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T03:01:06.971227+00:00",
+          "current_bid_eur": 4000.0,
+          "bids_count": 31,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -11110,6 +11116,12 @@
           "current_bid_eur": 2500.0,
           "bids_count": 62,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T03:01:06.971227+00:00",
+          "current_bid_eur": 2600.0,
+          "bids_count": 63,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -11305,6 +11317,12 @@
           "current_bid_eur": 1060.0,
           "bids_count": 21,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T03:01:06.971227+00:00",
+          "current_bid_eur": 1160.0,
+          "bids_count": 23,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -11343,6 +11361,12 @@
           "ts": "2026-06-28T13:42:09.845112+00:00",
           "current_bid_eur": 2900.0,
           "bids_count": 49,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T03:01:06.971227+00:00",
+          "current_bid_eur": 5200.0,
+          "bids_count": 66,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -13017,6 +13041,12 @@
           "ts": "2026-06-29T03:09:15.377761+00:00",
           "current_bid_eur": 15694.0,
           "bids_count": 29,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T03:01:06.971227+00:00",
+          "current_bid_eur": 17000.0,
+          "bids_count": 31,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -16021,6 +16051,12 @@
           "current_bid_eur": 1000.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T03:01:06.971227+00:00",
+          "current_bid_eur": 1200.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -17227,6 +17263,21 @@
           "current_bid_eur": 36.0,
           "bids_count": 8,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "539baf27-6895-4da0-a47b-0735e6756a9c": {
+      "url": "https://www.troostwijkauctions.com/en/l/2012-volkswagen-transporter-A1-48267-18",
+      "model_token": "transporter",
+      "year": 2012,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T03:01:06.971227+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
