@@ -11128,6 +11128,12 @@
           "current_bid_eur": 2600.0,
           "bids_count": 63,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": 3000.0,
+          "bids_count": 67,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -11328,6 +11334,12 @@
           "ts": "2026-06-30T03:01:06.971227+00:00",
           "current_bid_eur": 1160.0,
           "bids_count": 23,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": 1210.0,
+          "bids_count": 24,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -13054,6 +13066,12 @@
           "current_bid_eur": 17000.0,
           "bids_count": 31,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": 17500.0,
+          "bids_count": 32,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -14266,6 +14284,12 @@
           "current_bid_eur": 1600.0,
           "bids_count": 7,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": 1800.0,
+          "bids_count": 9,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -14307,6 +14331,12 @@
           "ts": "2026-06-23T20:30:14.744488+00:00",
           "current_bid_eur": 4250.0,
           "bids_count": 12,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": 4500.0,
+          "bids_count": 13,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -15264,6 +15294,12 @@
           "ts": "2026-06-29T11:01:18.170024+00:00",
           "current_bid_eur": 3500.0,
           "bids_count": 4,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": 3750.0,
+          "bids_count": 5,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -16672,6 +16708,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": 2000.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -17374,6 +17416,261 @@
       "snapshots": [
         {
           "ts": "2026-06-30T09:28:19.387355+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "a6ac32bd-1fde-4845-a2d5-27c610f057f5": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-custom-transit-van-A3-46076-20205",
+      "model_token": "transit",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "d4fd470f-4a1e-4ca8-9cd5-928d7005172f": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-expert-van-A3-46076-35746",
+      "model_token": "expert",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "1e15f4e3-85ba-4a95-a9e8-f528f72b93e6": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-expert-A3-46076-2425",
+      "model_token": "expert",
+      "year": 2021,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "029ea8b4-a7e4-4bc0-b4be-319eb5162016": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-boxer-van-A3-46076-20206",
+      "model_token": "boxer",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "1ecc459f-b32a-44a0-93cf-128f26de73a4": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-boxer-van-A3-46076-20208",
+      "model_token": "boxer",
+      "year": 2022,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "26d56dcc-4f55-4c93-943c-5e31a01bec12": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-boxer-van-A3-46076-20211",
+      "model_token": "boxer",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "5cf38bd1-d4f8-4205-a085-6625ec6d03f5": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-boxer-refrigerated-truck-A3-46076-20210",
+      "model_token": "boxer",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "50aa240c-3a0d-43a4-889c-167e3e84cdb2": {
+      "url": "https://www.vavato.com/en/l/peugeot-expert-A3-46076-2426",
+      "model_token": "expert",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "3e96b51e-51ea-4d47-aee6-ea2f2cfff45e": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-2022-traveller-2-0-bluehdi-busl-s-s-automatic-9-seater-car-A1-47984-7",
+      "model_token": "traveller",
+      "year": 2022,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "e1925a15-e057-4917-ad9b-f34449aa85c7": {
+      "url": "https://www.vavato.com/en/l/2017-citroen-jumpy-automatic-double-cab-air-conditioning-A3-46076-5040",
+      "model_token": "jumpy",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "fcb5332a-7077-4394-8ff0-aa35acf82ef2": {
+      "url": "https://www.troostwijkauctions.com/en/l/toyota-2020-proace-shuttle-1-5-d-4d-cool-co-med-car-A1-47984-8",
+      "model_token": "pro ace",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "3bc26cdc-2aa2-4aad-bca7-e1ee5dabede8": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-talento-14s-ecojet-van-%2528light-truck%2529-A3-46076-7007",
+      "model_token": "talento",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "728cc548-acea-4823-a412-1f4ea46eb85f": {
+      "url": "https://www.troostwijkauctions.com/en/l/2021-fiat-ducato-l3h2-2-3mjet-refrigerated-van-van-A3-46076-17345",
+      "model_token": "ducato",
+      "year": 2021,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "7500c5af-a228-4e03-9218-939f9e1db5e1": {
+      "url": "https://www.vavato.com/en/l/2021-fiat-ducato-commercial-vehicle-A3-46076-17203",
+      "model_token": "ducato",
+      "year": 2021,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "e88e3a9e-6c0f-4914-82ab-4dba89dde0f9": {
+      "url": "https://www.troostwijkauctions.com/en/l/master-renault-A3-46076-2427",
+      "model_token": "master",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "d3c1414f-0862-4ef1-b843-af6eedb588ed": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-A1-47976-29",
+      "model_token": "transporter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "763baa87-fcc0-469c-b2d3-1a49f9421dda": {
+      "url": "https://www.troostwijkauctions.com/en/l/2007-renault-master-6-seater-double-cab-towbar-A3-46076-5041",
+      "model_token": "master",
+      "year": 2007,
+      "snapshots": [
+        {
+          "ts": "2026-06-30T14:23:30.944425+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
