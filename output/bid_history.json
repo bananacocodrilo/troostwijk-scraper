@@ -18886,6 +18886,12 @@
           "current_bid_eur": 4150.0,
           "bids_count": 23,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-11T08:11:03.891544+00:00",
+          "current_bid_eur": 4400.0,
+          "bids_count": 24,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -18930,6 +18936,12 @@
           "ts": "2026-07-09T02:39:14.615185+00:00",
           "current_bid_eur": 1100.0,
           "bids_count": 18,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-11T08:11:03.891544+00:00",
+          "current_bid_eur": 1550.0,
+          "bids_count": 27,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -19887,6 +19899,12 @@
           "ts": "2026-07-09T02:39:14.615185+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-11T08:11:03.891544+00:00",
+          "current_bid_eur": 1000.0,
+          "bids_count": 1,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -21586,6 +21604,12 @@
           "current_bid_eur": 8800.0,
           "bids_count": 49,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-11T08:11:03.891544+00:00",
+          "current_bid_eur": 9600.0,
+          "bids_count": 53,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -22816,6 +22840,12 @@
           "current_bid_eur": 110.0,
           "bids_count": 2,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-11T08:11:03.891544+00:00",
+          "current_bid_eur": 130.0,
+          "bids_count": 4,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -23533,6 +23563,12 @@
           "current_bid_eur": 5000.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-11T08:11:03.891544+00:00",
+          "current_bid_eur": 5500.0,
+          "bids_count": 2,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -24021,6 +24057,12 @@
           "ts": "2026-07-10T19:40:46.002592+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-11T08:11:03.891544+00:00",
+          "current_bid_eur": 900.0,
+          "bids_count": 1,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -24643,6 +24685,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-11T08:11:03.891544+00:00",
+          "current_bid_eur": 2700.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -24822,6 +24870,51 @@
           "ts": "2026-07-11T02:21:26.814679+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "74f51e46-83a7-4b88-a694-aae55afd9f11": {
+      "url": "https://www.troostwijkauctions.com/en/l/2010-mercedes-benz-sprinter-210-cdi-flatbed-truck-open-box-car-A1-48257-6067",
+      "model_token": "sprinter",
+      "year": 2010,
+      "snapshots": [
+        {
+          "ts": "2026-07-11T08:11:03.891544+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "f7480ed5-0e01-4d37-bf97-9cd8a43b638f": {
+      "url": "https://www.troostwijkauctions.com/en/l/2020-iveco-daily-type-35s14-double-cab-tarpaulin-body-iveco-daily-35s14g-flatbed-transporter-natural-gas-%2528cng%2529-%257C-webasto-system-%257C-tuv-11-2026-A1-48257-6069",
+      "model_token": "transporter",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-07-11T08:11:03.891544+00:00",
+          "current_bid_eur": 2600.0,
+          "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "11c36bed-d26b-4a4e-94e1-715a1152b3c8": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-master-t35-2-3dci-l3h2-comfort-%257C-vjl-76-n-i-A1-44168-4697",
+      "model_token": "master",
+      "year": 2021,
+      "snapshots": [
+        {
+          "ts": "2026-07-11T08:11:03.891544+00:00",
+          "current_bid_eur": 1000.0,
+          "bids_count": 1,
           "status": "BIDDING_OPEN"
         }
       ],
