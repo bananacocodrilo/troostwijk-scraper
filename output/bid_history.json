@@ -18148,10 +18148,16 @@
           "current_bid_eur": 3100.0,
           "bids_count": 10,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-13T14:52:27.880769+00:00",
+          "current_bid_eur": 3400.0,
+          "bids_count": 13,
+          "status": "BIDDING_OPEN"
         }
       ],
-      "final_hammer_eur": null,
-      "closed_at": null
+      "final_hammer_eur": 3400.0,
+      "closed_at": "2026-07-13T14:36:00Z"
     },
     "026f81ee-0965-4f72-8cec-0bddc26002bf": {
       "url": "https://www.troostwijkauctions.com/en/l/fiat-rear-door-fiat-ducato-%25282x%2529-new-part-A1-48277-25",
@@ -18225,6 +18231,12 @@
           "ts": "2026-07-10T19:40:46.002592+00:00",
           "current_bid_eur": 7500.0,
           "bids_count": 19,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-13T14:52:27.880769+00:00",
+          "current_bid_eur": 8000.0,
+          "bids_count": 20,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -18655,6 +18667,12 @@
           "current_bid_eur": 2600.0,
           "bids_count": 2,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-13T14:52:27.880769+00:00",
+          "current_bid_eur": 2700.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -18726,6 +18744,12 @@
           "ts": "2026-07-09T15:10:21.869922+00:00",
           "current_bid_eur": 3750.0,
           "bids_count": 17,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-13T14:52:27.880769+00:00",
+          "current_bid_eur": 4000.0,
+          "bids_count": 18,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -18840,6 +18864,12 @@
           "ts": "2026-07-09T19:51:23.294949+00:00",
           "current_bid_eur": 3750.0,
           "bids_count": 9,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-13T14:52:27.880769+00:00",
+          "current_bid_eur": 4000.0,
+          "bids_count": 10,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -19525,6 +19555,12 @@
           "current_bid_eur": 4500.0,
           "bids_count": 27,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-13T14:52:27.880769+00:00",
+          "current_bid_eur": 5500.0,
+          "bids_count": 30,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -19633,6 +19669,12 @@
           "current_bid_eur": 5500.0,
           "bids_count": 14,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-13T14:52:27.880769+00:00",
+          "current_bid_eur": 6500.0,
+          "bids_count": 16,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -19683,6 +19725,12 @@
           "ts": "2026-07-11T19:20:31.698942+00:00",
           "current_bid_eur": 2450.0,
           "bids_count": 15,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-13T14:52:27.880769+00:00",
+          "current_bid_eur": 2650.0,
+          "bids_count": 17,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -20694,6 +20742,12 @@
           "ts": "2026-07-13T09:21:18.111649+00:00",
           "current_bid_eur": 1800.0,
           "bids_count": 9,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-13T14:52:27.880769+00:00",
+          "current_bid_eur": 1900.0,
+          "bids_count": 10,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -22569,6 +22623,12 @@
           "ts": "2026-07-13T02:34:14.877235+00:00",
           "current_bid_eur": 5400.0,
           "bids_count": 3,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-13T14:52:27.880769+00:00",
+          "current_bid_eur": 5600.0,
+          "bids_count": 4,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -25624,6 +25684,81 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "071bcde3-5f8a-4ff5-989f-9ecbc42025e4": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-516-2-2-cdi-432-automatic-vv-971-f-A1-40731-104",
+      "model_token": "sprinter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-07-13T14:52:27.880769+00:00",
+          "current_bid_eur": 25000.0,
+          "bids_count": 22,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "41c6f999-e14f-4c64-924a-c934292645df": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-crafter-van-A7-48630-3",
+      "model_token": "crafter",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-07-13T14:52:27.880769+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "86f3497d-73e4-46d0-9fb6-29d8033bdf2d": {
+      "url": "https://www.vavato.com/en/l/various-radiators-for-volkswagen-transporter-%25285x%2529-A1-48224-51",
+      "model_token": "transporter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-07-13T14:52:27.880769+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "a0356fc8-f111-49ef-b590-e8199037e6a0": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-l3h3-truck-2016-A7-48630-7",
+      "model_token": "transit",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-07-13T14:52:27.880769+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "25c88c54-7f38-4ab8-873f-71f24d570deb": {
+      "url": "https://www.troostwijkauctions.com/en/l/2-0l-diesel-engine-type-cdti-jtd-saab-95-opel-isignia-fiat-ducato-A1-48224-2",
+      "model_token": "ducato",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-07-13T14:52:27.880769+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
