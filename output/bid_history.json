@@ -18013,6 +18013,12 @@
           "current_bid_eur": 8700.0,
           "bids_count": 25,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-14T13:40:34.912681+00:00",
+          "current_bid_eur": 8900.0,
+          "bids_count": 26,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -20929,6 +20935,12 @@
           "current_bid_eur": 1150.0,
           "bids_count": 17,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-14T13:40:34.912681+00:00",
+          "current_bid_eur": 1250.0,
+          "bids_count": 19,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -21327,6 +21339,12 @@
           "ts": "2026-07-13T02:34:14.877235+00:00",
           "current_bid_eur": 3300.0,
           "bids_count": 3,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-14T13:40:34.912681+00:00",
+          "current_bid_eur": 3400.0,
+          "bids_count": 4,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -23817,6 +23835,12 @@
           "ts": "2026-07-13T09:21:18.111649+00:00",
           "current_bid_eur": 2600.0,
           "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-14T13:40:34.912681+00:00",
+          "current_bid_eur": 4200.0,
+          "bids_count": 17,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -26452,6 +26476,36 @@
       "snapshots": [
         {
           "ts": "2026-07-14T08:17:05.894953+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "f6d2cf70-3245-411e-87ba-f238cda2b135": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-516-2-2-cdi-432-163hp-2013-vfb-88-z-automatic-A1-44386-14",
+      "model_token": "sprinter",
+      "year": 2013,
+      "snapshots": [
+        {
+          "ts": "2026-07-14T13:40:34.912681+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "ab414359-6bc8-4492-adf1-c5d1567a626b": {
+      "url": "https://www.troostwijkauctions.com/en/l/subaru-tribeca-3-0r-boxer-h6-luxury-245hp-2008-orig-nl-28-vg-zd-youngtimer-A1-44388-54",
+      "model_token": "boxer",
+      "year": 2008,
+      "snapshots": [
+        {
+          "ts": "2026-07-14T13:40:34.912681+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"

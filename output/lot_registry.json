@@ -753,88 +753,6 @@
       "small_van_score": null,
       "last_scrape_at": "2026-06-18T15:31:29.061693+00:00"
     },
-    "https://www.troostwijkauctions.com/en/l/ford-transit-mk2-rear-axle-A1-44661-829": {
-      "title": "Ford - Transit - Mk2 - Rear axle",
-      "brand": "Ford",
-      "model": null,
-      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-mk2-rear-axle-A1-44661-829",
-      "source": "troostwijk",
-      "platform": "TWK",
-      "thumbnail_url": "https://media.tbauctions.com/image-media/a9bd0319-7903-46ed-b410-f4c45d7277aa/file",
-      "images": [
-        "https://media.tbauctions.com/image-media/a9bd0319-7903-46ed-b410-f4c45d7277aa/file",
-        "https://media.tbauctions.com/image-media/5d5ea31c-a4b5-4031-9280-64a1013e14e2/file",
-        "https://media.tbauctions.com/image-media/e836eafb-bb68-44df-8e68-758d77618061/file"
-      ],
-      "year": null,
-      "first_registration": null,
-      "km": null,
-      "fuel": null,
-      "transmission": null,
-      "power_kw": null,
-      "cylinder_cc": null,
-      "emission_standard": null,
-      "seats": null,
-      "doors": null,
-      "color": null,
-      "weight_kg": null,
-      "load_kg": null,
-      "body_type": null,
-      "vin": null,
-      "city": "Hulst",
-      "country_code": "NL",
-      "location": "Hulst, NL",
-      "condition": "NOT_CHECKED",
-      "appearance": "NOT_CHECKED",
-      "vat_margin": true,
-      "bidding_status": "BIDDING_OPEN",
-      "auction_start": "2026-06-19T14:00:00Z",
-      "auction_end": "2026-07-07T12:31:00Z",
-      "remarks": null,
-      "additional_information": null,
-      "lot_id": "b88995ea-e0fd-4412-8f36-55ada7df7082",
-      "current_bid_eur": 10.0,
-      "buyer_premium_pct": 19.0,
-      "total_cost_eur": null,
-      "bids_count": 1,
-      "reserve_met": false,
-      "market_median_eur": null,
-      "market_sample_size": null,
-      "deal_margin_eur": null,
-      "deal_margin_pct": null,
-      "max_recommended_bid_eur": null,
-      "hammer_price": null,
-      "auction_fee_estimate": null,
-      "fixed_fees_estimate": null,
-      "vat_applicable": null,
-      "transport_cost_estimate": null,
-      "reconditioning_cost_estimate": null,
-      "final_cost_estimate": null,
-      "estimated_market_value": null,
-      "deal_ratio": null,
-      "deal_score": null,
-      "is_hidden_gem": false,
-      "van_type": null,
-      "is_valid_van": true,
-      "score": 16,
-      "scores": null,
-      "applied_rule_set": "ford_transit_l2h2",
-      "passed_hard_filters": true,
-      "rejected_reason": "score_below_threshold: 16 < 30",
-      "reason_for_inclusion": [
-        "Ford Transit (full-size, L2/L3 high-roof) \u2014 NOT Transit Custom (size unknown)",
-        "token: transit"
-      ],
-      "fleet_type": "private",
-      "fleet_signals": null,
-      "model_group": "ford_transit_l2h2",
-      "variant": null,
-      "classification_confidence": "low",
-      "van_category": null,
-      "big_van_score": null,
-      "small_van_score": null,
-      "last_scrape_at": "2026-07-07T09:50:07.121069+00:00"
-    },
     "https://www.troostwijkauctions.com/en/l/mak-volkswagen-transporter-wheels-A1-48066-36": {
       "title": "MAK Volkswagen Transporter Wheels",
       "brand": "MAK",
@@ -2831,10 +2749,10 @@
       "remarks": null,
       "additional_information": null,
       "lot_id": "b9ec5c16-a8e5-4bed-a043-315c488f562c",
-      "current_bid_eur": 8700.0,
+      "current_bid_eur": 8900.0,
       "buyer_premium_pct": 19.0,
       "total_cost_eur": null,
-      "bids_count": 25,
+      "bids_count": 26,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -2872,7 +2790,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-07-13T19:56:34.967395+00:00"
+      "last_scrape_at": "2026-07-14T13:40:34.832545+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/2018-volkswagen-crafter-35-2-0tdi-l3h3-commercial-vehicle-A1-47404-131": {
       "title": "2018 Volkswagen Crafter 35 2.0TDI L3H3 Commercial Vehicle",
@@ -3377,7 +3295,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-07-13T19:56:34.967395+00:00"
+      "last_scrape_at": "2026-07-14T13:40:34.832545+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/fiat-right-rear-door-A1-48277-21": {
       "title": "FIAT - Right Rear Door",
@@ -5490,7 +5408,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-07-13T19:56:34.967395+00:00"
+      "last_scrape_at": "2026-07-14T13:40:34.832545+00:00"
     },
     "https://www.vavato.com/en/l/master-renault-A3-46076-2427": {
       "title": "Master Renault",
@@ -7193,7 +7111,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-07-13T19:56:34.967395+00:00"
+      "last_scrape_at": "2026-07-14T13:40:34.832545+00:00"
     },
     "https://www.vavato.com/en/l/peugeot-boxer-van-A3-46076-37056": {
       "title": "Peugeot Boxer Van",
@@ -7957,7 +7875,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-07-13T19:56:34.967395+00:00"
+      "last_scrape_at": "2026-07-14T13:40:34.832545+00:00"
     },
     "https://www.vavato.com/en/l/peugeot-2-0-hdi-expert-commercial-vehicle-A1-47405-139": {
       "title": "Peugeot - 2.0 HDI - Expert - Commercial vehicle",
@@ -8681,10 +8599,10 @@
       "remarks": "CAUTION! This vehicle has a license plate registration, when you pick it up you must name it on the spot with a third party or export it, there are additional costs involved.",
       "additional_information": "Equipped with: lighting, electric windows, radio/CD player, parking heater, manual, cruise control, parking sensors, start/stop, tow bar, handbrake, spare tire, damage sliding door right",
       "lot_id": "266057be-8145-4570-b902-fd1e6ae29338",
-      "current_bid_eur": 1050.0,
+      "current_bid_eur": 1250.0,
       "buyer_premium_pct": 0.0,
       "total_cost_eur": null,
-      "bids_count": 15,
+      "bids_count": 19,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -8722,7 +8640,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-07-14T02:26:16.057622+00:00"
+      "last_scrape_at": "2026-07-14T13:40:34.832545+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/2020-opel-l2h2-movano-t35-2-3-dci-commercial-vehicle-A1-47405-83": {
       "title": "2020 Opel L2H2 Movano T35 2.3 dci Commercial Vehicle",
@@ -8766,10 +8684,10 @@
       "remarks": null,
       "additional_information": "Equipped with: air conditioning, roof rack with steps, equipped cargo space, display with navigation, duo bench",
       "lot_id": "7955aa20-be00-452f-81e9-67eab2ef087f",
-      "current_bid_eur": 6600.0,
+      "current_bid_eur": 6800.0,
       "buyer_premium_pct": 0.0,
       "total_cost_eur": null,
-      "bids_count": 11,
+      "bids_count": 12,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -8807,7 +8725,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-07-14T02:26:16.057622+00:00"
+      "last_scrape_at": "2026-07-14T13:40:34.832545+00:00"
     },
     "https://www.vavato.com/en/l/2026-mercedes-benz-atego-1530-tow-truck-A3-46076-13022": {
       "title": "2026 Mercedes-Benz Atego 1530 Tow Truck",
@@ -9106,10 +9024,10 @@
       "remarks": null,
       "additional_information": null,
       "lot_id": "5f74ec96-e3a7-496a-9696-1f100b659eff",
-      "current_bid_eur": 3300.0,
+      "current_bid_eur": 3400.0,
       "buyer_premium_pct": 19.0,
       "total_cost_eur": null,
-      "bids_count": 3,
+      "bids_count": 4,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -9147,7 +9065,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-07-13T02:34:14.744966+00:00"
+      "last_scrape_at": "2026-07-14T13:40:34.832545+00:00"
     },
     "https://www.vavato.com/en/l/trafic-renault-A3-46199-2432": {
       "title": "TRAFIC Renault",
@@ -9572,7 +9490,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-07-13T14:52:27.803495+00:00"
+      "last_scrape_at": "2026-07-14T13:40:34.832545+00:00"
     },
     "https://www.vavato.com/en/l/mercedes-benz-vito-111-cdi-long-buspro%252B-commercial-vehicle-A1-47405-132": {
       "title": "Mercedes-Benz Vito 111 CDI Long BusPro+ Commercial Vehicle",
@@ -11187,7 +11105,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-07-14T08:17:05.817832+00:00"
+      "last_scrape_at": "2026-07-14T13:40:34.832545+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/peugeot-boxer-y-van-A1-48395-18": {
       "title": "Peugeot - Boxer - Y - Van",
@@ -13510,10 +13428,10 @@
       "remarks": "Of course, there are slight signs of wear, appropriate to the age and mileage. You are welcome during the viewing day(s) to view the vehicle for yourself and take a test drive. This way you can get a good impression and form your own opinion. The information in this advertisement has been compiled with care, yet there can always be small inaccuracies or typing errors. Therefore, always check important matters yourself before placing a bid.",
       "additional_information": "This commercial vehicle has the following options: 12 Volt connection, 2 seats right front, Driver airbag, Air conditioning, Alarm class 1 (immobiliser), Anti Lock Braking System, Anti Skid Control, Armrest, Audio installation, Driver's seat adjustable in height, Bluetooth phone, On-board computer, Exterior mirrors electrically adjustable and heated, Central locking with remote control, Connected services, Cruise control, Dab, Daytime running lights, Third brake light, Electric windows front, Electronic Stability Program, Wooden floor in cargo space, Lumbar support(s) adjustable, Front fog lights, MP3 connection, Multimedia system, Parking sensors front + rear, Radio / MP3 player, Roll Stability Control, Start/stop system, Immobilizer, Steering wheel leather, Steering wheel adjustable, Power steering, Steering wheel multifunctional, Partition full, Side sliding door right, Side wall cladding cargo space and 130 HP !! Dimensions of cargo space: L x W X H = 2.90 X 1.75 (1.40 wheel arch) X 1.90 (1.70 door).\n\nPay attention ! If you, as a Dutch private buyer, win the auction for this company car, there is still an additional levy of the residual BPM. With this company car, there is \u20ac 5,085.33 residual BPM! This amount will be added to the total amount after the auction.",
       "lot_id": "1d1eb82c-d7a8-46d9-b54e-05b35ca40dbc",
-      "current_bid_eur": 2600.0,
+      "current_bid_eur": 4200.0,
       "buyer_premium_pct": 19.0,
       "total_cost_eur": null,
-      "bids_count": 2,
+      "bids_count": 17,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -13551,7 +13469,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-07-13T09:21:18.035205+00:00"
+      "last_scrape_at": "2026-07-14T13:40:34.832545+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/2017-renault-trafic-double-cab-92-000km-A3-46199-5024": {
       "title": "2017 Renault Trafic Double Cab 92.000km",
@@ -15040,10 +14958,10 @@
       "remarks": null,
       "additional_information": "Mercedes-Benz Sprinter 317 CDI L2H2, first registered on 29/11/2024, 81,153 km on the odometer. 1,950 cc diesel engine with 125 kW (170 hp), automatic gearbox, Euro 6e standard. Belgian vehicle with registration certificate, certificate of conformity, Mercedes documentation and 1 key. WINE: W1V3KBFZ5SP771887. GVW 3,500 kg, payload approx. 1,180 kg, 3 seats.\nEquipment: air conditioning, Mercedes MBUX multimedia system with touchscreen, Bluetooth, radio, multifunction steering wheel, start/stop button, cruise control/speed limiter, electric windows and mirrors, driver's seat with armrest, 2-seater passenger bench, overhead storage, sliding side door, partition wall, wooden floor, side guards, lashing rings, load area lighting, towbar with ball and retractable rear step.\nThe vehicle is in good overall condition. The interior is clean and well maintained. The load compartment is clean with normal traces of use on the protective panels and floor. Presence of a cutout in the interior panel near the left rear door. The bodywork has a slight scratch on the right rear panel, a slight depression on the bottom of the right side panel in front of the rear wheel as well as some traces of use on the exterior plastics. Tyres in normal condition.",
       "lot_id": "77b1de49-d945-40a3-ab43-d68b85a217a9",
-      "current_bid_eur": 6000.0,
+      "current_bid_eur": 7000.0,
       "buyer_premium_pct": 0.0,
       "total_cost_eur": null,
-      "bids_count": 3,
+      "bids_count": 5,
       "reserve_met": false,
       "market_median_eur": null,
       "market_sample_size": null,
@@ -15081,7 +14999,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-07-12T19:29:11.928475+00:00"
+      "last_scrape_at": "2026-07-14T13:40:34.832545+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-116-cdi-long-v-01-pbk-A1-48472-16": {
       "title": "Mercedes-Benz Vito 116 CDI Long, V-01-PBK",
@@ -16698,7 +16616,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-07-13T19:56:34.967395+00:00"
+      "last_scrape_at": "2026-07-14T13:40:34.832545+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/ford-transit-custom-290-2-2-tdci-l2h1-ambiente-%257C-vpp-16-s-i-A1-44169-5376": {
       "title": "Ford Transit Custom 290 2.2 TDCI L2H1 Ambiente | VPP-16-S i",
@@ -19416,7 +19334,7 @@
       "van_category": null,
       "big_van_score": null,
       "small_van_score": null,
-      "last_scrape_at": "2026-07-14T02:26:16.057622+00:00"
+      "last_scrape_at": "2026-07-14T13:40:34.832545+00:00"
     },
     "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-211-2-2-cdi-l2h1-functional-114hp-2019-vtr-06-h-A1-44386-38": {
       "title": "Mercedes-Benz Sprinter 211 2.2 CDI L2H1 Functional 114hp 2019, VTR-06-H",
@@ -19841,6 +19759,90 @@
       "big_van_score": null,
       "small_van_score": null,
       "last_scrape_at": "2026-07-14T08:17:05.817832+00:00"
+    },
+    "https://www.vavato.com/en/l/peugeot-boxer-car-lights-A1-46630-454": {
+      "title": "Peugeot - Boxer - Car lights",
+      "brand": "Peugeot",
+      "model": null,
+      "url": "https://www.vavato.com/en/l/peugeot-boxer-car-lights-A1-46630-454",
+      "source": "troostwijk",
+      "platform": "TWK",
+      "thumbnail_url": "https://media.tbauctions.com/image-media/bb141ad7-02ea-480e-9a05-3cfec81d02f0/file",
+      "images": [
+        "https://media.tbauctions.com/image-media/bb141ad7-02ea-480e-9a05-3cfec81d02f0/file",
+        "https://media.tbauctions.com/image-media/fb87eeb0-e250-4f26-bc84-d8e24c3414d8/file",
+        "https://media.tbauctions.com/image-media/8a8bf736-41d7-4d4e-a9eb-8518e95cc990/file",
+        "https://media.tbauctions.com/image-media/d7d6829f-fc86-48b0-ba20-eed31ad0bcfe/file",
+        "https://media.tbauctions.com/image-media/bade0374-6e35-4d78-a0ad-0578d6e96005/file"
+      ],
+      "year": null,
+      "first_registration": null,
+      "km": null,
+      "fuel": null,
+      "transmission": null,
+      "power_kw": null,
+      "cylinder_cc": null,
+      "emission_standard": null,
+      "seats": null,
+      "doors": null,
+      "color": null,
+      "weight_kg": null,
+      "load_kg": null,
+      "body_type": null,
+      "vin": null,
+      "city": "Hulst",
+      "country_code": "NL",
+      "location": "Hulst, NL",
+      "condition": "NOT_CHECKED",
+      "appearance": "NOT_CHECKED",
+      "vat_margin": true,
+      "bidding_status": "BIDDING_OPEN",
+      "auction_start": "2026-07-12T14:00:00Z",
+      "auction_end": null,
+      "remarks": null,
+      "additional_information": null,
+      "lot_id": "9d835d89-d9b0-47b2-a305-7a1925d25e50",
+      "current_bid_eur": null,
+      "buyer_premium_pct": null,
+      "total_cost_eur": null,
+      "bids_count": null,
+      "reserve_met": null,
+      "market_median_eur": null,
+      "market_sample_size": null,
+      "deal_margin_eur": null,
+      "deal_margin_pct": null,
+      "max_recommended_bid_eur": null,
+      "hammer_price": null,
+      "auction_fee_estimate": null,
+      "fixed_fees_estimate": null,
+      "vat_applicable": null,
+      "transport_cost_estimate": null,
+      "reconditioning_cost_estimate": null,
+      "final_cost_estimate": null,
+      "estimated_market_value": null,
+      "deal_ratio": null,
+      "deal_score": null,
+      "is_hidden_gem": false,
+      "van_type": null,
+      "is_valid_van": true,
+      "score": 14,
+      "scores": null,
+      "applied_rule_set": "psa_l1l2h1",
+      "passed_hard_filters": true,
+      "rejected_reason": "score_below_threshold: 14 < 30",
+      "reason_for_inclusion": [
+        "Peugeot Boxer / Fiat Ducato / Citroen Jumper (L2\u2013L3, any height) (size unknown)",
+        "token: boxer"
+      ],
+      "fleet_type": "private",
+      "fleet_signals": null,
+      "model_group": "psa_l1l2h1",
+      "variant": null,
+      "classification_confidence": "low",
+      "van_category": null,
+      "big_van_score": null,
+      "small_van_score": null,
+      "last_scrape_at": "2026-07-14T13:40:34.832545+00:00"
     }
   },
   "permanent_rejects": {
@@ -82493,6 +82495,381 @@
       "reason": "brand_not_in_whitelist",
       "title": "Mercedes-Benz GLK-Class 250 4-Matic Ambition | 4-XNZ-67 i",
       "rejected_at": "2026-07-14T08:17:05.817832+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/maserati-quattroporte-sport-gt-400hp-2006-youngtimer-A1-44388-53": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Maserati Quattroporte Sport GT 400hp 2006 Youngtimer",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-ka-1-2-titanium-24-kst-7-2010-A1-41789-45": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - Ka - 1.2 Titanium - 24-KST-7- 2010",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/jaguar-xjs-convertible-5-3-v12-266hp-1989-A1-44388-50": {
+      "reason": "damage: not drivable",
+      "title": "Jaguar XJS Convertible 5.3 V12 266hp 1989",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-alpina-b7-v8-507hp-2011-A1-44385-17": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW Alpina B7 V8 507hp 2011",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mini-mini-1-6-cooper-chile-68-nv-zx-2004-A1-41789-62": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mini - Mini - 1.6 Cooper Chile - 68-NV-ZX - 2004",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/maserati-biturbo-2-0-1985-%252820-055-miles%2529-A1-44388-26": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Maserati BiTurbo 2.0 1985 (20,055 MILES)",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/chevrolet-camaro-lt-cabriolet-3-6l-v6-f-dohc-24v-323hp-2015-A1-44385-23": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Chevrolet Camaro LT Cabriolet 3.6L V6 F DOHC 24V 323hp 2015",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/dodge-challenger-sxt-3-6-v6-305hp-2016-A1-44385-12": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Dodge Challenger SXT 3.6 V6 305HP 2016",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-c-max-1-0-titanium-3-thl-31-2013-A1-41789-122": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - C-Max - 1.0 Titanium - 3-THL-31- 2013",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/dodge-durango-3-6-v6-citadel-%2528luxury-version%2529-6-seater-293hp-2014-A1-44385-21": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Dodge Durango 3.6 V6 Citadel (luxury version) 6-Seater 293hp 2014 ",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mini-cooper-s-10-years-ii-1-6-184hp-2011-3-zlz-02-A1-44386-33": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mini Cooper S 10 Years II 1.6 184hp 2011, 3-ZLZ-02",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/seat-ibiza-sc-1-2-tdi-style-eco-76-ppn-6-2011-A1-41789-11": {
+      "reason": "brand_not_in_whitelist",
+      "title": "SEAT - Ibiza SC - 1.2 TDI Style Eco. - 76-PPN-6- 2011",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/saab-900-turbo-silver-arrow-limited-edition-155hp-1986-A1-44388-57": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Saab 900 Turbo Silver Arrow Limited Edition 155hp 1986",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/land-rover-range-rover-velar-2-0-i4-awd-se-179hp-2018-t-940-tj-A1-44385-28": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Land Rover Range Rover Velar 2.0 I4 AWD SE 179hp 2018, T-940-TJ",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/jaguar-xjs-convertible-4-0-6-in-line-240hp-1996-A1-44388-51": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Jaguar XJS Convertible 4.0 6-in-line 240hp 1996",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/audi-sq5-3-0-tdi-v6-plus-quattro-pro-line-rs-edition-340hp-2016-xr-305-p-A1-44385-5": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Audi SQ5 3.0 TDI V6 Plus Quattro Pro Line RS Edition 340hp 2016, XR-305-P",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/seat-leon-1-8-tfsi-stylance-xk-385-g-A1-41789-81": {
+      "reason": "brand_not_in_whitelist",
+      "title": "SEAT - Leon - 1.8 TFSI Stylance - XK-385-G",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-mustang-coupe-ecoboost-premium-310hp-2016-A1-44385-36": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford Mustang Coupe Ecoboost Premium 310hp 2016",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/suzuki-ignis-1-3-16v-gs-car-2001-A1-41789-175": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Suzuki - Ignis - 1.3-16V GS - Car - 2001",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/jaguar-xjs-4-0-l6-240hp-1996-A1-44388-22": {
+      "reason": "damage: not starting",
+      "title": "Jaguar XJS 4.0 L6 240hp 1996",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mitsubishi-colt-czc-1-5-invite-65-tf-jt-2006-A1-41789-49": {
+      "reason": "mileage_too_high: 272018km",
+      "title": "Mitsubishi - Colt CZC - 1.5 Invite - 65-TF-JT- 2006",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-focus-wagon-1-0-ecob-titanium-j-323-gr-2014-A1-41789-203": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - Focus Wagon - 1.0 EcoB. Titanium - J-323-GR - 2014",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/2014-stas-s300cx-semi-trailer-A1-47406-75": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2014 Stas S300CX Semi-trailer",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/skoda-kodiaq-1-5-tsi-business-edition-150hp-2019-%2528original-nl%2529-zr-952-x-A1-44387-6": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Skoda Kodiaq 1.5 TSI Business Edition 150hp 2019 (Original-NL), ZR-952-X",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/suzuki-swift-1-5-exclusive-16-rs-rf-2005-A1-41789-1": {
+      "reason": "mileage_too_high: 310820km",
+      "title": "Suzuki - Swift - 1.5 Exclusive - 16-RS-RF- 2005",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/alfa-romeo-gtv-2-0-1979-A1-44388-25": {
+      "reason": "damage: not starting",
+      "title": "Alfa Romeo GTV 2.0 1979",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-320d-efficientdynamics-edition-high-executive-163hp-2014-%2528original-nl%2529-3-series-4-xdd-34-A1-44387-8": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW 320d EfficientDynamics Edition High Executive 163hp 2014 (Original-NL) 3-series, 4-XDD-34",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-v70-3-2-6-cylinder-238hp-2008-youngtimer-A1-44388-45": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Volvo V70 3.2 6-cylinder 238hp 2008 youngtimer",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/volkswagen-2016-up%2521-1-0-move-passenger-car-A1-47406-205": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Volkswagen - 2016 - Up! - 1.0 move- Passenger car",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/2022-porsche-911-carrera-passenger-car-A1-47406-4": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2022 Porsche 911 Carrera Passenger Car",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/2004-rover-streetwise-1-8-stepspeed-passenger-car-A1-47406-204": {
+      "reason": "body_mismatch: pickup",
+      "title": "2004 Rover Streetwise 1.8 Stepspeed Passenger Car",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/2008-ford-s-max-2-5-20v-turbo-passenger-car-A1-47406-213": {
+      "reason": "mileage_too_high: 364332km",
+      "title": "2008 Ford S-Max 2.5-20V Turbo Passenger Car",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/2003-dodge-dodge-ram-1500-passenger-A1-47406-192": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2003 Dodge DODGE RAM 1500 Passenger",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/2005-chevrolet-ssr-6-0-v8-passenger-car-A1-47406-168": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2005 Chevrolet SSR 6.0 V8 Passenger Car",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/1990-cadillac-sedan-de-ville-4-5-v8-passenger-car-A1-47406-315": {
+      "reason": "body_mismatch: pickup",
+      "title": "1990 Cadillac Sedan de Ville 4.5 V8 Passenger Car",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/chevrolet-usa-avalanche-5-3-2wd-1500-car-2002-A1-47406-167": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Chevrolet USA - Avalanche - 5.3 2WD 1500 - Car - 2002",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/2007-land-rover-range-rover-sport-2-7-tdv6-hse-passenger-car-A1-47406-175": {
+      "reason": "mileage_too_high: 344408km",
+      "title": "2007 Land Rover Range Rover Sport 2.7 TdV6 HSE Passenger Car",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/land-rover-2014-range-rover-sport-3-0-tdv6-hse-dyn-passenger-car-A1-47406-178": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Land Rover - 2014 - Range Rover Sport - 3.0 TDV6 HSE Dyn. - Passenger car",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/ford-fiesta-mk2-passenger-car-A1-46630-22": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - Fiesta - MK2 - Passenger car",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/ford-plastic-tank-A1-46630-637": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - Plastic tank",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/porsche-macan-s-3-0-v6-340hp-2014-A1-44385-39": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Porsche Macan S 3.0 V6 340hp 2014",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-516-2-2-cdi-432-163hp-2013-vfb-88-z-automatic-A1-44386-14": {
+      "reason": "year_below_minimum: 2013 < 2016 (mercedes_sprinter)",
+      "title": "Mercedes-Benz Sprinter 516 2.2 CDI 432 163hp 2013, VFB-88-Z Automatic",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/subaru-tribeca-3-0r-boxer-h6-luxury-245hp-2008-orig-nl-28-vg-zd-youngtimer-A1-44388-54": {
+      "reason": "year_below_minimum: 2008 < 2016 (psa_l1l2h1)",
+      "title": "Subaru Tribeca 3.0R Boxer H6 Luxury 245hp 2008 -Orig. NL-, 28-VG-ZD Youngtimer",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/alfa-romeo-2008-spider-3-2-jts-q4-exclusive-passenger-car-A1-40279-6": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Alfa Romeo - 2008 - Spider - 3.2 JTS Q4 Exclusive - Passenger car",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/porsche-panamera-sport-turismo-e-hybrid-2018-A1-48511-33": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Porsche Panamera Sport Turismo e-hybrid - 2018 ",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/porsche-macan-gts-2021-A1-48511-31": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Porsche - Macan GTS - 2021 ",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/2006-skoda-octavia-vrs-passenger-car-A3-46195-17242": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2006 Skoda Octavia VRS Passenger Car",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/mini-one-d-car-A3-46195-5430": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mini - One D - Car",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/alfa-romeo-155-1-8-twin-spark-classic-car-1992-A3-46195-14869": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Alfa Romeo 155 1.8 Twin Spark Classic Car 1992",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/2014-mazda-cx5-awd-A3-46195-14781": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2014 Mazda CX5 AWD",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/2009-bmw-320i-passenger-car-A3-46195-5028": {
+      "reason": "brand_not_in_whitelist",
+      "title": "2009 BMW 320I Passenger Car",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/1995-saab-900-classic-car-A3-46195-6109": {
+      "reason": "brand_not_in_whitelist",
+      "title": "1995 Saab 900 Classic Car",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/alfo-romeo-nuova-super-1300-classic-car-1975-A3-46195-14870": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Alfo Romeo Nuova Super 1300 Classic Car 1975",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-2026-fg4050-power-generator-A1-48424-68": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - 2026 - FG4050 - Power generator",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/citroen-gearbox-toolbox-A1-48538-123": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Citroen Gearbox Toolbox",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/toyota-electric-forklift-A1-46630-13": {
+      "reason": "vehicle_type: forklift",
+      "title": "Toyota - Electric forklift",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/toolspecial-fx1014-alfa-fiat-petrol-locking-kit-A1-46630-464": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Toolspecial - FX1014 Alfa Fiat - Petrol locking kit",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/toolspecial-fx1014-alfa-fiat-petrol-locking-kit-A1-46630-459": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Toolspecial - FX1014 Alfa Fiat - Petrol locking kit",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/opel-vectra-wagon-2-2-16v-v-line-2005-%257C-40-rk-kt-A1-44169-5151": {
+      "reason": "mileage_too_high: 279361km",
+      "title": "Opel Vectra Wagon 2.2-16V V-Line 2005 | 40-RK-KT",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/nissan-ph02a25u-forklift-truck-A1-46630-10": {
+      "reason": "vehicle_type: forklift",
+      "title": "Nissan - PH02A25U - Forklift truck",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volkswagen-taigo-1-0-tsi-2023-A1-41533-40": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Volkswagen Taigo 1.0 TSI 2023",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/mercedes-estate-b180cdi-car-A1-46630-26": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes - Estate - B180CDI - Car",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/mercedes-benz-2009-b-class-170-blueefficiency-passenger-car-A1-46630-20": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mercedes-Benz - 2009 - B-class - 170 BlueEFFICIENCY - Passenger car",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.vavato.com/en/l/continental-mercedes-tyres-A1-46630-281": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Continental - Mercedes - Tyres",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mini-cooper-s-cabriolet-1-6-184hp-2014-automatic-%2528original-nl%2529-3-tjp-74-A1-44386-27": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Mini Cooper S Cabriolet 1.6 184hp 2014 AUTOMATIC (Original-NL), 3-TJP-74",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/porsche-macan-s-2-9-v6-280hp-2022-A1-44385-38": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Porsche Macan S 2.9 V6 280hp 2022",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-645ci-coupe-6-series-333hp-2005-t-249-vt-youngtimer-A1-44388-40": {
+      "reason": "brand_not_in_whitelist",
+      "title": "BMW 645Ci Coupe 6-series 333hp 2005, T-249-VT Youngtimer",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/bmw-5-series-touring-520i-automatic-corp-l-bnsed-i-93-ngr-7-2010-A1-41789-133": {
+      "reason": "mileage_too_high: 264592km",
+      "title": "BMW - 5 Series Touring - 520i AUTOMATIC Corp.L. BnsEd I - 93-NGR-7- 2010",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/dodge-challenger-sxt-3-6-v6-305hp-2016-A1-44385-43": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Dodge Challenger SXT 3.6 V6 305hp 2016",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/maserati-quattroporte-4-2-v8-440hp-2009-facelift-youngtimer-A1-44388-47": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Maserati Quattroporte 4.2 V8 440hp 2009 Facelift Youngtimer",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/skoda-octavia-combi-1-6-ambiente-37-sp-dk-2006-A1-41789-135": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Skoda - Octavia Combi - 1.6 Ambiente - 37-SP-DK - 2006",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/mini-cooper-s-chile-1-6-172hp-2008-%2528original-nl%2529-60-zf-fb-A1-44386-40": {
+      "reason": "damage: engine failure",
+      "title": "Mini Cooper S Chile 1.6 172hp 2008 (Original-NL), 60-ZF-FB",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/volvo-xc70-2-4-d5-summum-185hp-2009-pd-287-r-youngtimer-A1-44388-61": {
+      "reason": "mileage_too_high: 388255km",
+      "title": "Volvo XC70 2.4 D5 Summum 185hp 2009, PD-287-R Youngtimer",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/honda-civic-1-3-hybrid-automatic-63-jvt-4-2009-A1-41789-194": {
+      "reason": "mileage_too_high: 308470km",
+      "title": "Honda - Civic - 1.3 Hybrid AUTOMATIC - 63-JVT-4- 2009",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
+    },
+    "https://www.troostwijkauctions.com/en/l/ford-ecosport-1-0-ecob-trend-car-2017-A1-41789-111": {
+      "reason": "brand_not_in_whitelist",
+      "title": "Ford - EcoSport - 1.0 EcoB. Trend - Car - 2017",
+      "rejected_at": "2026-07-14T13:40:34.832545+00:00"
     }
   }
 }
