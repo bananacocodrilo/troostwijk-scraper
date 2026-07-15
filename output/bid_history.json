@@ -20764,6 +20764,12 @@
           "current_bid_eur": 2200.0,
           "bids_count": 22,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-15T13:48:15.257905+00:00",
+          "current_bid_eur": 2550.0,
+          "bids_count": 25,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -21012,6 +21018,12 @@
           "ts": "2026-07-15T02:07:15.512865+00:00",
           "current_bid_eur": 1350.0,
           "bids_count": 21,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-15T13:48:15.257905+00:00",
+          "current_bid_eur": 1400.0,
+          "bids_count": 22,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -22378,6 +22390,12 @@
           "current_bid_eur": 4200.0,
           "bids_count": 2,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-15T13:48:15.257905+00:00",
+          "current_bid_eur": 4400.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -23097,6 +23115,12 @@
           "ts": "2026-07-14T08:17:05.894953+00:00",
           "current_bid_eur": 4000.0,
           "bids_count": 10,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-15T13:48:15.257905+00:00",
+          "current_bid_eur": 4800.0,
+          "bids_count": 14,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -23985,6 +24009,12 @@
           "ts": "2026-07-14T13:40:34.912681+00:00",
           "current_bid_eur": 4200.0,
           "bids_count": 17,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-15T13:48:15.257905+00:00",
+          "current_bid_eur": 5000.0,
+          "bids_count": 22,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -24957,6 +24987,12 @@
           "ts": "2026-07-15T08:17:08.699076+00:00",
           "current_bid_eur": 14000.0,
           "bids_count": 19,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-15T13:48:15.257905+00:00",
+          "current_bid_eur": 15500.0,
+          "bids_count": 22,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -26389,6 +26425,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-07-15T13:48:15.257905+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -26700,6 +26742,12 @@
           "ts": "2026-07-14T08:17:05.894953+00:00",
           "current_bid_eur": 1950.0,
           "bids_count": 8,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-15T13:48:15.257905+00:00",
+          "current_bid_eur": 2000.0,
+          "bids_count": 9,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -27298,6 +27346,126 @@
       "snapshots": [
         {
           "ts": "2026-07-15T08:17:08.699076+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "26f4ce61-ebf3-4ed5-8c90-fea9b883419c": {
+      "url": "https://www.troostwijkauctions.com/en/l/2014-mercedes-benz-sprinter-313-2-2-cdi-366-hddc-commercial-vehicle-A1-48679-2",
+      "model_token": "sprinter",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-07-15T13:48:15.257905+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "6f75805b-551d-44ff-b6b1-87251e8403bb": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-master-borco-hohns-food-truck-A1-48285-7004",
+      "model_token": "master",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-07-15T13:48:15.257905+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "56294821-3143-439e-a003-56d96df83a45": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-volkswagen-transporter-A3-46194-7031",
+      "model_token": "transporter",
+      "year": 2005,
+      "snapshots": [
+        {
+          "ts": "2026-07-15T13:48:15.257905+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "03830abd-007c-49e8-9208-ad904ba7c413": {
+      "url": "https://www.troostwijkauctions.com/en/l/2009-volkswagen-transporter-t5-caravelle-multi-purpose-vehicle-t5-1-9-tdi-%2528102-hp%2529-municipal-vehicle-%25E2%2580%2593-registration-2009-%25E2%2580%2593-143-000-km-A1-48285-6062",
+      "model_token": "transporter",
+      "year": 2009,
+      "snapshots": [
+        {
+          "ts": "2026-07-15T13:48:15.257905+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "1a3e1377-8870-4434-909f-c7a9418c24f2": {
+      "url": "https://www.vavato.com/en/l/citroen-jumper-van-A3-46194-7083",
+      "model_token": "jumper",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-07-15T13:48:15.257905+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "1329b54f-f09a-4d1f-9820-6eacd3dc4e7b": {
+      "url": "https://www.troostwijkauctions.com/en/l/2016-fiat-ducato-35-van-van-car-A1-48285-6072",
+      "model_token": "ducato",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-07-15T13:48:15.257905+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "706d3c3d-b08a-4269-a55f-540b06bb1d0b": {
+      "url": "https://www.troostwijkauctions.com/en/l/2006-renault-master-A3-46195-4794",
+      "model_token": "master",
+      "year": 2006,
+      "snapshots": [
+        {
+          "ts": "2026-07-15T13:48:15.257905+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "6c6dbd96-2641-476e-a490-89f6ee90d950": {
+      "url": "https://www.troostwijkauctions.com/en/l/2010-mercedes-benz-sprinter-210-cdi-flatbed-truck-open-box-transporter-%257C-yoc-2010-%257C-95-hp-%257C-146-518-km-%257C-trailer-hitch-A1-48285-6067",
+      "model_token": "transporter",
+      "year": 2010,
+      "snapshots": [
+        {
+          "ts": "2026-07-15T13:48:15.257905+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
