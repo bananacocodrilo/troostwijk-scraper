@@ -21091,6 +21091,12 @@
           "current_bid_eur": 1750.0,
           "bids_count": 28,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-16T13:50:25.235144+00:00",
+          "current_bid_eur": 1850.0,
+          "bids_count": 30,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -23311,6 +23317,12 @@
           "current_bid_eur": 7500.0,
           "bids_count": 19,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-16T13:50:25.235144+00:00",
+          "current_bid_eur": 8000.0,
+          "bids_count": 20,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -24595,6 +24607,12 @@
           "current_bid_eur": 6200.0,
           "bids_count": 28,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-16T13:50:25.235144+00:00",
+          "current_bid_eur": 6600.0,
+          "bids_count": 30,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -25764,6 +25782,12 @@
           "ts": "2026-07-13T09:21:18.111649+00:00",
           "current_bid_eur": 1.0,
           "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-16T13:50:25.235144+00:00",
+          "current_bid_eur": 11.0,
+          "bids_count": 3,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -27991,6 +28015,66 @@
       "snapshots": [
         {
           "ts": "2026-07-16T08:32:23.457311+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "8f1af847-c0f4-4d61-886e-18ad9b5a75ac": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-2016-trafic-van-passenger-car-A1-48499-33",
+      "model_token": "trafic",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-07-16T13:50:25.235144+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "c81b08fd-e01f-4a46-8c1e-38799b6ddbf7": {
+      "url": "https://www.troostwijkauctions.com/en/l/2005-renault-master-dci120-commercial-vehicle-A3-46194-425",
+      "model_token": "master",
+      "year": 2005,
+      "snapshots": [
+        {
+          "ts": "2026-07-16T13:50:25.235144+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "6dd1d833-8919-4428-b199-9ec69cce3878": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-2-5-tdi-340-automatic-22-bt-rg-A1-48564-30",
+      "model_token": "transporter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-07-16T13:50:25.235144+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "945b8cdb-d74d-45d8-824b-8f3d60b8ca01": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-2016-transporter-car-A1-48499-29",
+      "model_token": "transporter",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-07-16T13:50:25.235144+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
