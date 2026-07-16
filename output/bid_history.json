@@ -19909,6 +19909,12 @@
           "current_bid_eur": 6000.0,
           "bids_count": 39,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-16T08:32:23.457311+00:00",
+          "current_bid_eur": 6200.0,
+          "bids_count": 40,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -21078,6 +21084,12 @@
           "ts": "2026-07-16T02:25:33.253026+00:00",
           "current_bid_eur": 1700.0,
           "bids_count": 27,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-16T08:32:23.457311+00:00",
+          "current_bid_eur": 1750.0,
+          "bids_count": 28,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -22783,6 +22795,12 @@
           "current_bid_eur": 2700.0,
           "bids_count": 3,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-16T08:32:23.457311+00:00",
+          "current_bid_eur": 2800.0,
+          "bids_count": 4,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -23209,6 +23227,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-07-16T08:32:23.457311+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -23224,6 +23248,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-07-16T08:32:23.457311+00:00",
+          "current_bid_eur": 1500.0,
+          "bids_count": 6,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -23994,6 +24024,12 @@
           "ts": "2026-07-15T02:07:15.512865+00:00",
           "current_bid_eur": 2700.0,
           "bids_count": 3,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-16T08:32:23.457311+00:00",
+          "current_bid_eur": 3000.0,
+          "bids_count": 6,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -25918,6 +25954,12 @@
           "current_bid_eur": 2640.0,
           "bids_count": 13,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-16T08:32:23.457311+00:00",
+          "current_bid_eur": 2800.0,
+          "bids_count": 14,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -26142,6 +26184,12 @@
           "ts": "2026-07-15T08:17:08.699076+00:00",
           "current_bid_eur": 2100.0,
           "bids_count": 13,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-16T08:32:23.457311+00:00",
+          "current_bid_eur": 2300.0,
+          "bids_count": 15,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -27319,6 +27367,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-07-16T08:32:23.457311+00:00",
+          "current_bid_eur": 1.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -27925,6 +27979,21 @@
           "current_bid_eur": 2500.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "c77b3eb2-952e-465a-a928-eadcc5034d5a": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-ducato-14-camper-280-l-dethleffs-globetrotter-air-conditioner-66-vpr-5-A1-48564-35",
+      "model_token": "ducato",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-07-16T08:32:23.457311+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
