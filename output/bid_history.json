@@ -20218,6 +20218,12 @@
           "current_bid_eur": 1400.0,
           "bids_count": 5,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-18T13:21:13.465889+00:00",
+          "current_bid_eur": 1700.0,
+          "bids_count": 6,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -21537,6 +21543,12 @@
           "ts": "2026-07-14T13:40:34.912681+00:00",
           "current_bid_eur": 3400.0,
           "bids_count": 4,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-18T13:21:13.465889+00:00",
+          "current_bid_eur": 3700.0,
+          "bids_count": 7,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -24853,6 +24865,12 @@
           "current_bid_eur": 7400.0,
           "bids_count": 34,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-18T13:21:13.465889+00:00",
+          "current_bid_eur": 7600.0,
+          "bids_count": 35,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -24972,6 +24990,12 @@
           "ts": "2026-07-17T19:26:13.939308+00:00",
           "current_bid_eur": 11000.0,
           "bids_count": 13,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-18T13:21:13.465889+00:00",
+          "current_bid_eur": 12500.0,
+          "bids_count": 16,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -25431,6 +25455,12 @@
           "ts": "2026-07-17T19:26:13.939308+00:00",
           "current_bid_eur": 2200.0,
           "bids_count": 7,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-18T13:21:13.465889+00:00",
+          "current_bid_eur": 2400.0,
+          "bids_count": 9,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -26178,6 +26208,12 @@
           "ts": "2026-07-16T13:50:25.235144+00:00",
           "current_bid_eur": 11.0,
           "bids_count": 3,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-18T13:21:13.465889+00:00",
+          "current_bid_eur": 26.0,
+          "bids_count": 6,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -27925,6 +27961,12 @@
           "current_bid_eur": 15.0,
           "bids_count": 6,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-18T13:21:13.465889+00:00",
+          "current_bid_eur": 20.0,
+          "bids_count": 8,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -28566,6 +28608,12 @@
           "ts": "2026-07-18T02:14:16.954007+00:00",
           "current_bid_eur": 1350.0,
           "bids_count": 19,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-18T13:21:13.465889+00:00",
+          "current_bid_eur": 5200.0,
+          "bids_count": 57,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -30202,6 +30250,21 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "af9f524d-ffa0-428e-9824-7a822c2ee80e": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-scudo-12-2-0-mj-lh1-sx-van-A1-41790-87",
+      "model_token": "scudo",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-07-18T13:21:13.465889+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
