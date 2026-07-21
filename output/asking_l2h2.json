@@ -136,53 +136,6 @@
     "is_underpriced": true
   },
   {
-    "title": "Opel Movano 2.3 Turbo 180PK L2H2 EURO 6",
-    "url": "https://www.regeljelease.nl/voertuig/opel-movano-2021-diesel-774047",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2021,
-    "km": 184968,
-    "price_eur": 13900.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/415cfc21-493c-4e92-9891-702828ddce49/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/4cf82744-2696-477c-abaf-b0c4090c4202/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/fc3d119a-56bf-43d7-9b1b-eb1846970664/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/b85215d3-c12e-4c00-9df5-8a7c6048f438/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "renault_master_grp",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "movano",
-    "score": 63,
-    "vat_scheme": "excl",
-    "price_gross_eur": 16819,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 24400.0,
-    "risk_score": 2,
-    "risk_flags": [
-      {
-        "code": "very_high_km_per_year",
-        "label": "Very high km/year (36,993/yr) \u2014 highway-thrashed risk",
-        "severity": "high"
-      }
-    ],
-    "market_sample_size": 73,
-    "market_median_eur": 17995,
-    "price_pct_vs_median": -22.8,
-    "is_underpriced": true
-  },
-  {
     "title": "Ford Transit 2.0TDCI 130PK L2H2 | Airco | Cruise | 3-Zits |",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2419839005-ford-transit-2-0tdci-130pk-l2h2-airco-cruise-3-zits",
     "source": "marktplaats",
@@ -303,9 +256,9 @@
     "total_project_cost_eur": 23000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 84,
-    "market_median_eur": 15625,
-    "price_pct_vs_median": -20.0,
+    "market_sample_size": 82,
+    "market_median_eur": 15850,
+    "price_pct_vs_median": -21.1,
     "is_underpriced": true
   },
   {
@@ -352,7 +305,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 73,
+    "market_sample_size": 69,
     "market_median_eur": 17995,
     "price_pct_vs_median": -30.5,
     "is_underpriced": true
@@ -447,8 +400,8 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 45,
-    "market_median_eur": 14950,
+    "market_sample_size": 46,
+    "market_median_eur": 14975,
     "price_pct_vs_median": -59.9,
     "is_underpriced": true
   },
@@ -496,9 +449,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 71,
-    "market_median_eur": 21950,
-    "price_pct_vs_median": -63.8,
+    "market_sample_size": 68,
+    "market_median_eur": 21925,
+    "price_pct_vs_median": -63.7,
     "is_underpriced": true
   },
   {
@@ -545,7 +498,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 93,
+    "market_sample_size": 92,
     "market_median_eur": 24900,
     "price_pct_vs_median": -44.0,
     "is_underpriced": true
@@ -678,7 +631,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 19,
+    "market_sample_size": 21,
     "market_median_eur": 21000,
     "price_pct_vs_median": -29.5,
     "is_underpriced": true
@@ -729,9 +682,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 71,
-    "market_median_eur": 21950,
-    "price_pct_vs_median": -32.1,
+    "market_sample_size": 68,
+    "market_median_eur": 21925,
+    "price_pct_vs_median": -32.0,
     "is_underpriced": true
   },
   {
@@ -780,9 +733,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 71,
-    "market_median_eur": 21950,
-    "price_pct_vs_median": -31.9,
+    "market_sample_size": 68,
+    "market_median_eur": 21925,
+    "price_pct_vs_median": -31.8,
     "is_underpriced": true
   },
   {
@@ -829,9 +782,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 71,
-    "market_median_eur": 21950,
-    "price_pct_vs_median": -29.6,
+    "market_sample_size": 68,
+    "market_median_eur": 21925,
+    "price_pct_vs_median": -29.5,
     "is_underpriced": true
   },
   {
@@ -867,8 +820,8 @@
     "total_project_cost_eur": 26450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 71,
-    "market_median_eur": 21950,
+    "market_sample_size": 68,
+    "market_median_eur": 21925,
     "price_pct_vs_median": -27.3,
     "is_underpriced": true
   },
@@ -907,9 +860,9 @@
     "total_project_cost_eur": 28400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 79,
-    "market_median_eur": 26400,
-    "price_pct_vs_median": -32.2,
+    "market_sample_size": 78,
+    "market_median_eur": 26750,
+    "price_pct_vs_median": -33.1,
     "is_underpriced": true
   },
   {
@@ -999,9 +952,50 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 71,
-    "market_median_eur": 21950,
-    "price_pct_vs_median": -18.2,
+    "market_sample_size": 68,
+    "market_median_eur": 21925,
+    "price_pct_vs_median": -18.1,
+    "is_underpriced": true
+  },
+  {
+    "title": "Mercedes-Benz Sprinter 311 CDI L2H2 Airco Cruise Euro6 L2 Airco Cruise control",
+    "url": "https://www.regeljelease.nl/voertuig/mercedes-benz-sprinter-2021-diesel-915374",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2021,
+    "km": 69755,
+    "price_eur": 18350.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://cdn1.tt.regeljelease.nl/images/68672be0-59c0-41cb-9626-bb0b782cc534/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/5e45a561-a8e9-41e4-aed2-957bfd7fc7e0/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/2a2bbcfa-5b8a-4dff-b064-33153522f4ad/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/bffaf9b8-01ea-49c7-abb6-3029e6b3534a/full.jpg?width=760"
+    ],
+    "vat_hint": null,
+    "model_group": "mercedes_sprinter",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "sprinter",
+    "score": 56,
+    "vat_scheme": "excl",
+    "price_gross_eur": 22204,
+    "vat_evidence": "source default: lease quotes ex-VAT",
+    "vat_confidence": "medium",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 28850.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 92,
+    "market_median_eur": 24900,
+    "price_pct_vs_median": -26.3,
     "is_underpriced": true
   },
   {
@@ -1051,8 +1045,8 @@
       }
     ],
     "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": -20.6,
+    "market_median_eur": 23900,
+    "price_pct_vs_median": -17.8,
     "is_underpriced": true
   },
   {
@@ -1140,7 +1134,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 93,
+    "market_sample_size": 92,
     "market_median_eur": 24900,
     "price_pct_vs_median": -20.1,
     "is_underpriced": true
@@ -1235,98 +1229,6 @@
     "is_underpriced": true
   },
   {
-    "title": "Mercedes-Benz Sprinter 316CDI 164PK 7G-Tronic L2H2 / Cruisec",
-    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2415293368-mercedes-benz-sprinter-316cdi-164pk-7g-tronic-l2h2-cruisec",
-    "source": "marktplaats",
-    "country": "nl",
-    "year": 2020,
-    "km": 235699,
-    "price_eur": 20850.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": "bestelwagen",
-    "weight_kg": null,
-    "remarks": "Lease v.a. \u20ac390,- per maand. Afmetingen laadruimte 326c178c190cm. Trekhaakgewicht 3.500Kg mogelijk. Af fabriek voorzien van: 9147 lakkleur articwit mb 9147 ba3actief brake assist system bh1hold-f",
-    "images": [
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/bdea89e6-1941-4aa2-8f78-98ff48812952?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/5cbfcbbe-8b8f-4ab1-9473-5e079f6d4684?rule=ecg_mp_eps$_82.jpg",
-      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/df360f3b-d60f-4b67-bec3-ed15a611b98a?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "vat_hint": null,
-    "model_group": "mercedes_sprinter",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "sprinter",
-    "score": 56,
-    "vat_scheme": "unknown",
-    "price_gross_eur": 20850,
-    "vat_evidence": "no VAT signal",
-    "vat_confidence": "low",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 31350.0,
-    "risk_score": 3,
-    "risk_flags": [
-      {
-        "code": "very_high_km_per_year",
-        "label": "Very high km/year (39,283/yr) \u2014 highway-thrashed risk",
-        "severity": "high"
-      },
-      {
-        "code": "high_total_km",
-        "label": "High total km (235,699) \u2014 transmission/engine wear risk",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": -15.7,
-    "is_underpriced": true
-  },
-  {
-    "title": "Mercedes-Benz Sprinter 215 CDI Automaat 150pk L2H2 MBUX Camera Airco Parkeersensoren CarPlay Euro6 L2 Airco",
-    "url": "https://www.regeljelease.nl/voertuig/mercedes-benz-sprinter-2022-diesel-893249",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2022,
-    "km": 44103,
-    "price_eur": 21800.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/2090e5b5-6298-4989-a3d2-a3865ffaf11b/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/78ef88d8-4611-40a4-8b21-4515d37bad83/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/6d1fb7e6-d964-43f2-9b5a-3bf499360c84/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/b7b3c837-32da-4938-9095-b373470967ca/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "mercedes_sprinter",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "sprinter",
-    "score": 56,
-    "vat_scheme": "excl",
-    "price_gross_eur": 26378,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 32300.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 79,
-    "market_median_eur": 26400,
-    "price_pct_vs_median": -17.4,
-    "is_underpriced": true
-  },
-  {
     "title": "Ford Transit  L2H2 . 2.2Tdci 155ps",
     "url": "https://www.kleinanzeigen.de/s-anzeige/ford-transit-l2h2-2-2tdci-155ps/3464290573-216-310",
     "source": "kleinanzeigen_de",
@@ -1408,9 +1310,9 @@
     "total_project_cost_eur": 18000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 72,
-    "market_median_eur": 10900,
-    "price_pct_vs_median": -31.2,
+    "market_sample_size": 71,
+    "market_median_eur": 10850,
+    "price_pct_vs_median": -30.9,
     "is_underpriced": true
   },
   {
@@ -1455,58 +1357,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 28,
-    "market_median_eur": 18925,
-    "price_pct_vs_median": -36.9,
-    "is_underpriced": true
-  },
-  {
-    "title": "Ford Transit L2H2 170 pk 2020",
-    "url": "https://www.2dehands.be/v/auto-s/bestelwagens-en-lichte-vracht/m2421091112-ford-transit-l2h2-170-pk-2020",
-    "source": "2dehands",
-    "country": "be",
-    "year": 2020,
-    "km": 295000,
-    "price_eur": 15900.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": "bestelwagen",
-    "weight_kg": null,
-    "remarks": "15900 ex btw ford transit l2h2 170 pk 2020 295k km 3 zit airco cruise control led koplampen custom pasvorm zetelhoezen enz... Exterior : front grill \"raptor\" met led flitsers strands ledbalk",
-    "images": [
-      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/8ef5b4c3-468d-4748-ae99-05d7694acf43?rule=ecg_mp_eps$_82.jpg"
-    ],
-    "vat_hint": null,
-    "model_group": "ford_transit_l2h2",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "transit",
-    "score": 55,
-    "vat_scheme": "excl",
-    "price_gross_eur": 19239,
-    "vat_evidence": "text: excl. btw / netto / zzgl. mwst",
-    "vat_confidence": "high",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 26400.0,
-    "risk_score": 3,
-    "risk_flags": [
-      {
-        "code": "very_high_km_per_year",
-        "label": "Very high km/year (49,166/yr) \u2014 highway-thrashed risk",
-        "severity": "high"
-      },
-      {
-        "code": "high_total_km",
-        "label": "High total km (295,000) \u2014 transmission/engine wear risk",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 28,
-    "market_median_eur": 18925,
-    "price_pct_vs_median": -16.0,
+    "market_sample_size": 31,
+    "market_median_eur": 18445,
+    "price_pct_vs_median": -35.2,
     "is_underpriced": true
   },
   {
@@ -1553,9 +1406,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 62,
-    "market_median_eur": 15725,
-    "price_pct_vs_median": -68.2,
+    "market_sample_size": 61,
+    "market_median_eur": 15995,
+    "price_pct_vs_median": -68.7,
     "is_underpriced": true
   },
   {
@@ -1961,7 +1814,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 105,
+    "market_sample_size": 103,
     "market_median_eur": 14500,
     "price_pct_vs_median": -48.3,
     "is_underpriced": true
@@ -2005,9 +1858,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 84,
-    "market_median_eur": 15625,
-    "price_pct_vs_median": -49.1,
+    "market_sample_size": 82,
+    "market_median_eur": 15850,
+    "price_pct_vs_median": -49.8,
     "is_underpriced": true
   },
   {
@@ -2187,7 +2040,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 103,
+    "market_sample_size": 101,
     "market_median_eur": 12950,
     "price_pct_vs_median": -38.2,
     "is_underpriced": true
@@ -2236,9 +2089,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 66,
-    "market_median_eur": 11920,
-    "price_pct_vs_median": -29.1,
+    "market_sample_size": 65,
+    "market_median_eur": 11890,
+    "price_pct_vs_median": -28.9,
     "is_underpriced": true
   },
   {
@@ -2285,7 +2138,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 103,
+    "market_sample_size": 101,
     "market_median_eur": 12950,
     "price_pct_vs_median": -34.7,
     "is_underpriced": true
@@ -2334,9 +2187,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 48,
-    "market_median_eur": 14992,
-    "price_pct_vs_median": -43.6,
+    "market_sample_size": 49,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": -45.5,
     "is_underpriced": true
   },
   {
@@ -2383,9 +2236,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 115,
-    "market_median_eur": 13900,
-    "price_pct_vs_median": -38.9,
+    "market_sample_size": 114,
+    "market_median_eur": 13922,
+    "price_pct_vs_median": -39.0,
     "is_underpriced": true
   },
   {
@@ -2429,7 +2282,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 105,
+    "market_sample_size": 103,
     "market_median_eur": 14500,
     "price_pct_vs_median": -41.4,
     "is_underpriced": true
@@ -2565,9 +2418,9 @@
     "total_project_cost_eur": 19499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 66,
-    "market_median_eur": 11920,
-    "price_pct_vs_median": -24.5,
+    "market_sample_size": 65,
+    "market_median_eur": 11890,
+    "price_pct_vs_median": -24.3,
     "is_underpriced": true
   },
   {
@@ -2614,9 +2467,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 70,
-    "market_median_eur": 16098,
-    "price_pct_vs_median": -41.3,
+    "market_sample_size": 69,
+    "market_median_eur": 16450,
+    "price_pct_vs_median": -42.6,
     "is_underpriced": true
   },
   {
@@ -2658,7 +2511,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 103,
+    "market_sample_size": 101,
     "market_median_eur": 12950,
     "price_pct_vs_median": -26.6,
     "is_underpriced": true
@@ -2786,9 +2639,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 115,
-    "market_median_eur": 13900,
-    "price_pct_vs_median": -21.6,
+    "market_sample_size": 114,
+    "market_median_eur": 13922,
+    "price_pct_vs_median": -21.7,
     "is_underpriced": true
   },
   {
@@ -2830,9 +2683,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 84,
-    "market_median_eur": 15625,
-    "price_pct_vs_median": -30.2,
+    "market_sample_size": 82,
+    "market_median_eur": 15850,
+    "price_pct_vs_median": -31.2,
     "is_underpriced": true
   },
   {
@@ -2876,9 +2729,56 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 115,
-    "market_median_eur": 13900,
-    "price_pct_vs_median": -21.2,
+    "market_sample_size": 114,
+    "market_median_eur": 13922,
+    "price_pct_vs_median": -21.3,
+    "is_underpriced": true
+  },
+  {
+    "title": "Renault Master T35 2.3 dCi L2H2",
+    "url": "https://www.regeljelease.nl/voertuig/renault-master-2018-diesel-823045",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2018,
+    "km": 160688,
+    "price_eur": 10950.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://cdn1.tt.regeljelease.nl/images/b5378b89-eadb-41de-b7e5-87f0c13645c2/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/431d4e0b-5919-4198-aee9-d364d157b91c/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/28702af0-bd59-4fdf-86f9-cdf027724aa4/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/55192332-03a7-4470-a658-816beda77b4b/full.jpg?width=760"
+    ],
+    "vat_hint": null,
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 53,
+    "vat_scheme": "excl",
+    "price_gross_eur": 13250,
+    "vat_evidence": "source default: lease quotes ex-VAT",
+    "vat_confidence": "medium",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 21450.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (20,086/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 49,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": -29.4,
     "is_underpriced": true
   },
   {
@@ -2922,9 +2822,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 84,
-    "market_median_eur": 15625,
-    "price_pct_vs_median": -24.2,
+    "market_sample_size": 82,
+    "market_median_eur": 15850,
+    "price_pct_vs_median": -25.2,
     "is_underpriced": true
   },
   {
@@ -2968,9 +2868,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 62,
-    "market_median_eur": 15725,
-    "price_pct_vs_median": -24.3,
+    "market_sample_size": 61,
+    "market_median_eur": 15995,
+    "price_pct_vs_median": -25.6,
     "is_underpriced": true
   },
   {
@@ -3009,53 +2909,6 @@
     "market_sample_size": 77,
     "market_median_eur": 17490,
     "price_pct_vs_median": -32.0,
-    "is_underpriced": true
-  },
-  {
-    "title": "Opel Movano 2.3CDTI 170pk L2/H2 Automaat Euro 6!",
-    "url": "https://www.regeljelease.nl/voertuig/opel-movano-2019-diesel-881984",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2019,
-    "km": 172093,
-    "price_eur": 11950.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/23a42a29-4524-4473-8ad2-587cbf212e4a/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/93dd9ac5-44ca-47a9-bb7a-df4921f252e8/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/c1389ec7-f78f-4839-aa95-9c98f5cb84b2/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/8a78c080-c3a3-4e9a-9736-085b3d0619bd/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "renault_master_grp",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "movano",
-    "score": 53,
-    "vat_scheme": "excl",
-    "price_gross_eur": 14460,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 22450.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (24,584/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 62,
-    "market_median_eur": 15725,
-    "price_pct_vs_median": -24.0,
     "is_underpriced": true
   },
   {
@@ -3100,9 +2953,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 48,
-    "market_median_eur": 14992,
-    "price_pct_vs_median": -20.3,
+    "market_sample_size": 49,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": -22.9,
     "is_underpriced": true
   },
   {
@@ -3144,9 +2997,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 62,
-    "market_median_eur": 15725,
-    "price_pct_vs_median": -22.4,
+    "market_sample_size": 61,
+    "market_median_eur": 15995,
+    "price_pct_vs_median": -23.7,
     "is_underpriced": true
   },
   {
@@ -3190,9 +3043,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 62,
-    "market_median_eur": 15725,
-    "price_pct_vs_median": -17.6,
+    "market_sample_size": 61,
+    "market_median_eur": 15995,
+    "price_pct_vs_median": -19.0,
     "is_underpriced": true
   },
   {
@@ -3234,9 +3087,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 64,
-    "market_median_eur": 18875,
-    "price_pct_vs_median": -23.2,
+    "market_sample_size": 60,
+    "market_median_eur": 18400,
+    "price_pct_vs_median": -21.2,
     "is_underpriced": true
   },
   {
@@ -3280,50 +3133,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 73,
+    "market_sample_size": 69,
     "market_median_eur": 17995,
     "price_pct_vs_median": -17.2,
-    "is_underpriced": true
-  },
-  {
-    "title": "Peugeot Boxer 140PK L2H2 Airco Cruise CarPlay Parkeersensoren Euro6 L2 Airco Cruise control",
-    "url": "https://www.regeljelease.nl/voertuig/peugeot-boxer-2024-diesel-834830",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2024,
-    "km": 23997,
-    "price_eur": 14900.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/d0322c65-73f5-45e8-9c24-7006f8894e69/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/1c65c643-fde4-408e-9721-688e0255f204/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/4a6511f3-fa34-475e-bdfb-e398d0c4e72f/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/06e7befe-3a86-45af-9203-206a72ba734f/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "psa_l1l2h1",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "boxer",
-    "score": 53,
-    "vat_scheme": "excl",
-    "price_gross_eur": 18029,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 25400.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 41,
-    "market_median_eur": 20950,
-    "price_pct_vs_median": -28.9,
     "is_underpriced": true
   },
   {
@@ -3367,9 +3179,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 77,
-    "market_median_eur": 19900,
-    "price_pct_vs_median": -20.6,
+    "market_sample_size": 76,
+    "market_median_eur": 19450,
+    "price_pct_vs_median": -18.8,
     "is_underpriced": true
   },
   {
@@ -3411,56 +3223,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 77,
-    "market_median_eur": 19900,
-    "price_pct_vs_median": -19.8,
-    "is_underpriced": true
-  },
-  {
-    "title": "Opel Movano 2.2D L2H2 Airco Camera Trekhaak 3000 kg trekgew",
-    "url": "https://www.regeljelease.nl/voertuig/opel-movano-2023-diesel-807187",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2023,
-    "km": 96114,
-    "price_eur": 17945.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/1ea220eb-65a5-4114-b539-0bc1a2c8f164/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/705e1d81-5077-4bd5-a947-d9fb91f4b843/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/2cfabcd2-6758-4931-8e74-6ded037579ea/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/36997a1d-9bf0-46c5-bcf2-7f2c466f4269/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "renault_master_grp",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "movano",
-    "score": 53,
-    "vat_scheme": "excl",
-    "price_gross_eur": 21713,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 28445.0,
-    "risk_score": 2,
-    "risk_flags": [
-      {
-        "code": "very_high_km_per_year",
-        "label": "Very high km/year (32,038/yr) \u2014 highway-thrashed risk",
-        "severity": "high"
-      }
-    ],
-    "market_sample_size": 68,
-    "market_median_eur": 21650,
-    "price_pct_vs_median": -17.1,
+    "market_sample_size": 76,
+    "market_median_eur": 19450,
+    "price_pct_vs_median": -18.0,
     "is_underpriced": true
   },
   {
@@ -3498,9 +3263,9 @@
     "total_project_cost_eur": 31400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 57,
-    "market_median_eur": 27500,
-    "price_pct_vs_median": -24.0,
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": -22.2,
     "is_underpriced": true
   },
   {
@@ -3599,58 +3364,6 @@
     "market_sample_size": 68,
     "market_median_eur": 18000,
     "price_pct_vs_median": -33.4,
-    "is_underpriced": true
-  },
-  {
-    "title": "MAN TGE 2.0 TDI L3H3 Airco Trekhaak Onderhouden NAP",
-    "url": "https://www.regeljelease.nl/voertuig/man-tge-2018-diesel-908640",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2018,
-    "km": 221639,
-    "price_eur": 12945.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/98291a74-6055-4563-9aca-933d841607f5/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/c9a8f644-9aff-4e1e-9ba2-40d3d4800ddf/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/990e13e8-0bc7-4c1f-9836-3167463bdfa4/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/f35c63b6-591c-4cec-a147-b7e4d1c82a7f/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "vw_crafter_tge",
-    "variant": "L3H3",
-    "classification_confidence": "high",
-    "matched_token": "tge",
-    "score": 51,
-    "vat_scheme": "excl",
-    "price_gross_eur": 15663,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 23445.0,
-    "risk_score": 2,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (27,704/yr) \u2014 above-average wear",
-        "severity": "warn"
-      },
-      {
-        "code": "high_total_km",
-        "label": "High total km (221,639) \u2014 transmission/engine wear risk",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 39,
-    "market_median_eur": 19900,
-    "price_pct_vs_median": -34.9,
     "is_underpriced": true
   },
   {
@@ -3794,9 +3507,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 47,
-    "market_median_eur": 21500,
-    "price_pct_vs_median": -23.5,
+    "market_sample_size": 45,
+    "market_median_eur": 21900,
+    "price_pct_vs_median": -24.9,
     "is_underpriced": true
   },
   {
@@ -3841,9 +3554,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 58,
-    "market_median_eur": 22125,
-    "price_pct_vs_median": -23.6,
+    "market_sample_size": 55,
+    "market_median_eur": 22300,
+    "price_pct_vs_median": -24.2,
     "is_underpriced": true
   },
   {
@@ -3929,9 +3642,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 79,
-    "market_median_eur": 26400,
-    "price_pct_vs_median": -32.2,
+    "market_sample_size": 78,
+    "market_median_eur": 26750,
+    "price_pct_vs_median": -33.1,
     "is_underpriced": true
   },
   {
@@ -3976,8 +3689,8 @@
       }
     ],
     "market_sample_size": 60,
-    "market_median_eur": 24875,
-    "price_pct_vs_median": -27.8,
+    "market_median_eur": 24950,
+    "price_pct_vs_median": -28.1,
     "is_underpriced": true
   },
   {
@@ -4021,56 +3734,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 58,
-    "market_median_eur": 22125,
-    "price_pct_vs_median": -18.9,
-    "is_underpriced": true
-  },
-  {
-    "title": "MAN TGE 3.180 2.0 177pk RWD L3H3 (L2H2) Navi/Camera/Trekhaak 3500kg 03-2020",
-    "url": "https://www.regeljelease.nl/voertuig/man-tge-2020-diesel-919501",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2020,
-    "km": 194643,
-    "price_eur": 17950.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/6ecc004e-60de-4d9a-a113-05f0a71c3c38/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/87ecbd47-8c38-413a-a5ce-356cbd09b886/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/4a0b96b7-cfb9-4956-a0a2-08a5708e7c75/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/5f138346-73e5-4525-b367-c7b21c03e294/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "vw_crafter_tge",
-    "variant": "L3H3",
-    "classification_confidence": "high",
-    "matched_token": "tge",
-    "score": 51,
-    "vat_scheme": "excl",
-    "price_gross_eur": 21720,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 28450.0,
-    "risk_score": 2,
-    "risk_flags": [
-      {
-        "code": "very_high_km_per_year",
-        "label": "Very high km/year (32,440/yr) \u2014 highway-thrashed risk",
-        "severity": "high"
-      }
-    ],
-    "market_sample_size": 58,
-    "market_median_eur": 22125,
-    "price_pct_vs_median": -18.9,
+    "market_sample_size": 55,
+    "market_median_eur": 22300,
+    "price_pct_vs_median": -19.5,
     "is_underpriced": true
   },
   {
@@ -4115,9 +3781,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 58,
-    "market_median_eur": 22125,
-    "price_pct_vs_median": -16.8,
+    "market_sample_size": 55,
+    "market_median_eur": 22300,
+    "price_pct_vs_median": -17.5,
     "is_underpriced": true
   },
   {
@@ -4161,9 +3827,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 58,
-    "market_median_eur": 22125,
-    "price_pct_vs_median": -16.4,
+    "market_sample_size": 55,
+    "market_median_eur": 22300,
+    "price_pct_vs_median": -17.0,
     "is_underpriced": true
   },
   {
@@ -4208,8 +3874,8 @@
       }
     ],
     "market_sample_size": 60,
-    "market_median_eur": 24875,
-    "price_pct_vs_median": -23.8,
+    "market_median_eur": 24950,
+    "price_pct_vs_median": -24.0,
     "is_underpriced": true
   },
   {
@@ -4329,7 +3995,7 @@
     "total_project_cost_eur": 30400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 93,
+    "market_sample_size": 92,
     "market_median_eur": 24900,
     "price_pct_vs_median": -20.1,
     "is_underpriced": true
@@ -4370,9 +4036,9 @@
     "total_project_cost_eur": 33400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 46,
-    "market_median_eur": 29425,
-    "price_pct_vs_median": -22.2,
+    "market_sample_size": 47,
+    "market_median_eur": 29950,
+    "price_pct_vs_median": -23.5,
     "is_underpriced": true
   },
   {
@@ -4416,9 +4082,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 46,
-    "market_median_eur": 29425,
-    "price_pct_vs_median": -18.5,
+    "market_sample_size": 47,
+    "market_median_eur": 29950,
+    "price_pct_vs_median": -19.9,
     "is_underpriced": true
   },
   {
@@ -4462,9 +4128,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 40,
-    "market_median_eur": 33850,
-    "price_pct_vs_median": -23.2,
+    "market_sample_size": 41,
+    "market_median_eur": 33950,
+    "price_pct_vs_median": -23.4,
     "is_underpriced": true
   },
   {
@@ -4560,9 +4226,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 26,
-    "market_median_eur": 18672,
-    "price_pct_vs_median": -57.2,
+    "market_sample_size": 29,
+    "market_median_eur": 18000,
+    "price_pct_vs_median": -55.6,
     "is_underpriced": true
   },
   {
@@ -4693,9 +4359,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 28,
-    "market_median_eur": 18925,
-    "price_pct_vs_median": -21.3,
+    "market_sample_size": 31,
+    "market_median_eur": 18445,
+    "price_pct_vs_median": -19.2,
     "is_underpriced": true
   },
   {
@@ -4737,9 +4403,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 32,
-    "market_median_eur": 21697,
-    "price_pct_vs_median": -93.1,
+    "market_sample_size": 29,
+    "market_median_eur": 22444,
+    "price_pct_vs_median": -93.3,
     "is_underpriced": true
   },
   {
@@ -4786,7 +4452,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 103,
+    "market_sample_size": 101,
     "market_median_eur": 12950,
     "price_pct_vs_median": -61.4,
     "is_underpriced": true
@@ -5059,9 +4725,9 @@
     "total_project_cost_eur": 18062.5,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 66,
-    "market_median_eur": 11920,
-    "price_pct_vs_median": -36.6,
+    "market_sample_size": 65,
+    "market_median_eur": 11890,
+    "price_pct_vs_median": -36.4,
     "is_underpriced": true
   },
   {
@@ -5103,7 +4769,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 103,
+    "market_sample_size": 101,
     "market_median_eur": 12950,
     "price_pct_vs_median": -38.6,
     "is_underpriced": true
@@ -5196,9 +4862,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 48,
-    "market_median_eur": 14992,
-    "price_pct_vs_median": -45.0,
+    "market_sample_size": 49,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": -46.8,
     "is_underpriced": true
   },
   {
@@ -5316,9 +4982,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 64,
-    "market_median_eur": 18875,
-    "price_pct_vs_median": -53.4,
+    "market_sample_size": 60,
+    "market_median_eur": 18400,
+    "price_pct_vs_median": -52.2,
     "is_underpriced": true
   },
   {
@@ -5356,9 +5022,9 @@
     "total_project_cost_eur": 19450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 66,
-    "market_median_eur": 11920,
-    "price_pct_vs_median": -24.9,
+    "market_sample_size": 65,
+    "market_median_eur": 11890,
+    "price_pct_vs_median": -24.7,
     "is_underpriced": true
   },
   {
@@ -5402,7 +5068,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 85,
+    "market_sample_size": 84,
     "market_median_eur": 11950,
     "price_pct_vs_median": -24.8,
     "is_underpriced": true
@@ -5451,9 +5117,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 48,
-    "market_median_eur": 14992,
-    "price_pct_vs_median": -40.0,
+    "market_sample_size": 49,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": -41.9,
     "is_underpriced": true
   },
   {
@@ -5533,7 +5199,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 85,
+    "market_sample_size": 84,
     "market_median_eur": 11950,
     "price_pct_vs_median": -19.5,
     "is_underpriced": true
@@ -5677,9 +5343,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 48,
-    "market_median_eur": 14992,
-    "price_pct_vs_median": -27.3,
+    "market_sample_size": 49,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": -29.7,
     "is_underpriced": true
   },
   {
@@ -5718,6 +5384,53 @@
     "market_sample_size": 56,
     "market_median_eur": 14828,
     "price_pct_vs_median": -26.5,
+    "is_underpriced": true
+  },
+  {
+    "title": "Opel Movano 2.2D 88KW 120PK L3H2 EURO 6 AIRCO/ NAVIGATIE/ CRUISE CONTROL/ CAMERA/ 100% DEALERONDERHOUDEN",
+    "url": "https://www.regeljelease.nl/voertuig/opel-movano-2022-diesel-886127",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2022,
+    "km": 95033,
+    "price_eur": 10950.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://cdn1.tt.regeljelease.nl/images/ab4b8274-4958-44ed-9e1e-bb24852e02e0/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/b6a0e3e0-5ded-403f-90eb-a7632c8418a8/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/4ab54a32-c572-4f1c-a981-3ce6ae427f8d/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/525ca3d7-253e-4195-b70b-71ae322729ef/full.jpg?width=760"
+    ],
+    "vat_hint": null,
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 49,
+    "vat_scheme": "excl",
+    "price_gross_eur": 13250,
+    "vat_evidence": "source default: lease quotes ex-VAT",
+    "vat_confidence": "medium",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 21450.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (23,758/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 76,
+    "market_median_eur": 19450,
+    "price_pct_vs_median": -43.7,
     "is_underpriced": true
   },
   {
@@ -5808,7 +5521,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 73,
+    "market_sample_size": 69,
     "market_median_eur": 17995,
     "price_pct_vs_median": -36.9,
     "is_underpriced": true
@@ -5979,9 +5692,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 77,
-    "market_median_eur": 19900,
-    "price_pct_vs_median": -29.9,
+    "market_sample_size": 76,
+    "market_median_eur": 19450,
+    "price_pct_vs_median": -28.3,
     "is_underpriced": true
   },
   {
@@ -6030,9 +5743,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 64,
-    "market_median_eur": 18875,
-    "price_pct_vs_median": -20.8,
+    "market_sample_size": 60,
+    "market_median_eur": 18400,
+    "price_pct_vs_median": -18.8,
     "is_underpriced": true
   },
   {
@@ -6080,54 +5793,96 @@
       }
     ],
     "market_sample_size": 68,
-    "market_median_eur": 21650,
-    "price_pct_vs_median": -30.9,
+    "market_median_eur": 20825,
+    "price_pct_vs_median": -28.2,
     "is_underpriced": true
   },
   {
-    "title": "Renault Master 135PK L3H2 LED Airco Cruise Parkeersensoren A",
-    "url": "https://www.2dehands.be/v/auto-s/bestelwagens-en-lichte-vracht/m2421554604-renault-master-135pk-l3h2-led-airco-cruise-parkeersensoren-a",
-    "source": "2dehands",
-    "country": "be",
-    "year": 2022,
-    "km": 104070,
-    "price_eur": 16900.0,
+    "title": "Opel Movano 2.2D 140PK L3H2 Airco | Navigatie | Camera",
+    "url": "https://www.regeljelease.nl/voertuig/opel-movano-2024-diesel-845035",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2024,
+    "km": 41588,
+    "price_eur": 19950.0,
     "seats": null,
     "emission_standard": null,
-    "body_type": "bestelwagen",
+    "body_type": null,
     "weight_kg": null,
-    "remarks": "Bezoek de bas world store in veghel, nederland, de grootste fysieke winkel van europa met meer dan 1000 bedrijfswagens (waarvan bijna 500 gloednieuw!) Op voorraad. Bij bas world bieden we ook aantrekk",
+    "remarks": "",
     "images": [
-      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/c599c351-0d49-459e-9651-21808935629e?rule=ecg_mp_eps$_82.jpg",
-      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/26fcacec-af08-473e-9e01-e149252c893b?rule=ecg_mp_eps$_82.jpg",
-      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/daf0a7e9-305b-49a1-8763-570d5f9e25b3?rule=ecg_mp_eps$_82.jpg"
+      "https://cdn1.tt.regeljelease.nl/images/40a4fea0-5826-4777-a9b9-7d0de299d61f/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/37221860-9cc5-42c1-81b8-cbdade53ba63/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/b321502b-37b5-4e8b-b042-95c5934a68f0/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/74cb9964-898b-457d-b1ff-63e1728bfbf3/full.jpg?width=760"
     ],
     "vat_hint": null,
     "model_group": "renault_master_grp",
     "variant": "L3H2",
     "classification_confidence": "high",
-    "matched_token": "master",
+    "matched_token": "movano",
     "score": 49,
-    "vat_scheme": "unknown",
-    "price_gross_eur": 16900,
-    "vat_evidence": "no VAT signal",
-    "vat_confidence": "low",
+    "vat_scheme": "excl",
+    "price_gross_eur": 24140,
+    "vat_evidence": "source default: lease quotes ex-VAT",
+    "vat_confidence": "medium",
     "est_conversion_cost_eur": 10500,
     "est_conversion_cost_low_eur": 7000,
     "est_conversion_cost_high_eur": 14000,
     "conversion_effort": "moderate",
-    "total_project_cost_eur": 27400.0,
+    "total_project_cost_eur": 30450.0,
     "risk_score": 1,
     "risk_flags": [
       {
         "code": "high_km_per_year",
-        "label": "High km/year (26,017/yr) \u2014 above-average wear",
+        "label": "High km/year (20,794/yr) \u2014 above-average wear",
         "severity": "warn"
       }
     ],
-    "market_sample_size": 77,
-    "market_median_eur": 19900,
-    "price_pct_vs_median": -15.1,
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": -25.7,
+    "is_underpriced": true
+  },
+  {
+    "title": "Opel Movano 2.2D 140 L3H2",
+    "url": "https://www.regeljelease.nl/voertuig/opel-movano-2024-diesel-924547",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2024,
+    "km": 39152,
+    "price_eur": 20750.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://cdn1.tt.regeljelease.nl/images/5573087c-a93a-4a08-bccf-d8e51dc818ec/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/1b0fbeb9-41bf-4f66-8c60-2e3eaa868ac0/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/e16bc929-8286-48cd-8620-8cb0c6fde5a7/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/fd2bce41-944a-4834-ae2b-2ca36219b966/full.jpg?width=760"
+    ],
+    "vat_hint": null,
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 49,
+    "vat_scheme": "excl",
+    "price_gross_eur": 25108,
+    "vat_evidence": "source default: lease quotes ex-VAT",
+    "vat_confidence": "medium",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 31250.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": -22.7,
     "is_underpriced": true
   },
   {
@@ -6509,9 +6264,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 25,
-    "market_median_eur": 17950,
-    "price_pct_vs_median": -3.6,
+    "market_sample_size": 26,
+    "market_median_eur": 17675,
+    "price_pct_vs_median": -2.1,
     "is_underpriced": false
   },
   {
@@ -6560,9 +6315,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 25,
-    "market_median_eur": 17950,
-    "price_pct_vs_median": 0.0,
+    "market_sample_size": 26,
+    "market_median_eur": 17675,
+    "price_pct_vs_median": 1.6,
     "is_underpriced": false
   },
   {
@@ -6805,7 +6560,7 @@
     "total_project_cost_eur": 21150.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 103,
+    "market_sample_size": 101,
     "market_median_eur": 12950,
     "price_pct_vs_median": 22.8,
     "is_underpriced": false
@@ -6932,9 +6687,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 58,
-    "market_median_eur": 22125,
-    "price_pct_vs_median": -10.7,
+    "market_sample_size": 55,
+    "market_median_eur": 22300,
+    "price_pct_vs_median": -11.4,
     "is_underpriced": false
   },
   {
@@ -6978,9 +6733,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 40,
-    "market_median_eur": 33850,
-    "price_pct_vs_median": 7.1,
+    "market_sample_size": 41,
+    "market_median_eur": 33950,
+    "price_pct_vs_median": 6.8,
     "is_underpriced": false
   },
   {
@@ -7027,9 +6782,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 70,
-    "market_median_eur": 16098,
-    "price_pct_vs_median": -3.7,
+    "market_sample_size": 69,
+    "market_median_eur": 16450,
+    "price_pct_vs_median": -5.8,
     "is_underpriced": false
   },
   {
@@ -7071,7 +6826,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 85,
+    "market_sample_size": 84,
     "market_median_eur": 11950,
     "price_pct_vs_median": 33.5,
     "is_underpriced": false
@@ -7112,8 +6867,8 @@
     "risk_score": 0,
     "risk_flags": [],
     "market_sample_size": 68,
-    "market_median_eur": 21650,
-    "price_pct_vs_median": 24.0,
+    "market_median_eur": 20825,
+    "price_pct_vs_median": 28.9,
     "is_underpriced": false
   },
   {
@@ -7189,9 +6944,9 @@
     "total_project_cost_eur": 40150.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 57,
-    "market_median_eur": 27500,
-    "price_pct_vs_median": 26.9,
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 30.0,
     "is_underpriced": false
   },
   {
@@ -7235,56 +6990,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 26,
-    "market_median_eur": 18672,
-    "price_pct_vs_median": -1.2,
-    "is_underpriced": false
-  },
-  {
-    "title": "Renault Master T35 2.3 dCi 180pk trekhaak L2H2 MARGE BTW VRIJ",
-    "url": "https://www.regeljelease.nl/voertuig/renault-master-2021-diesel-915580",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2021,
-    "km": 176032,
-    "price_eur": 21500.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/f2063a0c-6dde-4182-ad4d-f7bf87b99c30/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/139120e4-057c-47d8-b205-1b7cbefc0bc4/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/efed5e07-2d98-4607-83a9-ad7baeb34f36/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/dc016ae3-f01d-49c6-987c-47884e8c9aa4/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "renault_master_grp",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "master",
-    "score": 63,
-    "vat_scheme": "margin",
-    "price_gross_eur": 21500,
-    "vat_evidence": "text: marge/margin scheme",
-    "vat_confidence": "high",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 32000.0,
-    "risk_score": 2,
-    "risk_flags": [
-      {
-        "code": "very_high_km_per_year",
-        "label": "Very high km/year (35,206/yr) \u2014 highway-thrashed risk",
-        "severity": "high"
-      }
-    ],
-    "market_sample_size": 73,
-    "market_median_eur": 17995,
-    "price_pct_vs_median": 19.5,
+    "market_sample_size": 29,
+    "market_median_eur": 18000,
+    "price_pct_vs_median": 2.5,
     "is_underpriced": false
   },
   {
@@ -7364,9 +7072,9 @@
     "total_project_cost_eur": 33000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 47,
-    "market_median_eur": 21500,
-    "price_pct_vs_median": 4.7,
+    "market_sample_size": 45,
+    "market_median_eur": 21900,
+    "price_pct_vs_median": 2.7,
     "is_underpriced": false
   },
   {
@@ -7404,9 +7112,9 @@
     "total_project_cost_eur": 39490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 58,
-    "market_median_eur": 22125,
-    "price_pct_vs_median": 31.0,
+    "market_sample_size": 55,
+    "market_median_eur": 22300,
+    "price_pct_vs_median": 30.0,
     "is_underpriced": false
   },
   {
@@ -7445,6 +7153,53 @@
     "market_sample_size": 54,
     "market_median_eur": 24989,
     "price_pct_vs_median": 19.7,
+    "is_underpriced": false
+  },
+  {
+    "title": "MAN TGE 180pk Automaat L3H2/L2H1 Navigatie Apple carplay Camera parkeersensoren LED",
+    "url": "https://www.regeljelease.nl/voertuig/man-tge-2024-diesel-875824",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2024,
+    "km": 100764,
+    "price_eur": 36300.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://cdn1.tt.regeljelease.nl/images/1532586b-0f2e-4327-8b75-43cb371d90b1/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/8cf5aa32-b397-426b-9629-0dfd3eb0689c/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/5db0afc7-e28d-4dd1-aa0c-78176dd9048e/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/2f88ced5-64bb-420e-8b51-d02f4f32e7d3/full.jpg?width=760"
+    ],
+    "vat_hint": null,
+    "model_group": "vw_crafter_tge",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "tge",
+    "score": 61,
+    "vat_scheme": "excl",
+    "price_gross_eur": 43923,
+    "vat_evidence": "source default: lease quotes ex-VAT",
+    "vat_confidence": "medium",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 46800.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (50,382/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 41,
+    "market_median_eur": 33950,
+    "price_pct_vs_median": 6.9,
     "is_underpriced": false
   },
   {
@@ -7488,9 +7243,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 40,
-    "market_median_eur": 33850,
-    "price_pct_vs_median": 9.0,
+    "market_sample_size": 41,
+    "market_median_eur": 33950,
+    "price_pct_vs_median": 8.7,
     "is_underpriced": false
   },
   {
@@ -7527,8 +7282,8 @@
     "risk_score": 0,
     "risk_flags": [],
     "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": 60.6,
+    "market_median_eur": 23900,
+    "price_pct_vs_median": 66.3,
     "is_underpriced": false
   },
   {
@@ -7650,9 +7405,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 28,
-    "market_median_eur": 18925,
-    "price_pct_vs_median": 18.9,
+    "market_sample_size": 31,
+    "market_median_eur": 18445,
+    "price_pct_vs_median": 22.0,
     "is_underpriced": false
   },
   {
@@ -7690,7 +7445,7 @@
     "total_project_cost_eur": 33500.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 19,
+    "market_sample_size": 21,
     "market_median_eur": 21000,
     "price_pct_vs_median": 9.5,
     "is_underpriced": false
@@ -7736,7 +7491,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 19,
+    "market_sample_size": 21,
     "market_median_eur": 21000,
     "price_pct_vs_median": 10.5,
     "is_underpriced": false
@@ -7852,9 +7607,9 @@
     "total_project_cost_eur": 26450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 16098,
-    "price_pct_vs_median": -0.9,
+    "market_sample_size": 69,
+    "market_median_eur": 16450,
+    "price_pct_vs_median": -3.0,
     "is_underpriced": false
   },
   {
@@ -7892,9 +7647,9 @@
     "total_project_cost_eur": 29350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 16098,
-    "price_pct_vs_median": 17.1,
+    "market_sample_size": 69,
+    "market_median_eur": 16450,
+    "price_pct_vs_median": 14.6,
     "is_underpriced": false
   },
   {
@@ -7932,9 +7687,9 @@
     "total_project_cost_eur": 29450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 84,
-    "market_median_eur": 15625,
-    "price_pct_vs_median": 21.3,
+    "market_sample_size": 82,
+    "market_median_eur": 15850,
+    "price_pct_vs_median": 19.6,
     "is_underpriced": false
   },
   {
@@ -8016,7 +7771,7 @@
     "total_project_cost_eur": 37495.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 41,
+    "market_sample_size": 37,
     "market_median_eur": 20950,
     "price_pct_vs_median": 28.9,
     "is_underpriced": false
@@ -8054,7 +7809,7 @@
     "total_project_cost_eur": 44350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 41,
+    "market_sample_size": 37,
     "market_median_eur": 20950,
     "price_pct_vs_median": 61.6,
     "is_underpriced": false
@@ -8172,9 +7927,50 @@
     "total_project_cost_eur": 26400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 25,
-    "market_median_eur": 17950,
-    "price_pct_vs_median": -11.4,
+    "market_sample_size": 26,
+    "market_median_eur": 17675,
+    "price_pct_vs_median": -10.0,
+    "is_underpriced": false
+  },
+  {
+    "title": "Ford Transit 170pk Automaat L3H3 2 Schuifdeuren Airco Cruise control Werkplaats inrichting 3-Zits Parkeersensoren",
+    "url": "https://www.regeljelease.nl/voertuig/ford-transit-2019-diesel-920475",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2019,
+    "km": 112940,
+    "price_eur": 17400.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://cdn1.tt.regeljelease.nl/images/049383a9-01b7-4895-b9c1-0f548928c0a3/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/dd82beae-06c0-484d-8295-57f9d912231b/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/231d6d0e-41cb-43f7-881a-b226f458e1cc/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/1c357cc7-ff47-4f9b-8a1e-eadb83aebb21/full.jpg?width=760"
+    ],
+    "vat_hint": null,
+    "model_group": "ford_transit_l2h2",
+    "variant": "L3H3",
+    "classification_confidence": "high",
+    "matched_token": "transit",
+    "score": 56,
+    "vat_scheme": "excl",
+    "price_gross_eur": 21054,
+    "vat_evidence": "source default: lease quotes ex-VAT",
+    "vat_confidence": "medium",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 27900.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 29,
+    "market_median_eur": 18000,
+    "price_pct_vs_median": -3.3,
     "is_underpriced": false
   },
   {
@@ -8212,7 +8008,7 @@
     "total_project_cost_eur": 28400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 46,
+    "market_sample_size": 47,
     "market_median_eur": 19900,
     "price_pct_vs_median": -10.1,
     "is_underpriced": false
@@ -8292,9 +8088,60 @@
     "total_project_cost_eur": 30450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 106,
-    "market_median_eur": 20900,
-    "price_pct_vs_median": -4.5,
+    "market_sample_size": 105,
+    "market_median_eur": 20000,
+    "price_pct_vs_median": -0.2,
+    "is_underpriced": false
+  },
+  {
+    "title": "Mercedes-Benz Sprinter 316CDI 164PK 7G-Tronic L2H2 / Cruisec",
+    "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2415293368-mercedes-benz-sprinter-316cdi-164pk-7g-tronic-l2h2-cruisec",
+    "source": "marktplaats",
+    "country": "nl",
+    "year": 2020,
+    "km": 235699,
+    "price_eur": 20850.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": "bestelwagen",
+    "weight_kg": null,
+    "remarks": "Lease v.a. \u20ac390,- per maand. Afmetingen laadruimte 326c178c190cm. Trekhaakgewicht 3.500Kg mogelijk. Af fabriek voorzien van: 9147 lakkleur articwit mb 9147 ba3actief brake assist system bh1hold-f",
+    "images": [
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/bdea89e6-1941-4aa2-8f78-98ff48812952?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/5cbfcbbe-8b8f-4ab1-9473-5e079f6d4684?rule=ecg_mp_eps$_82.jpg",
+      "https://images.marktplaats.com/api/v1/hz-mp-pro-listing/images/df360f3b-d60f-4b67-bec3-ed15a611b98a?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "vat_hint": null,
+    "model_group": "mercedes_sprinter",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "sprinter",
+    "score": 56,
+    "vat_scheme": "unknown",
+    "price_gross_eur": 20850,
+    "vat_evidence": "no VAT signal",
+    "vat_confidence": "low",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 31350.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (39,283/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (235,699) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 87,
+    "market_median_eur": 23900,
+    "price_pct_vs_median": -12.8,
     "is_underpriced": false
   },
   {
@@ -8338,9 +8185,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 30,
-    "market_median_eur": 19825,
-    "price_pct_vs_median": 5.9,
+    "market_sample_size": 32,
+    "market_median_eur": 19750,
+    "price_pct_vs_median": 6.3,
     "is_underpriced": false
   },
   {
@@ -8385,8 +8232,8 @@
       }
     ],
     "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": -13.1,
+    "market_median_eur": 23900,
+    "price_pct_vs_median": -10.0,
     "is_underpriced": false
   },
   {
@@ -8612,9 +8459,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 54,
-    "market_median_eur": 26875,
-    "price_pct_vs_median": -14.8,
+    "market_sample_size": 57,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": -14.7,
     "is_underpriced": false
   },
   {
@@ -8704,9 +8551,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 79,
-    "market_median_eur": 26400,
-    "price_pct_vs_median": -13.1,
+    "market_sample_size": 78,
+    "market_median_eur": 26750,
+    "price_pct_vs_median": -14.2,
     "is_underpriced": false
   },
   {
@@ -8744,9 +8591,9 @@
     "total_project_cost_eur": 33475.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 79,
-    "market_median_eur": 26400,
-    "price_pct_vs_median": -13.0,
+    "market_sample_size": 78,
+    "market_median_eur": 26750,
+    "price_pct_vs_median": -14.1,
     "is_underpriced": false
   },
   {
@@ -8830,7 +8677,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 93,
+    "market_sample_size": 92,
     "market_median_eur": 24900,
     "price_pct_vs_median": -3.6,
     "is_underpriced": false
@@ -8877,8 +8724,8 @@
       }
     ],
     "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": 0.0,
+    "market_median_eur": 23900,
+    "price_pct_vs_median": 3.5,
     "is_underpriced": false
   },
   {
@@ -8922,50 +8769,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 93,
+    "market_sample_size": 92,
     "market_median_eur": 24900,
     "price_pct_vs_median": -0.2,
-    "is_underpriced": false
-  },
-  {
-    "title": "Mercedes-Benz Sprinter L2H2 IMPERIAAL AIRCO EN EURO 6",
-    "url": "https://www.regeljelease.nl/voertuig/mercedes-benz-sprinter-2020-diesel-367264",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2020,
-    "km": 99339,
-    "price_eur": 24900.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/244b6714-2f43-4648-bb75-9057e4296e91/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/a4bc9e5a-1279-4ca9-87b8-ccc7238a0d87/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/b2fbeff1-b1cc-47e1-a641-d12648dbcece/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/83413dda-723d-4ef3-8902-5a8a44e385e1/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "mercedes_sprinter",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "sprinter",
-    "score": 56,
-    "vat_scheme": "excl",
-    "price_gross_eur": 30129,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 35400.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": 0.6,
     "is_underpriced": false
   },
   {
@@ -9010,8 +8816,8 @@
       }
     ],
     "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": 0.8,
+    "market_median_eur": 23900,
+    "price_pct_vs_median": 4.4,
     "is_underpriced": false
   },
   {
@@ -9094,8 +8900,8 @@
       }
     ],
     "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": 1.0,
+    "market_median_eur": 23900,
+    "price_pct_vs_median": 4.6,
     "is_underpriced": false
   },
   {
@@ -9131,9 +8937,9 @@
     "total_project_cost_eur": 36200.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 79,
-    "market_median_eur": 26400,
-    "price_pct_vs_median": -2.7,
+    "market_sample_size": 78,
+    "market_median_eur": 26750,
+    "price_pct_vs_median": -3.9,
     "is_underpriced": false
   },
   {
@@ -9171,56 +8977,9 @@
     "total_project_cost_eur": 36350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 93,
+    "market_sample_size": 92,
     "market_median_eur": 24900,
     "price_pct_vs_median": 3.8,
-    "is_underpriced": false
-  },
-  {
-    "title": "Mercedes-Benz Sprinter 316 CDI 164pk 3500kg trekhaak L2H2 Inrichting Euro6 Airco | Camera | Apple Carplay",
-    "url": "https://www.regeljelease.nl/voertuig/mercedes-benz-sprinter-2020-diesel-883664",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2020,
-    "km": 168634,
-    "price_eur": 25900.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/535b1317-fbdd-4ac1-a433-8fd39e2ece3a/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/1e982296-3b7e-4ccb-be5f-e519d8d916a8/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/53f50ee5-30f7-4b78-b251-668772406f7a/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/022dcef2-05ac-48c5-b5a9-968fc516c809/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "mercedes_sprinter",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "sprinter",
-    "score": 56,
-    "vat_scheme": "excl",
-    "price_gross_eur": 31339,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 36400.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (28,105/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": 4.7,
     "is_underpriced": false
   },
   {
@@ -9265,8 +9024,8 @@
       }
     ],
     "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": 4.9,
+    "market_median_eur": 23900,
+    "price_pct_vs_median": 8.6,
     "is_underpriced": false
   },
   {
@@ -9310,9 +9069,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 54,
-    "market_median_eur": 26875,
-    "price_pct_vs_median": -3.3,
+    "market_sample_size": 57,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": -3.2,
     "is_underpriced": false
   },
   {
@@ -9348,9 +9107,9 @@
     "total_project_cost_eur": 37250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 71,
-    "market_median_eur": 21950,
-    "price_pct_vs_median": 21.9,
+    "market_sample_size": 68,
+    "market_median_eur": 21925,
+    "price_pct_vs_median": 22.0,
     "is_underpriced": false
   },
   {
@@ -9388,7 +9147,7 @@
     "total_project_cost_eur": 37350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 93,
+    "market_sample_size": 92,
     "market_median_eur": 24900,
     "price_pct_vs_median": 7.8,
     "is_underpriced": false
@@ -9434,9 +9193,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 79,
-    "market_median_eur": 26400,
-    "price_pct_vs_median": 1.7,
+    "market_sample_size": 78,
+    "market_median_eur": 26750,
+    "price_pct_vs_median": 0.4,
     "is_underpriced": false
   },
   {
@@ -9478,9 +9237,56 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 54,
-    "market_median_eur": 26875,
-    "price_pct_vs_median": 0.1,
+    "market_sample_size": 57,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 0.2,
+    "is_underpriced": false
+  },
+  {
+    "title": "MAN TGE 140pk L3H3/L2H2 Apple Carplay Camera Parkeersensoren Airco Bluetooth 3-Zits",
+    "url": "https://www.regeljelease.nl/voertuig/man-tge-2023-diesel-920703",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2023,
+    "km": 63602,
+    "price_eur": 26900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://cdn1.tt.regeljelease.nl/images/4b8988bf-3bfd-4201-9404-e3064e71e49c/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/165b4ecf-a167-41a1-9151-7702bb40691d/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/e58363d8-a541-42bb-a3d0-c29791fc2aa0/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/26582991-b2e9-440c-afa2-d3262f0280f3/full.jpg?width=760"
+    ],
+    "vat_hint": null,
+    "model_group": "vw_crafter_tge",
+    "variant": "L3H3",
+    "classification_confidence": "high",
+    "matched_token": "tge",
+    "score": 56,
+    "vat_scheme": "excl",
+    "price_gross_eur": 32549,
+    "vat_evidence": "source default: lease quotes ex-VAT",
+    "vat_confidence": "medium",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 37400.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (21,200/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 47,
+    "market_median_eur": 29950,
+    "price_pct_vs_median": -10.2,
     "is_underpriced": false
   },
   {
@@ -9524,9 +9330,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 54,
-    "market_median_eur": 26875,
-    "price_pct_vs_median": 7.5,
+    "market_sample_size": 57,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 7.6,
     "is_underpriced": false
   },
   {
@@ -9563,8 +9369,8 @@
     "risk_score": 0,
     "risk_flags": [],
     "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": 16.8,
+    "market_median_eur": 23900,
+    "price_pct_vs_median": 20.9,
     "is_underpriced": false
   },
   {
@@ -9640,7 +9446,7 @@
     "total_project_cost_eur": 42945.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 37,
+    "market_sample_size": 38,
     "market_median_eur": 29900,
     "price_pct_vs_median": 8.5,
     "is_underpriced": false
@@ -9687,8 +9493,8 @@
       }
     ],
     "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": 31.3,
+    "market_median_eur": 23900,
+    "price_pct_vs_median": 36.0,
     "is_underpriced": false
   },
   {
@@ -9732,9 +9538,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 71,
-    "market_median_eur": 21950,
-    "price_pct_vs_median": 54.2,
+    "market_sample_size": 68,
+    "market_median_eur": 21925,
+    "price_pct_vs_median": 54.4,
     "is_underpriced": false
   },
   {
@@ -9770,7 +9576,7 @@
     "total_project_cost_eur": 46300.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 37,
+    "market_sample_size": 38,
     "market_median_eur": 29900,
     "price_pct_vs_median": 19.7,
     "is_underpriced": false
@@ -9810,56 +9616,9 @@
     "total_project_cost_eur": 47900.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 37,
+    "market_sample_size": 38,
     "market_median_eur": 29900,
     "price_pct_vs_median": 25.1,
-    "is_underpriced": false
-  },
-  {
-    "title": "Mercedes-Benz Sprinter 315 CDI L2 H2 Automaat Imperiaal Trap Trekhaak",
-    "url": "https://www.regeljelease.nl/voertuig/mercedes-benz-sprinter-2024-diesel-909998",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2024,
-    "km": 48092,
-    "price_eur": 37950.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/8e64470c-d07a-4106-b98e-2ee4b22da416/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/1cdc801e-8eff-495a-ba8e-2ec7f7001d82/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/19ef5e34-a5ba-4848-b684-3a087a0af0e1/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/736e6cd7-491f-4108-b3cb-5bd6665452c3/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "mercedes_sprinter",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "sprinter",
-    "score": 56,
-    "vat_scheme": "excl",
-    "price_gross_eur": 45920,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 48450.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (24,046/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 37,
-    "market_median_eur": 29900,
-    "price_pct_vs_median": 26.9,
     "is_underpriced": false
   },
   {
@@ -9903,7 +9662,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 37,
+    "market_sample_size": 38,
     "market_median_eur": 29900,
     "price_pct_vs_median": 33.4,
     "is_underpriced": false
@@ -9941,7 +9700,7 @@
     "total_project_cost_eur": 50450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 37,
+    "market_sample_size": 38,
     "market_median_eur": 29900,
     "price_pct_vs_median": 33.6,
     "is_underpriced": false
@@ -9996,6 +9755,55 @@
     "is_underpriced": false
   },
   {
+    "title": "Ford Transit L2H2 170 pk 2020",
+    "url": "https://www.2dehands.be/v/auto-s/bestelwagens-en-lichte-vracht/m2421091112-ford-transit-l2h2-170-pk-2020",
+    "source": "2dehands",
+    "country": "be",
+    "year": 2020,
+    "km": 295000,
+    "price_eur": 15900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": "bestelwagen",
+    "weight_kg": null,
+    "remarks": "15900 ex btw ford transit l2h2 170 pk 2020 295k km 3 zit airco cruise control led koplampen custom pasvorm zetelhoezen enz... Exterior : front grill \"raptor\" met led flitsers strands ledbalk",
+    "images": [
+      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/8ef5b4c3-468d-4748-ae99-05d7694acf43?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "vat_hint": null,
+    "model_group": "ford_transit_l2h2",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "transit",
+    "score": 55,
+    "vat_scheme": "excl",
+    "price_gross_eur": 19239,
+    "vat_evidence": "text: excl. btw / netto / zzgl. mwst",
+    "vat_confidence": "high",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 26400.0,
+    "risk_score": 3,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (49,166/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (295,000) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 31,
+    "market_median_eur": 18445,
+    "price_pct_vs_median": -13.8,
+    "is_underpriced": false
+  },
+  {
     "title": "25 x Volkswagen Crafter, Nieuw en gebruikt! Uit voorraad!!!",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/a1431019696-25-x-volkswagen-crafter-nieuw-en-gebruikt-uit-voorraad",
     "source": "marktplaats",
@@ -10031,6 +9839,47 @@
     "market_median_eur": null,
     "market_sample_size": 0,
     "price_pct_vs_median": null,
+    "is_underpriced": false
+  },
+  {
+    "title": "Ford Transit 350 2.0 TDCI L2H2 Trend 170 PK",
+    "url": "https://www.regeljelease.nl/voertuig/ford-transit-2020-diesel-858680",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2020,
+    "km": 97462,
+    "price_eur": 17950.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://cdn1.tt.regeljelease.nl/images/00835cc1-858b-4c9b-ac1b-f214b0bd5e51/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/e6c0692a-ea95-4e60-9e9e-a0b61248150a/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/50389b32-9c29-48b1-9d0e-329d417670ac/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/6584758e-47fd-45f3-ab80-64615326a70b/full.jpg?width=760"
+    ],
+    "vat_hint": null,
+    "model_group": "ford_transit_l2h2",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "transit",
+    "score": 55,
+    "vat_scheme": "excl",
+    "price_gross_eur": 21720,
+    "vat_evidence": "source default: lease quotes ex-VAT",
+    "vat_confidence": "medium",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 28450.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 31,
+    "market_median_eur": 18445,
+    "price_pct_vs_median": -2.7,
     "is_underpriced": false
   },
   {
@@ -10074,9 +9923,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 26,
-    "market_median_eur": 18672,
-    "price_pct_vs_median": -3.6,
+    "market_sample_size": 29,
+    "market_median_eur": 18000,
+    "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
   {
@@ -10120,9 +9969,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 28,
-    "market_median_eur": 18925,
-    "price_pct_vs_median": -0.1,
+    "market_sample_size": 31,
+    "market_median_eur": 18445,
+    "price_pct_vs_median": 2.5,
     "is_underpriced": false
   },
   {
@@ -10166,9 +10015,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 26,
-    "market_median_eur": 18672,
-    "price_pct_vs_median": 1.5,
+    "market_sample_size": 29,
+    "market_median_eur": 18000,
+    "price_pct_vs_median": 5.3,
     "is_underpriced": false
   },
   {
@@ -10290,9 +10139,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 31,
-    "market_median_eur": 19500,
-    "price_pct_vs_median": 16.7,
+    "market_sample_size": 34,
+    "market_median_eur": 18950,
+    "price_pct_vs_median": 20.1,
     "is_underpriced": false
   },
   {
@@ -10330,9 +10179,9 @@
     "total_project_cost_eur": 33450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 150,
-    "market_median_eur": 12695,
-    "price_pct_vs_median": 80.8,
+    "market_sample_size": 149,
+    "market_median_eur": 12890,
+    "price_pct_vs_median": 78.0,
     "is_underpriced": false
   },
   {
@@ -10414,7 +10263,7 @@
     "total_project_cost_eur": 37000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 19,
+    "market_sample_size": 21,
     "market_median_eur": 21000,
     "price_pct_vs_median": 26.2,
     "is_underpriced": false
@@ -10454,7 +10303,7 @@
     "total_project_cost_eur": 38950.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 41,
+    "market_sample_size": 37,
     "market_median_eur": 20950,
     "price_pct_vs_median": 35.8,
     "is_underpriced": false
@@ -10655,7 +10504,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 105,
+    "market_sample_size": 103,
     "market_median_eur": 14500,
     "price_pct_vs_median": 23.8,
     "is_underpriced": false
@@ -10701,7 +10550,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 41,
+    "market_sample_size": 37,
     "market_median_eur": 20950,
     "price_pct_vs_median": -6.9,
     "is_underpriced": false
@@ -10946,7 +10795,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 103,
+    "market_sample_size": 101,
     "market_median_eur": 12950,
     "price_pct_vs_median": -11.2,
     "is_underpriced": false
@@ -11024,9 +10873,9 @@
     "total_project_cost_eur": 22450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 13900,
-    "price_pct_vs_median": -14.0,
+    "market_sample_size": 114,
+    "market_median_eur": 13922,
+    "price_pct_vs_median": -14.2,
     "is_underpriced": false
   },
   {
@@ -11068,9 +10917,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 66,
-    "market_median_eur": 11920,
-    "price_pct_vs_median": 0.3,
+    "market_sample_size": 65,
+    "market_median_eur": 11890,
+    "price_pct_vs_median": 0.5,
     "is_underpriced": false
   },
   {
@@ -11190,7 +11039,7 @@
     "total_project_cost_eur": 23350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 103,
+    "market_sample_size": 101,
     "market_median_eur": 12950,
     "price_pct_vs_median": -0.8,
     "is_underpriced": false
@@ -11266,56 +11115,9 @@
     "total_project_cost_eur": 23450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 105,
+    "market_sample_size": 103,
     "market_median_eur": 14500,
     "price_pct_vs_median": -10.7,
-    "is_underpriced": false
-  },
-  {
-    "title": "Opel Movano SERVICEWAGEN AUTOMAAT 2.3 CDTI BiTurbo 170pk euro6 L2H2 V230 OMVORMER BOTT INRICHTING STANDKACHEL AIRCO RIJKLAARPRIJS",
-    "url": "https://www.regeljelease.nl/voertuig/opel-movano-2018-diesel-923879",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2018,
-    "km": 172580,
-    "price_eur": 12950.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/b2aba043-c38e-4607-84f7-6a53fb5625c4/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/4438af56-2237-489c-a0bc-655aaae81111/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/ed046596-94bc-4ae5-a424-6253bef22d3d/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/24706b30-b748-40aa-9fcd-69bb5394a5e0/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "renault_master_grp",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "movano",
-    "score": 53,
-    "vat_scheme": "excl",
-    "price_gross_eur": 15670,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 23450.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (21,572/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 48,
-    "market_median_eur": 14992,
-    "price_pct_vs_median": -13.6,
     "is_underpriced": false
   },
   {
@@ -11359,9 +11161,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 115,
-    "market_median_eur": 13900,
-    "price_pct_vs_median": -6.5,
+    "market_sample_size": 114,
+    "market_median_eur": 13922,
+    "price_pct_vs_median": -6.7,
     "is_underpriced": false
   },
   {
@@ -11399,7 +11201,7 @@
     "total_project_cost_eur": 23495.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 85,
+    "market_sample_size": 84,
     "market_median_eur": 11950,
     "price_pct_vs_median": 8.7,
     "is_underpriced": false
@@ -11439,7 +11241,7 @@
     "total_project_cost_eur": 23750.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 103,
+    "market_sample_size": 101,
     "market_median_eur": 12950,
     "price_pct_vs_median": 2.3,
     "is_underpriced": false
@@ -11489,53 +11291,6 @@
     "is_underpriced": false
   },
   {
-    "title": "Peugeot Boxer 2.0 BlueHDI L2/H2 Premium 163PK CAMERA PDC CRUISE NAVI AIRCO LEASE A/A \u20ac88,- P.M. INRUIL MOGELIJK",
-    "url": "https://www.regeljelease.nl/voertuig/peugeot-boxer-2019-diesel-857161",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2019,
-    "km": 168554,
-    "price_eur": 13850.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/805a5a85-3d84-41ea-8a38-15c4989c9dcd/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/93aac86a-99af-423d-be0b-4415d61164ab/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/1837b52b-0cf7-4aef-9104-eb9c9d8d9a77/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/ab597dbc-65dc-4762-a7da-9b3e6a598ed3/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "psa_l1l2h1",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "boxer",
-    "score": 53,
-    "vat_scheme": "excl",
-    "price_gross_eur": 16758,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 24350.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (24,079/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 115,
-    "market_median_eur": 13900,
-    "price_pct_vs_median": -0.4,
-    "is_underpriced": false
-  },
-  {
     "title": "Peugeot Boxer 2.0 BlueHDI L2H2 ACHTERUITRIJCAMERA",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/a1522329660-peugeot-boxer-2-0-bluehdi-l2h2-achteruitrijcamera",
     "source": "marktplaats",
@@ -11568,7 +11323,7 @@
     "total_project_cost_eur": 24400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 103,
+    "market_sample_size": 101,
     "market_median_eur": 12950,
     "price_pct_vs_median": 7.3,
     "is_underpriced": false
@@ -11608,7 +11363,7 @@
     "total_project_cost_eur": 24400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 103,
+    "market_sample_size": 101,
     "market_median_eur": 12950,
     "price_pct_vs_median": 7.3,
     "is_underpriced": false
@@ -11652,9 +11407,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 84,
-    "market_median_eur": 15625,
-    "price_pct_vs_median": -10.8,
+    "market_sample_size": 82,
+    "market_median_eur": 15850,
+    "price_pct_vs_median": -12.0,
     "is_underpriced": false
   },
   {
@@ -11696,7 +11451,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 105,
+    "market_sample_size": 103,
     "market_median_eur": 14500,
     "price_pct_vs_median": -3.8,
     "is_underpriced": false
@@ -11748,94 +11503,6 @@
     "market_sample_size": 84,
     "market_median_eur": 11395,
     "price_pct_vs_median": 22.9,
-    "is_underpriced": false
-  },
-  {
-    "title": "Opel Movano 2.3 Turbo L2H2*A/C*CRUISE*HAAK*CAM*TEL*PDC*",
-    "url": "https://www.regeljelease.nl/voertuig/opel-movano-2020-diesel-830219",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2020,
-    "km": 76447,
-    "price_eur": 14390.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/af7ae13c-b254-4423-b5c6-13d25b3f508b/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/2cf1f1d9-d5d4-43f3-866c-83046a949dce/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/bd4f8559-715a-4397-b73d-2f69be4d5f15/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/019518fb-2372-456d-b763-4230d86145ac/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "renault_master_grp",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "movano",
-    "score": 53,
-    "vat_scheme": "excl",
-    "price_gross_eur": 17412,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 24890.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 16098,
-    "price_pct_vs_median": -10.6,
-    "is_underpriced": false
-  },
-  {
-    "title": "Peugeot Boxer 330 2.2 BlueHDi 140 L2H2 Premium",
-    "url": "https://www.regeljelease.nl/voertuig/peugeot-boxer-2021-diesel-916848",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2021,
-    "km": 110402,
-    "price_eur": 14444.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/43eac68e-eafe-4216-9a5b-3da5d8d9ed42/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/8666d55f-c65b-4cd5-84b8-30b5cc67b0c8/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/9aec80b0-5a34-4c3e-b49c-c8c456cc5129/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/fb1229f3-9887-4c55-85fd-081a4ca79c41/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "psa_l1l2h1",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "boxer",
-    "score": 53,
-    "vat_scheme": "excl",
-    "price_gross_eur": 17477,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 24944.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (22,080/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 84,
-    "market_median_eur": 15625,
-    "price_pct_vs_median": -7.6,
     "is_underpriced": false
   },
   {
@@ -11955,9 +11622,9 @@
     "total_project_cost_eur": 25400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 48,
-    "market_median_eur": 14992,
-    "price_pct_vs_median": -0.6,
+    "market_sample_size": 49,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": -3.9,
     "is_underpriced": false
   },
   {
@@ -12113,9 +11780,9 @@
     "total_project_cost_eur": 25495.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 37,
-    "market_median_eur": 14800,
-    "price_pct_vs_median": 1.3,
+    "market_sample_size": 39,
+    "market_median_eur": 14900,
+    "price_pct_vs_median": 0.6,
     "is_underpriced": false
   },
   {
@@ -12193,7 +11860,7 @@
     "total_project_cost_eur": 25900.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 105,
+    "market_sample_size": 103,
     "market_median_eur": 14500,
     "price_pct_vs_median": 6.2,
     "is_underpriced": false
@@ -12397,9 +12064,9 @@
     "total_project_cost_eur": 26450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 13900,
-    "price_pct_vs_median": 14.7,
+    "market_sample_size": 114,
+    "market_median_eur": 13922,
+    "price_pct_vs_median": 14.6,
     "is_underpriced": false
   },
   {
@@ -12437,9 +12104,9 @@
     "total_project_cost_eur": 26450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 62,
-    "market_median_eur": 15725,
-    "price_pct_vs_median": 1.4,
+    "market_sample_size": 61,
+    "market_median_eur": 15995,
+    "price_pct_vs_median": -0.3,
     "is_underpriced": false
   },
   {
@@ -12521,9 +12188,9 @@
     "total_project_cost_eur": 26999.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 80,
-    "market_median_eur": 17825,
-    "price_pct_vs_median": -7.4,
+    "market_sample_size": 75,
+    "market_median_eur": 17800,
+    "price_pct_vs_median": -7.3,
     "is_underpriced": false
   },
   {
@@ -12565,50 +12232,50 @@
     "is_underpriced": false
   },
   {
-    "title": "Renault Master 2.3 dCi L2H2*A/C*CRUISE*NAVI*HAAK*CAM*INRICHTING*",
-    "url": "https://www.regeljelease.nl/voertuig/renault-master-2021-diesel-828058",
+    "title": "Opel Movano 2.3DCi 136PK L2H2",
+    "url": "https://www.regeljelease.nl/voertuig/opel-movano-2021-diesel-919129",
     "source": "regeljelease",
     "country": "nl",
     "year": 2021,
-    "km": 109727,
-    "price_eur": 16840.0,
+    "km": 115098,
+    "price_eur": 16895.0,
     "seats": null,
     "emission_standard": null,
     "body_type": null,
     "weight_kg": null,
     "remarks": "",
     "images": [
-      "https://cdn1.tt.regeljelease.nl/images/0692f157-56f2-4000-8997-fb246dd78f6c/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/a28e4806-6b91-47bd-8519-59b9c4f20e9e/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/e60e145b-91b1-415d-9841-c968dfc55178/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/9ef7ff6c-04a7-4d72-8cf2-061e07ed2c88/full.jpg?width=760"
+      "https://cdn1.tt.regeljelease.nl/images/b8844aa7-b2f0-4b38-842e-61be58301e88/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/441e590e-622f-40c7-9868-e8c99daf0335/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/47502833-818a-4a4a-903a-cc075979d935/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/5cd7264e-0acf-4ae9-92c8-5b2bf18fa602/full.jpg?width=760"
     ],
     "vat_hint": null,
     "model_group": "renault_master_grp",
     "variant": "L2H2",
     "classification_confidence": "high",
-    "matched_token": "master",
+    "matched_token": "movano",
     "score": 53,
     "vat_scheme": "excl",
-    "price_gross_eur": 20376,
+    "price_gross_eur": 20443,
     "vat_evidence": "source default: lease quotes ex-VAT",
     "vat_confidence": "medium",
     "est_conversion_cost_eur": 10500,
     "est_conversion_cost_low_eur": 7000,
     "est_conversion_cost_high_eur": 14000,
     "conversion_effort": "moderate",
-    "total_project_cost_eur": 27340.0,
+    "total_project_cost_eur": 27395.0,
     "risk_score": 1,
     "risk_flags": [
       {
         "code": "high_km_per_year",
-        "label": "High km/year (21,945/yr) \u2014 above-average wear",
+        "label": "High km/year (23,019/yr) \u2014 above-average wear",
         "severity": "warn"
       }
     ],
-    "market_sample_size": 73,
+    "market_sample_size": 69,
     "market_median_eur": 17995,
-    "price_pct_vs_median": -6.4,
+    "price_pct_vs_median": -6.1,
     "is_underpriced": false
   },
   {
@@ -12646,9 +12313,9 @@
     "total_project_cost_eur": 27400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 48,
-    "market_median_eur": 14992,
-    "price_pct_vs_median": 12.7,
+    "market_sample_size": 49,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 9.0,
     "is_underpriced": false
   },
   {
@@ -12686,9 +12353,50 @@
     "total_project_cost_eur": 27450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 80,
-    "market_median_eur": 17825,
-    "price_pct_vs_median": -4.9,
+    "market_sample_size": 75,
+    "market_median_eur": 17800,
+    "price_pct_vs_median": -4.8,
+    "is_underpriced": false
+  },
+  {
+    "title": "Peugeot Boxer 2.2 BlueHDi 120PK L2H2 Airco Imperiaal",
+    "url": "https://www.regeljelease.nl/voertuig/peugeot-boxer-2021-diesel-808500",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2021,
+    "km": 94291,
+    "price_eur": 16950.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://cdn1.tt.regeljelease.nl/images/860f8b8d-bebc-4973-af2a-aac62f358945/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/378b9b81-a7dc-400a-bf54-dcf11357b2c5/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/62ab6e72-4784-4c17-8ed0-403df02df7a7/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/1b0974ed-be39-4ec1-ac6c-ceff2666d1e3/full.jpg?width=760"
+    ],
+    "vat_hint": null,
+    "model_group": "psa_l1l2h1",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "boxer",
+    "score": 53,
+    "vat_scheme": "excl",
+    "price_gross_eur": 20510,
+    "vat_evidence": "source default: lease quotes ex-VAT",
+    "vat_confidence": "medium",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 27450.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 82,
+    "market_median_eur": 15850,
+    "price_pct_vs_median": 6.9,
     "is_underpriced": false
   },
   {
@@ -12770,9 +12478,9 @@
     "total_project_cost_eur": 27950.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 84,
-    "market_median_eur": 15625,
-    "price_pct_vs_median": 11.7,
+    "market_sample_size": 82,
+    "market_median_eur": 15850,
+    "price_pct_vs_median": 10.1,
     "is_underpriced": false
   },
   {
@@ -12814,9 +12522,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 62,
-    "market_median_eur": 15725,
-    "price_pct_vs_median": 11.3,
+    "market_sample_size": 61,
+    "market_median_eur": 15995,
+    "price_pct_vs_median": 9.4,
     "is_underpriced": false
   },
   {
@@ -12928,9 +12636,9 @@
     "total_project_cost_eur": 28250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 16098,
-    "price_pct_vs_median": 10.3,
+    "market_sample_size": 69,
+    "market_median_eur": 16450,
+    "price_pct_vs_median": 7.9,
     "is_underpriced": false
   },
   {
@@ -12968,7 +12676,7 @@
     "total_project_cost_eur": 28300.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 73,
+    "market_sample_size": 69,
     "market_median_eur": 17995,
     "price_pct_vs_median": -1.1,
     "is_underpriced": false
@@ -13012,7 +12720,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 41,
+    "market_sample_size": 37,
     "market_median_eur": 20950,
     "price_pct_vs_median": -14.8,
     "is_underpriced": false
@@ -13058,9 +12766,97 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 64,
-    "market_median_eur": 18875,
-    "price_pct_vs_median": -4.9,
+    "market_sample_size": 60,
+    "market_median_eur": 18400,
+    "price_pct_vs_median": -2.4,
+    "is_underpriced": false
+  },
+  {
+    "title": "Opel Movano 2.2D 120PK L2H2 EURO 6",
+    "url": "https://www.regeljelease.nl/voertuig/opel-movano-2022-diesel-507615",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2022,
+    "km": 60190,
+    "price_eur": 17950.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://cdn1.tt.regeljelease.nl/images/034733ac-c339-4d69-ad32-55daabb78f66/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/461f6d73-03ca-4c03-9c53-d0d42304c969/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/2930ee7a-448c-4485-a6d1-69f18c5c9923/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/dce18f64-ecf0-4b13-adb2-93da009ccd10/full.jpg?width=760"
+    ],
+    "vat_hint": null,
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 53,
+    "vat_scheme": "excl",
+    "price_gross_eur": 21720,
+    "vat_evidence": "source default: lease quotes ex-VAT",
+    "vat_confidence": "medium",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 28450.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 76,
+    "market_median_eur": 19450,
+    "price_pct_vs_median": -7.7,
+    "is_underpriced": false
+  },
+  {
+    "title": "Opel Movano 2.3 CDTI 130pk L2H2 / vaste prijs rijklaar \u20ac 17.950 ex btw / lease vanaf \u20ac 366",
+    "url": "https://www.regeljelease.nl/voertuig/opel-movano-2018-diesel-351901",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2018,
+    "km": 165926,
+    "price_eur": 17950.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://cdn1.tt.regeljelease.nl/images/dcb658ca-6964-49a8-94dd-356e5c532b94/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/4dc72973-ab15-45ee-b484-61587578eafb/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/892a35e9-a077-40c9-8f83-ecc3057a4e1e/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/99701f1b-bff4-4265-a589-360b868baafd/full.jpg?width=760"
+    ],
+    "vat_hint": null,
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 53,
+    "vat_scheme": "excl",
+    "price_gross_eur": 21720,
+    "vat_evidence": "text: excl. btw / netto / zzgl. mwst",
+    "vat_confidence": "high",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 28450.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (20,740/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 49,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 15.8,
     "is_underpriced": false
   },
   {
@@ -13136,7 +12932,7 @@
     "total_project_cost_eur": 28495.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 73,
+    "market_sample_size": 69,
     "market_median_eur": 17995,
     "price_pct_vs_median": 0.0,
     "is_underpriced": false
@@ -13176,7 +12972,7 @@
     "total_project_cost_eur": 28499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 105,
+    "market_sample_size": 103,
     "market_median_eur": 14500,
     "price_pct_vs_median": 24.1,
     "is_underpriced": false
@@ -13267,7 +13063,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 41,
+    "market_sample_size": 37,
     "market_median_eur": 20950,
     "price_pct_vs_median": -10.3,
     "is_underpriced": false
@@ -13308,8 +13104,8 @@
     "risk_score": 0,
     "risk_flags": [],
     "market_sample_size": 68,
-    "market_median_eur": 21650,
-    "price_pct_vs_median": -12.7,
+    "market_median_eur": 20825,
+    "price_pct_vs_median": -9.2,
     "is_underpriced": false
   },
   {
@@ -13398,9 +13194,50 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 41,
+    "market_sample_size": 37,
     "market_median_eur": 20950,
     "price_pct_vs_median": -9.5,
+    "is_underpriced": false
+  },
+  {
+    "title": "Opel Movano 2.3 CDTI BiTurbo L2H3 170pk",
+    "url": "https://www.regeljelease.nl/voertuig/opel-movano-2017-diesel-523818",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2017,
+    "km": 95975,
+    "price_eur": 18950.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://cdn1.tt.regeljelease.nl/images/ef6afdb5-31d6-4f7d-aa51-e92bdd9098a3/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/405cbe1a-69d2-4c08-a341-5ea6c6cadfd2/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/c61ba71b-dc1a-4356-88f2-b258035e61ee/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/a38f7467-0047-4003-a31a-14b2ba72e9af/full.jpg?width=760"
+    ],
+    "vat_hint": null,
+    "model_group": "renault_master_grp",
+    "variant": "L2H3",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 53,
+    "vat_scheme": "excl",
+    "price_gross_eur": 22930,
+    "vat_evidence": "source default: lease quotes ex-VAT",
+    "vat_confidence": "medium",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 29450.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 39,
+    "market_median_eur": 14900,
+    "price_pct_vs_median": 27.2,
     "is_underpriced": false
   },
   {
@@ -13475,8 +13312,8 @@
     "risk_score": 0,
     "risk_flags": [],
     "market_sample_size": 68,
-    "market_median_eur": 21650,
-    "price_pct_vs_median": -12.2,
+    "market_median_eur": 20825,
+    "price_pct_vs_median": -8.8,
     "is_underpriced": false
   },
   {
@@ -13512,9 +13349,9 @@
     "total_project_cost_eur": 30400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 77,
-    "market_median_eur": 19900,
-    "price_pct_vs_median": 0.0,
+    "market_sample_size": 76,
+    "market_median_eur": 19450,
+    "price_pct_vs_median": 2.3,
     "is_underpriced": false
   },
   {
@@ -13600,6 +13437,47 @@
     "is_underpriced": false
   },
   {
+    "title": "Opel Movano 2.3 CDTI BiTurbo L2H2",
+    "url": "https://www.regeljelease.nl/voertuig/opel-movano-2018-diesel-891429",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2018,
+    "km": 98510,
+    "price_eur": 19950.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://cdn1.tt.regeljelease.nl/images/00a5a521-5a06-4825-834c-d2343d8b8f12/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/2bc9dd6c-2651-4b8b-bb5e-9f4773e4fe14/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/35731983-8347-4a76-b496-d1fd1c85fc23/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/5fd39878-d6a0-4cbd-9c95-cba98baf34be/full.jpg?width=760"
+    ],
+    "vat_hint": null,
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 53,
+    "vat_scheme": "excl",
+    "price_gross_eur": 24140,
+    "vat_evidence": "source default: lease quotes ex-VAT",
+    "vat_confidence": "medium",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 30450.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 49,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 28.7,
+    "is_underpriced": false
+  },
+  {
     "title": "Renault Master III Kasten L2H2 HKa 3,3t *BT*MWST*KLIMA*",
     "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-kasten-l2h2-hka-3-3t-bt-mwst-klima-/3438350281-216-2998",
     "source": "kleinanzeigen_de",
@@ -13672,9 +13550,9 @@
     "total_project_cost_eur": 30999.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 48,
-    "market_median_eur": 14992,
-    "price_pct_vs_median": 36.7,
+    "market_sample_size": 49,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 32.3,
     "is_underpriced": false
   },
   {
@@ -13718,50 +13596,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 80,
-    "market_median_eur": 17825,
-    "price_pct_vs_median": 17.5,
-    "is_underpriced": false
-  },
-  {
-    "title": "Fiat Ducato L2H2 140 pk 3.5t",
-    "url": "https://www.regeljelease.nl/voertuig/fiat-ducato-2024-diesel-900651",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2024,
-    "km": 13061,
-    "price_eur": 20950.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/b6d4cc1d-2bb7-4689-9918-e62d90b6e820/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/2c263d49-429e-43bd-badf-e81ab780e808/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/17b084f4-a5c0-4b3e-b501-26b17b593109/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/25428332-a318-4bf8-9754-c08b794f4dd8/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "psa_l1l2h1",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "ducato",
-    "score": 53,
-    "vat_scheme": "excl",
-    "price_gross_eur": 25350,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 31450.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 41,
-    "market_median_eur": 20950,
-    "price_pct_vs_median": 0.0,
+    "market_sample_size": 75,
+    "market_median_eur": 17800,
+    "price_pct_vs_median": 17.7,
     "is_underpriced": false
   },
   {
@@ -13806,7 +13643,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 41,
+    "market_sample_size": 37,
     "market_median_eur": 20950,
     "price_pct_vs_median": 0.0,
     "is_underpriced": false
@@ -13891,8 +13728,8 @@
     "risk_score": 0,
     "risk_flags": [],
     "market_sample_size": 68,
-    "market_median_eur": 21650,
-    "price_pct_vs_median": 0.7,
+    "market_median_eur": 20825,
+    "price_pct_vs_median": 4.7,
     "is_underpriced": false
   },
   {
@@ -13975,8 +13812,8 @@
       }
     ],
     "market_sample_size": 68,
-    "market_median_eur": 21650,
-    "price_pct_vs_median": 1.6,
+    "market_median_eur": 20825,
+    "price_pct_vs_median": 5.6,
     "is_underpriced": false
   },
   {
@@ -14052,50 +13889,9 @@
     "total_project_cost_eur": 32944.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 41,
+    "market_sample_size": 37,
     "market_median_eur": 20950,
     "price_pct_vs_median": 7.1,
-    "is_underpriced": false
-  },
-  {
-    "title": "Peugeot Boxer 35 2.2 140PK L2H2 BPM VRIJ!!",
-    "url": "https://www.regeljelease.nl/voertuig/peugeot-boxer-2024-diesel-778195",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2024,
-    "km": 4200,
-    "price_eur": 22850.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/771447d5-b206-4894-a576-87e8b7a1118a/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/9bb525c0-cb78-46f9-b1b2-2639648ce365/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/5ff446d6-4ac8-409b-94e4-975aeac3b29f/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/dc0f5231-fe51-4a95-b978-2c38c0b3f20d/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "psa_l1l2h1",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "boxer",
-    "score": 53,
-    "vat_scheme": "excl",
-    "price_gross_eur": 27648,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 33350.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 41,
-    "market_median_eur": 20950,
-    "price_pct_vs_median": 9.1,
     "is_underpriced": false
   },
   {
@@ -14180,9 +13976,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 80,
-    "market_median_eur": 17825,
-    "price_pct_vs_median": 29.0,
+    "market_sample_size": 75,
+    "market_median_eur": 17800,
+    "price_pct_vs_median": 29.2,
     "is_underpriced": false
   },
   {
@@ -14230,47 +14026,6 @@
     "is_underpriced": false
   },
   {
-    "title": "Opel Movano 3500 2.2 CDTI 140PK L2H2 BPM VRIJ!!",
-    "url": "https://www.regeljelease.nl/voertuig/opel-movano-2023-diesel-287911",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2023,
-    "km": 10,
-    "price_eur": 23850.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/ae3699d3-b3f9-402e-93b6-e22bcc73105a/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/34d4afd1-3609-44d9-bfa0-046db95ed5d6/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/242017d5-7d6c-422b-8b51-9d48a1b25733/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/8dd08642-e3d1-41f9-8fac-fc2424faf470/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "renault_master_grp",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "movano",
-    "score": 53,
-    "vat_scheme": "excl",
-    "price_gross_eur": 28858,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 34350.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 68,
-    "market_median_eur": 21650,
-    "price_pct_vs_median": 10.2,
-    "is_underpriced": false
-  },
-  {
     "title": "Renault Master 2.3 dCi 150pk L2H2 Euro6 Airco | Laadklep | 2",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2419193239-renault-master-2-3-dci-150pk-l2h2-euro6-airco-laadklep-2",
     "source": "marktplaats",
@@ -14311,7 +14066,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 73,
+    "market_sample_size": 69,
     "market_median_eur": 17995,
     "price_pct_vs_median": 38.4,
     "is_underpriced": false
@@ -14352,8 +14107,8 @@
     "risk_score": 0,
     "risk_flags": [],
     "market_sample_size": 68,
-    "market_median_eur": 21650,
-    "price_pct_vs_median": 15.2,
+    "market_median_eur": 20825,
+    "price_pct_vs_median": 19.8,
     "is_underpriced": false
   },
   {
@@ -14392,7 +14147,7 @@
     "total_project_cost_eur": 35450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 41,
+    "market_sample_size": 37,
     "market_median_eur": 20950,
     "price_pct_vs_median": 19.1,
     "is_underpriced": false
@@ -14432,7 +14187,7 @@
     "total_project_cost_eur": 37400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 41,
+    "market_sample_size": 37,
     "market_median_eur": 20950,
     "price_pct_vs_median": 28.4,
     "is_underpriced": false
@@ -14552,9 +14307,9 @@
     "total_project_cost_eur": 39300.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 79,
-    "market_median_eur": 26400,
-    "price_pct_vs_median": 9.1,
+    "market_sample_size": 78,
+    "market_median_eur": 26750,
+    "price_pct_vs_median": 7.7,
     "is_underpriced": false
   },
   {
@@ -14632,9 +14387,9 @@
     "total_project_cost_eur": 40000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 77,
-    "market_median_eur": 19900,
-    "price_pct_vs_median": 48.2,
+    "market_sample_size": 76,
+    "market_median_eur": 19450,
+    "price_pct_vs_median": 51.7,
     "is_underpriced": false
   },
   {
@@ -14672,7 +14427,7 @@
     "total_project_cost_eur": 40450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 41,
+    "market_sample_size": 37,
     "market_median_eur": 20950,
     "price_pct_vs_median": 43.0,
     "is_underpriced": false
@@ -14750,9 +14505,9 @@
     "total_project_cost_eur": 45450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 57,
-    "market_median_eur": 27500,
-    "price_pct_vs_median": 27.1,
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 30.2,
     "is_underpriced": false
   },
   {
@@ -14790,9 +14545,9 @@
     "total_project_cost_eur": 46400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 57,
-    "market_median_eur": 27500,
-    "price_pct_vs_median": 30.5,
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 33.7,
     "is_underpriced": false
   },
   {
@@ -14828,9 +14583,9 @@
     "total_project_cost_eur": 46499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 57,
-    "market_median_eur": 27500,
-    "price_pct_vs_median": 30.9,
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 34.1,
     "is_underpriced": false
   },
   {
@@ -14868,9 +14623,9 @@
     "total_project_cost_eur": 47245.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 57,
-    "market_median_eur": 27500,
-    "price_pct_vs_median": 33.6,
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 36.9,
     "is_underpriced": false
   },
   {
@@ -14948,9 +14703,9 @@
     "total_project_cost_eur": 47745.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 57,
-    "market_median_eur": 27500,
-    "price_pct_vs_median": 35.4,
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 38.7,
     "is_underpriced": false
   },
   {
@@ -14988,9 +14743,9 @@
     "total_project_cost_eur": 48450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 57,
-    "market_median_eur": 27500,
-    "price_pct_vs_median": 38.0,
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 41.3,
     "is_underpriced": false
   },
   {
@@ -15026,9 +14781,9 @@
     "total_project_cost_eur": 49300.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 26,
-    "market_median_eur": 35950,
-    "price_pct_vs_median": 7.9,
+    "market_sample_size": 27,
+    "market_median_eur": 35900,
+    "price_pct_vs_median": 8.1,
     "is_underpriced": false
   },
   {
@@ -15066,9 +14821,9 @@
     "total_project_cost_eur": 50235.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 57,
-    "market_median_eur": 27500,
-    "price_pct_vs_median": 44.5,
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 48.0,
     "is_underpriced": false
   },
   {
@@ -15106,9 +14861,9 @@
     "total_project_cost_eur": 52235.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 57,
-    "market_median_eur": 27500,
-    "price_pct_vs_median": 51.8,
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 55.4,
     "is_underpriced": false
   },
   {
@@ -15146,9 +14901,9 @@
     "total_project_cost_eur": 55360.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 26,
-    "market_median_eur": 35950,
-    "price_pct_vs_median": 24.8,
+    "market_sample_size": 27,
+    "market_median_eur": 35900,
+    "price_pct_vs_median": 25.0,
     "is_underpriced": false
   },
   {
@@ -15328,9 +15083,9 @@
     "total_project_cost_eur": 29350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 47,
-    "market_median_eur": 21500,
-    "price_pct_vs_median": -12.3,
+    "market_sample_size": 45,
+    "market_median_eur": 21900,
+    "price_pct_vs_median": -13.9,
     "is_underpriced": false
   },
   {
@@ -15368,9 +15123,9 @@
     "total_project_cost_eur": 29499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 47,
-    "market_median_eur": 21500,
-    "price_pct_vs_median": -11.6,
+    "market_sample_size": 45,
+    "market_median_eur": 21900,
+    "price_pct_vs_median": -13.2,
     "is_underpriced": false
   },
   {
@@ -15414,9 +15169,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 39,
-    "market_median_eur": 19900,
-    "price_pct_vs_median": -0.8,
+    "market_sample_size": 37,
+    "market_median_eur": 20000,
+    "price_pct_vs_median": -1.3,
     "is_underpriced": false
   },
   {
@@ -15463,7 +15218,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 46,
+    "market_sample_size": 47,
     "market_median_eur": 19900,
     "price_pct_vs_median": 0.0,
     "is_underpriced": false
@@ -15503,9 +15258,9 @@
     "total_project_cost_eur": 30400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 23,
-    "market_median_eur": 19900,
-    "price_pct_vs_median": 0.0,
+    "market_sample_size": 22,
+    "market_median_eur": 20400,
+    "price_pct_vs_median": -2.5,
     "is_underpriced": false
   },
   {
@@ -15549,9 +15304,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 47,
-    "market_median_eur": 21500,
-    "price_pct_vs_median": -7.4,
+    "market_sample_size": 45,
+    "market_median_eur": 21900,
+    "price_pct_vs_median": -9.1,
     "is_underpriced": false
   },
   {
@@ -15595,50 +15350,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 47,
-    "market_median_eur": 21500,
-    "price_pct_vs_median": -2.8,
-    "is_underpriced": false
-  },
-  {
-    "title": "Mercedes-Benz Sprinter 314 CDI L3/H2 EURO6 DUBBELE SCHUIFDEUR ZEER NETTE BUS LEASE v/a \u20ac144,- inruil mogelijk",
-    "url": "https://www.regeljelease.nl/voertuig/mercedes-benz-sprinter-2020-diesel-891984",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2020,
-    "km": 108852,
-    "price_eur": 21450.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/ce6b1774-f122-4d05-b2a2-9da723d54c50/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/4cf0f878-ad33-4475-8511-6acf720e2507/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/5cb80122-c1b9-43c5-a81e-3ee5e042dc7b/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/f985268f-7e68-45d5-98e6-8d30a330d318/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "mercedes_sprinter",
-    "variant": "L3H2",
-    "classification_confidence": "high",
-    "matched_token": "sprinter",
-    "score": 51,
-    "vat_scheme": "excl",
-    "price_gross_eur": 25954,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 31950.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": -13.3,
+    "market_sample_size": 45,
+    "market_median_eur": 21900,
+    "price_pct_vs_median": -4.6,
     "is_underpriced": false
   },
   {
@@ -15720,9 +15434,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 57,
-    "market_median_eur": 22750,
-    "price_pct_vs_median": -3.7,
+    "market_sample_size": 55,
+    "market_median_eur": 22850,
+    "price_pct_vs_median": -4.2,
     "is_underpriced": false
   },
   {
@@ -15760,9 +15474,9 @@
     "total_project_cost_eur": 32400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 58,
-    "market_median_eur": 22125,
-    "price_pct_vs_median": -1.0,
+    "market_sample_size": 55,
+    "market_median_eur": 22300,
+    "price_pct_vs_median": -1.8,
     "is_underpriced": false
   },
   {
@@ -15800,9 +15514,9 @@
     "total_project_cost_eur": 32800.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 39,
-    "market_median_eur": 19900,
-    "price_pct_vs_median": 12.1,
+    "market_sample_size": 37,
+    "market_median_eur": 20000,
+    "price_pct_vs_median": 11.5,
     "is_underpriced": false
   },
   {
@@ -15846,9 +15560,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 57,
-    "market_median_eur": 22750,
-    "price_pct_vs_median": 0.0,
+    "market_sample_size": 55,
+    "market_median_eur": 22850,
+    "price_pct_vs_median": -0.4,
     "is_underpriced": false
   },
   {
@@ -15890,9 +15604,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 57,
-    "market_median_eur": 22750,
-    "price_pct_vs_median": 0.0,
+    "market_sample_size": 55,
+    "market_median_eur": 22850,
+    "price_pct_vs_median": -0.4,
     "is_underpriced": false
   },
   {
@@ -15937,9 +15651,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 57,
-    "market_median_eur": 22750,
-    "price_pct_vs_median": 0.0,
+    "market_sample_size": 55,
+    "market_median_eur": 22850,
+    "price_pct_vs_median": -0.4,
     "is_underpriced": false
   },
   {
@@ -15984,8 +15698,8 @@
       }
     ],
     "market_sample_size": 60,
-    "market_median_eur": 24875,
-    "price_pct_vs_median": -8.1,
+    "market_median_eur": 24950,
+    "price_pct_vs_median": -8.4,
     "is_underpriced": false
   },
   {
@@ -16029,9 +15743,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 57,
-    "market_median_eur": 22750,
-    "price_pct_vs_median": 0.4,
+    "market_sample_size": 55,
+    "market_median_eur": 22850,
+    "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
   {
@@ -16075,56 +15789,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 58,
-    "market_median_eur": 22125,
-    "price_pct_vs_median": 3.5,
-    "is_underpriced": false
-  },
-  {
-    "title": "Volkswagen Crafter 2.0 TDI 141pk L3H3 (L2H2) Euro6 Airco | Massagestoel | Camera | Apple Carplay | Cruisecontrol",
-    "url": "https://www.regeljelease.nl/voertuig/volkswagen-crafter-2020-diesel-493425",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2020,
-    "km": 148608,
-    "price_eur": 22900.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/4f8c6874-aae4-4b72-bcf9-ee1852bc7964/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/b2d54627-f33f-405e-80d3-9f5e0860dea8/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/7e9e23f5-306c-4678-9e86-14de751a2ff7/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/0abaf822-72c2-4622-bd45-a3680b97e2c9/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "vw_crafter_tge",
-    "variant": "L3H3",
-    "classification_confidence": "high",
-    "matched_token": "crafter",
-    "score": 51,
-    "vat_scheme": "excl",
-    "price_gross_eur": 27709,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 33400.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (24,768/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 58,
-    "market_median_eur": 22125,
-    "price_pct_vs_median": 3.5,
+    "market_sample_size": 55,
+    "market_median_eur": 22300,
+    "price_pct_vs_median": 2.7,
     "is_underpriced": false
   },
   {
@@ -16168,50 +15835,50 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 58,
-    "market_median_eur": 22125,
-    "price_pct_vs_median": 6.2,
+    "market_sample_size": 55,
+    "market_median_eur": 22300,
+    "price_pct_vs_median": 5.4,
     "is_underpriced": false
   },
   {
-    "title": "MAN TGE 35 2.0 L3H3 | Navi | Carplay | Trekhaak | Imperiaal | Camera | Cruisec.",
-    "url": "https://www.regeljelease.nl/voertuig/man-tge-2019-diesel-918444",
+    "title": "Volkswagen Crafter 35|2.0 TDI|L3H3|Carplay|1e eigenaar|",
+    "url": "https://www.regeljelease.nl/voertuig/volkswagen-crafter-2018-diesel-927338",
     "source": "regeljelease",
     "country": "nl",
-    "year": 2019,
-    "km": 81673,
-    "price_eur": 23745.0,
+    "year": 2018,
+    "km": 137429,
+    "price_eur": 23950.0,
     "seats": null,
     "emission_standard": null,
     "body_type": null,
     "weight_kg": null,
     "remarks": "",
     "images": [
-      "https://cdn1.tt.regeljelease.nl/images/d6ed4813-52a8-4fe6-b7cc-9174f5be91ef/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/8635cad6-0930-4410-aa85-25140955bca8/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/e4aa4956-45c0-42f7-95d3-70b26f9c4347/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/1bac74d0-ac3d-4cad-8abb-9ecf95d65666/full.jpg?width=760"
+      "https://cdn1.tt.regeljelease.nl/images/29d71641-4fcf-4235-a37a-70ab70740d50/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/39da02e2-09c6-47ca-a788-4280b8a21d01/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/67288891-1951-48cc-adf0-dc029bcc57c7/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/fc61e2b1-a643-4a6a-a4bc-31af2cf8a0ab/full.jpg?width=760"
     ],
     "vat_hint": null,
     "model_group": "vw_crafter_tge",
     "variant": "L3H3",
     "classification_confidence": "high",
-    "matched_token": "tge",
+    "matched_token": "crafter",
     "score": 51,
     "vat_scheme": "excl",
-    "price_gross_eur": 28731,
+    "price_gross_eur": 28980,
     "vat_evidence": "source default: lease quotes ex-VAT",
     "vat_confidence": "medium",
     "est_conversion_cost_eur": 10500,
     "est_conversion_cost_low_eur": 7000,
     "est_conversion_cost_high_eur": 14000,
     "conversion_effort": "moderate",
-    "total_project_cost_eur": 34245.0,
+    "total_project_cost_eur": 34450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 47,
-    "market_median_eur": 21500,
-    "price_pct_vs_median": 10.4,
+    "market_sample_size": 37,
+    "market_median_eur": 20000,
+    "price_pct_vs_median": 19.8,
     "is_underpriced": false
   },
   {
@@ -16253,7 +15920,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 93,
+    "market_sample_size": 92,
     "market_median_eur": 24900,
     "price_pct_vs_median": -0.6,
     "is_underpriced": false
@@ -16300,8 +15967,8 @@
       }
     ],
     "market_sample_size": 60,
-    "market_median_eur": 24875,
-    "price_pct_vs_median": -0.1,
+    "market_median_eur": 24950,
+    "price_pct_vs_median": -0.4,
     "is_underpriced": false
   },
   {
@@ -16382,8 +16049,8 @@
       }
     ],
     "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": 0.6,
+    "market_median_eur": 23900,
+    "price_pct_vs_median": 4.2,
     "is_underpriced": false
   },
   {
@@ -16428,8 +16095,8 @@
       }
     ],
     "market_sample_size": 60,
-    "market_median_eur": 24875,
-    "price_pct_vs_median": 0.1,
+    "market_median_eur": 24950,
+    "price_pct_vs_median": -0.2,
     "is_underpriced": false
   },
   {
@@ -16467,9 +16134,9 @@
     "total_project_cost_eur": 35450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 57,
-    "market_median_eur": 22750,
-    "price_pct_vs_median": 9.7,
+    "market_sample_size": 55,
+    "market_median_eur": 22850,
+    "price_pct_vs_median": 9.2,
     "is_underpriced": false
   },
   {
@@ -16513,9 +16180,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 58,
-    "market_median_eur": 22125,
-    "price_pct_vs_median": 12.8,
+    "market_sample_size": 55,
+    "market_median_eur": 22300,
+    "price_pct_vs_median": 11.9,
     "is_underpriced": false
   },
   {
@@ -16560,8 +16227,8 @@
       }
     ],
     "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": 3.1,
+    "market_median_eur": 23900,
+    "price_pct_vs_median": 6.7,
     "is_underpriced": false
   },
   {
@@ -16646,8 +16313,8 @@
       }
     ],
     "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": 8.1,
+    "market_median_eur": 23900,
+    "price_pct_vs_median": 11.9,
     "is_underpriced": false
   },
   {
@@ -16691,9 +16358,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 79,
-    "market_median_eur": 26400,
-    "price_pct_vs_median": 1.3,
+    "market_sample_size": 78,
+    "market_median_eur": 26750,
+    "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
   {
@@ -16732,8 +16399,8 @@
     "risk_score": 0,
     "risk_flags": [],
     "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": 8.7,
+    "market_median_eur": 23900,
+    "price_pct_vs_median": 12.6,
     "is_underpriced": false
   },
   {
@@ -16777,8 +16444,8 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 54,
-    "market_median_eur": 26875,
+    "market_sample_size": 57,
+    "market_median_eur": 26850,
     "price_pct_vs_median": 2.0,
     "is_underpriced": false
   },
@@ -16817,9 +16484,9 @@
     "total_project_cost_eur": 38400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 39,
-    "market_median_eur": 19900,
-    "price_pct_vs_median": 40.2,
+    "market_sample_size": 37,
+    "market_median_eur": 20000,
+    "price_pct_vs_median": 39.5,
     "is_underpriced": false
   },
   {
@@ -16863,9 +16530,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 54,
-    "market_median_eur": 26875,
-    "price_pct_vs_median": 6.0,
+    "market_sample_size": 57,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 6.1,
     "is_underpriced": false
   },
   {
@@ -16910,8 +16577,8 @@
       }
     ],
     "market_sample_size": 60,
-    "market_median_eur": 24875,
-    "price_pct_vs_median": 15.0,
+    "market_median_eur": 24950,
+    "price_pct_vs_median": 14.6,
     "is_underpriced": false
   },
   {
@@ -16954,8 +16621,8 @@
       }
     ],
     "market_sample_size": 87,
-    "market_median_eur": 24745,
-    "price_pct_vs_median": 16.6,
+    "market_median_eur": 23900,
+    "price_pct_vs_median": 20.7,
     "is_underpriced": false
   },
   {
@@ -16999,9 +16666,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 46,
-    "market_median_eur": 29425,
-    "price_pct_vs_median": -1.8,
+    "market_sample_size": 47,
+    "market_median_eur": 29950,
+    "price_pct_vs_median": -3.5,
     "is_underpriced": false
   },
   {
@@ -17043,9 +16710,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 54,
-    "market_median_eur": 26875,
-    "price_pct_vs_median": 11.3,
+    "market_sample_size": 57,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 11.4,
     "is_underpriced": false
   },
   {
@@ -17087,9 +16754,97 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 54,
-    "market_median_eur": 26875,
-    "price_pct_vs_median": 11.3,
+    "market_sample_size": 57,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 11.4,
+    "is_underpriced": false
+  },
+  {
+    "title": "Mercedes-Benz Sprinter 315CDi L3H2 Maxi | 3500Kg Trekhaak",
+    "url": "https://www.regeljelease.nl/voertuig/mercedes-benz-sprinter-2024-diesel-835634",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2024,
+    "km": 59979,
+    "price_eur": 29900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://cdn1.tt.regeljelease.nl/images/b7673329-01ac-46a9-99a9-3158761052bf/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/89d6b50e-f555-4b46-b423-69aa22691f26/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/04afeb4a-2db6-42e9-9443-30cdcd175e66/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/444c445d-4b67-4ff9-9268-7c4740065ddf/full.jpg?width=760"
+    ],
+    "vat_hint": null,
+    "model_group": "mercedes_sprinter",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "sprinter",
+    "score": 51,
+    "vat_scheme": "excl",
+    "price_gross_eur": 36179,
+    "vat_evidence": "source default: lease quotes ex-VAT",
+    "vat_confidence": "medium",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 40400.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (29,989/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 38,
+    "market_median_eur": 29900,
+    "price_pct_vs_median": 0.0,
+    "is_underpriced": false
+  },
+  {
+    "title": "Mercedes-Benz Sprinter 317 CDI L3H2",
+    "url": "https://www.regeljelease.nl/voertuig/mercedes-benz-sprinter-2023-diesel-882648",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2023,
+    "km": 51619,
+    "price_eur": 29950.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://cdn1.tt.regeljelease.nl/images/351e85a8-e755-40cf-bacd-466610b99424/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/759c4dfb-f4b9-46f9-9b2f-3a44e454add0/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/e137b672-fd14-468c-bacb-e9c4939eeee2/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/c0ccadc7-7a05-413f-aa1c-688113149e79/full.jpg?width=760"
+    ],
+    "vat_hint": null,
+    "model_group": "mercedes_sprinter",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "sprinter",
+    "score": 51,
+    "vat_scheme": "excl",
+    "price_gross_eur": 36240,
+    "vat_evidence": "source default: lease quotes ex-VAT",
+    "vat_confidence": "medium",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 40450.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 57,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 11.5,
     "is_underpriced": false
   },
   {
@@ -17127,9 +16882,9 @@
     "total_project_cost_eur": 40500.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 58,
-    "market_median_eur": 22125,
-    "price_pct_vs_median": 35.6,
+    "market_sample_size": 55,
+    "market_median_eur": 22300,
+    "price_pct_vs_median": 34.5,
     "is_underpriced": false
   },
   {
@@ -17173,9 +16928,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 54,
-    "market_median_eur": 26875,
-    "price_pct_vs_median": 15.0,
+    "market_sample_size": 57,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 15.1,
     "is_underpriced": false
   },
   {
@@ -17217,9 +16972,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 54,
-    "market_median_eur": 26875,
-    "price_pct_vs_median": 18.7,
+    "market_sample_size": 57,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 18.8,
     "is_underpriced": false
   },
   {
@@ -17257,9 +17012,9 @@
     "total_project_cost_eur": 42500.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 47,
-    "market_median_eur": 21500,
-    "price_pct_vs_median": 48.8,
+    "market_sample_size": 45,
+    "market_median_eur": 21900,
+    "price_pct_vs_median": 46.1,
     "is_underpriced": false
   },
   {
@@ -17304,8 +17059,8 @@
       }
     ],
     "market_sample_size": 60,
-    "market_median_eur": 24875,
-    "price_pct_vs_median": 32.5,
+    "market_median_eur": 24950,
+    "price_pct_vs_median": 32.1,
     "is_underpriced": false
   },
   {
@@ -17341,9 +17096,9 @@
     "total_project_cost_eur": 44250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 40,
-    "market_median_eur": 33850,
-    "price_pct_vs_median": -0.3,
+    "market_sample_size": 41,
+    "market_median_eur": 33950,
+    "price_pct_vs_median": -0.6,
     "is_underpriced": false
   },
   {
@@ -17387,9 +17142,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 28,
-    "market_median_eur": 39198,
-    "price_pct_vs_median": -13.4,
+    "market_sample_size": 30,
+    "market_median_eur": 38422,
+    "price_pct_vs_median": -11.6,
     "is_underpriced": false
   },
   {
@@ -17433,9 +17188,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 54,
-    "market_median_eur": 26875,
-    "price_pct_vs_median": 29.9,
+    "market_sample_size": 57,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 30.0,
     "is_underpriced": false
   },
   {
@@ -17473,9 +17228,9 @@
     "total_project_cost_eur": 49495.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 20,
-    "market_median_eur": 41098,
-    "price_pct_vs_median": -5.1,
+    "market_sample_size": 21,
+    "market_median_eur": 40995,
+    "price_pct_vs_median": -4.9,
     "is_underpriced": false
   },
   {
@@ -17513,9 +17268,9 @@
     "total_project_cost_eur": 51495.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 20,
-    "market_median_eur": 41098,
-    "price_pct_vs_median": -0.3,
+    "market_sample_size": 21,
+    "market_median_eur": 40995,
+    "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
   {
@@ -17591,9 +17346,9 @@
     "total_project_cost_eur": 53450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 46,
-    "market_median_eur": 29425,
-    "price_pct_vs_median": 46.0,
+    "market_sample_size": 47,
+    "market_median_eur": 29950,
+    "price_pct_vs_median": 43.4,
     "is_underpriced": false
   },
   {
@@ -17631,9 +17386,9 @@
     "total_project_cost_eur": 54000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 46,
-    "market_median_eur": 29425,
-    "price_pct_vs_median": 47.8,
+    "market_sample_size": 47,
+    "market_median_eur": 29950,
+    "price_pct_vs_median": 45.2,
     "is_underpriced": false
   },
   {
@@ -17671,7 +17426,7 @@
     "total_project_cost_eur": 55445.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 37,
+    "market_sample_size": 38,
     "market_median_eur": 29900,
     "price_pct_vs_median": 50.3,
     "is_underpriced": false
@@ -17711,9 +17466,9 @@
     "total_project_cost_eur": 55450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 40,
-    "market_median_eur": 33850,
-    "price_pct_vs_median": 32.8,
+    "market_sample_size": 41,
+    "market_median_eur": 33950,
+    "price_pct_vs_median": 32.4,
     "is_underpriced": false
   },
   {
@@ -17789,9 +17544,9 @@
     "total_project_cost_eur": 27442.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 28,
-    "market_median_eur": 18925,
-    "price_pct_vs_median": -10.5,
+    "market_sample_size": 31,
+    "market_median_eur": 18445,
+    "price_pct_vs_median": -8.1,
     "is_underpriced": false
   },
   {
@@ -17835,9 +17590,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 31,
-    "market_median_eur": 19500,
-    "price_pct_vs_median": 2.1,
+    "market_sample_size": 34,
+    "market_median_eur": 18950,
+    "price_pct_vs_median": 5.0,
     "is_underpriced": false
   },
   {
@@ -17881,9 +17636,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 31,
-    "market_median_eur": 19500,
-    "price_pct_vs_median": 7.2,
+    "market_sample_size": 34,
+    "market_median_eur": 18950,
+    "price_pct_vs_median": 10.3,
     "is_underpriced": false
   },
   {
@@ -17965,9 +17720,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 31,
-    "market_median_eur": 19500,
-    "price_pct_vs_median": 22.6,
+    "market_sample_size": 34,
+    "market_median_eur": 18950,
+    "price_pct_vs_median": 26.1,
     "is_underpriced": false
   },
   {
@@ -18087,9 +17842,9 @@
     "total_project_cost_eur": 38250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 66,
-    "market_median_eur": 11920,
-    "price_pct_vs_median": 132.8,
+    "market_sample_size": 65,
+    "market_median_eur": 11890,
+    "price_pct_vs_median": 133.4,
     "is_underpriced": false
   },
   {
@@ -18127,7 +17882,7 @@
     "total_project_cost_eur": 39450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 19,
+    "market_sample_size": 21,
     "market_median_eur": 21000,
     "price_pct_vs_median": 37.9,
     "is_underpriced": false
@@ -18461,7 +18216,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 85,
+    "market_sample_size": 84,
     "market_median_eur": 11950,
     "price_pct_vs_median": -5.9,
     "is_underpriced": false
@@ -18499,7 +18254,7 @@
     "total_project_cost_eur": 21950.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 103,
+    "market_sample_size": 101,
     "market_median_eur": 12950,
     "price_pct_vs_median": -11.6,
     "is_underpriced": false
@@ -18676,7 +18431,7 @@
     "total_project_cost_eur": 22390.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 85,
+    "market_sample_size": 84,
     "market_median_eur": 11950,
     "price_pct_vs_median": -0.5,
     "is_underpriced": false
@@ -18716,7 +18471,7 @@
     "total_project_cost_eur": 22450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 103,
+    "market_sample_size": 101,
     "market_median_eur": 12950,
     "price_pct_vs_median": -7.7,
     "is_underpriced": false
@@ -18891,7 +18646,7 @@
     "total_project_cost_eur": 23700.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 103,
+    "market_sample_size": 101,
     "market_median_eur": 12950,
     "price_pct_vs_median": 1.9,
     "is_underpriced": false
@@ -18978,9 +18733,9 @@
     "total_project_cost_eur": 24000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 13900,
-    "price_pct_vs_median": -2.9,
+    "market_sample_size": 114,
+    "market_median_eur": 13922,
+    "price_pct_vs_median": -3.0,
     "is_underpriced": false
   },
   {
@@ -19018,7 +18773,7 @@
     "total_project_cost_eur": 24490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 103,
+    "market_sample_size": 101,
     "market_median_eur": 12950,
     "price_pct_vs_median": 8.0,
     "is_underpriced": false
@@ -19056,7 +18811,7 @@
     "total_project_cost_eur": 25000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 105,
+    "market_sample_size": 103,
     "market_median_eur": 14500,
     "price_pct_vs_median": 0.0,
     "is_underpriced": false
@@ -19103,53 +18858,6 @@
     "market_sample_size": 77,
     "market_median_eur": 12999,
     "price_pct_vs_median": 13.5,
-    "is_underpriced": false
-  },
-  {
-    "title": "Peugeot Boxer 2.2 BlueHDi L3/H2 GRIJS 165PK LED IMPERIAAL NAVI AIRCO CRUISE CONTROL PDC LEASE V/A \u20ac 98,- pm INRUIL MOG",
-    "url": "https://www.regeljelease.nl/voertuig/peugeot-boxer-2020-diesel-764214",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2020,
-    "km": 138322,
-    "price_eur": 14850.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/ecd04f88-b13f-4b32-950b-a800b04cb0d2/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/3a5fcce8-46e2-4318-88d8-70612d3f7ada/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/85aeabd2-38e8-4904-90a5-ce3ae9fc47ef/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/c350a7e5-f715-429f-9cfb-7b722322ec42/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "psa_l1l2h1",
-    "variant": "L3H2",
-    "classification_confidence": "high",
-    "matched_token": "boxer",
-    "score": 49,
-    "vat_scheme": "excl",
-    "price_gross_eur": 17968,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 25350.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (23,053/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 105,
-    "market_median_eur": 14500,
-    "price_pct_vs_median": 2.4,
     "is_underpriced": false
   },
   {
@@ -19229,9 +18937,9 @@
     "total_project_cost_eur": 25565.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 62,
-    "market_median_eur": 15725,
-    "price_pct_vs_median": -4.2,
+    "market_sample_size": 61,
+    "market_median_eur": 15995,
+    "price_pct_vs_median": -5.8,
     "is_underpriced": false
   },
   {
@@ -19267,9 +18975,9 @@
     "total_project_cost_eur": 26000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 84,
-    "market_median_eur": 15625,
-    "price_pct_vs_median": -0.8,
+    "market_sample_size": 82,
+    "market_median_eur": 15850,
+    "price_pct_vs_median": -2.2,
     "is_underpriced": false
   },
   {
@@ -19381,9 +19089,9 @@
     "total_project_cost_eur": 26250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 80,
-    "market_median_eur": 17825,
-    "price_pct_vs_median": -11.6,
+    "market_sample_size": 75,
+    "market_median_eur": 17800,
+    "price_pct_vs_median": -11.5,
     "is_underpriced": false
   },
   {
@@ -19509,7 +19217,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 73,
+    "market_sample_size": 69,
     "market_median_eur": 17995,
     "price_pct_vs_median": -11.1,
     "is_underpriced": false
@@ -19593,9 +19301,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 64,
-    "market_median_eur": 18875,
-    "price_pct_vs_median": -12.6,
+    "market_sample_size": 60,
+    "market_median_eur": 18400,
+    "price_pct_vs_median": -10.3,
     "is_underpriced": false
   },
   {
@@ -19633,7 +19341,7 @@
     "total_project_cost_eur": 27000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 73,
+    "market_sample_size": 69,
     "market_median_eur": 17995,
     "price_pct_vs_median": -8.3,
     "is_underpriced": false
@@ -19677,9 +19385,55 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 80,
-    "market_median_eur": 17825,
-    "price_pct_vs_median": -6.0,
+    "market_sample_size": 75,
+    "market_median_eur": 17800,
+    "price_pct_vs_median": -5.9,
+    "is_underpriced": false
+  },
+  {
+    "title": "Renault Master 135PK L3H2 LED Airco Cruise Parkeersensoren A",
+    "url": "https://www.2dehands.be/v/auto-s/bestelwagens-en-lichte-vracht/m2421554604-renault-master-135pk-l3h2-led-airco-cruise-parkeersensoren-a",
+    "source": "2dehands",
+    "country": "be",
+    "year": 2022,
+    "km": 104070,
+    "price_eur": 16900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": "bestelwagen",
+    "weight_kg": null,
+    "remarks": "Bezoek de bas world store in veghel, nederland, de grootste fysieke winkel van europa met meer dan 1000 bedrijfswagens (waarvan bijna 500 gloednieuw!) Op voorraad. Bij bas world bieden we ook aantrekk",
+    "images": [
+      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/c599c351-0d49-459e-9651-21808935629e?rule=ecg_mp_eps$_82.jpg",
+      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/26fcacec-af08-473e-9e01-e149252c893b?rule=ecg_mp_eps$_82.jpg",
+      "https://images.2dehands.com/api/v1/hz-twh-pro-listing/images/daf0a7e9-305b-49a1-8763-570d5f9e25b3?rule=ecg_mp_eps$_82.jpg"
+    ],
+    "vat_hint": null,
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 49,
+    "vat_scheme": "unknown",
+    "price_gross_eur": 16900,
+    "vat_evidence": "no VAT signal",
+    "vat_confidence": "low",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 27400.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (26,017/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 76,
+    "market_median_eur": 19450,
+    "price_pct_vs_median": -13.1,
     "is_underpriced": false
   },
   {
@@ -19721,7 +19475,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 105,
+    "market_sample_size": 103,
     "market_median_eur": 14500,
     "price_pct_vs_median": 16.9,
     "is_underpriced": false
@@ -19843,9 +19597,9 @@
     "total_project_cost_eur": 28300.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 84,
-    "market_median_eur": 15625,
-    "price_pct_vs_median": 13.9,
+    "market_sample_size": 82,
+    "market_median_eur": 15850,
+    "price_pct_vs_median": 12.3,
     "is_underpriced": false
   },
   {
@@ -19884,9 +19638,9 @@
     "total_project_cost_eur": 28350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 115,
-    "market_median_eur": 13900,
-    "price_pct_vs_median": 28.4,
+    "market_sample_size": 114,
+    "market_median_eur": 13922,
+    "price_pct_vs_median": 28.2,
     "is_underpriced": false
   },
   {
@@ -20136,9 +19890,56 @@
     "total_project_cost_eur": 28780.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 103,
+    "market_sample_size": 101,
     "market_median_eur": 12950,
     "price_pct_vs_median": 41.2,
+    "is_underpriced": false
+  },
+  {
+    "title": "Renault Master 135PK L3H2 LED Airco Cruise Parkeersensoren v+a Euro6 L3 Airco Cruise control",
+    "url": "https://www.regeljelease.nl/voertuig/renault-master-2023-diesel-909725",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2023,
+    "km": 91331,
+    "price_eur": 18350.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://cdn1.tt.regeljelease.nl/images/541046aa-2bfd-4054-9013-a5247f9296cc/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/995dbbe6-028e-4ec0-9365-cf10fd371375/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/c16b74ec-c6fd-461b-8744-e2a8b807a03d/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/7955f935-ddeb-4fdf-8ce9-d69f23ae6ebf/full.jpg?width=760"
+    ],
+    "vat_hint": null,
+    "model_group": "renault_master_grp",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 49,
+    "vat_scheme": "excl",
+    "price_gross_eur": 22204,
+    "vat_evidence": "source default: lease quotes ex-VAT",
+    "vat_confidence": "medium",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 28850.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (30,443/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 68,
+    "market_median_eur": 20825,
+    "price_pct_vs_median": -11.9,
     "is_underpriced": false
   },
   {
@@ -20265,8 +20066,8 @@
       }
     ],
     "market_sample_size": 68,
-    "market_median_eur": 21650,
-    "price_pct_vs_median": -14.1,
+    "market_median_eur": 20825,
+    "price_pct_vs_median": -10.7,
     "is_underpriced": false
   },
   {
@@ -20311,8 +20112,8 @@
       }
     ],
     "market_sample_size": 68,
-    "market_median_eur": 21650,
-    "price_pct_vs_median": -14.1,
+    "market_median_eur": 20825,
+    "price_pct_vs_median": -10.7,
     "is_underpriced": false
   },
   {
@@ -20357,8 +20158,8 @@
       }
     ],
     "market_sample_size": 68,
-    "market_median_eur": 21650,
-    "price_pct_vs_median": -13.4,
+    "market_median_eur": 20825,
+    "price_pct_vs_median": -10.0,
     "is_underpriced": false
   },
   {
@@ -20432,9 +20233,9 @@
     "total_project_cost_eur": 29340.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 48,
-    "market_median_eur": 14992,
-    "price_pct_vs_median": 25.7,
+    "market_sample_size": 49,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 21.5,
     "is_underpriced": false
   },
   {
@@ -20479,8 +20280,8 @@
       }
     ],
     "market_sample_size": 68,
-    "market_median_eur": 21650,
-    "price_pct_vs_median": -12.7,
+    "market_median_eur": 20825,
+    "price_pct_vs_median": -9.2,
     "is_underpriced": false
   },
   {
@@ -20524,9 +20325,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 77,
-    "market_median_eur": 19900,
-    "price_pct_vs_median": -4.8,
+    "market_sample_size": 76,
+    "market_median_eur": 19450,
+    "price_pct_vs_median": -2.6,
     "is_underpriced": false
   },
   {
@@ -20570,9 +20371,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 70,
-    "market_median_eur": 16098,
-    "price_pct_vs_median": 17.7,
+    "market_sample_size": 69,
+    "market_median_eur": 16450,
+    "price_pct_vs_median": 15.2,
     "is_underpriced": false
   },
   {
@@ -20771,9 +20572,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 64,
-    "market_median_eur": 18875,
-    "price_pct_vs_median": 5.7,
+    "market_sample_size": 60,
+    "market_median_eur": 18400,
+    "price_pct_vs_median": 8.4,
     "is_underpriced": false
   },
   {
@@ -20935,9 +20736,9 @@
     "total_project_cost_eur": 31250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 64,
-    "market_median_eur": 18875,
-    "price_pct_vs_median": 9.9,
+    "market_sample_size": 60,
+    "market_median_eur": 18400,
+    "price_pct_vs_median": 12.8,
     "is_underpriced": false
   },
   {
@@ -21055,47 +20856,6 @@
     "is_underpriced": false
   },
   {
-    "title": "Peugeot Boxer 335 2.2 BlueHDi 140 L3H2 Premium",
-    "url": "https://www.regeljelease.nl/voertuig/peugeot-boxer-2022-diesel-820122",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2022,
-    "km": 37840,
-    "price_eur": 21950.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/bb02a443-4ddc-4da3-831b-c1e15e1261ab/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/50153f81-99ee-4805-a0df-d5e614845a90/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/3f4d8058-2021-49aa-a80b-f5f8680f340d/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/d4815210-7e51-47f7-83fb-a0ad28f66162/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "psa_l1l2h1",
-    "variant": "L3H2",
-    "classification_confidence": "high",
-    "matched_token": "boxer",
-    "score": 49,
-    "vat_scheme": "excl",
-    "price_gross_eur": 26560,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 32450.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 80,
-    "market_median_eur": 17825,
-    "price_pct_vs_median": 23.1,
-    "is_underpriced": false
-  },
-  {
     "title": "Opel Movano 2.2 DOKA Pritsche+Plane L3H2",
     "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-2-2-doka-pritsche-plane-l3h2/3384763547-216-9335",
     "source": "kleinanzeigen_de",
@@ -21170,9 +20930,9 @@
     "total_project_cost_eur": 32950.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 84,
-    "market_median_eur": 15625,
-    "price_pct_vs_median": 43.7,
+    "market_sample_size": 82,
+    "market_median_eur": 15850,
+    "price_pct_vs_median": 41.6,
     "is_underpriced": false
   },
   {
@@ -21254,9 +21014,9 @@
     "total_project_cost_eur": 33950.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 77,
-    "market_median_eur": 19900,
-    "price_pct_vs_median": 17.8,
+    "market_sample_size": 76,
+    "market_median_eur": 19450,
+    "price_pct_vs_median": 20.6,
     "is_underpriced": false
   },
   {
@@ -21345,8 +21105,8 @@
       }
     ],
     "market_sample_size": 68,
-    "market_median_eur": 21650,
-    "price_pct_vs_median": 10.2,
+    "market_median_eur": 20825,
+    "price_pct_vs_median": 14.5,
     "is_underpriced": false
   },
   {
@@ -21382,9 +21142,9 @@
     "total_project_cost_eur": 34495.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 64,
-    "market_median_eur": 18875,
-    "price_pct_vs_median": 27.1,
+    "market_sample_size": 60,
+    "market_median_eur": 18400,
+    "price_pct_vs_median": 30.4,
     "is_underpriced": false
   },
   {
@@ -21426,9 +21186,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 77,
-    "market_median_eur": 19900,
-    "price_pct_vs_median": 24.6,
+    "market_sample_size": 76,
+    "market_median_eur": 19450,
+    "price_pct_vs_median": 27.5,
     "is_underpriced": false
   },
   {
@@ -21466,9 +21226,9 @@
     "total_project_cost_eur": 35450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 64,
-    "market_median_eur": 18875,
-    "price_pct_vs_median": 32.2,
+    "market_sample_size": 60,
+    "market_median_eur": 18400,
+    "price_pct_vs_median": 35.6,
     "is_underpriced": false
   },
   {
@@ -21506,9 +21266,50 @@
     "total_project_cost_eur": 35450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 64,
-    "market_median_eur": 18875,
-    "price_pct_vs_median": 32.2,
+    "market_sample_size": 60,
+    "market_median_eur": 18400,
+    "price_pct_vs_median": 35.6,
+    "is_underpriced": false
+  },
+  {
+    "title": "Fiat Ducato 35 2.2 MultiJet L3H2",
+    "url": "https://www.regeljelease.nl/voertuig/fiat-ducato-2023-diesel-823809",
+    "source": "regeljelease",
+    "country": "nl",
+    "year": 2023,
+    "km": 525,
+    "price_eur": 25500.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://cdn1.tt.regeljelease.nl/images/3e2132c4-2bdc-4057-ae16-b69967345c0e/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/7da3316d-f27d-4108-92e8-52e2b7c5f288/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/8cea0214-31ff-420c-a7c2-09bb63f04f82/full.jpg?width=760",
+      "https://cdn1.tt.regeljelease.nl/images/6fc8c06c-3003-4f20-8723-e8d8d22a5acf/full.jpg?width=760"
+    ],
+    "vat_hint": null,
+    "model_group": "psa_l1l2h1",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "ducato",
+    "score": 49,
+    "vat_scheme": "excl",
+    "price_gross_eur": 30855,
+    "vat_evidence": "source default: lease quotes ex-VAT",
+    "vat_confidence": "medium",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 36000.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 60,
+    "market_median_eur": 18400,
+    "price_pct_vs_median": 38.6,
     "is_underpriced": false
   },
   {
@@ -21547,9 +21348,9 @@
     "total_project_cost_eur": 36750.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 84,
-    "market_median_eur": 15625,
-    "price_pct_vs_median": 68.0,
+    "market_sample_size": 82,
+    "market_median_eur": 15850,
+    "price_pct_vs_median": 65.6,
     "is_underpriced": false
   },
   {
@@ -21587,9 +21388,9 @@
     "total_project_cost_eur": 37990.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 32,
-    "market_median_eur": 21697,
-    "price_pct_vs_median": 26.7,
+    "market_sample_size": 29,
+    "market_median_eur": 22444,
+    "price_pct_vs_median": 22.5,
     "is_underpriced": false
   },
   {
@@ -21626,49 +21427,8 @@
     "risk_score": 0,
     "risk_flags": [],
     "market_sample_size": 68,
-    "market_median_eur": 21650,
-    "price_pct_vs_median": 27.0,
-    "is_underpriced": false
-  },
-  {
-    "title": "Peugeot Boxer 2.2 BlueHDi 165 L3H2 3.5t",
-    "url": "https://www.regeljelease.nl/voertuig/peugeot-boxer-2023-diesel-899538",
-    "source": "regeljelease",
-    "country": "nl",
-    "year": 2023,
-    "km": 12994,
-    "price_eur": 27950.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://cdn1.tt.regeljelease.nl/images/a913babd-b7d0-4c7d-bdfa-24434261aa9c/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/27f4ef6f-8605-4a2d-84bc-44890736f914/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/46807dad-0ac0-4230-8c62-469d842259c0/full.jpg?width=760",
-      "https://cdn1.tt.regeljelease.nl/images/06509ef8-3346-4a5c-bc93-8aceb0ea1fae/full.jpg?width=760"
-    ],
-    "vat_hint": null,
-    "model_group": "psa_l1l2h1",
-    "variant": "L3H2",
-    "classification_confidence": "high",
-    "matched_token": "boxer",
-    "score": 49,
-    "vat_scheme": "excl",
-    "price_gross_eur": 33820,
-    "vat_evidence": "source default: lease quotes ex-VAT",
-    "vat_confidence": "medium",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 38450.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 64,
-    "market_median_eur": 18875,
-    "price_pct_vs_median": 48.1,
+    "market_median_eur": 20825,
+    "price_pct_vs_median": 32.1,
     "is_underpriced": false
   },
   {
@@ -21750,9 +21510,9 @@
     "total_project_cost_eur": 38598.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 19,
-    "market_median_eur": 22850,
-    "price_pct_vs_median": 23.0,
+    "market_sample_size": 16,
+    "market_median_eur": 25925,
+    "price_pct_vs_median": 8.4,
     "is_underpriced": false
   },
   {
@@ -21796,9 +21556,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 57,
-    "market_median_eur": 27500,
-    "price_pct_vs_median": 4.7,
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 7.3,
     "is_underpriced": false
   },
   {
@@ -21836,9 +21596,9 @@
     "total_project_cost_eur": 39300.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 57,
-    "market_median_eur": 27500,
-    "price_pct_vs_median": 4.7,
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 7.3,
     "is_underpriced": false
   },
   {
@@ -21876,9 +21636,9 @@
     "total_project_cost_eur": 40200.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 57,
-    "market_median_eur": 27500,
-    "price_pct_vs_median": 8.0,
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 10.6,
     "is_underpriced": false
   },
   {
@@ -21916,9 +21676,9 @@
     "total_project_cost_eur": 40400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 57,
-    "market_median_eur": 27500,
-    "price_pct_vs_median": 8.7,
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 11.4,
     "is_underpriced": false
   },
   {
@@ -21954,9 +21714,9 @@
     "total_project_cost_eur": 41400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 57,
-    "market_median_eur": 27500,
-    "price_pct_vs_median": 12.4,
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 15.1,
     "is_underpriced": false
   },
   {
@@ -21994,9 +21754,9 @@
     "total_project_cost_eur": 41450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 57,
-    "market_median_eur": 27500,
-    "price_pct_vs_median": 12.5,
+    "market_sample_size": 59,
+    "market_median_eur": 26850,
+    "price_pct_vs_median": 15.3,
     "is_underpriced": false
   },
   {
@@ -22116,9 +21876,9 @@
     "total_project_cost_eur": 52300.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 26,
-    "market_median_eur": 35950,
-    "price_pct_vs_median": 16.3,
+    "market_sample_size": 27,
+    "market_median_eur": 35900,
+    "price_pct_vs_median": 16.4,
     "is_underpriced": false
   },
   {
@@ -22156,9 +21916,9 @@
     "total_project_cost_eur": 53450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 26,
-    "market_median_eur": 35950,
-    "price_pct_vs_median": 19.5,
+    "market_sample_size": 27,
+    "market_median_eur": 35900,
+    "price_pct_vs_median": 19.6,
     "is_underpriced": false
   },
   {
