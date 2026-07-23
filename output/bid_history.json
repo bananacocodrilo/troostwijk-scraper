@@ -29101,6 +29101,12 @@
           "current_bid_eur": 3000.0,
           "bids_count": 41,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-23T19:37:09.657088+00:00",
+          "current_bid_eur": 3250.0,
+          "bids_count": 42,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -29574,6 +29580,12 @@
           "ts": "2026-07-22T19:23:40.023343+00:00",
           "current_bid_eur": 15000.0,
           "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-23T19:37:09.657088+00:00",
+          "current_bid_eur": 15500.0,
+          "bids_count": 2,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -30484,6 +30496,12 @@
           "current_bid_eur": 800.0,
           "bids_count": 33,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-23T19:37:09.657088+00:00",
+          "current_bid_eur": 900.0,
+          "bids_count": 35,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -31177,6 +31195,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-23T19:37:09.657088+00:00",
+          "current_bid_eur": 4500.0,
+          "bids_count": 2,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -31293,6 +31317,12 @@
           "ts": "2026-07-23T08:44:35.958284+00:00",
           "current_bid_eur": 2800.0,
           "bids_count": 4,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-23T19:37:09.657088+00:00",
+          "current_bid_eur": 3250.0,
+          "bids_count": 7,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -32053,6 +32083,12 @@
           "current_bid_eur": 1300.0,
           "bids_count": 4,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-23T19:37:09.657088+00:00",
+          "current_bid_eur": 1800.0,
+          "bids_count": 9,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -32260,6 +32296,12 @@
           "current_bid_eur": 1200.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-23T19:37:09.657088+00:00",
+          "current_bid_eur": 1500.0,
+          "bids_count": 7,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -32307,6 +32349,12 @@
           "ts": "2026-07-23T02:41:22.575767+00:00",
           "current_bid_eur": 3500.0,
           "bids_count": 4,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-23T19:37:09.657088+00:00",
+          "current_bid_eur": 3700.0,
+          "bids_count": 6,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -32406,6 +32454,12 @@
           "ts": "2026-07-21T08:39:17.647281+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-23T19:37:09.657088+00:00",
+          "current_bid_eur": 2600.0,
+          "bids_count": 2,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -33028,6 +33082,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-23T19:37:09.657088+00:00",
+          "current_bid_eur": 2500.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -33178,6 +33238,96 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "3c8c903c-5014-4347-9103-849b8c81b31e": {
+      "url": "https://www.troostwijkauctions.com/en/l/control-indicator-jumper-plug-%25282x%2529-A1-40521-3078",
+      "model_token": "jumper",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-07-23T19:37:09.657088+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "6adab972-aac2-4b1a-8679-f3eb11f5c60a": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-2018-sprinter-214-2-2-bt-366-hd-sl-680-k-A1-48767-54",
+      "model_token": "sprinter",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-07-23T19:37:09.657088+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "80c4ad0e-b812-4fc6-9754-d795b44596af": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-2-0-tdi-l2h1-dc-comfortline-2011-%257C-3-vrh-10-A1-41624-43",
+      "model_token": "transporter",
+      "year": 2011,
+      "snapshots": [
+        {
+          "ts": "2026-07-23T19:37:09.657088+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "b114e212-905e-48cf-8db4-28fa2b8f039f": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-tourer-116-bluetec-pro-extra-long-automatic-transmission-kb-591-f-A1-40733-513",
+      "model_token": "vito",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-07-23T19:37:09.657088+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "5a4e4df9-1c1e-4c5b-bfb2-1e0e0c89f350": {
+      "url": "https://www.vavato.com/en/l/2014-mercedes-benz-sprinter-ambulance-A1-48401-17",
+      "model_token": "sprinter",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-07-23T19:37:09.657088+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "daf25064-8a8d-409d-bd2d-3a39b45d2034": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-dump-body-light-truck-A1-48445-11",
+      "model_token": "transit",
+      "year": 2003,
+      "snapshots": [
+        {
+          "ts": "2026-07-23T19:37:09.657088+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
