@@ -28702,6 +28702,12 @@
           "current_bid_eur": 60.0,
           "bids_count": 2,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-24T14:01:21.716295+00:00",
+          "current_bid_eur": 100.0,
+          "bids_count": 6,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -30301,6 +30307,12 @@
           "current_bid_eur": 3900.0,
           "bids_count": 15,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-24T14:01:21.716295+00:00",
+          "current_bid_eur": 5200.0,
+          "bids_count": 22,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -31648,6 +31660,12 @@
           "current_bid_eur": 2500.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-24T14:01:21.716295+00:00",
+          "current_bid_eur": 2700.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -32067,6 +32085,12 @@
           "ts": "2026-07-23T13:47:31.692538+00:00",
           "current_bid_eur": 120.0,
           "bids_count": 3,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-24T14:01:21.716295+00:00",
+          "current_bid_eur": 140.0,
+          "bids_count": 5,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -32595,6 +32619,12 @@
           "ts": "2026-07-24T02:25:27.071535+00:00",
           "current_bid_eur": 2600.0,
           "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-24T14:01:21.716295+00:00",
+          "current_bid_eur": 2700.0,
+          "bids_count": 3,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -33820,6 +33850,66 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "9a5eb155-ada6-49d2-a033-5acdbccbb9af": {
+      "url": "https://www.vavato.com/en/l/2014-mercedes-benz-sprinter-commercial-vehicle-tow-truck-A3-46170-17258",
+      "model_token": "sprinter",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-07-24T14:01:21.716295+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "249a9194-d5d7-4292-bf5d-715def878225": {
+      "url": "https://www.troostwijkauctions.com/en/l/control-indicator-jumper-plug-A1-40521-3077",
+      "model_token": "jumper",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-07-24T14:01:21.716295+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "28e9d26b-0179-41bf-a7fd-cadeb51a3bf3": {
+      "url": "https://www.troostwijkauctions.com/en/l/toyota-proace-worker-2-0-d-4d-cool-comfort-long-dc-%257C-v-582-pd-i-A1-44172-5101",
+      "model_token": "pro ace",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-07-24T14:01:21.716295+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "5547d189-42b0-44a2-a2b5-d3893c0901fe": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-boxer-van-A7-48957-1",
+      "model_token": "boxer",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-07-24T14:01:21.716295+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
