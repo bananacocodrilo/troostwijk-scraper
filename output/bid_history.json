@@ -30628,6 +30628,12 @@
           "current_bid_eur": 3900.0,
           "bids_count": 13,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-30T08:30:12.765478+00:00",
+          "current_bid_eur": 4000.0,
+          "bids_count": 14,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -31711,6 +31717,12 @@
           "current_bid_eur": 3600.0,
           "bids_count": 60,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-30T08:30:12.765478+00:00",
+          "current_bid_eur": 3900.0,
+          "bids_count": 63,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -31926,6 +31938,12 @@
           "ts": "2026-07-29T19:31:27.919250+00:00",
           "current_bid_eur": 5000.0,
           "bids_count": 4,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-30T08:30:12.765478+00:00",
+          "current_bid_eur": 6000.0,
+          "bids_count": 6,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -32289,6 +32307,12 @@
           "ts": "2026-07-29T14:24:21.751354+00:00",
           "current_bid_eur": 1550.0,
           "bids_count": 12,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-30T08:30:12.765478+00:00",
+          "current_bid_eur": 1600.0,
+          "bids_count": 13,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -34699,6 +34723,12 @@
           "current_bid_eur": 2000.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-30T08:30:12.765478+00:00",
+          "current_bid_eur": 2100.0,
+          "bids_count": 2,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -35058,6 +35088,12 @@
           "ts": "2026-07-29T08:49:20.477721+00:00",
           "current_bid_eur": 3800.0,
           "bids_count": 8,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-30T08:30:12.765478+00:00",
+          "current_bid_eur": 5200.0,
+          "bids_count": 17,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -35794,6 +35830,12 @@
           "current_bid_eur": 56.0,
           "bids_count": 12,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-30T08:30:12.765478+00:00",
+          "current_bid_eur": 1250.0,
+          "bids_count": 25,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -36190,6 +36232,12 @@
           "current_bid_eur": 2500.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-30T08:30:12.765478+00:00",
+          "current_bid_eur": 2600.0,
+          "bids_count": 2,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -36205,6 +36253,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-07-30T08:30:12.765478+00:00",
+          "current_bid_eur": 2600.0,
+          "bids_count": 2,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -36273,6 +36327,12 @@
           "ts": "2026-07-30T02:06:28.952266+00:00",
           "current_bid_eur": 5000.0,
           "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-07-30T08:30:12.765478+00:00",
+          "current_bid_eur": 5500.0,
+          "bids_count": 2,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -36622,6 +36682,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-07-30T08:30:12.765478+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -36775,6 +36841,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-07-30T08:30:12.765478+00:00",
+          "current_bid_eur": 2500.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -36892,6 +36964,36 @@
       "snapshots": [
         {
           "ts": "2026-07-30T02:06:28.952266+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "177fd6c0-7ffa-40b8-bd03-144ac0d43ab8": {
+      "url": "https://www.troostwijkauctions.com/en/l/citroen-jumper-30-2-2-hdi-l2h1-ec-vz-814-f-A1-40734-460",
+      "model_token": "jumper",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-07-30T08:30:12.765478+00:00",
+          "current_bid_eur": 120.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "9b282719-e3b8-46fb-9398-f4a3413448c0": {
+      "url": "https://www.vavato.com/en/l/mercedes-sprinter-van-A3-46175-35615",
+      "model_token": "sprinter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-07-30T08:30:12.765478+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
