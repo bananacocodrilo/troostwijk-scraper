@@ -35035,6 +35035,12 @@
           "current_bid_eur": 3200.0,
           "bids_count": 8,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-01T08:23:24.395391+00:00",
+          "current_bid_eur": 3300.0,
+          "bids_count": 9,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -35680,6 +35686,12 @@
           "current_bid_eur": 5200.0,
           "bids_count": 2,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-01T08:23:24.395391+00:00",
+          "current_bid_eur": 5400.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -35730,6 +35742,12 @@
           "ts": "2026-07-31T19:56:26.619481+00:00",
           "current_bid_eur": 381.0,
           "bids_count": 38,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-01T08:23:24.395391+00:00",
+          "current_bid_eur": 3000.0,
+          "bids_count": 43,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -36595,6 +36613,12 @@
           "current_bid_eur": 2700.0,
           "bids_count": 3,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-01T08:23:24.395391+00:00",
+          "current_bid_eur": 2900.0,
+          "bids_count": 5,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -36660,6 +36684,12 @@
           "ts": "2026-07-31T09:02:16.945863+00:00",
           "current_bid_eur": 5500.0,
           "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-01T08:23:24.395391+00:00",
+          "current_bid_eur": 6000.0,
+          "bids_count": 3,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -37272,6 +37302,12 @@
           "ts": "2026-07-30T19:51:20.070743+00:00",
           "current_bid_eur": 2700.0,
           "bids_count": 3,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-01T08:23:24.395391+00:00",
+          "current_bid_eur": 3525.0,
+          "bids_count": 5,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -38149,6 +38185,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-01T08:23:24.395391+00:00",
+          "current_bid_eur": 500.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -38341,6 +38383,21 @@
       "snapshots": [
         {
           "ts": "2026-08-01T02:22:10.630386+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "29c22db3-be70-4a06-afa7-a6c4873113db": {
+      "url": "https://www.troostwijkauctions.com/en/l/man-tge-30-2-0-standard-normal-104hp-2018-vrf-93-k-A1-44400-18",
+      "model_token": "tge",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-08-01T08:23:24.395391+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
