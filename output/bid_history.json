@@ -31975,6 +31975,12 @@
           "current_bid_eur": 7000.0,
           "bids_count": 8,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-03T14:41:08.451398+00:00",
+          "current_bid_eur": 9000.0,
+          "bids_count": 12,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -32505,6 +32511,12 @@
           "ts": "2026-07-30T14:04:12.248474+00:00",
           "current_bid_eur": 4250.0,
           "bids_count": 11,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-03T14:41:08.451398+00:00",
+          "current_bid_eur": 4500.0,
+          "bids_count": 12,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -33766,6 +33778,12 @@
           "current_bid_eur": 5500.0,
           "bids_count": 15,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-03T14:41:08.451398+00:00",
+          "current_bid_eur": 7500.0,
+          "bids_count": 20,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -34582,6 +34600,12 @@
           "current_bid_eur": 5500.0,
           "bids_count": 13,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-03T14:41:08.451398+00:00",
+          "current_bid_eur": 6000.0,
+          "bids_count": 14,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -34827,6 +34851,12 @@
           "ts": "2026-08-03T02:36:26.890123+00:00",
           "current_bid_eur": 2500.0,
           "bids_count": 16,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-03T14:41:08.451398+00:00",
+          "current_bid_eur": 3200.0,
+          "bids_count": 23,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -35112,6 +35142,12 @@
           "ts": "2026-08-03T09:47:25.568954+00:00",
           "current_bid_eur": 3800.0,
           "bids_count": 14,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-03T14:41:08.451398+00:00",
+          "current_bid_eur": 3900.0,
+          "bids_count": 15,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -36217,6 +36253,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-03T14:41:08.451398+00:00",
+          "current_bid_eur": 6200.0,
+          "bids_count": 8,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -36231,6 +36273,12 @@
           "ts": "2026-07-25T08:21:26.760812+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-03T14:41:08.451398+00:00",
+          "current_bid_eur": 2900.0,
+          "bids_count": 3,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -37732,6 +37780,12 @@
           "current_bid_eur": 5200.0,
           "bids_count": 16,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-03T14:41:08.451398+00:00",
+          "current_bid_eur": 6500.0,
+          "bids_count": 18,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -38956,6 +39010,36 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2df56e5b-a8ea-4ea5-98f1-4d80e0ae9f75": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-210-2-2-cdi-325-dc-vj-886-z-A1-40734-473",
+      "model_token": "sprinter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-03T14:41:08.451398+00:00",
+          "current_bid_eur": 3100.0,
+          "bids_count": 5,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "9e5c4e9e-0b0b-4c27-94cc-6045d51d97c7": {
+      "url": "https://www.vavato.com/en/l/fiat-ducato-commercial-vehicle-A3-46175-20490",
+      "model_token": "ducato",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-08-03T14:41:08.451398+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
