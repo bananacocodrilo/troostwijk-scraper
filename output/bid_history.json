@@ -35107,6 +35107,12 @@
           "current_bid_eur": 3700.0,
           "bids_count": 13,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-03T09:47:25.568954+00:00",
+          "current_bid_eur": 3800.0,
+          "bids_count": 14,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -35473,6 +35479,12 @@
           "current_bid_eur": 3600.0,
           "bids_count": 10,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-03T09:47:25.568954+00:00",
+          "current_bid_eur": 3800.0,
+          "bids_count": 12,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -35608,6 +35620,12 @@
           "current_bid_eur": 2300.0,
           "bids_count": 4,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-03T09:47:25.568954+00:00",
+          "current_bid_eur": 2400.0,
+          "bids_count": 5,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -35706,6 +35724,12 @@
           "ts": "2026-08-03T02:36:26.890123+00:00",
           "current_bid_eur": 6000.0,
           "bids_count": 56,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-03T09:47:25.568954+00:00",
+          "current_bid_eur": 6400.0,
+          "bids_count": 58,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -36298,6 +36322,12 @@
           "current_bid_eur": 1650.0,
           "bids_count": 33,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-03T09:47:25.568954+00:00",
+          "current_bid_eur": 3500.0,
+          "bids_count": 55,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -36849,6 +36879,12 @@
           "ts": "2026-08-01T19:22:06.504708+00:00",
           "current_bid_eur": 4000.0,
           "bids_count": 7,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-03T09:47:25.568954+00:00",
+          "current_bid_eur": 4500.0,
+          "bids_count": 9,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -37690,6 +37726,12 @@
           "current_bid_eur": 3942.0,
           "bids_count": 13,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-03T09:47:25.568954+00:00",
+          "current_bid_eur": 5200.0,
+          "bids_count": 16,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -38410,6 +38452,12 @@
           "current_bid_eur": 1000.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-03T09:47:25.568954+00:00",
+          "current_bid_eur": 2500.0,
+          "bids_count": 26,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -38875,6 +38923,36 @@
       "snapshots": [
         {
           "ts": "2026-08-03T02:36:26.890123+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "a930e740-6ec8-48e6-bb30-12acf21ae60d": {
+      "url": "https://www.troostwijkauctions.com/en/l/hymer-fiat-ducato-caravan-A1-49122-63",
+      "model_token": "ducato",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-03T09:47:25.568954+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "5d20cfda-787d-4d96-899d-afea3df356da": {
+      "url": "https://www.troostwijkauctions.com/en/l/wurth-post-assembly-inserts-for-vw-transporter-A7-49056-401",
+      "model_token": "transporter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-03T09:47:25.568954+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
