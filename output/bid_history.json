@@ -34963,6 +34963,12 @@
           "current_bid_eur": 4200.0,
           "bids_count": 13,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-04T14:18:13.246944+00:00",
+          "current_bid_eur": 5000.0,
+          "bids_count": 17,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -35028,6 +35034,12 @@
           "ts": "2026-08-04T09:04:07.987973+00:00",
           "current_bid_eur": 3000.0,
           "bids_count": 11,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-04T14:18:13.246944+00:00",
+          "current_bid_eur": 3450.0,
+          "bids_count": 15,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -36421,6 +36433,12 @@
           "current_bid_eur": 1650.0,
           "bids_count": 31,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-04T14:18:13.246944+00:00",
+          "current_bid_eur": 1750.0,
+          "bids_count": 33,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -37317,6 +37335,12 @@
           "ts": "2026-08-02T19:17:11.387411+00:00",
           "current_bid_eur": 5000.0,
           "bids_count": 28,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-04T14:18:13.246944+00:00",
+          "current_bid_eur": 5600.0,
+          "bids_count": 31,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -39409,6 +39433,156 @@
       "snapshots": [
         {
           "ts": "2026-08-04T09:04:07.987973+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2f4edb47-4c13-47e1-8375-f3dca6b0958c": {
+      "url": "https://www.vavato.com/en/l/peugeot-expert-light-truck-3-seats-commercial-vehicle-A3-46174-7067",
+      "model_token": "expert",
+      "year": 2022,
+      "snapshots": [
+        {
+          "ts": "2026-08-04T14:18:13.246944+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "ee33d05f-37b7-4363-9ba4-af4af0dc6bc4": {
+      "url": "https://www.troostwijkauctions.com/en/l/2013-ford-transit-flatbed-single-cab-2-2-tdci-92-kw-%2528125-hp%2529-first-reg-10-2013-171-593-km-A1-48286-6054",
+      "model_token": "transit",
+      "year": 2013,
+      "snapshots": [
+        {
+          "ts": "2026-08-04T14:18:13.246944+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "e72cb08d-03fd-4922-b01f-1e47829ea2ec": {
+      "url": "https://www.troostwijkauctions.com/en/l/2012-ford-transit-commercial-vehicle-A3-46175-11117",
+      "model_token": "transit",
+      "year": 2012,
+      "snapshots": [
+        {
+          "ts": "2026-08-04T14:18:13.246944+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "12ebdd99-82eb-4e2f-a4d2-9d4f5babf47e": {
+      "url": "https://www.troostwijkauctions.com/en/l/2024-toyota-proace-passenger-car-A3-46174-8117",
+      "model_token": "pro ace",
+      "year": 2024,
+      "snapshots": [
+        {
+          "ts": "2026-08-04T14:18:13.246944+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "eebf56d5-496a-47ce-b79c-46a9ac663819": {
+      "url": "https://www.vavato.com/en/l/2014-mercedes-benz-sprinter-ambulance-A1-48401-18",
+      "model_token": "sprinter",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-08-04T14:18:13.246944+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "ccc77fde-cb12-4386-9873-0be7897ba03c": {
+      "url": "https://www.vavato.com/en/l/2014-mercedes-benz-sprinter-ambulance-A1-48401-6",
+      "model_token": "sprinter",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-08-04T14:18:13.246944+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "708a9f30-8a9a-46ec-85c9-c1d65c200ddd": {
+      "url": "https://www.vavato.com/en/l/2025-nissan-primastar-passenger-car-A3-46174-8118",
+      "model_token": "primastar",
+      "year": 2025,
+      "snapshots": [
+        {
+          "ts": "2026-08-04T14:18:13.246944+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "0c22e17a-8cf2-478b-8cf1-6c29cb0a9559": {
+      "url": "https://www.troostwijkauctions.com/en/l/2016-volkswagen-transporter-t6-4x4-panel-van-2-0-tdi-4motion-vw-t6-%25E2%2580%2593-service-history-maintained-engine-professionally-overhauled-A1-48286-6061",
+      "model_token": "transporter",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-08-04T14:18:13.246944+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "97ae9f61-c8ed-4ce8-a556-124bc9b36c46": {
+      "url": "https://www.troostwijkauctions.com/en/l/2009-volkswagen-transporter-t5-caravelle-multi-purpose-vehicle-t5-1-9-tdi-%2528102-hp%2529-municipal-vehicle-%25E2%2580%2593-registration-2009-%25E2%2580%2593-143-000-km-A1-48286-6062",
+      "model_token": "transporter",
+      "year": 2009,
+      "snapshots": [
+        {
+          "ts": "2026-08-04T14:18:13.246944+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "970a1ff5-15c8-4e22-86c5-e38d562838a9": {
+      "url": "https://www.troostwijkauctions.com/en/l/2024-citroen-jumper-passenger-car-A3-46174-8115",
+      "model_token": "jumper",
+      "year": 2024,
+      "snapshots": [
+        {
+          "ts": "2026-08-04T14:18:13.246944+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
