@@ -26281,6 +26281,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-06T02:32:08.709887+00:00",
+          "current_bid_eur": 15000.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -35527,6 +35533,12 @@
           "current_bid_eur": 7200.0,
           "bids_count": 27,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-06T02:32:08.709887+00:00",
+          "current_bid_eur": 7600.0,
+          "bids_count": 29,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -36354,6 +36366,12 @@
           "ts": "2026-08-05T14:28:32.529235+00:00",
           "current_bid_eur": 2001.0,
           "bids_count": 79,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-06T02:32:08.709887+00:00",
+          "current_bid_eur": 3001.0,
+          "bids_count": 89,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -38083,6 +38101,12 @@
           "current_bid_eur": 500.0,
           "bids_count": 1,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-08-06T02:32:08.709887+00:00",
+          "current_bid_eur": 1150.0,
+          "bids_count": 17,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -39886,6 +39910,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-08-06T02:32:08.709887+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -40441,6 +40471,51 @@
       "snapshots": [
         {
           "ts": "2026-08-05T19:47:15.080857+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "9c8d31ad-545d-4991-91e3-38953bbd8efc": {
+      "url": "https://www.troostwijkauctions.com/en/l/2020-iveco-daily-type-35s14-double-cab-tarpaulin-body-iveco-daily-35s14g-flatbed-transporter-natural-gas-%2528cng%2529-%257C-webasto-system-%257C-tuv-11-2026-A1-48286-6069",
+      "model_token": "transporter",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-08-06T02:32:08.709887+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "baf1571a-3923-43ac-9aa6-43833c10a130": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-master-van-A1-48893-55",
+      "model_token": "master",
+      "year": 2011,
+      "snapshots": [
+        {
+          "ts": "2026-08-06T02:32:08.709887+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "bf735e02-d35f-44d5-8f84-ab5c0facc615": {
+      "url": "https://www.troostwijkauctions.com/en/l/opel-vivaro-2-0-cdti-l2h1-eco-commercial-vehicle-A1-47861-5",
+      "model_token": "vivaro",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-06T02:32:08.709887+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
