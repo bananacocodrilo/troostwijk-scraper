@@ -31405,6 +31405,12 @@
           "current_bid_eur": 1350.0,
           "bids_count": 21,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T02:35:20.202376+00:00",
+          "current_bid_eur": 1450.0,
+          "bids_count": 23,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -36913,6 +36919,12 @@
           "current_bid_eur": 2100.0,
           "bids_count": 12,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T02:35:20.202376+00:00",
+          "current_bid_eur": 2400.0,
+          "bids_count": 15,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -41080,6 +41092,21 @@
       "snapshots": [
         {
           "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "db25efc5-7530-4288-b445-d64f8cbd69f1": {
+      "url": "https://www.vavato.com/en/l/peugeot-expert-227-1-6-hdi-l1h1-p%252B-commercial-vehicle-A1-40295-116",
+      "model_token": "expert",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T02:35:20.202376+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
