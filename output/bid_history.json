@@ -35695,6 +35695,12 @@
           "current_bid_eur": 4000.0,
           "bids_count": 14,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": 5400.0,
+          "bids_count": 21,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -37186,6 +37192,12 @@
           "current_bid_eur": 4000.0,
           "bids_count": 10,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": 4250.0,
+          "bids_count": 11,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -37332,6 +37344,12 @@
           "ts": "2026-08-05T14:28:32.529235+00:00",
           "current_bid_eur": 7500.0,
           "bids_count": 7,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": 8000.0,
+          "bids_count": 8,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -38200,6 +38218,12 @@
           "current_bid_eur": 1150.0,
           "bids_count": 5,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": 1400.0,
+          "bids_count": 10,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -38697,6 +38721,12 @@
           "ts": "2026-08-05T19:47:15.080857+00:00",
           "current_bid_eur": 2138.0,
           "bids_count": 28,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": 2338.0,
+          "bids_count": 30,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -39586,6 +39616,12 @@
           "current_bid_eur": 1.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": 4300.0,
+          "bids_count": 100,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -40024,6 +40060,12 @@
           "current_bid_eur": 3000.0,
           "bids_count": 6,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": 4299.0,
+          "bids_count": 18,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -40336,6 +40378,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": 2900.0,
+          "bids_count": 5,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -40365,6 +40413,12 @@
           "ts": "2026-08-05T19:47:15.080857+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": 2500.0,
+          "bids_count": 1,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -40410,6 +40464,12 @@
           "ts": "2026-08-05T19:47:15.080857+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": 310.0,
+          "bids_count": 4,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -40762,6 +40822,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -40789,6 +40855,231 @@
       "snapshots": [
         {
           "ts": "2026-08-06T14:12:15.010450+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "a32b37b1-979a-48ba-ba2e-f2565e691541": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-313-2-2-cdi-366-hd-129hp-2015-%2528original-nl%2529-vs-198-n-automatic-A1-44404-20",
+      "model_token": "sprinter",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "285ef5cf-3f5c-44f9-be15-c4cd0409e5d8": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-1-9-tdi-300-t800base-commercial-vehicle-A1-47410-175",
+      "model_token": "transporter",
+      "year": 2004,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "8c384e5b-5d7d-4c4f-861e-db24fe282b53": {
+      "url": "https://www.troostwijkauctions.com/en/l/2016-ford-courier-transit-commercial-vehicle-A1-47410-97",
+      "model_token": "transit",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "6858c646-0e25-4be9-9aef-ef4f79f7af24": {
+      "url": "https://www.vavato.com/en/l/2008-mercedes-benz-vito-109-cdi-320-amigo-commercial-vehicle-A1-47410-174",
+      "model_token": "vito",
+      "year": 2008,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "4c02c809-c5ff-4edb-8c0d-01e505c6a07c": {
+      "url": "https://www.vavato.com/en/l/medrcedes-vito-v-220d-commercial-vehicle-A1-47410-172",
+      "model_token": "vito",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "3fcf6dfd-f795-4a1b-94e9-db1eeff63f09": {
+      "url": "https://www.vavato.com/en/l/renault-master-t35-2-5-dci-l3-h1-dc-commercial-vehicle-tipper-A1-47410-136",
+      "model_token": "master",
+      "year": 2010,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "19d9c01b-d9c5-42e2-b126-ebadb7c8f53a": {
+      "url": "https://www.vavato.com/en/l/renault-trafic-1-6-dci-t27-l1h1-com-commercial-vehicle-A1-47410-137",
+      "model_token": "trafic",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "3c664a99-763c-402c-a281-63cb1da1e116": {
+      "url": "https://www.vavato.com/en/l/renault-master-t35-2-3-dci-l3h2-commercial-vehicle-A1-47410-134",
+      "model_token": "master",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "c4f056be-f456-480c-8e06-eedbe7cc6309": {
+      "url": "https://www.vavato.com/en/l/2017-volkswagen-transporter-2-0-tdi-l1h1-highl-commercial-vehicle-A1-47410-101",
+      "model_token": "transporter",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "34caad7c-35b3-49dd-80a9-07365ce0af29": {
+      "url": "https://www.vavato.com/en/l/peugeot-boxer-hdi-30-A3-46180-21192",
+      "model_token": "boxer",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "84fa8d8a-8376-4681-ae1f-8947fde6bcaa": {
+      "url": "https://www.troostwijkauctions.com/en/l/opel-vivaro-2-0-cdti-dc-113hp-2009-8-vdx-97-A1-44404-40",
+      "model_token": "vivaro",
+      "year": 2009,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "0d7fcde6-f68a-49b5-9fe3-077066e0bfdf": {
+      "url": "https://www.troostwijkauctions.com/en/l/no-reserve-volkswagen-t1-ambulance-transporter-1500-27-1965-be-02-41-A1-44403-17",
+      "model_token": "transporter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "8f57afb7-6e24-404f-b9c5-fbb3be2e4eb5": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-crafter-35-2-0-tdi-l4-trendline-box-truck-102hp-2019-%2528original-nl-%252B-1st-owner%2529-vbp-02-s-A1-44404-6",
+      "model_token": "crafter",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "b3e41044-5c1b-4e74-8aca-e48793438d40": {
+      "url": "https://www.troostwijkauctions.com/en/l/citroen-jumper-30-2-2-hdi-l1h1-comfort-120hp-2019-%2528original-nl-%252B-1st-owner%2529-g-695-xg-A1-44404-39",
+      "model_token": "jumper",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "58acabc2-c4e6-407f-9fae-612492d3b0ea": {
+      "url": "https://www.vavato.com/en/l/citroen-2015-jumper-car-A3-46180-1306",
+      "model_token": "jumper",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T00:29:22.521965+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
