@@ -31090,6 +31090,12 @@
           "current_bid_eur": 3400.0,
           "bids_count": 42,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T19:05:22.892934+00:00",
+          "current_bid_eur": 3500.0,
+          "bids_count": 43,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -31410,6 +31416,12 @@
           "ts": "2026-08-07T02:35:20.202376+00:00",
           "current_bid_eur": 1450.0,
           "bids_count": 23,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T19:05:22.892934+00:00",
+          "current_bid_eur": 1650.0,
+          "bids_count": 27,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -34789,6 +34801,12 @@
           "current_bid_eur": 2500.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T19:05:22.892934+00:00",
+          "current_bid_eur": 2600.0,
+          "bids_count": 2,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -36949,6 +36967,12 @@
           "current_bid_eur": 2500.0,
           "bids_count": 16,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T19:05:22.892934+00:00",
+          "current_bid_eur": 2700.0,
+          "bids_count": 18,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -37567,6 +37591,12 @@
           "current_bid_eur": 10000.0,
           "bids_count": 8,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T19:05:22.892934+00:00",
+          "current_bid_eur": 11000.0,
+          "bids_count": 10,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -37677,6 +37707,12 @@
           "ts": "2026-08-05T14:28:32.529235+00:00",
           "current_bid_eur": 7325.0,
           "bids_count": 38,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T19:05:22.892934+00:00",
+          "current_bid_eur": 7977.0,
+          "bids_count": 41,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -38950,6 +38986,12 @@
           "current_bid_eur": 45000.0,
           "bids_count": 51,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T19:05:22.892934+00:00",
+          "current_bid_eur": 49000.0,
+          "bids_count": 52,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -39847,6 +39889,12 @@
           "current_bid_eur": 2500.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T19:05:22.892934+00:00",
+          "current_bid_eur": 2600.0,
+          "bids_count": 2,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -40192,6 +40240,12 @@
           "current_bid_eur": 4299.0,
           "bids_count": 18,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T19:05:22.892934+00:00",
+          "current_bid_eur": 4699.0,
+          "bids_count": 20,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -40443,6 +40497,12 @@
           "ts": "2026-08-06T08:38:21.063655+00:00",
           "current_bid_eur": 200.0,
           "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-07T19:05:22.892934+00:00",
+          "current_bid_eur": 210.0,
+          "bids_count": 2,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -41518,6 +41578,36 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "09158366-cf3e-49e0-8e30-dc49497e80b6": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-master-t35-2-3dci-l3h2-comfort-%257C-vjl-76-n-i-A1-44176-4697",
+      "model_token": "master",
+      "year": 2021,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T19:05:22.892934+00:00",
+          "current_bid_eur": 1.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "6ba4a325-1715-403b-8365-d2a5aaaf8b89": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-master-t35-2-3-dci-l2h2-commercial-vehicle-A1-48786-203",
+      "model_token": "master",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-07T19:05:22.892934+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
