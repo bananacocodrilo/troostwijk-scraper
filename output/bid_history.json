@@ -34924,6 +34924,12 @@
           "current_bid_eur": 3500.0,
           "bids_count": 8,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-10T13:15:14.331688+00:00",
+          "current_bid_eur": 3600.0,
+          "bids_count": 9,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -37051,6 +37057,12 @@
           "current_bid_eur": 3750.0,
           "bids_count": 24,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-10T13:15:14.331688+00:00",
+          "current_bid_eur": 4000.0,
+          "bids_count": 25,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -37423,6 +37435,12 @@
           "current_bid_eur": 4750.0,
           "bids_count": 13,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-10T13:15:14.331688+00:00",
+          "current_bid_eur": 5500.0,
+          "bids_count": 15,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -37486,6 +37504,12 @@
           "current_bid_eur": 6000.0,
           "bids_count": 13,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-10T13:15:14.331688+00:00",
+          "current_bid_eur": 6500.0,
+          "bids_count": 14,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -37548,6 +37572,12 @@
           "ts": "2026-08-10T07:42:16.450305+00:00",
           "current_bid_eur": 9500.0,
           "bids_count": 11,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-10T13:15:14.331688+00:00",
+          "current_bid_eur": 10500.0,
+          "bids_count": 13,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -38827,6 +38857,12 @@
           "current_bid_eur": 2500.0,
           "bids_count": 5,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-10T13:15:14.331688+00:00",
+          "current_bid_eur": 2800.0,
+          "bids_count": 7,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -39922,6 +39958,12 @@
           "current_bid_eur": 3700.0,
           "bids_count": 45,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-10T13:15:14.331688+00:00",
+          "current_bid_eur": 3800.0,
+          "bids_count": 46,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -40374,6 +40416,12 @@
           "ts": "2026-08-07T13:22:21.797902+00:00",
           "current_bid_eur": 2600.0,
           "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-10T13:15:14.331688+00:00",
+          "current_bid_eur": 2700.0,
+          "bids_count": 3,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -41025,6 +41073,12 @@
           "ts": "2026-08-09T18:47:09.901506+00:00",
           "current_bid_eur": 1710.0,
           "bids_count": 46,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-10T13:15:14.331688+00:00",
+          "current_bid_eur": 2600.0,
+          "bids_count": 56,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -42235,6 +42289,12 @@
           "current_bid_eur": 1.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-10T13:15:14.331688+00:00",
+          "current_bid_eur": 36.0,
+          "bids_count": 8,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -42283,6 +42343,51 @@
       "snapshots": [
         {
           "ts": "2026-08-10T07:42:16.450305+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "9f2199f6-d3fe-418f-a46c-9021cce146e7": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-boxer-35-heavy-dc-truck-A7-48897-131",
+      "model_token": "boxer",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-10T13:15:14.331688+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2fbc189b-309b-49e3-b39a-a7c17c762977": {
+      "url": "https://www.vavato.com/en/l/opel-2-2d-movano-commercial-vehicle-A3-46180-5400",
+      "model_token": "movano",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-08-10T13:15:14.331688+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "45827319-218d-4afc-aff5-8757e30bbacf": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-2-0d-expert-commercial-vehicle-A3-46180-5401",
+      "model_token": "expert",
+      "year": 2012,
+      "snapshots": [
+        {
+          "ts": "2026-08-10T13:15:14.331688+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
