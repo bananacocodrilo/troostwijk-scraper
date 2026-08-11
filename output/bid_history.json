@@ -31108,6 +31108,12 @@
           "current_bid_eur": 3900.0,
           "bids_count": 47,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-11T19:19:22.246875+00:00",
+          "current_bid_eur": 4200.0,
+          "bids_count": 49,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -35194,6 +35200,12 @@
           "current_bid_eur": 4500.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-11T19:19:22.246875+00:00",
+          "current_bid_eur": 4700.0,
+          "bids_count": 2,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -38932,6 +38944,12 @@
           "current_bid_eur": 16456.0,
           "bids_count": 13,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-11T19:19:22.246875+00:00",
+          "current_bid_eur": 17456.0,
+          "bids_count": 15,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -39640,6 +39658,12 @@
           "current_bid_eur": 3800.0,
           "bids_count": 40,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-11T19:19:22.246875+00:00",
+          "current_bid_eur": 3900.0,
+          "bids_count": 41,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -40110,6 +40134,12 @@
           "ts": "2026-08-11T01:23:06.200249+00:00",
           "current_bid_eur": 3900.0,
           "bids_count": 15,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-11T19:19:22.246875+00:00",
+          "current_bid_eur": 4000.0,
+          "bids_count": 16,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -40615,6 +40645,12 @@
           "current_bid_eur": 2500.0,
           "bids_count": 16,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-11T19:19:22.246875+00:00",
+          "current_bid_eur": 2700.0,
+          "bids_count": 18,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -40773,6 +40809,12 @@
           "ts": "2026-08-11T13:08:46.436096+00:00",
           "current_bid_eur": 5500.0,
           "bids_count": 16,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-11T19:19:22.246875+00:00",
+          "current_bid_eur": 6000.0,
+          "bids_count": 17,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -40947,6 +40989,12 @@
           "ts": "2026-08-10T07:42:16.450305+00:00",
           "current_bid_eur": 5500.0,
           "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-11T19:19:22.246875+00:00",
+          "current_bid_eur": 6000.0,
+          "bids_count": 3,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -42280,6 +42328,12 @@
           "current_bid_eur": 11.0,
           "bids_count": 3,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-11T19:19:22.246875+00:00",
+          "current_bid_eur": 581.0,
+          "bids_count": 9,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -42673,6 +42727,66 @@
       "snapshots": [
         {
           "ts": "2026-08-11T13:08:46.436096+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "112aa3af-6175-43af-8309-ad8b7706f5e2": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-ducato-automatic-35-2-3-mj-l2h2-van-A1-47987-36",
+      "model_token": "ducato",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-08-11T19:19:22.246875+00:00",
+          "current_bid_eur": 500.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2e92ce1b-7513-4565-873d-8df8c0861eeb": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-113-cdi-320-long-ed-van-A1-47987-39",
+      "model_token": "vito",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-08-11T19:19:22.246875+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "f8dedf2c-29c9-4ea1-a71f-1664ad5875ed": {
+      "url": "https://www.troostwijkauctions.com/en/l/2013-ford-transit-custom-290-2-2-tdci-l1h1tdc-commercial-vehicle-A1-48974-2",
+      "model_token": "transit custom",
+      "year": 2013,
+      "snapshots": [
+        {
+          "ts": "2026-08-11T19:19:22.246875+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "e2779986-9ef0-4457-b21d-947245627907": {
+      "url": "https://www.troostwijkauctions.com/en/l/wheelchair-bus-renault-master-automatic-t28-2-5-dci-l1h1-dc-passenger-car-A1-46715-472",
+      "model_token": "master",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-11T19:19:22.246875+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
