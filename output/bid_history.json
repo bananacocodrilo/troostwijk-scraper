@@ -39328,6 +39328,12 @@
           "current_bid_eur": 3000.0,
           "bids_count": 35,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-13T07:28:44.034716+00:00",
+          "current_bid_eur": 3100.0,
+          "bids_count": 36,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -39937,6 +39943,12 @@
           "current_bid_eur": 1800.0,
           "bids_count": 16,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-13T07:28:44.034716+00:00",
+          "current_bid_eur": 2000.0,
+          "bids_count": 18,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -40438,6 +40450,12 @@
           "current_bid_eur": 4300.0,
           "bids_count": 100,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-13T07:28:44.034716+00:00",
+          "current_bid_eur": 4500.0,
+          "bids_count": 101,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -40830,6 +40848,12 @@
           "ts": "2026-08-11T19:19:22.246875+00:00",
           "current_bid_eur": 2700.0,
           "bids_count": 18,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-13T07:28:44.034716+00:00",
+          "current_bid_eur": 4000.0,
+          "bids_count": 22,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -43201,6 +43225,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-08-13T07:28:44.034716+00:00",
+          "current_bid_eur": 2800.0,
+          "bids_count": 61,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -43990,6 +44020,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-13T07:28:44.034716+00:00",
+          "current_bid_eur": 2500.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -44020,6 +44056,36 @@
           "current_bid_eur": 100.0,
           "bids_count": 4,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "22f307ed-3b4b-4791-986f-d3cf8909079a": {
+      "url": "https://www.troostwijkauctions.com/en/l/adamoli-hydraulic-shear-platform-machine-transporter-%25E2%2580%2593-20-000-kg-%25E2%2580%2593-diesel-%25E2%2580%2593-2003-A3-46180-14883",
+      "model_token": "transporter",
+      "year": 2003,
+      "snapshots": [
+        {
+          "ts": "2026-08-13T07:28:44.034716+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "cabb6849-d9b4-446b-8181-6743f54478b9": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-350-2-0-tdcil4h1dcam-commercial-vehicle-A1-43669-4",
+      "model_token": "transit",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-13T07:28:44.034716+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
