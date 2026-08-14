@@ -43381,6 +43381,12 @@
           "current_bid_eur": 2800.0,
           "bids_count": 61,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-14T07:26:43.212567+00:00",
+          "current_bid_eur": 4800.0,
+          "bids_count": 77,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -44013,6 +44019,12 @@
           "ts": "2026-08-13T01:26:38.776543+00:00",
           "current_bid_eur": 1500.0,
           "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-14T07:26:43.212567+00:00",
+          "current_bid_eur": 1650.0,
+          "bids_count": 4,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -44953,6 +44965,66 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "97ab046e-f2ca-4a39-9e18-0ea6f3ac9068": {
+      "url": "https://www.vavato.com/en/l/ford-transit-custom-290-2-2-tdci-l2h2-tr-commercial-vehicle-A1-47411-134",
+      "model_token": "transit custom",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-08-14T07:26:43.212567+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "d0f6515b-40be-46a2-8785-1715a59aa266": {
+      "url": "https://www.troostwijkauctions.com/en/l/lohr-truck-and-machine-transporter-semi-trailer-A1-47411-55",
+      "model_token": "transporter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-14T07:26:43.212567+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "8f5f3b14-4e9f-4f53-8754-d2ada6bf28a4": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-vito-grill-A1-41685-155",
+      "model_token": "vito",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-14T07:26:43.212567+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "c66199b8-0105-4d2f-975d-27d58b036b3a": {
+      "url": "https://www.troostwijkauctions.com/en/l/2020-volkswagen-transporter-truck-approved-t6-1-double-cab-flatbed-car-A1-48704-6082",
+      "model_token": "transporter",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-08-14T07:26:43.212567+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
