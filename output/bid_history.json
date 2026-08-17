@@ -37963,6 +37963,12 @@
           "current_bid_eur": 1850.0,
           "bids_count": 31,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-17T01:06:49.446910+00:00",
+          "current_bid_eur": 1900.0,
+          "bids_count": 32,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -39849,6 +39855,12 @@
           "ts": "2026-08-13T19:15:12.534451+00:00",
           "current_bid_eur": 4400.0,
           "bids_count": 44,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-17T01:06:49.446910+00:00",
+          "current_bid_eur": 4600.0,
+          "bids_count": 45,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -42856,6 +42868,12 @@
           "current_bid_eur": 3100.0,
           "bids_count": 21,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-17T01:06:49.446910+00:00",
+          "current_bid_eur": 3200.0,
+          "bids_count": 22,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -43093,6 +43111,12 @@
           "current_bid_eur": 1700.0,
           "bids_count": 18,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-17T01:06:49.446910+00:00",
+          "current_bid_eur": 1750.0,
+          "bids_count": 19,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -43219,6 +43243,12 @@
           "current_bid_eur": 4400.0,
           "bids_count": 43,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-17T01:06:49.446910+00:00",
+          "current_bid_eur": 4600.0,
+          "bids_count": 44,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -43323,6 +43353,12 @@
           "ts": "2026-08-14T19:06:42.409170+00:00",
           "current_bid_eur": 1100.0,
           "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-17T01:06:49.446910+00:00",
+          "current_bid_eur": 1200.0,
+          "bids_count": 3,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -43558,6 +43594,12 @@
           "current_bid_eur": 1000.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-17T01:06:49.446910+00:00",
+          "current_bid_eur": 1100.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -43626,6 +43668,12 @@
           "ts": "2026-08-16T01:04:55.951722+00:00",
           "current_bid_eur": 650.0,
           "bids_count": 29,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-17T01:06:49.446910+00:00",
+          "current_bid_eur": 1350.0,
+          "bids_count": 43,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -43972,6 +44020,12 @@
           "current_bid_eur": 2600.0,
           "bids_count": 2,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-17T01:06:49.446910+00:00",
+          "current_bid_eur": 2700.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -44088,6 +44142,12 @@
           "ts": "2026-08-13T19:15:12.534451+00:00",
           "current_bid_eur": 2500.0,
           "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-17T01:06:49.446910+00:00",
+          "current_bid_eur": 2600.0,
+          "bids_count": 2,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -44487,6 +44547,12 @@
           "ts": "2026-08-12T19:15:26.069671+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-17T01:06:49.446910+00:00",
+          "current_bid_eur": 2500.0,
+          "bids_count": 1,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -46231,6 +46297,66 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "d6b465e8-7485-467f-8e84-5abbbbcdfe78": {
+      "url": "https://www.troostwijkauctions.com/en/l/1996-mercedes-benz-sprinter-412-d-xlang-commercial-vehicle-A1-39125-3",
+      "model_token": "sprinter",
+      "year": 1996,
+      "snapshots": [
+        {
+          "ts": "2026-08-17T01:06:49.446910+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "b525e118-7f44-40c6-a924-d469fe5f546c": {
+      "url": "https://www.troostwijkauctions.com/en/l/1989-volkswagen-t2-9-passenger-bus-%257C-classic-vw-transporter-A1-49179-97",
+      "model_token": "transporter",
+      "year": 1989,
+      "snapshots": [
+        {
+          "ts": "2026-08-17T01:06:49.446910+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "a6ee6cfe-6b3f-4020-9701-0223ca3e8e57": {
+      "url": "https://www.troostwijkauctions.com/en/l/1989-volkswagen-t2-kombi-%257C-classic-vw-transporter-A1-49179-109",
+      "model_token": "transporter",
+      "year": 1989,
+      "snapshots": [
+        {
+          "ts": "2026-08-17T01:06:49.446910+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2d8b59a2-dd51-4edb-b3e0-1689539c15fb": {
+      "url": "https://www.troostwijkauctions.com/en/l/1982-volkswagen-t2-bus-%257C-classic-vw-transporter-A1-49179-138",
+      "model_token": "transporter",
+      "year": 1982,
+      "snapshots": [
+        {
+          "ts": "2026-08-17T01:06:49.446910+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
