@@ -44686,6 +44686,12 @@
           "current_bid_eur": 3400.0,
           "bids_count": 10,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-18T12:41:58.067082+00:00",
+          "current_bid_eur": 3500.0,
+          "bids_count": 11,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -44932,6 +44938,12 @@
           "current_bid_eur": 2600.0,
           "bids_count": 2,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-18T12:41:58.067082+00:00",
+          "current_bid_eur": 2800.0,
+          "bids_count": 4,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -45108,6 +45120,12 @@
           "ts": "2026-08-17T12:45:16.912714+00:00",
           "current_bid_eur": 1050.0,
           "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-18T12:41:58.067082+00:00",
+          "current_bid_eur": 1100.0,
+          "bids_count": 3,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -45448,6 +45466,12 @@
           "current_bid_eur": 3300.0,
           "bids_count": 9,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-18T12:41:58.067082+00:00",
+          "current_bid_eur": 3500.0,
+          "bids_count": 11,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -45717,6 +45741,12 @@
           "ts": "2026-08-17T12:45:16.912714+00:00",
           "current_bid_eur": 3100.0,
           "bids_count": 7,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-18T12:41:58.067082+00:00",
+          "current_bid_eur": 6500.0,
+          "bids_count": 10,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -46198,6 +46228,12 @@
           "current_bid_eur": 180.0,
           "bids_count": 9,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-18T12:41:58.067082+00:00",
+          "current_bid_eur": 4000.0,
+          "bids_count": 23,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -46254,6 +46290,12 @@
           "ts": "2026-08-17T12:45:16.912714+00:00",
           "current_bid_eur": 150.0,
           "bids_count": 6,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-18T12:41:58.067082+00:00",
+          "current_bid_eur": 1250.0,
+          "bids_count": 24,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -46347,6 +46389,12 @@
           "ts": "2026-08-17T06:52:57.640797+00:00",
           "current_bid_eur": 527.0,
           "bids_count": 15,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-18T12:41:58.067082+00:00",
+          "current_bid_eur": 1651.0,
+          "bids_count": 21,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -47320,6 +47368,21 @@
       "snapshots": [
         {
           "ts": "2026-08-17T18:48:14.095176+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "d7b43b9f-fe8f-4401-a95d-a10888923b47": {
+      "url": "https://www.troostwijkauctions.com/en/l/2011-volkswagen-transporter-tdi-light-truck-commercial-vehicle-A1-49078-10",
+      "model_token": "transporter",
+      "year": 2011,
+      "snapshots": [
+        {
+          "ts": "2026-08-18T12:41:58.067082+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
