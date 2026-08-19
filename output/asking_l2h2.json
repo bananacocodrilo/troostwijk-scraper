@@ -45,9 +45,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 78,
-    "market_median_eur": 16450,
-    "price_pct_vs_median": -45.3,
+    "market_sample_size": 77,
+    "market_median_eur": 15950,
+    "price_pct_vs_median": -43.6,
     "is_underpriced": true
   },
   {
@@ -94,8 +94,8 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 71,
-    "market_median_eur": 10999,
+    "market_sample_size": 72,
+    "market_median_eur": 10994,
     "price_pct_vs_median": -20.4,
     "is_underpriced": true
   },
@@ -827,7 +827,7 @@
     "total_project_cost_eur": 30250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": -20.8,
     "is_underpriced": true
@@ -867,7 +867,7 @@
     "total_project_cost_eur": 30250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": -20.8,
     "is_underpriced": true
@@ -916,9 +916,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 59,
-    "market_median_eur": 10350,
-    "price_pct_vs_median": -54.6,
+    "market_sample_size": 58,
+    "market_median_eur": 10175,
+    "price_pct_vs_median": -53.8,
     "is_underpriced": true
   },
   {
@@ -4287,7 +4287,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": -20.8,
     "is_underpriced": true
@@ -4375,9 +4375,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 71,
-    "market_median_eur": 13499,
-    "price_pct_vs_median": -70.4,
+    "market_sample_size": 72,
+    "market_median_eur": 13200,
+    "price_pct_vs_median": -69.8,
     "is_underpriced": true
   },
   {
@@ -4424,9 +4424,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 62,
-    "market_median_eur": 10245,
-    "price_pct_vs_median": -48.3,
+    "market_sample_size": 63,
+    "market_median_eur": 9990,
+    "price_pct_vs_median": -46.9,
     "is_underpriced": true
   },
   {
@@ -4473,9 +4473,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 50,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": -42.1,
+    "market_sample_size": 51,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": -41.8,
     "is_underpriced": true
   },
   {
@@ -4560,9 +4560,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 62,
-    "market_median_eur": 10245,
-    "price_pct_vs_median": -36.6,
+    "market_sample_size": 63,
+    "market_median_eur": 9990,
+    "price_pct_vs_median": -34.9,
     "is_underpriced": true
   },
   {
@@ -6208,9 +6208,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 71,
-    "market_median_eur": 13499,
-    "price_pct_vs_median": -18.6,
+    "market_sample_size": 72,
+    "market_median_eur": 13200,
+    "price_pct_vs_median": -16.7,
     "is_underpriced": true
   },
   {
@@ -6646,9 +6646,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 65,
-    "market_median_eur": 17700,
-    "price_pct_vs_median": -27.1,
+    "market_sample_size": 64,
+    "market_median_eur": 17750,
+    "price_pct_vs_median": -27.3,
     "is_underpriced": true
   },
   {
@@ -7187,9 +7187,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 65,
-    "market_median_eur": 17700,
-    "price_pct_vs_median": -20.9,
+    "market_sample_size": 64,
+    "market_median_eur": 17750,
+    "price_pct_vs_median": -21.2,
     "is_underpriced": true
   },
   {
@@ -10641,6 +10641,50 @@
     "is_underpriced": true
   },
   {
+    "title": "Ford Transit Kasten 330 L3H2 Trend Kamera|AHK|Regale",
+    "url": "https://www.kleinanzeigen.de/s-anzeige/ford-transit-kasten-330-l3h2-trend-kamera-ahk-regale/3487823429-216-8607",
+    "source": "kleinanzeigen_de",
+    "country": "de",
+    "year": 2023,
+    "km": 100000,
+    "price_eur": 15990.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/4e/4ebb40c3-d071-40fe-bbbc-2b16d6fff624?rule=$_2.AUTO"
+    ],
+    "vat_hint": null,
+    "model_group": "ford_transit_l2h2",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "transit",
+    "score": 50,
+    "vat_scheme": "unknown",
+    "price_gross_eur": 15990,
+    "vat_evidence": "no VAT signal",
+    "vat_confidence": "low",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 26490.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "very_high_km_per_year",
+        "label": "Very high km/year (33,333/yr) \u2014 highway-thrashed risk",
+        "severity": "high"
+      }
+    ],
+    "market_sample_size": 11,
+    "market_median_eur": 18999,
+    "price_pct_vs_median": -15.8,
+    "is_underpriced": true
+  },
+  {
     "title": "Ford Transit 2.0TDCi 130PK L3H2 | 2023 | Euro 6 | Airco | Cr",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2422768288-ford-transit-2-0tdci-130pk-l3h2-2023-euro-6-airco-cr",
     "source": "marktplaats",
@@ -10763,9 +10807,9 @@
     "total_project_cost_eur": 13499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": -83.7,
+    "market_sample_size": 54,
+    "market_median_eur": 18200,
+    "price_pct_vs_median": -83.5,
     "is_underpriced": true
   },
   {
@@ -10854,9 +10898,9 @@
     "total_project_cost_eur": 15800.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 50,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": -46.2,
+    "market_sample_size": 51,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": -45.9,
     "is_underpriced": true
   },
   {
@@ -10903,9 +10947,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 99,
-    "market_median_eur": 13923,
-    "price_pct_vs_median": -61.9,
+    "market_sample_size": 98,
+    "market_median_eur": 13712,
+    "price_pct_vs_median": -61.3,
     "is_underpriced": true
   },
   {
@@ -11045,8 +11089,8 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 71,
-    "market_median_eur": 10999,
+    "market_sample_size": 72,
+    "market_median_eur": 10994,
     "price_pct_vs_median": -40.9,
     "is_underpriced": true
   },
@@ -11094,9 +11138,62 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 50,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": -29.3,
+    "market_sample_size": 51,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": -29.0,
+    "is_underpriced": true
+  },
+  {
+    "title": "Movano B Kasten/EURO 6!!AHK!KLIMA!!GKa L3H3 3,5t",
+    "url": "https://www.autoscout24.de/angebote/opel-movano-movano-b-kasten-euro-6-ahk-klima-gka-l3h3-3-5t-diesel-gelb-cat_ma54gr15870ge1042mt4508tr480628-572976b1-3271-4d91-9b87-8053c1c49780",
+    "source": "autoscout24_de",
+    "country": "de",
+    "year": 2018,
+    "km": 235000,
+    "price_eur": 6990.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://prod.pictures.autoscout24.net/listing-images/572976b1-3271-4d91-9b87-8053c1c49780_c29b6f28-4bbc-48a9-b562-3baa4cc63a12.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/572976b1-3271-4d91-9b87-8053c1c49780_aa5cb779-a6c2-4552-96b9-38568d0b750c.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/572976b1-3271-4d91-9b87-8053c1c49780_a597a2f2-25af-4720-9b5e-eed1a93a045c.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/572976b1-3271-4d91-9b87-8053c1c49780_0a8e4ab1-80b9-4a62-b614-09fa8a6ba58a.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/572976b1-3271-4d91-9b87-8053c1c49780_6ab22928-8899-4387-83cf-ec2e600ae844.jpg/250x188.webp"
+    ],
+    "vat_hint": null,
+    "model_group": "renault_master_grp",
+    "variant": "L3H3",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 49,
+    "vat_scheme": "unknown",
+    "price_gross_eur": 6990,
+    "vat_evidence": "no VAT signal",
+    "vat_confidence": "low",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 17490.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (29,375/yr) \u2014 above-average wear",
+        "severity": "warn"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (235,000) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 72,
+    "market_median_eur": 10994,
+    "price_pct_vs_median": -36.4,
     "is_underpriced": true
   },
   {
@@ -11147,9 +11244,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 62,
-    "market_median_eur": 10245,
-    "price_pct_vs_median": -31.8,
+    "market_sample_size": 63,
+    "market_median_eur": 9990,
+    "price_pct_vs_median": -30.0,
     "is_underpriced": true
   },
   {
@@ -11200,9 +11297,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 62,
-    "market_median_eur": 10245,
-    "price_pct_vs_median": -29.7,
+    "market_sample_size": 63,
+    "market_median_eur": 9990,
+    "price_pct_vs_median": -27.9,
     "is_underpriced": true
   },
   {
@@ -11249,9 +11346,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 71,
-    "market_median_eur": 13499,
-    "price_pct_vs_median": -46.3,
+    "market_sample_size": 72,
+    "market_median_eur": 13200,
+    "price_pct_vs_median": -45.1,
     "is_underpriced": true
   },
   {
@@ -11298,9 +11395,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 62,
-    "market_median_eur": 10245,
-    "price_pct_vs_median": -22.9,
+    "market_sample_size": 63,
+    "market_median_eur": 9990,
+    "price_pct_vs_median": -20.9,
     "is_underpriced": true
   },
   {
@@ -11673,9 +11770,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 107,
-    "market_median_eur": 11990,
-    "price_pct_vs_median": -18.3,
+    "market_sample_size": 106,
+    "market_median_eur": 11840,
+    "price_pct_vs_median": -17.2,
     "is_underpriced": true
   },
   {
@@ -12260,9 +12357,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 65,
-    "market_median_eur": 17700,
-    "price_pct_vs_median": -20.9,
+    "market_sample_size": 64,
+    "market_median_eur": 17750,
+    "price_pct_vs_median": -21.1,
     "is_underpriced": true
   },
   {
@@ -13291,9 +13388,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 62,
-    "market_median_eur": 10245,
-    "price_pct_vs_median": -2.5,
+    "market_sample_size": 63,
+    "market_median_eur": 9990,
+    "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
   {
@@ -13344,9 +13441,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 71,
-    "market_median_eur": 10999,
-    "price_pct_vs_median": 13.6,
+    "market_sample_size": 72,
+    "market_median_eur": 10994,
+    "price_pct_vs_median": 13.7,
     "is_underpriced": false
   },
   {
@@ -13393,9 +13490,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 71,
-    "market_median_eur": 10999,
-    "price_pct_vs_median": 22.7,
+    "market_sample_size": 72,
+    "market_median_eur": 10994,
+    "price_pct_vs_median": 22.8,
     "is_underpriced": false
   },
   {
@@ -13442,9 +13539,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 71,
-    "market_median_eur": 13499,
-    "price_pct_vs_median": 18.5,
+    "market_sample_size": 72,
+    "market_median_eur": 13200,
+    "price_pct_vs_median": 21.2,
     "is_underpriced": false
   },
   {
@@ -13491,9 +13588,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 50,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": 72.5,
+    "market_sample_size": 51,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": 73.4,
     "is_underpriced": false
   },
   {
@@ -13535,9 +13632,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 65,
-    "market_median_eur": 17700,
-    "price_pct_vs_median": 1.1,
+    "market_sample_size": 64,
+    "market_median_eur": 17750,
+    "price_pct_vs_median": 0.8,
     "is_underpriced": false
   },
   {
@@ -13573,9 +13670,9 @@
     "total_project_cost_eur": 20400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 85,
-    "market_median_eur": 10350,
-    "price_pct_vs_median": 72.9,
+    "market_sample_size": 84,
+    "market_median_eur": 10275,
+    "price_pct_vs_median": 74.2,
     "is_underpriced": false
   },
   {
@@ -13615,9 +13712,9 @@
     "total_project_cost_eur": 22480.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 85,
-    "market_median_eur": 10350,
-    "price_pct_vs_median": 93.0,
+    "market_sample_size": 84,
+    "market_median_eur": 10275,
+    "price_pct_vs_median": 94.5,
     "is_underpriced": false
   },
   {
@@ -13653,9 +13750,9 @@
     "total_project_cost_eur": 24480.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 99,
-    "market_median_eur": 13923,
-    "price_pct_vs_median": 57.9,
+    "market_sample_size": 98,
+    "market_median_eur": 13712,
+    "price_pct_vs_median": 60.3,
     "is_underpriced": false
   },
   {
@@ -13691,9 +13788,9 @@
     "total_project_cost_eur": 28095.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 97,
-    "market_median_eur": 10500,
-    "price_pct_vs_median": 143.8,
+    "market_sample_size": 96,
+    "market_median_eur": 10495,
+    "price_pct_vs_median": 143.9,
     "is_underpriced": false
   },
   {
@@ -14296,9 +14393,9 @@
     "total_project_cost_eur": 28490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 62,
-    "market_median_eur": 10245,
-    "price_pct_vs_median": 75.6,
+    "market_sample_size": 63,
+    "market_median_eur": 9990,
+    "price_pct_vs_median": 80.1,
     "is_underpriced": false
   },
   {
@@ -15432,9 +15529,9 @@
     "total_project_cost_eur": 32500.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 65,
-    "market_median_eur": 17700,
-    "price_pct_vs_median": 24.3,
+    "market_sample_size": 64,
+    "market_median_eur": 17750,
+    "price_pct_vs_median": 23.9,
     "is_underpriced": false
   },
   {
@@ -16339,89 +16436,9 @@
     "total_project_cost_eur": 37450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": 8.0,
-    "is_underpriced": false
-  },
-  {
-    "title": "T6.1 4Motion Kasten Hochdach+Lang*Navi*Std-Hzg*A",
-    "url": "https://www.autoscout24.de/angebote/volkswagen-transporter-t6-1-4motion-kasten-hochdach+lang-navi-std-hzg-a-diesel-weiss-cat_ma74gr201571ge2324va3758mt10892tr480911-f9ee4641-f736-417d-a439-4e431f2d00f9",
-    "source": "autoscout24_de",
-    "country": "de",
-    "year": 2021,
-    "km": 74000,
-    "price_eur": 26999.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://prod.pictures.autoscout24.net/listing-images/f9ee4641-f736-417d-a439-4e431f2d00f9_47920ebf-d539-4b37-af76-52e1049b50fe.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/f9ee4641-f736-417d-a439-4e431f2d00f9_99e9c080-7edb-4a58-95c7-29d5a47d7825.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/f9ee4641-f736-417d-a439-4e431f2d00f9_c153a34d-0910-43dc-9cc6-1c8357db05c2.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/f9ee4641-f736-417d-a439-4e431f2d00f9_eea0aa5c-849c-4e5b-9def-57c59d458c91.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/f9ee4641-f736-417d-a439-4e431f2d00f9_40197023-5206-4d6f-a841-2ea23f8dce27.jpg/250x188.webp"
-    ],
-    "vat_hint": null,
-    "model_group": "t6_1_lwb",
-    "variant": "L?H2",
-    "classification_confidence": "high",
-    "matched_token": "t6.1",
-    "score": 60,
-    "vat_scheme": "unknown",
-    "price_gross_eur": 26999,
-    "vat_evidence": "no VAT signal",
-    "vat_confidence": "low",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 37499.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 50,
-    "market_median_eur": 20996,
-    "price_pct_vs_median": 28.6,
-    "is_underpriced": false
-  },
-  {
-    "title": "Volkswagen T6.1 4Motion HOCHDACH/LANG*NAVI*STD-HZG*AHK",
-    "url": "https://www.kleinanzeigen.de/s-anzeige/volkswagen-t6-1-4motion-hochdach-lang-navi-std-hzg-ahk/3484812011-216-9350",
-    "source": "kleinanzeigen_de",
-    "country": "de",
-    "year": 2021,
-    "km": 93000,
-    "price_eur": 26999.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/25/2505a4f2-afcb-4dc7-8b65-4768b6a0547e?rule=$_2.AUTO"
-    ],
-    "vat_hint": null,
-    "model_group": "t6_1_lwb",
-    "variant": "L?H2",
-    "classification_confidence": "high",
-    "matched_token": "t6.1",
-    "score": 60,
-    "vat_scheme": "unknown",
-    "price_gross_eur": 26999,
-    "vat_evidence": "no VAT signal",
-    "vat_confidence": "low",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 37499.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 50,
-    "market_median_eur": 20996,
-    "price_pct_vs_median": 28.6,
     "is_underpriced": false
   },
   {
@@ -16717,9 +16734,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 65,
-    "market_median_eur": 17700,
-    "price_pct_vs_median": -3.1,
+    "market_sample_size": 64,
+    "market_median_eur": 17750,
+    "price_pct_vs_median": -3.4,
     "is_underpriced": false
   },
   {
@@ -17603,8 +17620,8 @@
     "total_project_cost_eur": 33000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 33,
-    "market_median_eur": 22980,
+    "market_sample_size": 30,
+    "market_median_eur": 22989,
     "price_pct_vs_median": -2.1,
     "is_underpriced": false
   },
@@ -17913,7 +17930,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": -4.2,
     "is_underpriced": false
@@ -18437,9 +18454,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 108,
-    "market_median_eur": 20475,
-    "price_pct_vs_median": 21.9,
+    "market_sample_size": 107,
+    "market_median_eur": 20000,
+    "price_pct_vs_median": 24.8,
     "is_underpriced": false
   },
   {
@@ -24375,7 +24392,7 @@
     "total_project_cost_eur": 34000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 32,
+    "market_sample_size": 31,
     "market_median_eur": 24950,
     "price_pct_vs_median": -5.8,
     "is_underpriced": false
@@ -24415,7 +24432,7 @@
     "total_project_cost_eur": 34444.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": -4.0,
     "is_underpriced": false
@@ -24633,7 +24650,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": 2.0,
     "is_underpriced": false
@@ -24679,7 +24696,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": 4.0,
     "is_underpriced": false
@@ -24765,7 +24782,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": 4.2,
     "is_underpriced": false
@@ -24811,7 +24828,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": 8.2,
     "is_underpriced": false
@@ -24935,7 +24952,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": 12.2,
     "is_underpriced": false
@@ -24975,7 +24992,7 @@
     "total_project_cost_eur": 39190.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": 15.0,
     "is_underpriced": false
@@ -25015,7 +25032,7 @@
     "total_project_cost_eur": 40450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": 20.0,
     "is_underpriced": false
@@ -25055,7 +25072,7 @@
     "total_project_cost_eur": 40450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": 20.0,
     "is_underpriced": false
@@ -25095,9 +25112,9 @@
     "total_project_cost_eur": 42073.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 25,
-    "market_median_eur": 28690,
-    "price_pct_vs_median": 10.0,
+    "market_sample_size": 26,
+    "market_median_eur": 29320,
+    "price_pct_vs_median": 7.7,
     "is_underpriced": false
   },
   {
@@ -25137,9 +25154,9 @@
     "total_project_cost_eur": 42490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 16,
-    "market_median_eur": 18750,
-    "price_pct_vs_median": 70.6,
+    "market_sample_size": 17,
+    "market_median_eur": 18999,
+    "price_pct_vs_median": 68.4,
     "is_underpriced": false
   },
   {
@@ -25177,7 +25194,7 @@
     "total_project_cost_eur": 43390.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": 31.8,
     "is_underpriced": false
@@ -25255,7 +25272,7 @@
     "total_project_cost_eur": 44950.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": 38.1,
     "is_underpriced": false
@@ -25293,9 +25310,9 @@
     "total_project_cost_eur": 45490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 16,
-    "market_median_eur": 18750,
-    "price_pct_vs_median": 86.6,
+    "market_sample_size": 17,
+    "market_median_eur": 18999,
+    "price_pct_vs_median": 84.2,
     "is_underpriced": false
   },
   {
@@ -25333,7 +25350,7 @@
     "total_project_cost_eur": 46390.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": 43.8,
     "is_underpriced": false
@@ -25373,7 +25390,7 @@
     "total_project_cost_eur": 47450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": 48.1,
     "is_underpriced": false
@@ -25413,7 +25430,7 @@
     "total_project_cost_eur": 48450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": 52.1,
     "is_underpriced": false
@@ -25451,7 +25468,7 @@
     "total_project_cost_eur": 49450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": 56.1,
     "is_underpriced": false
@@ -25491,7 +25508,7 @@
     "total_project_cost_eur": 50450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": 60.1,
     "is_underpriced": false
@@ -25531,7 +25548,7 @@
     "total_project_cost_eur": 55450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": 80.2,
     "is_underpriced": false
@@ -25738,9 +25755,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 62,
-    "market_median_eur": 10245,
-    "price_pct_vs_median": -14.1,
+    "market_sample_size": 63,
+    "market_median_eur": 9990,
+    "price_pct_vs_median": -11.9,
     "is_underpriced": false
   },
   {
@@ -25776,9 +25793,9 @@
     "total_project_cost_eur": 19490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 97,
-    "market_median_eur": 10500,
-    "price_pct_vs_median": -14.4,
+    "market_sample_size": 96,
+    "market_median_eur": 10495,
+    "price_pct_vs_median": -14.3,
     "is_underpriced": false
   },
   {
@@ -25814,9 +25831,9 @@
     "total_project_cost_eur": 19999.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 59,
-    "market_median_eur": 10350,
-    "price_pct_vs_median": -8.2,
+    "market_sample_size": 58,
+    "market_median_eur": 10175,
+    "price_pct_vs_median": -6.6,
     "is_underpriced": false
   },
   {
@@ -25863,9 +25880,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 62,
-    "market_median_eur": 10245,
-    "price_pct_vs_median": -4.3,
+    "market_sample_size": 63,
+    "market_median_eur": 9990,
+    "price_pct_vs_median": -1.9,
     "is_underpriced": false
   },
   {
@@ -25901,9 +25918,9 @@
     "total_project_cost_eur": 20450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 50,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": 1.0,
+    "market_sample_size": 51,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": 1.5,
     "is_underpriced": false
   },
   {
@@ -25996,9 +26013,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 107,
-    "market_median_eur": 11990,
-    "price_pct_vs_median": -9.1,
+    "market_sample_size": 106,
+    "market_median_eur": 11840,
+    "price_pct_vs_median": -7.9,
     "is_underpriced": false
   },
   {
@@ -26072,9 +26089,9 @@
     "total_project_cost_eur": 21499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 50,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": 11.7,
+    "market_sample_size": 51,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": 12.2,
     "is_underpriced": false
   },
   {
@@ -26110,9 +26127,9 @@
     "total_project_cost_eur": 22190.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 97,
-    "market_median_eur": 10500,
-    "price_pct_vs_median": 11.3,
+    "market_sample_size": 96,
+    "market_median_eur": 10495,
+    "price_pct_vs_median": 11.4,
     "is_underpriced": false
   },
   {
@@ -26192,8 +26209,8 @@
     "total_project_cost_eur": 22499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 97,
-    "market_median_eur": 10500,
+    "market_sample_size": 96,
+    "market_median_eur": 10495,
     "price_pct_vs_median": 14.3,
     "is_underpriced": false
   },
@@ -26452,9 +26469,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 99,
-    "market_median_eur": 13923,
-    "price_pct_vs_median": -6.6,
+    "market_sample_size": 98,
+    "market_median_eur": 13712,
+    "price_pct_vs_median": -5.2,
     "is_underpriced": false
   },
   {
@@ -26708,8 +26725,8 @@
     "total_project_cost_eur": 24000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 97,
-    "market_median_eur": 10500,
+    "market_sample_size": 96,
+    "market_median_eur": 10495,
     "price_pct_vs_median": 28.6,
     "is_underpriced": false
   },
@@ -26966,9 +26983,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 107,
-    "market_median_eur": 11990,
-    "price_pct_vs_median": 16.1,
+    "market_sample_size": 106,
+    "market_median_eur": 11840,
+    "price_pct_vs_median": 17.6,
     "is_underpriced": false
   },
   {
@@ -27262,7 +27279,7 @@
     "total_project_cost_eur": 24750.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 69,
+    "market_sample_size": 70,
     "market_median_eur": 16000,
     "price_pct_vs_median": -10.9,
     "is_underpriced": false
@@ -27975,9 +27992,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 107,
-    "market_median_eur": 11990,
-    "price_pct_vs_median": 24.9,
+    "market_sample_size": 106,
+    "market_median_eur": 11840,
+    "price_pct_vs_median": 26.5,
     "is_underpriced": false
   },
   {
@@ -28299,9 +28316,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": -13.6,
+    "market_sample_size": 54,
+    "market_median_eur": 18200,
+    "price_pct_vs_median": -12.6,
     "is_underpriced": false
   },
   {
@@ -28749,9 +28766,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 99,
-    "market_median_eur": 13923,
-    "price_pct_vs_median": 20.7,
+    "market_sample_size": 98,
+    "market_median_eur": 13712,
+    "price_pct_vs_median": 22.5,
     "is_underpriced": false
   },
   {
@@ -28965,9 +28982,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 65,
-    "market_median_eur": 17700,
-    "price_pct_vs_median": -4.5,
+    "market_sample_size": 64,
+    "market_median_eur": 17750,
+    "price_pct_vs_median": -4.8,
     "is_underpriced": false
   },
   {
@@ -29268,44 +29285,6 @@
     "is_underpriced": false
   },
   {
-    "title": "Renault Master III Kasten L2H2 HKa 3,3t",
-    "url": "https://www.kleinanzeigen.de/s-anzeige/renault-master-iii-kasten-l2h2-hka-3-3t/3458557554-216-1407",
-    "source": "kleinanzeigen_de",
-    "country": "de",
-    "year": 2021,
-    "km": 74900,
-    "price_eur": 17700.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/d9/d98ee610-c3f2-4636-b961-4f06415bce3b?rule=$_2.AUTO"
-    ],
-    "vat_hint": null,
-    "model_group": "renault_master_grp",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "master",
-    "score": 53,
-    "vat_scheme": "unknown",
-    "price_gross_eur": 17700,
-    "vat_evidence": "no VAT signal",
-    "vat_confidence": "low",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 28200.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 65,
-    "market_median_eur": 17700,
-    "price_pct_vs_median": 0.0,
-    "is_underpriced": false
-  },
-  {
     "title": "Renault Master 2.3 dCi 135 PK L2H2 Work Edition Airco Navi",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2429842232-renault-master-2-3-dci-135-pk-l2h2-work-edition-airco-navi",
     "source": "marktplaats",
@@ -29512,6 +29491,42 @@
     "is_underpriced": false
   },
   {
+    "title": "MASTER III L2H2 HKa 3,3t NAVI/KAMERA/TEMPOMAT",
+    "url": "https://www.autoscout24.de/angebote/renault-master-master-iii-l2h2-hka-3-3t-navi-kamera-tempomat-diesel-weiss-cat_ma60gr201278ge1147va3662mt4398tr1367-01d53842-a304-4f3a-9b35-0dcd13f84503",
+    "source": "autoscout24_de",
+    "country": "de",
+    "year": 2021,
+    "km": 75284,
+    "price_eur": 17900.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [],
+    "vat_hint": null,
+    "model_group": "renault_master_grp",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "master",
+    "score": 53,
+    "vat_scheme": "unknown",
+    "price_gross_eur": 17900,
+    "vat_evidence": "no VAT signal",
+    "vat_confidence": "low",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 28400.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 64,
+    "market_median_eur": 17750,
+    "price_pct_vs_median": 0.8,
+    "is_underpriced": false
+  },
+  {
     "title": "Renault Trafic L2H2 2.0d Komfort Klima Kamera LED AHK KD+T\u00dcV NEU",
     "url": "https://www.kleinanzeigen.de/s-anzeige/renault-trafic-l2h2-2-0d-komfort-klima-kamera-led-ahk-kd-tuev-neu/3487075282-216-6021",
     "source": "kleinanzeigen_de",
@@ -29544,9 +29559,9 @@
     "total_project_cost_eur": 28400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 83,
-    "market_median_eur": 14999,
-    "price_pct_vs_median": 19.3,
+    "market_sample_size": 79,
+    "market_median_eur": 14900,
+    "price_pct_vs_median": 20.1,
     "is_underpriced": false
   },
   {
@@ -29868,9 +29883,9 @@
     "total_project_cost_eur": 29000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 71,
-    "market_median_eur": 10999,
-    "price_pct_vs_median": 68.2,
+    "market_sample_size": 72,
+    "market_median_eur": 10994,
+    "price_pct_vs_median": 68.3,
     "is_underpriced": false
   },
   {
@@ -30412,9 +30427,9 @@
     "total_project_cost_eur": 29490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": 3.2,
+    "market_sample_size": 54,
+    "market_median_eur": 18200,
+    "price_pct_vs_median": 4.3,
     "is_underpriced": false
   },
   {
@@ -31114,9 +31129,9 @@
     "total_project_cost_eur": 30480.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 65,
-    "market_median_eur": 17700,
-    "price_pct_vs_median": 12.9,
+    "market_sample_size": 64,
+    "market_median_eur": 17750,
+    "price_pct_vs_median": 12.6,
     "is_underpriced": false
   },
   {
@@ -31192,9 +31207,9 @@
     "total_project_cost_eur": 30490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 65,
-    "market_median_eur": 17700,
-    "price_pct_vs_median": 12.9,
+    "market_sample_size": 64,
+    "market_median_eur": 17750,
+    "price_pct_vs_median": 12.6,
     "is_underpriced": false
   },
   {
@@ -31230,9 +31245,9 @@
     "total_project_cost_eur": 30490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 65,
-    "market_median_eur": 17700,
-    "price_pct_vs_median": 12.9,
+    "market_sample_size": 64,
+    "market_median_eur": 17750,
+    "price_pct_vs_median": 12.6,
     "is_underpriced": false
   },
   {
@@ -31645,9 +31660,9 @@
     "total_project_cost_eur": 31450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 46,
-    "market_median_eur": 19625,
-    "price_pct_vs_median": 6.8,
+    "market_sample_size": 45,
+    "market_median_eur": 19500,
+    "price_pct_vs_median": 7.4,
     "is_underpriced": false
   },
   {
@@ -32229,9 +32244,9 @@
     "total_project_cost_eur": 32990.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": 22.2,
+    "market_sample_size": 54,
+    "market_median_eur": 18200,
+    "price_pct_vs_median": 23.6,
     "is_underpriced": false
   },
   {
@@ -32313,9 +32328,9 @@
     "total_project_cost_eur": 33350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": 24.2,
+    "market_sample_size": 54,
+    "market_median_eur": 18200,
+    "price_pct_vs_median": 25.5,
     "is_underpriced": false
   },
   {
@@ -33218,51 +33233,9 @@
     "total_project_cost_eur": 35300.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 46,
-    "market_median_eur": 19625,
-    "price_pct_vs_median": 26.4,
-    "is_underpriced": false
-  },
-  {
-    "title": "Master dCi 150 ENERGY dCi 150 L2H2 VA Komfort",
-    "url": "https://www.autoscout24.de/angebote/renault-master-master-dci-150-energy-dci-150-l2h2-va-komfort-diesel-weiss-cat_ma60gr201278ge1147va3662mt4400tr4774-03124a26-72d8-47fe-9c14-75a8b01ef6be",
-    "source": "autoscout24_de",
-    "country": "de",
-    "year": 2023,
-    "km": 57000,
-    "price_eur": 24890.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://prod.pictures.autoscout24.net/listing-images/03124a26-72d8-47fe-9c14-75a8b01ef6be_2b739218-7af4-4710-8dcd-78453d7a93a9.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/03124a26-72d8-47fe-9c14-75a8b01ef6be_dc8cba25-32fe-4904-8ac1-5ae29cdc6bd6.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/03124a26-72d8-47fe-9c14-75a8b01ef6be_ebe52fba-81a3-4b1e-978a-15f93699eabb.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/03124a26-72d8-47fe-9c14-75a8b01ef6be_d3b7c40d-2fb9-4090-9ea8-1a216a7cb8b8.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/03124a26-72d8-47fe-9c14-75a8b01ef6be_d47dd317-7403-431a-b929-a6b0253643d8.jpg/250x188.webp"
-    ],
-    "vat_hint": null,
-    "model_group": "renault_master_grp",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "master",
-    "score": 53,
-    "vat_scheme": "unknown",
-    "price_gross_eur": 24890,
-    "vat_evidence": "no VAT signal",
-    "vat_confidence": "low",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 35390.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 46,
-    "market_median_eur": 19625,
-    "price_pct_vs_median": 26.8,
+    "market_sample_size": 45,
+    "market_median_eur": 19500,
+    "price_pct_vs_median": 27.2,
     "is_underpriced": false
   },
   {
@@ -42075,50 +42048,6 @@
     "is_underpriced": false
   },
   {
-    "title": "Ford Transit Kasten 330 L3H2 Trend Kamera|AHK|Regale",
-    "url": "https://www.kleinanzeigen.de/s-anzeige/ford-transit-kasten-330-l3h2-trend-kamera-ahk-regale/3487823429-216-8607",
-    "source": "kleinanzeigen_de",
-    "country": "de",
-    "year": 2023,
-    "km": 100000,
-    "price_eur": 15990.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://img.kleinanzeigen.de/api/v1/prod-ads/images/4e/4ebb40c3-d071-40fe-bbbc-2b16d6fff624?rule=$_2.AUTO"
-    ],
-    "vat_hint": null,
-    "model_group": "ford_transit_l2h2",
-    "variant": "L3H2",
-    "classification_confidence": "high",
-    "matched_token": "transit",
-    "score": 50,
-    "vat_scheme": "unknown",
-    "price_gross_eur": 15990,
-    "vat_evidence": "no VAT signal",
-    "vat_confidence": "low",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 26490.0,
-    "risk_score": 2,
-    "risk_flags": [
-      {
-        "code": "very_high_km_per_year",
-        "label": "Very high km/year (33,333/yr) \u2014 highway-thrashed risk",
-        "severity": "high"
-      }
-    ],
-    "market_sample_size": 10,
-    "market_median_eur": 18750,
-    "price_pct_vs_median": -14.7,
-    "is_underpriced": false
-  },
-  {
     "title": "Ford Transit 350 2.0 TDCI L3H2 AUTOMAAT - Camera - Voorruitverw - Airco - Trekhaak - drie zitplaatsen - APPLE CARPLAY",
     "url": "https://www.regeljelease.nl/voertuig/ford-transit-2019-diesel-857397",
     "source": "regeljelease",
@@ -42209,9 +42138,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 10,
-    "market_median_eur": 18750,
-    "price_pct_vs_median": -9.4,
+    "market_sample_size": 11,
+    "market_median_eur": 18999,
+    "price_pct_vs_median": -10.6,
     "is_underpriced": false
   },
   {
@@ -42694,7 +42623,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 52,
+    "market_sample_size": 53,
     "market_median_eur": 24950,
     "price_pct_vs_median": -7.8,
     "is_underpriced": false
@@ -42778,9 +42707,9 @@
     "total_project_cost_eur": 43213.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 55,
-    "market_median_eur": 17900,
-    "price_pct_vs_median": 82.8,
+    "market_sample_size": 54,
+    "market_median_eur": 17450,
+    "price_pct_vs_median": 87.5,
     "is_underpriced": false
   },
   {
@@ -42866,9 +42795,51 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 58,
-    "market_median_eur": 19245,
-    "price_pct_vs_median": 73.1,
+    "market_sample_size": 55,
+    "market_median_eur": 19000,
+    "price_pct_vs_median": 75.3,
+    "is_underpriced": false
+  },
+  {
+    "title": "Transit 350 L3H2 Lkw VA Trend *KAMERA*ACC*KLIMA*BL",
+    "url": "https://www.autoscout24.de/angebote/ford-transit-transit-350-l3h2-lkw-va-trend-kamera-acc-klima-bl-diesel-weiss-cat_ma29gr2160ge457va2841mt12433tr396-eea63725-1e35-4c74-a735-ae7d2dd26172",
+    "source": "autoscout24_de",
+    "country": "de",
+    "year": 2024,
+    "km": 100,
+    "price_eur": 33690.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://prod.pictures.autoscout24.net/listing-images/eea63725-1e35-4c74-a735-ae7d2dd26172_b0b7cb3b-b9f2-492d-acd0-5f02158983f4.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/eea63725-1e35-4c74-a735-ae7d2dd26172_9814e260-6cc1-4ff7-a0ee-4decb5b71645.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/eea63725-1e35-4c74-a735-ae7d2dd26172_0c013840-9b9f-49fa-9ac4-a9b716e2acc2.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/eea63725-1e35-4c74-a735-ae7d2dd26172_dd4b3cca-0e4b-42f0-b953-9ec845087418.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/eea63725-1e35-4c74-a735-ae7d2dd26172_a88ff48b-7571-4179-95d5-8664cb54de30.jpg/250x188.webp"
+    ],
+    "vat_hint": null,
+    "model_group": "ford_transit_l2h2",
+    "variant": "L3H2",
+    "classification_confidence": "high",
+    "matched_token": "transit",
+    "score": 50,
+    "vat_scheme": "unknown",
+    "price_gross_eur": 33690,
+    "vat_evidence": "no VAT signal",
+    "vat_confidence": "low",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 44190.0,
+    "risk_score": 0,
+    "risk_flags": [],
+    "market_sample_size": 9,
+    "market_median_eur": 18999,
+    "price_pct_vs_median": 77.3,
     "is_underpriced": false
   },
   {
@@ -42910,9 +42881,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 55,
-    "market_median_eur": 17900,
-    "price_pct_vs_median": 92.7,
+    "market_sample_size": 54,
+    "market_median_eur": 17450,
+    "price_pct_vs_median": 97.7,
     "is_underpriced": false
   },
   {
@@ -42954,7 +42925,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 40,
+    "market_sample_size": 36,
     "market_median_eur": 22240,
     "price_pct_vs_median": 70.6,
     "is_underpriced": false
@@ -43003,9 +42974,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 59,
-    "market_median_eur": 10350,
-    "price_pct_vs_median": -14.0,
+    "market_sample_size": 58,
+    "market_median_eur": 10175,
+    "price_pct_vs_median": -12.5,
     "is_underpriced": false
   },
   {
@@ -43047,8 +43018,8 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 97,
-    "market_median_eur": 10500,
+    "market_sample_size": 96,
+    "market_median_eur": 10495,
     "price_pct_vs_median": -9.6,
     "is_underpriced": false
   },
@@ -43096,8 +43067,8 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 71,
-    "market_median_eur": 10999,
+    "market_sample_size": 72,
+    "market_median_eur": 10994,
     "price_pct_vs_median": -10.9,
     "is_underpriced": false
   },
@@ -43145,9 +43116,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 50,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": -0.5,
+    "market_sample_size": 51,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
   {
@@ -43183,9 +43154,9 @@
     "total_project_cost_eur": 20499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 59,
-    "market_median_eur": 10350,
-    "price_pct_vs_median": -3.4,
+    "market_sample_size": 58,
+    "market_median_eur": 10175,
+    "price_pct_vs_median": -1.7,
     "is_underpriced": false
   },
   {
@@ -43227,9 +43198,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 107,
-    "market_median_eur": 11990,
-    "price_pct_vs_median": -12.5,
+    "market_sample_size": 106,
+    "market_median_eur": 11840,
+    "price_pct_vs_median": -11.4,
     "is_underpriced": false
   },
   {
@@ -43265,8 +43236,8 @@
     "total_project_cost_eur": 21000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 97,
-    "market_median_eur": 10500,
+    "market_sample_size": 96,
+    "market_median_eur": 10495,
     "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
@@ -43314,9 +43285,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 50,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": 6.6,
+    "market_sample_size": 51,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": 7.1,
     "is_underpriced": false
   },
   {
@@ -43401,9 +43372,9 @@
     "total_project_cost_eur": 21499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 85,
-    "market_median_eur": 10350,
-    "price_pct_vs_median": 6.3,
+    "market_sample_size": 84,
+    "market_median_eur": 10275,
+    "price_pct_vs_median": 7.0,
     "is_underpriced": false
   },
   {
@@ -43439,9 +43410,9 @@
     "total_project_cost_eur": 21499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 50,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": 11.7,
+    "market_sample_size": 51,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": 12.2,
     "is_underpriced": false
   },
   {
@@ -43488,9 +43459,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 62,
-    "market_median_eur": 10245,
-    "price_pct_vs_median": 7.4,
+    "market_sample_size": 63,
+    "market_median_eur": 9990,
+    "price_pct_vs_median": 10.1,
     "is_underpriced": false
   },
   {
@@ -43615,9 +43586,9 @@
     "total_project_cost_eur": 22000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 50,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": 16.8,
+    "market_sample_size": 51,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": 17.3,
     "is_underpriced": false
   },
   {
@@ -43664,9 +43635,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 71,
-    "market_median_eur": 13499,
-    "price_pct_vs_median": -14.8,
+    "market_sample_size": 72,
+    "market_median_eur": 13200,
+    "price_pct_vs_median": -12.9,
     "is_underpriced": false
   },
   {
@@ -43740,9 +43711,9 @@
     "total_project_cost_eur": 23990.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 85,
-    "market_median_eur": 10350,
-    "price_pct_vs_median": 30.3,
+    "market_sample_size": 84,
+    "market_median_eur": 10275,
+    "price_pct_vs_median": 31.3,
     "is_underpriced": false
   },
   {
@@ -44125,9 +44096,9 @@
     "total_project_cost_eur": 24990.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 97,
-    "market_median_eur": 10500,
-    "price_pct_vs_median": 38.0,
+    "market_sample_size": 96,
+    "market_median_eur": 10495,
+    "price_pct_vs_median": 38.1,
     "is_underpriced": false
   },
   {
@@ -44163,9 +44134,9 @@
     "total_project_cost_eur": 25400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 50,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": 51.3,
+    "market_sample_size": 51,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": 52.0,
     "is_underpriced": false
   },
   {
@@ -44465,9 +44436,9 @@
     "total_project_cost_eur": 26490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 97,
-    "market_median_eur": 10500,
-    "price_pct_vs_median": 52.3,
+    "market_sample_size": 96,
+    "market_median_eur": 10495,
+    "price_pct_vs_median": 52.4,
     "is_underpriced": false
   },
   {
@@ -44869,9 +44840,9 @@
     "total_project_cost_eur": 27990.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 71,
-    "market_median_eur": 10999,
-    "price_pct_vs_median": 59.0,
+    "market_sample_size": 72,
+    "market_median_eur": 10994,
+    "price_pct_vs_median": 59.1,
     "is_underpriced": false
   },
   {
@@ -44907,9 +44878,9 @@
     "total_project_cost_eur": 28100.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": -4.3,
+    "market_sample_size": 54,
+    "market_median_eur": 18200,
+    "price_pct_vs_median": -3.3,
     "is_underpriced": false
   },
   {
@@ -45075,9 +45046,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 46,
-    "market_median_eur": 19625,
-    "price_pct_vs_median": -8.3,
+    "market_sample_size": 45,
+    "market_median_eur": 19500,
+    "price_pct_vs_median": -7.7,
     "is_underpriced": false
   },
   {
@@ -45189,9 +45160,9 @@
     "total_project_cost_eur": 28899.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 65,
-    "market_median_eur": 17700,
-    "price_pct_vs_median": 3.9,
+    "market_sample_size": 64,
+    "market_median_eur": 17750,
+    "price_pct_vs_median": 3.7,
     "is_underpriced": false
   },
   {
@@ -45309,9 +45280,9 @@
     "total_project_cost_eur": 29150.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 65,
-    "market_median_eur": 17700,
-    "price_pct_vs_median": 5.4,
+    "market_sample_size": 64,
+    "market_median_eur": 17750,
+    "price_pct_vs_median": 5.1,
     "is_underpriced": false
   },
   {
@@ -45515,9 +45486,9 @@
     "total_project_cost_eur": 30250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 65,
-    "market_median_eur": 17700,
-    "price_pct_vs_median": 11.6,
+    "market_sample_size": 64,
+    "market_median_eur": 17750,
+    "price_pct_vs_median": 11.3,
     "is_underpriced": false
   },
   {
@@ -45730,9 +45701,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 46,
-    "market_median_eur": 19625,
-    "price_pct_vs_median": 1.7,
+    "market_sample_size": 45,
+    "market_median_eur": 19500,
+    "price_pct_vs_median": 2.3,
     "is_underpriced": false
   },
   {
@@ -45850,9 +45821,9 @@
     "total_project_cost_eur": 31380.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": 13.5,
+    "market_sample_size": 54,
+    "market_median_eur": 18200,
+    "price_pct_vs_median": 14.7,
     "is_underpriced": false
   },
   {
@@ -46096,9 +46067,9 @@
     "total_project_cost_eur": 32490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": 19.5,
+    "market_sample_size": 54,
+    "market_median_eur": 18200,
+    "price_pct_vs_median": 20.8,
     "is_underpriced": false
   },
   {
@@ -46212,9 +46183,9 @@
     "total_project_cost_eur": 33000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 30,
-    "market_median_eur": 19725,
-    "price_pct_vs_median": 14.1,
+    "market_sample_size": 29,
+    "market_median_eur": 19500,
+    "price_pct_vs_median": 15.4,
     "is_underpriced": false
   },
   {
@@ -46673,9 +46644,9 @@
     "total_project_cost_eur": 35480.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 30,
-    "market_median_eur": 19725,
-    "price_pct_vs_median": 26.6,
+    "market_sample_size": 29,
+    "market_median_eur": 19500,
+    "price_pct_vs_median": 28.1,
     "is_underpriced": false
   },
   {
@@ -46717,9 +46688,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 46,
-    "market_median_eur": 19625,
-    "price_pct_vs_median": 27.3,
+    "market_sample_size": 45,
+    "market_median_eur": 19500,
+    "price_pct_vs_median": 28.2,
     "is_underpriced": false
   },
   {
@@ -47144,11 +47115,11 @@
     "weight_kg": null,
     "remarks": "",
     "images": [
-      "https://prod.pictures.autoscout24.net/listing-images/911f92a5-cff6-4ce4-8351-c9cc278915c3_dec0e32b-51cc-4238-92a4-ac109ca5ed8a.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/911f92a5-cff6-4ce4-8351-c9cc278915c3_427f0639-c121-47b1-9599-536f32117fd8.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/911f92a5-cff6-4ce4-8351-c9cc278915c3_7b195fa8-15af-4a79-98ce-68a5f5efed7e.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/911f92a5-cff6-4ce4-8351-c9cc278915c3_fd4203e2-d14d-4851-a9ee-045116892308.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/911f92a5-cff6-4ce4-8351-c9cc278915c3_8018806f-6bfb-4c7f-91b4-17e1cc0430e8.jpg/250x188.webp"
+      "https://prod.pictures.autoscout24.net/listing-images/911f92a5-cff6-4ce4-8351-c9cc278915c3_afa9fd30-9783-4815-9ac5-9cbafa6bed24.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/911f92a5-cff6-4ce4-8351-c9cc278915c3_496a5951-0ab3-440f-9c7b-d6ab04afbf99.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/911f92a5-cff6-4ce4-8351-c9cc278915c3_bc3d12ed-1855-4471-939f-a20320729927.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/911f92a5-cff6-4ce4-8351-c9cc278915c3_5136e95f-4e82-4bdf-b4cc-f85132ae9f45.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/911f92a5-cff6-4ce4-8351-c9cc278915c3_d47cbf92-c851-4385-9b2a-ff6a2fc6bf6e.jpg/250x188.webp"
     ],
     "vat_hint": null,
     "model_group": "renault_master_grp",
@@ -47167,9 +47138,9 @@
     "total_project_cost_eur": 42490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": 73.9,
+    "market_sample_size": 54,
+    "market_median_eur": 18200,
+    "price_pct_vs_median": 75.8,
     "is_underpriced": false
   },
   {
@@ -47405,9 +47376,9 @@
     "total_project_cost_eur": 65500.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 65,
-    "market_median_eur": 17700,
-    "price_pct_vs_median": 210.7,
+    "market_sample_size": 64,
+    "market_median_eur": 17750,
+    "price_pct_vs_median": 209.9,
     "is_underpriced": false
   },
   {

@@ -37999,6 +37999,12 @@
           "current_bid_eur": 1950.0,
           "bids_count": 33,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-19T00:59:37.698390+00:00",
+          "current_bid_eur": 2100.0,
+          "bids_count": 35,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -38190,6 +38196,12 @@
           "ts": "2026-08-09T06:57:13.655373+00:00",
           "current_bid_eur": 2100.0,
           "bids_count": 35,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-19T00:59:37.698390+00:00",
+          "current_bid_eur": 2200.0,
+          "bids_count": 36,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -42502,6 +42514,12 @@
           "current_bid_eur": 3450.0,
           "bids_count": 11,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-19T00:59:37.698390+00:00",
+          "current_bid_eur": 3950.0,
+          "bids_count": 16,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -43540,6 +43558,12 @@
           "current_bid_eur": 1500.0,
           "bids_count": 6,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-19T00:59:37.698390+00:00",
+          "current_bid_eur": 2000.0,
+          "bids_count": 11,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -43785,6 +43809,12 @@
           "ts": "2026-08-18T01:05:20.897722+00:00",
           "current_bid_eur": 1250.0,
           "bids_count": 6,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-19T00:59:37.698390+00:00",
+          "current_bid_eur": 1350.0,
+          "bids_count": 8,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -45934,6 +45964,12 @@
           "current_bid_eur": 3200.0,
           "bids_count": 8,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-19T00:59:37.698390+00:00",
+          "current_bid_eur": 4200.0,
+          "bids_count": 12,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -46503,6 +46539,12 @@
           "ts": "2026-08-15T01:03:41.733887+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-19T00:59:37.698390+00:00",
+          "current_bid_eur": 3300.0,
+          "bids_count": 2,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -47563,6 +47605,156 @@
       "snapshots": [
         {
           "ts": "2026-08-18T18:55:32.032164+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "e3987978-4959-4338-9c6f-dc36d6e0b2a1": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-trafic-camper-2-5-t-1400-d-rapido-le-randonneur-camper-van-hn-647-f-A1-40737-10",
+      "model_token": "trafic",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-19T00:59:37.698390+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "fc2d9844-2299-45d6-b29c-17ddd6c174b5": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-multivan-2-0-comfortline-l-629-px-A1-40737-500",
+      "model_token": "transporter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-19T00:59:37.698390+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "0fffbaf9-a9ec-4f82-b680-6d7503ea2c01": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-vito-110cdi-vz-818-iv-A1-40737-4212",
+      "model_token": "vito",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-19T00:59:37.698390+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "e68f0e44-1b9d-46b3-a7b1-fb9be26037af": {
+      "url": "https://www.troostwijkauctions.com/en/l/citroen-jumper-27ch-1-9td-car-1997-vr-pj-36-A1-40737-217",
+      "model_token": "jumper",
+      "year": 1997,
+      "snapshots": [
+        {
+          "ts": "2026-08-19T00:59:37.698390+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "85b24bdf-bac9-497e-ad4e-e729e799e711": {
+      "url": "https://www.troostwijkauctions.com/en/l/citroen-jumper-33-2-2-hdi-l3h2-vh-493-j-A1-40737-266",
+      "model_token": "jumper",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-19T00:59:37.698390+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "c661edec-738d-4051-80fd-45941a1c1139": {
+      "url": "https://www.troostwijkauctions.com/en/l/citroen-jumper-30-2-2-hdi-l2h1-ec-vz-814-f-A1-40737-460",
+      "model_token": "jumper",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-19T00:59:37.698390+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "00198c10-cf10-499e-a2b3-9e4cd6e9d97a": {
+      "url": "https://www.vavato.com/en/l/fiat-scudo-1-6-mj-kh1-commercial-vehicle-A1-47864-3",
+      "model_token": "scudo",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-19T00:59:37.698390+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "248f64b0-c606-48e1-8f08-9855f9ae774c": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-330-2-0-tdci-l3h3-trend-v-56-nnh-A1-40737-484",
+      "model_token": "transit",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-19T00:59:37.698390+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "7492f261-ce33-4349-ad0f-e68a68d2d06e": {
+      "url": "https://www.troostwijkauctions.com/en/l/2014-ford-transit-350-2-2-tdci-l2h2-tr-vk-491-g-A1-40737-487",
+      "model_token": "transit",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-08-19T00:59:37.698390+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "b36e24ff-31e8-413e-be1f-6841901b32e0": {
+      "url": "https://www.troostwijkauctions.com/en/l/2019-ford-transit-350-2-0-tdcil4h1amsk-box-truck-tail-lift-v-058-tz-A1-40737-512",
+      "model_token": "transit",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-08-19T00:59:37.698390+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
