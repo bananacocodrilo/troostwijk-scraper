@@ -38812,6 +38812,12 @@
           "current_bid_eur": 1800.0,
           "bids_count": 18,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-20T06:44:29.387417+00:00",
+          "current_bid_eur": 1900.0,
+          "bids_count": 20,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -42568,6 +42574,12 @@
           "current_bid_eur": 4250.0,
           "bids_count": 18,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-20T06:44:29.387417+00:00",
+          "current_bid_eur": 4850.0,
+          "bids_count": 21,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -43545,6 +43557,12 @@
           "ts": "2026-08-13T01:26:38.776543+00:00",
           "current_bid_eur": 1050.0,
           "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-20T06:44:29.387417+00:00",
+          "current_bid_eur": 1150.0,
+          "bids_count": 5,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -48517,6 +48535,51 @@
       "snapshots": [
         {
           "ts": "2026-08-20T00:58:36.635464+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "9aab3c88-7a5a-4ba2-b506-87b62d32741e": {
+      "url": "https://www.vavato.com/en/l/2011-volkswagen-transporter-t5-commercial-vehicle-A3-46145-11857",
+      "model_token": "transporter",
+      "year": 2011,
+      "snapshots": [
+        {
+          "ts": "2026-08-20T06:44:29.387417+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "dbe3cc33-c7eb-4930-9593-2a026e698fa2": {
+      "url": "https://www.vavato.com/en/l/2023-ford-transit-custom-commercial-vehicle-A3-46145-11256",
+      "model_token": "transit custom",
+      "year": 2023,
+      "snapshots": [
+        {
+          "ts": "2026-08-20T06:44:29.387417+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "508bf548-1e57-4086-8d22-fbe058929504": {
+      "url": "https://www.vavato.com/en/l/2012-ford-transit-commercial-vehicle-A3-46145-11117",
+      "model_token": "transit",
+      "year": 2012,
+      "snapshots": [
+        {
+          "ts": "2026-08-20T06:44:29.387417+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
