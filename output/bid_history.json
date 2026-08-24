@@ -38923,6 +38923,12 @@
           "current_bid_eur": 2900.0,
           "bids_count": 43,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-24T12:50:09.943613+00:00",
+          "current_bid_eur": 3200.0,
+          "bids_count": 45,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -40017,6 +40023,12 @@
           "ts": "2026-08-22T06:40:29.348176+00:00",
           "current_bid_eur": 4800.0,
           "bids_count": 46,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-24T12:50:09.943613+00:00",
+          "current_bid_eur": 5000.0,
+          "bids_count": 47,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -43714,6 +43726,12 @@
           "current_bid_eur": 1300.0,
           "bids_count": 8,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-24T12:50:09.943613+00:00",
+          "current_bid_eur": 1400.0,
+          "bids_count": 10,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -46288,6 +46306,12 @@
           "current_bid_eur": 5000.0,
           "bids_count": 21,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-24T12:50:09.943613+00:00",
+          "current_bid_eur": 5400.0,
+          "bids_count": 23,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -46638,6 +46662,12 @@
           "ts": "2026-08-20T00:58:36.635464+00:00",
           "current_bid_eur": 6200.0,
           "bids_count": 7,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-24T12:50:09.943613+00:00",
+          "current_bid_eur": 6600.0,
+          "bids_count": 9,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -47286,6 +47316,12 @@
           "ts": "2026-08-24T06:56:17.627101+00:00",
           "current_bid_eur": 3400.0,
           "bids_count": 45,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-24T12:50:09.943613+00:00",
+          "current_bid_eur": 3500.0,
+          "bids_count": 46,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -48249,6 +48285,12 @@
           "ts": "2026-08-24T01:06:54.265479+00:00",
           "current_bid_eur": 5400.0,
           "bids_count": 23,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-24T12:50:09.943613+00:00",
+          "current_bid_eur": 5600.0,
+          "bids_count": 24,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -49456,6 +49498,12 @@
           "current_bid_eur": 2700.0,
           "bids_count": 13,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-24T12:50:09.943613+00:00",
+          "current_bid_eur": 3500.0,
+          "bids_count": 15,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -49845,6 +49893,12 @@
           "ts": "2026-08-23T18:40:37.762209+00:00",
           "current_bid_eur": 3100.0,
           "bids_count": 6,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-24T12:50:09.943613+00:00",
+          "current_bid_eur": 3300.0,
+          "bids_count": 8,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -50668,6 +50722,12 @@
           "current_bid_eur": 1.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-08-24T12:50:09.943613+00:00",
+          "current_bid_eur": 16.0,
+          "bids_count": 4,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -51148,6 +51208,21 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "a485d848-0042-4f47-b9b7-686c39539b56": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-custom-270-2-2-tdci-l1h1-trend-%257C-vr-322-p-A1-44180-10011",
+      "model_token": "transit custom",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-08-24T12:50:09.943613+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
