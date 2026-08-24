@@ -43,9 +43,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 85,
-    "market_median_eur": 9900,
-    "price_pct_vs_median": -40.4,
+    "market_sample_size": 86,
+    "market_median_eur": 9850,
+    "price_pct_vs_median": -40.1,
     "is_underpriced": true
   },
   {
@@ -426,7 +426,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": -57.3,
     "is_underpriced": true
@@ -613,9 +613,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 32,
-    "market_median_eur": 20695,
-    "price_pct_vs_median": -15.4,
+    "market_sample_size": 34,
+    "market_median_eur": 21925,
+    "price_pct_vs_median": -20.2,
     "is_underpriced": true
   },
   {
@@ -653,9 +653,9 @@
     "total_project_cost_eur": 30250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": -25.9,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": -26.7,
     "is_underpriced": true
   },
   {
@@ -693,9 +693,9 @@
     "total_project_cost_eur": 30250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": -25.9,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": -26.7,
     "is_underpriced": true
   },
   {
@@ -1313,9 +1313,9 @@
     "total_project_cost_eur": 22450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 41,
-    "market_median_eur": 19900,
-    "price_pct_vs_median": -39.9,
+    "market_sample_size": 40,
+    "market_median_eur": 19500,
+    "price_pct_vs_median": -38.7,
     "is_underpriced": true
   },
   {
@@ -1896,7 +1896,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 90,
+    "market_sample_size": 89,
     "market_median_eur": 23900,
     "price_pct_vs_median": -38.1,
     "is_underpriced": true
@@ -2126,7 +2126,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 90,
+    "market_sample_size": 89,
     "market_median_eur": 23900,
     "price_pct_vs_median": -33.9,
     "is_underpriced": true
@@ -2492,7 +2492,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 90,
+    "market_sample_size": 89,
     "market_median_eur": 23900,
     "price_pct_vs_median": -25.5,
     "is_underpriced": true
@@ -2762,9 +2762,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 27,
-    "market_median_eur": 22598,
-    "price_pct_vs_median": -20.0,
+    "market_sample_size": 25,
+    "market_median_eur": 22420,
+    "price_pct_vs_median": -19.3,
     "is_underpriced": true
   },
   {
@@ -4735,6 +4735,54 @@
     "is_underpriced": true
   },
   {
+    "title": "TRANSIT KASTEN 2.0 L2 H2 3SZ KLIMA PDC CR",
+    "url": "https://www.autoscout24.de/angebote/ford-transit-transit-kasten-2-0-l2-h2-3sz-klima-pdc-cr-diesel-weiss-cat_ma29gr2160ge457va393mt12433tr380-f8fddbc8-6544-47f6-83af-9c224ac2275b",
+    "source": "autoscout24_de",
+    "country": "de",
+    "year": 2020,
+    "km": 139900,
+    "price_eur": 12595.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://prod.pictures.autoscout24.net/listing-images/f8fddbc8-6544-47f6-83af-9c224ac2275b_26b76b7a-cf30-483b-8f22-d5a570ae2063.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/f8fddbc8-6544-47f6-83af-9c224ac2275b_5277163a-9d08-4752-8c75-b06b9eab165c.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/f8fddbc8-6544-47f6-83af-9c224ac2275b_5d089f4a-8359-4622-98c9-6af75bef6ab0.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/f8fddbc8-6544-47f6-83af-9c224ac2275b_ebcaaec5-d1a1-4698-88ca-e35028372ffa.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/f8fddbc8-6544-47f6-83af-9c224ac2275b_19eaeb84-f24a-4d6a-ab40-7478262d2e66.jpg/250x188.webp"
+    ],
+    "vat_hint": null,
+    "model_group": "ford_transit_l2h2",
+    "variant": "L2H2",
+    "classification_confidence": "high",
+    "matched_token": "transit",
+    "score": 55,
+    "vat_scheme": "unknown",
+    "price_gross_eur": 12595,
+    "vat_evidence": "no VAT signal",
+    "vat_confidence": "low",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 23095.0,
+    "risk_score": 1,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (23,316/yr) \u2014 above-average wear",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 17,
+    "market_median_eur": 17000,
+    "price_pct_vs_median": -25.9,
+    "is_underpriced": true
+  },
+  {
     "title": "Ford Transit 350 2.0 TDCI L2H2 Trend Automaat Airco Cruise C",
     "url": "https://www.marktplaats.nl/v/auto-s/bestelauto-s/m2430567072-ford-transit-350-2-0-tdci-l2h2-trend-automaat-airco-cruise-c",
     "source": "marktplaats",
@@ -5303,9 +5351,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": -25.9,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": -26.7,
     "is_underpriced": true
   },
   {
@@ -5347,9 +5395,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": -25.2,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": -26.0,
     "is_underpriced": true
   },
   {
@@ -5391,8 +5439,8 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 69,
-    "market_median_eur": 17800,
+    "market_sample_size": 68,
+    "market_median_eur": 17794,
     "price_pct_vs_median": -53.9,
     "is_underpriced": true
   },
@@ -5473,9 +5521,9 @@
     "total_project_cost_eur": 15199.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 68,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": -52.3,
+    "market_sample_size": 69,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": -52.1,
     "is_underpriced": true
   },
   {
@@ -5712,9 +5760,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 100,
-    "market_median_eur": 10250,
-    "price_pct_vs_median": -45.5,
+    "market_sample_size": 101,
+    "market_median_eur": 9999,
+    "price_pct_vs_median": -44.1,
     "is_underpriced": true
   },
   {
@@ -5761,9 +5809,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 68,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": -42.1,
+    "market_sample_size": 69,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": -41.8,
     "is_underpriced": true
   },
   {
@@ -5848,9 +5896,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 85,
-    "market_median_eur": 9900,
-    "price_pct_vs_median": -34.3,
+    "market_sample_size": 86,
+    "market_median_eur": 9850,
+    "price_pct_vs_median": -34.0,
     "is_underpriced": true
   },
   {
@@ -5886,7 +5934,7 @@
     "total_project_cost_eur": 17400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 98,
+    "market_sample_size": 97,
     "market_median_eur": 10990,
     "price_pct_vs_median": -37.2,
     "is_underpriced": true
@@ -5935,9 +5983,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": -50.4,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": -50.0,
     "is_underpriced": true
   },
   {
@@ -5984,9 +6032,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 85,
-    "market_median_eur": 9900,
-    "price_pct_vs_median": -29.3,
+    "market_sample_size": 86,
+    "market_median_eur": 9850,
+    "price_pct_vs_median": -28.9,
     "is_underpriced": true
   },
   {
@@ -6033,9 +6081,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 85,
-    "market_median_eur": 9900,
-    "price_pct_vs_median": -29.3,
+    "market_sample_size": 86,
+    "market_median_eur": 9850,
+    "price_pct_vs_median": -28.9,
     "is_underpriced": true
   },
   {
@@ -6120,7 +6168,7 @@
     "total_project_cost_eur": 17990.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 98,
+    "market_sample_size": 97,
     "market_median_eur": 10990,
     "price_pct_vs_median": -31.8,
     "is_underpriced": true
@@ -6300,7 +6348,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": -47.0,
     "is_underpriced": true
@@ -6451,9 +6499,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 100,
-    "market_median_eur": 10250,
-    "price_pct_vs_median": -22.0,
+    "market_sample_size": 101,
+    "market_median_eur": 9999,
+    "price_pct_vs_median": -20.1,
     "is_underpriced": true
   },
   {
@@ -6500,9 +6548,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 100,
-    "market_median_eur": 10250,
-    "price_pct_vs_median": -22.0,
+    "market_sample_size": 101,
+    "market_median_eur": 9999,
+    "price_pct_vs_median": -20.1,
     "is_underpriced": true
   },
   {
@@ -6625,7 +6673,7 @@
     "total_project_cost_eur": 18990.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 98,
+    "market_sample_size": 97,
     "market_median_eur": 10990,
     "price_pct_vs_median": -22.7,
     "is_underpriced": true
@@ -6674,9 +6722,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": -38.5,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": -38.2,
     "is_underpriced": true
   },
   {
@@ -6760,9 +6808,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": -39.8,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": -39.3,
     "is_underpriced": true
   },
   {
@@ -6798,7 +6846,7 @@
     "total_project_cost_eur": 19000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 98,
+    "market_sample_size": 97,
     "market_median_eur": 10990,
     "price_pct_vs_median": -22.7,
     "is_underpriced": true
@@ -7018,9 +7066,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": -35.3,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": -34.9,
     "is_underpriced": true
   },
   {
@@ -7198,7 +7246,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": -37.0,
     "is_underpriced": true
@@ -7585,7 +7633,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 99,
+    "market_sample_size": 100,
     "market_median_eur": 12500,
     "price_pct_vs_median": -20.1,
     "is_underpriced": true
@@ -7631,9 +7679,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": -22.2,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": -21.8,
     "is_underpriced": true
   },
   {
@@ -7763,7 +7811,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": -27.3,
     "is_underpriced": true
@@ -7812,9 +7860,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": -20.8,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": -20.4,
     "is_underpriced": true
   },
   {
@@ -7858,9 +7906,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": -20.8,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": -20.4,
     "is_underpriced": true
   },
   {
@@ -7958,9 +8006,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": -20.8,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": -20.4,
     "is_underpriced": true
   },
   {
@@ -8002,9 +8050,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": -17.2,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": -16.7,
     "is_underpriced": true
   },
   {
@@ -8046,9 +8094,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 80,
-    "market_median_eur": 15700,
-    "price_pct_vs_median": -24.8,
+    "market_sample_size": 79,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": -23.9,
     "is_underpriced": true
   },
   {
@@ -8092,7 +8140,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": -21.0,
     "is_underpriced": true
@@ -8272,7 +8320,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": -20.3,
     "is_underpriced": true
@@ -8542,9 +8590,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": -34.8,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": -34.2,
     "is_underpriced": true
   },
   {
@@ -8676,9 +8724,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": -34.3,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": -33.7,
     "is_underpriced": true
   },
   {
@@ -8854,7 +8902,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": -33.9,
     "is_underpriced": true
@@ -9132,7 +9180,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 55,
+    "market_sample_size": 54,
     "market_median_eur": 17000,
     "price_pct_vs_median": -17.7,
     "is_underpriced": true
@@ -9176,9 +9224,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": -26.7,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": -26.0,
     "is_underpriced": true
   },
   {
@@ -9352,9 +9400,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": -24.7,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": -24.0,
     "is_underpriced": true
   },
   {
@@ -9488,9 +9536,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": -24.1,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": -23.5,
     "is_underpriced": true
   },
   {
@@ -9534,7 +9582,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": -27.2,
     "is_underpriced": true
@@ -9760,7 +9808,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": -23.6,
     "is_underpriced": true
@@ -10321,9 +10369,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 79,
-    "market_median_eur": 16449,
-    "price_pct_vs_median": -21.6,
+    "market_sample_size": 78,
+    "market_median_eur": 16224,
+    "price_pct_vs_median": -20.5,
     "is_underpriced": true
   },
   {
@@ -10410,9 +10458,9 @@
     "total_project_cost_eur": 24179.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 77,
-    "market_median_eur": 18400,
-    "price_pct_vs_median": -25.7,
+    "market_sample_size": 76,
+    "market_median_eur": 18200,
+    "price_pct_vs_median": -24.8,
     "is_underpriced": true
   },
   {
@@ -12367,7 +12415,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 90,
+    "market_sample_size": 89,
     "market_median_eur": 23900,
     "price_pct_vs_median": -33.5,
     "is_underpriced": true
@@ -12413,7 +12461,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 90,
+    "market_sample_size": 89,
     "market_median_eur": 23900,
     "price_pct_vs_median": -21.5,
     "is_underpriced": true
@@ -12459,7 +12507,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 90,
+    "market_sample_size": 89,
     "market_median_eur": 23900,
     "price_pct_vs_median": -16.5,
     "is_underpriced": true
@@ -12503,9 +12551,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 76,
-    "market_median_eur": 21175,
-    "price_pct_vs_median": -92.9,
+    "market_sample_size": 75,
+    "market_median_eur": 20950,
+    "price_pct_vs_median": -92.8,
     "is_underpriced": true
   },
   {
@@ -12541,8 +12589,8 @@
     "total_project_cost_eur": 14750.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 69,
-    "market_median_eur": 17800,
+    "market_sample_size": 68,
+    "market_median_eur": 17794,
     "price_pct_vs_median": -76.1,
     "is_underpriced": true
   },
@@ -12732,9 +12780,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 85,
-    "market_median_eur": 9900,
-    "price_pct_vs_median": -40.4,
+    "market_sample_size": 86,
+    "market_median_eur": 9850,
+    "price_pct_vs_median": -40.1,
     "is_underpriced": true
   },
   {
@@ -12830,9 +12878,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": -65.2,
+    "market_sample_size": 54,
+    "market_median_eur": 18274,
+    "price_pct_vs_median": -65.0,
     "is_underpriced": true
   },
   {
@@ -12923,9 +12971,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 100,
-    "market_median_eur": 10250,
-    "price_pct_vs_median": -36.6,
+    "market_sample_size": 101,
+    "market_median_eur": 9999,
+    "price_pct_vs_median": -35.0,
     "is_underpriced": true
   },
   {
@@ -13021,9 +13069,62 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 68,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": -29.3,
+    "market_sample_size": 69,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": -29.0,
+    "is_underpriced": true
+  },
+  {
+    "title": "Movano B Kasten/EURO 6!!AHK!KLIMA!!GKa L3H3 3,5t",
+    "url": "https://www.autoscout24.de/angebote/opel-movano-movano-b-kasten-euro-6-ahk-klima-gka-l3h3-3-5t-diesel-gelb-cat_ma54gr15870ge1042mt4508tr480628-572976b1-3271-4d91-9b87-8053c1c49780",
+    "source": "autoscout24_de",
+    "country": "de",
+    "year": 2018,
+    "km": 235000,
+    "price_eur": 6990.0,
+    "seats": null,
+    "emission_standard": null,
+    "body_type": null,
+    "weight_kg": null,
+    "remarks": "",
+    "images": [
+      "https://prod.pictures.autoscout24.net/listing-images/572976b1-3271-4d91-9b87-8053c1c49780_c29b6f28-4bbc-48a9-b562-3baa4cc63a12.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/572976b1-3271-4d91-9b87-8053c1c49780_aa5cb779-a6c2-4552-96b9-38568d0b750c.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/572976b1-3271-4d91-9b87-8053c1c49780_a597a2f2-25af-4720-9b5e-eed1a93a045c.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/572976b1-3271-4d91-9b87-8053c1c49780_0a8e4ab1-80b9-4a62-b614-09fa8a6ba58a.jpg/250x188.webp",
+      "https://prod.pictures.autoscout24.net/listing-images/572976b1-3271-4d91-9b87-8053c1c49780_6ab22928-8899-4387-83cf-ec2e600ae844.jpg/250x188.webp"
+    ],
+    "vat_hint": null,
+    "model_group": "renault_master_grp",
+    "variant": "L3H3",
+    "classification_confidence": "high",
+    "matched_token": "movano",
+    "score": 49,
+    "vat_scheme": "unknown",
+    "price_gross_eur": 6990,
+    "vat_evidence": "no VAT signal",
+    "vat_confidence": "low",
+    "est_conversion_cost_eur": 10500,
+    "est_conversion_cost_low_eur": 7000,
+    "est_conversion_cost_high_eur": 14000,
+    "conversion_effort": "moderate",
+    "total_project_cost_eur": 17490.0,
+    "risk_score": 2,
+    "risk_flags": [
+      {
+        "code": "high_km_per_year",
+        "label": "High km/year (29,375/yr) \u2014 above-average wear",
+        "severity": "warn"
+      },
+      {
+        "code": "high_total_km",
+        "label": "High total km (235,000) \u2014 transmission/engine wear risk",
+        "severity": "warn"
+      }
+    ],
+    "market_sample_size": 101,
+    "market_median_eur": 9999,
+    "price_pct_vs_median": -30.1,
     "is_underpriced": true
   },
   {
@@ -13074,9 +13175,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 85,
-    "market_median_eur": 9900,
-    "price_pct_vs_median": -29.4,
+    "market_sample_size": 86,
+    "market_median_eur": 9850,
+    "price_pct_vs_median": -29.0,
     "is_underpriced": true
   },
   {
@@ -13123,7 +13224,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 98,
+    "market_sample_size": 97,
     "market_median_eur": 10990,
     "price_pct_vs_median": -36.4,
     "is_underpriced": true
@@ -13176,9 +13277,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 85,
-    "market_median_eur": 9900,
-    "price_pct_vs_median": -27.3,
+    "market_sample_size": 86,
+    "market_median_eur": 9850,
+    "price_pct_vs_median": -26.9,
     "is_underpriced": true
   },
   {
@@ -13225,7 +13326,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 99,
+    "market_sample_size": 100,
     "market_median_eur": 12500,
     "price_pct_vs_median": -42.0,
     "is_underpriced": true
@@ -13274,9 +13375,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 68,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": -19.8,
+    "market_sample_size": 69,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": -19.4,
     "is_underpriced": true
   },
   {
@@ -13323,9 +13424,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 68,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": -19.8,
+    "market_sample_size": 69,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": -19.4,
     "is_underpriced": true
   },
   {
@@ -13649,9 +13750,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": -28.0,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": -27.6,
     "is_underpriced": true
   },
   {
@@ -13738,9 +13839,9 @@
     "total_project_cost_eur": 20500.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": -29.2,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": -28.5,
     "is_underpriced": true
   },
   {
@@ -13866,9 +13967,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": -22.5,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": -21.8,
     "is_underpriced": true
   },
   {
@@ -14096,9 +14197,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 84,
-    "market_median_eur": 17400,
-    "price_pct_vs_median": -31.6,
+    "market_sample_size": 83,
+    "market_median_eur": 16999,
+    "price_pct_vs_median": -30.0,
     "is_underpriced": true
   },
   {
@@ -14145,9 +14246,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 80,
-    "market_median_eur": 15700,
-    "price_pct_vs_median": -20.4,
+    "market_sample_size": 79,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": -19.4,
     "is_underpriced": true
   },
   {
@@ -14189,9 +14290,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 80,
-    "market_median_eur": 15700,
-    "price_pct_vs_median": -20.4,
+    "market_sample_size": 79,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": -19.4,
     "is_underpriced": true
   },
   {
@@ -14282,9 +14383,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 79,
-    "market_median_eur": 16449,
-    "price_pct_vs_median": -17.9,
+    "market_sample_size": 78,
+    "market_median_eur": 16224,
+    "price_pct_vs_median": -16.8,
     "is_underpriced": true
   },
   {
@@ -14326,9 +14427,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": -25.1,
+    "market_sample_size": 54,
+    "market_median_eur": 18274,
+    "price_pct_vs_median": -24.5,
     "is_underpriced": true
   },
   {
@@ -14514,8 +14615,8 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 69,
-    "market_median_eur": 17800,
+    "market_sample_size": 68,
+    "market_median_eur": 17794,
     "price_pct_vs_median": -16.9,
     "is_underpriced": true
   },
@@ -14560,9 +14661,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 151,
-    "market_median_eur": 17999,
-    "price_pct_vs_median": -16.9,
+    "market_sample_size": 149,
+    "market_median_eur": 17950,
+    "price_pct_vs_median": -16.7,
     "is_underpriced": true
   },
   {
@@ -14685,9 +14786,9 @@
     "total_project_cost_eur": 27000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": -16.6,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": -15.8,
     "is_underpriced": true
   },
   {
@@ -14731,9 +14832,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": -16.6,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": -15.8,
     "is_underpriced": true
   },
   {
@@ -15513,8 +15614,8 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 69,
-    "market_median_eur": 17800,
+    "market_sample_size": 68,
+    "market_median_eur": 17794,
     "price_pct_vs_median": -18.5,
     "is_underpriced": true
   },
@@ -15613,9 +15714,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 100,
-    "market_median_eur": 10250,
-    "price_pct_vs_median": -14.6,
+    "market_sample_size": 101,
+    "market_median_eur": 9999,
+    "price_pct_vs_median": -12.5,
     "is_underpriced": false
   },
   {
@@ -15666,9 +15767,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 100,
-    "market_median_eur": 10250,
-    "price_pct_vs_median": 22.0,
+    "market_sample_size": 101,
+    "market_median_eur": 9999,
+    "price_pct_vs_median": 25.0,
     "is_underpriced": false
   },
   {
@@ -15715,7 +15816,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 99,
+    "market_sample_size": 100,
     "market_median_eur": 12500,
     "price_pct_vs_median": 28.0,
     "is_underpriced": false
@@ -15764,9 +15865,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 68,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": 72.5,
+    "market_sample_size": 69,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": 73.4,
     "is_underpriced": false
   },
   {
@@ -15882,8 +15983,8 @@
     "total_project_cost_eur": 26400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 69,
-    "market_median_eur": 17800,
+    "market_sample_size": 68,
+    "market_median_eur": 17794,
     "price_pct_vs_median": 34.3,
     "is_underpriced": false
   },
@@ -15920,7 +16021,7 @@
     "total_project_cost_eur": 28095.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 98,
+    "market_sample_size": 97,
     "market_median_eur": 10990,
     "price_pct_vs_median": 132.9,
     "is_underpriced": false
@@ -17016,9 +17117,9 @@
     "total_project_cost_eur": 28490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 85,
-    "market_median_eur": 9900,
-    "price_pct_vs_median": 81.7,
+    "market_sample_size": 86,
+    "market_median_eur": 9850,
+    "price_pct_vs_median": 82.6,
     "is_underpriced": false
   },
   {
@@ -17102,7 +17203,7 @@
     "total_project_cost_eur": 28050.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": 52.0,
     "is_underpriced": false
@@ -17188,9 +17289,9 @@
     "total_project_cost_eur": 33200.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": 41.3,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": 42.6,
     "is_underpriced": false
   },
   {
@@ -17226,9 +17327,9 @@
     "total_project_cost_eur": 35200.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 151,
-    "market_median_eur": 17999,
-    "price_pct_vs_median": 66.4,
+    "market_sample_size": 149,
+    "market_median_eur": 17950,
+    "price_pct_vs_median": 66.9,
     "is_underpriced": false
   },
   {
@@ -17352,7 +17453,7 @@
     "total_project_cost_eur": 48450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 81.1,
     "is_underpriced": false
@@ -17390,9 +17491,9 @@
     "total_project_cost_eur": 28750.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 132,
-    "market_median_eur": 10475,
-    "price_pct_vs_median": 124.3,
+    "market_sample_size": 133,
+    "market_median_eur": 10450,
+    "price_pct_vs_median": 124.9,
     "is_underpriced": false
   },
   {
@@ -17572,9 +17673,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 85,
-    "market_median_eur": 9900,
-    "price_pct_vs_median": -4.1,
+    "market_sample_size": 86,
+    "market_median_eur": 9850,
+    "price_pct_vs_median": -3.7,
     "is_underpriced": false
   },
   {
@@ -18018,9 +18119,9 @@
     "total_project_cost_eur": 49940.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 47.9,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 46.3,
     "is_underpriced": false
   },
   {
@@ -18150,9 +18251,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": 41.6,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": 42.9,
     "is_underpriced": false
   },
   {
@@ -18188,9 +18289,9 @@
     "total_project_cost_eur": 32499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 80,
-    "market_median_eur": 15700,
-    "price_pct_vs_median": 40.1,
+    "market_sample_size": 79,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 41.9,
     "is_underpriced": false
   },
   {
@@ -18232,7 +18333,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 5.0,
     "is_underpriced": false
@@ -18272,7 +18373,7 @@
     "total_project_cost_eur": 36450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 23.9,
     "is_underpriced": false
@@ -18350,7 +18451,7 @@
     "total_project_cost_eur": 46499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 71.8,
     "is_underpriced": false
@@ -19002,9 +19103,9 @@
     "total_project_cost_eur": 37450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 1.0,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
   {
@@ -19040,9 +19141,9 @@
     "total_project_cost_eur": 37499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 32,
-    "market_median_eur": 20695,
-    "price_pct_vs_median": 30.5,
+    "market_sample_size": 34,
+    "market_median_eur": 21925,
+    "price_pct_vs_median": 23.1,
     "is_underpriced": false
   },
   {
@@ -19124,9 +19225,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": -6.0,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": -5.5,
     "is_underpriced": false
   },
   {
@@ -19208,7 +19309,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": -3.3,
     "is_underpriced": false
@@ -19292,9 +19393,9 @@
     "total_project_cost_eur": 25990.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": 12.0,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": 12.7,
     "is_underpriced": false
   },
   {
@@ -19418,7 +19519,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": 10.3,
     "is_underpriced": false
@@ -19456,7 +19557,7 @@
     "total_project_cost_eur": 28445.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": -14.3,
     "is_underpriced": false
@@ -19505,9 +19606,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": 1.1,
+    "market_sample_size": 54,
+    "market_median_eur": 18274,
+    "price_pct_vs_median": 1.8,
     "is_underpriced": false
   },
   {
@@ -19549,9 +19650,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": -4.4,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": -3.5,
     "is_underpriced": false
   },
   {
@@ -19675,7 +19776,7 @@
     "total_project_cost_eur": 37495.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 28.9,
     "is_underpriced": false
@@ -19713,7 +19814,7 @@
     "total_project_cost_eur": 44350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 61.6,
     "is_underpriced": false
@@ -20881,9 +20982,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": -10.4,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": -11.3,
     "is_underpriced": false
   },
   {
@@ -21275,9 +21376,9 @@
     "total_project_cost_eur": 35300.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 41,
-    "market_median_eur": 19900,
-    "price_pct_vs_median": 24.6,
+    "market_sample_size": 40,
+    "market_median_eur": 19500,
+    "price_pct_vs_median": 27.2,
     "is_underpriced": false
   },
   {
@@ -27016,9 +27117,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 79,
-    "market_median_eur": 16449,
-    "price_pct_vs_median": -8.8,
+    "market_sample_size": 78,
+    "market_median_eur": 16224,
+    "price_pct_vs_median": -7.5,
     "is_underpriced": false
   },
   {
@@ -27228,9 +27329,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 77,
-    "market_median_eur": 18400,
-    "price_pct_vs_median": -10.2,
+    "market_sample_size": 76,
+    "market_median_eur": 18200,
+    "price_pct_vs_median": -9.2,
     "is_underpriced": false
   },
   {
@@ -27938,9 +28039,9 @@
     "total_project_cost_eur": 30408.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 79,
-    "market_median_eur": 16449,
-    "price_pct_vs_median": 21.0,
+    "market_sample_size": 78,
+    "market_median_eur": 16224,
+    "price_pct_vs_median": 22.7,
     "is_underpriced": false
   },
   {
@@ -28223,9 +28324,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 77,
-    "market_median_eur": 18400,
-    "price_pct_vs_median": 8.4,
+    "market_sample_size": 76,
+    "market_median_eur": 18200,
+    "price_pct_vs_median": 9.6,
     "is_underpriced": false
   },
   {
@@ -28261,7 +28362,7 @@
     "total_project_cost_eur": 30950.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 90,
+    "market_sample_size": 89,
     "market_median_eur": 23900,
     "price_pct_vs_median": -14.4,
     "is_underpriced": false
@@ -28431,7 +28532,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 90,
+    "market_sample_size": 89,
     "market_median_eur": 23900,
     "price_pct_vs_median": -8.6,
     "is_underpriced": false
@@ -28555,7 +28656,7 @@
     "total_project_cost_eur": 32450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 90,
+    "market_sample_size": 89,
     "market_median_eur": 23900,
     "price_pct_vs_median": -8.2,
     "is_underpriced": false
@@ -28597,9 +28698,9 @@
     "total_project_cost_eur": 32999.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 64,
-    "market_median_eur": 19970,
-    "price_pct_vs_median": 12.7,
+    "market_sample_size": 63,
+    "market_median_eur": 19950,
+    "price_pct_vs_median": 12.8,
     "is_underpriced": false
   },
   {
@@ -28685,9 +28786,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 77,
-    "market_median_eur": 18400,
-    "price_pct_vs_median": 24.5,
+    "market_sample_size": 76,
+    "market_median_eur": 18200,
+    "price_pct_vs_median": 25.8,
     "is_underpriced": false
   },
   {
@@ -28725,9 +28826,9 @@
     "total_project_cost_eur": 33450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 123,
-    "market_median_eur": 12500,
-    "price_pct_vs_median": 83.6,
+    "market_sample_size": 124,
+    "market_median_eur": 12675,
+    "price_pct_vs_median": 81.1,
     "is_underpriced": false
   },
   {
@@ -28765,9 +28866,9 @@
     "total_project_cost_eur": 34444.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": -10.2,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": -11.2,
     "is_underpriced": false
   },
   {
@@ -28849,9 +28950,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": -10.0,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": -10.9,
     "is_underpriced": false
   },
   {
@@ -28895,7 +28996,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 90,
+    "market_sample_size": 89,
     "market_median_eur": 23900,
     "price_pct_vs_median": 2.5,
     "is_underpriced": false
@@ -28935,7 +29036,7 @@
     "total_project_cost_eur": 35395.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 90,
+    "market_sample_size": 89,
     "market_median_eur": 23900,
     "price_pct_vs_median": 4.2,
     "is_underpriced": false
@@ -28981,7 +29082,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 90,
+    "market_sample_size": 89,
     "market_median_eur": 23900,
     "price_pct_vs_median": 4.4,
     "is_underpriced": false
@@ -29021,7 +29122,7 @@
     "total_project_cost_eur": 35450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 90,
+    "market_sample_size": 89,
     "market_median_eur": 23900,
     "price_pct_vs_median": 4.4,
     "is_underpriced": false
@@ -29065,9 +29166,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 77,
-    "market_median_eur": 18400,
-    "price_pct_vs_median": 40.8,
+    "market_sample_size": 76,
+    "market_median_eur": 18200,
+    "price_pct_vs_median": 42.3,
     "is_underpriced": false
   },
   {
@@ -29151,9 +29252,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": -2.5,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": -3.6,
     "is_underpriced": false
   },
   {
@@ -29189,9 +29290,9 @@
     "total_project_cost_eur": 37350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 0.7,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": -0.4,
     "is_underpriced": false
   },
   {
@@ -29235,9 +29336,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 1.2,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 0.1,
     "is_underpriced": false
   },
   {
@@ -29281,9 +29382,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 1.2,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 0.1,
     "is_underpriced": false
   },
   {
@@ -29327,7 +29428,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 90,
+    "market_sample_size": 89,
     "market_median_eur": 23900,
     "price_pct_vs_median": 12.9,
     "is_underpriced": false
@@ -29367,8 +29468,8 @@
     "total_project_cost_eur": 38000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 59,
-    "market_median_eur": 26990,
+    "market_sample_size": 62,
+    "market_median_eur": 26992,
     "price_pct_vs_median": 1.9,
     "is_underpriced": false
   },
@@ -29407,8 +29508,8 @@
     "total_project_cost_eur": 38000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 59,
-    "market_median_eur": 26990,
+    "market_sample_size": 62,
+    "market_median_eur": 26992,
     "price_pct_vs_median": 1.9,
     "is_underpriced": false
   },
@@ -29447,8 +29548,8 @@
     "total_project_cost_eur": 38000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 59,
-    "market_median_eur": 26990,
+    "market_sample_size": 62,
+    "market_median_eur": 26992,
     "price_pct_vs_median": 1.9,
     "is_underpriced": false
   },
@@ -29485,9 +29586,9 @@
     "total_project_cost_eur": 38350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 4.4,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 3.3,
     "is_underpriced": false
   },
   {
@@ -29525,7 +29626,7 @@
     "total_project_cost_eur": 38450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 90,
+    "market_sample_size": 89,
     "market_median_eur": 23900,
     "price_pct_vs_median": 16.9,
     "is_underpriced": false
@@ -29571,9 +29672,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 4.9,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 3.9,
     "is_underpriced": false
   },
   {
@@ -29611,9 +29712,9 @@
     "total_project_cost_eur": 38790.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 6.1,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 5.0,
     "is_underpriced": false
   },
   {
@@ -29651,9 +29752,9 @@
     "total_project_cost_eur": 39190.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 7.6,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 6.5,
     "is_underpriced": false
   },
   {
@@ -29695,9 +29796,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 64,
-    "market_median_eur": 19970,
-    "price_pct_vs_median": 49.2,
+    "market_sample_size": 63,
+    "market_median_eur": 19950,
+    "price_pct_vs_median": 49.3,
     "is_underpriced": false
   },
   {
@@ -29735,9 +29836,9 @@
     "total_project_cost_eur": 40450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 12.3,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 11.1,
     "is_underpriced": false
   },
   {
@@ -29775,9 +29876,9 @@
     "total_project_cost_eur": 41990.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 18.1,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 16.8,
     "is_underpriced": false
   },
   {
@@ -29815,9 +29916,9 @@
     "total_project_cost_eur": 42073.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 39,
-    "market_median_eur": 28290,
-    "price_pct_vs_median": 11.6,
+    "market_sample_size": 42,
+    "market_median_eur": 29320,
+    "price_pct_vs_median": 7.7,
     "is_underpriced": false
   },
   {
@@ -29857,9 +29958,9 @@
     "total_project_cost_eur": 42490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 9,
-    "market_median_eur": 27000,
-    "price_pct_vs_median": 18.5,
+    "market_sample_size": 10,
+    "market_median_eur": 26925,
+    "price_pct_vs_median": 18.8,
     "is_underpriced": false
   },
   {
@@ -29897,9 +29998,9 @@
     "total_project_cost_eur": 43390.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 23.3,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 22.0,
     "is_underpriced": false
   },
   {
@@ -29937,9 +30038,9 @@
     "total_project_cost_eur": 43445.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 23.5,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 22.2,
     "is_underpriced": false
   },
   {
@@ -30015,9 +30116,9 @@
     "total_project_cost_eur": 44000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 25.6,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 24.3,
     "is_underpriced": false
   },
   {
@@ -30055,9 +30156,9 @@
     "total_project_cost_eur": 46390.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 34.6,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 33.2,
     "is_underpriced": false
   },
   {
@@ -30095,9 +30196,9 @@
     "total_project_cost_eur": 48450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 42.3,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 40.8,
     "is_underpriced": false
   },
   {
@@ -30133,7 +30234,7 @@
     "total_project_cost_eur": 48500.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 16,
+    "market_sample_size": 17,
     "market_median_eur": 17000,
     "price_pct_vs_median": 123.5,
     "is_underpriced": false
@@ -30171,9 +30272,9 @@
     "total_project_cost_eur": 49450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 46.0,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 44.5,
     "is_underpriced": false
   },
   {
@@ -30211,9 +30312,9 @@
     "total_project_cost_eur": 50450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 49.8,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 48.2,
     "is_underpriced": false
   },
   {
@@ -30251,9 +30352,9 @@
     "total_project_cost_eur": 55450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": 68.5,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": 66.8,
     "is_underpriced": false
   },
   {
@@ -30300,9 +30401,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": 27.1,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": 28.3,
     "is_underpriced": false
   },
   {
@@ -30382,9 +30483,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 85,
-    "market_median_eur": 9900,
-    "price_pct_vs_median": -11.1,
+    "market_sample_size": 86,
+    "market_median_eur": 9850,
+    "price_pct_vs_median": -10.7,
     "is_underpriced": false
   },
   {
@@ -30509,9 +30610,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 85,
-    "market_median_eur": 9900,
-    "price_pct_vs_median": -1.0,
+    "market_sample_size": 86,
+    "market_median_eur": 9850,
+    "price_pct_vs_median": -0.5,
     "is_underpriced": false
   },
   {
@@ -30547,9 +30648,9 @@
     "total_project_cost_eur": 20450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 68,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": 1.0,
+    "market_sample_size": 69,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": 1.5,
     "is_underpriced": false
   },
   {
@@ -30698,9 +30799,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 68,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": 11.7,
+    "market_sample_size": 69,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": 12.2,
     "is_underpriced": false
   },
   {
@@ -30736,7 +30837,7 @@
     "total_project_cost_eur": 21990.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 98,
+    "market_sample_size": 97,
     "market_median_eur": 10990,
     "price_pct_vs_median": 4.5,
     "is_underpriced": false
@@ -30900,9 +31001,9 @@
     "total_project_cost_eur": 22490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 100,
-    "market_median_eur": 10250,
-    "price_pct_vs_median": 17.0,
+    "market_sample_size": 101,
+    "market_median_eur": 9999,
+    "price_pct_vs_median": 19.9,
     "is_underpriced": false
   },
   {
@@ -31100,9 +31201,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": -10.8,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": -10.0,
     "is_underpriced": false
   },
   {
@@ -31146,9 +31247,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": -8.7,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": -7.8,
     "is_underpriced": false
   },
   {
@@ -31224,9 +31325,9 @@
     "total_project_cost_eur": 23450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": -8.3,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": -7.5,
     "is_underpriced": false
   },
   {
@@ -31362,9 +31463,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": -6.0,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": -5.5,
     "is_underpriced": false
   },
   {
@@ -31440,7 +31541,7 @@
     "total_project_cost_eur": 23499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 98,
+    "market_sample_size": 97,
     "market_median_eur": 10990,
     "price_pct_vs_median": 18.3,
     "is_underpriced": false
@@ -31518,7 +31619,7 @@
     "total_project_cost_eur": 23944.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 98,
+    "market_sample_size": 97,
     "market_median_eur": 10990,
     "price_pct_vs_median": 22.3,
     "is_underpriced": false
@@ -31562,7 +31663,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": -10.3,
     "is_underpriced": false
@@ -31608,9 +31709,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": -2.7,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": -2.2,
     "is_underpriced": false
   },
   {
@@ -31652,7 +31753,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": -8.3,
     "is_underpriced": false
@@ -31776,9 +31877,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": -1.6,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": -0.7,
     "is_underpriced": false
   },
   {
@@ -31860,7 +31961,7 @@
     "total_project_cost_eur": 24400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 98,
+    "market_sample_size": 97,
     "market_median_eur": 10990,
     "price_pct_vs_median": 26.5,
     "is_underpriced": false
@@ -31904,7 +32005,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": -7.0,
     "is_underpriced": false
@@ -31948,9 +32049,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": -1.2,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": -0.3,
     "is_underpriced": false
   },
   {
@@ -32028,9 +32129,9 @@
     "total_project_cost_eur": 24450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": -1.2,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": -0.3,
     "is_underpriced": false
   },
   {
@@ -32074,7 +32175,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": -6.7,
     "is_underpriced": false
@@ -32116,9 +32217,9 @@
     "total_project_cost_eur": 24750.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 91,
-    "market_median_eur": 14000,
-    "price_pct_vs_median": 1.8,
+    "market_sample_size": 92,
+    "market_median_eur": 13975,
+    "price_pct_vs_median": 2.0,
     "is_underpriced": false
   },
   {
@@ -32194,9 +32295,9 @@
     "total_project_cost_eur": 24900.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": 4.2,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": 4.7,
     "is_underpriced": false
   },
   {
@@ -32234,9 +32335,9 @@
     "total_project_cost_eur": 24962.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": 4.6,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": 5.2,
     "is_underpriced": false
   },
   {
@@ -32326,7 +32427,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": -3.3,
     "is_underpriced": false
@@ -32370,9 +32471,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": 2.7,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": 3.6,
     "is_underpriced": false
   },
   {
@@ -32496,7 +32597,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": -1.7,
     "is_underpriced": false
@@ -32542,7 +32643,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": -1.3,
     "is_underpriced": false
@@ -32588,7 +32689,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": -0.7,
     "is_underpriced": false
@@ -32836,9 +32937,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": 5.9,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": 6.8,
     "is_underpriced": false
   },
   {
@@ -32958,9 +33059,9 @@
     "total_project_cost_eur": 25900.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": 9.0,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": 10.0,
     "is_underpriced": false
   },
   {
@@ -32998,9 +33099,9 @@
     "total_project_cost_eur": 25900.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": 11.4,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": 12.0,
     "is_underpriced": false
   },
   {
@@ -33074,7 +33175,7 @@
     "total_project_cost_eur": 26000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": 3.3,
     "is_underpriced": false
@@ -33118,9 +33219,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 69,
-    "market_median_eur": 17800,
-    "price_pct_vs_median": -10.7,
+    "market_sample_size": 68,
+    "market_median_eur": 17794,
+    "price_pct_vs_median": -10.6,
     "is_underpriced": false
   },
   {
@@ -33196,9 +33297,9 @@
     "total_project_cost_eur": 26450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": 12.9,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": 14.0,
     "is_underpriced": false
   },
   {
@@ -33234,9 +33335,9 @@
     "total_project_cost_eur": 26450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": 12.9,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": 14.0,
     "is_underpriced": false
   },
   {
@@ -33486,9 +33587,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 91,
-    "market_median_eur": 14000,
-    "price_pct_vs_median": 14.2,
+    "market_sample_size": 92,
+    "market_median_eur": 13975,
+    "price_pct_vs_median": 14.4,
     "is_underpriced": false
   },
   {
@@ -33656,9 +33757,9 @@
     "total_project_cost_eur": 26999.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 151,
-    "market_median_eur": 17999,
-    "price_pct_vs_median": -8.3,
+    "market_sample_size": 149,
+    "market_median_eur": 17950,
+    "price_pct_vs_median": -8.1,
     "is_underpriced": false
   },
   {
@@ -33694,9 +33795,9 @@
     "total_project_cost_eur": 27090.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 80,
-    "market_median_eur": 15700,
-    "price_pct_vs_median": 5.7,
+    "market_sample_size": 79,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 7.0,
     "is_underpriced": false
   },
   {
@@ -33732,9 +33833,9 @@
     "total_project_cost_eur": 27250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": 21.2,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": 21.8,
     "is_underpriced": false
   },
   {
@@ -33770,9 +33871,9 @@
     "total_project_cost_eur": 27290.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": 21.4,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": 22.1,
     "is_underpriced": false
   },
   {
@@ -34120,9 +34221,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 80,
-    "market_median_eur": 15700,
-    "price_pct_vs_median": 7.6,
+    "market_sample_size": 79,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 9.0,
     "is_underpriced": false
   },
   {
@@ -34209,7 +34310,7 @@
     "total_project_cost_eur": 27450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": 13.0,
     "is_underpriced": false
@@ -34249,7 +34350,7 @@
     "total_project_cost_eur": 27450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": 13.0,
     "is_underpriced": false
@@ -34295,7 +34396,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": 13.0,
     "is_underpriced": false
@@ -34459,9 +34560,9 @@
     "total_project_cost_eur": 28200.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 80,
-    "market_median_eur": 15700,
-    "price_pct_vs_median": 12.7,
+    "market_sample_size": 79,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 14.2,
     "is_underpriced": false
   },
   {
@@ -34541,9 +34642,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 80,
-    "market_median_eur": 15700,
-    "price_pct_vs_median": 13.3,
+    "market_sample_size": 79,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 14.8,
     "is_underpriced": false
   },
   {
@@ -34625,7 +34726,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": -14.8,
     "is_underpriced": false
@@ -34753,9 +34854,9 @@
     "total_project_cost_eur": 28400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 151,
-    "market_median_eur": 17999,
-    "price_pct_vs_median": -0.6,
+    "market_sample_size": 149,
+    "market_median_eur": 17950,
+    "price_pct_vs_median": -0.3,
     "is_underpriced": false
   },
   {
@@ -34829,9 +34930,9 @@
     "total_project_cost_eur": 28400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 91,
-    "market_median_eur": 14000,
-    "price_pct_vs_median": 27.9,
+    "market_sample_size": 92,
+    "market_median_eur": 13975,
+    "price_pct_vs_median": 28.1,
     "is_underpriced": false
   },
   {
@@ -34875,9 +34976,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": -9.2,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": -8.4,
     "is_underpriced": false
   },
   {
@@ -35041,9 +35142,9 @@
     "total_project_cost_eur": 28499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": 27.5,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": 28.6,
     "is_underpriced": false
   },
   {
@@ -35079,7 +35180,7 @@
     "total_project_cost_eur": 28950.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": -11.9,
     "is_underpriced": false
@@ -35161,9 +35262,9 @@
     "total_project_cost_eur": 29000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 100,
-    "market_median_eur": 10250,
-    "price_pct_vs_median": 80.5,
+    "market_sample_size": 101,
+    "market_median_eur": 9999,
+    "price_pct_vs_median": 85.0,
     "is_underpriced": false
   },
   {
@@ -35323,9 +35424,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": -4.9,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": -4.1,
     "is_underpriced": false
   },
   {
@@ -35363,7 +35464,7 @@
     "total_project_cost_eur": 29350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": 25.7,
     "is_underpriced": false
@@ -35531,9 +35632,9 @@
     "total_project_cost_eur": 29444.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": -4.2,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": -3.3,
     "is_underpriced": false
   },
   {
@@ -35577,9 +35678,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": -4.2,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": -3.3,
     "is_underpriced": false
   },
   {
@@ -35658,9 +35759,9 @@
     "total_project_cost_eur": 29450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": 37.1,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": 37.8,
     "is_underpriced": false
   },
   {
@@ -35740,7 +35841,7 @@
     "total_project_cost_eur": 29490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 98,
+    "market_sample_size": 97,
     "market_median_eur": 10990,
     "price_pct_vs_median": 72.8,
     "is_underpriced": false
@@ -35908,9 +36009,9 @@
     "total_project_cost_eur": 29944.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": -1.7,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": -0.8,
     "is_underpriced": false
   },
   {
@@ -35984,9 +36085,9 @@
     "total_project_cost_eur": 30000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 151,
-    "market_median_eur": 17999,
-    "price_pct_vs_median": 8.3,
+    "market_sample_size": 149,
+    "market_median_eur": 17950,
+    "price_pct_vs_median": 8.6,
     "is_underpriced": false
   },
   {
@@ -36106,9 +36207,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 76,
-    "market_median_eur": 21175,
-    "price_pct_vs_median": -7.0,
+    "market_sample_size": 75,
+    "market_median_eur": 20950,
+    "price_pct_vs_median": -6.0,
     "is_underpriced": false
   },
   {
@@ -36272,9 +36373,9 @@
     "total_project_cost_eur": 30400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": 0.6,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": 1.5,
     "is_underpriced": false
   },
   {
@@ -36362,9 +36463,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": 0.9,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": 1.8,
     "is_underpriced": false
   },
   {
@@ -36440,7 +36541,7 @@
     "total_project_cost_eur": 30450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": 33.0,
     "is_underpriced": false
@@ -36478,9 +36579,9 @@
     "total_project_cost_eur": 30450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": 0.9,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": 1.8,
     "is_underpriced": false
   },
   {
@@ -36608,9 +36709,9 @@
     "total_project_cost_eur": 30490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 80,
-    "market_median_eur": 15700,
-    "price_pct_vs_median": 27.3,
+    "market_sample_size": 79,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 29.0,
     "is_underpriced": false
   },
   {
@@ -36652,9 +36753,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 80,
-    "market_median_eur": 15700,
-    "price_pct_vs_median": 27.3,
+    "market_sample_size": 79,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 29.0,
     "is_underpriced": false
   },
   {
@@ -36690,9 +36791,9 @@
     "total_project_cost_eur": 30490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 73,
-    "market_median_eur": 12900,
-    "price_pct_vs_median": 55.0,
+    "market_sample_size": 74,
+    "market_median_eur": 12994,
+    "price_pct_vs_median": 53.8,
     "is_underpriced": false
   },
   {
@@ -36728,9 +36829,9 @@
     "total_project_cost_eur": 30495.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": 1.1,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": 2.0,
     "is_underpriced": false
   },
   {
@@ -36848,7 +36949,7 @@
     "total_project_cost_eur": 31300.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": -0.7,
     "is_underpriced": false
@@ -36970,7 +37071,7 @@
     "total_project_cost_eur": 31450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 0.0,
     "is_underpriced": false
@@ -37016,7 +37117,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 0.0,
     "is_underpriced": false
@@ -37062,9 +37163,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": 5.9,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": 6.9,
     "is_underpriced": false
   },
   {
@@ -37104,9 +37205,9 @@
     "total_project_cost_eur": 31450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": 13.9,
+    "market_sample_size": 54,
+    "market_median_eur": 18274,
+    "price_pct_vs_median": 14.6,
     "is_underpriced": false
   },
   {
@@ -37150,9 +37251,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 151,
-    "market_median_eur": 17999,
-    "price_pct_vs_median": 16.4,
+    "market_sample_size": 149,
+    "market_median_eur": 17950,
+    "price_pct_vs_median": 16.7,
     "is_underpriced": false
   },
   {
@@ -37197,7 +37298,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 0.0,
     "is_underpriced": false
@@ -37284,7 +37385,7 @@
     "total_project_cost_eur": 31900.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 2.1,
     "is_underpriced": false
@@ -37368,7 +37469,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 4.1,
     "is_underpriced": false
@@ -37452,9 +37553,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 39,
-    "market_median_eur": 18600,
-    "price_pct_vs_median": 17.2,
+    "market_sample_size": 38,
+    "market_median_eur": 18375,
+    "price_pct_vs_median": 18.6,
     "is_underpriced": false
   },
   {
@@ -37622,7 +37723,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 4.8,
     "is_underpriced": false
@@ -37666,7 +37767,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 4.8,
     "is_underpriced": false
@@ -37704,7 +37805,7 @@
     "total_project_cost_eur": 32450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 4.8,
     "is_underpriced": false
@@ -37863,7 +37964,7 @@
     "total_project_cost_eur": 32450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 4.8,
     "is_underpriced": false
@@ -37949,7 +38050,7 @@
     "total_project_cost_eur": 32944.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 7.1,
     "is_underpriced": false
@@ -38031,9 +38132,9 @@
     "total_project_cost_eur": 32990.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 69,
-    "market_median_eur": 17800,
-    "price_pct_vs_median": 26.3,
+    "market_sample_size": 68,
+    "market_median_eur": 17794,
+    "price_pct_vs_median": 26.4,
     "is_underpriced": false
   },
   {
@@ -38245,7 +38346,7 @@
     "total_project_cost_eur": 33400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 9.3,
     "is_underpriced": false
@@ -38345,7 +38446,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 9.7,
     "is_underpriced": false
@@ -38383,9 +38484,9 @@
     "total_project_cost_eur": 33999.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": 27.7,
+    "market_sample_size": 54,
+    "market_median_eur": 18274,
+    "price_pct_vs_median": 28.6,
     "is_underpriced": false
   },
   {
@@ -38759,51 +38860,9 @@
     "total_project_cost_eur": 34480.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": 30.3,
-    "is_underpriced": false
-  },
-  {
-    "title": "Master dCi 150 ENERGY dCi 150 L2H2 VA Komfort",
-    "url": "https://www.autoscout24.de/angebote/renault-master-master-dci-150-energy-dci-150-l2h2-va-komfort-diesel-weiss-cat_ma60gr201278ge1147va3662mt4400tr4774-03124a26-72d8-47fe-9c14-75a8b01ef6be",
-    "source": "autoscout24_de",
-    "country": "de",
-    "year": 2023,
-    "km": 57000,
-    "price_eur": 24390.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://prod.pictures.autoscout24.net/listing-images/03124a26-72d8-47fe-9c14-75a8b01ef6be_2b739218-7af4-4710-8dcd-78453d7a93a9.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/03124a26-72d8-47fe-9c14-75a8b01ef6be_dc8cba25-32fe-4904-8ac1-5ae29cdc6bd6.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/03124a26-72d8-47fe-9c14-75a8b01ef6be_ebe52fba-81a3-4b1e-978a-15f93699eabb.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/03124a26-72d8-47fe-9c14-75a8b01ef6be_d3b7c40d-2fb9-4090-9ea8-1a216a7cb8b8.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/03124a26-72d8-47fe-9c14-75a8b01ef6be_d47dd317-7403-431a-b929-a6b0253643d8.jpg/250x188.webp"
-    ],
-    "vat_hint": null,
-    "model_group": "renault_master_grp",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "master",
-    "score": 53,
-    "vat_scheme": "unknown",
-    "price_gross_eur": 24390,
-    "vat_evidence": "no VAT signal",
-    "vat_confidence": "low",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 34890.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": 32.6,
+    "market_sample_size": 54,
+    "market_median_eur": 18274,
+    "price_pct_vs_median": 31.2,
     "is_underpriced": false
   },
   {
@@ -38841,9 +38900,9 @@
     "total_project_cost_eur": 34940.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": 23.6,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": 24.7,
     "is_underpriced": false
   },
   {
@@ -38881,7 +38940,7 @@
     "total_project_cost_eur": 34950.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 16.7,
     "is_underpriced": false
@@ -39081,7 +39140,7 @@
     "total_project_cost_eur": 35450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 19.1,
     "is_underpriced": false
@@ -39205,9 +39264,9 @@
     "total_project_cost_eur": 35490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 24,
-    "market_median_eur": 19235,
-    "price_pct_vs_median": 29.9,
+    "market_sample_size": 23,
+    "market_median_eur": 19500,
+    "price_pct_vs_median": 28.2,
     "is_underpriced": false
   },
   {
@@ -39406,7 +39465,7 @@
     "total_project_cost_eur": 36450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": 73.0,
     "is_underpriced": false
@@ -39568,7 +39627,7 @@
     "total_project_cost_eur": 37180.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 55,
+    "market_sample_size": 54,
     "market_median_eur": 17000,
     "price_pct_vs_median": 56.9,
     "is_underpriced": false
@@ -39648,7 +39707,7 @@
     "total_project_cost_eur": 37340.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 28.1,
     "is_underpriced": false
@@ -39766,9 +39825,9 @@
     "total_project_cost_eur": 37490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 80,
-    "market_median_eur": 15700,
-    "price_pct_vs_median": 71.9,
+    "market_sample_size": 79,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 74.1,
     "is_underpriced": false
   },
   {
@@ -39804,9 +39863,9 @@
     "total_project_cost_eur": 37490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 39,
-    "market_median_eur": 18600,
-    "price_pct_vs_median": 45.1,
+    "market_sample_size": 38,
+    "market_median_eur": 18375,
+    "price_pct_vs_median": 46.9,
     "is_underpriced": false
   },
   {
@@ -39884,7 +39943,7 @@
     "total_project_cost_eur": 38400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 33.2,
     "is_underpriced": false
@@ -40082,7 +40141,7 @@
     "total_project_cost_eur": 38950.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 35.8,
     "is_underpriced": false
@@ -40120,7 +40179,7 @@
     "total_project_cost_eur": 39350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 37.7,
     "is_underpriced": false
@@ -40244,7 +40303,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 38.4,
     "is_underpriced": false
@@ -40282,7 +40341,7 @@
     "total_project_cost_eur": 39607.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 38.9,
     "is_underpriced": false
@@ -40476,7 +40535,7 @@
     "total_project_cost_eur": 41350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 47.3,
     "is_underpriced": false
@@ -40554,7 +40613,7 @@
     "total_project_cost_eur": 42100.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 50.8,
     "is_underpriced": false
@@ -40716,9 +40775,9 @@
     "total_project_cost_eur": 42995.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 19,
-    "market_median_eur": 19500,
-    "price_pct_vs_median": 66.6,
+    "market_sample_size": 18,
+    "market_median_eur": 21650,
+    "price_pct_vs_median": 50.1,
     "is_underpriced": false
   },
   {
@@ -40832,7 +40891,7 @@
     "total_project_cost_eur": 43450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 57.3,
     "is_underpriced": false
@@ -41186,7 +41245,7 @@
     "total_project_cost_eur": 46739.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 73.0,
     "is_underpriced": false
@@ -41708,9 +41767,9 @@
     "total_project_cost_eur": 53450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 152,
-    "market_median_eur": 13825,
-    "price_pct_vs_median": 210.7,
+    "market_sample_size": 151,
+    "market_median_eur": 13750,
+    "price_pct_vs_median": 212.4,
     "is_underpriced": false
   },
   {
@@ -41792,48 +41851,6 @@
     "is_underpriced": false
   },
   {
-    "title": "Ducato L2H2 Autm.",
-    "url": "https://www.autoscout24.de/angebote/fiat-ducato-ducato-l2h2-autm-diesel-silber-cat_ma28gr200525ge807va3950mt12639tr480187-d966e7f3-8695-4b37-9409-397db5e12326",
-    "source": "autoscout24_de",
-    "country": "de",
-    "year": 2020,
-    "km": 73200,
-    "price_eur": 55000.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://prod.pictures.autoscout24.net/listing-images/d966e7f3-8695-4b37-9409-397db5e12326_492ba248-7f39-4f3f-8e6f-8b8d27e17fbd.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/d966e7f3-8695-4b37-9409-397db5e12326_8d56a7c4-bb78-455e-b09c-b272e22a639e.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/d966e7f3-8695-4b37-9409-397db5e12326_4ce439f8-93c7-40a7-9014-cbe7ae18671d.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/d966e7f3-8695-4b37-9409-397db5e12326_75fff956-0fbb-46a3-8d5a-8f0ff6562311.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/d966e7f3-8695-4b37-9409-397db5e12326_2f94ec15-c29d-40a7-a771-6eae1a889767.jpg/250x188.webp"
-    ],
-    "vat_hint": null,
-    "model_group": "psa_l1l2h1",
-    "variant": "L2H2",
-    "classification_confidence": "high",
-    "matched_token": "ducato",
-    "score": 53,
-    "vat_scheme": "unknown",
-    "price_gross_eur": 55000,
-    "vat_evidence": "no VAT signal",
-    "vat_confidence": "low",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 65500.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 94,
-    "market_median_eur": 13900,
-    "price_pct_vs_median": 295.7,
-    "is_underpriced": false
-  },
-  {
     "title": "MAN TGE 3.140 L3H3 2.0 TDI 140 PS AHK 2-Sitze 1-Hand",
     "url": "https://www.kleinanzeigen.de/s-anzeige/man-tge-3-140-l3h3-2-0-tdi-140-ps-ahk-2-sitze-1-hand/3476226643-216-6600",
     "source": "kleinanzeigen_de",
@@ -41872,9 +41889,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 84,
-    "market_median_eur": 17400,
-    "price_pct_vs_median": 2.3,
+    "market_sample_size": 83,
+    "market_median_eur": 16999,
+    "price_pct_vs_median": 4.7,
     "is_underpriced": false
   },
   {
@@ -41992,9 +42009,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 77,
-    "market_median_eur": 18400,
-    "price_pct_vs_median": -13.6,
+    "market_sample_size": 76,
+    "market_median_eur": 18200,
+    "price_pct_vs_median": -12.6,
     "is_underpriced": false
   },
   {
@@ -47021,9 +47038,9 @@
     "total_project_cost_eur": 40490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 79,
-    "market_median_eur": 16449,
-    "price_pct_vs_median": 82.3,
+    "market_sample_size": 78,
+    "market_median_eur": 16224,
+    "price_pct_vs_median": 84.8,
     "is_underpriced": false
   },
   {
@@ -48483,9 +48500,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 8,
-    "market_median_eur": 38412,
-    "price_pct_vs_median": 0.9,
+    "market_sample_size": 7,
+    "market_median_eur": 38068,
+    "price_pct_vs_median": 1.8,
     "is_underpriced": false
   },
   {
@@ -48856,7 +48873,7 @@
     "total_project_cost_eur": 22499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 36,
+    "market_sample_size": 35,
     "market_median_eur": 13000,
     "price_pct_vs_median": -7.7,
     "is_underpriced": false
@@ -49239,9 +49256,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 41,
-    "market_median_eur": 16500,
-    "price_pct_vs_median": 33.3,
+    "market_sample_size": 42,
+    "market_median_eur": 18450,
+    "price_pct_vs_median": 19.2,
     "is_underpriced": false
   },
   {
@@ -49285,9 +49302,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": -13.8,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": -14.7,
     "is_underpriced": false
   },
   {
@@ -49377,9 +49394,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 70,
-    "market_median_eur": 26670,
-    "price_pct_vs_median": -6.6,
+    "market_sample_size": 73,
+    "market_median_eur": 26950,
+    "price_pct_vs_median": -7.6,
     "is_underpriced": false
   },
   {
@@ -49421,7 +49438,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 90,
+    "market_sample_size": 89,
     "market_median_eur": 23900,
     "price_pct_vs_median": 8.4,
     "is_underpriced": false
@@ -49465,7 +49482,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 90,
+    "market_sample_size": 89,
     "market_median_eur": 23900,
     "price_pct_vs_median": 21.3,
     "is_underpriced": false
@@ -49513,57 +49530,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 36,
-    "market_median_eur": 20945,
-    "price_pct_vs_median": 90.9,
-    "is_underpriced": false
-  },
-  {
-    "title": "Sprinter 319 CDI Kasten Hochdach Lang",
-    "url": "https://www.autoscout24.de/angebote/mercedes-benz-sprinter-sprinter-319-cdi-kasten-hochdach-lang-diesel-blau-cat_ma47gr15943ge674va2947mt12375tr480531-42deba8c-24e5-4c77-b088-a2d575c9eb2c",
-    "source": "autoscout24_de",
-    "country": "de",
-    "year": 2023,
-    "km": 65363,
-    "price_eur": 49890.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://prod.pictures.autoscout24.net/listing-images/42deba8c-24e5-4c77-b088-a2d575c9eb2c_48d65420-23ba-4837-bed8-4c0ac438e8c5.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/42deba8c-24e5-4c77-b088-a2d575c9eb2c_c9f4207c-5805-426f-95ac-34d131d0123a.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/42deba8c-24e5-4c77-b088-a2d575c9eb2c_b3bf708b-4554-40f2-8725-a1427f38bbd6.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/42deba8c-24e5-4c77-b088-a2d575c9eb2c_9afacddd-12b6-49a6-86bc-bc0cc1d47c22.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/42deba8c-24e5-4c77-b088-a2d575c9eb2c_92863d72-3ab4-4dc2-a3a9-92c8e8a6bc6a.jpg/250x188.webp"
-    ],
-    "vat_hint": null,
-    "model_group": "mercedes_sprinter",
-    "variant": "L?H2",
-    "classification_confidence": "high",
-    "matched_token": "sprinter",
-    "score": 50,
-    "vat_scheme": "unknown",
-    "price_gross_eur": 49890,
-    "vat_evidence": "no VAT signal",
-    "vat_confidence": "low",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 60390.0,
-    "risk_score": 1,
-    "risk_flags": [
-      {
-        "code": "high_km_per_year",
-        "label": "High km/year (21,787/yr) \u2014 above-average wear",
-        "severity": "warn"
-      }
-    ],
-    "market_sample_size": 19,
-    "market_median_eur": 22900,
-    "price_pct_vs_median": 117.9,
+    "market_sample_size": 34,
+    "market_median_eur": 20750,
+    "price_pct_vs_median": 92.7,
     "is_underpriced": false
   },
   {
@@ -49599,9 +49568,9 @@
     "total_project_cost_eur": 20300.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 68,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": -0.5,
+    "market_sample_size": 69,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
   {
@@ -49648,9 +49617,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 100,
-    "market_median_eur": 10250,
-    "price_pct_vs_median": -4.4,
+    "market_sample_size": 101,
+    "market_median_eur": 9999,
+    "price_pct_vs_median": -2.0,
     "is_underpriced": false
   },
   {
@@ -49686,9 +49655,9 @@
     "total_project_cost_eur": 20499.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 68,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": 1.5,
+    "market_sample_size": 69,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": 2.0,
     "is_underpriced": false
   },
   {
@@ -49735,9 +49704,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 68,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": 6.6,
+    "market_sample_size": 69,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": 7.1,
     "is_underpriced": false
   },
   {
@@ -49822,7 +49791,7 @@
     "total_project_cost_eur": 21490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 98,
+    "market_sample_size": 97,
     "market_median_eur": 10990,
     "price_pct_vs_median": 0.0,
     "is_underpriced": false
@@ -49871,9 +49840,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 85,
-    "market_median_eur": 9900,
-    "price_pct_vs_median": 11.1,
+    "market_sample_size": 86,
+    "market_median_eur": 9850,
+    "price_pct_vs_median": 11.7,
     "is_underpriced": false
   },
   {
@@ -50009,9 +49978,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 85,
-    "market_median_eur": 9900,
-    "price_pct_vs_median": 20.2,
+    "market_sample_size": 86,
+    "market_median_eur": 9850,
+    "price_pct_vs_median": 20.8,
     "is_underpriced": false
   },
   {
@@ -50053,9 +50022,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 91,
-    "market_median_eur": 14000,
-    "price_pct_vs_median": -10.7,
+    "market_sample_size": 92,
+    "market_median_eur": 13975,
+    "price_pct_vs_median": -10.6,
     "is_underpriced": false
   },
   {
@@ -50216,7 +50185,7 @@
     "total_project_cost_eur": 23450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": -13.7,
     "is_underpriced": false
@@ -50254,7 +50223,7 @@
     "total_project_cost_eur": 23450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": -13.7,
     "is_underpriced": false
@@ -50292,7 +50261,7 @@
     "total_project_cost_eur": 23450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": -13.7,
     "is_underpriced": false
@@ -50330,7 +50299,7 @@
     "total_project_cost_eur": 23900.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 98,
+    "market_sample_size": 97,
     "market_median_eur": 10990,
     "price_pct_vs_median": 21.9,
     "is_underpriced": false
@@ -50587,9 +50556,9 @@
     "total_project_cost_eur": 24750.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": 0.9,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": 1.8,
     "is_underpriced": false
   },
   {
@@ -50631,7 +50600,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 98,
+    "market_sample_size": 97,
     "market_median_eur": 10990,
     "price_pct_vs_median": 29.7,
     "is_underpriced": false
@@ -50713,9 +50682,9 @@
     "total_project_cost_eur": 25000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 100,
-    "market_median_eur": 10250,
-    "price_pct_vs_median": 41.5,
+    "market_sample_size": 101,
+    "market_median_eur": 9999,
+    "price_pct_vs_median": 45.0,
     "is_underpriced": false
   },
   {
@@ -50751,9 +50720,9 @@
     "total_project_cost_eur": 25400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 68,
-    "market_median_eur": 9850,
-    "price_pct_vs_median": 51.3,
+    "market_sample_size": 69,
+    "market_median_eur": 9800,
+    "price_pct_vs_median": 52.0,
     "is_underpriced": false
   },
   {
@@ -50795,7 +50764,7 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 55,
+    "market_sample_size": 54,
     "market_median_eur": 17000,
     "price_pct_vs_median": -12.1,
     "is_underpriced": false
@@ -50880,9 +50849,9 @@
     "total_project_cost_eur": 25949.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 91,
-    "market_median_eur": 14000,
-    "price_pct_vs_median": 10.3,
+    "market_sample_size": 92,
+    "market_median_eur": 13975,
+    "price_pct_vs_median": 10.5,
     "is_underpriced": false
   },
   {
@@ -50962,7 +50931,7 @@
     "total_project_cost_eur": 26390.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 98,
+    "market_sample_size": 97,
     "market_median_eur": 10990,
     "price_pct_vs_median": 44.6,
     "is_underpriced": false
@@ -51000,9 +50969,9 @@
     "total_project_cost_eur": 26400.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 85,
-    "market_median_eur": 9900,
-    "price_pct_vs_median": 60.6,
+    "market_sample_size": 86,
+    "market_median_eur": 9850,
+    "price_pct_vs_median": 61.4,
     "is_underpriced": false
   },
   {
@@ -51044,8 +51013,8 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 69,
-    "market_median_eur": 17800,
+    "market_sample_size": 68,
+    "market_median_eur": 17794,
     "price_pct_vs_median": -10.4,
     "is_underpriced": false
   },
@@ -51088,9 +51057,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 151,
-    "market_median_eur": 17999,
-    "price_pct_vs_median": -6.9,
+    "market_sample_size": 149,
+    "market_median_eur": 17950,
+    "price_pct_vs_median": -6.7,
     "is_underpriced": false
   },
   {
@@ -51132,9 +51101,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": 20.0,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": 21.1,
     "is_underpriced": false
   },
   {
@@ -51255,9 +51224,9 @@
     "total_project_cost_eur": 28000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": -11.5,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": -10.7,
     "is_underpriced": false
   },
   {
@@ -51293,8 +51262,8 @@
     "total_project_cost_eur": 28100.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 69,
-    "market_median_eur": 17800,
+    "market_sample_size": 68,
+    "market_median_eur": 17794,
     "price_pct_vs_median": -1.1,
     "is_underpriced": false
   },
@@ -51333,7 +51302,7 @@
     "total_project_cost_eur": 28300.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": 18.7,
     "is_underpriced": false
@@ -51377,9 +51346,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 39,
-    "market_median_eur": 18600,
-    "price_pct_vs_median": -3.8,
+    "market_sample_size": 38,
+    "market_median_eur": 18375,
+    "price_pct_vs_median": -2.6,
     "is_underpriced": false
   },
   {
@@ -51459,7 +51428,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 55,
+    "market_sample_size": 54,
     "market_median_eur": 17000,
     "price_pct_vs_median": 5.3,
     "is_underpriced": false
@@ -51505,9 +51474,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 151,
-    "market_median_eur": 17999,
-    "price_pct_vs_median": -0.3,
+    "market_sample_size": 149,
+    "market_median_eur": 17950,
+    "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
   {
@@ -51581,8 +51550,8 @@
     "total_project_cost_eur": 28490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 69,
-    "market_median_eur": 17800,
+    "market_sample_size": 68,
+    "market_median_eur": 17794,
     "price_pct_vs_median": 1.1,
     "is_underpriced": false
   },
@@ -51625,9 +51594,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 64,
-    "market_median_eur": 19970,
-    "price_pct_vs_median": -9.9,
+    "market_sample_size": 63,
+    "market_median_eur": 19950,
+    "price_pct_vs_median": -9.8,
     "is_underpriced": false
   },
   {
@@ -51669,9 +51638,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": -2.2,
+    "market_sample_size": 54,
+    "market_median_eur": 18274,
+    "price_pct_vs_median": -1.5,
     "is_underpriced": false
   },
   {
@@ -51745,9 +51714,9 @@
     "total_project_cost_eur": 28790.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 91,
-    "market_median_eur": 14000,
-    "price_pct_vs_median": 30.6,
+    "market_sample_size": 92,
+    "market_median_eur": 13975,
+    "price_pct_vs_median": 30.9,
     "is_underpriced": false
   },
   {
@@ -51783,9 +51752,9 @@
     "total_project_cost_eur": 28899.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 80,
-    "market_median_eur": 15700,
-    "price_pct_vs_median": 17.2,
+    "market_sample_size": 79,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 18.7,
     "is_underpriced": false
   },
   {
@@ -51827,9 +51796,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 77,
-    "market_median_eur": 18400,
-    "price_pct_vs_median": 0.0,
+    "market_sample_size": 76,
+    "market_median_eur": 18200,
+    "price_pct_vs_median": 1.1,
     "is_underpriced": false
   },
   {
@@ -51903,8 +51872,8 @@
     "total_project_cost_eur": 29290.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 69,
-    "market_median_eur": 17800,
+    "market_sample_size": 68,
+    "market_median_eur": 17794,
     "price_pct_vs_median": 5.6,
     "is_underpriced": false
   },
@@ -52115,7 +52084,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": -7.2,
     "is_underpriced": false
@@ -52243,9 +52212,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 80,
-    "market_median_eur": 15700,
-    "price_pct_vs_median": 26.8,
+    "market_sample_size": 79,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 28.4,
     "is_underpriced": false
   },
   {
@@ -52287,9 +52256,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 64,
-    "market_median_eur": 19970,
-    "price_pct_vs_median": -0.1,
+    "market_sample_size": 63,
+    "market_median_eur": 19950,
+    "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
   {
@@ -52334,9 +52303,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 140,
-    "market_median_eur": 14122,
-    "price_pct_vs_median": 41.3,
+    "market_sample_size": 139,
+    "market_median_eur": 13995,
+    "price_pct_vs_median": 42.6,
     "is_underpriced": false
   },
   {
@@ -52375,7 +52344,7 @@
     "total_project_cost_eur": 30450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": 33.0,
     "is_underpriced": false
@@ -52419,9 +52388,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 64,
-    "market_median_eur": 19970,
-    "price_pct_vs_median": 0.1,
+    "market_sample_size": 63,
+    "market_median_eur": 19950,
+    "price_pct_vs_median": 0.2,
     "is_underpriced": false
   },
   {
@@ -52459,7 +52428,7 @@
     "total_project_cost_eur": 30495.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": -4.6,
     "is_underpriced": false
@@ -52497,9 +52466,9 @@
     "total_project_cost_eur": 30930.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 79,
-    "market_median_eur": 16449,
-    "price_pct_vs_median": 24.2,
+    "market_sample_size": 78,
+    "market_median_eur": 16224,
+    "price_pct_vs_median": 25.9,
     "is_underpriced": false
   },
   {
@@ -52535,9 +52504,9 @@
     "total_project_cost_eur": 31000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 39,
-    "market_median_eur": 18600,
-    "price_pct_vs_median": 10.2,
+    "market_sample_size": 38,
+    "market_median_eur": 18375,
+    "price_pct_vs_median": 11.6,
     "is_underpriced": false
   },
   {
@@ -52573,9 +52542,9 @@
     "total_project_cost_eur": 31250.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": 4.9,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": 5.9,
     "is_underpriced": false
   },
   {
@@ -52801,9 +52770,9 @@
         "severity": "high"
       }
     ],
-    "market_sample_size": 22,
-    "market_median_eur": 21390,
-    "price_pct_vs_median": -1.9,
+    "market_sample_size": 21,
+    "market_median_eur": 20980,
+    "price_pct_vs_median": 0.0,
     "is_underpriced": false
   },
   {
@@ -52964,9 +52933,9 @@
     "total_project_cost_eur": 32490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 69,
-    "market_median_eur": 17800,
-    "price_pct_vs_median": 23.5,
+    "market_sample_size": 68,
+    "market_median_eur": 17794,
+    "price_pct_vs_median": 23.6,
     "is_underpriced": false
   },
   {
@@ -53008,48 +52977,6 @@
     "is_underpriced": false
   },
   {
-    "title": "e-Boxer 435 L3H2 Premium 70 kWh 136pk | Achteruitr",
-    "url": "https://www.autoscout24.nl/aanbod/peugeot-boxer-e-boxer-435-l3h2-premium-70-kwh-136pk-achteruitr-elektrisch-wit-cat_ma55mo14821-53331bf9-77ab-4272-ab46-fb4705bbc928",
-    "source": "autoscout24_nl",
-    "country": "nl",
-    "year": 2021,
-    "km": 10483,
-    "price_eur": 22450.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://prod.pictures.autoscout24.net/listing-images/53331bf9-77ab-4272-ab46-fb4705bbc928_46488802-7289-4382-bb24-53e1c86e7e7f.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/53331bf9-77ab-4272-ab46-fb4705bbc928_6b7cff96-3513-4227-82bd-3f84ed8a749a.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/53331bf9-77ab-4272-ab46-fb4705bbc928_cca90b0d-d6ca-41ea-a268-c4118be495cd.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/53331bf9-77ab-4272-ab46-fb4705bbc928_822cf691-aed6-45de-b979-0b00f4e94da9.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/53331bf9-77ab-4272-ab46-fb4705bbc928_484dfa18-ec0e-41b9-bea2-f0e68c822a98.jpg/250x188.webp"
-    ],
-    "vat_hint": null,
-    "model_group": "psa_l1l2h1",
-    "variant": "L3H2",
-    "classification_confidence": "high",
-    "matched_token": "boxer",
-    "score": 49,
-    "vat_scheme": "unknown",
-    "price_gross_eur": 22450,
-    "vat_evidence": "no VAT signal",
-    "vat_confidence": "low",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 32950.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 135,
-    "market_median_eur": 15000,
-    "price_pct_vs_median": 49.7,
-    "is_underpriced": false
-  },
-  {
     "title": "Peugeot Boxer 335 2.2 BlueHDi 165 L3H2 Premium",
     "url": "https://www.regeljelease.nl/voertuig/peugeot-boxer-2021-diesel-805614",
     "source": "regeljelease",
@@ -53085,7 +53012,7 @@
     "total_project_cost_eur": 33000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 135,
+    "market_sample_size": 133,
     "market_median_eur": 15000,
     "price_pct_vs_median": 50.0,
     "is_underpriced": false
@@ -53165,9 +53092,9 @@
     "total_project_cost_eur": 34050.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 64,
-    "market_median_eur": 19970,
-    "price_pct_vs_median": 17.9,
+    "market_sample_size": 63,
+    "market_median_eur": 19950,
+    "price_pct_vs_median": 18.0,
     "is_underpriced": false
   },
   {
@@ -53241,9 +53168,9 @@
     "total_project_cost_eur": 34300.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 24,
-    "market_median_eur": 19235,
-    "price_pct_vs_median": 23.7,
+    "market_sample_size": 23,
+    "market_median_eur": 19500,
+    "price_pct_vs_median": 22.1,
     "is_underpriced": false
   },
   {
@@ -53285,9 +53212,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 46,
-    "market_median_eur": 20657,
-    "price_pct_vs_median": 15.6,
+    "market_sample_size": 45,
+    "market_median_eur": 20490,
+    "price_pct_vs_median": 16.5,
     "is_underpriced": false
   },
   {
@@ -53373,7 +53300,7 @@
     "total_project_cost_eur": 34490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 55,
+    "market_sample_size": 54,
     "market_median_eur": 17000,
     "price_pct_vs_median": 41.1,
     "is_underpriced": false
@@ -53411,9 +53338,9 @@
     "total_project_cost_eur": 34495.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": 21.3,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": 22.4,
     "is_underpriced": false
   },
   {
@@ -53457,7 +53384,7 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 16.9,
     "is_underpriced": false
@@ -53599,48 +53526,6 @@
     "is_underpriced": false
   },
   {
-    "title": "\u00eb-Jumper L3 H2 70 kWh",
-    "url": "https://www.autoscout24.nl/aanbod/citroen-jumper-e-jumper-l3-h2-70-kwh-elektrisch-wit-cat_ma21mo14710-0b54b5aa-89bd-47f0-b3b1-d43eb4f13982",
-    "source": "autoscout24_nl",
-    "country": "nl",
-    "year": 2023,
-    "km": 2458,
-    "price_eur": 24950.0,
-    "seats": null,
-    "emission_standard": null,
-    "body_type": null,
-    "weight_kg": null,
-    "remarks": "",
-    "images": [
-      "https://prod.pictures.autoscout24.net/listing-images/0b54b5aa-89bd-47f0-b3b1-d43eb4f13982_49adf851-8181-485f-8fe2-a863a548da3a.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/0b54b5aa-89bd-47f0-b3b1-d43eb4f13982_6075f75f-121e-47d6-9546-f4d4ec27fa8c.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/0b54b5aa-89bd-47f0-b3b1-d43eb4f13982_8e5e863c-6273-4fea-b779-380a2547eb10.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/0b54b5aa-89bd-47f0-b3b1-d43eb4f13982_b516f1d5-7173-4e4d-a46d-d25523db50ad.jpg/250x188.webp",
-      "https://prod.pictures.autoscout24.net/listing-images/0b54b5aa-89bd-47f0-b3b1-d43eb4f13982_3d087eef-623f-4bdb-a09f-c30a3b4e6e46.jpg/250x188.webp"
-    ],
-    "vat_hint": null,
-    "model_group": "psa_l1l2h1",
-    "variant": "L3H2",
-    "classification_confidence": "high",
-    "matched_token": "jumper",
-    "score": 49,
-    "vat_scheme": "unknown",
-    "price_gross_eur": 24950,
-    "vat_evidence": "no VAT signal",
-    "vat_confidence": "low",
-    "est_conversion_cost_eur": 10500,
-    "est_conversion_cost_low_eur": 7000,
-    "est_conversion_cost_high_eur": 14000,
-    "conversion_effort": "moderate",
-    "total_project_cost_eur": 35450.0,
-    "risk_score": 0,
-    "risk_flags": [],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": 26.2,
-    "is_underpriced": false
-  },
-  {
     "title": "Opel Movano Kasten L3H2 BlueHDI 140 3.5 T",
     "url": "https://www.kleinanzeigen.de/s-anzeige/opel-movano-kasten-l3h2-bluehdi-140-3-5-t/3484180716-216-2545",
     "source": "kleinanzeigen_de",
@@ -53673,9 +53558,9 @@
     "total_project_cost_eur": 35480.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 39,
-    "market_median_eur": 18600,
-    "price_pct_vs_median": 34.3,
+    "market_sample_size": 38,
+    "market_median_eur": 18375,
+    "price_pct_vs_median": 35.9,
     "is_underpriced": false
   },
   {
@@ -53717,9 +53602,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 55,
-    "market_median_eur": 18399,
-    "price_pct_vs_median": 35.8,
+    "market_sample_size": 54,
+    "market_median_eur": 18274,
+    "price_pct_vs_median": 36.8,
     "is_underpriced": false
   },
   {
@@ -53758,9 +53643,9 @@
     "total_project_cost_eur": 36000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": 29.0,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": 30.1,
     "is_underpriced": false
   },
   {
@@ -53796,9 +53681,9 @@
     "total_project_cost_eur": 37500.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 19,
-    "market_median_eur": 15990,
-    "price_pct_vs_median": 68.9,
+    "market_sample_size": 20,
+    "market_median_eur": 14994,
+    "price_pct_vs_median": 80.1,
     "is_underpriced": false
   },
   {
@@ -53877,9 +53762,9 @@
     "total_project_cost_eur": 38450.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 128,
-    "market_median_eur": 19775,
-    "price_pct_vs_median": 41.3,
+    "market_sample_size": 126,
+    "market_median_eur": 19600,
+    "price_pct_vs_median": 42.6,
     "is_underpriced": false
   },
   {
@@ -53921,9 +53806,9 @@
         "severity": "warn"
       }
     ],
-    "market_sample_size": 46,
-    "market_median_eur": 20657,
-    "price_pct_vs_median": 35.5,
+    "market_sample_size": 45,
+    "market_median_eur": 20490,
+    "price_pct_vs_median": 36.6,
     "is_underpriced": false
   },
   {
@@ -54046,7 +53931,7 @@
     "total_project_cost_eur": 40350.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 87,
+    "market_sample_size": 86,
     "market_median_eur": 20950,
     "price_pct_vs_median": 42.5,
     "is_underpriced": false
@@ -54088,9 +53973,9 @@
     "total_project_cost_eur": 42490.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 69,
-    "market_median_eur": 17800,
-    "price_pct_vs_median": 79.7,
+    "market_sample_size": 68,
+    "market_median_eur": 17794,
+    "price_pct_vs_median": 79.8,
     "is_underpriced": false
   },
   {
@@ -54166,9 +54051,9 @@
     "total_project_cost_eur": 44199.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 77,
-    "market_median_eur": 18400,
-    "price_pct_vs_median": 83.1,
+    "market_sample_size": 76,
+    "market_median_eur": 18200,
+    "price_pct_vs_median": 85.2,
     "is_underpriced": false
   },
   {
@@ -54284,9 +54169,9 @@
     "total_project_cost_eur": 50245.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 76,
-    "market_median_eur": 21175,
-    "price_pct_vs_median": 87.7,
+    "market_sample_size": 75,
+    "market_median_eur": 20950,
+    "price_pct_vs_median": 89.7,
     "is_underpriced": false
   },
   {
@@ -54366,9 +54251,9 @@
     "total_project_cost_eur": 65500.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 80,
-    "market_median_eur": 15700,
-    "price_pct_vs_median": 250.3,
+    "market_sample_size": 79,
+    "market_median_eur": 15500,
+    "price_pct_vs_median": 254.8,
     "is_underpriced": false
   },
   {
@@ -54404,7 +54289,7 @@
     "total_project_cost_eur": 21000.0,
     "risk_score": 0,
     "risk_flags": [],
-    "market_sample_size": 98,
+    "market_sample_size": 97,
     "market_median_eur": 10990,
     "price_pct_vs_median": -4.5,
     "is_underpriced": false
