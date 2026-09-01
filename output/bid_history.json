@@ -51070,6 +51070,12 @@
           "current_bid_eur": 4050.0,
           "bids_count": 10,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-01T03:05:47.093632+00:00",
+          "current_bid_eur": 10500.0,
+          "bids_count": 20,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -52537,6 +52543,12 @@
           "current_bid_eur": 2900.0,
           "bids_count": 5,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-01T03:05:47.093632+00:00",
+          "current_bid_eur": 3000.0,
+          "bids_count": 6,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -53271,6 +53283,12 @@
           "ts": "2026-08-27T21:58:37.158671+00:00",
           "current_bid_eur": 3200.0,
           "bids_count": 9,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-01T03:05:47.093632+00:00",
+          "current_bid_eur": 6000.0,
+          "bids_count": 17,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -55006,6 +55024,12 @@
           "current_bid_eur": 110.0,
           "bids_count": 2,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-01T03:05:47.093632+00:00",
+          "current_bid_eur": 200.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -55825,6 +55849,12 @@
           "current_bid_eur": 540.0,
           "bids_count": 4,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-01T03:05:47.093632+00:00",
+          "current_bid_eur": 580.0,
+          "bids_count": 6,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -56428,6 +56458,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-01T03:05:47.093632+00:00",
+          "current_bid_eur": 100.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -56605,6 +56641,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-09-01T03:05:47.093632+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -56926,6 +56968,21 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "733024d7-c207-48bf-aae1-5ac872d67422": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-ducato-panorama-bus-passenger-car-A1-40522-19",
+      "model_token": "ducato",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-09-01T03:05:47.093632+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
