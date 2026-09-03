@@ -55015,6 +55015,12 @@
           "current_bid_eur": 1500.0,
           "bids_count": 2,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-03T20:30:11.401584+00:00",
+          "current_bid_eur": 1600.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -57598,6 +57604,12 @@
           "current_bid_eur": 1700.0,
           "bids_count": 5,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-03T20:30:11.401584+00:00",
+          "current_bid_eur": 1900.0,
+          "bids_count": 9,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -58732,6 +58744,21 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "577e9f5a-bf04-4699-8292-7fa6cc3498d0": {
+      "url": "https://www.vavato.com/en/l/mercedes-benz-2015-sprinter-313-cdi-car-A3-46150-6125",
+      "model_token": "sprinter",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-09-03T20:30:11.401584+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
