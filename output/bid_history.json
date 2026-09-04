@@ -53959,6 +53959,12 @@
           "current_bid_eur": 4250.0,
           "bids_count": 26,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-04T20:19:15.288159+00:00",
+          "current_bid_eur": 4500.0,
+          "bids_count": 27,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -54213,6 +54219,12 @@
           "ts": "2026-09-04T02:45:12.855391+00:00",
           "current_bid_eur": 3250.0,
           "bids_count": 23,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-04T20:19:15.288159+00:00",
+          "current_bid_eur": 3500.0,
+          "bids_count": 24,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -55375,6 +55387,12 @@
           "current_bid_eur": 650.0,
           "bids_count": 7,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-04T20:19:15.288159+00:00",
+          "current_bid_eur": 850.0,
+          "bids_count": 11,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -55665,6 +55683,12 @@
           "ts": "2026-09-04T10:36:30.653188+00:00",
           "current_bid_eur": 4200.0,
           "bids_count": 50,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-04T20:19:15.288159+00:00",
+          "current_bid_eur": 4400.0,
+          "bids_count": 51,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -57322,6 +57346,12 @@
           "current_bid_eur": 2600.0,
           "bids_count": 3,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-04T20:19:15.288159+00:00",
+          "current_bid_eur": 2900.0,
+          "bids_count": 6,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -57369,6 +57399,12 @@
           "ts": "2026-09-04T10:36:30.653188+00:00",
           "current_bid_eur": 4000.0,
           "bids_count": 83,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-04T20:19:15.288159+00:00",
+          "current_bid_eur": 4200.0,
+          "bids_count": 84,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -57924,6 +57960,12 @@
           "ts": "2026-09-03T15:44:00.410203+00:00",
           "current_bid_eur": 110.0,
           "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-04T20:19:15.288159+00:00",
+          "current_bid_eur": 120.0,
+          "bids_count": 3,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -60505,6 +60547,66 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "b9a87f10-9c85-4ade-8469-62f3c4de0f38": {
+      "url": "https://www.troostwijkauctions.com/en/l/opel-vivaro-1-6-cdti-l1h1-sport-ecoflex-%257C-v-023-hh-i-A1-44184-5577",
+      "model_token": "vivaro",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-09-04T20:19:15.288159+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "061575ce-3698-4e72-83ad-500e9999092a": {
+      "url": "https://www.troostwijkauctions.com/en/l/opel-movano-2-3-cdti-l2h2-%257C-vnf-05-r-i-A1-44185-5382",
+      "model_token": "movano",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-09-04T20:19:15.288159+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "69feb256-c898-4712-91a0-f1b973546650": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-2-8-jtd-dangel-4x4-ducato-15-commercial-vehicle-A1-41083-51",
+      "model_token": "ducato",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-09-04T20:19:15.288159+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "660eb761-62e9-4d67-881b-23aaa11f1582": {
+      "url": "https://www.troostwijkauctions.com/en/l/2010-renault-master-t28-2-5-dci-l1h1-dc-vh-086-p-iaw-A1-44125-705",
+      "model_token": "master",
+      "year": 2010,
+      "snapshots": [
+        {
+          "ts": "2026-09-04T20:19:15.288159+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
