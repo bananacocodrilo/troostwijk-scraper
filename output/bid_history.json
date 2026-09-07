@@ -53863,6 +53863,12 @@
           "current_bid_eur": 3700.0,
           "bids_count": 18,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-07T21:25:45.801573+00:00",
+          "current_bid_eur": 4000.0,
+          "bids_count": 21,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -54189,6 +54195,12 @@
           "ts": "2026-09-06T10:11:51.750721+00:00",
           "current_bid_eur": 800.0,
           "bids_count": 10,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-07T21:25:45.801573+00:00",
+          "current_bid_eur": 1000.0,
+          "bids_count": 14,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -57079,6 +57091,12 @@
           "current_bid_eur": 1650.0,
           "bids_count": 27,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-07T21:25:45.801573+00:00",
+          "current_bid_eur": 1700.0,
+          "bids_count": 28,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -59101,6 +59119,12 @@
           "current_bid_eur": 4500.0,
           "bids_count": 12,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-07T21:25:45.801573+00:00",
+          "current_bid_eur": 5500.0,
+          "bids_count": 15,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -59848,6 +59872,12 @@
           "current_bid_eur": 1050.0,
           "bids_count": 2,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-07T21:25:45.801573+00:00",
+          "current_bid_eur": 2500.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -60036,6 +60066,12 @@
           "ts": "2026-09-07T17:11:47.420400+00:00",
           "current_bid_eur": 4200.0,
           "bids_count": 13,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-07T21:25:45.801573+00:00",
+          "current_bid_eur": 4400.0,
+          "bids_count": 14,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -60744,6 +60780,12 @@
           "ts": "2026-09-06T20:05:28.950980+00:00",
           "current_bid_eur": 250.0,
           "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-07T21:25:45.801573+00:00",
+          "current_bid_eur": 270.0,
+          "bids_count": 2,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -61627,6 +61669,126 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "7f89aeac-56c5-478b-a767-d36d76277fc3": {
+      "url": "https://www.troostwijkauctions.com/en/l/2008-mercedes-benz-sprinter-311-2-2-cdi-432-hd-passenger-car-A1-42202-11",
+      "model_token": "sprinter",
+      "year": 2008,
+      "snapshots": [
+        {
+          "ts": "2026-09-07T21:25:45.801573+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "8e0d5bf3-b304-44bf-bc97-130f1a98eb0c": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-211-2-2-cdi-l2h1-functional-114hp-2019-vtr-06-h-A1-44414-52",
+      "model_token": "sprinter",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-09-07T21:25:45.801573+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "e1a18b3c-de99-4cfe-8c95-2fb3b7478112": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-516-2-2-cdi-432-163hp-2013-vfb-88-z-automatic-A1-44414-44",
+      "model_token": "sprinter",
+      "year": 2013,
+      "snapshots": [
+        {
+          "ts": "2026-09-07T21:25:45.801573+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2016d38f-d2a8-4431-b554-d330d2276f65": {
+      "url": "https://www.troostwijkauctions.com/en/l/2015-mercedes-benz-sprinter-be-trekker-A1-49164-28",
+      "model_token": "sprinter",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-09-07T21:25:45.801573+00:00",
+          "current_bid_eur": 1750.0,
+          "bids_count": 43,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "5f8bb9b5-fbe6-4516-a05d-4f13d6097fee": {
+      "url": "https://www.troostwijkauctions.com/en/l/2015-mercedes-benz-sprinter-be-trekker-A1-49164-29",
+      "model_token": "sprinter",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-09-07T21:25:45.801573+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "98b2154c-3afe-4c8c-a667-4fa8118483a2": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-230-knaus-traveller-camper-1996-A1-49678-53",
+      "model_token": "traveller",
+      "year": 1996,
+      "snapshots": [
+        {
+          "ts": "2026-09-07T21:25:45.801573+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "c7ff4daf-e4ee-4d59-bd29-f489fdd9d0ca": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-transporter-caravelle-motorhome-2011-A1-49678-45",
+      "model_token": "transporter",
+      "year": 2011,
+      "snapshots": [
+        {
+          "ts": "2026-09-07T21:25:45.801573+00:00",
+          "current_bid_eur": 2100.0,
+          "bids_count": 9,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "dd477d2d-6f71-41f6-ae7d-7f2d90ac93cc": {
+      "url": "https://www.troostwijkauctions.com/en/l/2016-mercedes-benz-sprinter-box-body-A1-49450-56",
+      "model_token": "sprinter",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-09-07T21:25:45.801573+00:00",
+          "current_bid_eur": 7200.0,
+          "bids_count": 13,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
