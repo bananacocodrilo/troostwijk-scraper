@@ -54523,6 +54523,12 @@
           "current_bid_eur": 7300.0,
           "bids_count": 27,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-08T02:31:26.819675+00:00",
+          "current_bid_eur": 9100.0,
+          "bids_count": 31,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -56674,6 +56680,12 @@
           "current_bid_eur": 350.0,
           "bids_count": 20,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-08T02:31:26.819675+00:00",
+          "current_bid_eur": 370.0,
+          "bids_count": 21,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -56808,6 +56820,12 @@
           "ts": "2026-09-06T10:11:51.750721+00:00",
           "current_bid_eur": 2700.0,
           "bids_count": 6,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-08T02:31:26.819675+00:00",
+          "current_bid_eur": 3100.0,
+          "bids_count": 10,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -58218,6 +58236,12 @@
           "ts": "2026-09-07T17:11:47.420400+00:00",
           "current_bid_eur": 8700.0,
           "bids_count": 19,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-08T02:31:26.819675+00:00",
+          "current_bid_eur": 9200.0,
+          "bids_count": 20,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -60175,6 +60199,12 @@
           "current_bid_eur": 500.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-08T02:31:26.819675+00:00",
+          "current_bid_eur": 580.0,
+          "bids_count": 5,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -60856,6 +60886,12 @@
           "current_bid_eur": 16.0,
           "bids_count": 4,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-08T02:31:26.819675+00:00",
+          "current_bid_eur": 21.0,
+          "bids_count": 5,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -61080,6 +61116,12 @@
           "ts": "2026-09-07T02:22:52.118469+00:00",
           "current_bid_eur": 600.0,
           "bids_count": 3,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-08T02:31:26.819675+00:00",
+          "current_bid_eur": 650.0,
+          "bids_count": 4,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -61789,6 +61831,36 @@
           "current_bid_eur": 7200.0,
           "bids_count": 13,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "4e5edb5b-e5d9-46db-86c3-7f78e4811a24": {
+      "url": "https://www.troostwijkauctions.com/en/l/subaru-tribeca-3-0r-boxer-h6-luxury-245hp-2008-orig-nl-28-vg-zd-youngtimer-A1-44416-55",
+      "model_token": "boxer",
+      "year": 2008,
+      "snapshots": [
+        {
+          "ts": "2026-09-08T02:31:26.819675+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2c5f8e6f-667c-4433-ae44-711e437b603c": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-boxer-flatbed-A1-49880-6",
+      "model_token": "boxer",
+      "year": 2008,
+      "snapshots": [
+        {
+          "ts": "2026-09-08T02:31:26.819675+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
