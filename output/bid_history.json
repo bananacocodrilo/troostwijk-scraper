@@ -59422,6 +59422,12 @@
           "current_bid_eur": 2900.0,
           "bids_count": 5,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-14T21:48:44.427806+00:00",
+          "current_bid_eur": 3000.0,
+          "bids_count": 6,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -61237,6 +61243,12 @@
           "current_bid_eur": 6200.0,
           "bids_count": 7,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-14T21:48:44.427806+00:00",
+          "current_bid_eur": 6400.0,
+          "bids_count": 8,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -62493,6 +62505,12 @@
           "ts": "2026-09-14T02:55:38.516321+00:00",
           "current_bid_eur": 2800.0,
           "bids_count": 23,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-14T21:48:44.427806+00:00",
+          "current_bid_eur": 2900.0,
+          "bids_count": 24,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -65416,6 +65434,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-14T21:48:44.427806+00:00",
+          "current_bid_eur": 1000.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -66820,6 +66844,36 @@
       "snapshots": [
         {
           "ts": "2026-09-14T17:43:50.398074+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "83fee999-1270-4be3-8735-bbc1bd1930e5": {
+      "url": "https://www.troostwijkauctions.com/en/l/man-tge-50-2-0-long-super-high-dl-177hp-2020-%2528automatic%2529-double-wheel-v-54-nzp-A1-44418-74",
+      "model_token": "tge",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-09-14T21:48:44.427806+00:00",
+          "current_bid_eur": 5200.0,
+          "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "ebbc71fc-ba50-4447-b990-3d0b160c553c": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-314-2-2-cdi-l3h2-functional-euro-vi-d-2019-org-nl-v-089-xj-A1-44418-54",
+      "model_token": "sprinter",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-09-14T21:48:44.427806+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
