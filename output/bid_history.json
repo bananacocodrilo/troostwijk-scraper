@@ -59167,6 +59167,12 @@
           "current_bid_eur": 1150.0,
           "bids_count": 10,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-15T03:00:26.025256+00:00",
+          "current_bid_eur": 1200.0,
+          "bids_count": 11,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -61248,6 +61254,12 @@
           "ts": "2026-09-14T21:48:44.427806+00:00",
           "current_bid_eur": 6400.0,
           "bids_count": 8,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-15T03:00:26.025256+00:00",
+          "current_bid_eur": 6800.0,
+          "bids_count": 11,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -63946,6 +63958,12 @@
           "current_bid_eur": 3300.0,
           "bids_count": 9,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-15T03:00:26.025256+00:00",
+          "current_bid_eur": 3800.0,
+          "bids_count": 14,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -64491,6 +64509,12 @@
           "ts": "2026-09-11T02:46:38.300979+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-15T03:00:26.025256+00:00",
+          "current_bid_eur": 2500.0,
+          "bids_count": 1,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -66874,6 +66898,21 @@
       "snapshots": [
         {
           "ts": "2026-09-14T21:48:44.427806+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "546d9a71-2aff-4a01-8585-97a364e1a3ad": {
+      "url": "https://www.troostwijkauctions.com/en/l/opel-movano-2-3-turbo-l3h3-vfl-79-h-A1-40690-43",
+      "model_token": "movano",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-09-15T03:00:26.025256+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
