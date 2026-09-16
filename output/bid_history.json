@@ -60712,6 +60712,12 @@
           "current_bid_eur": 3000.0,
           "bids_count": 8,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-16T02:51:14.258991+00:00",
+          "current_bid_eur": 4300.0,
+          "bids_count": 18,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -63604,6 +63610,12 @@
           "current_bid_eur": 3900.0,
           "bids_count": 35,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-16T02:51:14.258991+00:00",
+          "current_bid_eur": 4200.0,
+          "bids_count": 37,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -64006,6 +64018,12 @@
           "current_bid_eur": 5100.0,
           "bids_count": 55,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-16T02:51:14.258991+00:00",
+          "current_bid_eur": 5700.0,
+          "bids_count": 58,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -64065,6 +64083,12 @@
           "ts": "2026-09-15T03:00:26.025256+00:00",
           "current_bid_eur": 3800.0,
           "bids_count": 14,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-16T02:51:14.258991+00:00",
+          "current_bid_eur": 4250.0,
+          "bids_count": 17,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -66781,6 +66805,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-09-16T02:51:14.258991+00:00",
+          "current_bid_eur": 3200.0,
+          "bids_count": 4,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -67326,6 +67356,21 @@
           "ts": "2026-09-15T21:20:31.622327+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "693c9322-1790-4296-88e2-a8974ac2a041": {
+      "url": "https://www.troostwijkauctions.com/en/l/brenderup-2014-ambulance-transporter-A1-47989-42",
+      "model_token": "transporter",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T02:51:14.258991+00:00",
+          "current_bid_eur": 950.0,
+          "bids_count": 18,
           "status": "BIDDING_OPEN"
         }
       ],
