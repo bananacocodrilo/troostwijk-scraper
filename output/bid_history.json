@@ -60610,6 +60610,12 @@
           "current_bid_eur": 9800.0,
           "bids_count": 13,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": 10000.0,
+          "bids_count": 14,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -60723,6 +60729,12 @@
           "ts": "2026-09-16T02:51:14.258991+00:00",
           "current_bid_eur": 4300.0,
           "bids_count": 18,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": 4500.0,
+          "bids_count": 19,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -61110,6 +61122,12 @@
           "ts": "2026-09-15T16:35:28.369232+00:00",
           "current_bid_eur": 1950.0,
           "bids_count": 29,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": 2000.0,
+          "bids_count": 30,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -63577,6 +63595,12 @@
           "current_bid_eur": 8200.0,
           "bids_count": 21,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": 8600.0,
+          "bids_count": 23,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -63651,6 +63675,12 @@
           "ts": "2026-09-16T10:55:16.521633+00:00",
           "current_bid_eur": 5000.0,
           "bids_count": 41,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": 6000.0,
+          "bids_count": 46,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -64060,6 +64090,12 @@
           "current_bid_eur": 5700.0,
           "bids_count": 58,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": 6000.0,
+          "bids_count": 59,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -64218,6 +64254,12 @@
           "ts": "2026-09-13T11:11:56.679134+00:00",
           "current_bid_eur": 2800.0,
           "bids_count": 4,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": 2900.0,
+          "bids_count": 5,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -65209,6 +65251,12 @@
           "current_bid_eur": 2900.0,
           "bids_count": 5,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": 3000.0,
+          "bids_count": 6,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -66097,6 +66145,12 @@
           "current_bid_eur": 7400.0,
           "bids_count": 33,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": 7600.0,
+          "bids_count": 34,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -66510,6 +66564,12 @@
           "ts": "2026-09-14T17:43:50.398074+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": 100.0,
+          "bids_count": 1,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -67642,6 +67702,546 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "119293d1-8c7c-423b-bbbd-5c7d38e79851": {
+      "url": "https://www.vavato.com/en/l/mercedes-benz-mercedes-benz-sprinter-sprinter-van-A3-46160-40016",
+      "model_token": "sprinter",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "9f9fee6d-28d6-4615-a777-82c9c657892f": {
+      "url": "https://www.vavato.com/en/l/mercedes_benz-sprinter-v6-3-0-diesel-906bb35-van-A3-46160-40020",
+      "model_token": "sprinter",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "0cf1452a-e24a-4074-9954-b18bed37fae3": {
+      "url": "https://www.vavato.com/en/l/2007-nissan-interstar-f3b1h6-70108km-mobile-home-furnishings-A3-46160-5016",
+      "model_token": "interstar",
+      "year": 2007,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "d1c3ed43-c0fd-40ea-898b-f56817df2e77": {
+      "url": "https://www.vavato.com/en/l/2016-peugeot-boxer-promotional-car-A3-46160-18609",
+      "model_token": "boxer",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "64050226-45a1-417f-988b-25931a7079ab": {
+      "url": "https://www.vavato.com/en/l/2011-peugeot-boxer-first-owner-A3-46160-5736",
+      "model_token": "boxer",
+      "year": 2011,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "f345c2af-81d7-4738-81de-14c6f42d54e5": {
+      "url": "https://www.vavato.com/en/l/2020-peugeot-boxer-330-2-2-hdi-l2h1-pre-commercial-vehicle-A3-46160-5001",
+      "model_token": "boxer",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "818d7d11-3888-409d-a6ff-ebd1a622b512": {
+      "url": "https://www.vavato.com/en/l/2003-ford-transit-A3-46160-5814",
+      "model_token": "transit",
+      "year": 2003,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "217fcd47-8046-41ec-aae9-4ebefb37292c": {
+      "url": "https://www.vavato.com/en/l/citroen-jumper-A3-46160-4867",
+      "model_token": "jumper",
+      "year": 2022,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "56099920-5520-41bc-8537-f958e72b2457": {
+      "url": "https://www.troostwijkauctions.com/en/l/2022-nissan-interstar-A3-46159-4984",
+      "model_token": "interstar",
+      "year": 2022,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "8f4608ca-ccbd-4af2-ad78-7fed44daf587": {
+      "url": "https://www.vavato.com/en/l/2018-fiat-ducato-250-furniture-box-light-truck-A3-46160-18622",
+      "model_token": "ducato",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "893ac47e-652f-4381-95db-16169104bdb6": {
+      "url": "https://www.vavato.com/en/l/volkswagen-crafter-A3-46160-4890",
+      "model_token": "crafter",
+      "year": 2012,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "ac6011ac-7bc7-40fb-9628-744578d77765": {
+      "url": "https://www.vavato.com/en/l/2016-mercedes-benz-vito-commercial-vehicle-A3-46160-6121",
+      "model_token": "vito",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "f117b428-5296-4c01-bbc8-519f935c9395": {
+      "url": "https://www.vavato.com/en/l/2016-ford-transit-commercial-vehicle-A3-46160-17300",
+      "model_token": "transit",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "5abe4c16-a6f7-423e-874e-42103eac81be": {
+      "url": "https://www.vavato.com/en/l/2016-mercedes-benz-vito-6-seats-automatic-commercial-vehicle-A3-46160-6120",
+      "model_token": "vito",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "e7ce2e4c-944a-491a-98b3-b532e5188fe9": {
+      "url": "https://www.vavato.com/en/l/ford-transit-custom-6-seats-commercial-vehicle-A3-46160-6122",
+      "model_token": "transit custom",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "0735d8b3-aa87-4cf7-8ea6-e38a1364cd5e": {
+      "url": "https://www.vavato.com/en/l/2010-peugeot-boxer-commercial-vehicle-A3-46160-6117",
+      "model_token": "boxer",
+      "year": 2010,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "10ead3b0-b3c3-4249-a129-86919c885415": {
+      "url": "https://www.vavato.com/en/l/2001-citroen-jumpy-1-9-diesel-A3-46160-5739",
+      "model_token": "jumpy",
+      "year": 2001,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "22da4a6e-0aa7-462e-94ab-3d567379627c": {
+      "url": "https://www.vavato.com/en/l/2013-fiat-scudo-commercial-vehicle-A3-46160-6116",
+      "model_token": "scudo",
+      "year": 2013,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "a4f363c3-40af-4324-a558-c58d0b936030": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-ducato-244-camper-challenger-100-2-3jtd-camper-van-18-zbs-1-A1-40741-33",
+      "model_token": "ducato",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "6c4a6338-4369-4dc3-a413-43718aff9306": {
+      "url": "https://www.vavato.com/en/l/2022-fiat-ducato-A3-46159-4976",
+      "model_token": "ducato",
+      "year": 2022,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "7d9315f9-b19e-4be4-a01e-9de847af0e57": {
+      "url": "https://www.vavato.com/en/l/2017-fiat-ducato-A3-46159-4980",
+      "model_token": "ducato",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "ef49b7f5-f2c2-4520-9b4a-b5d822d39c4c": {
+      "url": "https://www.vavato.com/en/l/2019-fiat-talento-light-truck-A3-46160-6929",
+      "model_token": "talento",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "65348fb2-ae52-4391-91d9-f9bf95aaf4e6": {
+      "url": "https://www.troostwijkauctions.com/en/l/2017-ford-transit-2-0-tdci-car-A3-46160-33621",
+      "model_token": "transit",
+      "year": 2017,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "9463cf28-f9be-4eec-8208-7f880e8867de": {
+      "url": "https://www.troostwijkauctions.com/en/l/2015-ford-transit-custom-l2-light-truck-A3-46160-6197",
+      "model_token": "transit custom",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "b57fad8f-cc38-4698-939a-48defdb385be": {
+      "url": "https://www.troostwijkauctions.com/en/l/2014-ford-transit-350-2-2-tdci-l2h2-tr-vk-491-g-A1-40741-487",
+      "model_token": "transit",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "a4facfce-d0a8-4cbc-8a3c-5bd339af0cce": {
+      "url": "https://www.vavato.com/en/l/mercedes-benz-sprinter-317-cdi-car-2022-A3-46160-33598",
+      "model_token": "sprinter",
+      "year": 2022,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "b653b700-8cc5-4d65-b42a-32471cd50a9e": {
+      "url": "https://www.vavato.com/en/l/hymer-mlt-580-4x4-mercedes-benz-sprinter-v6-mlt-580-4x4-motorhome-camping-car-motorhome-A3-46159-40018",
+      "model_token": "sprinter",
+      "year": 2022,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "68570cb3-19ec-4684-bd1f-f72a69ff81cf": {
+      "url": "https://www.vavato.com/en/l/2022-mercedes-benz-sprinter-317-cdi-car-A3-46160-33600",
+      "model_token": "sprinter",
+      "year": 2022,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "79023a40-ebd7-4583-aa54-e35ca083f809": {
+      "url": "https://www.troostwijkauctions.com/en/l/2024-mercedes-benz-sprinter-317-cdi-car-A3-46160-33603",
+      "model_token": "sprinter",
+      "year": 2024,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "59dc2326-db83-45a2-b617-43e47317fbd5": {
+      "url": "https://www.vavato.com/en/l/2021-mercedes-benz-vito-110-cdi-car-A3-46160-33602",
+      "model_token": "vito",
+      "year": 2021,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "a5a5c6b0-8bd0-4c66-9bcf-78b7361c935c": {
+      "url": "https://www.troostwijkauctions.com/en/l/2018-volkswagen-transporter-165227km-A3-46160-5771",
+      "model_token": "transporter",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "d137d5cd-28c5-4b3a-8708-9365716a7b4a": {
+      "url": "https://www.troostwijkauctions.com/en/l/2015-volkswagen-transporter-kombi-A3-46160-5710",
+      "model_token": "transporter",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "e32c2b0c-12fd-4d98-a0f4-3fa04e7b8772": {
+      "url": "https://www.vavato.com/en/l/2021-peugeot-boxer-A3-46159-4977",
+      "model_token": "boxer",
+      "year": 2021,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "dddb446a-f70d-484a-b8de-72d4f62622c6": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-ducato-camper-230-dethleffs-globetrotter-1-9-td-camper-81-vj-pk-A1-40741-44",
+      "model_token": "ducato",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "ebd6c65e-fe3c-4c05-9bfe-f066f1f04e89": {
+      "url": "https://www.troostwijkauctions.com/en/l/fiat-ducato-230-hymer-camper-2-5-tdi-camper-93-bk-jf-A1-40741-10",
+      "model_token": "ducato",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "0805b64c-d635-43d3-a7fb-398d90edea32": {
+      "url": "https://www.vavato.com/en/l/2020-citroen-jumper-A3-46159-4983",
+      "model_token": "jumper",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-09-16T16:14:25.643133+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
