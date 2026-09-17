@@ -59053,6 +59053,12 @@
           "current_bid_eur": 295.0,
           "bids_count": 19,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
+          "current_bid_eur": 315.0,
+          "bids_count": 20,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -61308,6 +61314,12 @@
           "ts": "2026-09-17T16:10:07.207812+00:00",
           "current_bid_eur": 7600.0,
           "bids_count": 24,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
+          "current_bid_eur": 8000.0,
+          "bids_count": 26,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -64879,6 +64891,12 @@
           "current_bid_eur": 2900.0,
           "bids_count": 5,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
+          "current_bid_eur": 4000.0,
+          "bids_count": 6,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -65454,6 +65472,12 @@
           "ts": "2026-09-16T16:14:25.643133+00:00",
           "current_bid_eur": 3000.0,
           "bids_count": 6,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
+          "current_bid_eur": 3200.0,
+          "bids_count": 8,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -66568,6 +66592,12 @@
           "current_bid_eur": 1.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
+          "current_bid_eur": 500.0,
+          "bids_count": 2,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -66756,6 +66786,12 @@
           "ts": "2026-09-16T21:10:32.801815+00:00",
           "current_bid_eur": 100.0,
           "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
+          "current_bid_eur": 1051.0,
+          "bids_count": 43,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -67176,6 +67212,12 @@
           "ts": "2026-09-17T03:05:27.264558+00:00",
           "current_bid_eur": 5200.0,
           "bids_count": 18,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
+          "current_bid_eur": 5800.0,
+          "bids_count": 21,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -68689,6 +68731,12 @@
           "current_bid_eur": 2500.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
+          "current_bid_eur": 2800.0,
+          "bids_count": 4,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -68844,6 +68892,12 @@
           "ts": "2026-09-16T21:10:32.801815+00:00",
           "current_bid_eur": 500.0,
           "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
+          "current_bid_eur": 700.0,
+          "bids_count": 5,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -69097,6 +69151,141 @@
       "snapshots": [
         {
           "ts": "2026-09-17T16:10:07.207812+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "d095967a-c060-4cb8-8825-c20272500221": {
+      "url": "https://www.troostwijkauctions.com/en/l/volkswagen-2016-crafter-35-2-0-tdi-l3h2-car-A1-39750-238",
+      "model_token": "crafter",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2ea332a0-7f94-4f35-b8a6-907eb70360ee": {
+      "url": "https://www.vavato.com/en/l/peugeot-expert-van-A3-46124-35746",
+      "model_token": "expert",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "ee44bfcc-768f-446e-98e4-afa411266da5": {
+      "url": "https://www.vavato.com/en/l/mercedes-2020-sprinter-ambulance-ambulance-A1-49339-2",
+      "model_token": "sprinter",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "250b2c06-c179-496b-bfe2-06922bab57dd": {
+      "url": "https://www.vavato.com/en/l/2019-volvo-fl250-4-x-2-car-transporter-A3-46160-8132",
+      "model_token": "transporter",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "16650fe4-a8a4-4bd8-ad86-595c3a74570a": {
+      "url": "https://www.vavato.com/en/l/mercedes-2019-sprinter-ambulance-A1-49339-3",
+      "model_token": "sprinter",
+      "year": 2018,
+      "snapshots": [
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "b1d4f67c-5eef-4fe3-92a2-5d33f66e7d47": {
+      "url": "https://www.vavato.com/en/l/volkswagen-crafter-l4h3-other-vehicles-A3-46160-39041",
+      "model_token": "crafter",
+      "year": 2020,
+      "snapshots": [
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "a2d891fc-0fc2-43d1-867f-aefcd5e4bca4": {
+      "url": "https://www.vavato.com/en/l/2023-mercedes-benz-sprinter-light-truck-refrigerated-car-A3-46160-6119",
+      "model_token": "sprinter",
+      "year": 2023,
+      "snapshots": [
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "3d5b6c89-2d97-41e4-994f-f56ed05d4dd2": {
+      "url": "https://www.vavato.com/en/l/mercedes-2001-sprinter-mobile-home-A1-49339-17",
+      "model_token": "sprinter",
+      "year": 2001,
+      "snapshots": [
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "255bc401-8be1-40e2-8089-ebde05443b61": {
+      "url": "https://www.vavato.com/en/l/mercedes-2008-sprinter-318-cdi-ambulance-A1-49339-69",
+      "model_token": "sprinter",
+      "year": 2008,
+      "snapshots": [
+        {
+          "ts": "2026-09-17T21:06:23.889475+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
