@@ -66256,6 +66256,12 @@
           "current_bid_eur": 1011.0,
           "bids_count": 58,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-24T02:45:30.052369+00:00",
+          "current_bid_eur": 1111.0,
+          "bids_count": 60,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -66727,6 +66733,12 @@
           "current_bid_eur": 2100.0,
           "bids_count": 7,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-24T02:45:30.052369+00:00",
+          "current_bid_eur": 2200.0,
+          "bids_count": 8,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -66849,6 +66861,12 @@
           "ts": "2026-09-23T10:50:10.426141+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-24T02:45:30.052369+00:00",
+          "current_bid_eur": 2501.0,
+          "bids_count": 18,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -67395,6 +67413,12 @@
           "ts": "2026-09-22T21:06:27.241228+00:00",
           "current_bid_eur": 1250.0,
           "bids_count": 21,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-24T02:45:30.052369+00:00",
+          "current_bid_eur": 2700.0,
+          "bids_count": 43,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -68413,6 +68437,12 @@
           "current_bid_eur": 1400.0,
           "bids_count": 17,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-24T02:45:30.052369+00:00",
+          "current_bid_eur": 1500.0,
+          "bids_count": 19,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -68583,6 +68613,12 @@
           "ts": "2026-09-23T21:31:43.502209+00:00",
           "current_bid_eur": 2000.0,
           "bids_count": 9,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-24T02:45:30.052369+00:00",
+          "current_bid_eur": 2200.0,
+          "bids_count": 11,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -68763,6 +68799,12 @@
           "ts": "2026-09-23T02:55:24.245202+00:00",
           "current_bid_eur": 14250.0,
           "bids_count": 20,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-24T02:45:30.052369+00:00",
+          "current_bid_eur": 21000.0,
+          "bids_count": 30,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -71860,6 +71902,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-24T02:45:30.052369+00:00",
+          "current_bid_eur": 1.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -73609,6 +73657,12 @@
           "current_bid_eur": 2600.0,
           "bids_count": 2,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-09-24T02:45:30.052369+00:00",
+          "current_bid_eur": 2700.0,
+          "bids_count": 3,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -73963,6 +74017,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-09-24T02:45:30.052369+00:00",
+          "current_bid_eur": 100.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -74053,6 +74113,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-09-24T02:45:30.052369+00:00",
+          "current_bid_eur": 1050.0,
+          "bids_count": 2,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -74644,6 +74710,21 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "3d6f8a18-ee41-4726-9c0a-b6e27fae7dab": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-311-2-2-cdi-366-dc-commercial-vehicle-A1-43671-5",
+      "model_token": "sprinter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-09-24T02:45:30.052369+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
         }
       ],
       "final_hammer_eur": null,
