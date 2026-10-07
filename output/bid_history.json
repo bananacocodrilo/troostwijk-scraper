@@ -76660,6 +76660,12 @@
           "current_bid_eur": 4600.0,
           "bids_count": 4,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-10-07T04:13:25.948883+00:00",
+          "current_bid_eur": 4800.0,
+          "bids_count": 5,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -78255,6 +78261,12 @@
           "ts": "2026-10-06T22:45:23.194600+00:00",
           "current_bid_eur": 41000.0,
           "bids_count": 44,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-10-07T04:13:25.948883+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -80286,6 +80298,12 @@
           "ts": "2026-10-06T12:43:21.783115+00:00",
           "current_bid_eur": 3500.0,
           "bids_count": 5,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-10-07T04:13:25.948883+00:00",
+          "current_bid_eur": 3800.0,
+          "bids_count": 6,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -83203,6 +83221,12 @@
           "current_bid_eur": 3000.0,
           "bids_count": 6,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-10-07T04:13:25.948883+00:00",
+          "current_bid_eur": 3200.0,
+          "bids_count": 8,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -83946,6 +83970,12 @@
           "ts": "2026-10-03T15:45:14.406659+00:00",
           "current_bid_eur": 1550.0,
           "bids_count": 2,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-10-07T04:13:25.948883+00:00",
+          "current_bid_eur": 1600.0,
+          "bids_count": 3,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -84769,6 +84799,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-10-07T04:13:25.948883+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -84784,6 +84820,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-10-07T04:13:25.948883+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -84799,6 +84841,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-10-07T04:13:25.948883+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -84934,6 +84982,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-10-07T04:13:25.948883+00:00",
+          "current_bid_eur": 121.0,
+          "bids_count": 5,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -85045,6 +85099,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-10-07T04:13:25.948883+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -85225,6 +85285,21 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "9a5f179a-f0c2-43ca-b8b7-48644d5b95ac": {
+      "url": "https://www.troostwijkauctions.com/en/l/2023-peugeot-expert-cargo-van-xl-l3-fwd-2-0l-panel-van-A1-50349-28",
+      "model_token": "expert",
+      "year": 2023,
+      "snapshots": [
+        {
+          "ts": "2026-10-07T04:13:25.948883+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
