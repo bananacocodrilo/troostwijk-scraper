@@ -89245,6 +89245,12 @@
           "current_bid_eur": 2300.0,
           "bids_count": 26,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": 2400.0,
+          "bids_count": 27,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -92695,6 +92701,12 @@
           "current_bid_eur": 3700.0,
           "bids_count": 10,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": 3800.0,
+          "bids_count": 11,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -93561,6 +93573,12 @@
           "ts": "2026-10-22T21:21:55.011692+00:00",
           "current_bid_eur": 3200.0,
           "bids_count": 8,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": 3300.0,
+          "bids_count": 9,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -95029,6 +95047,12 @@
           "current_bid_eur": 6400.0,
           "bids_count": 8,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": 10500.0,
+          "bids_count": 14,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -95742,6 +95766,12 @@
           "ts": "2026-10-22T17:00:38.156957+00:00",
           "current_bid_eur": 3300.0,
           "bids_count": 9,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": 3600.0,
+          "bids_count": 11,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -98371,6 +98401,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": 7500.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -99481,6 +99517,12 @@
           "current_bid_eur": 1150.0,
           "bids_count": 2,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": 2900.0,
+          "bids_count": 28,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -99919,6 +99961,12 @@
           "current_bid_eur": 1000.0,
           "bids_count": 1,
           "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": 4700.0,
+          "bids_count": 26,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -100351,6 +100399,12 @@
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_NOT_YET_OPENED"
+        },
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
         }
       ],
       "final_hammer_eur": null,
@@ -100755,6 +100809,12 @@
           "ts": "2026-10-23T16:50:39.303437+00:00",
           "current_bid_eur": null,
           "bids_count": null,
+          "status": "BIDDING_OPEN"
+        },
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": 1000.0,
+          "bids_count": 1,
           "status": "BIDDING_OPEN"
         }
       ],
@@ -101443,6 +101503,291 @@
       "snapshots": [
         {
           "ts": "2026-10-23T16:50:39.303437+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2cba7cfa-ab4c-4569-bb5b-591cf02c5c70": {
+      "url": "https://www.vavato.com/en/l/opel-vivaro-van-b-1-6-cdti-115-hp-%25E2%2580%2593-299-103-km-%25E2%2580%2593-manual-gearbox-%25E2%2580%2593-3-seats-A3-46109-35191",
+      "model_token": "vivaro",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "bbb8deea-ddbc-44f0-8269-7d6450a4fa58": {
+      "url": "https://www.vavato.com/en/l/peugeot-l2h2-boxer-van-A3-46109-36500",
+      "model_token": "boxer",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_NOT_YET_OPENED"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "6c9cd63f-cba0-4f98-bb9a-33c00dd891dc": {
+      "url": "https://www.vavato.com/en/l/2011-volkswagen-transporter-tdi-commercial-vehicle-A1-51058-8",
+      "model_token": "transporter",
+      "year": 2011,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "66b88a4b-b276-4963-abfa-576332364cb9": {
+      "url": "https://www.troostwijkauctions.com/en/l/ford-transit-camper-A1-47423-1004",
+      "model_token": "transit",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "d1b5ea2a-dd9c-463e-9957-81007ab9efdd": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-516-2-2-cdi-432-vv-971-f-A1-40746-355",
+      "model_token": "sprinter",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": 20000.0,
+          "bids_count": 62,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "aa59c4f7-d7ca-4abe-91dd-b1ccd5c8fb4e": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-expert-227-1-6-hdi-l1h1-p%252B-commercial-vehicle-A1-46721-497",
+      "model_token": "expert",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "4e547b75-1778-45dd-8813-0f0de953450f": {
+      "url": "https://www.troostwijkauctions.com/en/l/opel-vivaro-1-5-cdti-l2h1-edit-vfx-29-z-A1-40693-128",
+      "model_token": "vivaro",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "c100b097-db38-4384-955a-ff4400d0f964": {
+      "url": "https://www.troostwijkauctions.com/en/l/opel-vivaro-1-5-cdti-l2h1-edit-vnx-03-t-A1-40693-182",
+      "model_token": "vivaro",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "eb488c46-1ff9-4511-a7cc-9021541074b5": {
+      "url": "https://www.troostwijkauctions.com/en/l/opel-vivaro-1-5-cdti-l3h1-edit-vrp-28-h-A1-40693-368",
+      "model_token": "vivaro",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "df6a59a2-2518-46ba-9cc1-48cf591fc1fa": {
+      "url": "https://www.troostwijkauctions.com/en/l/opel-vivaro-van-A1-51168-10",
+      "model_token": "vivaro",
+      "year": 2005,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "298a637a-1537-4fe4-b035-175af24d015e": {
+      "url": "https://www.troostwijkauctions.com/en/l/renault-master-furgon-2-3-dci-van-A7-51236-6",
+      "model_token": "master",
+      "year": 2014,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": 2250.0,
+          "bids_count": 1,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "b4f3533f-ba0c-412f-92d0-e869ffdd581b": {
+      "url": "https://www.troostwijkauctions.com/en/l/nissan-primastar-air-conditioner-90-29-2-0dci-310l-commercial-vehicle-A1-46721-579",
+      "model_token": "primastar",
+      "year": 2009,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "55210e8e-1e3b-4673-b83b-253446caca43": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-vito-110cdi-vz-818-iv-%2528hungarian-registration%2529-A1-40693-203",
+      "model_token": "vito",
+      "year": null,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "63cbbee1-cfb0-476f-a665-cb5391e6c0e5": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-vito-111-cdi-lang-dc-vt-019-v-commercial-vehicle-A1-40544-55",
+      "model_token": "vito",
+      "year": 2016,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "7985c30f-fa77-41d5-92a7-ee13ac75049b": {
+      "url": "https://www.troostwijkauctions.com/en/l/2009-mercedes-benz-vito-109-cdi-320-long-dc-amigo-luxe-commercial-vehicle-A1-46721-13",
+      "model_token": "vito",
+      "year": 2009,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "52a7bda0-2064-4afb-99e0-fa1854644928": {
+      "url": "https://www.troostwijkauctions.com/en/l/2023-henschel-for-mounting-on-peugeot-boxer-commercial-vehicle-pic-up-surface-mount-3-way-chicken-bucket-A1-50973-121",
+      "model_token": "boxer",
+      "year": 2023,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "2761568d-8596-4a3a-baf5-5078651cfe79": {
+      "url": "https://www.troostwijkauctions.com/en/l/peugeot-boxer-van-A1-51168-51",
+      "model_token": "boxer",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "ba6fbfcb-fc5b-47a3-a90e-de0f1410f3ba": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-314-2-2-cdi-l4h2-euro-vi-d-fridge-freezer-143hp-2019-%2528original-nl%2529-automatic-v-964-vv-A1-44442-6",
+      "model_token": "sprinter",
+      "year": 2019,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
+          "current_bid_eur": null,
+          "bids_count": null,
+          "status": "BIDDING_OPEN"
+        }
+      ],
+      "final_hammer_eur": null,
+      "closed_at": null
+    },
+    "d961d514-b735-4c3b-b4c4-20f20bfdce1d": {
+      "url": "https://www.troostwijkauctions.com/en/l/mercedes-benz-sprinter-313-2-2-cdi-366-hd-127hp-2015-%2528original-nl%2529-automatic-vs-317-l-A1-44439-56",
+      "model_token": "sprinter",
+      "year": 2015,
+      "snapshots": [
+        {
+          "ts": "2026-10-23T21:21:32.809289+00:00",
           "current_bid_eur": null,
           "bids_count": null,
           "status": "BIDDING_OPEN"
